@@ -1,0 +1,483 @@
+   /*
+	ambient
+	[am-bee-uh nt]
+	
+	adjective
+	1.
+	of the surrounding area or environment
+	2.
+	completely surrounding; encompassing
+	3.
+	creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be
+	
+	4.
+	pertaining to or noting sounds that create a peaceful and relaxed atmosphere.
+	5.
+	pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices:
+	*/
+	
+    /**
+    * Vanilla CSS 1.0.2
+    * http://cssreset.com
+    * http://www.cssreset.com/scripts/vanilla-css-un-reset/
+    */
+    body {
+    	
+/**
+ * Ambient addition to vanilla reset::: font size needs to remain browser default for viewport width & height	
+ */
+
+    /*font: 9pt/1.5em sans-serif;*/
+    font-family: sans-serif; 
+    }
+    pre, code, tt {
+    font: 1em/1.5em 'Andale Mono', 'Lucida Console', monospace;
+    }
+    h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: bold;
+    }
+    em, i, dfn {
+    font-style: italic;
+    }
+    dfn {
+    font-weight:bold;
+    }
+    p, code, pre, kbd {
+    margin:0 0 1.5em 0;
+    }
+    blockquote {
+    margin:0 1.5em 1.5em 1.5em;
+    }
+    cite {
+    font-style: italic;
+    }
+    li ul, li ol {
+    margin:0 1.5em;
+    }
+    ul, ol {
+    margin:0 1.5em 1.5em 1.5em;
+    }
+    ul {
+    list-style-type:disc;
+    }
+    ol {
+    list-style-type:decimal;
+    }
+    ol ol {
+    list-style: upper-alpha;
+    }
+    ol ol ol {
+    list-style: lower-roman;
+    }
+    ol ol ol ol {
+    list-style: lower-alpha;
+    }
+    dl {
+    margin:0 0 1.5em 0;
+    }
+    dl dt {
+    font-weight:bold;
+    }
+    dd {
+    margin-left:1.5em;
+    }
+    table {
+    margin-bottom:1.4em;
+    width:100%;
+    }
+    th {
+    font-weight:bold;
+    }
+    th, td, caption {
+    padding:4px 10px 4px 5px;
+    }
+    tfoot {
+    font-style:italic;
+    }
+    sup, sub {
+    line-height:0;
+    }
+    abbr, acronym {
+    border-bottom: 1px dotted;
+    }
+    address {
+    margin:0 0 1.5em;
+    font-style:italic;
+    }
+    del {
+    text-decoration: line-through;
+    }
+    pre {
+    margin:1.5em 0;
+    white-space:pre;
+    }
+    img.centered, .aligncenter, div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    img.alignright {
+    display: inline;
+    }
+    img.alignleft {
+    display: inline;
+    }
+    .alignright {
+    float: right;
+    margin-left: 10px;
+    }
+    .alignleft {
+    float: left;
+    margin-right: 10px;
+    }
+    img {
+    max-width: 100%;
+    }
+    * html .clearfix {
+    height: 1%;
+    }
+    * + html .clearfix {
+    display: inline-block;
+    }
+    .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+    * html .group {
+    height: 1%;
+    }
+    * + html .group {
+    display: inline-block;
+    }
+    .group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+    /**
+    * End Vanilla CSS
+    */
+   		* {
+   			margin: 0;
+   			padding: 0;}
+        html {
+            font-size: 2vmin;
+            height: 100%; }
+     /**
+    * Core layout uses flex (float fall backs for IE9: yet need refine but only if IE9 is required)
+    * vieport widths & heights
+    * as well as percentages to allow the HTML to define the visual structure of the page.
+    * !IE yet has an issue with height of page expanding a bit on ul li a hover that I am looking into.
+    * 
+    * No borders: framing is done by thematic breaks with an HR between articles and/or sections.
+    * 
+    * Only one base color: displays the active state for navigation.
+    * 
+	* More responsive scaling of fonts and margin/padding for devices without requiring explicit fixed (adaptive) sizes everywhere:
+    * 
+    * -- Minimal margin/padding: core white space is defined by viewport width
+    * 
+    * -- Fonts scale with window height size :: [If Bootstrap is used, it sets font size as 14px]
+    * headings scale with viewport height
+    * body text scales with viewport width or height, whichever is smaller 
+    * Typography will come later
+    * 
+    * !Yet need to ensure I don't have any stray fixed sized px and/or widths/heights declared where I do not want in ambient
+    */       
+        body {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            min-width: 100%;
+            min-height: 100%;
+            overflow-x: hidden; }
+        body > header {
+            min-width:100%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+            -moz-flex-flow: row wrap;
+            -ms-flex-flow: row wrap; }
+        body > header h1 {
+            margin: 1vw; }
+        body > article  {
+            margin: auto;
+            width: auto;
+            }
+   
+        h1 {
+            font-size: 4vh; line-height: 4vh; }
+        h2 {
+            font-size: 3.5vh; line-height: 3.5vh; }
+        h3 {
+            font-size: 3vh; line-height: 3vh; }
+	/**
+	* The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section). 
+	* In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, 
+	* but is now defined in semantic terms, rather than presentational terms.  
+	*/          
+        hr {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+            border-image: none;
+            border-right: 0 none;
+            border-style: solid none none;
+            border-width: 1px 0 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            clear: both; }
+        a {
+        	display: inline-block; }
+    	blockquote {
+    		font-size: small;
+    		white-space: pre-wrap;
+    		color: #888;}
+    	blockquote h1, blockquote h2, blockquote h3{
+    		margin-top: 0; }
+	/**
+	* some flex properties (more specifically IE) need explicit properties for flex-shrink and flex-basis
+	*/     
+		article, section, div {
+			position: relative;	}	
+        article {
+		 	display: -webkit-box; /* Safari */ 
+		    display: -moz-box; /* Firefox 21- */
+		    display: -ms-flexbox; /* IE 10+ */
+		    display: -webkit-flex; /* Chrome */
+		    display: flex; /* Standard (Firefox 22+) */
+			 /*old syntax*/
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			-ms-box-orient: horizontal;
+			/*new syntax*/
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			-moz-flex-direction: row;
+			-ms-flex-direction: row;
+			
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+            -moz-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+    /**
+    * ie9 float fall back for flex position
+    */
+            float: left \ ;
+            }
+        article > h1 {
+            min-width: 100%; }
+        article > p, article > div {
+            min-width: 100%; }
+        section{ 
+        	padding: .01vw;
+        	-webkit-flex: 1;
+            -moz-flex: 1;
+            -ms-flex: 1;
+            flex: 1;  
+    /**
+    * ie9 float fall back for flex position
+    */
+            float: left \ ;
+        	 }  
+		section article {
+            width: 99.5%;
+            margin: auto; }         
+        main {
+    		-webkit-box-flex: 1 0 auto;
+    		/* IE10 */
+    		-ms-flex: 1 0 auto;
+    		/* Unprefixed */
+    		flex: 1 0 auto;
+    		/* prefixed webkit syntax */
+    		-webkit-flex: 1 0 auto;
+             }
+        article header {
+            width: auto; }
+        section header {
+        	width: auto; }
+        nav {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+            -moz-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            min-width:100%; }
+        nav a {
+			-webkit-box-flex: 1 0 auto;
+    		/* IE10 */
+    		-ms-flex: 1 0 auto;
+    		/* Unprefixed */
+    		flex: 1 0 auto;
+    		/* prefixed webkit syntax */
+    		-webkit-flex: 1 0 auto;
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+            transition: background 0.3s ease 0s;
+            padding: 1vw;  }
+        nav a:hover {
+        	background-color:#eee; 
+        	text-decoration: none; }
+        nav a.active {
+        	background-color:#eee; }
+        nav a:not(:first-of-type) {
+            text-align: center; }      
+        nav ul {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+            -moz-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            list-style-type: none; }
+        nav ul li {
+        	-webkit-box-flex: 1 0 auto;
+    		/* IE10 */
+    		-ms-flex: 1 0 auto;
+    		/* Unprefixed */
+    		flex: 1 0 auto;
+    		/* prefixed webkit syntax */
+    		-webkit-flex: 1 0 auto;
+            text-align: center; }
+        footer {
+            min-width:  100%;
+            order: 2;
+            -webkit-order: 2;
+            -moz-order: 2;
+            -ms-order: 2;
+           }
+		body > footer {
+			background-color:#444;
+			color:#fafafa; 
+			min-height: 6vw; }
+			
+	/**		
+	* adaptive layout has set layouts for certain screen sizes, 
+	* the content is set to fixed sizes in each of those layouts.
+	*
+	* responsive layout means that everything is scaled using percentages and relative units of measurement, 
+	* so that it constantly responds to ANY screen size, not just a certain set of sizes.
+	* 
+	* Ambient design has to two core patterns: landscape & portrait, allowing the HTML to be more fully responsive without the need for structure based classes.
+	*/		
+        /* defualt single column structure on portrait */
+        @media (orientation:portrait){
+            html {
+                font-size: 3.5vmin; }
+    /**
+    * protrait containers [article/section] block and display vertical. 
+    * Display: block keeps parent containers vertical, while maintining the ux-shell "multi-column" properties to remain multi-column 	
+    */            
+            article, section {
+                display: block; }
+        }
+        
+		/* classes */
+		
+		.user-img {
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+			background: #fff;
+			overflow: hidden;
+			border: 3px solid #fff;
+			margin-right: 15px;
+			float: left; }
+		.user-img img {
+			max-width: 97px;
+			margin-top: -19px;
+			margin-left: -22px; }
+		.user-logout {
+			background-color:#FD8A78;
+			color: #fff;
+			height: 34px;
+			margin: 0 auto;
+			width: 34px;
+			display: block;
+			margin:20px; 
+			line-height: 32px;
+			text-align: center;
+			text-decoration: none; }
+		.tabs {
+			float: left;
+			list-style: none;
+			text-align: center;
+			margin: 0; }
+		.tabs li {
+			padding: .5vw 1.5vw;
+			
+			border-left: 1px solid rgba(0,0,0,0.1);
+			float: left;
+			position: relative; }
+		.tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
+		.tabs li.active a, .tabs li.active:hover a { color: #3e3e3e; cursor: default; }
+		.tabs li.active a i, .tabs li.active:hover a i { color:#e86f56; }
+		.tabs li.active:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left:50%;
+			margin-left: -7px;
+			width: 0;
+			height: 0;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 9px solid #7a706e;
+			z-index: 1; }
+		.tabs li:hover a, .tabs li:hover a i { color: #3e3e3e;  }
+		.tabs li a {
+			font-family: "PT Sans", sans-serif; 
+			color: #9f9f9f;
+			font-size: 12px;
+			line-height: 22px;
+			text-decoration: none;
+			display: block;
+			transition:color 0.3s; }
+		.tabs li i { 
+			font-size: 33px;
+			color: #b5adac;
+			transition:color 0.3s; }
+		.secTitle {
+			margin: 12px 0px 0px 0px;
+			font-family: "PT Sans", sans-serif; 
+			color: #3e3e3e;
+			font-size: 24px;
+			display: block;
+			
+		}
+		.secExtra {
+			margin-top: 3px;
+			color: #818181;
+			font-size: 12px;
+			display: block;
+		}
+		.secInfo { 
+			float: left; 
+			margin: 0 2vw; }
