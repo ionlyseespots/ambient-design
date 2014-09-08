@@ -1,34 +1,45 @@
-   /*
-	ambient
-	[am-bee-uh nt]
-	
-	adjective
-	1.
-	of the surrounding area or environment
-	2.
-	completely surrounding; encompassing
-	3.
-	creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be
-	
-	4.
-	pertaining to or noting sounds that create a peaceful and relaxed atmosphere.
-	5.
-	pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices:
-	*/
-	
+/**
+ambient
+[am-bee-uh nt]
+
+adjective
+1.
+of the surrounding area or environment
+2.
+completely surrounding; encompassing
+3.
+creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be
+
+4.
+pertaining to or noting sounds that create a peaceful and relaxed atmosphere
+5.
+pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices
+*/
+
+/**
+* Ambient base design pattern uses flex (float fall backs for IE9: yet need refine but only if IE9 is required), view port widths & heights, as well as percentages (and potentially the CSS property calc).
+* This allows the HTML to define the visual structure of the page without the need for structure based classes.
+* !IE yet has an issue with height of page expanding a bit on ul li a hover that I am looking into.
+*
+* Base design patterns:
+* -- No borders: framing is done by thematic breaks with HR
+* -- No colors: active, inactive and hover are the only default colors in base design pattern
+* -- White space is defined by view port width
+* -- Fonts scale with window height size :: [If Bootstrap is used, body font size becomes 14px]
+* _headings scale with view port height
+* _Typography will come later
+*
+* !Yet need to ensure I don't have any stray fixed sized px and/or widths/heights declared where I do not want in ambient
+* !Yet need to ensure cross browser properties - maybe find a nice way to auto prefix
+*/
+
     /**
     * Vanilla CSS 1.0.2
     * http://cssreset.com
     * http://www.cssreset.com/scripts/vanilla-css-un-reset/
     */
     body {
-    	
-/**
- * Ambient addition to vanilla reset::: font size needs to remain browser default for viewport width & height	
- */
-
-    /*font: 9pt/1.5em sans-serif;*/
-    font-family: sans-serif; 
+    font: 9pt/1.5em sans-serif;
     }
     pre, code, tt {
     font: 1em/1.5em 'Andale Mono', 'Lucida Console', monospace;
@@ -164,31 +175,9 @@
     */
    		* {
    			margin: 0;
-   			padding: 0;}
+   			padding: 0; }
         html {
-            font-size: 2vmin;
             height: 100%; }
-     /**
-    * Core layout uses flex (float fall backs for IE9: yet need refine but only if IE9 is required)
-    * vieport widths & heights
-    * as well as percentages to allow the HTML to define the visual structure of the page.
-    * !IE yet has an issue with height of page expanding a bit on ul li a hover that I am looking into.
-    * 
-    * No borders: framing is done by thematic breaks with an HR between articles and/or sections.
-    * 
-    * Only one base color: displays the active state for navigation.
-    * 
-	* More responsive scaling of fonts and margin/padding for devices without requiring explicit fixed (adaptive) sizes everywhere:
-    * 
-    * -- Minimal margin/padding: core white space is defined by viewport width
-    * 
-    * -- Fonts scale with window height size :: [If Bootstrap is used, it sets font size as 14px]
-    * headings scale with viewport height
-    * body text scales with viewport width or height, whichever is smaller 
-    * Typography will come later
-    * 
-    * !Yet need to ensure I don't have any stray fixed sized px and/or widths/heights declared where I do not want in ambient
-    */       
         body {
             display: -webkit-box;
             display: -moz-box;
@@ -210,7 +199,13 @@
             display: -webkit-flex;
             display: flex;
             justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
             flex-direction: row;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            -ms-flex-direction: row;
             flex-flow: row wrap;
             -webkit-flex-flow: row wrap;
             -moz-flex-flow: row wrap;
@@ -219,30 +214,31 @@
             margin: 1vw; }
         body > article  {
             margin: auto;
-            width: auto;
-            }
-   
+            width: auto; }
         h1 {
-            font-size: 4vh; line-height: 4vh; }
+            font-size: 4vh;
+            line-height: 4vh; }
         h2 {
-            font-size: 3.5vh; line-height: 3.5vh; }
+            font-size: 3.5vh;
+            line-height: 3.5vh; }
         h3 {
-            font-size: 3vh; line-height: 3vh; }
-	/**
-	* The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section). 
-	* In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, 
-	* but is now defined in semantic terms, rather than presentational terms.  
-	*/          
+            font-size: 3vh;
+            line-height: 3vh; }
+/**
+* The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
+* In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers,
+* but is now defined in semantic terms, rather than presentational terms.
+*/
         hr {
             -moz-border-bottom-colors: none;
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
-            border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+            border-color: rgba(0, 0, 0, 0.1) -moz-use-text-color -moz-use-text-color;
             border-image: none;
             border-right: 0 none;
             border-style: solid none none;
-            border-width: 1px 0 0;
+            border-width: .1vw 0 0;
             margin-bottom: 0;
             margin-top: 0;
             clear: both; }
@@ -250,13 +246,12 @@
         	display: inline-block; }
     	blockquote {
     		font-size: small;
-    		white-space: pre-wrap;
-    		color: #888;}
+            padding: 0 1vw;}
     	blockquote h1, blockquote h2, blockquote h3{
     		margin-top: 0; }
-	/**
-	* some flex properties (more specifically IE) need explicit properties for flex-shrink and flex-basis
-	*/     
+/**
+* some flex properties (more specifically IE) need explicit properties for flex-shrink and flex-basis
+*/
 		article, section, div {
 			position: relative;	}	
         article {
@@ -298,10 +293,16 @@
     * ie9 float fall back for flex position
     */
             float: left \ ;
-        	 }  
-		section article {
-            width: 99.5%;
-            margin: auto; }         
+        	 }
+    /**
+    * nested article/section
+    */
+        section article {
+            width: 99%;
+            margin: 0 auto; }
+    /**
+    * main flex property = sticky footer
+    */
         main {
     		-webkit-box-flex: 1 0 auto;
     		/* IE10 */
@@ -374,32 +375,21 @@
             -ms-order: 2;
            }
 		body > footer {
-			background-color:#444;
-			color:#fafafa; 
 			min-height: 6vw; }
 			
-	/**		
-	* adaptive layout has set layouts for certain screen sizes, 
-	* the content is set to fixed sizes in each of those layouts.
-	*
-	* responsive layout means that everything is scaled using percentages and relative units of measurement, 
-	* so that it constantly responds to ANY screen size, not just a certain set of sizes.
-	* 
-	* Ambient design has to two core patterns: landscape & portrait, allowing the HTML to be more fully responsive without the need for structure based classes.
-	*/		
-        /* defualt single column structure on portrait */
+/**
+* Ambient design has to two base design patterns: landscape & portrait. This allows the HTML to be more fully responsive without the need for structure based classes.
+*
+* portrait containers [article/section] block and flow into a vertical display.
+* display: block keeps parent containers vertical, while maintaining the ux-shell "multi-column" properties to remain multi-column
+*
+*/
         @media (orientation:portrait){
-            html {
-                font-size: 3.5vmin; }
-    /**
-    * protrait containers [article/section] block and display vertical. 
-    * Display: block keeps parent containers vertical, while maintining the ux-shell "multi-column" properties to remain multi-column 	
-    */            
             article, section {
                 display: block; }
         }
         
-		/* classes */
+		/* ambient classes: aesthetics */
 		
 		.user-img {
 			width: 65px;
@@ -408,7 +398,7 @@
 			background: #fff;
 			overflow: hidden;
 			border: 3px solid #fff;
-			margin-right: 15px;
+			margin-right: 1vw;
 			float: left; }
 		.user-img img {
 			max-width: 97px;
@@ -418,28 +408,23 @@
 			background-color:#FD8A78;
 			color: #fff;
 			height: 34px;
-			margin: 0 auto;
 			width: 34px;
-			display: block;
-			margin:20px; 
+			margin: 1vw;
 			line-height: 32px;
-			text-align: center;
-			text-decoration: none; }
-		.tabs {
+			text-align: center; }
+		.panel-tabs {
 			float: left;
 			list-style: none;
 			text-align: center;
 			margin: 0; }
-		.tabs li {
-			padding: .5vw 1.5vw;
-			
+		.panel-tabs li {
 			border-left: 1px solid rgba(0,0,0,0.1);
-			float: left;
-			position: relative; }
-		.tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
-		.tabs li.active a, .tabs li.active:hover a { color: #3e3e3e; cursor: default; }
-		.tabs li.active a i, .tabs li.active:hover a i { color:#e86f56; }
-		.tabs li.active:before {
+            position: relative;
+			float: left; }
+		.panel-tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
+		.panel-tabs li.active a, .panel-tabs li.active:hover a { color: #3e3e3e; cursor: default; }
+		.panel-tabs li.active a i, .panel-tabs li.active:hover a i { color:#e86f56; }
+		.panel-tabs li.active:before {
 			content: '';
 			position: absolute;
 			bottom: 0;
@@ -451,33 +436,20 @@
 			border-right: 7px solid transparent;
 			border-top: 9px solid #7a706e;
 			z-index: 1; }
-		.tabs li:hover a, .tabs li:hover a i { color: #3e3e3e;  }
-		.tabs li a {
-			font-family: "PT Sans", sans-serif; 
+		.panel-tabs li:hover a, .panel-tabs li:hover a i { color: #3e3e3e;  }
+		.panel-tabs li a {
+			font-family: "PT Sans", sans-serif;
 			color: #9f9f9f;
-			font-size: 12px;
-			line-height: 22px;
-			text-decoration: none;
-			display: block;
+            padding: .5vw 1.5vw;
 			transition:color 0.3s; }
-		.tabs li i { 
-			font-size: 33px;
+		.panel-tabs li i {
+			font-size: 3.5vh;
+            margin-bottom: .5vw;
 			color: #b5adac;
 			transition:color 0.3s; }
-		.secTitle {
-			margin: 12px 0px 0px 0px;
-			font-family: "PT Sans", sans-serif; 
-			color: #3e3e3e;
-			font-size: 24px;
-			display: block;
-			
-		}
-		.secExtra {
-			margin-top: 3px;
-			color: #818181;
-			font-size: 12px;
-			display: block;
-		}
-		.secInfo { 
+		.panel-info h1 {
+			margin-top: .5vw;
+			color: #3e3e3e; }
+		.panel-info {
 			float: left; 
 			margin: 0 2vw; }

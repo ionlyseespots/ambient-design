@@ -6,13 +6,15 @@
 	<link rel="stylesheet" href="ambient.css">
 	<link rel="stylesheet" href="ux-shells.css">
 	<style>
-        article {border: 1px solid #d6d6d6;padding: .2vw;margin: .2vw;}
-        section {border: 1px solid #d6d6d6;margin: .2vw;padding: .2vw;}
-        hr {margin: .5vw;}
+        /* outline, colors & white space for better visualization of core design pattern */
+        article {border: 1px solid rgba(0,0,0,0.1);padding: .2vw;margin: .2vw;}
+        section {border: 1px solid rgba(0,0,0,0.1);margin: .2vw;padding: .2vw;}
+        hr {margin: .5vw .2vw;}
+        .multi-column {background-color: #F7F7F9; }
 	</style>
 	</head>
 <body>
-<header>
+<header role="banner">
     <h1><a href="index.html">My Logo</a></h1>
     <a href="#" class="user-logout"><i class="fa fa-unlock-alt" ></i></a>
 </header>
@@ -42,7 +44,7 @@
 <!--- debug test layout, if anything breaks it will break here --->
     <article class="multi-column">
         <header role="contentinfo">
-            <h1>Article Header H1</h1>
+            <h1>Article Header H1 <small>multi-column shell</small></h1>
         </header>
         <section>
             <section>
@@ -74,6 +76,8 @@
             </p>
         </footer>
     </article>
+<hr />
+
     <article>
         <h1>Article H1</h1>
         <p>

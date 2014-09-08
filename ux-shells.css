@@ -1,3 +1,5 @@
+    /* multi-column shell */
+
     article.multi-column > section:first-of-type {
         display: -webkit-box;
         display: -moz-box;
@@ -40,39 +42,39 @@
 		display: table;
 		}
 	.panel-shell section {
-		-moz-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.12);
-		-webkit-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.12);
-		box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.12); }
+		-moz-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1);
+		-webkit-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1);
+		box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1); }
 		
-	.panel-shell  ul:not(.tabs){
+	.panel-shell section > ul {
 		list-style: none;
 		text-align: center;
 		margin: 0; }
 		
-	.panel-shell ul:not(.tabs) li {
+	.panel-shell  section > ul li {
 		transition: background 0.3s ease 0s; 
 
 		}
-		 
-	.panel-shell  ul:not(.tabs) li:hover {
+
+	.panel-shell section > ul li:hover {
 		background: #eee; }
 		
-	.panel-shell  ul:not(.tabs) li:hover a {	
+	.panel-shell section > ul li:hover a {
 		color:#000033; }
 		
-	.panel-shell  ul:not(.tabs) li.active {
+	.panel-shell section > ul li.active {
 		box-shadow: inset -6px 0 0 #e86f56; }
 		
-	.panel-shell  ul:not(.tabs) li.active:hover {
+	.panel-shell section > ul li.active:hover {
 		background-color: inherit; }
 
-	.panel-shell  ul:not(.tabs) li.active a{ 
+	.panel-shell section > ul li.active a{
 		color: #3e3e3e; }
 		
-	.panel-shell  ul:not(.tabs) li i {	
-		font-size: 34px;
-		margin-bottom: 6px; }
-	.panel-shell  ul:not(.tabs) li a {
+	.panel-shell section > ul li i {
+		font-size: 3.5vh;
+		margin-bottom: .5vw; }
+	.panel-shell section > ul li a {
 		padding: 1vw 0;
 		color:#9f9f9f;
 		text-decoration: none; 
@@ -96,7 +98,7 @@
 	            -moz-flex-flow: row wrap;
 	            -ms-flex-flow: row wrap;
 	            min-width:100%; }
-			.panel-shell ul:not(.tabs) li {
+			.panel-shell  section > ul li {
 				-webkit-box-flex: 1 0 auto;
 	    		/* IE10 */position: relative;
 	    		-ms-flex: 1 0 auto;
@@ -107,12 +109,12 @@
 	            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 	            transition: background 0.3s ease 0s; }
 			.panel-shell > section:first-of-type ul li:first-child {
-				width: 100vw;	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.12); } 
-	 		.panel-shell  ul:not(.tabs) li.active {
+				width: 100vw;	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1); }
+	 		.panel-shell section > ul li.active {
 				box-shadow: none; }
-			.panel-shell  ul:not(.tabs) li a {
+			.panel-shell section > ul li a {
 				padding: 2vw 0; }
-	        .panel-shell ul:not(.tabs) li.active a:before {
+	        .panel-shell section > ul li.active a:before {
 	        	content: '';
 				position: absolute;
 				bottom: 0;
