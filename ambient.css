@@ -234,11 +234,11 @@ pertaining to or noting close and constant social contact and communication fost
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
-            border-color: rgba(0, 0, 0, 0.1) -moz-use-text-color -moz-use-text-color;
+            border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
             border-image: none;
             border-right: 0 none;
             border-style: solid none none;
-            border-width: .1vw 0 0;
+            border-width: 1px 0 0;
             margin-bottom: 0;
             margin-top: 0;
             clear: both; }
