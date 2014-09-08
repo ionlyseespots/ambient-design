@@ -31,17 +31,22 @@
     article.multi-column {
         flex-direction: column;
         -webkit-flex-direction: column;
-        -moz-flex-direction: column;}
+        -moz-flex-direction: column;
+        -ms-flex-direction: column; }
 
 	/* panel shell */
 
-	.panel-shell > section:last-of-type  {flex: 4;}
+	.panel-shell > section:last-of-type  {
+        flex: 4;
+        -webkit-flex: 4;
+        -moz-flex: 4;
+        -ms-flex: 4; }
 	.panel-shell > section:last-of-type header{	
 		padding: .5vw 0; 
 		clear: both;
 		display: table;
 		}
-	.panel-shell section {
+	.panel-shell > section {
 		-moz-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1);
 		-webkit-box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1);
 		box-shadow: inset 2px 0 0 -1px rgba(0,0,0,0.1); }
