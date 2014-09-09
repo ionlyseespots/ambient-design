@@ -2,13 +2,11 @@
 
 > Ambient design is methodology for creating layout.
 
-<pre>
-    Ambient design has 2 base design patterns: landscape & portrait.
-    This allows the HTML to be more fully responsive without the need for structure based classes.
-</pre>
+* Ambient design has 2 base design patterns: landscape & portrait.
+* This allows the HTML to be more fully responsive without the need for structure based classes.
 
 <pre>
- There are 5 distinct patterns in ambient design:
+ There are 5 distinct design patterns in ambient design:
 
     1. Typography
     2. UI Elements

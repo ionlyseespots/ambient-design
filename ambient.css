@@ -21,12 +21,17 @@ pertaining to or noting close and constant social contact and communication fost
 * This allows the HTML to define the visual structure of the page without the need for structure based classes.
 * !IE yet has an issue with height of page expanding a bit on ul li a hover that I am looking into.
 *
+* 1vw = 1% of view port width
+* 1vh = 1% of view port height
+* 1vmin = 1vw or 1vh, whichever is smaller
+* 1vmax = 1vw or 1vh, whichever is larger
+* % = relative to the initial containing block.
+
 * Base design patterns:
 * -- No borders: framing is done by thematic breaks with HR
 * -- No colors: active, inactive and hover are the only default colors in base design pattern
 * -- White space is defined by view port width
-* -- Fonts scale with window height size :: [If Bootstrap is used, body font size becomes 14px]
-* _headings scale with view port height
+* -- Font size scales with vmin > vw or vh, whichever is smaller :: [If Bootstrap is used, body font size becomes 14px]
 * _Typography will come later
 *
 * !Yet need to ensure I don't have any stray fixed sized px and/or widths/heights declared where I do not want in ambient
@@ -216,14 +221,14 @@ pertaining to or noting close and constant social contact and communication fost
             margin: auto;
             width: auto; }
         h1 {
-            font-size: 4vh;
-            line-height: 4vh; }
+            font-size: 4vmin;
+            line-height: 4vmin; }
         h2 {
-            font-size: 3.5vh;
-            line-height: 3.5vh; }
+            font-size: 3.5vmin;
+            line-height: 3.5vmin; }
         h3 {
-            font-size: 3vh;
-            line-height: 3vh; }
+            font-size: 3vmin;
+            line-height: 3vmin; }
 /**
 * The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
 * In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers,
@@ -253,8 +258,10 @@ pertaining to or noting close and constant social contact and communication fost
 * some flex properties (more specifically IE) need explicit properties for flex-shrink and flex-basis
 */
 		article, section, div {
-			position: relative;	}	
-        article {
+			position: relative;	}
+/**
+* Article = Row
+*/        article {
 		 	display: -webkit-box; /* Safari */ 
 		    display: -moz-box; /* Firefox 21- */
 		    display: -ms-flexbox; /* IE 10+ */
@@ -269,11 +276,11 @@ pertaining to or noting close and constant social contact and communication fost
 			-webkit-flex-direction: row;
 			-moz-flex-direction: row;
 			-ms-flex-direction: row;
-			
             flex-flow: row wrap;
             -webkit-flex-flow: row wrap;
             -moz-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
+            min-width: 100%;
     /**
     * ie9 float fall back for flex position
     */
@@ -283,7 +290,10 @@ pertaining to or noting close and constant social contact and communication fost
             min-width: 100%; }
         article > p, article > div {
             min-width: 100%; }
-        section{ 
+
+/**
+* Section = Column
+*/        section{
         	padding: .01vw;
         	-webkit-flex: 1;
             -moz-flex: 1;
@@ -380,8 +390,7 @@ pertaining to or noting close and constant social contact and communication fost
 /**
 * Ambient design has to two base design patterns: landscape & portrait. This allows the HTML to be more fully responsive without the need for structure based classes.
 *
-* portrait containers [article/section] block and flow into a vertical display.
-* display: block keeps parent containers vertical, while maintaining the ux-shell "multi-column" properties to remain multi-column
+* portrait containers [article/section] block and flow into a vertical display., I prefer blocking over [flex-direction: column;] for now.* dThis also maintainsmhe ux-shell "multi-column" properties to remain multi-column
 *
 */
         @media (orientation:portrait){
@@ -443,7 +452,7 @@ pertaining to or noting close and constant social contact and communication fost
             padding: .5vw 1.5vw;
 			transition:color 0.3s; }
 		.panel-tabs li i {
-			font-size: 3.5vh;
+			font-size: 3.5vhmin
             margin-bottom: .5vw;
 			color: #b5adac;
 			transition:color 0.3s; }
