@@ -195,7 +195,10 @@ pertaining to or noting close and constant social contact and communication fost
             -ms-flex-direction: column;
             min-width: 100%;
             min-height: 100%;
-            overflow-x: hidden; }
+    /**
+    * No more overflow-x: hidden; It was there as a hack to remove horizontal scroll on overflow. I stumbled on a combination of percentage and view port widths to display content without it
+    */
+            }
         body > header {
             min-width:100%;
             display: -webkit-box;
@@ -217,9 +220,13 @@ pertaining to or noting close and constant social contact and communication fost
             -ms-flex-flow: row wrap; }
         body > header h1 {
             margin: 1vw; }
+    /**
+    * !IE is not centering or proper flex width
+    */
         body > article  {
             margin: auto;
-            width: auto; }
+            width: auto;
+        }
         h1 {
             font-size: 4vmin;
             line-height: 4vmin; }
@@ -250,8 +257,7 @@ pertaining to or noting close and constant social contact and communication fost
         a {
         	display: inline-block; }
     	blockquote {
-    		font-size: small;
-            padding: 0 1vw;}
+    		font-size: small; }
     	blockquote h1, blockquote h2, blockquote h3{
     		margin-top: 0; }
 /**
@@ -281,7 +287,8 @@ pertaining to or noting close and constant social contact and communication fost
             -webkit-flex-flow: row wrap;
             -moz-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
-            width: 100%;
+            width: 99%;
+            max-width: 100%;
     /**
     * ie9 float fall back for flex position
     */
@@ -289,19 +296,24 @@ pertaining to or noting close and constant social contact and communication fost
             }
         article > h1 {
             min-width: 100%; }
+/**
+* !Find a better way
+*/
         article > p, article > div {
-            min-width: 100%; }
-
+            min-width: 100%;
+            width: 99%;
+            max-width: 100%;}
 /**
 * Section = Column
 */
-        section{
+        section {
         	padding: .01vw;
         	-webkit-flex: 1;
             -moz-flex: 1;
             -ms-flex: 1;
             flex: 1;
-            width: 100%;
+            width: 99%;
+            max-width: 100%;
     /**
     * ie9 float fall back for flex position
     */
@@ -382,6 +394,8 @@ pertaining to or noting close and constant social contact and communication fost
             text-align: center; }
         footer {
             min-width:  100%;
+            width: 99%;
+            max-width: 100%;
             order: 2;
             -webkit-order: 2;
             -moz-order: 2;
