@@ -447,12 +447,11 @@ pertaining to or noting close and constant social contact and communication fost
 			z-index: 1; }
 		.panel-tabs li:hover a, .panel-tabs li:hover a i { color: #3e3e3e;  }
 		.panel-tabs li a {
-			font-family: "PT Sans", sans-serif;
 			color: #9f9f9f;
             padding: .5vw 1.5vw;
 			transition:color 0.3s; }
 		.panel-tabs li i {
-			font-size: 3.5vhmin
+			font-size: 3vmin;
             margin-bottom: .5vw;
 			color: #b5adac;
 			transition:color 0.3s; }
