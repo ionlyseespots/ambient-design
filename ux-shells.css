@@ -15,19 +15,19 @@
         -ms-flex: 1 auto;
         flex: 1 auto;
          }
-        
+
     article.multi-column section:first-of-type aside {
         flex: 0 0 20vw;
         -webkit-flex: 0 0 20vw;
         -moz-flex: 0 0 20vw;
         -ms-flex: 0 0 20vw;	}
-        
+
     article.multi-column section:first-of-type aside:last-of-type {
         order:-1;
         -webkit-order: -1;
         -moz-order: -1;
         -ms-order: -1; }
-        
+
     article.multi-column {
         flex-direction: column;
         -webkit-flex-direction: column;
