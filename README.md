@@ -3,7 +3,7 @@
 > Ambient design is methodology for creating layout.
 
 * Ambient design has a core design pattern (landscape & portrait) for the HTML as a presentation format without the need for structure based classes.
-*
+
 <pre>
  There are 5 distinct design patterns in ambient design:
 
