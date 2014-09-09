@@ -326,7 +326,7 @@ pertaining to or noting close and constant social contact and communication fost
             width: 99%;
             margin: 0 auto; }
     /**
-    * main flex property = sticky footer
+    * main flex property = sticky footer :: Setting flex basis to auto prevents the main element from collapsing on IE and layout gracefully degrades to a non-sticky footer.
     */
         main {
     		-webkit-box-flex: 1 0 auto;
@@ -399,11 +399,8 @@ pertaining to or noting close and constant social contact and communication fost
             order: 2;
             -webkit-order: 2;
             -moz-order: 2;
-            -ms-order: 2;
-           }
-		body > footer {
-			min-height: 6vw; }
-			
+            -ms-order: 2;  }
+
 /**
 * Ambient design has to two base design patterns: landscape & portrait. This allows the HTML to be more fully responsive without the need for structure based classes.
 *
