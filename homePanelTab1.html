@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="app.css">
@@ -29,28 +30,30 @@
 
 <main role="main">
     <article class="panel-shell">
-        <section>
+        <nav>
                 <ul>
                     <li class="active">
                         <a href="index.html"><i class="fa fa-user" ></i><br>Dashboard</a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-font"></i><br>Typography</a>
+                        <a href="#"><i class="fa fa-font"></i><br>Typography</a>
                     </li>
                     <li>
-                        <a href="ui.html"><i class="fa fa-cube"></i><br>UI Elements</a>
-                    </li>
-                    <li >
-                        <a href="grid.html"><i class="fa fa-th"></i><br>UX Shells</a>
+                        <a href="#"><i class="fa fa-cube"></i><br>UI Elements</a>
                     </li>
                     <li>
-                        <a href="404.html"><i class="fa fa-compass"></i><br>Navs</a>
+                        <a href="uxShells.html"><i class="fa fa-th text-success"></i><br>UX Shells</a>
                     </li>
                     <li>
-                        <a href="form.html"><i class="fa fa-tasks"></i><br>Form States</a>
+                        <a href="#"><i class="fa fa-compass"></i><br>Navs</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-tasks"></i><br>Form States</a>
                     </li>
                 </ul>
-        </section>
+        </nav>
+        <hr />
+
         <section>
             <header >
                 <div class="panel-info">
@@ -72,7 +75,8 @@
             <p>Tab 1</p>
         </section>
     </article>
-<hr />
+    <hr />
+
 </main>
 <footer></footer>
 </body>

@@ -195,9 +195,6 @@ body {
     -ms-flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    /**
-    * No more overflow-x: hidden; It was there as a hack to remove horizontal scroll on overflow. I stumbled on a combination of percentage and view port widths to display content without it
-    */
 }
 body > header {
     min-width:100%;
@@ -218,8 +215,6 @@ body > header {
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap; }
-body > header h1 {
-    margin: 1vw; }
 /**
 * !IE is not centering or proper flex width
 */
@@ -265,6 +260,13 @@ blockquote h1, blockquote h2, blockquote h3{
 */
 article, section, div {
     position: relative;	}
+
+/**
+* a hair of padding makes it work
+*/
+header, nav, main, article, section, footer {
+    padding: .01vw;
+}
 /**
 * Article = Row
 */
@@ -287,7 +289,7 @@ article {
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    width: 99%;
+    width: 100%;
     max-width: 100%;
     /**
     * ie9 float fall back for flex position
@@ -307,12 +309,11 @@ article > p, article > div {
 * Section = Column
 */
 section {
-    padding: .01vw;
     -webkit-flex: 1;
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    width: 99%;
+    width: 100%;
     max-width: 100%;
     /**
     * ie9 float fall back for flex position
@@ -323,7 +324,7 @@ section {
 * nested article/section
 */
 section article {
-    width: 99%;
+    width: 100%;
     margin: 0 auto; }
 /**
 * main flex property = sticky footer :: Setting flex basis to auto prevents the main element from collapsing on IE and layout gracefully degrades to a non-sticky footer.
@@ -371,8 +372,7 @@ nav a:not(:first-of-type) {
     text-align: center; }
 
 footer {
-    min-width:  100%;
-    width: 99%;
+    width: 100%;
     max-width: 100%;
     order: 2;
     -webkit-order: 2;
