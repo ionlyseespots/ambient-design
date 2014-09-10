@@ -38,368 +38,346 @@ pertaining to or noting close and constant social contact and communication fost
 * !Yet need to ensure cross browser properties - maybe find a nice way to auto prefix
 */
 
-    /**
-    * Vanilla CSS 1.0.2
-    * http://cssreset.com
-    * http://www.cssreset.com/scripts/vanilla-css-un-reset/
-    */
-    body {
+/**
+* Vanilla CSS 1.0.2
+* http://cssreset.com
+* http://www.cssreset.com/scripts/vanilla-css-un-reset/
+*/
+body {
     font: 9pt/1.5em sans-serif;
-    }
-    pre, code, tt {
+}
+pre, code, tt {
     font: 1em/1.5em 'Andale Mono', 'Lucida Console', monospace;
-    }
-    h1, h2, h3, h4, h5, h6, b, strong {
+}
+h1, h2, h3, h4, h5, h6, b, strong {
     font-weight: bold;
-    }
-    em, i, dfn {
+}
+em, i, dfn {
     font-style: italic;
-    }
-    dfn {
+}
+dfn {
     font-weight:bold;
-    }
-    p, code, pre, kbd {
+}
+p, code, pre, kbd {
     margin:0 0 1.5em 0;
-    }
-    blockquote {
+}
+blockquote {
     margin:0 1.5em 1.5em 1.5em;
-    }
-    cite {
+}
+cite {
     font-style: italic;
-    }
-    li ul, li ol {
+}
+li ul, li ol {
     margin:0 1.5em;
-    }
-    ul, ol {
+}
+ul, ol {
     margin:0 1.5em 1.5em 1.5em;
-    }
-    ul {
+}
+ul {
     list-style-type:disc;
-    }
-    ol {
+}
+ol {
     list-style-type:decimal;
-    }
-    ol ol {
+}
+ol ol {
     list-style: upper-alpha;
-    }
-    ol ol ol {
+}
+ol ol ol {
     list-style: lower-roman;
-    }
-    ol ol ol ol {
+}
+ol ol ol ol {
     list-style: lower-alpha;
-    }
-    dl {
+}
+dl {
     margin:0 0 1.5em 0;
-    }
-    dl dt {
+}
+dl dt {
     font-weight:bold;
-    }
-    dd {
+}
+dd {
     margin-left:1.5em;
-    }
-    table {
+}
+table {
     margin-bottom:1.4em;
     width:100%;
-    }
-    th {
+}
+th {
     font-weight:bold;
-    }
-    th, td, caption {
+}
+th, td, caption {
     padding:4px 10px 4px 5px;
-    }
-    tfoot {
+}
+tfoot {
     font-style:italic;
-    }
-    sup, sub {
+}
+sup, sub {
     line-height:0;
-    }
-    abbr, acronym {
+}
+abbr, acronym {
     border-bottom: 1px dotted;
-    }
-    address {
+}
+address {
     margin:0 0 1.5em;
     font-style:italic;
-    }
-    del {
+}
+del {
     text-decoration: line-through;
-    }
-    pre {
+}
+pre {
     margin:1.5em 0;
     white-space:pre;
-    }
-    img.centered, .aligncenter, div.aligncenter {
+}
+img.centered, .aligncenter, div.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    }
-    img.alignright {
+}
+img.alignright {
     display: inline;
-    }
-    img.alignleft {
+}
+img.alignleft {
     display: inline;
-    }
-    .alignright {
+}
+.alignright {
     float: right;
     margin-left: 10px;
-    }
-    .alignleft {
+}
+.alignleft {
     float: left;
     margin-right: 10px;
-    }
-    img {
+}
+img {
     max-width: 100%;
-    }
-    * html .clearfix {
+}
+* html .clearfix {
     height: 1%;
-    }
-    * + html .clearfix {
+}
+* + html .clearfix {
     display: inline-block;
-    }
-    .clearfix:after {
+}
+.clearfix:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
-    }
-    * html .group {
+}
+* html .group {
     height: 1%;
-    }
-    * + html .group {
+}
+* + html .group {
     display: inline-block;
-    }
-    .group:after {
+}
+.group:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
-    }
-    /**
-    * End Vanilla CSS
-    */
-   		* {
-   			margin: 0;
-   			padding: 0; }
-        html {
-            height: 100%; }
-        body {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: column;
-            -webkit-flex-direction: column;
-            -moz-flex-direction: column;
-            -ms-flex-direction: column;
-            min-width: 100%;
-            min-height: 100%;
+}
+/**
+* End Vanilla CSS
+*/
+* {
+    margin: 0;
+    padding: 0; }
+html {
+    height: 100%; }
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
     /**
     * No more overflow-x: hidden; It was there as a hack to remove horizontal scroll on overflow. I stumbled on a combination of percentage and view port widths to display content without it
     */
-            }
-        body > header {
-            min-width:100%;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            justify-content: space-between;
-            -webkit-justify-content: space-between;
-            -moz-justify-content: space-between;
-            -ms-justify-content: space-between;
-            flex-direction: row;
-            -webkit-flex-direction: row;
-            -moz-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-flow: row wrap;
-            -webkit-flex-flow: row wrap;
-            -moz-flex-flow: row wrap;
-            -ms-flex-flow: row wrap; }
-        body > header h1 {
-            margin: 1vw; }
-    /**
-    * !IE is not centering or proper flex width
-    */
-        body > article  {
-            margin: auto;
-            width: auto;
-        }
-        h1 {
-            font-size: 4vmin;
-            line-height: 4vmin; }
-        h2 {
-            font-size: 3.5vmin;
-            line-height: 3.5vmin; }
-        h3 {
-            font-size: 3vmin;
-            line-height: 3vmin; }
+}
+body > header {
+    min-width:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap; }
+body > header h1 {
+    margin: 1vw; }
+/**
+* !IE is not centering or proper flex width
+*/
+body > article  {
+    margin: auto;
+    width: auto;
+}
+h1 {
+    font-size: 4vmin;
+    line-height: 4vmin; }
+h2 {
+    font-size: 3.5vmin;
+    line-height: 3.5vmin; }
+h3 {
+    font-size: 3vmin;
+    line-height: 3vmin; }
 /**
 * The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
 * In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers,
 * but is now defined in semantic terms, rather than presentational terms.
 */
-        hr {
-            -moz-border-bottom-colors: none;
-            -moz-border-left-colors: none;
-            -moz-border-right-colors: none;
-            -moz-border-top-colors: none;
-            border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
-            border-image: none;
-            border-right: 0 none;
-            border-style: solid none none;
-            border-width: 1px 0 0;
-            margin-bottom: 0;
-            margin-top: 0;
-            clear: both; }
-        a {
-        	display: inline-block; }
-    	blockquote {
-    		font-size: small; }
-    	blockquote h1, blockquote h2, blockquote h3{
-    		margin-top: 0; }
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    clear: both; }
+a {
+    display: inline-block; }
+blockquote {
+    font-size: small; }
+blockquote h1, blockquote h2, blockquote h3{
+    margin-top: 0; }
 /**
 * some flex properties (more specifically IE) need explicit properties for flex-shrink and flex-basis
 */
-		article, section, div {
-			position: relative;	}
+article, section, div {
+    position: relative;	}
 /**
 * Article = Row
 */
-        article {
-		 	display: -webkit-box; /* Safari */ 
-		    display: -moz-box; /* Firefox 21- */
-		    display: -ms-flexbox; /* IE 10+ */
-		    display: -webkit-flex; /* Chrome */
-		    display: flex; /* Standard (Firefox 22+) */
-			 /*old syntax*/
-			-webkit-box-orient: horizontal;
-			-moz-box-orient: horizontal;
-			-ms-box-orient: horizontal;
-			/*new syntax*/
-			flex-direction: row;
-			-webkit-flex-direction: row;
-			-moz-flex-direction: row;
-			-ms-flex-direction: row;
-            flex-flow: row wrap;
-            -webkit-flex-flow: row wrap;
-            -moz-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-            width: 99%;
-            max-width: 100%;
+article {
+    display: -webkit-box; /* Safari */
+    display: -moz-box; /* Firefox 21- */
+    display: -ms-flexbox; /* IE 10+ */
+    display: -webkit-flex; /* Chrome */
+    display: flex; /* Standard (Firefox 22+) */
+    /*old syntax*/
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    /*new syntax*/
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    width: 99%;
+    max-width: 100%;
     /**
     * ie9 float fall back for flex position
     */
-            float: left \ ;
-            }
-        article > h1 {
-            min-width: 100%; }
+    float: left \ ;
+}
+article > h1 {
+    min-width: 100%; }
 /**
 * !Find a better way
 */
-        article > p, article > div {
-            min-width: 100%;
-            width: 99%;
-            max-width: 100%;}
+article > p, article > div {
+    min-width: 100%;
+    width: 99%;
+    max-width: 100%;}
 /**
 * Section = Column
 */
-        section {
-        	padding: .01vw;
-        	-webkit-flex: 1;
-            -moz-flex: 1;
-            -ms-flex: 1;
-            flex: 1;
-            width: 99%;
-            max-width: 100%;
+section {
+    padding: .01vw;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 99%;
+    max-width: 100%;
     /**
     * ie9 float fall back for flex position
     */
-            float: left \ ;
-        	 }
-    /**
-    * nested article/section
-    */
-        section article {
-            width: 99%;
-            margin: 0 auto; }
-    /**
-    * main flex property = sticky footer :: Setting flex basis to auto prevents the main element from collapsing on IE and layout gracefully degrades to a non-sticky footer.
-    */
-        main {
-    		-webkit-box-flex: 1 0 auto;
-    		/* IE10 */
-    		-ms-flex: 1 0 auto;
-    		/* Unprefixed */
-    		flex: 1 0 auto;
-    		/* prefixed webkit syntax */
-    		-webkit-flex: 1 0 auto;
-             }
-        article header {
-            width: auto; }
-        section header {
-        	width: auto; }
-        nav {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            flex-flow: row wrap;
-            -webkit-flex-flow: row wrap;
-            -moz-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-            min-width:100%; }
-        nav a {
-			-webkit-box-flex: 1 0 auto;
-    		/* IE10 */
-    		-ms-flex: 1 0 auto;
-    		/* Unprefixed */
-    		flex: 1 0 auto;
-    		/* prefixed webkit syntax */
-    		-webkit-flex: 1 0 auto;
-            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-            transition: background 0.3s ease 0s;
-            padding: 1vw;  }
-        nav a:hover {
-        	background-color:#eee; 
-        	text-decoration: none; }
-        nav a.active {
-        	background-color:#eee; }
-        nav a:not(:first-of-type) {
-            text-align: center; }      
-        nav ul {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            flex-flow: row wrap;
-            -webkit-flex-flow: row wrap;
-            -moz-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-            list-style-type: none; }
-        nav ul li {
-        	-webkit-box-flex: 1 0 auto;
-    		/* IE10 */
-    		-ms-flex: 1 0 auto;
-    		/* Unprefixed */
-    		flex: 1 0 auto;
-    		/* prefixed webkit syntax */
-    		-webkit-flex: 1 0 auto;
-            text-align: center; }
-        footer {
-            min-width:  100%;
-            width: 99%;
-            max-width: 100%;
-            order: 2;
-            -webkit-order: 2;
-            -moz-order: 2;
-            -ms-order: 2;  }
+    float: left \ ;
+}
+/**
+* nested article/section
+*/
+section article {
+    width: 99%;
+    margin: 0 auto; }
+/**
+* main flex property = sticky footer :: Setting flex basis to auto prevents the main element from collapsing on IE and layout gracefully degrades to a non-sticky footer.
+*/
+main {
+    -webkit-box-flex: 1 0 auto;
+    /* IE10 */
+    -ms-flex: 1 0 auto;
+    /* Unprefixed */
+    flex: 1 0 auto;
+    /* prefixed webkit syntax */
+    -webkit-flex: 1 0 auto;
+}
+article header {
+    width: auto; }
+section header {
+    width: auto; }
+nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+}
+nav a {
+    -webkit-box-flex: 1 0 auto;
+    /* IE10 */
+    -ms-flex: 1 0 auto;
+    /* Unprefixed */
+    flex: 1 0 auto;
+    /* prefixed webkit syntax */
+    -webkit-flex: 1 0 auto;
+    transition: background 0.3s ease 0s;
+    padding: 1vw;  }
+nav a:hover {
+    background-color:#eee; }
+nav a.active {
+    background-color:#eee; }
+nav a:not(:first-of-type) {
+    text-align: center; }
+
+footer {
+    min-width:  100%;
+    width: 99%;
+    max-width: 100%;
+    order: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-order: 2;  }
 
 /**
 * Ambient design has to two base design patterns: landscape & portrait. This allows the HTML to be more fully responsive without the need for structure based classes.
@@ -407,72 +385,72 @@ pertaining to or noting close and constant social contact and communication fost
 * portrait containers [article/section] block and flow into a vertical display., I prefer blocking over [flex-direction: column;] for now.* dThis also maintainsmhe ux-shell "multi-column" properties to remain multi-column
 *
 */
-        @media (orientation:portrait){
-            article, section {
-                display: block;
-                }
-        }
-        
-		/* ambient classes: aesthetics */
-		
-		.user-img {
-			width: 65px;
-			height: 65px;
-			border-radius: 50%;
-			background: #fff;
-			overflow: hidden;
-			border: 3px solid #fff;
-			margin-right: 1vw;
-			float: left; }
-		.user-img img {
-			max-width: 97px;
-			margin-top: -19px;
-			margin-left: -22px; }
-		.user-logout {
-			background-color:#FD8A78;
-			color: #fff;
-			height: 34px;
-			width: 34px;
-			margin: 1vw;
-			line-height: 32px;
-			text-align: center; }
-		.panel-tabs {
-			float: left;
-			list-style: none;
-			text-align: center;
-			margin: 0; }
-		.panel-tabs li {
-			border-left: 1px solid rgba(0,0,0,0.1);
-            position: relative;
-			float: left; }
-		.panel-tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
-		.panel-tabs li.active a, .panel-tabs li.active:hover a { color: #3e3e3e; cursor: default; }
-		.panel-tabs li.active a i, .panel-tabs li.active:hover a i { color:#e86f56; }
-		.panel-tabs li.active:before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left:50%;
-			margin-left: -7px;
-			width: 0;
-			height: 0;
-			border-left: 7px solid transparent;
-			border-right: 7px solid transparent;
-			border-top: 9px solid #7a706e;
-			z-index: 1; }
-		.panel-tabs li:hover a, .panel-tabs li:hover a i { color: #3e3e3e;  }
-		.panel-tabs li a {
-			color: #9f9f9f;
-            padding: .5vw 1.5vw;
-			transition:color 0.3s; }
-		.panel-tabs li i {
-			font-size: 3vmin;
-            margin-bottom: .5vw;
-			color: #b5adac;
-			transition:color 0.3s; }
-		.panel-info h1 {
-			margin-top: .5vw;
-			color: #3e3e3e; }
-		.panel-info {
-			float: left; 
-			margin: 0 2vw; }
+@media (orientation:portrait){
+    article, section {
+        display: block;
+    }
+}
+
+/* ambient classes: aesthetics */
+
+.user-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin-right: 1vw;
+    float: left; }
+.user-img img {
+    max-width: 97px;
+    margin-top: -19px;
+    margin-left: -22px; }
+.user-logout {
+    background-color:#FD8A78;
+    color: #fff;
+    height: 34px;
+    width: 34px;
+    margin: 1vw;
+    line-height: 32px;
+    text-align: center; }
+.panel-tabs {
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin: 0; }
+.panel-tabs li {
+    border-left: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+    float: left; }
+.panel-tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
+.panel-tabs li.active a, .panel-tabs li.active:hover a { color: #3e3e3e; cursor: default; }
+.panel-tabs li.active a i, .panel-tabs li.active:hover a i { color:#e86f56; }
+.panel-tabs li.active:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    margin-left: -7px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #7a706e;
+    z-index: 1; }
+.panel-tabs li:hover a, .panel-tabs li:hover a i { color: #3e3e3e;  }
+.panel-tabs li a {
+    color: #9f9f9f;
+    padding: .5vw 1.5vw;
+    transition:color 0.3s; }
+.panel-tabs li i {
+    font-size: 3vmin;
+    margin-bottom: .5vw;
+    color: #b5adac;
+    transition:color 0.3s; }
+.panel-info h1 {
+    margin-top: .5vw;
+    color: #3e3e3e; }
+.panel-info {
+    float: left;
+    margin: 0 2vw; }

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ambient.css">
+    <link rel="stylesheet" href="ux-shells.css">
+</head>
+<body>
+<header>
+    <h1><a href="index.html">My Logo</a></h1>
+    <a href="#" class="user-logout"><i class="fa fa-unlock-alt" ></i></a>
+</header>
+<hr />
+
+<nav role="navigation">
+    <a href="index.html" class="userTxt">
+        <span class="user-img"><img src="fn.jpg"></span>
+        <span><strong>User Name</strong></span><br />
+        <span>@company</span>
+    </a>
+    <a href="panel1.html"><strong>Panel 1</strong></a>
+    <a href="panel2.html"><strong>Panel 2</strong></a>
+    <a href="panel3.html"><strong>Panel 3</strong></a>
+</nav>
+<hr />
+
+<main role="main">
+    <article class="panel-shell">
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#"><i class="fa fa-user"></i><br>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-font"></i><br>Typography</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cube"></i><br>UI Elements</a>
+                </li>
+                <li>
+                    <a href="uxShells.html"><i class="fa fa-th"></i><br>UX Shells</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-compass"></i><br>Navs</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-tasks"></i><br>Form States</a>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+
+        <section>
+            <header>
+                <div class="panel-info">
+                    <h1>Home Panel</h1>
+                    <span>UX Shells</span>
+                </div>
+                <ul class="panel-tabs">
+                    <li>
+                        <a href="#"> <i class="fa fa-smile-o"></i><br>Tab 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-smile-o"></i><br>Tab 2</a>
+                    </li>
+                </ul>
+            </header>
+            <hr />
+
+            <h1>UX Shells</h1>
+            <p>
+                UX Shells are composed of design patterns built on ambient's <a href="debugAmbientView.html">core design pattern.</a>
+            </p>
+            <h2>
+                Core Design Pattern
+            </h2>
+            <p>
+                Ambient design has a core design pattern (<strong>landscape</strong> & <strong>portrait</strong>) for HTML sections as a presentation format without the need for structure based classes.
+            </p>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
+                <h2>Sections</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Element</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>&lt;body&gt;</code></td>
+                        <td>
+                            <div>
+                                Represents the content of an HTML document. There is only one <code>&lt;body&gt;</code> element in a document.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;section&gt;</code></td>
+                        <td>Defines a section in a document.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;nav&gt;</code></td>
+                        <td>Defines a section that contains only navigation links.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;article&gt;</code></td>
+                        <td>Defines self-contained content that could exist independently of the rest of the content.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;aside&gt;</code></td>
+                        <td>Defines some content loosely related to the page content. If it is removed, the remaining content still makes sense.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code></td>
+                        <td>Heading elements implement six levels of document headings; <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> is the least. A heading element briefly describes the topic of the section it introduces.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Defines the header of a page or section. It often contains a logo, the title of the Web site, and a navigational table of content.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;footer&gt;</code></td>
+                        <td>Defines the footer for a page or section. It often contains a copyright notice, some links to legal information, or addresses to give feedback.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;address&gt;</code></a></td>
+                        <td>Defines a section containing contact information.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>Defines the main or important content in the document. There is only one &lt;main&gt; element in the document.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </blockquote>
+
+
+        </section>
+    </article>
+    <hr />
+
+</main>
+<footer></footer>
+</body>
+</html>
+
