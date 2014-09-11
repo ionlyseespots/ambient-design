@@ -278,10 +278,6 @@ article {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     /**
-    * preemptive strike on absolute container positioning inside columns
-    */
-    position: relative;
-    /**
     * ie9 float fall back for flex position
     */
     float: left \ ; }
@@ -290,6 +286,10 @@ section {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
     /**
     * ie9 float fall back for flex position
     */
