@@ -17,28 +17,6 @@ pertaining to or noting close and constant social contact and communication fost
 */
 
 /**
-* Ambient base design pattern uses flex (float fall backs for IE9: yet need refine but only if IE9 is required), view port widths & heights, as well as percentages (and potentially the CSS property calc).
-* This allows the HTML to define the visual structure of the page without the need for structure based classes.
-* !IE yet has an issue with height of page expanding a bit on ul li a hover that I am looking into.
-*
-* 1vw = 1% of view port width
-* 1vh = 1% of view port height
-* 1vmin = 1vw or 1vh, whichever is smaller
-* 1vmax = 1vw or 1vh, whichever is larger
-* % = relative to the initial containing block.
-
-* Base design patterns:
-* -- No borders: framing is done by thematic breaks with HR
-* -- No colors: active, inactive and hover are the only default colors in base design pattern
-* -- White space is defined by view port width
-* -- Font size scales with vmin > vw or vh, whichever is smaller :: [If Bootstrap is used, body font size becomes 14px]
-* _Typography will come later
-*
-* !Yet need to ensure I don't have any stray fixed sized px and/or widths/heights declared where I do not want in ambient
-* !Yet need to ensure cross browser properties - maybe find a nice way to auto prefix
-*/
-
-/**
 * Vanilla CSS 1.0.2
 * http://cssreset.com
 * http://www.cssreset.com/scripts/vanilla-css-un-reset/
@@ -194,56 +172,60 @@ article, section, article h1, article p, footer {
     width: 100%; }
 
 /**
-* Ambient Base Design Structure
+* Ambient Base Design pattern
 */
 * {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-sizing: border-box; }
+*:before, *:after {
+    box-sizing: border-box; }
+
 body {
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column; }
+    -ms-flex-direction: column;
+    flex-direction: column; }
 body > header {
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-    -moz-flex-direction: row;
     -ms-flex-direction: row;
-    flex-flow: row wrap;
+    flex-direction: row
     -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    -ms-flex-flow: row wrap; }
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;; }
 body > nav {
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
-    flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-}
+    flex-flow: row wrap; }
 body > nav a {
     -webkit-box-flex: 1;
+    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    -webkit-flex: 1;
     transition: background 0.3s ease 0s;
     padding: 1vw;  }
 body >  nav a:hover {
@@ -252,14 +234,9 @@ body >  nav a.active {
     background-color:#eee; }
 body >  nav a:not(:first-of-type) {
     text-align: center; }
-
-/**
-* Center first article not in main
-*/
 body > article  {
     margin: auto;
-    width: auto;
-}
+    width: auto; }
 h1 {
     font-size: 4vmin;
     line-height: 4vh; }
@@ -269,12 +246,6 @@ h2 {
 h3 {
     font-size: 3vmin;
     line-height: 3vh; }
-
-/**
-* The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
-* In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers,
-* but is now defined in semantic terms, rather than presentational terms.
-*/
 hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -292,43 +263,28 @@ a {
     display: inline-block; }
 blockquote {
     font-size: small; }
-
-/**
-* Article = Row
-*/
 article {
     display: -webkit-box; /* Safari */
     display: -moz-box; /* Firefox 21- */
     display: -ms-flexbox; /* IE 10+ */
     display: -webkit-flex; /* Chrome */
     display: flex; /* Standard (Firefox 22+) */
-    /*old syntax*/
     -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -ms-box-orient: horizontal;
-    /*new syntax*/
-    flex-direction: row;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-    -moz-flex-direction: row;
     -ms-flex-direction: row;
-    flex-flow: row wrap;
+    flex-direction: row;
     -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     /**
     * preemptive strike on absolute container positioning inside columns
     */
     position: relative;
-
     /**
     * ie9 float fall back for flex position
     */
-    float: left \ ;
-}
-
-/**
-* Section = Column
-*/
+    float: left \ ; }
 section {
     -webkit-flex: 1;
     -moz-flex: 1;
@@ -337,32 +293,18 @@ section {
     /**
     * ie9 float fall back for flex position
     */
-    float: left \ ;
-}
-
-/**
-* main flex property = sticky footer :: Setting flex basis to auto prevents the main element from collapsing on IE and layout gracefully degrades to a non-sticky footer.
-*/
+    float: left \ ; }
 main {
-    -webkit-box-flex: 1 0 auto;
-    /* IE10 */
-    -ms-flex: 1 0 auto;
-    /* Unprefixed */
-    flex: 1 0 auto;
-    /* prefixed webkit syntax */
+    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
-}
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
 footer {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
-    -moz-order: 2;
-    -ms-order: 2;  }
+    -ms-flex-order: 2;
+    order: 2; }
 
-/**
-* Ambient design has to two base design patterns: landscape & portrait. This allows the HTML to be more fully responsive without the need for structure based classes.
-* Portrait [article/section] flow into a vertical display. I prefer blocking over [flex-direction: column;] for now.
-*
-*/
 @media (orientation:portrait){
     article, section {
         display: block;
