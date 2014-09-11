@@ -35,11 +35,13 @@
         -ms-flex-direction: column; }
 
 	/* panel shell */
-.panel-shell nav {       flex-direction: column;
+.panel-shell nav {
+    flex-direction: column;
     flex-flow: column;
     -webkit-flex-flow: column;
     -moz-flex-flow: column;
-    -ms-flex-flow: column;    -webkit-flex: 1;
+    -ms-flex-flow: column;
+    -webkit-flex: 1;
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
