@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../ambient.css">
+	<link rel="stylesheet" href="../ux-shells.css">
+	</head>
+<body>
+<header>
+    <h1><a href="index.html">My Logo</a></h1>
+    <a href="#" class="user-logout"><i class="fa fa-unlock-alt" ></i></a>
+</header>
+<hr />
+
+<nav role="navigation">
+    <a href="index.html" class="userTxt">
+        <span class="user-img"><img src="../fn.jpg"></span>
+        <span><strong>User Name</strong></span><br />
+        <span>@company</span>
+    </a>
+    <a href="../panel1.html"><strong>Panel 1</strong></a>
+    <a href="../panel2.html"><strong>Panel 2</strong></a>
+    <a href="../panel3.html"><strong>Panel 3</strong></a>
+</nav>
+<hr />
+
+<main role="main">
+    <article class="panel-shell">
+        <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-user"></i><br>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-font"></i><br>Typography</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cube"></i><br>UI Elements</a>
+                    </li>
+                    <li>
+                        <a href="../uxShells.html"><i class="fa fa-th text-success"></i><br>UX Shells</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-compass"></i><br>Navs</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-tasks"></i><br>Form States</a>
+                    </li>
+                </ul>
+        </nav>
+        <hr />
+
+        <section>
+            <header>
+                <div class="panel-info">
+                    <h1>Home Panel</h1>
+                    <span>Dashboard</span>
+                </div>
+                <ul class="panel-tabs">
+                    <li>
+                        <a href="../homePanelTab1.html"> <i class="fa fa-smile-o"></i><br>Tab 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-smile-o"></i><br>Tab 2</a>
+                    </li>
+                </ul>
+            </header>
+            <hr />
+
+            <h1>Home Panel</h1>
+            <p>Root level for Home panel</p>
+            <blockquote cite="http://dictionary.reference.com/browse/ambient">
+                <h2>Ambient Design *</h2>
+                <p>
+                    am·bi·ent /'ambēənt/ <i>adjective</i>
+                </p>
+                <ol>
+                    <li>of the surrounding area or environment</li>
+                    <li>completely surrounding; encompassing</li>
+                    <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
+                    <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
+                    <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
+                </ol>
+            </blockquote>
+            <p>
+                <strong>* View and/or debug ambient design code:</strong>
+            </p>
+            <ol>
+                <li>
+                    <a href="../debugAmbientView.html">Core design pattern</a>
+                </li>
+                <li>
+                    <a href="../debugUxShells.html">UX Shells</a>
+                </li>
+            </ol>
+
+            <p>
+                Ambient design has a core design pattern (<strong>landscape</strong> & <strong>portrait</strong>) for the HTML as a presentation format without the need for structure based classes.
+            </p>
+            <p>
+                Ambient design is methodology for creating layout. There are 5 distinct design patterns:
+            </p>
+            <ol>
+                <li>
+                    Typography
+                </li>
+                <li>
+                    UI Elements
+                </li>
+                <li>
+                    <strong>UX Shells</strong> (first priority)<br />
+                    <i>panel-shell & multi-column-shell design patterns are the first priority, and make up the living (static) template you see here.</i>
+                </li>
+                <li>
+                    Navs
+                </li>
+                <li>
+                    Form States (second priority)
+                </li>
+            </ol>
+        </section>
+    </article>
+    <hr />
+
+</main>
+<footer></footer>
+</body>
+</html>
+
