@@ -5,19 +5,19 @@
     <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="ambient.css">
-	<link rel="stylesheet" href="ux-shells.css">
-	</head>
+	<link rel="stylesheet" href="../ambient/css/ambient.css">
+	<link rel="stylesheet" href="../ambient/css/ux-shells.css">
+</head>
 <body>
 <header>
-    <h1><a href="admin-shell/index.html">My Logo</a></h1>
-    <a href="#" class="user-logout"><i class="fa fa-unlock-alt" ></i></a>
+    <h1><a href="index.html" title="index">My Logo</a></h1>
+    <a href="#" title="logout"><i class="fa fa-unlock-alt text-danger" ></i></a>
 </header>
 <hr />
 
 <nav role="navigation">
-    <a href="admin-shell/index.html" class="userTxt">
-        <span class="user-img"><img src="fn.jpg"></span>
+    <a href="index.html" class="userTxt">
+        <span class="user-img"><img src="assets/css/img/fn.jpg"></span>
         <span><strong>User Name</strong></span><br />
         <span>@company</span>
     </a>
@@ -49,11 +49,20 @@
 
         <nav>
             <ul>
-                <li>
+                <li class="active">
                     <a href="panel1Nav1SubNav1.html"><i class="fa fa-smile-o" ></i><br>Sub Nav 1</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-smile-o"></i><br>Sub Nav 1</a>
+                    <a href="#"><i class="fa fa-smile-o"></i><br>Sub Nav 2</a>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="panel1Nav1SubNav1SubNav1.html"><i class="fa fa-smile-o" ></i><br>Sub Nav 1</a>
                 </li>
             </ul>
         </nav>
@@ -63,12 +72,15 @@
             <header>
                 <div class="panel-info">
                     <h1>Panel 1</h1>
-                    <span>Nav 1</span>
+                    <span>Sub Nav 1</span>
                 </div>
             </header>
             <hr />
 
-            <h3>Nav 1</h3>
+            <h3>Sub Nav 1</h3>
+            <p>
+                One level deep into Nav 1
+            </p>
         </section>
     </article>
     <hr />

@@ -168,7 +168,7 @@ html {
 body {
     min-width: 100%;
     min-height: 100%; }
-article, section, article h1, article p, footer {
+nav, article, section, article h1, article h2, article h3, article p, footer {
     width: 100%; }
 
 /**
@@ -177,8 +177,6 @@ article, section, article h1, article p, footer {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; }
-*:before, *:after {
     box-sizing: border-box; }
 
 body {
@@ -191,7 +189,7 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-body > header {
+body header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -208,7 +206,7 @@ body > header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;; }
-body > nav {
+nav {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -221,20 +219,20 @@ body > nav {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap; }
-body > nav a {
+nav a {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     transition: background 0.3s ease 0s;
     padding: 1vw;  }
-body >  nav a:hover {
+body  nav a:hover {
     background-color:#eee; }
-body >  nav a.active {
+body nav a.active {
     background-color:#eee; }
-body >  nav a:not(:first-of-type) {
+body nav a:not(:first-of-type) {
     text-align: center; }
-body > article  {
+body article  {
     margin: auto;
     width: auto; }
 h1 {
@@ -264,11 +262,10 @@ a {
 blockquote {
     font-size: small; }
 article {
-    display: -webkit-box; /* Safari */
-    display: -moz-box; /* Firefox 21- */
-    display: -ms-flexbox; /* IE 10+ */
-    display: -webkit-flex; /* Chrome */
-    display: flex; /* Standard (Firefox 22+) */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -312,6 +309,10 @@ footer {
 }
 
 /* ambient classes: aesthetics */
+.fa {
+    font-size: 4vmin;
+    padding: .2vw .5VW;
+}
 .user-img {
     width: 65px;
     height: 65px;
@@ -328,8 +329,6 @@ footer {
 .user-logout {
     background-color:#FD8A78;
     color: #fff;
-    height: 34px;
-    width: 34px;
     margin: 1vw;
     line-height: 32px;
     text-align: center; }
