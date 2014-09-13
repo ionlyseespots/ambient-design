@@ -5,8 +5,9 @@
     <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../ambient/css/lib/vanilla-reset.css">
 	<link rel="stylesheet" href="../ambient/css/ambient.css">
-	<link rel="stylesheet" href="../ambient/css/ux-shells.css">
+	<link rel="stylesheet" href="../ambient/css/lib/ux-shells.css">
 	</head>
 <body>
 <header>
@@ -28,7 +29,7 @@
 <hr />
 
 <main role="main">
-    <article class="panel-shell">
+    <article ambientleftpanel>
         <nav>
             <ul>
                 <li class="active">
@@ -36,7 +37,7 @@
                 </li>
             </ul>
         </nav>
-        <hr />
+        <hr ambientvr />
 
         <section>
             <header >

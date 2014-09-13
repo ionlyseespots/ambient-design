@@ -1,0 +1,32 @@
+/**
+* navigation row
+*/
+[ambientnavrow] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+[ambientnavrow] a {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    transition: background 0.3s ease 0s;
+    padding: 1vw; }
+[ambientnavrow] a:hover {
+    background-color:#eee; }
+[ambientnavrow] a.active {
+    background-color:#eee; }
+
+
+[ambientnavrow~="large"] a i {
+    font-size: 8vmin;
+}

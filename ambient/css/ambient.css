@@ -1,183 +1,26 @@
 /**
-ambient
-[am-bee-uh nt]
-
-adjective
-1.
-of the surrounding area or environment
-2.
-completely surrounding; encompassing
-3.
-creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be
-
-4.
-pertaining to or noting sounds that create a peaceful and relaxed atmosphere
-5.
-pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices
+* Whiskey & Ghosts: corral section widths, heights & spacing
 */
-
-/**
-* Vanilla CSS 1.0.2
-* http://cssreset.com
-* http://www.cssreset.com/scripts/vanilla-css-un-reset/
-*/
-body {
-    font: 9pt/1.5em sans-serif;
-}
-pre, code, tt {
-    font: 1em/1.5em 'Andale Mono', 'Lucida Console', monospace;
-}
-h1, h2, h3, h4, h5, h6, b, strong {
-    font-weight: bold;
-}
-em, i, dfn {
-    font-style: italic;
-}
-dfn {
-    font-weight:bold;
-}
-p, code, pre, kbd {
-    margin:0 0 1.5em 0;
-}
-blockquote {
-    margin:0 1.5em 1.5em 1.5em;
-}
-cite {
-    font-style: italic;
-}
-li ul, li ol {
-    margin:0 1.5em;
-}
-ul, ol {
-    margin:0 1.5em 1.5em 1.5em;
-}
-ul {
-    list-style-type:disc;
-}
-ol {
-    list-style-type:decimal;
-}
-ol ol {
-    list-style: upper-alpha;
-}
-ol ol ol {
-    list-style: lower-roman;
-}
-ol ol ol ol {
-    list-style: lower-alpha;
-}
-dl {
-    margin:0 0 1.5em 0;
-}
-dl dt {
-    font-weight:bold;
-}
-dd {
-    margin-left:1.5em;
-}
-table {
-    margin-bottom:1.4em;
-    width:100%;
-}
-th {
-    font-weight:bold;
-}
-th, td, caption {
-    padding:4px 10px 4px 5px;
-}
-tfoot {
-    font-style:italic;
-}
-sup, sub {
-    line-height:0;
-}
-abbr, acronym {
-    border-bottom: 1px dotted;
-}
-address {
-    margin:0 0 1.5em;
-    font-style:italic;
-}
-del {
-    text-decoration: line-through;
-}
-pre {
-    margin:1.5em 0;
-    white-space:pre;
-}
-img.centered, .aligncenter, div.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-img.alignright {
-    display: inline;
-}
-img.alignleft {
-    display: inline;
-}
-.alignright {
-    float: right;
-    margin-left: 10px;
-}
-.alignleft {
-    float: left;
-    margin-right: 10px;
-}
-img {
-    max-width: 100%;
-}
-* html .clearfix {
-    height: 1%;
-}
-* + html .clearfix {
-    display: inline-block;
-}
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-* html .group {
-    height: 1%;
-}
-* + html .group {
-    display: inline-block;
-}
-.group:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-/**
-* End Vanilla CSS
-*/
-
-/**
-* Whiskey & Ghosts: corral base design pattern section widths & heights for ambient
-*/
-header, nav, main, article, section, footer, h1, p, hr, div {
-    padding: .01vw;
-    max-width: 100%; }
 html {
     height: 100%; }
 body {
     min-width: 100%;
     min-height: 100%; }
+body > article  {
+    margin: auto;
+    width: auto; }
 nav, article, section, article h1, article h2, article h3, article p, footer {
     width: 100%; }
+header, nav, main, article, section, footer, h1, p, hr, div {
+    padding: .01vw;
+    max-width: 100%; }
 
 /**
-* Ambient Base Design pattern
+* Ambient base design pattern for HTML sections as a presentation format without the need for structure based classes.
 */
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
+    padding: 0; }
 
 body {
     display: -webkit-box;
@@ -189,7 +32,7 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-body header {
+header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -206,7 +49,7 @@ body header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;; }
-nav {
+body > nav {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -219,22 +62,19 @@ nav {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap; }
-nav a {
+body > nav a {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     transition: background 0.3s ease 0s;
-    padding: 1vw;  }
-body  nav a:hover {
+    padding: 1vw; }
+body > nav a:hover {
     background-color:#eee; }
 body nav a.active {
     background-color:#eee; }
-body nav a:not(:first-of-type) {
+body > nav a {
     text-align: center; }
-body article  {
-    margin: auto;
-    width: auto; }
 h1 {
     font-size: 4vmin;
     line-height: 4vh; }
@@ -251,12 +91,18 @@ hr {
     -moz-border-top-colors: none;
     border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
     border-image: none;
-    border-right: 0 none;
-    border-style: solid none none;
-    border-width: 1px 0 0;
     margin-bottom: 0;
     margin-top: 0;
     clear: both; }
+/**
+* vertical rule
+*/
+[ambientvr] {
+    width: 1px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 99.9%;
+    position: absolute; }
 a {
     display: inline-block; }
 blockquote {
@@ -273,7 +119,10 @@ article {
     flex-direction: row;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    flex-flow: row wrap;    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
     /**
     * ie9 float fall back for flex position
     */
@@ -306,6 +155,13 @@ footer {
     article, section {
         display: block;
     }
+    /**
+    * change vertical rule back to horizontal rule for portrait view
+    */
+    [ambientvr] {
+        width: 100%;
+        background-color: transparent;
+        position: static; }
 }
 
 /* ambient classes: aesthetics */
@@ -326,22 +182,14 @@ footer {
     max-width: 97px;
     margin-top: -19px;
     margin-left: -22px; }
-.user-logout {
-    background-color:#FD8A78;
-    color: #fff;
-    margin: 1vw;
-    line-height: 32px;
-    text-align: center; }
 .panel-tabs {
     float: left;
     list-style: none;
     text-align: center;
     margin: 0; }
 .panel-tabs li {
-    border-left: 1px solid rgba(0,0,0,0.1);
     position: relative;
     float: left; }
-.panel-tabs li:last-child { border-right: 1px solid rgba(0,0,0,0.1); }
 .panel-tabs li.active a, .panel-tabs li.active:hover a { color: #3e3e3e; cursor: default; }
 .panel-tabs li.active a i, .panel-tabs li.active:hover a i { color:#e86f56; }
 .panel-tabs li.active:before {
