@@ -103,10 +103,44 @@
                     <a href="debugUxShells.html">UX Shells</a>
                 </li>
             </ol>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
+                <h2>Attribute selectors</h2>
+                <h2 id="Summary" name="Summary">Summary</h2>
+                <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
+                <dl>
+                    <dt>
+                        <code>[<em>attr</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr.</dd>
+                    <dt>
+                        <code>[<em>attr</em>=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is exactly "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>~=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>|=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-” (U+002D). It can be used for language subcode matches.</dd>
+                    <dt>
+                        <code>[<em>attr</em>^=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is prefixed by "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>$=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is suffixed by "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>*=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
+                </dl>
+            </blockquote>
         </section>
     </article>
     <hr />
-
 
 </main>
 <footer></footer>
