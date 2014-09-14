@@ -28,85 +28,92 @@
 <hr />
 
 <main role="main">
+    <h1>
+        CSS
+    </h1>
+    <h2>
+        Overview
+    </h2>
+    <p>
+        Core design pattern | Attribute selectors
+    </p>
     <article>
-        <section>
-            <h1>
-                CSS
-            </h1>
-            <p>
-                Ambient design has a core design pattern (<strong>landscape</strong> & <strong>portrait</strong>) for HTML sections as a presentation format without the need for structure based classes.
-            </p>
-            <h2>
-                Overview
-            </h2>
-            <p>
-
-            </p>
-            <h3>
-                Core design pattern
-            </h3>
-            <p>
-                Ambient includes a responsive, mobile first fluid system that makes use of HTML section elements and CSS properties to appropriately scale as the device or viewport size increases.
-                It includes predefined design patterns for HTML sections as a presentation format, as well as design patterns for generating UX.
-            </p>
-            <h3>Introduction</h3>
-            <p></p>
-            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
-                <h2>Sections</h2>
-                <table>
-                    <thead>
-                    <tr>
-                        <th scope="col">Element</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><code>&lt;body&gt;</code></td>
-                        <td>
-                            <div>
-                                Represents the content of an HTML document. There is only one <code>&lt;body&gt;</code> element in a document.</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;section&gt;</code></td>
-                        <td>Defines a section in a document.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;nav&gt;</code></td>
-                        <td>Defines a section that contains only navigation links.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;article&gt;</code></td>
-                        <td>Defines self-contained content that could exist independently of the rest of the content.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;aside&gt;</code></td>
-                        <td>Defines some content loosely related to the page content. If it is removed, the remaining content still makes sense.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code></td>
-                        <td>Heading elements implement six levels of document headings; <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> is the least. A heading element briefly describes the topic of the section it introduces.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;header&gt;</code></td>
-                        <td>Defines the header of a page or section. It often contains a logo, the title of the Web site, and a navigational table of content.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;footer&gt;</code></td>
-                        <td>Defines the footer for a page or section. It often contains a copyright notice, some links to legal information, or addresses to give feedback.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;address&gt;</code></a></td>
-                        <td>Defines a section containing contact information.</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;main&gt;</code></td>
-                        <td>Defines the main or important content in the document. There is only one &lt;main&gt; element in the document.</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </blockquote>
+        <h1>
+            Core design pattern
+        </h1>
+        <h2>
+            Ambient design has a core design pattern for HTML sections as a presentation format without the need for structure based classes.
+        </h2>
+        <p>
+            Ambient includes a responsive, mobile first fluid system that makes use of HTML section elements and CSS properties to appropriately scale as the device or viewport size increases.
+            It includes predefined design patterns for HTML sections as a presentation format, as well as design patterns for generating UX.
+        </p>
+        <h3>Introduction</h3>
+        <p>
+            Ambient Design is about defining namespaces for design patterns. It works by generating styles for attributes & values.
+            And it's the key to unlocking a new approach. Here's how the Ambient Design system works:
+        </p>
+        <p>
+            The core design pattern is used to create page layout through through a series of rows and columns that are defined by HTML5 section attributes.
+        </p>
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
+            <h2>Sections</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Element</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>&lt;body&gt;</code></td>
+                    <td>
+                        <div>
+                            Represents the content of an HTML document. There is only one <code>&lt;body&gt;</code> element in a document.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;section&gt;</code></td>
+                    <td>Defines a section in a document.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;nav&gt;</code></td>
+                    <td>Defines a section that contains only navigation links.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;article&gt;</code></td>
+                    <td>Defines self-contained content that could exist independently of the rest of the content.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;aside&gt;</code></td>
+                    <td>Defines some content loosely related to the page content. If it is removed, the remaining content still makes sense.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code></td>
+                    <td>Heading elements implement six levels of document headings; <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> is the least. A heading element briefly describes the topic of the section it introduces.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;header&gt;</code></td>
+                    <td>Defines the header of a page or section. It often contains a logo, the title of the Web site, and a navigational table of content.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;footer&gt;</code></td>
+                    <td>Defines the footer for a page or section. It often contains a copyright notice, some links to legal information, or addresses to give feedback.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;address&gt;</code></a></td>
+                    <td>Defines a section containing contact information.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;main&gt;</code></td>
+                    <td>Defines the main or important content in the document. There is only one &lt;main&gt; element in the document.</td>
+                </tr>
+                </tbody>
+            </table>
+        </blockquote>
+        <footer>
             <p>
                 <strong>View and/or debug ambient design code:</strong>
             </p>
@@ -118,42 +125,52 @@
                     <a href="debugUxShells.html">UX Shells</a>
                 </li>
             </ol>
-            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
-                <h2>Attribute selectors</h2>
-                <h2 id="Summary" name="Summary">Summary</h2>
-                <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
-                <dl>
-                    <dt>
-                        <code>[<em>attr</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr.</dd>
-                    <dt>
-                        <code>[<em>attr</em>=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is exactly "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>~=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>|=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-” (U+002D). It can be used for language subcode matches.</dd>
-                    <dt>
-                        <code>[<em>attr</em>^=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is prefixed by "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>$=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is suffixed by "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>*=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
-                </dl>
-            </blockquote>
-        </section>
+        </footer>
+    </article>
+    <hr />
+
+    <article>
+        <h1>Attribute selectors</h1>
+        <h3>Introduction</h3>
+        <p>
+            Ambient Design is about defining namespaces for design patterns. It works by generating styles for attributes & values.
+            And it's the key to unlocking a new approach.
+        </p>
+        <p>The core design pattern is used to create page layout through a series of rows and columns that are defined by HTML5 section attributes. Here's how the Ambient Design system works:</p>
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
+            <h2>Summary</h2>
+            <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
+            <dl>
+                <dt>
+                    <code>[<em>attr</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr.</dd>
+                <dt>
+                    <code>[<em>attr</em>=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr and whose value is exactly "value".</dd>
+                <dt>
+                    <code>[<em>attr</em>~=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly "value".</dd>
+                <dt>
+                    <code>[<em>attr</em>|=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-” (U+002D). It can be used for language subcode matches.</dd>
+                <dt>
+                    <code>[<em>attr</em>^=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr and whose value is prefixed by "value".</dd>
+                <dt>
+                    <code>[<em>attr</em>$=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr and whose value is suffixed by "value".</dd>
+                <dt>
+                    <code>[<em>attr</em>*=<em>value</em>]</code></dt>
+                <dd>
+                    Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
+            </dl>
+        </blockquote>
     </article>
     <hr />
 
