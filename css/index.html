@@ -35,7 +35,7 @@
         Overview
     </h2>
     <p>
-        Core design pattern | Attribute selectors
+        Core design pattern | Attribute selectors | Angular
     </p>
     <article>
         <h1>
@@ -46,7 +46,10 @@
         </h2>
         <p>
             Ambient includes a responsive, mobile first fluid system that makes use of HTML section elements and CSS properties to appropriately scale as the device or viewport size increases.
-            It includes predefined design patterns for HTML sections as a presentation format, as well as a library of 5 distinct design patterns for generating UX.
+            We also include a library of 5 distinct design patterns for generating UX.
+        </p>
+        <p>
+            It does not take away from design as aesthetics. CSS and class names can still be applied as an overlay, but the layout is defined by the design patterns.
         </p>
         <h3>Introduction</h3>
         <p>
@@ -94,7 +97,7 @@
                 </p>
             </blockquote>
             <p>
-                <code>&lt;nav&gt;</code> is a <strong>row</strong>.
+                <code>&lt;body&gt; &lt;nav&gt;</code> is a <strong>row</strong>.
             </p>
             <blockquote>
                 <h3>
@@ -155,9 +158,6 @@
                 <h3>
                     <code>&lt;address&gt;</code>
                 </h3>
-                <p>
-                    <code></code>
-                </p>
             </blockquote>
             <p>
                 <code>&lt;address&gt;</code> is not yet styled.
@@ -275,21 +275,57 @@
     <hr />
 
     <article>
-        <h1>Attribute selectors</h1>
-        <h3>Introduction</h3>
+        <h1>
+            Attribute selectors
+        </h1>
+        <h2>
+            Ambient goes beyond HTML sections as a presentation format with a library of design patterns.
+        </h2>
         <p>
-            Ambient goes beyond HTML sections as a presentation format with a library of design patterns. To do that we need to look at attribute selectors.
+            CSS attribute selectors do not care if it is a predefined or a custom namespace. And it's the key to unlocking a new approach. We define custom namespaces for design patterns. To avoid collisions with other namespaces, we are prefixing default design patterns with "ambient".
         </p>
+        <h3>
+            Introduction
+        </h3>
         <p>
-            CSS attribute selectors do not care if it is a predefined or a custom namespace. And it's the key to unlocking a new approach. Ambient is about defining namespaces for your design patterns.
+            It is possible to style HTML elements that have specific attributes, not just class and id.
         </p>
-
         <section>
-
+            <blockquote>
+                <h3>
+                    <code>&lt;article ambientleftpanel&gt; &lt;/article &gt;</code>
+                </h3>
+                <p>
+                    <code>[ambientleftpanel] nav { flex-direction: column; flex: 1; }</code>
+                </p>
+            </blockquote>
+            <p>
+               Because we define our own namespace (ambient left panel), we can define a design pattern for this <code>&lt;article&gt;</code> <strong>without needing to use or duplicate class names for structure.</strong>
+            </p>
+            <p>
+                By defining our own namespace, we are able to separate styles into components that are common to all attributes & values within this design pattern.
+            </p>
+            <pre>
+&lt;nav ambientnavrow="large"&gt;
+&lt;a href=""&gt;&lt;i class="fa fa-font"&gt;&lt;/i&gt;
+&lt;span&gt;Typography&lt;/span&gt;&lt;/a&gt;
+&lt;/nav &gt;
+            </pre>
+            <blockquote>
+                <p>
+                    <code>[ambientnavrow~="largeicons"] a i {font-size: 8vmin; }</code>
+                </p>
+            </blockquote>
+            <p>
+                The name space "ambient nav row" defines a design pattern common to all ambient nav rows, while also defining an individual component for large icons without needing to use or duplicate class names for structure.
+            </p>
+            <p>
+                Normally, you would use a class name for an aesthetic change like this. We wanted to demonstrate the <code>~=</code> value as a individual component for the design pattern.
+            </p>
         </section>
-
         <section>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
+                <h1>Summary</h1>
                 <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
                 <dl>
                     <dt>
@@ -321,6 +357,47 @@
                     <dd>
                         Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
                 </dl>
+            </blockquote>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Angular
+        </h1>
+        <h2>
+            By defining our own namespace for a design pattern, we are able to combine custom attributes + custom directive names.
+        </h2>
+        <section>
+            <blockquote>
+                <h3>
+                    <code>&lt;article foobar&gt; &lt;/article &gt;</code>
+                </h3>
+                <p>
+                    <code>[foobar] { //css }</code>
+                </p>
+            </blockquote>
+            <p>
+                We can use the directive name as the attribute selector for the custom design pattern. Anytime we use the angularJS directive "foobar" it will inherit the ambient core design patterns, its own design pattern, and as any individual design components (values) without needing to use or duplicate class names for structure.
+            </p>
+            <p>
+                Ambient does not take away from design as aesthetics. CSS and class names can still be applied as an overlay, but the layout is defined by design patterns.
+            </p>
+        </section>
+        <section>
+            <blockquote>
+                <h1>A Basic Directive</h1>
+                <pre>
+.directive('foobar', function() {
+var obj = {
+restrict: 'E',
+templateUrl: 'partials/foobar.html'
+}
+return obj;
+});
+                </pre>
+                </code>
             </blockquote>
         </section>
     </article>
