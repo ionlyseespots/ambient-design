@@ -15,11 +15,6 @@
     -moz-flex: 1 auto;
     -ms-flex: 1 auto;
     flex: 1 auto; }
-[ambientmulticolumn] section:first-of-type aside {
-    flex: 0 0 20vw;
-    -webkit-flex: 0 0 20vw;
-    -moz-flex: 0 0 20vw;
-    -ms-flex: 0 0 20vw;	}
 [ambientmulticolumn] section:first-of-type aside:last-of-type {
     order:-1;
     -webkit-order: -1;

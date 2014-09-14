@@ -48,7 +48,7 @@ header {
     flex-direction: row
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    flex-flow: row wrap;; }
+    flex-flow: row wrap; }
 body > nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -77,13 +77,16 @@ body > nav a {
     text-align: center; }
 h1 {
     font-size: 4vmin;
-    line-height: 4vh; }
+    line-height: 4vh;
+    word-wrap:break-word; }
 h2 {
     font-size: 3.5vmin;
-    line-height: 3.5vh; }
+    line-height: 3.5vh;
+    word-wrap:break-word; }
 h3 {
     font-size: 3vmin;
-    line-height: 3vh; }
+    line-height: 3vh;
+    word-wrap:break-word; }
 hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -140,6 +143,11 @@ section {
     * ie9 float fall back for flex position
     */
     float: left \ ; }
+aside {
+    -webkit-flex: 0 0 20vw;
+    -moz-flex: 0 0 20vw;
+    -ms-flex: 0 0 20vw;
+    flex: 0 0 20vw; }
 main {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
