@@ -64,7 +64,7 @@
                 Ambient Design is about defining namespaces for design patterns.
             </h1>
             <h2>
-                It works by generating styles for attributes & values.*
+                It works by generating styles for attributes & values.
             </h2>
             <blockquote>
                 <h3>
@@ -186,11 +186,6 @@
             <p>
                 <code>&lt;hr /&gt;</code> is a thematic break and <i>optionally</i> defines <strong>framing</strong>.
             </p>
-            <footer>
-                <p>
-                    *CSS properties subject to change as ambient is designed.
-                </p>
-            </footer>
         </section>
         <section>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
@@ -259,9 +254,9 @@
             </blockquote>
         </section>
         <footer>
-            <p>
-                <strong>View and/or debug ambient design code:</strong>
-            </p>
+           <h3>
+                <strong>Debug</strong>
+           </h3>
             <ol>
                 <li>
                     <a href="debugAmbientView.html">Core design pattern</a>
@@ -296,7 +291,7 @@
                     <code>&lt;article ambientleftpanel&gt; &lt;/article &gt;</code>
                 </h3>
                 <p>
-                    <code>[ambientleftpanel] nav { flex-direction: column; flex: 1; }</code>
+                    <code>[ambientleftpanel] { //css }</code>
                 </p>
             </blockquote>
             <p>
@@ -305,22 +300,16 @@
             <p>
                 By defining our own namespace, we are able to separate styles into components that are common to all attributes & values within this design pattern.
             </p>
-            <pre>
-&lt;nav ambientnavrow="large"&gt;
-&lt;a href=""&gt;&lt;i class="fa fa-font"&gt;&lt;/i&gt;
-&lt;span&gt;Typography&lt;/span&gt;&lt;/a&gt;
-&lt;/nav &gt;
-            </pre>
+            <p>
+                Example: <a href="admin-shell/index.html" class="btn btn-default">View Admin Template</a>
+            </p>
             <blockquote>
                 <p>
-                    <code>[ambientnavrow~="largeicons"] a i {font-size: 8vmin; }</code>
+                    <code>[ambientleftpanel~="value"] { //css }</code>
                 </p>
             </blockquote>
             <p>
-                The name space "ambient nav row" defines a design pattern common to all ambient nav rows, while also defining an individual component for large icons without needing to use or duplicate class names for structure.
-            </p>
-            <p>
-                Normally, you would use a class name for an aesthetic change like this. We wanted to demonstrate the <code>~=</code> value as a individual component for the design pattern.
+                The name space "ambient left panel" defines a design pattern common to all ambient left panels, while also defining an individual component without needing to use or duplicate class names for structure.
             </p>
         </section>
         <section>
@@ -379,10 +368,18 @@
                 </p>
             </blockquote>
             <p>
-                We can use the directive name as the attribute selector for the custom design pattern. Anytime we use the angularJS directive "foobar" it will inherit the ambient core design patterns, its own design pattern, and as any individual design components (values) without needing to use or duplicate class names for structure.
+                We can use the directive name as the attribute selector for the custom design pattern. Now, when we use the angularJS directive "foobar" it will:
+            </p>
+            <ol>
+                <li>inherit the ambient core design patterns for <code>&lt;article&gt;</code></li>
+                <li>apply its own design pattern  <code>[foobar] { //css }</code></li>
+                <li>apply any contextual overrides as individual design components (values)  <code>[foobar~="value"] { //css }</code></li>
+            </ol>
+            <p>
+                All without needing to use or duplicate class names for structure. Potentially, also without having to touch the HTML, because the HTML - <strong>is!</strong> - the design pattern.
             </p>
             <p>
-                Ambient does not take away from design as aesthetics. CSS and class names can still be applied as an overlay, but the layout is defined by design patterns.
+                Ambient does not take away from design as aesthetics. CSS and class names can still be applied as an overlay, but the layout is defined by Ambient.
             </p>
         </section>
         <section>
