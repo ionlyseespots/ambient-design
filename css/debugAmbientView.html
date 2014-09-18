@@ -7,6 +7,13 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../ambient/css/ambient.css">
 	<link rel="stylesheet" href="../ambient/css/lib/ux-shells.css">
+    <style>
+        /* core fluid flex system styles to more clearly show layout */
+        body > article {border: 1px solid #d6d6d6; padding: 0 .5vw}
+        section, aside, footer {border: 1px solid #d6d6d6;padding: 0 .5vw;margin: .5vw 0;}
+        section article { border: 1px solid #d6d6d6; padding: .5vw; margin: .5vw 0 }
+        hr {margin: .5vw 0; ;}
+    </style>
 	</head>
 <body>
 <!--- Base design pattern, if anything breaks it will break here --->
@@ -26,7 +33,7 @@
 
 <article>
         <p>
-            First [article] not in [main] is centered in the view
+            First [article] not in [main] is centered in the view.
         </p>
 </article>
 <hr />
@@ -37,10 +44,7 @@
             Article H1
         </h1>
         <p>
-            Each [section] displays full-height, even when content does not fill the space
-        </p>
-        <p>
-            The amount of [section] tags defines the amount of columns
+            Not all articles have a section.
         </p>
     </article>
     <hr />
@@ -53,6 +57,12 @@
             </h1>
             <p>
                 1/2
+            </p>
+            <p>
+                A [section] displays full-height, even when content does not fill the space.
+            </p>
+            <p>
+                The amount of [section] tags define the amount of columns.
             </p>
             <article>
                 <h1>
@@ -99,7 +109,12 @@
             </p>
         </section>
         <aside>
-            <h1>Aside</h1>
+            <h1>
+                Aside
+            </h1>
+            <p>
+                Aside is 20% of content.
+            </p>
         </aside>
     </article>
     <hr />

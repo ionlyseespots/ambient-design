@@ -5,7 +5,7 @@
 * Ambient design has a core design pattern (landscape & portrait) for HTML sections as a presentation format without the need for structure based classes.
 
 <pre>
- There are 5 distinct design patterns in ambient design:
+ There are 5 distinct design patterns for layout in ambient design:
 
     1. Typography
     2. UI Elements
