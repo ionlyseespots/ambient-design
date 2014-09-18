@@ -5,7 +5,6 @@
     <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../ambient/css/lib/vanilla-reset.css">
     <link rel="stylesheet" href="../ambient/css/ambient.css">
     <link rel="stylesheet" href="../ambient/css/lib/ux-shells.css">
     <style>
@@ -72,7 +71,7 @@
                 </p>
             </blockquote>
             <p>
-                <code>&lt;body&gt;</code> sets the <strong>tone</strong> for the view.
+                <code>&lt;body&gt;</code> is a <strong>column</strong>.
             </p>
             <blockquote>
                 <h3>
@@ -94,7 +93,10 @@
                 </p>
             </blockquote>
             <p>
-                <code>&lt;body&gt; &lt;nav&gt;</code> is a <strong>row</strong>.
+                <code>&lt;nav&gt;</code> is a <strong>row</strong>.
+            </p>
+            <p>
+                <code>&lt;body&gt;</code> <code>&lt;nav&gt;</code> links display inline and centered.
             </p>
             <blockquote>
                 <h3>
@@ -116,18 +118,15 @@
                 </p>
             </blockquote>
             <p>
-                <code>&lt;aside&gt;</code> is <strong>20%</strong> of content.
+                <code>&lt;aside&gt;</code> is <strong>20% of content</strong>.
             </p>
             <blockquote>
                 <h3>
                     <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code>
                 </h3>
-                <p>
-                    <code>h1 {font-size: 4vmin; line-height: 4vh; word-wrap:break-word; }</code>
-                </p>
             </blockquote>
             <p>
-                <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code> are <strong>rows</strong>.
+                <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;</code> are <strong>rows</strong>.
             </p>
             <blockquote>
                 <h3>
@@ -140,6 +139,9 @@
             <p>
                 <code>&lt;header&gt;</code> is a <strong>row</strong>.
             </p>
+            <p>
+                <code>&lt;body&gt;</code> <code>&lt;header&gt;</code> justifies content left & right.
+            </p>
             <blockquote>
                 <h3>
                     <code>&lt;footer&gt;</code>
@@ -149,7 +151,10 @@
                 </p>
             </blockquote>
             <p>
-                <code>&lt;footer&gt;</code> is a <strong>row</strong>.
+                <code>&lt;footer&gt;</code> is a <strong>row</strong>
+            </p>
+            <p>
+                <code>&lt;body&gt;</code> <code>&lt;footer&gt;</code> is sticky footer.
             </p>
             <blockquote>
                 <h3>
@@ -184,7 +189,7 @@
                 <code>&lt;hr /&gt;</code> is a thematic break and <i>optionally</i> defines <strong>framing</strong>.
             </p>
             <p>
-                We also have an <i>optional vertical rule</i> design pattern <code>ambientvr</code> for columns.
+                We also have an <i>optional vertical rule</i> design pattern <code>&lt;hr ambientvr /&gt;</code>.
             </p>
         </section>
         <section>
@@ -290,10 +295,10 @@
         </p>
         <section>
             <h1>
-                Ambient Design is about defining namespaces for design patterns.
+                Design patterns are about defining namespaces for the HTML to live in.
             </h1>
             <h2>
-                It works by generating styles for attributes & values.
+                It works by generating styles for elements, attributes & values.
             </h2>
             <blockquote>
                 <h3>
