@@ -34,20 +34,6 @@
         <h2>
             An overview of Ambient, how to download and use, basic templates and examples.
         </h2>
-        <p>
-            Ambient makes use of HTML section elements and CSS properties to appropriately scale as the device or view port size increases.
-            We also include an optional library of 4 distinct, attribute based design patterns for layout.
-        </p>
-        <h3>
-            Ambient has a <a href="../css/debugAmbientView.html">core fluid design system</a> for HTML sections as a presentation format without the need for structure based classes.
-        </h3>
-        <p>
-            Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values.
-            <strong>And it's the key to unlocking this new approach.</strong>
-        </p>
-        <p>
-            View <a href="../css/index.html">CSS</a>
-        </p>
         <section>
             <h1>Download</h1>
             <p>
@@ -59,18 +45,17 @@
                         Ambient
                     </p>
                     <pre>
-                        <code>
-Ambient/
+ambient/
 └── css/
     ├── lib/
     ├──── navs.css
     ├──── ux-shells.css
     └── ambient.css
-                        </code>
+
                     </pre>
                     <p>
-                        This is the most basic form of Ambient for a foundation in any web project. The <code>css/</code> folder includes the core fluid design system CSS.
-                        The <code>lib/</code> folder includes the design patterns.
+                        This is the most basic form of Ambient for a foundation in any web project. The <code>css/</code> folder includes the core fluid design system for our CSS.
+                        The <code>lib/</code> folder includes optional design patterns.
                     </p>
                 </section>
                 <section>
@@ -79,30 +64,26 @@ Ambient/
                     </p>
 
                     <pre>
-                        <code>
-Ambient/
-├── css/
+ambient/
+├── admin-shell
+│   ├──
+│   └──
+├── ambient/
+│   ├── css/
 │   ├── lib/
 │   ├──── navs.css
 │   ├──── ux-shells.css
 │   └── ambient.css
-├── admin-shell
-│   ├──
-│   └──
+├── css/
 └── docs/
 ├──
 ├──
 ├──
 └──
-                        </code>
                     </pre>
                     <p>
-                        The Ambient source code download includes Ambient and source documentation.
+                        The Ambient source code download includes Ambient and the source code for our documentation..
                         Additionally, it includes an example admin shell using Ambient design patterns.
-                    </p>
-                    <p>
-                        The <code>docs/</code> folder includes the source code for our documentation. The <code>css/</code> folder includes source docs for the CSS and examples of ambient usage.
-
                     </p>
                 </section>
             </article>
@@ -122,10 +103,85 @@ Ambient/
                 </ol>
             </blockquote>
         </section>
-
     </article>
     <hr />
+<article>
+    <h2>
+        Basic template
+    </h2>
+    <h3>
+        Start with this basic HTML5 template, or modify our examples.
+    </h3>
+    <p>
+        Copy the HTML below to begin a project with Ambient.
+    </p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;title&gt;Basic HTML template&lt;/title&gt;
 
+&lt;!-- Ambient --&gt;
+&lt;link href=&quot;ambient/css/ambient.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;ambient/css/lib/ux-shells.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header role="banner"&gt;
+   &lt;h1&gt;Hello, header!&lt;/h1&gt;
+&lt;/header&gt;
+&lt;hr /&gt;
+
+&lt;nav role="navigation"&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+&lt;/nav&gt;
+&lt;hr /&gt;
+
+&lt;main role="main"&gt;
+    &lt;article role="row"&gt;
+            &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;hr /&gt;
+
+&lt;footer role="contentinfo"&gt;
+       &lt;h1&gt;Hello, sticky footer!&lt;/h1&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</article>
+<hr />
+
+<article>
+    <h1>
+        Examples
+    </h1>
+    <h2>
+        Build on the basic template above.
+    </h2>
+    <section>
+        x
+    </section>
+    <section>
+        x
+    </section>
+    <section>
+        x
+    </section>
+    <section>
+        x
+    </section>
+    <section>
+        x
+    </section>
+    <section>
+        x
+    </section>
+</article>
 </main>
 <footer></footer>
 </body>
