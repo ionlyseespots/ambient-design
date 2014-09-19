@@ -1,17 +1,25 @@
-# Ambient Design
+Ambient
+=========
 
-> Ambient design is methodology for creating layout.
+Ambient design lets you develop web applications as if you had your own personal designer inside the browser.  It lets you
+use HTML as your presentation format and lets you extend HTML’s
+elements, attributes and values into design patterns to display your application’s UI clearly.
+We make use of HTML section elements and CSS properties to appropriately scale as the device or view port size increases.
+Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
+It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+The best part,-- it makes layout fun!
 
-* Ambient design has a core design pattern (landscape & portrait) for HTML sections as a presentation format without the need for structure based classes.
+* Web site: http://ionlyseespots.github.io/ambient-design/index.html
+* Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
+* CSS: http://ionlyseespots.github.io/ambient-design/css/index.html
+* Design patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
+* Admin template: http://ionlyseespots.github.io/ambient-design/admin-shell/index.html
 
-<pre>
- There are 5 distinct design patterns for layout in ambient design:
+Building with Ambient
+---------
+Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) just start writing HTML5:
 
-    1. Typography
-    2. UI Elements
-    3. UX Shells (first priority)
-    "panel-shell & multi-column-shell design patterns are the first priority"
-    These make up the living (static) template you see here.
-    4. Navs
-    5. Form States (second priority)
-</pre>
+
+Ambient design is a methodology for creating layout.
+
+Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
