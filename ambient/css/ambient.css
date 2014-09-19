@@ -164,6 +164,7 @@ footer {
 @media (orientation:portrait){
     article, section {
         display: block;
+        margin: 0;
     }
     /**
     * change vertical rule back to horizontal rule for portrait view

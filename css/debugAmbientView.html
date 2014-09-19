@@ -11,11 +11,18 @@
 	<link rel="stylesheet" href="../ambient/css/ambient.css">
 	<link rel="stylesheet" href="../ambient/css/lib/ux-shells.css">
     <style>
-        /* core fluid flex system styles to more clearly show layout */
+        /* core fluid flex system styles to more clearly show HTML sections as a presentation format */
         body > article {border: 1px solid #d6d6d6; padding: 0 .5vw}
-        section, aside, footer {border: 1px solid #d6d6d6;padding: 0 .5vw;margin: .5vw 0;}
+        section, footer {margin: .5vw 0;}
+        section, aside, footer {border: 1px solid #d6d6d6;padding: 0 .5vw;}
         section article { border: 1px solid #d6d6d6; padding: .5vw; margin: .5vw 0 }
+        article section {margin: 0 .5vw;}
         hr {margin: .5vw 0; ;}
+        @media (orientation:portrait){
+            article section {
+                margin: 0;
+            }
+        }
     </style>
 	</head>
 <body>
@@ -36,7 +43,7 @@
 
 <article>
         <p>
-            First [article] not in [main] is centered in the view.
+            First <code>article</code> not in <code>main</code> is centered in the view.
         </p>
 </article>
 <hr />
@@ -62,10 +69,10 @@
                 1/2
             </p>
             <p>
-                A [section] displays full-height, even when content does not fill the space.
+                A <code>section</code> displays full-height, even when content does not fill the space.
             </p>
             <p>
-                The amount of [section] tags define the amount of columns.
+                The amount of <code>section</code> tags define the amount of columns.
             </p>
             <article>
                 <h1>
@@ -116,7 +123,7 @@
                 Aside
             </h1>
             <p>
-                Aside is 20% of content.
+                <code>aside</code> is 20% of content.
             </p>
         </aside>
     </article>
