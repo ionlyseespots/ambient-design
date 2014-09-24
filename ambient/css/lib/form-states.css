@@ -1,0 +1,57 @@
+[ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
+    padding: .5vw 1vw;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+[ambientformstate] label {
+    display: inline-block;
+    max-width: 100%;
+}
+
+[ambientformstate] input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+[ambientformstate~="stacked"] input, [ambientformstate~="stacked"] select, [ambientformstate~="stacked"] textarea {
+    width: 100%;
+    display: block;
+
+
+
+}
+
+[ambientformstate~="aligned"] fieldset {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+[ambientformstate~="aligned"] input, [ambientformstate~="aligned"] select, [ambientformstate~="aligned"] textarea {
+MAX-WIDTH: 50%
+}
+[ambientformstate~="aligned"] label {
+MAX-WIDTH: 50%;
+}
+
+[ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea {
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Design patterns - form states</title>
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../ambient/css/ambient.css">
+    <link rel="stylesheet" href="../ambient/css/lib/ux-shells.css">
+    <link rel="stylesheet" href="../ambient/css/lib/form-states.css">
+</head>
+<body>
+<main role="main">
+    <h1>
+        Form States
+    </h1>
+    <article>
+        <h1>
+            Inline Form
+        </h1>
+        <section>
+            <h1>
+                To create an inline form with the default form state design pattern, add the attribute <code>ambientformstate</code> to any form.
+            </h1>
+            <p>
+                <code>&lt;form ambientformstate&gt;</code>
+            </p>
+        </section>
+        <section>
+            <form ambientformstate>
+                <fieldset>
+                    <legend>Inline Form</legend>
+
+                    <label for="stacked-email">Email</label>
+                    <input id="stacked-email" type="email" placeholder="Email">
+
+                    <label for="stacked-password">Password</label>
+                    <input id="stacked-password" type="password" placeholder="Password">
+
+                    <label for="stacked-state">State</label>
+                    <select id="stacked-state">
+                        <option>AL</option>
+                        <option>CA</option>
+                        <option>IL</option>
+                    </select>
+
+                    <label for="stacked-remember">
+                        <input id="stacked-remember" type="checkbox"> Remember me
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </fieldset>
+            </form>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Stacked Form
+        </h1>
+        <section>
+            <h1>
+                To create a default inline form, add the attribute <code>ambientformstate</code> = the value <code>stacked</code> to any form.
+            </h1>
+            <p>
+                <code>&lt;form ambientformstate="stacked"&gt;</code>
+            </p>
+        </section>
+        <section
+            <form ambientformstate="stacked">
+                <fieldset>
+                    <legend>Stacked Form</legend>
+
+                    <label for="stacked-email">Email</label>
+                    <input id="stacked-email" type="email" placeholder="Email">
+
+                    <label for="stacked-password">Password</label>
+                    <input id="stacked-password" type="password" placeholder="Password">
+
+                    <label for="stacked-state">State</label>
+                    <select id="stacked-state">
+                        <option>AL</option>
+                        <option>CA</option>
+                        <option>IL</option>
+                    </select>
+
+                    <label for="stacked-remember">
+                        <input id="stacked-remember" type="checkbox"> Remember me
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </fieldset>
+            </form>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>Aligned Form</h1>
+        <section>
+            <h1>
+                To create an aligned form add the attribute <code>ambientformstate</code> = the value <code>aligned</code> to any form.
+            </h1>
+            <p>
+                In an aligned form, the labels are right-aligned against the form input controls, but on portrait revert to a stacked form.
+            </p>
+            <p>
+                <code>&lt;form ambientformstate="aligned"&gt;</code>
+            </p>
+        </section>
+        <section>
+            <form ambientformstate="aligned">
+                <fieldset>
+                    <h1><a href="index.html" title="index">Ambient Design</a></h1>
+                    <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-5x" ></i></a>
+                    <!--<legend>Aligned Form</legend>-->
+
+                    <!--<label for="stacked-email">Email</label>-->
+                    <!--<input id="stacked-email" type="email" placeholder="Email">-->
+
+                    <!--<label for="stacked-password">Password</label>-->
+                    <!--<input id="stacked-password" type="password" placeholder="Password">-->
+
+                    <!--<label for="stacked-state">State</label>-->
+                    <!--<select id="stacked-state">-->
+                        <!--<option>AL</option>-->
+                        <!--<option>CA</option>-->
+                        <!--<option>IL</option>-->
+                    <!--</select>-->
+
+                    <!--<label for="stacked-remember">-->
+                        <!--<input id="stacked-remember" type="checkbox"> Remember me-->
+                    <!--</label>-->
+
+                    <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
+                <!--</fieldset>-->
+            </form>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Multi-column Form
+        </h1>
+        <section>
+            <h1>
+                To create a multi-column form add the attribute <code>ambientformstate</code> = the value <code>multicolumn</code> to any form.
+            </h1>
+            <!--<p>-->
+                <!--To create multi-column forms, wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements add the design pattern <code>ambientformstates</code> alongside the value <code>multicolumn</code>.-->
+            <!--</p>-->
+            <p>
+                <code>&lt;form ambientformstate="multicolumn"&gt;</code>
+            </p>
+        </section>
+        <section>
+            <form ambientformstate="multicolumn">
+                <fieldset>
+                    <legend>Multi-column Form</legend>
+
+                    <label for="stacked-email">Email</label>
+                    <input id="stacked-email" type="email" placeholder="Email">
+
+                    <label for="stacked-password">Password</label>
+                    <input id="stacked-password" type="password" placeholder="Password">
+
+                    <label for="stacked-state">State</label>
+                    <select id="stacked-state">
+                        <option>AL</option>
+                        <option>CA</option>
+                        <option>IL</option>
+                    </select>
+
+                    <label for="stacked-remember">
+                        <input id="stacked-remember" type="checkbox"> Remember me
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </fieldset>
+            </form>
+        </section>
+    </article>
+    <hr />
+
+</main>
+</body>
+</html>

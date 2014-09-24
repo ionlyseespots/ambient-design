@@ -77,6 +77,17 @@ body nav a.active {
     background-color:#eee; }
 body > nav a {
     text-align: center; }
+
+/**
+* Heading elements use the following settings to standardize the typographic scale in a consistent manner.
+*
+* Typography indirectly impacts structure. Qe need to establish clearly distinguishable heading levels and choose a type hierarchy that is harmonious and consistent.
+* We need to define proper markup with extensible styling for common typographic patterns. ofc, this means wrangling quite a few typographic elements not just heading tags.
+* I will most likely be adding Typography back in as a design pattern for this reason.
+*
+* The word-wrap CSS property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its container.
+*
+*/
 h1 {
     font-size: 4vmin;
     line-height: 4vh;
@@ -89,12 +100,20 @@ h3 {
     font-size: 3vmin;
     line-height: 3vh;
     word-wrap:break-word; }
+h4 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+h5 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+h6 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
 hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+    border-color: rgba(0, 0, 0, 0.12);
     border-image: none;
     margin-bottom: 0;
     margin-top: 0;
@@ -176,6 +195,10 @@ footer {
 }
 
 /* ambient classes: aesthetics */
+
+/**
+* Iconography also impacts structure. We  use the following settings to standardize the visual scale in a consistent manner.
+*/
 .fa {
     font-size: 4vmin;
     padding: .2vw .5VW;
