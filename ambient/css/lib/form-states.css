@@ -1,5 +1,5 @@
 /**
-* fieldset is a replaced element and does not currently work with flexbox
+* <fieldset> is a replaced element and does not currently allow you to change its display with CSS
 */
 
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
@@ -15,24 +15,22 @@
     max-width: 100%;
 }
 
-[ambientformstate] fieldset {
-
-}
-
 [ambientformstate] input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
 }
 
-
+/**
+* Stacked
+*/
 [ambientformstate~="stacked"] input, [ambientformstate~="stacked"] select, [ambientformstate~="stacked"] textarea {
     width: 100%;
     display: block;
-
-
-
 }
 
+/**
+* Aligned
+*/
 [ambientformstate~="aligned"] span {
 
     display: -webkit-box;
@@ -51,20 +49,26 @@
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    width: 100%;
 }
-[ambientformstate~="aligned"] input, [ambientformstate~="aligned"] select, [ambientformstate~="aligned"] textarea {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-[ambientformstate~="aligned"] label {
+
+[ambientformstate~="aligned"] span input, [ambientformstate~="aligned"] span select, [ambientformstate~="aligned"] span textarea {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
 
+[ambientformstate~="aligned"] span label {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/**
+* Multi-column
+*/
 [ambientformstate~="multicolumn"]  {
     display: -webkit-box;
     display: -webkit-flex;
@@ -78,8 +82,8 @@
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-
 }
+
 [ambientformstate~="multicolumn"] div  {
     -webkit-box-flex: 1;
     -webkit-flex: 1;

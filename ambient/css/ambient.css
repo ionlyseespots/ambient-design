@@ -113,7 +113,11 @@ h6 {
     line-height: 3vh;
     word-wrap:break-word; }
 hr {
-    border-color: rgba(0, 0, 0, 0.12);
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
     border-image: none;
     margin-bottom: 0;
     margin-top: 0;
