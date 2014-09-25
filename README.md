@@ -5,6 +5,7 @@ Ambient design lets you develop web applications as if you had your own personal
 use HTML as your presentation format and lets you extend HTML’s
 elements, attributes and values into design patterns to display your application’s UI clearly.
 We make use of HTML section elements and CSS properties to appropriately scale as the device or view port size increases.
+
 Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 The best part,-- it makes layout fun!
