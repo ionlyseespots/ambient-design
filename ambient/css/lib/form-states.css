@@ -95,3 +95,8 @@
     width: 100%;
     display: block;
 }
+
+[ambientformstate~="multicolumn"] label {
+    width: 100%;
+    display: block;
+}
