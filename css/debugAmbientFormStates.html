@@ -14,144 +14,281 @@
 </head>
 <body>
 <main role="main">
+<article>
+<h1>
+    Form States
+</h1>
+<h2>
+    Inline Form
+</h2>
+<section>
     <h1>
-        Form States
+        To create an inline form with the default form state design pattern, add the attribute <code>ambientformstate</code> to any form.
     </h1>
-    <article>
+</section>
+<section>
+    <blockquote>
         <h1>
-            Inline Form
+            Inline
         </h1>
-        <section>
-            <h1>
-                To create an inline form with the default form state design pattern, add the attribute <code>ambientformstate</code> to any form.
-            </h1>
-            <p>
-                <code>&lt;form ambientformstate&gt;</code>
-            </p>
-        </section>
-        <section>
-            <form ambientformstate>
+        <p>
+            <code>&lt;form ambientformstate&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate>
+        <label for="stacked-email">Email</label>
+        <input id="stacked-email" type="email" placeholder="Email">
+
+        <label for="stacked-password">Password</label>
+        <input id="stacked-password" type="password" placeholder="Password">
+
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</section>
+<h2>
+    Stacked Form
+</h2>
+<section>
+    <h1>
+        To create a default inline form, add the attribute <code>ambientformstate</code> = <code>stacked</code> to any form.
+    </h1>
+</section>
+<section>
+    <blockquote>
+        <h1>
+            Stacked
+        </h1>
+        <p>
+            <code>&lt;form ambientformstate="stacked"&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="stacked">
+        <label for="stacked-email">Email</label>
+        <input id="stacked-email" type="email" placeholder="Email">
+
+        <label for="stacked-password">Password</label>
+        <input id="stacked-password" type="password" placeholder="Password">
+
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</section>
+<h2>
+    Aligned Form
+</h2>
+<section>
+    <h1>
+        To create an aligned form add the attribute <code>ambientformstate</code> = <code>aligned</code> to any form.
+    </h1>
+</section>
+<section>
+    <blockquote>
+        <h1>
+            Aligned
+        </h1>
+        <p>
+            <code>&lt;form ambientformstate="aligned"&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="aligned">
+                <span>
                     <label for="stacked-email">Email</label>
                     <input id="stacked-email" type="email" placeholder="Email">
-
+                </span>
+                <span>
                     <label for="stacked-password">Password</label>
                     <input id="stacked-password" type="password" placeholder="Password">
-
+                </span>
+                <span>
                     <label for="stacked-remember">
                         <input id="stacked-remember" type="checkbox"> Remember me
                     </label>
-
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-        </section>
-    </article>
-    <hr />
-
-    <article>
+                </span>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</section>
+<h2>
+    Multi-column Form
+</h2>
+<section>
+    <h1>
+        To create a multi-column form add the attribute <code>ambientformstate</code> = <code>multicolumn</code> to any form.
+    </h1>
+</section>
+<section>
+    <blockquote>
         <h1>
-            Stacked Form
+            Multi-column
         </h1>
-        <section>
-            <h1>
-                To create a default inline form, add the attribute <code>ambientformstate</code> = the value <code>stacked</code> to any form.
-            </h1>
-            <p>
-                <code>&lt;form ambientformstate="stacked"&gt;</code>
-            </p>
-        </section>
-        <section
-            <form ambientformstate="stacked">
+        <p>
+            <code>&lt;form ambientformstate="multicolumn"&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="multicolumn">
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</section>
+<h2>
+    Mix & match form states
+</h2>
+<section>
+    <h1>
+        To mix & match form states add the attribute <code>ambientformstate</code> = <code>value</code> for the design patterns you want to mix & match to any form.
+    </h1>
+</section>
+<section>
+    <blockquote>
+        <h1>
+            Stacked + Aligned
+        </h1>
+        <p>
+            <code>&lt;form ambientformstate="stacked aligned"&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="stacked aligned">
+        <label for="stacked-email">Email</label>
+        <input id="stacked-email" type="email" placeholder="Email">
+
+        <label for="stacked-password">Password</label>
+        <input id="stacked-password" type="password" placeholder="Password">
+
+                 <span>
                     <label for="stacked-email">Email</label>
                     <input id="stacked-email" type="email" placeholder="Email">
-
+                </span>
+                <span>
                     <label for="stacked-password">Password</label>
                     <input id="stacked-password" type="password" placeholder="Password">
+                </span>
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
 
-                    <label for="stacked-remember">
-                        <input id="stacked-remember" type="checkbox"> Remember me
-                    </label>
-
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-        </section>
-    </article>
-    <hr />
-
-    <article>
-        <h1>Aligned Form</h1>
-        <section>
-            <h1>
-                To create an aligned form add the attribute <code>ambientformstate</code> = the value <code>aligned</code> to any form.
-            </h1>
-            <p>
-                <code>&lt;form ambientformstate="aligned"&gt;</code>
-            </p>
-        </section>
-        <section>
-            <form ambientformstate="aligned">
-                    <span>
-                        <label for="stacked-email">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
-                    </span>
-                    <span>
-                        <label for="stacked-password">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
-                    </span>
-                    <span>
-                        <label for="stacked-remember">
-                            <input id="stacked-remember" type="checkbox"> Remember me
-                        </label>
-                    </span>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-        </section>
-    </article>
-    <hr />
-
-    <article>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <blockquote>
         <h1>
-            Multi-column Form
+            Multi-column + Stacked
         </h1>
-        <section>
-            <h1>
-                To create a multi-column form add the attribute <code>ambientformstate</code> = the value <code>multicolumn</code> to any form.
-            </h1>
-            <p>
-                <code>&lt;form ambientformstate="multicolumn"&gt;</code>
-            </p>
-        </section>
-        <section>
-            <form ambientformstate="multicolumn">
-                    <div>
-                        <label for="stacked-email">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+        <p>
+            <code>&lt;form ambientformstate="multicolumn stacked "&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="multicolumn stacked ">
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-password">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
-                    </div>
-                    <div>
-                        <label for="stacked-email">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-password">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
-                    </div>
-                    <div>
-                        <label for="stacked-email">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-password">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
-                    </div>
-                    <label for="stacked-remember">
-                        <input id="stacked-remember" type="checkbox"> Remember me
-                    </label>
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
 
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-        </section>
-    </article>
-    <hr />
+        <label for="stacked-email">Email</label>
+        <input id="stacked-email" type="email" placeholder="Email">
+
+        <label for="stacked-password">Password</label>
+        <input id="stacked-password" type="password" placeholder="Password">
+
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <blockquote>
+        <h1>
+            Multi-column + Aligned
+        </h1>
+        <p>
+            <code>&lt;form ambientformstate="multicolumn aligned "&gt;</code>
+        </p>
+    </blockquote>
+    <form ambientformstate="multicolumn aligned">
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="stacked-email">Email</label>
+            <input id="stacked-email" type="email" placeholder="Email">
+
+            <label for="stacked-password">Password</label>
+            <input id="stacked-password" type="password" placeholder="Password">
+        </div>
+
+                <span>
+                    <label for="stacked-email">Email</label>
+                    <input id="stacked-email" type="email" placeholder="Email">
+                </span>
+                <span>
+                    <label for="stacked-password">Password</label>
+                    <input id="stacked-password" type="password" placeholder="Password">
+                </span>
+
+        <label for="stacked-remember">
+            <input id="stacked-remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</section>
+</article>
 
 </main>
 </body>
