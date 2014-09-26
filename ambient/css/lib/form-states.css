@@ -30,7 +30,7 @@
 [ambientformstate] label input {
     width: auto;
 }
-
+input { max-width: 100%;}
 /**
 * Stacked
 */
@@ -41,7 +41,7 @@
 /**
 * Aligned
 */
-[ambientformstate~="aligned"] span {
+[ambientformstate~="aligned"] > span {
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -62,14 +62,14 @@
     width: 100%;
 }
 
-[ambientformstate~="aligned"] span input, [ambientformstate~="aligned"] span select, [ambientformstate~="aligned"] span textarea {
+[ambientformstate~="aligned"] > span input, [ambientformstate~="aligned"] > span select, [ambientformstate~="aligned"] > span textarea {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
 
-[ambientformstate~="aligned"] span label {
+[ambientformstate~="aligned"] > span label {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -94,7 +94,7 @@
     flex-flow: row wrap;
 }
 
-[ambientformstate~="multicolumn"] div  {
+[ambientformstate~="multicolumn"] > div  {
      -webkit-box-flex: 1;
      -webkit-flex: 1;
      -ms-flex: 1;
@@ -104,3 +104,38 @@
 [ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea, [ambientformstate~="multicolumn"] label {
     width: 100%;
 }
+
+/**
+* Iconography
+*/
+[ambientpreicon], [ambientposticon] {
+    position: relative;
+}
+
+[ambientpreicon]:before {
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    bottom: -2vw;
+    content: attr(ambientpreicon);
+}
+
+[ambientposticon]:after {
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+    bottom: -2vw;
+    content: attr(ambientposticon);
+}
+/*[ambientformstate]*/
+/*[ambientpreicon] + input {margin-left: 25px; margin-right: -25px;}*/
+
+/*section {*/
+    /*text-align: justify;*/
+
+/*}*/
+/*section:after{*/
+    /*content: "";*/
+    /*width: 100%;*/
+    /*display: inline-block;height: 25px; width: 25px; background-color:yellow;*/
+/*}*/
