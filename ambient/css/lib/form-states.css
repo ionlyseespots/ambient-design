@@ -17,14 +17,18 @@
     outline: 0 none;
 }
 
+[ambientformstate] input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 [ambientformstate] label {
     display: inline-block;
     max-width: 100%;
 }
 
-[ambientformstate] input[type="checkbox"] {
-    display: inline-block;
-    vertical-align: middle;
+[ambientformstate] label input {
+    width: auto;
 }
 
 /**
