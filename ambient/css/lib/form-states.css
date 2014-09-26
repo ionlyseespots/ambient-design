@@ -1,5 +1,6 @@
 /**
 * <fieldset> is a replaced element and does not currently allow you to change its display with CSS
+* <input> is a replaced element and does not allow ::psuedo CSS
 */
 
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
@@ -96,8 +97,6 @@
      flex: 1;
  }
 
-
 [ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea, [ambientformstate~="multicolumn"] label {
     width: 100%;
-
 }
