@@ -1,12 +1,19 @@
 /**
 * <fieldset> is a replaced element and does not currently allow you to change its display with CSS
 */
+
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
     border: 1px solid #ccc;
     border-radius: .5vw;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     padding: 0.5vw 1vw;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+[ambientformstate] input:focus, [ambientformstate] select:focus, [ambientformstate] textarea:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
 }
 
 [ambientformstate] label {
