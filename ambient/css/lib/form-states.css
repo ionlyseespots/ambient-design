@@ -3,7 +3,7 @@
 */
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: .5vw;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     padding: 0.5vw 1vw;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -88,15 +88,8 @@
      -webkit-flex: 1;
      -ms-flex: 1;
      flex: 1;
-     margin: 0 1vw;
  }
-[ambientformstate~="multicolumn"] div  {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin: 0 1vw;
-}
+
 
 [ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea {
     width: 100%;
