@@ -5,7 +5,7 @@
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
     border: 1px solid #ccc;
     border-radius: .5vw;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+
     padding: 0.5vw 1vw;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
@@ -29,9 +29,8 @@
 /**
 * Stacked
 */
-[ambientformstate~="stacked"] input, [ambientformstate~="stacked"] select, [ambientformstate~="stacked"] textarea {
+[ambientformstate~="stacked"] input, [ambientformstate~="stacked"] select, [ambientformstate~="stacked"] textarea,  [ambientformstate~="stacked"] label {
     width: 100%;
-    display: block;
 }
 
 /**
@@ -98,12 +97,7 @@
  }
 
 
-[ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea {
+[ambientformstate~="multicolumn"] input, [ambientformstate~="multicolumn"] select, [ambientformstate~="multicolumn"] textarea, [ambientformstate~="multicolumn"] label {
     width: 100%;
-    display: block;
-}
 
-[ambientformstate~="multicolumn"] label {
-    width: 100%;
-    display: block;
 }
