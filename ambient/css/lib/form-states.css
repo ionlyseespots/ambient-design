@@ -6,7 +6,7 @@
 [ambientformstate] input, [ambientformstate] select, [ambientformstate] textarea {
     border: 1px solid #ccc;
     border-radius: .5vw;
-
+    min-height: 2vw;
     padding: 0.5vw 1vw;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
@@ -112,30 +112,29 @@ input { max-width: 100%;}
     position: relative;
 }
 
+[ambientpreicon] + input {
+    padding-left: 3vh;
+}
+
+[ambientposticon] + input {
+    padding-right: 3vh;
+}
+
 [ambientpreicon]:before {
     font-family: FontAwesome;
     position: absolute;
-    left: 0;
-    bottom: -2vw;
+    left: .5%;
+    top: 30px;
     content: attr(ambientpreicon);
+    font-size: 2vh;
+
 }
 
 [ambientposticon]:after {
     font-family: FontAwesome;
     position: absolute;
-    right: 0;
-    bottom: -2vw;
+    right: .5%;
+    top: 30px;
     content: attr(ambientposticon);
+    font-size: 2vh;
 }
-/*[ambientformstate]*/
-/*[ambientpreicon] + input {margin-left: 25px; margin-right: -25px;}*/
-
-/*section {*/
-    /*text-align: justify;*/
-
-/*}*/
-/*section:after{*/
-    /*content: "";*/
-    /*width: 100%;*/
-    /*display: inline-block;height: 25px; width: 25px; background-color:yellow;*/
-/*}*/
