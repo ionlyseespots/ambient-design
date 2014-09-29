@@ -86,6 +86,7 @@ body nav a.active, article > nav a:active {
 *
 * The word-wrap CSS property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its container.
 *
+* Optional LESS mixin file added to for easy flexbox:: https://gist.github.com/jayj/4012969
 */
 h1 {
     font-size: 4vmin;
