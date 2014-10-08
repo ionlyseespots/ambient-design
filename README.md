@@ -8,7 +8,10 @@ We make use of HTML section elements and CSS properties to appropriately scale a
 
 Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
-The best part,-- it makes layout fun!
+
+1. Base fluid design system in a good spot.
+2. Initial Form States are added.
+3. Navs are the next priority.
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
