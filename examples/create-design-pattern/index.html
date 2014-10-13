@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--- Disable Bootstrap CSS and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Create a design pattern for Ambient</title>
+    <!-- Ambient -->
+    <link href="../../ambient/css/ambient.css" rel="stylesheet">
+    <link href="../../ambient/css/lib/ux-shells.css" rel="stylesheet">
+</head>
+<body>
+<header role="banner">
+    <h1>
+        Create a design pattern with flex
+    </h1>
+</header>
+<hr />
+<article>
+    <div style="width: 400px; height: 200px; background-color:#f1f1f1;position: relative;margin: 25px;">
+        <p style="position: absolute; top: -25px; left: 40%;">cross axis</p>
+        <p style="position: absolute; left: -75px;top: 40%;">main axis</p>
+        <hr style="margin-top: 100px;" />
+        <hr ambientvr style="top: 0; left: 200px;" />
+        <p style="position: absolute; right: -105%;top: 0;">cross axis start</p>
+        <p style="position: absolute; right: -105%;bottom: 0;">cross axis end</p>
+        <p style="position: absolute; right: -78%;bottom: -35px;">main axis end</p>
+        <p style="position: absolute; left: 0;bottom: -35px;">main axis start</p>
+    </div>
+</article>
+<main role="main">
+    <article>
+        <h1>
+            display: flex;
+        </h1>
+        <h2>
+            Do you want rows or columns?
+        </h2>
+        <section>
+            <p>
+                Row
+            </p>
+            <p>
+                flex-direction: row;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                flex-direction: row-reverse;
+            </p>
+        </section>
+        <section>
+            <p>Column</p>
+            <p>
+                flex-direction: column;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                flex-direction: column-reverse;
+            </p>
+        </section>
+        <h2>
+            Do you want content located at the beginning of the flex container main axis?
+        </h2>
+        <section>
+            <p>
+                yes
+            </p>
+            <p>
+                default
+            </p>
+            <p>
+                justify-content: flex-start;
+            </p>
+        </section>
+        <section>
+            <p>
+                no
+            </p>
+            <p>
+                justify-content: flex-end;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                justify-content: center;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                justify-content: space-between;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                justify-content: space-around;
+            </p>
+        </section>
+        <h2>
+            Do you want content on one line or to wrap around to another when adjusting viewport?
+        </h2>
+        <section>
+            <p>
+                one line
+            </p>
+            <p>
+                default
+            </p>
+            <p>
+                flex-wrap: nowrap; on container
+            </p>
+        </section>
+        <section>
+            <p>
+                wrap
+            </p>
+            <p>flex-wrap: wrap;
+            </p>
+            <p>
+                or
+            </p>
+            <p>flex-wrap: wrap-reverse;
+                r</p>
+        </section>
+        <h2>
+            How do you want items displayed in the flex container cross axis?
+        </h2>
+        <section>
+            <p>
+                stretched
+            </p>
+            <p>
+                default
+            </p>
+            <p>align-items: stretch;
+            </p>
+        </section>
+        <section>
+            <p>not stretched</p>
+            <p>
+                align-items: flex-start;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-items: flex-end;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-items: center;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-items: baseline;
+            </p>
+        </section>
+        <h2>
+            If you have multiple lines of content, how do you want them aligned?
+        </h2>
+        <section>
+            <p>
+                stretched
+            </p>
+            <p>
+                default
+            </p>
+            <p>
+                align-content: stretch; on container
+            </p>
+        </section>
+        <section>
+            <p>
+                not stretched
+            </p>
+            <p>
+            <p>
+                align-content: flex-start;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-content: flex-end;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-content: center;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-content: space-between;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-content: space-around;
+            </p>
+        </section>
+        <h2>
+            Do you want to change the order of items?
+        </h2>
+        <section>
+            <p>
+                no
+            </p>
+            <p>
+                done
+            </p>
+        </section>
+        <section>
+            <p>
+                yes
+            </p>
+            <p>
+                order: //whole number;
+            </p>
+        </section>
+        <h2>
+            Do you need items to grow if necessary?
+        </h2>
+        <section>
+            <p>
+                no
+            </p>
+            <p>
+                done
+            </p>
+        </section>
+        <section>
+            <p>
+                yes
+            </p>
+            <p>
+                flex-grow: //whole number;
+            </p>
+        </section>
+        <h2>
+            Do any items need to be aligned differently than the others?
+        </h2>
+        <section>
+            <p>
+                no
+            </p>
+            <p>
+                done
+            </p>
+        </section>
+        <section>
+            <p>yes</p>
+            <p>
+                align-self: flex-start;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-self: flex-end;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-self: center;
+            </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-self: baseline;
+             </p>
+            <p>
+                or
+            </p>
+            <p>
+                align-self: stretch;
+            </p>
+        </section>
+
+    </article>
+    <hr />
+
+</main>
+<footer role="contentinfo">
+    <h1>Hello, sticky footer!</h1>
+</footer>
+</body>
+</html>
