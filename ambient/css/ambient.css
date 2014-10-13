@@ -23,51 +23,51 @@ header, nav, main, article, section, footer, h1, p, hr, div {
     padding: 0; }
 
 body {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-flex-direction: column;*/
+    /*-ms-flex-direction: column;*/
     flex-direction: column; }
 header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
+    /*-webkit-box-orient: horizontal;*/
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-flex-direction: row;*/
+    /*-ms-flex-direction: row;*/
     flex-direction: row
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
+    /*-webkit-flex-flow: row wrap;*/
+    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap; }
 body > header {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
+    /*-webkit-box-pack: justify;*/
+    /*-webkit-justify-content: space-between;*/
+    /*-ms-flex-pack: justify;*/
     justify-content: space-between;
 }
 body > nav, article > nav {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
+    /*-webkit-box-orient: horizontal;*/
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-flex-direction: row;*/
+    /*-ms-flex-direction: row;*/
     flex-direction: row;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
+    /*-webkit-flex-flow: row wrap;*/
+    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap; }
 body > nav a, article > nav a {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
+    /*-webkit-box-flex: 1;*/
+    /*-webkit-flex: 1;*/
+    /*-ms-flex: 1;*/
     flex: 1;
     text-align: center;
     transition: background 0.3s ease 0s;
@@ -136,17 +136,17 @@ a {
 blockquote {
     font-size: small; }
 article {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
+    /*-webkit-box-orient: horizontal;*/
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-flex-direction: row;*/
+    /*-ms-flex-direction: row;*/
     flex-direction: row;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
+    /*-webkit-flex-flow: row wrap;*/
+    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap;
     /**
     * preemptive strike on absolute positioning
@@ -157,9 +157,9 @@ article {
     */
     float: left \ ; }
 section {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
+    /*-webkit-flex: 1;*/
+    /*-moz-flex: 1;*/
+    /*-ms-flex: 1;*/
     flex: 1;
     /**
     * preemptive strike on absolute positioning
@@ -170,19 +170,19 @@ section {
     */
     float: left \ ; }
 aside {
-    -webkit-flex: 0 0 20vw;
-    -moz-flex: 0 0 20vw;
-    -ms-flex: 0 0 20vw;
+    /*-webkit-flex: 0 0 20vw;*/
+    /*-moz-flex: 0 0 20vw;*/
+    /*-ms-flex: 0 0 20vw;*/
     flex: 0 0 20vw; }
 main {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
+    /*-webkit-box-flex: 1;*/
+    /*-webkit-flex: 1 0 auto;*/
+    /*-ms-flex: 1 0 auto;*/
     flex: 1 0 auto; }
 footer {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
+    /*-webkit-box-ordinal-group: 3;*/
+    /*-webkit-order: 2;*/
+    /*-ms-flex-order: 2;*/
     order: 2; }
 
 @media (orientation:portrait){
