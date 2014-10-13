@@ -23,51 +23,17 @@ header, nav, main, article, section, footer, h1, p, hr, div {
     padding: 0; }
 
 body {
-    /*display: -webkit-box;*/
-    /*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-box-direction: normal;*/
-    /*-webkit-flex-direction: column;*/
-    /*-ms-flex-direction: column;*/
     flex-direction: column; }
 header {
-    /*display: -webkit-box;*/
-    /*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-orient: horizontal;*/
-    /*-webkit-box-direction: normal;*/
-    /*-webkit-flex-direction: row;*/
-    /*-ms-flex-direction: row;*/
-    /*flex-direction: row;*/
-    /*-webkit-flex-flow: row wrap;*/
-    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap; }
 body > header {
-    /*-webkit-box-pack: justify;*/
-    /*-webkit-justify-content: space-between;*/
-    /*-ms-flex-pack: justify;*/
-    justify-content: space-between;
-}
+    justify-content: space-between; }
 body > nav, article > nav {
-    /*display: -webkit-box;*/
-    /*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-orient: horizontal;*/
-    /*-webkit-box-direction: normal;*/
-    /*-webkit-flex-direction: row;*/
-    /*-ms-flex-direction: row;*/
-    flex-direction: row;
-    /*-webkit-flex-flow: row wrap;*/
-    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap; }
 body > nav a, article > nav a {
-    /*-webkit-box-flex: 1;*/
-    /*-webkit-flex: 1;*/
-    /*-ms-flex: 1;*/
     flex: 1;
     text-align: center;
     transition: background 0.3s ease 0s;
@@ -87,6 +53,7 @@ body nav a.active, article > nav a:active {
 * The word-wrap CSS property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its container.
 *
 * Optional LESS mixin file added to for easy flexbox:: https://gist.github.com/jayj/4012969
+* -prefix-free file added to work behind the scenes, adding the current browser’s prefix to any CSS code, only when it’s needed:: http://leaverou.github.io/prefixfree/
 */
 h1 {
     font-size: 4vmin;
@@ -136,17 +103,7 @@ a {
 blockquote {
     font-size: small; }
 article {
-    /*display: -webkit-box;*/
-    /*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-orient: horizontal;*/
-    /*-webkit-box-direction: normal;*/
-    /*-webkit-flex-direction: row;*/
-    /*-ms-flex-direction: row;*/
-    flex-direction: row;
-    /*-webkit-flex-flow: row wrap;*/
-    /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap;
     /**
     * preemptive strike on absolute positioning
@@ -157,9 +114,6 @@ article {
     */
     float: left \ ; }
 section {
-    /*-webkit-flex: 1;*/
-    /*-moz-flex: 1;*/
-    /*-ms-flex: 1;*/
     flex: 1;
     /**
     * preemptive strike on absolute positioning
@@ -170,19 +124,10 @@ section {
     */
     float: left \ ; }
 aside {
-    /*-webkit-flex: 0 0 20vw;*/
-    /*-moz-flex: 0 0 20vw;*/
-    /*-ms-flex: 0 0 20vw;*/
     flex: 0 0 20vw; }
 main {
-    /*-webkit-box-flex: 1;*/
-    /*-webkit-flex: 1 0 auto;*/
-    /*-ms-flex: 1 0 auto;*/
     flex: 1 0 auto; }
 footer {
-    /*-webkit-box-ordinal-group: 3;*/
-    /*-webkit-order: 2;*/
-    /*-ms-flex-order: 2;*/
     order: 2; }
 
 @media (orientation:portrait){
@@ -220,6 +165,7 @@ footer {
 .fa-5x {
     font-size: 8vmin;
 }
+
 .user-img {
     width: 65px;
     height: 65px;
@@ -241,8 +187,10 @@ footer {
 .panel-tabs li {
     position: relative;
     float: left; }
-.panel-tabs li.active a, .panel-tabs li.active:hover a { color: #3e3e3e; cursor: default; }
-.panel-tabs li.active a i, .panel-tabs li.active:hover a i { color:#e86f56; }
+.panel-tabs li.active a, .panel-tabs li.active:hover a {
+    color: #3e3e3e; cursor: default; }
+.panel-tabs li.active a i, .panel-tabs li.active:hover a i {
+    color:#e86f56; }
 .panel-tabs li.active:before {
     content: '';
     position: absolute;
@@ -255,7 +203,8 @@ footer {
     border-right: 7px solid transparent;
     border-top: 9px solid #7a706e;
     z-index: 1; }
-.panel-tabs li:hover a, .panel-tabs li:hover a i { color: #3e3e3e;  }
+.panel-tabs li:hover a, .panel-tabs li:hover a i {
+    color: #3e3e3e;  }
 .panel-tabs li a {
     color: #9f9f9f;
     padding: .5vw 1.5vw;
