@@ -27,7 +27,7 @@ body {
     /*display: -webkit-flex;*/
     /*display: -ms-flexbox;*/
     display: flex;
-    -webkit-box-orient: vertical;
+    /*-webkit-box-orient: vertical;*/
     /*-webkit-box-direction: normal;*/
     /*-webkit-flex-direction: column;*/
     /*-ms-flex-direction: column;*/
@@ -41,7 +41,7 @@ header {
     /*-webkit-box-direction: normal;*/
     /*-webkit-flex-direction: row;*/
     /*-ms-flex-direction: row;*/
-    flex-direction: row
+    /*flex-direction: row;*/
     /*-webkit-flex-flow: row wrap;*/
     /*-ms-flex-flow: row wrap;*/
     flex-flow: row wrap; }
