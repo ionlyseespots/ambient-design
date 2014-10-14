@@ -1,0 +1,222 @@
+/**
+* Whiskey & Ghosts: corral default section widths, heights, margins & paddings
+*/
+html {
+    height: 100%; }
+body {
+    min-width: 100%;
+    min-height: 100%; }
+body > article  {
+    margin: auto;
+    width: auto; }
+nav, article, section, article h1, article h2, article h3, article p, footer {
+    width: 100%; }
+header, nav, main, article, section, footer, h1, p, hr, div {
+    padding: .01vw;
+    max-width: 100%; }
+
+/**
+* Ambient base design pattern for HTML sections as a presentation format without the need for structure based classes.
+*/
+* {
+    margin: 0;
+    padding: 0; }
+
+body {
+    display: flex;
+    flex-direction: column; }
+header {
+    display: flex;
+    flex-flow: row wrap; }
+body > header {
+    justify-content: space-between; }
+body > nav, article > nav {
+    display: flex;
+    flex-flow: row wrap; }
+body > nav a, article > nav a {
+    flex: 1;
+    text-align: center;
+    transition: background 0.3s ease 0s;
+    padding: 1vw; }
+body > nav a:hover, article > nav a:hover {
+    background-color:#eee; }
+body nav a.active, article > nav a:active {
+    background-color:#eee; }
+
+/**
+* Heading elements use the following settings to standardize the typographic scale in a consistent manner.
+*
+* Typography indirectly impacts structure. Qe need to establish clearly distinguishable heading levels and choose a type hierarchy that is harmonious and consistent.
+* We need to define proper markup with extensible styling for common typographic patterns. ofc, this means wrangling quite a few typographic elements not just heading tags.
+* I will most likely be adding Typography back in as a design pattern for this reason.
+*
+* The word-wrap CSS property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its container.
+*
+* Optional LESS mixin file added to for easy flexbox:: https://gist.github.com/jayj/4012969
+* -prefix-free file added to work behind the scenes, adding the current browser’s prefix to any CSS code, only when it’s needed:: http://leaverou.github.io/prefixfree/
+*/
+h1 {
+    font-size: 4vmin;
+    line-height: 4vh;
+    word-wrap:break-word; }
+h2 {
+    font-size: 3.5vmin;
+    line-height: 3.5vh;
+    word-wrap:break-word; }
+h3 {
+    font-size: 3vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+h4 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+h5 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+h6 {
+    font-size: 2.5vmin;
+    line-height: 3vh;
+    word-wrap:break-word; }
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    clear: both; }
+/**
+* vertical rule
+*/
+[ambientvr] {
+    width: 1px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 99.9%;
+    position: absolute; }
+a {
+    display: inline-block; }
+blockquote {
+    font-size: small; }
+article {
+    display: flex;
+    flex-flow: row wrap;
+    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
+    /**
+    * ie9 float fall back for flex position
+    */
+    float: left \ ; }
+section {
+    flex: 1;
+    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
+    /**
+    * ie9 float fall back for flex position
+    */
+    float: left \ ; }
+aside {
+    flex: 0 0 20vw; }
+main {
+    flex: 1 0 auto; }
+footer {
+    order: 2; }
+
+@media (orientation:portrait){
+    article, section {
+        display: block;
+        margin: 0;
+    }
+    /**
+    * change vertical rule back to horizontal rule for portrait view
+    */
+    [ambientvr] {
+        width: 100%;
+        background-color: transparent;
+        position: static; }
+}
+
+/* ambient classes: aesthetics */
+
+/**
+* Iconography also impacts structure. We  use the following settings to standardize the visual scale in a consistent manner.
+*/
+.fa {
+    font-size: 4vmin;
+    padding: .2vw .5VW;
+}
+.fa-2x {
+    font-size: 5vmin;
+}
+.fa-3x {
+    font-size: 6vmin;
+}
+.fa-4x {
+    font-size: 7vmin;
+}
+.fa-5x {
+    font-size: 8vmin;
+}
+
+.user-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin-right: 1vw;
+    float: left; }
+.user-img img {
+    max-width: 97px;
+    margin-top: -19px;
+    margin-left: -22px; }
+.panel-tabs {
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin: 0; }
+.panel-tabs li {
+    position: relative;
+    float: left; }
+.panel-tabs li.active a, .panel-tabs li.active:hover a {
+    color: #3e3e3e; cursor: default; }
+.panel-tabs li.active a i, .panel-tabs li.active:hover a i {
+    color:#e86f56; }
+.panel-tabs li.active:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    margin-left: -7px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #7a706e;
+    z-index: 1; }
+.panel-tabs li:hover a, .panel-tabs li:hover a i {
+    color: #3e3e3e;  }
+.panel-tabs li a {
+    color: #9f9f9f;
+    padding: .5vw 1.5vw;
+    transition:color 0.3s; }
+.panel-tabs li i {
+    font-size: 3vmin;
+    margin-bottom: .5vw;
+    color: #b5adac;
+    transition:color 0.3s; }
+.panel-info h1 {
+    margin-top: .5vw;
+    color: #3e3e3e; }
+.panel-info {
+    float: left;
+    margin: 0 2vw; }
