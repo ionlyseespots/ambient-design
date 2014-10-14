@@ -15,7 +15,7 @@ It works by generating styles for elements, attributes & values. And it's the ke
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
-* CSS: http://ionlyseespots.github.io/ambient-design/css/index.html
+* CSS: http://ionlyseespots.github.io/ambient-design/layout/index.html
 * Design patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
 * Admin template: http://ionlyseespots.github.io/ambient-design/admin-shell/index.html
 
