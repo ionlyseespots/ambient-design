@@ -22,15 +22,6 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "admin-shell",
-    "ambient",
-    "assets",
-    "css",
-    "design-patterns",
-    "docs",
-    "examples",
-    "less",
-    "index.html"
+    "bower_components"
   ]
 }
