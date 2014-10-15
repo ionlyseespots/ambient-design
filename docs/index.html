@@ -40,48 +40,37 @@
     <article>
         <section>
             <h1>Download</h1>
-            <p>
-                Ambient is (in progress) downloadable in two forms, and include the following directories and files:
-            </p>
             <article>
                 <section>
                     <p>
-                        Ambient
+                        Install with Bower
+                    </p>
+                    <pre>
+$ bower install ambient</pre>
+                    <p>
+                        This is the most basic form of Ambient.
                     </p>
                     <pre>
 ambient/
-└── css/
-    ├── lib/
-    ├──── navs.css
-    ├──── ux-shells.css
-    └── ambient.css
+├── css/
+│   ├── ambient.css
+│   └── design-patterns.css
+└── js/
+     └── prefixfree.js
                     </pre>
                     <p>
-                        This is the most basic form of Ambient for a foundation in any web project. The <code>css/</code> folder includes the base fluid design system CSS.
-                        The <code>lib/</code> folder includes optional design patterns.
+                        The <code>css/</code> folder includes the base fluid design system and optional design patterns.
+                   </p>
+                    <p>
+                        The <code>js/</code> folder includes a client side <a href="http://leaverou.github.io/prefixfree/">vendor prefixer</a> that adds the current browser’s prefix to any CSS code, only when it’s needed.
                     </p>
                 </section>
                 <section>
                     <p>
                         Source code
                     </p>
-
-                    <pre>
-ambient/
-├── ambient/
-│   ├── css/
-│   ├── lib/
-│   ├──── navs.css
-│   ├──── ux-shells.css
-│   └── ambient.css
-└── docs/
-     ├── admin-shell/
-     ├── css/
-     ├── design-patterns/
-     └── examples/
-                    </pre>
                     <p>
-                        The Ambient source code download includes Ambient, the source code for our documentation, and examples of Ambient.
+                        Clone or Fork the <a href="https://github.com/ionlyseespots/ambient-design">repo</a> for complete source code, docs and website.
                     </p>
                 </section>
             </article>
@@ -122,7 +111,8 @@ ambient/
 &lt;title&gt;Starter HTML template&lt;/title&gt;
 &lt;!-- Ambient --&gt;
 &lt;link href=&quot;ambient/css/ambient.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link href=&quot;ambient/css/lib/ux-shells.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;ambient/css/design-patterns.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;ambient/js/prefixfree.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;header role="banner"&gt;
