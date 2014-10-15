@@ -36,7 +36,7 @@ It works by generating styles for elements, attributes & values. And it's the ke
 
 ## Usage
 
-Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) just start writing HTML5:
+Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) start writing HTML5.
 
 ## Background
 
