@@ -1,10 +1,21 @@
-Ambient
-=========
+# Ambient
 
-Ambient design lets you develop web applications as if you had your own personal designer inside the browser.  It lets you
-use HTML as your presentation format and lets you extend HTML’s
-elements, attributes and values into design patterns to display your application’s UI clearly.
-We make use of HTML section elements and CSS properties to appropriately scale as the device or view port size increases.
+[Ambient Design] (http://ionlyseespots.github.io/ambient-design) lets you develop web applications as if you had your own personal designer inside the browser.
+
+Our goal is to deliver a lean, lightweight base system for HTML as a presentation format that adapts across different devices.
+We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
+
+> Please note that using Ambient Design requires the [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
+
+## Demo Site
+
+To see Ambient in action and get started, check out http://ionlyseespots.github.io/ambient-design
+
+## Quick Start
+
+Install with [Bower] (http://bower.io/): bower install ambient
+
+## Usage
 
 Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
