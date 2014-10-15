@@ -31,7 +31,6 @@
       "docs",
       "examples",
       "less",
-      "index.html",
-      "bower.json"
+      "index.html"
   ]
 }
