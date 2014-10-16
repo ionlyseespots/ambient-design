@@ -27,20 +27,21 @@ body {
     flex-direction: column; }
 header {
     display: flex;
+    align-items: flex-start;
     flex-flow: row wrap; }
 body > header {
     justify-content: space-between; }
-body > nav, article > nav {
+body > nav, header > nav, article > nav {
     display: flex;
     flex-flow: row wrap; }
-body > nav a, article > nav a {
+body > nav a, header nav a, article > nav a {
     flex: 1;
     text-align: center;
     transition: background 0.3s ease 0s;
     padding: 1vw; }
-body > nav a:hover, article > nav a:hover {
+body > nav a:hover, header nav a:hover, article > nav a:hover {
     background-color:#eee; }
-body nav a.active, article > nav a:active {
+body nav a.active, header nav a:active, article > nav a:active {
     background-color:#eee; }
 
 /**

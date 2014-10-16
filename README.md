@@ -42,6 +42,6 @@ Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambie
 
 Ambient design is a methodology for creating layout.
 
-This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). To do that, I believe markup (HTML) needs to become the presentation format.
+This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). To do that, I believe markup (HTML) needs to become the presentation. Or more specifically, presentation format.
 
 Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
