@@ -9,9 +9,9 @@ body {
 body > article  {
     margin: auto;
     width: auto; }
-header, nav, article, section, article h1, article h2, article h3, footer, p {
+header, nav, article, section, footer, h1, h2, h3, h4, h5, h6, p {
     width: 100%; }
-header, nav, main, article, section, footer, h1, p, hr, div {
+header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
     padding: .01vw;
     max-width: 100%; }
 
@@ -103,7 +103,7 @@ a {
     display: inline-block; }
 blockquote {
     font-size: small; }
-article {
+article, div {
     display: flex;
     flex-flow: row wrap;
     /**
