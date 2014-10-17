@@ -330,7 +330,7 @@ input { max-width: 100%;}
     height: 88%;
     left: 0;
     overflow: hidden;
-    position: fixed !important;
+    position: fixed;
     top: 0;
     justify-content: center;
     width: 100%;
