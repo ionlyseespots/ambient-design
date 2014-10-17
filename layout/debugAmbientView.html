@@ -6,13 +6,12 @@
     <!--- disable Bootstrap and page layout remains consistent. The layout is defined by ambient design patterns for the HTML --->
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>base grid system for Ambient display</title>
+    <title>Base grid system for Ambient display</title>
     <!-- Ambient -->
     <link rel="stylesheet" href="../ambient/css/ambient.css">
     <link rel="stylesheet" href="../dist/css/design-patterns.css">
     <script src="../dist/js/prefixfree.js"></script>
     <style>
-        /* base fluid flex system styles to more clearly show HTML sections as a presentation format */
         body > article {border: 1px solid #d6d6d6; padding: 0 .5vw}
         section, footer {margin: .5vw 0;}
         section, aside, footer {border: 1px solid #d6d6d6;padding: 0 .5vw;}
@@ -28,9 +27,11 @@
 	</head>
 <body>
 <!--- Base design pattern, if anything breaks it will break here --->
-<header role="banner">
-    <h1><a href="../index.html" title="index">Ambient Design</a></h1>
-    <a href="#" title="logout"><i class="fa fa-unlock-alt text-danger" ></i></a>
+<header>
+    <h1>
+        <a href="../index.html" title="index">Ambient Design</a>
+        <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
+    </h1>
 </header>
 <hr />
 

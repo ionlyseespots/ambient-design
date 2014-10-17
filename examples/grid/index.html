@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Disable Bootstrap (CSS) and presentation format remains consistent. The layout is defined by the Ambient base grid system for HTML to convey presentation format (layout), while also maintaining a separation from presentation style (design)  -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Grid examples for Ambient</title>
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../dist/css/ambient.css">
+    <link rel="stylesheet" href="../../dist/css/design-patterns.css">
+    <script src="../../dist/js/prefixfree.js"></script>
+    <style>
+        article {
+            margin-top: 1vw;
+        }
+
+        section {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.2);
+            padding-bottom: 1vw;
+            padding-top: 1vw; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="../../index.html" title="index">Ambient</a> grid examples
+    </h1>
+    <h2>
+        Basic grid layouts to get you familiar with visualizing HTML as a presentation format within the Ambient base grid system.
+    </h2>
+</header>
+<hr />
+
+<main role="main">
+    <article>
+        <h3>
+            Three equal columns
+        </h3>
+        <p>
+            Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+        </p>
+        <p>
+            Remember, equal grid columns default to <code>flex: 1;</code>. Equal columns make use of the <code>section</code> element and defines a section in a document.
+        </p>
+        <section>
+            <p class="text-center">
+                1/3
+            </p>
+        </section>
+        <section>
+            <p class="text-center">
+                1/3
+            </p>
+        </section>
+        <section>
+            <p class="text-center">
+                1/3
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <h3>
+            Three unequal columns
+        </h3>
+        <p>
+            Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
+        </p>
+        <aside class="text-center">
+            1/4
+        </aside>
+        <section class="text-center">
+            1/2
+        </section>
+       <aside class="text-center">
+            1/4
+       </aside>
+    </article>
+
+    <article>
+        <h3>
+            Two unequal columns
+        </h3>
+        <p>
+            Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements
+        </p>
+        <section class="text-center">
+            3/4
+        </section>
+        <aside class="text-center">
+            1/4
+        </aside>
+    </article>
+
+    <article>
+        <h3>Full width, single column</h3>
+        <p>No <code>section</code> is necessary for full-width. The <code>article</code> defines the self-contained content.</p>
+    </article>
+    <hr>
+
+    <article>
+        <h3>
+            Two equal columns with two nested equal columns
+        </h3>
+        <p>
+            Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. Nesting makes use of the <code>article</code> and <code>section</code> elements.
+        </p>
+        <p>
+            On orientation portrait, the columns will automatically stack.
+        </p>
+        <section>
+            <h1>
+                Section H1
+            </h1>
+            <p>
+                1/2
+            </p>
+            <article>
+                <h1>
+                    Nested Article H1
+                </h1>
+                <section>
+                    <h2>
+                        Nested Section H1
+                    </h2>
+                    <p>
+                        1/2
+                    </p>
+                </section>
+                <section>
+                    <h2>
+                        Nested Section H1
+                    </h2>
+                    <p>
+                        1/2
+                    </p>
+                </section>
+            </article>
+        </section>
+        <section>
+            <h1>
+                Section H1
+            </h1>
+            <p>
+                1/2
+            </p>
+        </section>
+    </article>
+    <hr>
+
+    <article>
+        <h3>
+            Orientation: Portrait and Landscape.
+        </h3>
+        <p>
+            The Ambient base grid system has two defaults: Portrait and Landscape.
+        </p>
+    </article>
+    <hr>
+
+    <article>
+        <h3>
+            Column clearing
+        </h3>
+        <p>
+            Clearing makes use of the <code>hr</code> and <code>h1, h2, h3, h4, h5, h6</code> elements.
+        </p>
+    </article>
+    <hr>
+
+</main>
+<footer class="text-center">
+    <p>
+        View the source of this Ambient example to learn more.
+    </p>
+</footer>
+</body>
+</html>
