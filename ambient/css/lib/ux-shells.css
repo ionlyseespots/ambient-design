@@ -122,50 +122,44 @@
 /**
 * landing page shell
 */
-[ambientuxshell="landingpage"] {
+[data-ambientuxshell="landingpage"] {
     min-height: 12%;
     position: absolute;
     top: 87%;
-    width: 100%;
     z-index: 2;
-    background-color:#fff;
+    background-color:inherit;
 }
 
-[ambientuxshell~="landingpage"] h1 {
+[data-ambientuxshell~="landingpage"] h1 {
     margin: 2vw 0;
 }
 
-[ambientuxshell~="landingpage"] nav {
+[data-ambientuxshell~="landingpage"] nav {
     background-color: #fff;
 }
 
-[ambientuxshell~="landingpage"] article {
+[data-ambientuxshell~="landingpage"] article {
     padding-top: 2vw;
 }
 
-[ambientuxshell~="landingpage"] footer {
+[data-ambientuxshell~="landingpage"] footer {
     padding: 2vw 0;
     margin-top: 2vw;
 }
 
-[ambientuxshell="landingpage splash"] {
+[data-ambientuxshell="landingpage splash"] {
     height: 88%;
     left: 0;
     overflow: hidden;
     position: fixed !important;
     top: 0;
+    justify-content: center;
     width: 100%;
     z-index: 1;
 }
 
-[ambientuxshell~="splash"] h1 {
+[data-ambientuxshell~="splash"] h1 {
     border: 3px solid white;
     border-radius: 5px;
     padding: 2vw 3vw;
-}
-
-[ambientuxshell*="center"] {
-    text-align: center;
-    margin: 0 auto;
-    color:#fff;
 }
