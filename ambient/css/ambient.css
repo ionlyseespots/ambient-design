@@ -9,7 +9,7 @@ body {
 body > article  {
     margin: auto;
     width: auto; }
-nav, article, section, article h1, article h2, article h3, footer, p {
+header, nav, article, section, article h1, article h2, article h3, footer, p {
     width: 100%; }
 header, nav, main, article, section, footer, h1, p, hr, div {
     padding: .01vw;
