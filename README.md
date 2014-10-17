@@ -24,7 +24,7 @@ This project is in early development.
 Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 
-1. Base fluid design system for HTML5 section elements added.
+1. base grid system for HTML5 section elements added.
 2. Initial Form States added.
 3. Navs are the next priority.
 
