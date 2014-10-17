@@ -27,12 +27,12 @@ body {
     flex-direction: column; }
 header {
     display: flex;
+    align-items: flex-start;
     flex-flow: row wrap; }
 body > header {
     justify-content: space-between; }
 body > nav, header > nav, article > nav {
     display: flex;
-    align-items: flex-start;
     flex-flow: row wrap; }
 body > nav a, header nav a, article > nav a {
     flex: 1;
@@ -103,7 +103,7 @@ a {
     display: inline-block; }
 blockquote {
     font-size: small; }
-article, div {
+article {
     display: flex;
     flex-flow: row wrap;
     /**
@@ -132,7 +132,7 @@ footer {
     order: 2; }
 
 @media (orientation:portrait){
-    article, section, div {
+    article, section {
         display: block;
         margin: 0;
     }

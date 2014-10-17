@@ -122,13 +122,13 @@
 /**
 * landing page shell
 */
-/*[data-ambientuxshell="landingpage"] {*/
-/*min-height: 12%;*/
-/*position: absolute;*/
-/*top: 87%;*/
-/*z-index: 2;*/
-/*background-color:inherit;*/
-/*}*/
+[data-ambientuxshell="landingpage"] {
+min-height: 12%;
+position: absolute;
+top: 87%;
+z-index: 2;
+background-color:inherit;
+}
 
 [data-ambientuxshell~="landingpage"] h1 {
     margin: 2vw 0;
@@ -148,13 +148,13 @@
 }
 
 [data-ambientuxshell="landingpage splash"] {
-    /*height: 88%;*/
-    /*left: 0;*/
-    /*overflow: hidden;*/
-    /*position: fixed;*/
-    /*top: 0;*/
+    height: 88%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
     justify-content: center;
-    /*z-index: 1;*/
+    z-index: 1;
 }
 
 [data-ambientuxshell~="splash"] h1 {
