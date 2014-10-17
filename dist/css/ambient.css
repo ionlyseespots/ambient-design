@@ -27,8 +27,12 @@ body {
     flex-direction: column; }
 header {
     display: flex;
-    align-items: flex-start;
     flex-flow: row wrap; }
+body > header {
+    justify-content: space-between; }
+body > header nav {
+    height: auto;
+    max-height: 65px; }
 body > nav, header > nav, article > nav {
     display: flex;
     flex-flow: row wrap; }
