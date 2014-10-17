@@ -28,8 +28,6 @@ body {
 header {
     display: flex;
     flex-flow: row wrap; }
-body > header {
-    justify-content: space-between; }
 body > header nav {
     height: auto;
     max-height: 65px; }
