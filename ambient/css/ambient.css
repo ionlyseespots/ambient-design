@@ -132,7 +132,7 @@ footer {
     order: 2; }
 
 @media (orientation:portrait){
-    article, section {
+    article, section, div {
         display: block;
         margin: 0;
     }
