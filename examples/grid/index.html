@@ -36,6 +36,15 @@
 
 <main role="main">
     <article>
+        <h3>Full width, single column</h3>
+        <p>An <code>article</code> is full width and defines self-contained content that could exist independently of the rest of the content.</p>
+        <section>
+            <p>
+                Alternatively, a single <code>section</code> inside an article is also full width and defines a section in the document.
+            </p>
+        </section>
+    </article>
+    <article>
         <h3>
             Three equal columns
         </h3>
@@ -43,7 +52,7 @@
             Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, equal grid columns default to <code>flex: 1;</code>. Equal columns make use of the <code>section</code> element and defines a section in a document.
+            Remember, equal grid columns default is <code>flex: 1;</code>. Equal columns make use of the <code>section</code> element and defines a section in a document.
         </p>
         <section>
             <p class="text-center">
@@ -67,7 +76,10 @@
             Three unequal columns
         </h3>
         <p>
-            Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
+            Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+        </p>
+        <p>
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
         </p>
         <aside class="text-center">
             1/4
@@ -85,19 +97,21 @@
             Two unequal columns
         </h3>
         <p>
-            Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements
+            Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+        </p>
+        <p>
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
         </p>
         <section class="text-center">
-            3/4
+            <p>
+                3/4
+            </p>
         </section>
         <aside class="text-center">
-            1/4
+            <p>
+                1/4
+            </p>
         </aside>
-    </article>
-
-    <article>
-        <h3>Full width, single column</h3>
-        <p>No <code>section</code> is necessary for full-width. The <code>article</code> defines the self-contained content.</p>
     </article>
     <hr>
 
@@ -150,13 +164,12 @@
         </section>
     </article>
     <hr>
-
     <article>
         <h3>
             Orientation: Portrait and Landscape.
         </h3>
         <p>
-            The Ambient base grid system has two defaults: Portrait and Landscape.
+            The Ambient base grid system has two base viewport orientations: Portrait and Landscape.
         </p>
     </article>
     <hr>
@@ -166,10 +179,150 @@
             Column clearing
         </h3>
         <p>
-            Clearing makes use of the <code>hr</code> and <code>h1, h2, h3, h4, h5, h6</code> elements.
+            Clearing makes use of the <code>hr</code> and <code>h1, h2, h3, h4, h5, h6, p</code> section elements.
         </p>
+        <blockquote>
+            <p>
+                The <strong>HTML <code>&lt;hr&gt;</code> element</strong> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
+            </p>
+            <p>
+                A heading element briefly describes the topic of the section it introduces.
+            </p>
+            <p>
+                A paragraph element is 100%, defines a paragraph of text and is left justified.
+            </p>
+        </blockquote>
     </article>
     <hr>
+
+    <article>
+        <h1>
+            Example columns
+        </h1>
+        <h2>
+            1 equal column
+        </h2>
+        <section>
+            <P>
+                100%
+            </P>
+        </section>
+        <h2>
+            2 equal column
+        </h2>
+        <section>
+            <P>
+                1/2
+            </P>
+        </section>
+        <section>
+            <P>
+                1/2
+            </P>
+        </section>
+        <h2>
+            3 equal column
+        </h2>
+        <section>
+            <P>
+                1/3
+            </P>
+        </section>
+        <section>
+            <P>
+                1/3
+            </P>
+        </section>
+        <section>
+            <P>
+                1/3
+            </P>
+        </section>
+        <h2>
+            4 equal column
+        </h2>
+        <section>
+            <P>
+                1/4
+            </P>
+        </section>
+        <section>
+            <P>
+                1/4
+            </P>
+        </section>
+        <section>
+            <P>
+                1/4
+            </P>
+        </section>
+        <section>
+            <P>
+                1/4
+            </P>
+        </section>
+        <h2>
+            5 equal column
+        </h2>
+        <section>
+            <P>
+                1/5
+            </P>
+        </section>
+        <section>
+            <P>
+                1/5
+            </P>
+        </section>
+        <section>
+            <P>
+                1/5
+            </P>
+        </section>
+        <section>
+            <P>
+                1/5
+            </P>
+        </section>
+        <section>
+            <P>
+                1/5
+            </P>
+        </section>
+        <h2>
+            6 equal column
+        </h2>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+        <section>
+            <P>
+                1/6
+            </P>
+        </section>
+    </article>
 
 </main>
 <footer class="text-center">
