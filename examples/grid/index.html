@@ -37,10 +37,10 @@
 <main role="main">
     <article>
         <h3>Full width, single column</h3>
-        <p>An <code>article</code> is full width and defines self-contained content that could exist independently of the rest of the content.</p>
+        <p>An <code>&lt;article&gt;</code> is full width and defines self-contained content that could exist independently of the rest of the content.</p>
         <section>
             <p>
-                Alternatively, a single <code>section</code> inside an article is also full width and defines a section in the document.
+                Alternatively, a single <code>&lt;section&gt;</code> inside an article is also full width and defines a section in the document.
             </p>
         </section>
     </article>
@@ -52,7 +52,7 @@
             Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, equal grid columns default is <code>flex: 1;</code>. Equal columns make use of the <code>section</code> element and defines a section in a document.
+            Remember, equal grid columns default is <code>flex: 1;</code>. Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
         </p>
         <section>
             <p class="text-center">
@@ -79,7 +79,7 @@
             Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
         </p>
         <aside class="text-center">
             1/4
@@ -94,13 +94,13 @@
 
     <article>
         <h3>
-            Two unequal columns
+            Two unequal columns with main section of content on the left
         </h3>
         <p>
             Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>aside</code> and <code>section</code> elements.
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
         </p>
         <section class="text-center">
             <p>
@@ -117,10 +117,33 @@
 
     <article>
         <h3>
+            Two unequal columns with main section of content on the right
+        </h3>
+        <p>
+            Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+        </p>
+        <p>
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+        </p>
+        <aside class="text-center">
+            <p>
+                1/4
+            </p>
+        </aside>
+        <section class="text-center">
+            <p>
+                3/4
+            </p>
+        </section>
+    </article>
+    <hr>
+
+    <article>
+        <h3>
             Two equal columns with two nested equal columns
         </h3>
         <p>
-            Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. Nesting makes use of the <code>article</code> and <code>section</code> elements.
+            Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. Nesting makes use of the <code>&lt;article&gt;</code> and <code>section</code> elements.
         </p>
         <p>
             On orientation portrait, the columns will automatically stack.
@@ -323,7 +346,19 @@
             </P>
         </section>
     </article>
+    <hr />
 
+    <article>
+        <h1>
+            Offset columns
+        </h1>
+        <p>
+            Individual sizing makes use of design patterns (with flexible box properties) and <code>width, min-width, max-width</code> properties.
+        </p>
+        <p>
+            Alternatively, individual <code>&lt;div&gt;</code> elements can be offset relative to the parent container.
+        </p>
+    </article>
 </main>
 <footer class="text-center">
     <p>
