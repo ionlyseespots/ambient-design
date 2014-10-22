@@ -1,6 +1,6 @@
 # Ambient
 
-[Ambient Grid System] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
+[Ambient] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
 
 Our goal is to deliver a lean, lightweight base grid system for HTML to convey presentation format (layout), while also maintaining a separation from presentation style (design) that adapts across different devices.
 
