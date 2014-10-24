@@ -1,5 +1,11 @@
+*:before, *:after {
+    box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0; }
+
 /**
-* Whiskey & Ghosts: corral default section widths, heights, margins & paddings
+* Base width, height, margin and padding
 */
 html {
     height: 100%; }
@@ -9,19 +15,15 @@ body {
 body > article  {
     margin: auto;
     width: auto; }
-header, nav, article, section, footer, h1, h2, h3, h4, h5, h6, p {
-    width: 100%; }
+article footer, section footer, nav, h1, h2, h3, h4, h5, h6, hr, p {
+    width: 100%;}
 header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
     padding: .01vw;
     max-width: 100%; }
 
 /**
-* Ambient base design pattern for HTML sections as a presentation format without the need for structure based classes.
+* Base grid system
 */
-* {
-    margin: 0;
-    padding: 0; }
-
 body {
     display: flex;
     flex-direction: column; }
@@ -29,33 +31,39 @@ header {
     display: flex;
     flex-flow: row wrap; }
 body > header nav {
-    height: auto;
-    max-height: 65px; }
+    height: auto; }
 body > nav, header > nav, article > nav {
     display: flex;
     flex-flow: row wrap; }
 body > nav a, header nav a, article > nav a {
+    flex: 1; }
+article {
+    display: flex;
+    flex-flow: row wrap;
+    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
+    /**
+    * ie9 float fall back for flex position
+    */
+    float: left \ ; }
+section {
     flex: 1;
-    text-align: center;
-    transition: background 0.3s ease 0s;
-    padding: 1vw; }
-body > nav a:hover, header nav a:hover, article > nav a:hover {
-    background-color:#eee; }
-body nav a.active, header nav a:active, article > nav a:active {
-    background-color:#eee; }
-
-/**
-* Heading elements use the following settings to standardize the typographic scale in a consistent manner.
-*
-* Typography indirectly impacts structure. Qe need to establish clearly distinguishable heading levels and choose a type hierarchy that is harmonious and consistent.
-* We need to define proper markup with extensible styling for common typographic patterns. ofc, this means wrangling quite a few typographic elements not just heading tags.
-* I will most likely be adding Typography back in as a design pattern for this reason.
-*
-* The word-wrap CSS property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its container.
-*
-* Optional LESS mixin file added to for easy flexbox:: https://gist.github.com/jayj/4012969
-* -prefix-free file added to work behind the scenes, adding the current browser’s prefix to any CSS code, only when it’s needed:: http://leaverou.github.io/prefixfree/
-*/
+    /**
+    * preemptive strike on absolute positioning
+    */
+    position: relative;
+    /**
+    * ie9 float fall back for flex position
+    */
+    float: left \ ; }
+aside {
+    flex: 0 0 20vw; }
+main {
+    flex: 1 0 auto; }
+footer {
+    order: 2; }
 h1 {
     font-size: 4vmin;
     line-height: 4vh;
@@ -85,7 +93,11 @@ hr {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: rgba(0, 0, 0, 0.12) -moz-use-text-color -moz-use-text-color;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    box-sizing: content-box;
+    height: 0;
     border-image: none;
     margin-bottom: 0;
     margin-top: 0;
@@ -101,36 +113,10 @@ hr {
     position: absolute; }
 a {
     display: inline-block; }
-blockquote {
-    font-size: small; }
-article {
-    display: flex;
-    flex-flow: row wrap;
-    /**
-    * preemptive strike on absolute positioning
-    */
-    position: relative;
-    /**
-    * ie9 float fall back for flex position
-    */
-    float: left \ ; }
-section {
-    flex: 1;
-    /**
-    * preemptive strike on absolute positioning
-    */
-    position: relative;
-    /**
-    * ie9 float fall back for flex position
-    */
-    float: left \ ; }
-aside {
-    flex: 0 0 20vw; }
-main {
-    flex: 1 0 auto; }
-footer {
-    order: 2; }
 
+/**
+* Portrait
+*/
 @media (orientation:portrait){
     article, section {
         display: block;
@@ -145,11 +131,117 @@ footer {
         position: static; }
 }
 
-/* ambient classes: aesthetics */
-
 /**
-* Iconography also impacts structure. We  use the following settings to standardize the visual scale in a consistent manner.
+/* Base Theme
 */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857; }
+body > nav a:hover, header nav a:hover, article > nav a:hover {
+    background-color:#eee; }
+body nav a.active, header nav a:active, article > nav a:active {
+    background-color:#eee; }
+body > nav a, header nav a, article > nav a {
+    text-align: center;
+    transition: background 0.3s ease 0s;
+    padding: 1vw; }
+body > header nav {
+    max-height: 65px; }
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1vw;
+    margin-top: 1.5vw;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500; }
+p {
+    margin: 0 0 10px; }
+a {
+    color: #428bca;
+    text-decoration: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
+a:hover, a:focus {
+    color:#2a6496;
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline: 0 none; }
+code {
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #c7254e;
+    font-size: 90%;
+    padding: 2px 4px; }
+code, kbd, pre, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+blockquote:before, blockquote:after {
+    content: ""; }
+blockquote {
+    border-left: 5px solid #eee;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    font-size: small; }
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: 9.5px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.text-left {
+    text-align: left; }
+.text-right {
+    text-align: right; }
+.text-center {
+    text-align: center; }
+.text-justify {
+    text-align: justify; }
+.text-nowrap {
+    white-space: nowrap; }
+.text-lowercase {
+    text-transform: lowercase; }
+.text-uppercase {
+    text-transform: uppercase; }
+.text-capitalize {
+    text-transform: capitalize; }
+.text-muted {
+    color: #777; }
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.btn-default {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #333; }
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    color: #333; }
+.btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none; }
 .fa {
     font-size: 4vmin;
     padding: .2vw .5VW;
@@ -167,6 +259,9 @@ footer {
     font-size: 8vmin;
 }
 
+/**
+* Admin template stuff, this needs to come out.
+*/
 .user-img {
     width: 65px;
     height: 65px;

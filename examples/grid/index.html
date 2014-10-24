@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Disable Bootstrap (CSS) and presentation format remains consistent. The layout is defined by the Ambient base grid system for HTML to convey presentation format (layout), while also maintaining a separation from presentation style (design)  -->
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Grid examples for Ambient</title>
     <!-- Ambient -->
@@ -12,18 +10,16 @@
     <link rel="stylesheet" href="../../dist/css/design-patterns.css">
     <script src="../../dist/js/prefixfree.js"></script>
     <style>
-        article {
-            margin-top: 1vw;
-        }
-
-        section, aside {
+        [am-grid] article {
+            margin-top: 1vw; }
+        [am-grid] section, aside {
             background-color: rgba(86, 61, 124, 0.15);
             border: 1px solid rgba(86, 61, 124, 0.2);
             padding-bottom: 1vw;
             padding-top: 1vw; }
     </style>
 </head>
-<body>
+<body am-grid>
 <header>
     <h1>
         <a href="../../index.html" title="index">Ambient</a> grid examples
