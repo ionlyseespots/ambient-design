@@ -130,7 +130,7 @@ a {
 }
 
 /**
-/* Base grid system theme
+/* Ambient basic style
 */
 body {
     background-color: #fff;
@@ -240,7 +240,7 @@ input, button, select, textarea {
     color: #fff; }
 
 /**
-* Font Awesome
+* Font Awesome basic style
 */
 .fa {
     font-size: 4vmin;
@@ -260,7 +260,7 @@ input, button, select, textarea {
 }
 
 /**
-* Admin template stuff, this needs to come out.
+* Admin basic style, this is a UX shell and needs some TLC
 */
 .user-img {
     width: 65px;
