@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="../../dist/css/ambient.css">
     <link rel="stylesheet" href="../../dist/css/design-patterns.css">
     <script src="../../dist/js/prefixfree.js"></script>
-    <style>
-        [am-grid] article {
-            margin-top: 1vw; }
-        [am-grid] section, aside {
-            background-color: rgba(86, 61, 124, 0.15);
-            border: 1px solid rgba(86, 61, 124, 0.2);
-            padding-bottom: 1vw;
-            padding-top: 1vw; }
-    </style>
 </head>
 <body am-grid>
 <header>
@@ -204,17 +195,26 @@
             Column clearing
         </h3>
         <p>
-            Clearing makes use of the <code>hr</code> and <code>h1, h2, h3, h4, h5, h6, p</code> section elements.
+            Clearing makes use of <code>hr</code> as well as <code>header, footer, nav, h1, h2, h3, h4, h5, h6, p</code> section elements.
         </p>
         <blockquote>
             <p>
-                The <strong>HTML <code>&lt;hr&gt;</code> element</strong> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
+                <code>&lt;hr&gt;</code> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
             </p>
             <p>
-                A heading element briefly describes the topic of the section it introduces.
+                <code>&lt;header&gt;</code>defines the header of a page or section.
             </p>
             <p>
-                A paragraph element is 100%, defines a paragraph of text and is left justified.
+                <code>&lt;footer&gt;</code> defines the footer for a page or section.
+            </p>
+            <p>
+                <code>&lt;nav&gt;</code> element defines a section that contains only navigation links.
+            </p>
+            <p>
+                <code>&lt;h1, h2, h3, h4, h5 ,h6&gt;</code> element briefly describes the topic of the section.
+            </p>
+            <p>
+                <code>&lt;p&gt;</code> is 100%, defines a paragraph of text and is left justified.
             </p>
         </blockquote>
     </article>

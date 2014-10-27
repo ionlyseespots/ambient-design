@@ -1,6 +1,2 @@
-main article:not(:first-of-type) p {padding-bottom: 3vw;}
-body > header, body > footer {background-color:#333; color:#ddd;}
+body > header, body > footer {background-color:#333;}
 body > footer { padding: 3vw 0; }
-header a {color:#ddd;}
-header a:hover {color:#fff;}
-

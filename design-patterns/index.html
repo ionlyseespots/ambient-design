@@ -37,7 +37,7 @@
         Overview
     </h2>
     <p>
-        UI elements | UX shells | Navs | Form states | Admin template
+        UI elements | UX shells | Navs | Form states
     </p>
     <article>
         <section>
@@ -51,7 +51,7 @@
                 CSS attribute selectors do not care if it is a predefined or a custom namespace. <strong>And it's the key to unlocking this new approach</strong>.
             </p>
             <p>
-                We define custom namespaces for design patterns. To avoid collisions with other namespaces, we are prefixing default design patterns with "ambient".
+                We define custom namespaces for design patterns. To avoid collisions with other namespaces, we are prefixing design patterns with "am-".
             </p>
             <h3>
                 Introduction
@@ -155,11 +155,11 @@
             Inline form
         </h2>
         <p>
-            To create a default inline form with the base form state design pattern, add the attribute <code>ambientformstate</code> to any form.
+            To create a default inline form with the base form state design pattern, add the attribute <code>am-formstate</code> to any form.
         </p>
         <section>
             <pre>
-&lt;form ambientformstate&gt;
+&lt;form am-formstate&gt;
     &lt;label for="inline-email"&gt;Email&lt;/label&gt;
     &lt;input id="inline-email" type="email" placeholder="Email"&gt;
 
@@ -180,10 +180,10 @@
                     Inline
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate&gt;</code>
+                    <code>&lt;form am-formstate&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate>
+            <form am-formstate>
                 <label for="inline-email">Email</label>
                 <input id="inline-email" type="email" placeholder="Email">
 
@@ -201,14 +201,14 @@
             Stacked form
         </h2>
         <p>
-            To create a stacked form, add the attribute <code>ambientformstate</code> = <code>stacked</code> to any form.
+            To create a stacked form, add the attribute <code>am-formstate</code> = <code>stacked</code> to any form.
         </p>
         <p>
             Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential design pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
         </p>
         <section>
             <pre>
-&lt;form ambientformstate="stacked"&gt;
+&lt;form am-formstate="stacked"&gt;
     &lt;label for="stacked-email" ambientpreicon="unicode"&gt;Email&lt;/label&gt;
     &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
 
@@ -229,7 +229,7 @@
                     Stacked
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="stacked"&gt;</code>
+                    <code>&lt;form am-formstate="stacked"&gt;</code>
                 </p>
                 <h2>
                     Pre & Post input icons
@@ -241,7 +241,7 @@
                     <code>&lt;label ambientposticon="unicode"&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="stacked">
+            <form am-formstate="stacked">
                 <label for="stacked-email" ambientpreicon="&#xf118;">Email</label>
                 <input id="stacked-email" type="email" placeholder="Email">
 
@@ -259,14 +259,14 @@
             Aligned form
         </h2>
         <p>
-            To create an aligned form add the attribute <code>ambientformstate</code> = <code>aligned</code> to any form.
+            To create an aligned form add the attribute <code>am-formstate</code> = <code>aligned</code> to any form.
         </p>
         <p>
             Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
         </p>
         <section>
             <pre>
-&lt;form ambientformstate="aligned"&gt;
+&lt;form am-formstate="aligned"&gt;
     &lt;span&gt;
         &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
         &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
@@ -290,10 +290,10 @@
                     Aligned
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="aligned"&gt;</code>
+                    <code>&lt;form am-formstate="aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="aligned">
+            <form am-formstate="aligned">
                 <span>
                     <label for="aligned-email">Email</label>
                     <input id="aligned-email" type="email" placeholder="Email">
@@ -314,14 +314,14 @@
             Multi-column form
         </h2>
         <p>
-            To create a multi-column form add the attribute <code>ambientformstate</code> = <code>multicolumn</code> to any form.
+            To create a multi-column form add the attribute <code>am-formstate</code> = <code>multicolumn</code> to any form.
         </p>
         <p>
             Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
         </p>
         <section>
             <pre>
-&lt;form ambientformstate="multicolumn"&gt;
+&lt;form am-formstate="multicolumn"&gt;
     &lt;div&gt;
         &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
         &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
@@ -357,10 +357,10 @@
                     Multi-column
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="multicolumn"&gt;</code>
+                    <code>&lt;form am-formstate="multicolumn"&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="multicolumn">
+            <form am-formstate="multicolumn">
                 <div>
                     <label for="multicolumn-email">Email</label>
                     <input id="multicolumn-email" type="email" placeholder="Email">
@@ -397,14 +397,14 @@
             Mix & match form states
         </h1>
         <p>
-            To mix & match form states add the attribute <code>ambientformstate</code> = <code>value value</code> for the design patterns you want to mix & match to any form.
+            To mix & match form states add the attribute <code>am-formstate</code> = <code>value value</code> for the design patterns you want to mix & match to any form.
         </p>
         <h2>
             Stacked + Aligned form
         </h2>
         <section>
             <pre>
-&lt;form ambientformstate="stacked-aligned aligned"&gt;
+&lt;form am-formstate="stacked-aligned aligned"&gt;
     &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
     &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
 
@@ -433,10 +433,10 @@
                     Stacked + Aligned
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="stacked aligned"&gt;</code>
+                    <code>&lt;form am-formstate="stacked aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="stacked aligned">
+            <form am-formstate="stacked aligned">
                 <label for="stacked-aligned-email">Email</label>
                 <input id="stacked-aligned-email" type="email" placeholder="Email">
 
@@ -463,7 +463,7 @@
         </h2>
         <section>
             <pre>
-&lt;form ambientformstate="multicolumn multicolumn-stacked"&gt;
+&lt;form am-formstate="multicolumn multicolumn-stacked"&gt;
     &lt;div&gt;
         &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
         &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
@@ -506,10 +506,10 @@
                     Multi-column + Stacked
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="multicolumn stacked "&gt;</code>
+                    <code>&lt;form am-formstate="multicolumn stacked "&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="multicolumn stacked">
+            <form am-formstate="multicolumn stacked">
                 <div>
                     <label for="multicolumn-stacked-email">Email</label>
                     <input id="multicolumn-stacked-email" type="email" placeholder="Email">
@@ -550,7 +550,7 @@
         </h2>
         <section>
             <pre>
- &lt;form ambientformstate="multicolumn aligned"&gt;
+ &lt;form am-formstate="multicolumn aligned"&gt;
      &lt;div&gt;
          &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
          &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
@@ -596,10 +596,10 @@
                     Multi-column + Aligned
                 </h1>
                 <p>
-                    <code>&lt;form ambientformstate="multicolumn aligned"&gt;</code>
+                    <code>&lt;form am-formstate="multicolumn aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form ambientformstate="multicolumn aligned">
+            <form am-formstate="multicolumn aligned">
                 <div>
                     <label for="multicolumn-aligned-email">Email</label>
                     <input id="multicolumn-aligned-email" type="email" placeholder="Email">
@@ -638,19 +638,6 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
-    </article>
-    <hr />
-
-    <article>
-        <h1>
-            Admin Template
-        </h1>
-        <p>
-            Admin template is a (static) demo of working with the Ambient base grid system & design patterns to create an admin UI. It includes a left panel design pattern navigation flow for routing.
-        </p>
-        <p>
-            <a href="../examples/admin-shell/index.html" class="btn btn-default">View Admin Template</a>
-        </p>
     </article>
     <hr />
 

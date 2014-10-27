@@ -103,7 +103,7 @@ hr {
 /**
 * vertical rule
 */
-[ambientvr] {
+[am-verticalrule] {
     width: 1px;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.12);
@@ -123,7 +123,7 @@ a {
     /**
     * change vertical rule back to horizontal rule for portrait view
     */
-    [ambientvr] {
+    [am-verticalrule] {
         width: 100%;
         background-color: transparent;
         position: static; }
