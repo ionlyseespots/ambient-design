@@ -1,30 +1,16 @@
-*:before, *:after {
-    box-sizing: border-box; }
+/**
+* Base grid system
+*/
 * {
     margin: 0;
     padding: 0; }
-
-/**
-* Base width, height, margin and padding
-*/
+*, *:before, *:after {
+    box-sizing: border-box; }
 html {
     height: 100%; }
 body {
     min-width: 100%;
-    min-height: 100%; }
-body > article  {
-    margin: auto;
-    width: auto; }
-article footer, section footer, nav, h1, h2, h3, h4, h5, h6, hr, p {
-    width: 100%;}
-header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
-    padding: .01vw;
-    max-width: 100%; }
-
-/**
-* Base grid system
-*/
-body {
+    min-height: 100%;
     display: flex;
     flex-direction: column; }
 header {
@@ -37,6 +23,18 @@ body > nav, header > nav, article > nav {
     flex-flow: row wrap; }
 body > nav a, header nav a, article > nav a {
     flex: 1; }
+body > article  {
+    /**
+    * center content in first article not in main
+    */
+    align-items: center;
+    margin: auto;
+    width: auto; }
+header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
+    width: 100%;}
+header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
+    padding: .01vw;
+    max-width: 100%; }
 article {
     display: flex;
     flex-flow: row wrap;
@@ -132,7 +130,7 @@ a {
 }
 
 /**
-/* Base Theme
+/* Base grid system theme
 */
 body {
     background-color: #fff;
@@ -164,7 +162,6 @@ a {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
 a:hover, a:focus {
     color:#2a6496;
-    text-decoration: underline;
 }
 a:active, a:hover {
     outline: 0 none; }
@@ -194,27 +191,25 @@ pre {
     margin: 0 0 10px;
     padding: 9.5px;
     word-break: break-all;
-    word-wrap: break-word;
-}
+    word-wrap: break-word; }
+label {
+    font-weight: 700;
+    margin-bottom: 5px; }
+input, button, select, textarea {
+    font-size: inherit;
+    line-height: inherit; }
 .text-left {
     text-align: left; }
 .text-right {
     text-align: right; }
 .text-center {
     text-align: center; }
-.text-justify {
-    text-align: justify; }
-.text-nowrap {
-    white-space: nowrap; }
 .text-lowercase {
     text-transform: lowercase; }
 .text-uppercase {
     text-transform: uppercase; }
 .text-capitalize {
     text-transform: capitalize; }
-.text-muted {
-    color: #777; }
-
 .btn {
     -moz-user-select: none;
     background-image: none;
@@ -229,8 +224,9 @@ pre {
     padding: 6px 12px;
     text-align: center;
     vertical-align: middle;
-    white-space: nowrap;
-}
+    white-space: nowrap; }
+.btn:hover, .btn:focus {
+    text-decoration: none; }
 .btn-default {
     background-color: #fff;
     border-color: #ccc;
@@ -239,9 +235,13 @@ pre {
     background-color: #e6e6e6;
     border-color: #adadad;
     color: #333; }
-.btn:hover, .btn:focus {
-    color: #333;
-    text-decoration: none; }
+.btn-primary {
+    background-color: #333;
+    color: #fff; }
+
+/**
+* Font Awesome
+*/
 .fa {
     font-size: 4vmin;
     padding: .2vw .5VW;
