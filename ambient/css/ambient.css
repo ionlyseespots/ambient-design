@@ -31,7 +31,8 @@ body > article  {
     margin: auto;
     width: auto; }
 header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
-    width: 100%;}
+    width: 100%;
+    word-wrap:break-word; }
 header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
     padding: .01vw;
     max-width: 100%; }
@@ -62,64 +63,14 @@ main {
     flex: 1 0 auto; }
 footer {
     order: 2; }
-h1 {
-    font-size: 4vmin;
-    line-height: 4vh;
-    word-wrap:break-word; }
-h2 {
-    font-size: 3.5vmin;
-    line-height: 3.5vh;
-    word-wrap:break-word; }
-h3 {
-    font-size: 3vmin;
-    line-height: 3vh;
-    word-wrap:break-word; }
-h4 {
-    font-size: 2.5vmin;
-    line-height: 3vh;
-    word-wrap:break-word; }
-h5 {
-    font-size: 2.5vmin;
-    line-height: 3vh;
-    word-wrap:break-word; }
-h6 {
-    font-size: 2.5vmin;
-    line-height: 3vh;
-    word-wrap:break-word; }
-hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: rgba(0, 0, 0, 0.12);
-    border-style: solid none none;
-    border-width: 1px 0 0;
-    box-sizing: content-box;
-    height: 0;
-    border-image: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    clear: both; }
-/**
-* vertical rule
-*/
-[am-verticalrule] {
-    width: 1px;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.12);
-    height: 99.9%;
-    position: absolute; }
-a {
-    display: inline-block; }
+
 
 /**
 * Portrait
 */
 @media (orientation:portrait){
     article, section {
-        display: block;
-        margin: 0;
-    }
+        display: block; }
     /**
     * change vertical rule back to horizontal rule for portrait view
     */
@@ -130,7 +81,7 @@ a {
 }
 
 /**
-/* Ambient basic style
+/* Ambient with the basic style
 */
 body {
     background-color: #fff;
@@ -148,6 +99,24 @@ body > nav a, header nav a, article > nav a {
     padding: 1vw; }
 body > header nav {
     max-height: 65px; }
+h1 {
+    font-size: 4vmin;
+    line-height: 4vh; }
+h2 {
+    font-size: 3.5vmin;
+    line-height: 3.5vh; }
+h3 {
+    font-size: 3vmin;
+    line-height: 3vh; }
+h4 {
+    font-size: 2.5vmin;
+    line-height: 3vh; }
+h5 {
+    font-size: 2.5vmin;
+    line-height: 3vh; }
+h6 {
+    font-size: 2.5vmin;
+    line-height: 3vh; }
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1vw;
     margin-top: 1.5vw;
@@ -157,6 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin: 0 0 10px; }
 a {
+    display: inline-block;
     color: #428bca;
     text-decoration: none;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
@@ -165,6 +135,30 @@ a:hover, a:focus {
 }
 a:active, a:hover {
     outline: 0 none; }
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    box-sizing: content-box;
+    height: 0;
+    border-image: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    clear: both; }
+
+/**
+* vertical rule
+*/
+[am-verticalrule] {
+    width: 1px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 99.9%;
+    position: absolute; }
 code {
     background-color: #f9f2f4;
     border-radius: 4px;
@@ -258,6 +252,13 @@ input, button, select, textarea {
 .fa-5x {
     font-size: 8vmin;
 }
+[am-grid] article {
+    margin-top: 1vw; }
+[am-grid] section, [am-grid] aside {
+    background-color: rgba(86, 61, 124, 0.15);
+    border: 1px solid rgba(86, 61, 124, 0.2);
+    padding-bottom: 1vw;
+    padding-top: 1vw; }
 
 /**
 * Admin basic style, this is a UX shell and needs some TLC

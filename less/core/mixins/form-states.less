@@ -1,0 +1,141 @@
+/* form States */
+/**
+* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS
+* <input> is a replaced element and does not allow ::psuedo CSS
+*/
+
+[am-formstate] input, [am-formstate] select, [am-formstate] textarea {
+  border: 1px solid #ccc;
+  border-radius: .5vw;
+  min-height: 2vw;
+  padding: 0.5vw 1vw;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+[am-formstate] input:focus, [am-formstate] select:focus, [am-formstate] textarea:focus {
+  border-color: #66afe9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+  outline: 0 none;
+}
+
+[am-formstate] input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[am-formstate] label {
+  display: inline-block;
+  max-width: 100%;
+}
+
+[am-formstate] label input {
+  width: auto;
+}
+input { max-width: 100%;}
+/**
+* Stacked
+*/
+[am-formstate~="stacked"] input, [am-formstate~="stacked"] select, [am-formstate~="stacked"] textarea,  [am-formstate~="stacked"] label {
+  width: 100%;
+}
+
+/**
+* Aligned
+*/
+[am-formstate~="aligned"] > span {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+-webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+[am-formstate~="aligned"] > span input, [am-formstate~="aligned"] > span select, [am-formstate~="aligned"] > span textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+[am-formstate~="aligned"] > span label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/**
+* Multi-column
+*/
+[am-formstate~="multicolumn"]  {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+[am-formstate~="multicolumn"] > div  {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+[am-formstate~="multicolumn"] input, [am-formstate~="multicolumn"] select, [am-formstate~="multicolumn"] textarea, [am-formstate~="multicolumn"] label {
+  width: 100%;
+}
+
+/**
+* Iconography
+*/
+[am-preicon], [am-posticon] {
+  position: relative;
+}
+
+[am-preicon] + input {
+  padding-left: 3vh;
+}
+
+[am-posticon] + input {
+  padding-right: 3vh;
+}
+
+[am-preicon]:before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: .5%;
+  top: 30px;
+  content: attr(am-preicon);
+  font-size: 2vh;
+
+}
+
+[am-posticon]:after {
+  font-family: FontAwesome;
+  position: absolute;
+  right: .5%;
+  top: 30px;
+  content: attr(am-posticon);
+  font-size: 2vh;
+}

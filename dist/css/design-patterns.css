@@ -52,7 +52,7 @@ input { max-width: 100%;}
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
-    flex-direction: row
+    flex-direction: row;
 -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -109,34 +109,34 @@ input { max-width: 100%;}
 /**
 * Iconography
 */
-[ambientpreicon], [ambientposticon] {
+[am-preicon], [am-posticon] {
     position: relative;
 }
 
-[ambientpreicon] + input {
+[am-preicon] + input {
     padding-left: 3vh;
 }
 
-[ambientposticon] + input {
+[am-posticon] + input {
     padding-right: 3vh;
 }
 
-[ambientpreicon]:before {
+[am-preicon]:before {
     font-family: FontAwesome;
     position: absolute;
     left: .5%;
     top: 30px;
-    content: attr(ambientpreicon);
+    content: attr(am-preicon);
     font-size: 2vh;
 
 }
 
-[ambientposticon]:after {
+[am-posticon]:after {
     font-family: FontAwesome;
     position: absolute;
     right: .5%;
     top: 30px;
-    content: attr(ambientposticon);
+    content: attr(am-posticon);
     font-size: 2vh;
 }
 

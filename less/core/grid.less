@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0; }
+*, *:before, *:after {
+  box-sizing: border-box; }
+html {
+  height: 100%; }
+body {
+  min-width: 100%;
+  min-height: 100%;
+  .flex-display;
+  .flex-direction(column);
+}
+header {
+  .flex-display;
+  .flex-flow(row wrap); }
+body > header nav {
+  height: auto; }
+body > nav, header > nav, article > nav {
+  .flex-display;
+  .flex-flow(row wrap); }
+body > nav a, header nav a, article > nav a {
+  .flex(1); }
+header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
+  width: 100%;
+  word-wrap:break-word; }
+header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
+  padding: .01vw;
+  max-width: 100%; }
+article {
+  .flex-display;
+  .flex-flow(row wrap);
+  /**
+  * preemptive strike on absolute positioning
+  */
+  position: relative; }
+section {
+  .flex(1);
+  /**
+  * preemptive strike on absolute positioning
+  */
+  position: relative; }
+aside {
+  .flex(0 0 20vw);  }
+main {
+  .flex(@columns: 1 0 auto); }
+footer {
+  .flex-order(2); }
+
+@media (orientation:portrait){
+  article, section {
+    display: block;
+    margin: 0;
+  }
+  /**
+  * change vertical rule back to horizontal rule for portrait view
+  */
+  [am-verticalrule] {
+    width: 100%;
+    background-color: transparent;
+    position: static; }
+}
