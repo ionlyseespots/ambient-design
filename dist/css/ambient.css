@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 *:before, *:after {
     box-sizing: border-box; }
 * {
@@ -132,7 +135,7 @@ a {
 }
 
 /**
-/* Base Theme
+/* Base Grid system theme
 */
 body {
     background-color: #fff;
@@ -196,6 +199,15 @@ pre {
     word-break: break-all;
     word-wrap: break-word;
 }
+label {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+input, button, select, textarea {
+    font-size: inherit;
+    line-height: inherit;
+}
+
 .text-left {
     text-align: left; }
 .text-right {
@@ -231,6 +243,8 @@ pre {
     vertical-align: middle;
     white-space: nowrap;
 }
+.btn:hover, .btn:focus {
+    text-decoration: none; }
 .btn-default {
     background-color: #fff;
     border-color: #ccc;
@@ -239,9 +253,11 @@ pre {
     background-color: #e6e6e6;
     border-color: #adadad;
     color: #333; }
-.btn:hover, .btn:focus {
-    color: #333;
-    text-decoration: none; }
+.btn-primary {
+    background-color: #333;
+    color: #fff;
+}
+
 .fa {
     font-size: 4vmin;
     padding: .2vw .5VW;

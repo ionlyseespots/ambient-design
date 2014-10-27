@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
 
-Our goal is to deliver a lean, lightweight base grid system for HTML to convey presentation format (layout), while also maintaining a separation from presentation style (design) that adapts across different devices.
+Our goal is to deliver a lean, lightweight base grid system for HTML to convey structure in a consistent grid system without the need for structure based classes, while also maintaining a separation from presentation that adapts across different devices. 
 
 We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
 
@@ -21,7 +21,7 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 ## Development
 
 This project is in early development.
-Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in.
+Ambient is about using HTML to convey structure in a consistent grid system. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
@@ -38,6 +38,6 @@ Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambie
 
 Ambient grid system is a methodology for creating layout.
 
-This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). To do that, I believe markup (HTML) needs to become the presentation. Or more specifically, presentation format.
+To do that, I believe markup needs to become the presentation. Or more specifically, presentation structure. While presentation changes (design patterns) can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
 
-Ambient is about HTML as a presentation format. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+Ambient is about using HTML to convey structure in a consistent grid system.. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
