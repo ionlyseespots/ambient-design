@@ -286,6 +286,33 @@ input {
   content: attr(am-posticon);
   font-size: 2vh;
 }
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+body > nav a:hover,
+header nav a:hover,
+article > nav a:hover {
+  background-color: #eee;
+}
+body nav a.active,
+header nav a:active,
+article > nav a:active {
+  background-color: #eee;
+}
+body > nav a,
+header nav a,
+article > nav a {
+  text-align: center;
+  transition: background 0.3s ease 0s;
+  padding: 1vw;
+}
+body > header nav {
+  max-height: 65px;
+}
 body > article {
   /**
   * center content in first article not in main
@@ -421,4 +448,88 @@ hr {
   background-color: rgba(0, 0, 0, 0.12);
   height: 99.9%;
   position: absolute;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.btn {
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+.btn-default {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  color: #333;
+}
+.btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+/**
+* Font Awesome basic style
+*/
+.fa {
+  font-size: 4vmin;
+  padding: .2vw .5VW;
+}
+.fa-2x {
+  font-size: 5vmin;
+}
+.fa-3x {
+  font-size: 6vmin;
+}
+.fa-4x {
+  font-size: 7vmin;
+}
+.fa-5x {
+  font-size: 8vmin;
+}
+[am-grid] article {
+  margin-top: 1vw;
+}
+[am-grid] section,
+[am-grid] aside {
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+  padding-bottom: 1vw;
+  padding-top: 1vw;
 }
