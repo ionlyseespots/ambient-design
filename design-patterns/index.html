@@ -35,42 +35,93 @@
         Overview
     </h2>
     <p>
-        UI elements | UX shells | Navs | Form states
+        Attribute selectors | UI elements | UX shells | Navs | Form states | Angular
     </p>
     <article>
         <section>
             <h1>
-                There are 4 distinct design patterns when using Ambient.
+                Ambient goes beyond HTML sections as a presentation format with a library of design patterns.
             </h1>
             <h2>
                 Design patterns are built on Ambient's <a href="../examples/grid/index.html">base grid system</a> for HTML as a presentation format without the need for structure based classes
             </h2>
-            <p>
-                CSS attribute selectors do not care if it is a predefined or a custom namespace. <strong>And it's the key to unlocking this new approach</strong>.
-            </p>
-            <p>
-                We define custom namespaces for design patterns. To avoid collisions with other namespaces, we are prefixing design patterns with "am-".
-            </p>
             <h3>
                 Introduction
             </h3>
             <p>
-                Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. There are 4 distinct design patterns for layout.
+                Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values.
             </p>
-            <ol>
-                <li>
-                    UI elements
-                </li>
-                <li>
-                    UX Shells
-                </li>
-                <li>
-                    Navs
-                </li>
-                <li>
-                    Form states
-                </li>
-            </ol>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Attribute selectors
+        </h1>
+
+        <p>
+            It is possible to style HTML elements that have specific attributes, not just class and id.
+        </p>
+        <section>
+            <blockquote>
+                <h3>
+                    <code>&lt;form am-formstate&gt; &lt;/form &gt;</code>
+                </h3>
+                <p>
+                    <code>[am-formstate] //css }</code>
+                </p>
+            </blockquote>
+            <p>
+                Because we define our own namespace (am-formstate), we can define a design pattern for this <code>&lt;form&gt;</code> <strong>without needing to use or duplicate class names for structure.</strong>
+            </p>
+            <p>
+                By defining our own namespace, we are able to separate styles into components that are common to all attributes & values within this design pattern.
+            </p>
+            <blockquote>
+                <p>
+                    <code>[am-formstate~="value"] { //css }</code>
+                </p>
+            </blockquote>
+            <p>
+                The name space "am-formstate" defines a design pattern common to all forms, while also defining an individual component without needing to use or duplicate class names for structure.
+            </p>
+        </section>
+        <section>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
+                <h1>Summary</h1>
+                <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
+                <dl>
+                    <dt>
+                        <code>[<em>attr</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr.</dd>
+                    <dt>
+                        <code>[<em>attr</em>=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is exactly "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>~=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>|=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-” (U+002D). It can be used for language subcode matches.</dd>
+                    <dt>
+                        <code>[<em>attr</em>^=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is prefixed by "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>$=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value is suffixed by "value".</dd>
+                    <dt>
+                        <code>[<em>attr</em>*=<em>value</em>]</code></dt>
+                    <dd>
+                        Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
+                </dl>
+            </blockquote>
         </section>
     </article>
     <hr />
@@ -635,6 +686,52 @@
 
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Angular
+        </h1>
+        <h2>
+            By defining our own namespace for a design pattern, we are able to combine custom attributes + custom directive names.
+        </h2>
+        <section>
+            <blockquote>
+                <h3>
+                    <code>&lt;article foobar&gt; &lt;/article &gt;</code>
+                </h3>
+                <p>
+                    <code>[foobar] { //css }</code>
+                </p>
+            </blockquote>
+            <p>
+                We can use the directive name as the attribute selector for the custom design pattern. Now, when we use the angularJS directive "foobar" it will:
+            </p>
+            <ol>
+                <li>inherit the ambient base grid system for <code>&lt;article&gt;</code></li>
+                <li>apply its own design pattern  <code>[foobar] { //css }</code></li>
+                <li>apply any contextual overrides  <code>&lt;article foobar="value"&gt; &lt;/article &gt;</code> as individual design components (values) <code>[foobar~="value"] { //css }</code></li>
+            </ol>
+            <p>
+                All without needing to use or duplicate class names for structure.
+            </p>
+        </section>
+        <section>
+            <blockquote>
+                <h1>A Basic Directive</h1>
+                <pre>
+.directive('foobar', function() {
+var obj = {
+restrict: 'AC',
+templateUrl: 'partials/foobar.html'
+}
+return obj;
+});
+                </pre>
+                </code>
+            </blockquote>
         </section>
     </article>
     <hr />
