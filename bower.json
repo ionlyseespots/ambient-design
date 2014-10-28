@@ -1,6 +1,6 @@
 {
   "name": "ambient",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ambient design is a methodology for creating layout.",
   "main": [
     "dist/css/ambient.css",

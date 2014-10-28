@@ -6,11 +6,11 @@ Our goal is to deliver a lean, lightweight base grid system for HTML as a presen
 
 We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
 
-> Please note that using Ambient Design requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
+> Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
 ## Demo
 
-To see Ambient in action, view the base grid system: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
+To see Ambient in action, view grid examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
 
 ## Quick Start
 
@@ -25,9 +25,9 @@ Ambient is about using HTML to convey structure in a consistent grid system. Des
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
-* Base grid system: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
+* Grid examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
-* CSS: http://ionlyseespots.github.io/ambient-design/layout/index.html
+* Grid System: http://ionlyseespots.github.io/ambient-design/layout/index.html
 * Design patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
 
 ## Usage

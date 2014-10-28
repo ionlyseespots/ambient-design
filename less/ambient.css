@@ -423,6 +423,7 @@ body > article {
   margin: auto;
   width: auto;
 }
+main,
 header,
 nav,
 footer,
@@ -656,30 +657,30 @@ input {
     width: 100%;
   }
 }
-/**
+/**dd
 * landing page shell
 */
-[data-ambientuxshell="landingpage"] {
+[am-uxshell="landingpage"] {
   min-height: 12%;
   position: absolute;
   top: 87%;
   z-index: 2;
   background-color: inherit;
 }
-[data-ambientuxshell~="landingpage"] h1 {
+[am-uxshell~="landingpage"] h1 {
   margin: 2vw 0;
 }
-[data-ambientuxshell~="landingpage"] nav {
+[am-uxshell~="landingpage"] nav {
   background-color: #fff;
 }
-[data-ambientuxshell~="landingpage"] article {
+[am-uxshell~="landingpage"] article {
   padding-top: 2vw;
 }
-[data-ambientuxshell~="landingpage"] footer {
+[am-uxshell~="landingpage"] footer {
   padding: 2vw 0;
   margin-top: 2vw;
 }
-[data-ambientuxshell="landingpage splash"] {
+[am-uxshell="landingpage splash"] {
   height: 88%;
   left: 0;
   overflow: hidden;
@@ -688,7 +689,7 @@ input {
   justify-content: center;
   z-index: 1;
 }
-[data-ambientuxshell~="splash"] h1 {
+[am-uxshell~="splash"] h1 {
   border: 3px solid white;
   border-radius: 5px;
   padding: 2vw 3vw;
@@ -738,35 +739,32 @@ input {
 * Aligned
 */
 [am-formstate~="aligned"] > span {
-  display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-flex;
   display: -ms-flexbox;
+  display: -ms-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: justify;
+  -moz-justify-content: justify;
+  -ms-justify-content: justify;
+  justify-content: justify;
   width: 100%;
 }
 [am-formstate~="aligned"] > span input,
 [am-formstate~="aligned"] > span select,
 [am-formstate~="aligned"] > span textarea {
-  -webkit-box-flex: 1;
   -webkit-flex: 1;
+  -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 [am-formstate~="aligned"] > span label {
-  -webkit-box-flex: 1;
   -webkit-flex: 1;
+  -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
@@ -774,22 +772,19 @@ input {
 * Multi-column
 */
 [am-formstate~="multicolumn"] {
-  display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-flex;
   display: -ms-flexbox;
+  display: -ms-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 [am-formstate~="multicolumn"] > div {
-  -webkit-box-flex: 1;
   -webkit-flex: 1;
+  -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
@@ -996,6 +991,15 @@ hr {
 }
 .text-capitalize {
   text-transform: capitalize;
+}
+.text-padding-small {
+  padding: 1vw;
+}
+.text-padding-medium {
+  padding: 2vw;
+}
+.text-padding-large {
+  padding: 3vw;
 }
 .btn {
   -moz-user-select: none;
