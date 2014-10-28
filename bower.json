@@ -32,8 +32,5 @@
     "examples",
     "less",
     "index.html"
-  ],
-  "dependencies": {
-    "normalize.less": "~1.0.0"
-  }
+  ]
 }
