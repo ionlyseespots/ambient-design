@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
 
-Our goal is to deliver a lean, lightweight base grid system for HTML to convey structure in a consistent grid system without the need for structure based classes, while also maintaining a separation from presentation that adapts across different devices. 
+Our goal is to deliver a lean, lightweight base grid system for HTML as a presentation format, while also maintaining a separation from content that adapts across different devices.
 
 We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
 
@@ -38,6 +38,8 @@ Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambie
 
 Ambient grid system is a methodology for creating layout.
 
-To do that, I believe markup needs to become the presentation. Or more specifically, presentation structure. While presentation changes (design patterns) can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
+This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
 
-Ambient is about using HTML to convey structure in a consistent grid system.. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
+
+Ambient makes use HTML to convey structure in a consistent base grid system, without the need for structure based classes. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.

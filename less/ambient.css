@@ -148,6 +148,183 @@ footer {
     position: static;
   }
 }
+/**
+* multi-column shell [holy grail]
+*/
+[am-multicolumn] > section:first-of-type {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  order: 1;
+  -webkit-order: 1;
+  -moz-order: 1;
+  -ms-order: 1;
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
+[am-multicolumn] section:first-of-type aside:last-of-type {
+  order: -1;
+  -webkit-order: -1;
+  -moz-order: -1;
+  -ms-order: -1;
+}
+[am-multicolumn] {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+}
+/**
+* panel shell
+*/
+[am-leftpanel] nav {
+  flex-direction: column;
+  flex-flow: column;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+[am-leftpanel] > section:last-of-type header {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+[am-leftpanel] > section:last-of-type {
+  flex: 4;
+  -webkit-flex: 4;
+  -moz-flex: 4;
+  -ms-flex: 4;
+}
+[am-leftpanel] nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+[am-leftpanel] nav ul li {
+  transition: background 0.3s ease 0s;
+}
+[am-leftpanel] nav ul li:hover {
+  background: #eee;
+}
+[am-leftpanel] nav ul li:hover a {
+  color: #000033;
+}
+[am-leftpanel] nav ul li.active {
+  box-shadow: inset -6px 0 0 #e86f56;
+}
+[am-leftpanel] nav ul li.active a {
+  color: #3e3e3e;
+}
+[am-leftpanel] nav ul li a {
+  color: #9f9f9f;
+  padding: 1vw;
+  text-decoration: none;
+  width: 100%;
+}
+[am-leftpanel] li.active a i,
+[am-leftpanel] li.active:hover a i {
+  color: #e86f56;
+}
+@media (orientation: portrait) {
+  [am-leftpanel] > nav:first-child ul li:first-child {
+    width: 100%;
+  }
+  [am-leftpanel] nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  [am-leftpanel] nav ul li {
+    -webkit-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    transition: background 0.3s ease 0s;
+  }
+  [am-leftpanel] nav ul li.active {
+    box-shadow: none;
+  }
+  [am-leftpanel] nav ul li a {
+    padding: 2vw 0;
+  }
+  [am-leftpanel] nav ul li.active a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0;
+    margin-left: -7px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #7a706e;
+    z-index: 1;
+  }
+  [am-leftpanel] > section:last-of-type header {
+    padding: 2vw 0;
+  }
+  .panel-info {
+    width: 100%;
+  }
+}
+/**
+* landing page shell
+*/
+[data-ambientuxshell="landingpage"] {
+  min-height: 12%;
+  position: absolute;
+  top: 87%;
+  z-index: 2;
+  background-color: inherit;
+}
+[data-ambientuxshell~="landingpage"] h1 {
+  margin: 2vw 0;
+}
+[data-ambientuxshell~="landingpage"] nav {
+  background-color: #fff;
+}
+[data-ambientuxshell~="landingpage"] article {
+  padding-top: 2vw;
+}
+[data-ambientuxshell~="landingpage"] footer {
+  padding: 2vw 0;
+  margin-top: 2vw;
+}
+[data-ambientuxshell="landingpage splash"] {
+  height: 88%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  z-index: 1;
+}
+[data-ambientuxshell~="splash"] h1 {
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 2vw 3vw;
+}
 /* form States */
 /**
 * <fieldset> is a  replaced element and does not currently allow you to change its display with CSS

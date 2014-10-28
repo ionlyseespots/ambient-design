@@ -8,9 +8,66 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title></title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../../dist/css/ambient.css">
-    <link rel="stylesheet" href="../../dist/css/design-patterns.css">
-    <script src="../../dist/js/prefixfree.js"></script>
+    <link rel="stylesheet" href="../../dist/css/ambient.min.css">
+    <style>
+        /**
+* Admin basic style, this is a UX shell and needs some TLC
+*/
+        .user-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #fff;
+            overflow: hidden;
+            border: 3px solid #fff;
+            margin-right: 1vw;
+            float: left; }
+        .user-img img {
+            max-width: 97px;
+            margin-top: -19px;
+            margin-left: -22px; }
+        .panel-tabs {
+            float: left;
+            list-style: none;
+            text-align: center;
+            margin: 0; }
+        .panel-tabs li {
+            position: relative;
+            float: left; }
+        .panel-tabs li.active a, .panel-tabs li.active:hover a {
+            color: #3e3e3e; cursor: default; }
+        .panel-tabs li.active a i, .panel-tabs li.active:hover a i {
+            color:#e86f56; }
+        .panel-tabs li.active:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            margin-left: -7px;
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 9px solid #7a706e;
+            z-index: 1; }
+        .panel-tabs li:hover a, .panel-tabs li:hover a i {
+            color: #3e3e3e;  }
+        .panel-tabs li a {
+            color: #9f9f9f;
+            padding: .5vw 1.5vw;
+            transition:color 0.3s; }
+        .panel-tabs li i {
+            font-size: 3vmin;
+            margin-bottom: .5vw;
+            color: #b5adac;
+            transition:color 0.3s; }
+        .panel-info h1 {
+            margin-top: .5vw;
+            color: #3e3e3e; }
+        .panel-info {
+            float: left;
+            margin: 0 2vw; }
+    </style>
 </head>
 <body>
 <header>
@@ -32,7 +89,7 @@
 <hr />
 
 <main role="main">
-    <article ambientleftpanel>
+    <article am-leftpanel>
         <nav>
             <ul>
                 <li class="active">

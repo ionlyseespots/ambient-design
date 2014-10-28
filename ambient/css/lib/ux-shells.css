@@ -1,7 +1,7 @@
 /**
 * multi-column shell [holy grail]
 */
-[ambientmulticolumn] > section:first-of-type {
+[am-multicolumn] > section:first-of-type {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -15,12 +15,12 @@
     -moz-flex: 1 auto;
     -ms-flex: 1 auto;
     flex: 1 auto; }
-[ambientmulticolumn] section:first-of-type aside:last-of-type {
+[am-multicolumn] section:first-of-type aside:last-of-type {
     order:-1;
     -webkit-order: -1;
     -moz-order: -1;
     -ms-order: -1; }
-[ambientmulticolumn] {
+[am-multicolumn] {
     flex-direction: column;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -29,7 +29,7 @@
 /**
 * panel shell
 */
-[ambientleftpanel] nav {
+[am-leftpanel] nav {
     flex-direction: column;
     flex-flow: column;
     -webkit-flex-flow: column;
