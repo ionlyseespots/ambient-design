@@ -2,12 +2,16 @@
 // --------------------------------------------------
 @import "core/variables";
 
-// GRid
+// Reset and dependencies
+@import "../bower_components/normalize.less/normalize.less";
+@import "mixins/flexbox";
+
+// Grid
 // Ambient base grid system
 @import "core/grid";
 
 // Design Patterns
-// Library of patterns to structure your content
+// Design patterns to structure your content
 @import "core/mixins/ui-elements";
 @import "core/mixins/ux-shells";
 @import "core/mixins/navs";
@@ -20,6 +24,3 @@
 // Utilities
 // Small collection of utility classes for your content
 @import "core/utility";
-
-// Vendor
-@import "mixins/flexbox";

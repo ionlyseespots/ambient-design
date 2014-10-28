@@ -58,6 +58,17 @@ article > nav a {
   -ms-flex: 1;
   flex: 1;
 }
+body > article {
+  /**
+  * center the content horizontally and vertically in first article not in main
+  */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+}
 header,
 nav,
 footer,
@@ -132,6 +143,9 @@ footer {
   -moz-order: 2;
   -ms-order: 2;
   order: 2;
+}
+input {
+  max-width: 100%;
 }
 @media (orientation: portrait) {
   article,
@@ -357,9 +371,6 @@ footer {
 [am-formstate] label input {
   width: auto;
 }
-input {
-  max-width: 100%;
-}
 /**
 * Stacked
 */
@@ -489,17 +500,6 @@ article > nav a {
 }
 body > header nav {
   max-height: 65px;
-}
-body > article {
-  /**
-  * center content in first article not in main
-  */
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: auto;
-  width: auto;
 }
 h1,
 h2,

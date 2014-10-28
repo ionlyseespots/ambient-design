@@ -23,14 +23,17 @@
     "**/.*",
     "node_modules",
     "bower_components",
-      "admin-shell",
-      "ambient",
-      "assets",
-      "layout",
-      "design-patterns",
-      "docs",
-      "examples",
-      "less",
-      "index.html"
-  ]
+    "admin-shell",
+    "ambient",
+    "assets",
+    "layout",
+    "design-patterns",
+    "docs",
+    "examples",
+    "less",
+    "index.html"
+  ],
+  "dependencies": {
+    "normalize.less": "~1.0.0"
+  }
 }
