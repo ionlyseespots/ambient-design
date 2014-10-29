@@ -1,7 +1,7 @@
 /* form States */
 /**
-* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS
-* <input> is a replaced element and does not allow ::psuedo CSS
+* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
+* <input> is a replaced element and does not allow ::psuedo CSS so pre/post icons are prescribed with label + input design pattern
 */
 
 [am-formstate] input, [am-formstate] select, [am-formstate] textarea {
@@ -22,16 +22,17 @@
 
 [am-formstate] label {
   display: inline-block;
-  max-width: 100%; }
-
-[am-formstate] label input {
-  width: auto; }
+  & input {
+    width: auto; }
+ }
 
 /**
 * Stacked
 */
-[am-formstate~="stacked"] input, [am-formstate~="stacked"] select, [am-formstate~="stacked"] textarea,  [am-formstate~="stacked"] label {
-  width: 100%; }
+[am-formstate~="stacked"] {
+  & input, & select, & textarea, & label {
+    width: 100%; }
+}
 
 /**
 * Aligned
@@ -40,26 +41,22 @@
   .flex-display;
   .flex-flow(row wrap);
   .justify-content(justify);
-  width: 100%; }
-
-[am-formstate~="aligned"] > span input, [am-formstate~="aligned"] > span select, [am-formstate~="aligned"] > span textarea {
-  .flex(1); }
-
-[am-formstate~="aligned"] > span label {
-  .flex(1); }
+  width: 100%;
+  & label,  & input, & select, & textarea {
+    .flex(1 .01%); }
+}
 
 /**
 * Multi-column
 */
 [am-formstate~="multicolumn"]  {
   .flex-display;
-  .flex-flow(row wrap); }
-
-[am-formstate~="multicolumn"] > div  {
-  .flex(1); }
-
-[am-formstate~="multicolumn"] input, [am-formstate~="multicolumn"] select, [am-formstate~="multicolumn"] textarea, [am-formstate~="multicolumn"] label {
-  width: 100%; }
+  .flex-flow(row wrap);
+  & input, select, textarea, label {
+    width: 100%; }
+  & > div  {
+    .flex(1 .01%); }
+}
 
 /**
 * Iconography

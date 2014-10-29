@@ -377,45 +377,10 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-header {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-body > header nav {
-    height: auto;
-}
-body > nav,
-header > nav,
-article > nav {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-body > nav a,
-header nav a,
-article > nav a {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
 body > article {
     /**
-    * center the content horizontally and vertically in first article not in main
-    */
+      * center the content in first article not in main horizontally and vertically
+      */
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
@@ -435,28 +400,49 @@ h5,
 h6,
 hr,
 p {
+    /**
+    * column (section) clearing
+    */
     width: 100%;
-    word-wrap: break-word;
 }
-header,
-nav,
-main,
-article,
-section,
-footer,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-hr {
-    padding: .01vw;
-    max-width: 100%;
+header {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+nav a {
+    -webkit-flex: 1 0.01%;
+    -moz-flex: 1 0.01%;
+    -ms-flex: 1 0.01%;
+    flex: 1 0.01%;
+}
+main {
+    -webkit-flex: 1 0 auto;
+    -moz-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 article {
+    /**
+   * row
+   */
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -467,40 +453,34 @@ article {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     /**
-    * preemptive strike on absolute positioning
+    * help content on absolute positioning
     */
     position: relative;
 }
 section {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
     /**
-    * preemptive strike on absolute positioning
+   * column
+   */
+    -webkit-flex: 1 0.01%;
+    -moz-flex: 1 0.01%;
+    -ms-flex: 1 0.01%;
+    flex: 1 0.01%;
+    /**
+    * help content on absolute positioning
     */
     position: relative;
 }
 aside {
-    -webkit-flex: 0 0 20vw;
-    -moz-flex: 0 0 20vw;
-    -ms-flex: 0 0 20vw;
-    flex: 0 0 20vw;
-}
-main {
-    -webkit-flex: 1 0 auto;
-    -moz-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    -webkit-flex: 0 0 20%;
+    -moz-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
 }
 footer {
     -webkit-order: 2;
     -moz-order: 2;
     -ms-order: 2;
     order: 2;
-}
-input {
-    max-width: 100%;
 }
 @media (orientation: portrait) {
     article,
@@ -672,6 +652,7 @@ input {
 }
 [am-uxshell~="landingpage"] nav {
     background-color: #fff;
+    height: 5vw;
 }
 [am-uxshell~="landingpage"] article {
     padding-top: 2vw;
@@ -696,8 +677,8 @@ input {
 }
 /* form States */
 /**
-* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS
-* <input> is a replaced element and does not allow ::psuedo CSS
+* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
+* <input> is a replaced element and does not allow ::psuedo CSS so pre/post icons are prescribed with label + input design pattern
 */
 [am-formstate] input,
 [am-formstate] select,
@@ -721,7 +702,6 @@ input {
 }
 [am-formstate] label {
     display: inline-block;
-    max-width: 100%;
 }
 [am-formstate] label input {
     width: auto;
@@ -754,19 +734,14 @@ input {
     justify-content: justify;
     width: 100%;
 }
+[am-formstate~="aligned"] > span label,
 [am-formstate~="aligned"] > span input,
 [am-formstate~="aligned"] > span select,
 [am-formstate~="aligned"] > span textarea {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-[am-formstate~="aligned"] > span label {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 0.01%;
+    -moz-flex: 1 0.01%;
+    -ms-flex: 1 0.01%;
+    flex: 1 0.01%;
 }
 /**
 * Multi-column
@@ -782,17 +757,17 @@ input {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-[am-formstate~="multicolumn"] > div {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
 [am-formstate~="multicolumn"] input,
 [am-formstate~="multicolumn"] select,
 [am-formstate~="multicolumn"] textarea,
 [am-formstate~="multicolumn"] label {
     width: 100%;
+}
+[am-formstate~="multicolumn"] > div {
+    -webkit-flex: 1 0.01%;
+    -moz-flex: 1 0.01%;
+    -ms-flex: 1 0.01%;
+    flex: 1 0.01%;
 }
 /**
 * Iconography
@@ -847,7 +822,7 @@ article > nav a {
     padding: 1vw;
 }
 body > header nav {
-    max-height: 65px;
+    min-height: 65px;
 }
 h1,
 h2,
@@ -950,19 +925,10 @@ textarea {
     line-height: inherit;
 }
 hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
     border-color: rgba(0, 0, 0, 0.12);
-    border-style: solid none none;
     border-width: 1px 0 0;
-    box-sizing: content-box;
-    height: 0;
-    border-image: none;
     margin-bottom: 0;
     margin-top: 0;
-    clear: both;
 }
 /**
 * vertical rule

@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>CSS documentation for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -39,7 +39,7 @@
     </p>
     <article>
         <h1>
-            Ambient has a <a href="../examples/grid/index.html">base grid system</a> for HTML as a presentation format without the need for structure based classes.
+            Ambient has a <a href="../examples/grid/index.html">base grid system</a> for HTML elements as a presentation format without the need for structure based classes.
         </h1>
         <p>
             Ambient allows developers to focus on HTML to convey visual structure and designers can focus on design patterns for content.
@@ -86,11 +86,11 @@
                     <code>&lt;section&gt;</code>
                 </h3>
                 <p>
-                    <code>flex: 1;</code>
+                    <code>flex: 1 1 .01%;</code>
                 </p>
             </blockquote>
             <p>
-                <code>&lt;section&gt;</code> is a <strong>column</strong>.
+                <code>&lt;section&gt;</code> is a <strong>column</strong>. Multiple <code>&lt;section&gt;</code> elements will (flex) grow and (flex) shrink as dynamic columns.
             </p>
             <blockquote>
                 <h3>
@@ -104,10 +104,7 @@
                 <code>&lt;nav&gt;</code> is a <strong>row</strong>.
             </p>
             <p>
-                <code>&lt;body&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;a&gt;</code> displays inline-block and centered.
-            </p>
-            <p>
-                <code>&lt;article&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;a&gt;</code> displays inline-block and centered.
+                <code>&lt;nav&gt;</code> <code>&lt;a&gt;</code> displays evenly distributed, inline and centered.
             </p>
             <blockquote>
                 <h3>
@@ -125,7 +122,7 @@
                     <code>&lt;aside&gt;</code>
                 </h3>
                 <p>
-                    <code>flex: 0 0 20vw;</code>
+                    <code>flex: 0 0 20%;</code>
                 </p>
             </blockquote>
             <p>
@@ -137,7 +134,7 @@
                 </h3>
             </blockquote>
             <p>
-                <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code> are <strong>100% of content</strong>.
+                <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code> are width: <strong> 100% of content</strong>.
             </p>
             <blockquote>
                 <h3>
@@ -275,7 +272,7 @@
             To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
         </h3>
         <p>
-            Our goal is to deliver a lean, lightweight base grid system for HTML as a presentation format, while also maintaining a separation from content that adapts across different devices.
+            Our goal is to deliver a lean, lightweight base grid system for HTML elements as a presentation format, while also maintaining a separation from content that adapts across different devices.
             We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
         </p>
     </article>

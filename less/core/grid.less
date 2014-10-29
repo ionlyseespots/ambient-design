@@ -9,51 +9,57 @@ body {
   min-height: 100%;
   .flex-display;
   .flex-direction(column);
+  & > article  {
+    /**
+    * center the content in first article not in main horizontally and vertically
+    */
+    .align-items(center);
+    margin: auto;
+    width: auto; }
 }
+main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
+  /**
+  * column (section) clearing
+  */
+  width: 100%; }
 header {
   .flex-display;
-  .flex-flow(row wrap); }
-body > header nav {
-  height: auto; }
-body > nav, header > nav, article > nav {
+  .flex-flow(row wrap);
+}
+nav {
   .flex-display;
-  .flex-flow(row wrap); }
-body > nav a, header nav a, article > nav a {
-  .flex(1); }
-body > article  {
-  /**
-  * center the content horizontally and vertically in first article not in main
-  */
-  .align-items(center);
-  margin: auto;
-  width: auto; }
-main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
-  width: 100%;
-  word-wrap:break-word; }
-header, nav, main, article, section, footer, div, h1, h2, h3, h4, h5, h6, p, hr {
-  padding: .01vw;
-  max-width: 100%; }
+  .flex-flow(row wrap);
+  & a {
+    .flex(1 .01%);
+  }
+}
+main {
+  .flex(1 0 auto); }
 article {
+  /**
+ * row
+ */
   .flex-display;
   .flex-flow(row wrap);
   /**
-  * preemptive strike on absolute positioning
+  * help content on absolute positioning
   */
-  position: relative; }
+  position: relative;
+}
 section {
-  .flex(1);
   /**
-  * preemptive strike on absolute positioning
+ * column
+ */
+  .flex(1 .01%);
+  /**
+  * help content on absolute positioning
   */
   position: relative; }
 aside {
-  .flex(0 0 20vw);  }
-main {
-  .flex(@columns: 1 0 auto); }
+  .flex(0 0 20%);  }
 footer {
   .flex-order(2); }
-input {
-  max-width: 100%;}
+
 
 @media (orientation:portrait){
   article, section {
