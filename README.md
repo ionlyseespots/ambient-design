@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
 
-Our goal is to deliver a lean, lightweight base grid system for HTML as a presentation format, while also maintaining a separation from content that adapts across different devices.
+Our goal is to deliver a lean, lightweight base grid system for HTML elements as a presentation format, while also maintaining a separation from content that adapts across different devices.
 
 We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
 
