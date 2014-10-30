@@ -21,7 +21,8 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 ## Development
 
 This project is in early development.
-Ambient is about using HTML to convey structure in a consistent grid system. Design patterns are about defining namespaces for the HTML to live in.
+
+Ambient is about using HTML to convey structure in a consistent grid system. The base grid system is a CSS3 flexbox layout that is defined by HTML5 elements. Design patterns are about defining namespaces for the HTML to live in.
 It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
@@ -42,4 +43,4 @@ This system evolved out of the need to fully decouple markup (HTML) from present
 
 To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
 
-Ambient makes use HTML to convey structure in a consistent base grid system, without the need for structure based classes. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+Ambient makes use HTML to convey structure in a consistent base grid system, without the need for structure based classes. The base grid system is a CSS3 flexbox layout that is defined by HTML5 elements. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.

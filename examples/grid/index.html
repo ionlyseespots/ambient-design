@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Grid examples for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../../less/ambient.min.css">
 </head>
 <body am-grid>
 <header>
@@ -13,27 +13,13 @@
         <a href="../../index.html" title="index">Ambient</a> grid examples
     </h1>
     <h2>
-        Basic grid layouts to get you familiar with visualizing HTML as a presentation format within the Ambient base grid system.
+        Basic grid examples to get you familiar with visualizing HTML elements within the <a href="../../layout/index.html">base grid system</a>.
     </h2>
 </header>
 <hr />
 
-<nav>ss</nav>
 <main role="main">
-    <article>
-        <h1>
-            Full width, single column
-        </h1>
-        <p>
-            An <code>&lt;article&gt;</code> is full width and defines self-contained content that could exist independently of the rest of the content.
-        </p>
-        <section>
-            <p>
-                Alternatively, a single <code>&lt;section&gt;</code> inside an article is also full width and defines a section in the document.
-            </p>
-        </section>
-    </article>
-    <article>
+    <article am-grid>
         <h1>
             Three equal columns
         </h1>
@@ -41,7 +27,7 @@
             Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, equal grid columns default is <code>flex: 1;</code>. Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
+            Remember, equal grid columns default is <code>flex: 1 1 .01%;</code>. Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
         </p>
         <section>
             <p class="text-center">
@@ -58,9 +44,29 @@
                 1/3
             </p>
         </section>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
+        </footer>
     </article>
-
-    <article>
+    <article am-grid>
         <h1>
             Three unequal columns
         </h1>
@@ -80,16 +86,36 @@
                 1/2
             </p>
         </section>
-       <aside class="text-center">
+        <aside class="text-center">
             <p>
                 1/4
             </p>
-       </aside>
+        </aside>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;aside&gt;
+        &lt;p class="text-center"&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            1/2
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+        &lt;p class="text-center"&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/article&gt;
+            </code></pre>
+        </footer>
     </article>
-
-    <article>
+    <article am-grid>
         <h1>
-            Two unequal columns with main section of content on the left
+            Two unequal columns with content on the left
         </h1>
         <p>
             Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
@@ -107,12 +133,26 @@
                 1/4
             </p>
         </aside>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            3/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+        &lt;p class="text-center"&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/article&gt;
+            </code></pre>
+        </footer>
     </article>
-    <hr>
-
-    <article>
+    <article am-grid>
         <h1>
-            Two unequal columns with main section of content on the right
+            Two unequal columns with content on the right
         </h1>
         <p>
             Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
@@ -130,10 +170,50 @@
                 3/4
             </p>
         </section>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;aside&gt;
+        &lt;p class="text-center"&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;section&gt;
+        &lt;p class="text-center"&gt;
+            3/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </code></pre>
+        </footer>
+    </article>
+    <article am-grid>
+        <h1>
+            Full width, single column
+        </h1>
+        <p>
+            An <code>&lt;article&gt;</code> displays full width by default and defines self-contained content that could exist independently of the rest of the content.
+        </p>
+        <section>
+            <p>
+                Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
+            </p>
+        </section>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </code></pre>
+        </footer>
     </article>
     <hr>
 
-    <article>
+    <article am-grid>
         <h1>
             Two equal columns with two nested equal columns
         </h1>
@@ -155,17 +235,17 @@
                     Nested Article H1
                 </h1>
                 <section>
-                    <h2>
+                    <h1>
                         Nested Section H1
-                    </h2>
+                    </h1>
                     <p>
                         1/2
                     </p>
                 </section>
                 <section>
-                    <h2>
+                    <h1>
                         Nested Section H1
-                    </h2>
+                    </h1>
                     <p>
                         1/2
                     </p>
@@ -180,8 +260,52 @@
                 1/2
             </p>
         </section>
+        <footer>
+            <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Section H1
+        &lt;/h1&gt;
+        &lt;p&gt;
+            1/2
+        &lt;/p&gt;
+        &lt;article&gt;
+            &lt;h1&gt;
+                Nested Article H1
+            &lt;/h1&gt;
+                &lt;section&gt;
+                    &lt;h1&gt;
+                        Nested Section H1
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        1/2
+                    &lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                    &lt;h1&gt;
+                        Nested Section H1
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        1/2
+                    &lt;/p&gt;
+                &lt;/section&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Section H1
+        &lt;/h1&gt;
+        &lt;p&gt;
+            1/2
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </code></pre>
+        </footer>
     </article>
     <hr>
+
     <article>
         <h1>
             Orientation: Portrait and Landscape.
@@ -197,7 +321,7 @@
             Column clearing
         </h1>
         <p>
-            Clearing makes use of <code>hr</code> as well as <code>header, footer, nav, h1, h2, h3, h4, h5, h6, p</code> elements.
+            Clearing a <code>&lt;section&gt;</code> makes use of <code>hr</code> as well as <code>header, footer, nav, h1, h2, h3, h4, h5, h6, p</code> elements.
         </p>
         <blockquote>
             <p>
@@ -222,7 +346,7 @@
     </article>
     <hr>
 
-    <article>
+    <article am-grid>
         <h1>
             Example columns
         </h1>
@@ -231,11 +355,20 @@
         </h2>
         <section>
             <P>
-                100%
+                Full width
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            Full width
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
         <h2>
-            2 equal column
+            2 equal columns
         </h2>
         <section>
             <P>
@@ -247,8 +380,22 @@
                 1/2
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/2
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/2
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
         <h2>
-            3 equal column
+            3 equal columns
         </h2>
         <section>
             <P>
@@ -265,8 +412,27 @@
                 1/3
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/3
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
         <h2>
-            4 equal column
+            4 equal columns
         </h2>
         <section>
             <P>
@@ -288,8 +454,32 @@
                 1/4
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/4
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
         <h2>
-            5 equal column
+            5 equal columns
         </h2>
         <section>
             <P>
@@ -316,8 +506,37 @@
                 1/5
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/5
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/5
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/5
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/5
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/5
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
         <h2>
-            6 equal column
+            6 equal columns
         </h2>
         <section>
             <P>
@@ -349,24 +568,63 @@
                 1/6
             </P>
         </section>
+        <pre><code>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1/6
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+        </code></pre>
     </article>
     <hr />
-
-    <article>
-        <h1>
-            Offset columns
-        </h1>
-        <p>
-            Individual sizing makes use of design patterns (with flexible box properties) and <code>width, min-width, max-width</code> properties.
-        </p>
-        <p>
-            Alternatively, individual <code>&lt;div&gt;</code> elements can be offset relative to the parent container.
-        </p>
-    </article>
 </main>
 <footer class="text-center">
     <p>
-        View the source of this Ambient example to learn more.
+        Ambient makes use HTML to convey structure in a consistent base grid system, without the need for structure based classes.
+    </p>
+    <p>
+        Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+    </p>
+    <p>
+        <small>
+            This site is built with Ambient v1.1.1
+        </small>
+    </p>
+    <p>
+        <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
+        &middot;
+        <a href="docs/index.html">Examples</a>
+        &middot;
+        <a href="docs/index.html">v1 docs</a>
+        &middot;
+        <a href="#">About</a>
     </p>
 </footer>
 </body>
