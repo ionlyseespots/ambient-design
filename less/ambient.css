@@ -804,24 +804,18 @@ body {
   font-size: 14px;
   line-height: 1.42857;
 }
-body > nav a:hover,
-header nav a:hover,
-article > nav a:hover {
+nav a:hover {
   background-color: #eee;
 }
-body nav a.active,
-header nav a:active,
-article > nav a:active {
+nav a:active {
   background-color: #eee;
 }
-body > nav a,
-header nav a,
-article > nav a {
+nav a {
   text-align: center;
   transition: background 0.3s ease 0s;
   padding: 1vw;
 }
-body > header nav {
+nav {
   min-height: 65px;
 }
 h1,

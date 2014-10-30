@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Design patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -63,31 +63,20 @@
         <p>
             It is possible to style HTML elements that have specific attributes, not just class and id.
         </p>
-        <section>
+        <section class="text-padding-small">
             <blockquote>
-                <h3>
-                    <code>&lt;form am-formstate&gt; &lt;/form &gt;</code>
-                </h3>
+                <h1>
+                    We define our own namespace
+                </h1>
                 <p>
-                    <code>[am-formstate] //css }</code>
+                    <code>am-</code>
                 </p>
             </blockquote>
             <p>
-                Because we define our own namespace (am-formstate), we can define a design pattern for this <code>&lt;form&gt;</code> <strong>without needing to use or duplicate class names for structure.</strong>
-            </p>
-            <p>
-                By defining our own namespace, we are able to separate styles into components that are common to all attributes & values within this design pattern.
-            </p>
-            <blockquote>
-                <p>
-                    <code>[am-formstate~="value"] { //css }</code>
-                </p>
-            </blockquote>
-            <p>
-                The name space "am-formstate" defines a design pattern common to all forms, while also defining an individual component without needing to use or duplicate class names for structure.
+                Because we define our own custom attribute, we can prescribe design patterns <strong>without needing to use or duplicate class names for structure.</strong> Content can be changed without any need for structural change beyond the base grid system.
             </p>
         </section>
-        <section>
+        <section class="text-padding-small">
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
                 <h1>Summary</h1>
                 <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
@@ -151,8 +140,32 @@
             Navs
         </h1>
         <p>
-
+            To create a nav with the base nav design pattern, add anchor elements inside the nav element.
         </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Example nav
+                </h1>
+                <p>
+                    <code>&lt;nav&gt;</code>
+                </p>
+            </blockquote>
+            <nav>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;nav&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
     </article>
     <hr />
 
@@ -204,7 +217,7 @@
             Inline form
         </h2>
         <p>
-            To create a default inline form with the base form state design pattern, add the attribute <code>am-formstate</code> to any form.
+            To create an inline form with the base form state design pattern, add the attribute <code>am-formstate</code> to any form.
         </p>
         <section class="text-padding-small">
             <blockquote>
