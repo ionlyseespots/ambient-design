@@ -161,23 +161,6 @@
             Form states
         </h1>
         <section class="text-padding-small">
-            <pre>
-&lt;form&gt;
-    &lt;label for="example-email"&gt;Email&lt;/label&gt;
-    &lt;input id="example-email" type="email" placeholder="Email"&gt;
-
-    &lt;label for="example-password"&gt;Password&lt;/label&gt;
-    &lt;input id="example-password" type="password" placeholder="Password"&gt;
-
-    &lt;label for="example-remember"&gt;
-        &lt;input id="example-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;
-            </pre>
-        </section>
-        <section class="text-padding-small">
             <blockquote>
                 <h1>
                     Example form
@@ -200,29 +183,29 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form&gt;
+    &lt;label for="example-email"&gt;Email&lt;/label&gt;
+    &lt;input id="example-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="example-password"&gt;Password&lt;/label&gt;
+    &lt;input id="example-password" type="password" placeholder="Password"&gt;
+
+    &lt;label for="example-remember"&gt;
+        &lt;input id="example-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
         <h2>
             Inline form
         </h2>
         <p>
             To create a default inline form with the base form state design pattern, add the attribute <code>am-formstate</code> to any form.
         </p>
-        <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate&gt;
-    &lt;label for="inline-email"&gt;Email&lt;/label&gt;
-    &lt;input id="inline-email" type="email" placeholder="Email"&gt;
-
-    &lt;label for="inline-password"&gt;Password&lt;/label&gt;
-    &lt;input id="inline-password" type="password" placeholder="Password"&gt;
-
-    &lt;label for="inline-remember"&gt;
-        &lt;input id="inline-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -246,6 +229,23 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form am-formstate&gt;
+    &lt;label for="inline-email"&gt;Email&lt;/label&gt;
+    &lt;input id="inline-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="inline-password"&gt;Password&lt;/label&gt;
+    &lt;input id="inline-password" type="password" placeholder="Password"&gt;
+
+    &lt;label for="inline-remember"&gt;
+        &lt;input id="inline-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
         <h2>
             Stacked form
         </h2>
@@ -255,23 +255,6 @@
         <p>
             Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential design pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
         </p>
-        <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate="stacked"&gt;
-    &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
-    &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
-
-    &lt;label for="stacked-password" am-posticon="unicode"&gt;Password&lt;/label&gt;
-    &lt;input id="stacked-password" type="password" placeholder="Password"&gt;
-
-    &lt;label for="stacked-remember"&gt;
-        &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;                
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -304,6 +287,23 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form am-formstate="stacked"&gt;
+    &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
+    &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="stacked-password" am-posticon="unicode"&gt;Password&lt;/label&gt;
+    &lt;input id="stacked-password" type="password" placeholder="Password"&gt;
+
+    &lt;label for="stacked-remember"&gt;
+        &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
         <h2>
             Aligned form
         </h2>
@@ -313,26 +313,6 @@
         <p>
             Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
         </p>
-        <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate="aligned"&gt;
-    &lt;span&gt;
-        &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
-    &lt;span&gt;
-        &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
-    &lt;span&gt;
-        &lt;label for="aligned-remember"&gt;
-            &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
-        &lt;/label&gt;
-    &lt;/span&gt;
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;                
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -359,6 +339,26 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form am-formstate="aligned"&gt;
+    &lt;span&gt;
+        &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
+        &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+        &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
+        &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+        &lt;label for="aligned-remember"&gt;
+            &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
+        &lt;/label&gt;
+    &lt;/span&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
         <h2>
             Multi-column form
         </h2>
@@ -368,38 +368,6 @@
         <p>
             Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
         </p>
-        <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate="multicolumn"&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
-
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
-
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
-
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-    &lt;label for="multicolumn-remember"&gt;
-        &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -438,6 +406,38 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form am-formstate="multicolumn"&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;label for="multicolumn-remember"&gt;
+        &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
     </article>
     <hr />
 
@@ -451,31 +451,6 @@
         <h2>
             Stacked + Aligned form
         </h2>
-        <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate="stacked aligned"&gt;
-    &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
-
-    &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
-
-     &lt;span&gt;
-        &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
-    &lt;span&gt;
-        &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
-    &lt;label for="stacked-aligned-remember"&gt;
-        &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-
-    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -507,48 +482,34 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
-        <h2>
-            Multi-column + Stacked form
-        </h2>
         <section class="text-padding-small">
-            <pre>
-&lt;form am-formstate="multicolumn stacked"&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+            <pre><code>
+&lt;form am-formstate="stacked aligned"&gt;
+    &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+    &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
 
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
-
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
-
-    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
-
-    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-
-    &lt;label for="multicolumn-stacked-remember"&gt;
-        &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
+     &lt;span&gt;
+        &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
+        &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+        &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
+        &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/span&gt;
+    &lt;label for="stacked-aligned-remember"&gt;
+        &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;                
-            </pre>
+&lt;/form&gt;
+            </code></pre>
         </section>
+        <h2>
+            Multi-column + Stacked form
+        </h2>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -594,51 +555,48 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;form am-formstate="multicolumn stacked"&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+
+    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+
+    &lt;label for="multicolumn-stacked-remember"&gt;
+        &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
         <h2>
             Multi-column + Aligned form
         </h2>
-        <section class="text-padding-small">
-            <pre>
- &lt;form am-formstate="multicolumn aligned"&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
-
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
-
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
-
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
-
-    &lt;span&gt;
-        &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
-    &lt;span&gt;
-        &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
-
-     &lt;label for="multicolumn-aligned-remember"&gt;
-         &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
-     &lt;/label&gt;
-
-     &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
- &lt;/form&gt;               
-            </pre>
-        </section>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -686,6 +644,48 @@
 
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+ &lt;form am-formstate="multicolumn aligned"&gt;
+     &lt;div&gt;
+         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+
+         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+
+         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+
+         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+     &lt;/div&gt;
+
+    &lt;span&gt;
+        &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+        &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+        &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+        &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/span&gt;
+
+     &lt;label for="multicolumn-aligned-remember"&gt;
+         &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
+     &lt;/label&gt;
+
+     &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+ &lt;/form&gt;
+            </code></pre>
         </section>
     </article>
     <hr />
