@@ -1,5 +1,5 @@
 // Theme
-// Ambient base style
+// Ambient base styles
 body {
   background-color: #fff;
   color: #333;
@@ -10,14 +10,19 @@ nav a:hover {
 nav a:active {
   background-color:#eee; }
 nav a {
+  -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   text-align: center;
   transition: background 0.3s ease 0s;
-  padding: 1vw; }
+  padding: 1.5vw 1vw; }
 nav {
   min-height: 65px; }
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1vw;
-  margin-top: 1.5vw;
+  margin: 0;
+  padding-bottom: 1vw;
+  padding-top: 1.5vw;
   color: inherit;
   font-family: inherit;
   font-weight: 500; }
@@ -64,7 +69,7 @@ blockquote:before, blockquote:after {
   content: ""; }
 blockquote {
   border-left: 5px solid #eee;
-  margin: 0 0 20px;
+  margin: 20px 0;
   padding: 10px 20px;
   font-size: small; }
 pre {

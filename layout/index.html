@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>CSS documentation for Ambient</title>
+    <title>Semantic grid system documentation for Ambient</title>
     <!-- Ambient -->
     <link rel="stylesheet" href="../dist/css//ambient.min.css">
     <!-- website -->
@@ -39,7 +39,7 @@
     </p>
     <article>
         <h1>
-            Ambient has a base grid system for HTML elements as a presentation format without the need for layout classes.
+            Ambient has a semantic grid system for HTML elements.
         </h1>
         <p>
             Ambient allows developers to focus on HTML to convey visual structure and designers can focus on design patterns for content.
@@ -60,17 +60,16 @@
             Introduction
         </h3>
         <p>
-            Ambient makes use of HTML elements to convey structure in a consistent base grid system. The base grid system is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout that is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> elements.
+            Ambient makes use of HTML5 elements & CSS3 properties to convey structure in a consistent base grid system. The base grid system is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout that is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> elements.
             Here's how the base grid system works:
         </p>
-        <section class="text-padding-small">
-            <h1>
-                Ambient makes use of HTML5 elements & CSS3 properties.
-            </h1>
-            <p>
-                <i class="fa fa-html5"></i><i class="fa fa-css3"></i>
-            </p>
-
+        <section class="content-padding-small">
+        <h1>
+            <i class="fa fa-th"></i> Grid examples
+        </h1>
+        <p>
+            Basic grid examples to get you familiar with visualizing HTML elements within the base grid system.
+        </p>
             <article am-grid>
                 <h1>
                     Three equal columns
@@ -79,7 +78,7 @@
                     Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
-                    Remember, equal grid columns default is <code>flex: 1 1 .01%;</code>. Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
+                    Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
                 </p>
                 <section>
                     <p class="text-center">
@@ -673,7 +672,10 @@
                 </p>
             </article>
         </section>
-        <section class="text-padding-small">
+        <section class="content-padding-small">
+            <h1>
+                <i class="fa fa-html5"></i> HTML5
+            </h1>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
                 <h1>Sections</h1>
                 <table>
@@ -738,10 +740,13 @@
                     It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.
                 </p>
             </blockquote>
+            <h1>
+                <i class="fa fa-css3"></i> CSS3
+            </h1>
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;body&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>display: flex; flex-direction: column;</code>
                 </p>
@@ -749,10 +754,12 @@
             <p>
                 <code>&lt;body&gt;</code> enables a <strong>flex context</strong> for all its direct children.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;section&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>flex: 1 1 .01%;</code>
                 </p>
@@ -760,10 +767,12 @@
             <p>
                 <code>&lt;section&gt;</code> is a <strong>column</strong>. Multiple <code>&lt;section&gt;</code> elements will (flex) grow and (flex) shrink as evenly distributed columns.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;nav&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>display: flex; flex-flow: row wrap;</code>
                 </p>
@@ -774,10 +783,12 @@
             <p>
                 <code>&lt;nav&gt;</code> <code>&lt;a&gt;</code> displays evenly distributed, inline and centered.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;article&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>display: flex; flex-flow: row wrap;</code>
                 </p>
@@ -785,10 +796,12 @@
             <p>
                 <code>&lt;article&gt;</code> is a <strong>row</strong>.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;aside&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>flex: 0 0 20%;</code>
                 </p>
@@ -796,18 +809,22 @@
             <p>
                 <code>&lt;aside&gt;</code> is a <strong>column</strong> 20% of content.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code>
-                </h3>
+                </p>
             </blockquote>
             <p>
                 <code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code> are width: <strong> 100% of content</strong>.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;header&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code> display: flex; flex-flow: row wrap;</code>
                 </p>
@@ -815,10 +832,12 @@
             <p>
                 <code>&lt;header&gt;</code> is a <strong>row</strong>.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;footer&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>order: 2;</code>
                 </p>
@@ -829,18 +848,12 @@
             <p>
                 <code>&lt;body&gt;</code> <code>&lt;footer&gt;</code> is sticky footer.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
-                    <code>&lt;address&gt;</code>
-                </h3>
-            </blockquote>
-            <p>
-                <code>&lt;address&gt;</code> is not yet styled.
-            </p>
-            <blockquote>
-                <h3>
+                <p>
                     <code>&lt;main&gt;</code>
-                </h3>
+                </p>
                 <p>
                     <code>flex: 1 0 auto;</code>
                 </p>
@@ -848,10 +861,12 @@
             <p>
                 <code>&lt;main&gt;</code> is the main or important <strong>content</strong>.
             </p>
+            <hr />
+
             <blockquote>
-                <h3>
+                <p>
                     <code>&lt;hr /&gt;</code>
-                </h3>
+                </p>
             </blockquote>
             <p>
                 <code>&lt;hr /&gt;</code> is a thematic break. We use <code>&lt;hr /&gt;</code> instead of border styles on containers to <i>optionally</i> define <strong>framing</strong>
@@ -874,14 +889,14 @@
             To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
         </h3>
         <p>
-            Our goal is to deliver a lean, lightweight base grid system for HTML elements as a presentation format, while also maintaining a separation from content that adapts across different devices.
+            Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, while also maintaining a separation from content that adapts across different devices.
             We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
         </p>
     </article>
 </main>
 <footer class="text-center">
     <p>
-        Ambient makes use of HTML elements to convey structure in a consistent base grid system, without the need for layout classes.
+        Ambient makes use of HTML5 elements & CSS3 properties to convey structure in a consistent base grid system.
     </p>
     <p>
         Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.

@@ -832,9 +832,13 @@ nav a:active {
     background-color: #eee;
 }
 nav a {
+    -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
     text-align: center;
     transition: background 0.3s ease 0s;
-    padding: 1vw;
+    padding: 1.5vw 1vw;
 }
 nav {
     min-height: 65px;
@@ -845,8 +849,9 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 1vw;
-    margin-top: 1.5vw;
+    margin: 0;
+    padding-bottom: 1vw;
+    padding-top: 1.5vw;
     color: inherit;
     font-family: inherit;
     font-weight: 500;
@@ -911,7 +916,7 @@ blockquote:after {
 }
 blockquote {
     border-left: 5px solid #eee;
-    margin: 0 0 20px;
+    margin: 20px 0;
     padding: 10px 20px;
     font-size: small;
 }
@@ -956,6 +961,9 @@ hr {
     height: 99.9%;
     position: absolute;
 }
+.active {
+    background-color: #eee;
+}
 .text-left {
     text-align: left;
 }
@@ -983,6 +991,15 @@ hr {
 .text-padding-large {
     padding: 3vw;
 }
+.content-padding-small {
+    padding: 1vw;
+}
+.content-padding-medium {
+    padding: 2vw;
+}
+.content-padding-large {
+    padding: 3vw;
+}
 .btn {
     -moz-user-select: none;
     background-image: none;
@@ -993,7 +1010,7 @@ hr {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding: 6px 12px;
     text-align: center;
     vertical-align: middle;
@@ -1008,17 +1025,29 @@ hr {
     border-color: #ccc;
     color: #333;
 }
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active {
-    background-color: #e6e6e6;
-    border-color: #adadad;
-    color: #333;
-}
 .btn-primary {
     background-color: #333;
     color: #fff;
+}
+.bg-primary {
+    background-color: #2C9FD2;
+    color: #fff;
+}
+.bg-secondary {
+    background-color: #5AC8FC;
+    color: #fff;
+}
+.ghost {
+    background-color: transparent;
+    padding: 1vw;
+    color: #fff;
+    -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+.ghost:hover {
+    background-color: #fff;
 }
 /**
 * Font Awesome basic style

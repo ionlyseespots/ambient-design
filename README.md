@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a methodology for creating layout.
 
-Our goal is to deliver a lean, lightweight base grid system for HTML elements as a presentation format, while also maintaining a separation from content that adapts across different devices.
+Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, while also maintaining a separation from content that adapts across different devices.
 
 We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
 
@@ -43,4 +43,4 @@ This system evolved out of the need to fully decouple markup (HTML) from present
 
 To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
 
-Ambient makes use of HTML elements to convey structure in a consistent base grid system, without the need for layout classes. The base grid system is a CSS3 flexbox layout that is defined by HTML5 elements. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+Ambient use of HTML5 elements & CSS3 properties to convey structure in a consistent base grid system. The base grid system is a CSS3 flexbox layout that is defined by HTML5 elements. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.

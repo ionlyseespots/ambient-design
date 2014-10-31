@@ -40,13 +40,13 @@
     <article>
         <section>
             <h1>
-                Ambient goes beyond HTML elements as a presentation format with a collection of design patterns.
+                Ambient goes beyond HTML elements with a collection of design patterns.
             </h1>
             <h2>
-                Design patterns are built on Ambient's <a href="../layout/index.html">base grid system</a> without the need for layout classes
+                Design patterns are built on Ambient's <a href="../layout/index.html">semantic grid system</a>.
             </h2>
             <p>
-                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
+                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid system.
             </p>
             <h3>
                 Introduction
@@ -76,7 +76,10 @@
                 </p>
             </blockquote>
             <p>
-                Because we define our own custom attribute, we can prescribe design patterns <strong>without needing to use or duplicate class names for structure.</strong> Content can be changed without any need for structural change beyond the base grid system.
+                Because we define our own custom attribute, we can prescribe design patterns <strong>without needing to use or duplicate class names for layout.</strong>
+            </p>
+            <p>
+                There are 4 distinct design patterns.
             </p>
         </section>
         <section class="text-padding-small">
@@ -118,30 +121,33 @@
     </article>
     <hr />
 
-    <article>
+    <article id="ui-elements">
         <h1 class="text-uppercase">
             UI elements
         </h1>
         <p>
-
+            A set of design patterns for the structure of individual HTML elements, attributes & values.
         </p>
     </article>
     <hr />
 
-    <article>
+    <article id="ux-shells">
         <h1 class="text-uppercase">
             UX shells
         </h1>
         <p>
-
+            A set of design patterns for the structure of HTML section elements, attributes & values.
         </p>
     </article>
     <hr />
 
-    <article>
+    <article id="navs">
         <h1 class="text-uppercase">
             Navs
         </h1>
+        <p>
+            A set of design patterns for the structure of nav elements, attributes & values.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -299,10 +305,13 @@
     </article>
     <hr />
 
-    <article>
+    <article id="form-states">
         <h1 class="text-uppercase">
             Form states
         </h1>
+        <p>
+            A set of design patterns for the structure of form elements, attributes & values.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -858,7 +867,7 @@
                 <li>apply any contextual overrides  <code>&lt;article foobar="value"&gt; &lt;/article &gt;</code> as individual design components (values) <code>[foobar~="value"] { //css }</code></li>
             </ol>
             <p>
-                All without needing to use or duplicate class names for structure.
+                All without needing to use or duplicate class names for layout.
             </p>
         </section>
         <section class="text-padding-small">
@@ -890,14 +899,14 @@ return obj;
             To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
         </h3>
         <p>
-            Our goal is to deliver a lean, lightweight base grid system for HTML elements as a presentation format, while also maintaining a separation from content that adapts across different devices.
+            Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, while also maintaining a separation from content that adapts across different devices.
             We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
         </p>
     </article>
 </main>
 <footer class="text-center">
     <p>
-        Ambient makes use of HTML elements to convey structure in a consistent base grid system, without the need for layout classes.
+        Ambient use of HTML5 elements & CSS3 properties to convey structure in a consistent base grid system.
     </p>
     <p>
         Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
