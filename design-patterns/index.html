@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Design patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -43,8 +43,11 @@
                 Ambient goes beyond HTML elements as a presentation format with a collection of design patterns.
             </h1>
             <h2>
-                Design patterns are built on Ambient's <a href="../layout/index.html">base grid system</a> for HTML elements as a presentation format without the need for structure based classes
+                Design patterns are built on Ambient's <a href="../layout/index.html">base grid system</a> without the need for layout classes
             </h2>
+            <p>
+                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
+            </p>
             <h3>
                 Introduction
             </h3>
@@ -116,7 +119,7 @@
     <hr />
 
     <article>
-        <h1>
+        <h1 class="text-uppercase">
             UI elements
         </h1>
         <p>
@@ -126,7 +129,7 @@
     <hr />
 
     <article>
-        <h1>
+        <h1 class="text-uppercase">
             UX shells
         </h1>
         <p>
@@ -136,12 +139,9 @@
     <hr />
 
     <article>
-        <h1>
+        <h1 class="text-uppercase">
             Navs
         </h1>
-        <p>
-            To create a nav with the base nav design pattern, add anchor elements inside the nav element.
-        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -151,11 +151,13 @@
                     <code>&lt;nav&gt;</code>
                 </p>
             </blockquote>
+            <hr />
             <nav>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
             </nav>
+            <hr />
         </section>
         <section class="text-padding-small">
             <pre><code>
@@ -166,11 +168,139 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
+        <h1>
+            Left aligned nav
+        </h1>
+        <p>
+            To create a left aligned nav with the base nav design pattern, add the attribute <code>am-nav</code> to any nav. The base nav design pattern defaults to left aligned.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Left align
+                </h1>
+                <p>
+                    <code>&lt;nav am-nav&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;nav am-nav&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
+        <h1>
+            Right aligned nav
+        </h1>
+        <p>
+            To create a right aligned nav with the base nav design pattern, add the attribute <code>am-nav="right-aligned"</code> to any nav.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Right align
+                </h1>
+                <p>
+                    <code>&lt;nav am-nav&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav="right-aligned">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;nav am-nav="right-aligned"&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
+        <h1>
+            Center aligned nav
+        </h1>
+        <p>
+            To create a center aligned nav with the base nav design pattern, add the attribute <code>am-nav="center"</code> to any nav.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Center align
+                </h1>
+                <p>
+                    <code>&lt;nav am-nav="center"&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav="center">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;nav am-nav="center"&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
+        <h1>
+            Justify aligned nav
+        </h1>
+        <p>
+            To create a justify aligned nav with the base nav design pattern, add the attribute <code>am-nav="justify"</code> to any nav.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Justify align
+                </h1>
+                <p>
+                    <code>&lt;nav am-nav="center"&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav="justify">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+&lt;nav am-nav="justify"&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
     </article>
     <hr />
 
     <article>
-        <h1>
+        <h1 class="text-uppercase">
             Form states
         </h1>
         <section class="text-padding-small">
@@ -767,7 +897,7 @@ return obj;
 </main>
 <footer class="text-center">
     <p>
-        Ambient makes use HTML to convey structure in a consistent base grid system, without the need for structure based classes.
+        Ambient makes use of HTML elements to convey structure in a consistent base grid system, without the need for layout classes.
     </p>
     <p>
         Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.

@@ -1,0 +1,17 @@
+[am-nav] {
+  & a {
+    flex: none;
+  }
+}
+
+[am-nav~="right-aligned"] {
+  .justify-content(flex-end);
+}
+
+[am-nav~="center"] {
+  .justify-content(center);
+}
+
+[am-nav~="justify"] {
+  .justify-content(space-between);
+}
