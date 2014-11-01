@@ -21,7 +21,7 @@
 
 <nav role="navigation">
     <a href="../docs/index.html"><strong>Getting Started</strong></a>
-    <a href="../layout/index.html"><strong>Grid System</strong></a>
+    <a href="../layout/index.html"><strong>Semantic Grid</strong></a>
     <a href="#" class="active"><strong>Design Patterns</strong></a>
     <a href="https://github.com/ionlyseespots/ambient-design"><strong>GitHub</strong></a>
 </nav>
@@ -40,13 +40,10 @@
     <article>
         <section>
             <h1>
-                Ambient goes beyond HTML elements with a collection of design patterns.
+                Design patterns are built on Ambient's <a href="../layout/index.html">semantic grid</a>.
             </h1>
-            <h2>
-                Design patterns are built on Ambient's <a href="../layout/index.html">semantic grid system</a>.
-            </h2>
             <p>
-                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid system.
+                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid.
             </p>
             <h3>
                 Introduction
@@ -64,15 +61,24 @@
         </h1>
 
         <p>
-            It is possible to style HTML elements that have specific attributes, not just class and id.
+            It is possible to style HTML elements that have specific attributes and values, not just class and id.
         </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    We define our own namespace
+                    We define our own namespaces
                 </h1>
                 <p>
-                    <code>am-</code>
+                    <code>am-uielement</code>
+                </p>
+                <p>
+                    <code>am-uxshell</code>
+                </p>
+                <p>
+                    <code>am-nav</code>
+                </p>
+                <p>
+                    <code>am-formstate</code>
                 </p>
             </blockquote>
             <p>
@@ -123,7 +129,7 @@
 
     <article id="ui-elements">
         <h1 class="text-uppercase">
-            UI elements
+            <i class="fa fa-cube"></i> UI elements
         </h1>
         <p>
             A set of design patterns for the structure of individual HTML elements, attributes & values.
@@ -133,7 +139,7 @@
 
     <article id="ux-shells">
         <h1 class="text-uppercase">
-            UX shells
+            <i class="fa fa-cubes"></i> UX shells
         </h1>
         <p>
             A set of design patterns for the structure of HTML section elements, attributes & values.
@@ -143,7 +149,7 @@
 
     <article id="navs">
         <h1 class="text-uppercase">
-            Navs
+            <i class="fa fa-compass"></i> Navs
         </h1>
         <p>
             A set of design patterns for the structure of nav elements, attributes & values.
@@ -307,7 +313,7 @@
 
     <article id="form-states">
         <h1 class="text-uppercase">
-            Form states
+            <i class="fa fa-tasks"></i> Form states
         </h1>
         <p>
             A set of design patterns for the structure of form elements, attributes & values.
@@ -862,7 +868,7 @@
                 We can use the directive name as the attribute selector for the custom design pattern. Now, when we use the angularJS directive "foobar" it will:
             </p>
             <ol>
-                <li>inherit the ambient base grid system for <code>&lt;article&gt;</code></li>
+                <li>inherit the Ambient semantic grid for <code>&lt;article&gt;</code></li>
                 <li>apply its own design pattern  <code>[foobar] { //css }</code></li>
                 <li>apply any contextual overrides  <code>&lt;article foobar="value"&gt; &lt;/article &gt;</code> as individual design components (values) <code>[foobar~="value"] { //css }</code></li>
             </ol>
@@ -893,20 +899,19 @@ return obj;
             Ambient is a methodology for creating layout.
         </h1>
         <h2>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
+            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). The semantic grid avoids presentational CSS classes in the HTML markup itself.
         </h2>
         <h3>
-            To do that, I believe markup needs to become the presentation. Or more specifically, presentation format. While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the base grid system.
+            While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid.
         </h3>
         <p>
-            Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, while also maintaining a separation from content that adapts across different devices.
-            We also extend HTML’s elements, attributes and values into design patterns to help you display your application’s UI clearly.
+            Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, attributes and values, while also maintaining a separation from content that adapts across different devices.
         </p>
     </article>
 </main>
 <footer class="text-center">
     <p>
-        Ambient use of HTML5 elements & CSS3 properties to convey structure in a consistent base grid system.
+        Ambient makes use of HTML5 elements & CSS3 properties to convey structure within a semantic grid.
     </p>
     <p>
         Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
