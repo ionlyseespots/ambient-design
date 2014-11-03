@@ -1,7 +1,6 @@
 body > header, body > footer {background-color:#282828; color: #ddd;}
 body > header a {color:#ccc;}
 body > header a:hover {color:#fff;}
-body > footer { padding: 3vw 0; }
 article.bg-primary nav a {
     color:#fff;
 }
