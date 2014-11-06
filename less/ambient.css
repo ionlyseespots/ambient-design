@@ -717,6 +717,11 @@ footer {
   padding-bottom: 1vw;
   padding-top: 1vw;
 }
+@media (orientation: portrait) {
+  [am-uxshell~="gutter-margin"] section {
+    margin-left: 0;
+  }
+}
 [am-nav] a {
   flex: none;
 }
