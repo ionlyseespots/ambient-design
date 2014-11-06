@@ -461,10 +461,10 @@ section {
   /**
  * column
  */
-  -webkit-flex: 1 0.01%;
-  -moz-flex: 1 0.01%;
-  -ms-flex: 1 0.01%;
-  flex: 1 0.01%;
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
   /**
   * help content on absolute positioning
   */
@@ -483,10 +483,9 @@ footer {
   order: 2;
 }
 @media (orientation: portrait) {
-  article,
-  section {
-    display: block;
-    margin: 0;
+  section,
+  aside {
+    flex-basis: 100%;
   }
   /**
   * change vertical rule back to horizontal rule for portrait view
@@ -674,6 +673,46 @@ footer {
   border: 3px solid white;
   border-radius: 5px;
   padding: 2vw 3vw;
+}
+[am-uxshell~="gutter-margin"] section {
+  margin-left: 1em;
+}
+[am-uxshell~="gutter-margin"] > section:first-of-type,
+[am-uxshell~="gutter-margin"] header + section,
+[am-uxshell~="gutter-margin"] nav + section,
+[am-uxshell~="gutter-margin"] footer + section,
+[am-uxshell~="gutter-margin"] h1 + section,
+[am-uxshell~="gutter-margin"] h2 + section,
+[am-uxshell~="gutter-margin"] h3 + section,
+[am-uxshell~="gutter-margin"] h4 + section,
+[am-uxshell~="gutter-margin"] h5 + section,
+[am-uxshell~="gutter-margin"] h6 + section,
+[am-uxshell~="gutter-margin"] hr + section,
+[am-uxshell~="gutter-margin"] p + section {
+  margin-left: 0;
+}
+[am-uxshell~="gutter-padding"] section {
+  padding-left: 1em;
+}
+[am-uxshell~="gutter-padding"] header + section,
+[am-uxshell~="gutter-padding"] nav + section,
+[am-uxshell~="gutter-padding"] footer + section,
+[am-uxshell~="gutter-padding"] h1 + section,
+[am-uxshell~="gutter-padding"] h2 + section,
+[am-uxshell~="gutter-padding"] h3 + section,
+[am-uxshell~="gutter-padding"] h4 + section,
+[am-uxshell~="gutter-padding"] h5 + section,
+[am-uxshell~="gutter-padding"] h6 + section,
+[am-uxshell~="gutter-padding"] hr + section,
+[am-uxshell~="gutter-padding"] p + section {
+  padding-left: 0;
+}
+[am-uxshell~="display-grid"] section,
+[am-uxshell~="display-grid"] aside {
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+  padding-bottom: 1vw;
+  padding-top: 1vw;
 }
 [am-nav] a {
   flex: none;
@@ -1067,14 +1106,4 @@ hr {
 }
 .fa-5x {
   font-size: 8vmin;
-}
-[am-grid] article {
-  margin-top: 1vw;
-}
-[am-grid] section,
-[am-grid] aside {
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-  padding-bottom: 1vw;
-  padding-top: 1vw;
 }

@@ -8,7 +8,7 @@
     <!-- Ambient -->
     <link rel="stylesheet" href="../../dist/css/ambient.min.css">
 </head>
-<body am-grid>
+<body am-uxshell="display-grid">
 <header>
     <h1>
         <a href="../../index.html" title="index">Ambient</a>
@@ -23,7 +23,7 @@
 <hr />
 
 <main role="main">
-    <article am-grid>
+    <article>
         <h1>
             Three equal columns
         </h1>
@@ -35,17 +35,17 @@
         </p>
         <section>
             <p>
-                1/3
+                1
             </p>
         </section>
         <section>
             <p>
-                1/3
+                2
             </p>
         </section>
         <section>
             <p>
-                1/3
+                3
             </p>
         </section>
         <footer>
@@ -53,24 +53,24 @@
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            2
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            3
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
         </code></pre>
         </footer>
     </article>
-    <article am-grid>
+    <article>
         <h1>
             Three unequal columns
         </h1>
@@ -117,7 +117,7 @@
             </code></pre>
         </footer>
     </article>
-    <article am-grid>
+    <article>
         <h1>
             Two unequal columns with content on the left
         </h1>
@@ -154,7 +154,7 @@
             </code></pre>
         </footer>
     </article>
-    <article am-grid>
+    <article>
         <h1>
             Two unequal columns with content on the right
         </h1>
@@ -191,7 +191,7 @@
             </code></pre>
         </footer>
     </article>
-    <article am-grid>
+    <article>
         <h1>
             Full width, single column
         </h1>
@@ -217,7 +217,7 @@
     </article>
     <hr>
 
-    <article am-grid>
+    <article am-uxshell="gutter">
         <h1>
             Two equal columns with two nested equal columns
         </h1>
@@ -232,7 +232,7 @@
                 Section H1
             </h1>
             <p>
-                1/2
+                1
             </p>
             <article>
                 <h1>
@@ -243,7 +243,7 @@
                         Nested Section H1
                     </h1>
                     <p>
-                        1/2
+                        1
                     </p>
                 </section>
                 <section>
@@ -251,7 +251,7 @@
                         Nested Section H1
                     </h1>
                     <p>
-                        1/2
+                        2
                     </p>
                 </section>
             </article>
@@ -261,7 +261,7 @@
                 Section H1
             </h1>
             <p>
-                1/2
+                2
             </p>
         </section>
         <footer>
@@ -272,7 +272,7 @@
             Section H1
         &lt;/h1&gt;
         &lt;p&gt;
-            1/2
+            1
         &lt;/p&gt;
         &lt;article&gt;
             &lt;h1&gt;
@@ -283,7 +283,7 @@
                         Nested Section H1
                     &lt;/h1&gt;
                     &lt;p&gt;
-                        1/2
+                        1
                     &lt;/p&gt;
                 &lt;/section&gt;
                 &lt;section&gt;
@@ -291,7 +291,7 @@
                         Nested Section H1
                     &lt;/h1&gt;
                     &lt;p&gt;
-                        1/2
+                        2
                     &lt;/p&gt;
                 &lt;/section&gt;
         &lt;/article&gt;
@@ -301,7 +301,7 @@
             Section H1
         &lt;/h1&gt;
         &lt;p&gt;
-            1/2
+            2
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -350,7 +350,7 @@
     </article>
     <hr>
 
-    <article am-grid>
+    <article am-uxshell="gutter-margin">
         <h1>
             Example columns
         </h1>
@@ -376,24 +376,24 @@
         </h2>
         <section>
             <P>
-                1/2
+                1
             </P>
         </section>
         <section>
             <P>
-                1/2
+                2
             </P>
         </section>
         <pre><code>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/2
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/2
+            2
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -403,34 +403,34 @@
         </h2>
         <section>
             <P>
-                1/3
+                1
             </P>
         </section>
         <section>
             <P>
-                1/3
+                2
             </P>
         </section>
         <section>
             <P>
-                1/3
+                3
             </P>
         </section>
         <pre><code>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            2
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/3
+            3
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -440,44 +440,44 @@
         </h2>
         <section>
             <P>
-                1/4
+                1
             </P>
         </section>
         <section>
             <P>
-                1/4
+                2
             </P>
         </section>
         <section>
             <P>
-                1/4
+                3
             </P>
         </section>
         <section>
             <P>
-                1/4
+                4
             </P>
         </section>
         <pre><code>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/4
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/4
+            2
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/4
+            3
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/4
+            4
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -487,54 +487,54 @@
         </h2>
         <section>
             <P>
-                1/5
+                1
             </P>
         </section>
         <section>
             <P>
-                1/5
+                2
             </P>
         </section>
         <section>
             <P>
-                1/5
+                3
             </P>
         </section>
         <section>
             <P>
-                1/5
+                4
             </P>
         </section>
         <section>
             <P>
-                1/5
+                5
             </P>
         </section>
         <pre><code>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/5
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/5
+            2
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/5
+            3
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/5
+            4
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/5
+            5
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -544,72 +544,89 @@
         </h2>
         <section>
             <P>
-                1/6
+                1
             </P>
         </section>
         <section>
             <P>
-                1/6
+                2
             </P>
         </section>
         <section>
             <P>
-                1/6
+                3
             </P>
         </section>
         <section>
             <P>
-                1/6
+                4
             </P>
         </section>
         <section>
             <P>
-                1/6
+                5
             </P>
         </section>
         <section>
             <P>
-                1/6
+                6
             </P>
         </section>
         <pre><code>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            1
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            2
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            3
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            4
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            5
         &lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;p&gt;
-            1/6
+            6
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
         </code></pre>
+    <h2>
+        Et cetera
+    </h2>
     </article>
     <hr />
+
+    <article>
+        <h1> Offset columns </h1>
+        <p>
+            Individual sizing makes use of design patterns (with flexible box properties) and
+            <code>width, min-width, max-width</code>
+            properties.
+        </p>
+        <p>
+            Alternatively, individual
+            <code>&lt;div&gt;</code>
+            elements can be offset relative to the parent container.
+        </p>
+    </article>
 </main>
-<footer class="text-center">
+<footer class="text-center content-padding-large">
     <p>
         Ambient makes use of HTML5 elements & CSS3 properties to convey structure within a semantic grid.
     </p>
