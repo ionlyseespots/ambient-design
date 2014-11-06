@@ -485,6 +485,9 @@ footer {
 @media (orientation: portrait) {
   section,
   aside {
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    -ms-flex-basis: 100%;
     flex-basis: 100%;
   }
   /**
