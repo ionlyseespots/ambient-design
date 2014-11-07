@@ -4,6 +4,8 @@
 
 Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
 
+Ambient allows developers to focus on HTML to convey visual structure and designers can focus on extending design patterns for content.
+
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
 ## Demo
