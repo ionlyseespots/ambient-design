@@ -18,6 +18,8 @@ Install with [Bower] (http://bower.io/): bower install ambient
 
 Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information, templates and examples.
 
+> Please note that source code and documentation is the most current development (unstable) version of Ambient
+
 ## Development
 
 This project is in early development.
