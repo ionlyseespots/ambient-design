@@ -69,16 +69,16 @@
                     We define our own namespaces
                 </h1>
                 <p>
-                    <code>am-uielement</code>
+                    <code>am-component</code>
                 </p>
                 <p>
-                    <code>am-uxshell</code>
+                    <code>am-layout</code>
                 </p>
                 <p>
                     <code>am-nav</code>
                 </p>
                 <p>
-                    <code>am-formstate</code>
+                    <code>am-form</code>
                 </p>
             </blockquote>
             <p>
@@ -129,20 +129,20 @@
 
     <article id="ui-elements">
         <h1 class="text-uppercase">
-            <i class="fa fa-cube"></i> UI elements
+            <i class="fa fa-cube"></i> Components
         </h1>
         <p>
-            A set of design patterns for the structure of individual HTML elements, attributes & values.
+            A set of design patterns for the structure of individual HTML elements, attributes & values. This design pattern is the basic building block for UI components.
         </p>
     </article>
     <hr />
 
     <article id="ux-shells">
         <h1 class="text-uppercase">
-            <i class="fa fa-cubes"></i> UX shells
+            <i class="fa fa-cubes"></i> Layouts
         </h1>
         <p>
-            A set of design patterns for the structure of HTML section elements, attributes & values.
+            A set of design patterns for the structure of HTML section elements, attributes & values. This is the base design pattern for layouts and component containers.
         </p>
         <h2>
             Gutters
@@ -250,21 +250,21 @@
             </pre>
         </section>
         <h2>
-            Layouts
+            Cards
         </h2>
         <h3>
-            Card
+            Horizontal cards
         </h3>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Card
+                    Horizontal cards
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="card"&gt;</code>
+                    <code>&lt;article am-uxshell="card horizontal"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="card">
+            <article am-uxshell="card horizontal">
                 <section>
                     <h1>
                         This is a card
@@ -293,7 +293,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="card"&gt;
+&lt;article am-uxshell="card horizontal"&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -321,7 +321,144 @@
 &lt;/article&gt;
             </pre>
         </section>
-
+        <h3>
+            Vertical cards
+        </h3>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    vertical cards
+                </h1>
+                <p>
+                    <code>&lt;article am-uxshell="card vertical"&gt;</code>
+                </p>
+            </blockquote>
+            <article am-uxshell="card vertical">
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+            </article>
+        </section>
+        <section class="text-padding-small">
+            <pre>
+&lt;article am-uxshell="card vertical"&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
+        <h3>
+            Relative cards
+        </h3>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Relative cards
+                </h1>
+                <p>
+                    <code>&lt;article am-uxshell="card horizontal"&gt;</code>
+                </p>
+            </blockquote>
+            <article am-uxshell="card relative">
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                </section>
+            </article>
+        </section>
+        <section class="text-padding-small">
+            <pre>
+&lt;article am-uxshell="card relative"&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            This is a card
+        &lt;/h1&gt;
+        lt;p&gt;
+            Cards have a constant width and variable height.
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
     </article>
     <hr />
 
@@ -330,7 +467,7 @@
             <i class="fa fa-compass"></i> Navs
         </h1>
         <p>
-            A set of design patterns for the structure of nav elements, attributes & values.
+            A set of design patterns for the structure of nav elements, attributes & values. This is the base design pattern for navs.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -491,10 +628,10 @@
 
     <article id="form-states">
         <h1 class="text-uppercase">
-            <i class="fa fa-tasks"></i> Form states
+            <i class="fa fa-tasks"></i> Forms
         </h1>
         <p>
-            A set of design patterns for the structure of form elements, attributes & values.
+            A set of design patterns for the structure of form elements, attributes & values. This is the base design pattern for forms.
         </p>
         <section class="text-padding-small">
             <blockquote>

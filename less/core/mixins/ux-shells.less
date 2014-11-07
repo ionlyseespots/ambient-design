@@ -160,7 +160,7 @@
 }
 
 [am-uxshell~="gutter-margin"] {
-  & section {
+  & > section {
     margin-left:1em;
   }
   & > section:first-of-type, header + section, nav + section, footer + section, h1 + section, h2 + section, h3 + section, h4 + section, h5 + section, h6 + section, hr + section, p + section {
@@ -169,7 +169,7 @@
 }
 
 [am-uxshell~="gutter-padding"] {
-  section {
+  & > section {
     padding-left:1em;
   }
   header + section, nav + section, footer + section, h1 + section, h2 + section, h3 + section, h4 + section, h5 + section, h6 + section, hr + section, p + section {
@@ -188,15 +188,36 @@
 
 
 [am-uxshell~="card"] {
-  .flex-direction(column no-wrap);
-  & section {
+  & > section {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    margin: 1vw;
+    margin-bottom: 1vw;
     padding: 1vw;
-  .flex-basis(100%);
   }
 }
 
+[am-uxshell~="vertical"] {
+  & > section {
+    .flex-basis(100%);
+  }
+}
+
+[am-uxshell~="horizontal"] {
+  & > section {
+    margin-left: 1vw;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+[am-uxshell~="relative"] {
+  & > section {
+    .flex-basis( 33.333333%);
+    &:nth-of-type(even) {
+      margin-left: 1vw;
+    }
+  }
+}
 
 @media (orientation:portrait){
   [am-uxshell~="gutter-margin"] {

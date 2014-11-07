@@ -465,6 +465,7 @@ section {
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
+    word-wrap: break-word;
     /**
     * help content on absolute positioning
     */
@@ -677,7 +678,7 @@ footer {
     border-radius: 5px;
     padding: 2vw 3vw;
 }
-[am-uxshell~="gutter-margin"] section {
+[am-uxshell~="gutter-margin"] > section {
     margin-left: 1em;
 }
 [am-uxshell~="gutter-margin"] > section:first-of-type,
@@ -694,7 +695,7 @@ footer {
 [am-uxshell~="gutter-margin"] p + section {
     margin-left: 0;
 }
-[am-uxshell~="gutter-padding"] section {
+[am-uxshell~="gutter-padding"] > section {
     padding-left: 1em;
 }
 [am-uxshell~="gutter-padding"] header + section,
@@ -717,20 +718,31 @@ footer {
     padding-bottom: 1vw;
     padding-top: 1vw;
 }
-[am-uxshell~="card"] {
-    -webkit-flex-direction: column no-wrap;
-    -moz-flex-direction: column no-wrap;
-    -ms-flex-direction: column no-wrap;
-    flex-direction: column no-wrap;
-}
-[am-uxshell~="card"] section {
+[am-uxshell~="card"] > section {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    margin: 1vw;
+    margin-bottom: 1vw;
     padding: 1vw;
+}
+[am-uxshell~="vertical"] > section {
     -webkit-flex-basis: 100%;
     -moz-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
+}
+[am-uxshell~="horizontal"] > section {
+    margin-left: 1vw;
+}
+[am-uxshell~="horizontal"] > section:first-child {
+    margin-left: 0;
+}
+[am-uxshell~="relative"] > section {
+    -webkit-flex-basis: 33.333333%;
+    -moz-flex-basis: 33.333333%;
+    -ms-flex-basis: 33.333333%;
+    flex-basis: 33.333333%;
+}
+[am-uxshell~="relative"] > section:nth-of-type(even) {
+    margin-left: 1vw;
 }
 @media (orientation: portrait) {
     [am-uxshell~="gutter-margin"] section {
