@@ -255,6 +255,9 @@
         <h3>
             Horizontal cards
         </h3>
+        <p>
+            To create horizontal cards with the base layout design pattern, add the attribute <code>am-uxshell="card horizontal"</code> to any article.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -324,6 +327,9 @@
         <h3>
             Vertical cards
         </h3>
+        <p>
+            To create vertical cards with the base layout design pattern, add the attribute <code>am-uxshell="card vertical"</code> to any article.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
@@ -393,13 +399,16 @@
         <h3>
             Relative cards
         </h3>
+        <p>
+            To create relative cards with the base layout design pattern, add the attribute <code>am-uxshell="card relative"</code> to any article.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
                     Relative cards
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="card horizontal"&gt;</code>
+                    <code>&lt;article am-uxshell="card relative"&gt;</code>
                 </p>
             </blockquote>
             <article am-uxshell="card relative">
@@ -499,7 +508,7 @@
             Left aligned nav
         </h1>
         <p>
-            To create a left aligned nav with the base nav design pattern, add the attribute <code>am-nav</code> to any nav. The base nav design pattern defaults to left aligned.
+            To create a left aligned nav with the base nav design pattern, add the attribute <code>am-nav="left-align"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -507,11 +516,11 @@
                     Left align
                 </h1>
                 <p>
-                    <code>&lt;nav am-nav&gt;</code>
+                    <code>&lt;nav am-nav="left-align"&gt;</code>
                 </p>
             </blockquote>
             <hr />
-            <nav am-nav>
+            <nav am-nav="left-align">
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
@@ -520,7 +529,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;nav am-nav&gt;
+&lt;nav am-nav="left-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -539,11 +548,11 @@
                     Right align
                 </h1>
                 <p>
-                    <code>&lt;nav am-nav&gt;</code>
+                    <code>&lt;nav am-nav="right-align"&gt;</code>
                 </p>
             </blockquote>
             <hr />
-            <nav am-nav="right-aligned">
+            <nav am-nav="right-align">
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
@@ -552,7 +561,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;nav am-nav="right-aligned"&gt;
+&lt;nav am-nav="right-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -560,7 +569,7 @@
             </code></pre>
         </section>
         <h1>
-            Center aligned nav
+            Centered nav
         </h1>
         <p>
             To create a center aligned nav with the base nav design pattern, add the attribute <code>am-nav="center"</code> to any nav.
@@ -568,7 +577,7 @@
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Center align
+                    Centered
                 </h1>
                 <p>
                     <code>&lt;nav am-nav="center"&gt;</code>
@@ -592,7 +601,7 @@
             </code></pre>
         </section>
         <h1>
-            Justify aligned nav
+            Justified nav
         </h1>
         <p>
             To create a justify aligned nav with the base nav design pattern, add the attribute <code>am-nav="justify"</code> to any nav.
@@ -600,10 +609,10 @@
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Justify align
+                    Justified
                 </h1>
                 <p>
-                    <code>&lt;nav am-nav="center"&gt;</code>
+                    <code>&lt;nav am-nav="justify"&gt;</code>
                 </p>
             </blockquote>
             <hr />
@@ -621,6 +630,38 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
+            </code></pre>
+        </section>
+        <h1>
+            Vertical nav
+        </h1>
+        <p>
+            To create a vertical nav with the base nav design pattern, add the attribute <code>am-nav="vertical"</code> to any nav.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Vertical
+                </h1>
+                <p>
+                    <code>&lt;nav am-nav="vertical"&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav="vertical">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section class="text-padding-small">
+            <pre><code>
+                &lt;nav am-nav="vertical"&gt;
+                &lt;a href="#"&gt;Link Text&lt;/al&gt;
+                &lt;a href="#"&gt;Link Text&lt;/al&gt;
+                &lt;a href="#"&gt;Link Text&lt;/al&gt;
+                &lt;/nav&gt;
             </code></pre>
         </section>
     </article>

@@ -1,17 +1,34 @@
 [am-nav] {
+}
+
+[am-nav~="left-align"] {
   & a {
     flex: none;
   }
+  .justify-content(flex-start);
 }
 
-[am-nav~="right-aligned"] {
+[am-nav~="right-align"] {
+  & a {
+    flex: none;
+  }
   .justify-content(flex-end);
 }
 
 [am-nav~="center"] {
+  & a {
+    flex: none;
+  }
   .justify-content(center);
 }
 
 [am-nav~="justify"] {
+  & a {
+    flex: none;
+  }
   .justify-content(space-between);
+}
+
+[am-nav~="vertical"] {
+  .flex-direction(column);
 }
