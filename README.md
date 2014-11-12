@@ -1,8 +1,8 @@
 # Ambient
 
-[Ambient] (http://ionlyseespots.github.io/ambient-design) is a semantic grid system.
+[Ambient] (http://ionlyseespots.github.io/ambient-design) is a semantic grid.
 
-Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
+Our goal is to deliver a lean, lightweight semantic grid for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
 
 Ambient allows developers to focus on HTML to convey visual structure and designers can focus on extending design patterns for content.
 

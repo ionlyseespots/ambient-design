@@ -156,10 +156,10 @@
                     Gutter margin
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="gutter-margin"&gt;</code>
+                    <code>&lt;article am-layout="gutter-margin"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="display-grid gutter-margin">
+            <article am-layout="display-grid gutter-margin">
                 <section>
                     <P>
                         1
@@ -179,7 +179,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="gutter-margin"&gt;
+&lt;article am-layout="gutter-margin"&gt;
     &lt;section&gt;
         &lt;p&gt;
             1
@@ -207,10 +207,10 @@
                     Gutter padding
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="gutter-padding"&gt;</code>
+                    <code>&lt;article am-layout="gutter-padding"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="display-grid gutter-padding">
+            <article am-layout="display-grid gutter-padding">
                 <section>
                     <P>
                         1
@@ -230,7 +230,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="gutter-padding"&gt;
+&lt;article am-layout="gutter-padding"&gt;
     &lt;section&gt;
         &lt;p&gt;
             1
@@ -256,7 +256,7 @@
             Horizontal cards
         </h3>
         <p>
-            To create horizontal cards with the base layout design pattern, add the attribute <code>am-uxshell="card horizontal"</code> to any article.
+            To create horizontal cards with the base layout design pattern, add the attribute <code>am-layout="card horizontal"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -264,10 +264,10 @@
                     Horizontal cards
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="card horizontal"&gt;</code>
+                    <code>&lt;article am-layout="card horizontal"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="card horizontal">
+            <article am-layout="card horizontal">
                 <section>
                     <h1>
                         This is a card
@@ -296,7 +296,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="card horizontal"&gt;
+&lt;article am-layout="card horizontal"&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -328,7 +328,7 @@
             Vertical cards
         </h3>
         <p>
-            To create vertical cards with the base layout design pattern, add the attribute <code>am-uxshell="card vertical"</code> to any article.
+            To create vertical cards with the base layout design pattern, add the attribute <code>am-layout="card vertical"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -336,10 +336,10 @@
                     vertical cards
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="card vertical"&gt;</code>
+                    <code>&lt;article am-layout="card vertical"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="card vertical">
+            <article am-layout="card vertical">
                 <section>
                     <h1>
                         This is a card
@@ -368,7 +368,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="card vertical"&gt;
+&lt;article am-layout="card vertical"&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -400,7 +400,7 @@
             Relative cards
         </h3>
         <p>
-            To create relative cards with the base layout design pattern, add the attribute <code>am-uxshell="card relative"</code> to any article.
+            To create relative cards with the base layout design pattern, add the attribute <code>am-layout="card relative"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -408,10 +408,10 @@
                     Relative cards
                 </h1>
                 <p>
-                    <code>&lt;article am-uxshell="card relative"&gt;</code>
+                    <code>&lt;article am-layout="card relative"&gt;</code>
                 </p>
             </blockquote>
-            <article am-uxshell="card relative">
+            <article am-layout="card relative">
                 <section>
                     <h1>
                         This is a card
@@ -440,7 +440,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-uxshell="card relative"&gt;
+&lt;article am-layout="card relative"&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -718,7 +718,7 @@
             Inline form
         </h2>
         <p>
-            To create an inline form with the base form state design pattern, add the attribute <code>am-formstate</code> to any form.
+            To create an inline form with the base form state design pattern, add the attribute <code>am-form</code> to any form.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -726,10 +726,10 @@
                     Inline
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate&gt;</code>
+                    <code>&lt;form am-form&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate>
+            <form am-form>
                 <label for="inline-email">Email</label>
                 <input id="inline-email" type="email" placeholder="Email">
 
@@ -745,7 +745,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate&gt;
+&lt;form am-form&gt;
     &lt;label for="inline-email"&gt;Email&lt;/label&gt;
     &lt;input id="inline-email" type="email" placeholder="Email"&gt;
 
@@ -764,7 +764,7 @@
             Stacked form
         </h2>
         <p>
-            To create a stacked form, add the attribute <code>am-formstate</code> = <code>stacked</code> to any form.
+            To create a stacked form, add the attribute <code>am-form</code> = <code>stacked</code> to any form.
         </p>
         <p>
             Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential design pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
@@ -775,7 +775,7 @@
                     Stacked
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="stacked"&gt;</code>
+                    <code>&lt;form am-form="stacked"&gt;</code>
                 </p>
                 <h2>
                     Pre & Post input icons
@@ -787,7 +787,7 @@
                     <code>&lt;label am-posticon="unicode"&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="stacked">
+            <form am-form="stacked">
                 <label for="stacked-email" am-preicon="&#xf118;">Email</label>
                 <input id="stacked-email" type="email" placeholder="Email">
 
@@ -803,7 +803,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate="stacked"&gt;
+&lt;form am-form="stacked"&gt;
     &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
     &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
 
@@ -822,7 +822,7 @@
             Aligned form
         </h2>
         <p>
-            To create an aligned form add the attribute <code>am-formstate</code> = <code>aligned</code> to any form.
+            To create an aligned form add the attribute <code>am-form</code> = <code>aligned</code> to any form.
         </p>
         <p>
             Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
@@ -833,10 +833,10 @@
                     Aligned
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="aligned"&gt;</code>
+                    <code>&lt;form am-form="aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="aligned">
+            <form am-form="aligned">
                 <span>
                     <label for="aligned-email">Email</label>
                     <input id="aligned-email" type="email" placeholder="Email">
@@ -855,7 +855,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate="aligned"&gt;
+&lt;form am-form="aligned"&gt;
     &lt;span&gt;
         &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
         &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
@@ -877,7 +877,7 @@
             Multi-column form
         </h2>
         <p>
-            To create a multi-column form add the attribute <code>am-formstate</code> = <code>multicolumn</code> to any form.
+            To create a multi-column form add the attribute <code>am-form</code> = <code>multicolumn</code> to any form.
         </p>
         <p>
             Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
@@ -888,10 +888,10 @@
                     Multi-column
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="multicolumn"&gt;</code>
+                    <code>&lt;form am-form="multicolumn"&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="multicolumn">
+            <form am-form="multicolumn">
                 <div>
                     <label for="multicolumn-email">Email</label>
                     <input id="multicolumn-email" type="email" placeholder="Email">
@@ -922,7 +922,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate="multicolumn"&gt;
+&lt;form am-form="multicolumn"&gt;
     &lt;div&gt;
         &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
         &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
@@ -960,7 +960,7 @@
             Mix & match form states
         </h1>
         <p>
-            To mix & match form states add the attribute <code>am-formstate</code> = <code>value value</code> for the design patterns you want to mix & match to any form.
+            To mix & match form states add the attribute <code>am-form</code> = <code>value value</code> for the design patterns you want to mix & match to any form.
         </p>
         <h2>
             Stacked + Aligned form
@@ -971,10 +971,10 @@
                     Stacked + Aligned
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="stacked aligned"&gt;</code>
+                    <code>&lt;form am-form="stacked aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="stacked aligned">
+            <form am-form="stacked aligned">
                 <label for="stacked-aligned-email">Email</label>
                 <input id="stacked-aligned-email" type="email" placeholder="Email">
 
@@ -998,7 +998,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate="stacked aligned"&gt;
+&lt;form am-form="stacked aligned"&gt;
     &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
     &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
 
@@ -1030,10 +1030,10 @@
                     Multi-column + Stacked
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="multicolumn stacked "&gt;</code>
+                    <code>&lt;form am-form="multicolumn stacked "&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="multicolumn stacked">
+            <form am-form="multicolumn stacked">
                 <div>
                     <label for="multicolumn-stacked-email">Email</label>
                     <input id="multicolumn-stacked-email" type="email" placeholder="Email">
@@ -1071,7 +1071,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
-&lt;form am-formstate="multicolumn stacked"&gt;
+&lt;form am-form="multicolumn stacked"&gt;
     &lt;div&gt;
         &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
         &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
@@ -1117,10 +1117,10 @@
                     Multi-column + Aligned
                 </h1>
                 <p>
-                    <code>&lt;form am-formstate="multicolumn aligned"&gt;</code>
+                    <code>&lt;form am-form="multicolumn aligned"&gt;</code>
                 </p>
             </blockquote>
-            <form am-formstate="multicolumn aligned">
+            <form am-form="multicolumn aligned">
                 <div>
                     <label for="multicolumn-aligned-email">Email</label>
                     <input id="multicolumn-aligned-email" type="email" placeholder="Email">
@@ -1161,7 +1161,7 @@
         </section>
         <section class="text-padding-small">
             <pre><code>
- &lt;form am-formstate="multicolumn aligned"&gt;
+ &lt;form am-form="multicolumn aligned"&gt;
      &lt;div&gt;
          &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
          &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
@@ -1261,7 +1261,7 @@ return obj;
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid.
         </h3>
         <p>
-            Our goal is to deliver a lean, lightweight semantic grid system for HTML elements, attributes and values, while also maintaining a separation from content that adapts across different devices.
+            Our goal is to deliver a lean, lightweight semantic grid for HTML elements, attributes and values, while also maintaining a separation from content that adapts across different devices.
         </p>
     </article>
 </main>
