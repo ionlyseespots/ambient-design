@@ -4,7 +4,7 @@
 
 Our goal is to deliver a lean, lightweight semantic grid for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
 
-Ambient allows developers to focus on HTML to convey visual structure and designers can focus on extending design patterns for content.
+Developers can focus on HTML to convey a consistent visual structure and designers can focus on extending design patterns for content.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
@@ -24,7 +24,7 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 
 This project is in early development.
 
-Ambient makes use of HTML5 elements & CSS3 properties to convey structure within a semantic grid. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach. 
+Ambient makes use of HTML5 elements & CSS3 properties to convey a consistent visual structure within a semantic grid. Design patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach. 
 
 * Web site: http://ionlyseespots.github.io/ambient-design/index.html
 * Grid examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
