@@ -30,9 +30,6 @@
         <p>
             Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
-        <p>
-            Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
-        </p>
         <section>
             <p>
                 1
@@ -78,7 +75,7 @@
             Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
         </p>
         <aside>
             <p>
@@ -125,7 +122,7 @@
             Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
         </p>
         <section>
             <p>
@@ -162,7 +159,7 @@
             Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+            Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
         </p>
         <aside>
             <p>
@@ -196,11 +193,11 @@
             Full width, single column
         </h1>
         <p>
-            An <code>&lt;article&gt;</code> displays full width by default and defines self-contained content that could exist independently of the rest of the content.
+            An <code>&lt;article&gt;</code> displays full width.
         </p>
         <section>
             <p>
-                Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
+                Alternatively, a single <code>&lt;section&gt;</code> also displays full width.
             </p>
         </section>
         <footer>
@@ -208,7 +205,7 @@
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
-            Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
+            Alternatively, a single <code>&lt;section&gt;</code> also displays full width.
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -222,7 +219,7 @@
             Two equal columns with two nested equal columns
         </h1>
         <p>
-            Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. Nesting makes use of the <code>&lt;article&gt;</code> and <code>section</code> elements.
+            Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column.
         </p>
         <p>
             On orientation portrait, the columns will automatically stack.
@@ -325,28 +322,8 @@
             Column clearing
         </h1>
         <p>
-            Clearing a <code>&lt;section&gt;</code> makes use of <code>hr</code> as well as <code>header, footer, nav, h1, h2, h3, h4, h5, h6, p</code> elements.
+            Traditional HTML & CSS column/grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
         </p>
-        <blockquote>
-            <p>
-                <code>&lt;hr&gt;</code> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
-            </p>
-            <p>
-                <code>&lt;header&gt;</code> defines the header of a page or section.
-            </p>
-            <p>
-                <code>&lt;footer&gt;</code> defines the footer for a page or section.
-            </p>
-            <p>
-                <code>&lt;nav&gt;</code> defines a section that contains only navigation links.
-            </p>
-            <p>
-                <code>&lt;h1, h2, h3, h4, h5 ,h6&gt;</code> briefly describes the topic of the section.
-            </p>
-            <p>
-                <code>&lt;p&gt;</code> defines a paragraph of text and is left justified.
-            </p>
-        </blockquote>
     </article>
     <hr>
 
@@ -609,21 +586,6 @@
     <h2>
         Et cetera
     </h2>
-    </article>
-    <hr />
-
-    <article>
-        <h1> Offset columns </h1>
-        <p>
-            Individual sizing makes use of design patterns (with flexible box properties) and
-            <code>width, min-width, max-width</code>
-            properties.
-        </p>
-        <p>
-            Alternatively, individual
-            <code>&lt;div&gt;</code>
-            elements can be offset relative to the parent container.
-        </p>
     </article>
 </main>
 <footer class="text-center content-padding-large">

@@ -51,67 +51,6 @@
             Ambient makes use of HTML5 elements & CSS3 properties to convey a consistent visual structure within a semantic grid. The semantic grid is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout that is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> elements.
             Here's how the Ambient semantic grid works:
         </p>
-        <table>
-            <thead>
-            <tr>
-                <th>Element</th>
-                <th>Layout</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th><code>body</code></th>
-                <td>View</td>
-                <td>Represents the content.</td>
-            </tr>
-            <tr>
-                <th><code>header</code></th>
-                <td>Row</td>
-                <td>Base element which defines the header for a page or section.</td>
-            </tr>
-            <tr>
-                <th><code>nav</code></th>
-                <td>Row</td>
-                <td>Groups navigation links on one horizontal line.</td>
-            </tr>
-            <tr>
-                <th><code>main</code></th>
-                <td>100%</td>
-                <td>Defines the main or important content.</td>
-            </tr>
-            <tr>
-                <th><code>h1,h2,h3,h4,h5,h6</code></th>
-                <td>100%</td>
-                <td>Base elements which briefly describes the topic of the section it introduces.</td>
-            </tr>
-            <tr>
-                <th><code>article</code></th>
-                <td>Row</td>
-                <td>Groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
-            </tr>
-            <tr>
-                <th><code>section</code></th>
-                <td>Column</td>
-                <td>Base element which divides an article content into sections (columns).</td>
-            </tr>
-            <tr>
-                <th><code>aside</code></th>
-                <td>Column</td>
-                <td>Base element which extends content into sections (columns) loosely related to the page.</td>
-            </tr>
-            <tr>
-                <th><code>footer</code></th>
-                <td>100%</td>
-                <td>Base element which defines the footer for a page or section.</td>
-            </tr>
-            <tr>
-                <th><code>hr</code></th>
-                <td>100%</td>
-                <td>Base element which represents a thematic break and <i>optionally</i> defines framing.</td>
-            </tr>
-            </tbody>
-        </table>
         <section class="content-padding-small">
         <h1>
             <i class="fa fa-th"></i> Grid examples
@@ -125,9 +64,6 @@
                 </h1>
                 <p>
                     Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
-                </p>
-                <p>
-                    Equal columns make use of the <code>&lt;section&gt;</code> element and defines a section in a document.
                 </p>
                 <section>
                     <p>
@@ -174,7 +110,7 @@
                     Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
-                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
                 </p>
                 <aside>
                     <p>
@@ -221,7 +157,7 @@
                     Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
-                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
                 </p>
                 <section>
                     <p>
@@ -258,7 +194,7 @@
                     Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
-                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20. Unequal columns make use of the <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> elements.
+                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
                 </p>
                 <aside>
                     <p>
@@ -292,11 +228,11 @@
                     Full width, single column
                 </h1>
                 <p>
-                    An <code>&lt;article&gt;</code> displays full width by default and defines self-contained content that could exist independently of the rest of the content.
+                    An <code>&lt;article&gt;</code> displays full width.
                 </p>
                 <section>
                     <p>
-                        Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
+                        Alternatively, a single <code>&lt;section&gt;</code> also displays full width.
                     </p>
                 </section>
                 <footer>
@@ -316,7 +252,7 @@
                     Two equal columns with two nested equal columns
                 </h1>
                 <p>
-                    Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. Nesting makes use of the <code>&lt;article&gt;</code> and <code>section</code> elements.
+                    Infinite nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column.
                 </p>
                 <p>
                     On orientation portrait, the columns will automatically stack.
@@ -416,28 +352,8 @@
                     Column clearing
                 </h1>
                 <p>
-                    Clearing a <code>&lt;section&gt;</code> makes use of <code>hr</code> as well as <code>header, footer, nav, h1, h2, h3, h4, h5, h6, p</code> elements.
+                    Traditional HTML & CSS column/grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
                 </p>
-                <blockquote>
-                    <p>
-                        <code>&lt;hr&gt;</code> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section).
-                    </p>
-                    <p>
-                        <code>&lt;header&gt;</code> defines the header of a page or section.
-                    </p>
-                    <p>
-                        <code>&lt;footer&gt;</code> defines the footer for a page or section.
-                    </p>
-                    <p>
-                        <code>&lt;nav&gt;</code> defines a section that contains only navigation links.
-                    </p>
-                    <p>
-                        <code>&lt;h1, h2, h3, h4, h5 ,h6&gt;</code> briefly describes the topic of the section.
-                    </p>
-                    <p>
-                        <code>&lt;p&gt;</code> defines a paragraph of text and is left justified.
-                    </p>
-                </blockquote>
             </article>
 
             <article am-layout="display-grid">
@@ -697,19 +613,89 @@
 &lt;/article&gt;
                 </code></pre>
             </article>
-            <article>
-                <h1>
-                    Offset columns
-                </h1>
-                <p>
-                    Individual sizing makes use of design patterns (with flexible box properties) and <code>width, min-width, max-width</code> properties.
-                </p>
-                <p>
-                    Alternatively, individual <code>&lt;div&gt;</code> elements can be offset relative to the parent container.
-                </p>
-            </article>
         </section>
         <section class="content-padding-small">
+        <table>
+            <thead>
+            <tr>
+                <th>Element</th>
+                <th>Grid</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th><code>body</code></th>
+                <td>Column</td>
+                <td>Represents the content.</td>
+            </tr>
+            <tr>
+                <th><code>header</code></th>
+                <td>Row</td>
+                <td>Base element which defines the header for a page or section.</td>
+            </tr>
+            <tr>
+                <th><code>nav</code></th>
+                <td>Row</td>
+                <td>Base element which groups navigation links on one horizontal line.</td>
+            </tr>
+            <tr>
+                <th><code>main</code></th>
+                <td>100%</td>
+                <td>Defines the main or important content.</td>
+            </tr>
+            <tr>
+                <th><code>h1,h2,h3,h4,h5,h6</code></th>
+                <td>100%</td>
+                <td>Briefly describes the topic of the section it introduces.</td>
+            </tr>
+            <tr>
+                <th><code>article</code></th>
+                <td>Row</td>
+                <td>Base element which groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
+            </tr>
+            <tr>
+                <th><code>section</code></th>
+                <td>Column</td>
+                <td>Base element which divides an article content into equal sections (columns).</td>
+            </tr>
+            <tr>
+                <th><code>aside</code></th>
+                <td>Column</td>
+                <td>Base element which extends content into sections (columns) loosely related to the page.</td>
+            </tr>
+            <tr>
+                <th><code>footer</code></th>
+                <td>100%</td>
+                <td>Defines the footer for a page or section.</td>
+            </tr>
+            <tr>
+                <th><code>hr</code></th>
+                <td>100%</td>
+                <td>Represents a thematic break and <i>optionally</i> defines framing.</td>
+            </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <p>
+                            <strong>Column clearing</strong>
+                        </p>
+                        <p>
+                            Traditional HTML & CSS column/grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Infinitely nestable, gutterless mixed grid layouts</strong>
+                        </p>
+                        <p>
+                            This means you can consistently build UI into simple or complex layouts.
+                        </p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
             <h1>
                 <i class="fa fa-html5"></i> HTML5
             </h1>
@@ -780,70 +766,9 @@
             <h1>
                 <i class="fa fa-css3"></i> CSS3
             </h1>
-            <blockquote>
-                <p>
-                    <code>&lt;body&gt;</code>
-                </p>
-                <p>
-                    <code>display: flex; flex-direction: column;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;section&gt;</code>
-                </p>
-                <p>
-                    <code>flex: 1 1 8.3333%;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;nav&gt;</code>
-                </p>
-                <p>
-                    <code>display: flex; flex-flow: row wrap;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;article&gt;</code>
-                </p>
-                <p>
-                    <code>display: flex; flex-flow: row wrap;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;aside&gt;</code>
-                </p>
-                <p>
-                    <code>flex: 0 0 20%;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;header&gt;</code>
-                </p>
-                <p>
-                    <code> display: flex; flex-flow: row wrap;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;footer&gt;</code>
-                </p>
-                <p>
-                    <code>order: 2;</code>
-                </p>
-            </blockquote>
-            <blockquote>
-                <p>
-                    <code>&lt;main&gt;</code>
-                </p>
-                <p>
-                    <code>flex: 1 0 auto;</code>
-                </p>
-            </blockquote>
+            <p>
+                The semantic grid is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout.
+            </p>
             <h2>
                 Normalize.css
             </h2>
