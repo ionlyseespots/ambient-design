@@ -6,9 +6,9 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Grid examples for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../../less/ambient.min.css">
 </head>
-<body am-layout="display-grid">
+<body>
 <header>
     <h1>
         <a href="../../index.html" title="index">Ambient</a>
@@ -26,7 +26,7 @@
 <hr />
 
 <main role="main">
-    <article>
+    <article am-layout="outline">
         <h1>
             Three equal columns
         </h1>
@@ -70,7 +70,7 @@
         </code></pre>
         </footer>
     </article>
-    <article>
+    <article am-layout="outline">
         <h1>
             Three unequal columns
         </h1>
@@ -117,7 +117,7 @@
             </code></pre>
         </footer>
     </article>
-    <article>
+    <article am-layout="outline">
         <h1>
             Two unequal columns with content on the left
         </h1>
@@ -154,7 +154,7 @@
             </code></pre>
         </footer>
     </article>
-    <article>
+    <article am-layout="outline">
         <h1>
             Two unequal columns with content on the right
         </h1>
@@ -191,9 +191,9 @@
             </code></pre>
         </footer>
     </article>
-    <article>
+    <article am-layout="outline">
         <h1>
-            Full width, single column
+            Full width single column
         </h1>
         <p>
             An <code>&lt;article&gt;</code> displays full width.
@@ -217,15 +217,15 @@
     </article>
     <hr>
 
-    <article am-layout="gutter">
+    <article am-layout="outline">
         <h1>
-            Two equal columns with two nested equal columns
+            Complex nested equal columns
         </h1>
         <p>
             Nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. On orientation portrait, the columns will automatically stack.
         </p>
         <p>
-            <strong>Infinitely nestable, gutterless mixed grid layouts</strong>
+            <strong>Infinitely nestable gutterless mixed grid layouts</strong>
         </p>
         <p>
             This means you can consistently build UI into simple or complex layouts.
@@ -333,7 +333,7 @@
     </article>
     <hr>
 
-    <article>
+    <article am-layout="outline"
         <h1>
             Example columns
         </h1>

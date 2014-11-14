@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Design patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css//ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -35,7 +35,7 @@
         Overview
     </h2>
     <p>
-        Attribute selectors | UI elements | UX shells | Navs | Form states | Angular
+        Attribute selectors | Components | Layouts | Navs | Forms | Angular
     </p>
     <article>
         <section>
@@ -59,7 +59,6 @@
         <h1>
             Attribute selectors
         </h1>
-
         <p>
             It is possible to style HTML elements that have specific attributes and values, not just class and id.
         </p>
@@ -82,10 +81,7 @@
                 </p>
             </blockquote>
             <p>
-                Because we define our own custom attribute, we can prescribe design patterns <strong>without needing to use or duplicate class names for layout.</strong>
-            </p>
-            <p>
-                There are 4 distinct design patterns.
+                Because we define our own custom attribute, we can prescribe base design patterns <strong>without needing to use or duplicate class names for layout.</strong>
             </p>
         </section>
         <section class="text-padding-small">
@@ -127,6 +123,86 @@
     </article>
     <hr />
 
+    <h2>
+        Initial properties
+    </h2>
+    <p>
+        If needed, initial properties such as margin, padding, and vertical and relative alignment can be extended these to any base design pattern.
+    </p>
+
+    <article am-layout am-padding>
+        <section>
+            <h3>
+                Margin
+            </h3>
+            <p>
+                To create margin with the base layout design pattern, extend the attribute <code>am-margin</code> to any design pattern.
+            </p>
+            <blockquote>
+                <p>
+                    If needed, set a specific direction as
+                </p>
+                <p>
+                    <code>am-margin="top"</code>
+                </p>
+                <p>
+                    <code>am-margin="right"</code>
+                </p>
+                <p>
+                    <code>am-margin="bottom"</code>
+                </p>
+                <p>
+                    <code>am-margin="left"</code>
+                </p>
+            </blockquote>
+        </section>
+        <section>
+            <h3>
+                Padding
+            </h3>
+            <p>
+                To create padding with the base layout design pattern, extend the attribute <code>am-padding</code> to any design pattern.
+            </p>
+            <blockquote>
+                <p>
+                    If needed, set a specific direction as
+                </p>
+                <p>
+                    <code>am-padding="top"</code>
+                </p>
+                <p>
+                    <code>am-padding="right"</code>
+                </p>
+                <p>
+                    <code>am-padding="bottom"</code>
+                </p>
+                <p>
+                    <code>am-padding="left"</code>
+                </p>
+            </blockquote>
+        </section>
+        <section>
+            <h3>
+                Vertical alignment
+            </h3>
+            <p>
+                To create vertical alignment with the base layout design pattern, extend the attribute <code>am-vertical</code> to any design pattern.
+            </p>
+        </section>
+        <section>
+            <h3>
+                Relative alignment
+            </h3>
+            <p>
+                To create relative alignment with the base layout design pattern, extend the attribute <code>am-relative</code> to any design pattern.
+            </p>
+        </section>
+
+    </article>
+    <hr />
+
+
+
     <article id="ui-elements">
         <h1 class="text-uppercase">
             <i class="fa fa-cube"></i> Components
@@ -144,22 +220,109 @@
         <p>
             A set of design patterns for the visual structure of HTML section elements, attributes & values. This is the base design pattern for layouts and component containers.
         </p>
+
+
         <h2>
-            Gutters
+            Outline the layout
         </h2>
-        <h3>
-            Gutter margin
-        </h3>
+        <p>
+            If needed, to display an outline of your UI with the base layout design pattern, add the attribute <code>am-layout="outline"</code> to any article.
+        </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Gutter margin
+                    Outline
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="gutter-margin"&gt;</code>
+                    <code>&lt;article am-layout="outline"&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="display-grid gutter-margin">
+            <article am-layout="outline">
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+            </article>
+        </section>
+        <section class="text-padding-small">
+            <pre>
+&lt;article am-layout="outline"&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
+
+
+
+
+
+
+
+        <h2>
+            Gutters
+        </h2>
+        <p>
+            Initial columns are gutterless.
+        </p>
+        <h3>
+            Gutters with margin
+        </h3>
+        <p>
+            To create gutter margin with the base layout design pattern, add the attribute <code>am-layout="gutter"</code> to any article and extend the attribute <code>am-margin</code>.
+        </p>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Margin
+                </h1>
+                <p>
+                    <code>&lt;article am-layout="gutter" am-margin&gt;</code>
+                </p>
+            </blockquote>
+            <article am-layout="gutter outline" am-margin>
                 <section>
                     <P>
                         1
@@ -179,7 +342,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-layout="gutter-margin"&gt;
+&lt;article am-layout="gutter" am-margin&gt;
     &lt;section&gt;
         &lt;p&gt;
             1
@@ -199,18 +362,18 @@
             </pre>
         </section>
         <h3>
-            Gutter padding
+            Gutters with padding
         </h3>
         <section class="text-padding-small">
             <blockquote>
-                <h1>
-                    Gutter padding
+                <h1 gutter="padding">
+                    Padded
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="gutter-padding"&gt;</code>
+                    <code>&lt;article am-layout="gutter" am-padding&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="display-grid gutter-padding">
+            <article am-layout="gutter outline" am-padding>
                 <section>
                     <P>
                         1
@@ -230,7 +393,146 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-layout="gutter-padding"&gt;
+&lt;article am-layout="gutter" am-padding&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            2
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            3
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
+        <h2>
+            Complex gutters
+        </h2>
+        <h3>
+            Complex nested gutters with margin and padding
+        </h3>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Margin + padding
+                </h1>
+                <p>
+                    <code>&lt;article am-layout="gutter" am-margin&gt;</code>
+                </p>
+            </blockquote>
+            <article am-layout="gutter outline" am-margin>
+                <section>
+                    <P>
+                        1
+                    </P>
+                    <article am-layout="gutter outline" am-padding>
+                        <section>
+                            <P>
+                                1
+                            </P>
+                        </section>
+                        <section>
+                            <P>
+                                2
+                            </P>
+                        </section>
+                        <section>
+                            <P>
+                                3
+                            </P>
+                        </section>
+                    </article>
+                </section>
+                <section>
+                    <P>
+                        2
+                    </P>
+                </section>
+                <section>
+                    <P>
+                        3
+                    </P>
+                </section>
+            </article>
+        </section>
+        <section class="text-padding-small">
+            <pre>
+&lt;article am-layout="gutter" am-margin&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            2
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            3
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
+        <h3>
+            Complex nested gutters with padding and margin
+        </h3>
+        <section class="text-padding-small">
+            <blockquote>
+                <h1>
+                    Padding + margin
+                </h1>
+                <p>
+                    <code>&lt;article am-layout="gutter" am-margin&gt;</code>
+                </p>
+            </blockquote>
+            <article am-layout="gutter outline" am-padding>
+                <section>
+                    <P>
+                        1
+                    </P>
+                    <article am-layout="gutter outline" am-margin>
+                        <section>
+                            <P>
+                                1
+                            </P>
+                        </section>
+                        <section>
+                            <P>
+                                2
+                            </P>
+                        </section>
+                        <section>
+                            <P>
+                                3
+                            </P>
+                        </section>
+                    </article>
+                </section>
+                <section>
+                    <P>
+                        2
+                    </P>
+                </section>
+                <section>
+                    <P>
+                        3
+                    </P>
+                </section>
+            </article>
+        </section>
+        <section class="text-padding-small">
+            <pre>
+&lt;article am-layout="gutter" am-padding&gt;
     &lt;section&gt;
         &lt;p&gt;
             1
@@ -256,18 +558,18 @@
             Horizontal cards
         </h3>
         <p>
-            To create horizontal cards with the base layout design pattern, add the attribute <code>am-layout="card horizontal"</code> to any article.
+            To create horizontal cards with the base layout design pattern, add the attribute <code>am-layout="card"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Horizontal cards
+                    Horizontal
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="card horizontal"&gt;</code>
+                    <code>&lt;article am-layout="card"&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card horizontal">
+            <article am-layout="card" am-horizontal>
                 <section>
                     <h1>
                         This is a card
@@ -296,7 +598,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-layout="card horizontal"&gt;
+&lt;article am-layout="card"&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -325,10 +627,10 @@
             </pre>
         </section>
         <h3>
-            Vertical cards
+            Vertical
         </h3>
         <p>
-            To create vertical cards with the base layout design pattern, add the attribute <code>am-layout="card vertical"</code> to any article.
+            To create vertical cards with the base layout design pattern, add the attribute <code>am-layout="card"</code> to any article and extend the attribute <code>am-vertical</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -336,10 +638,10 @@
                     vertical cards
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="card vertical"&gt;</code>
+                    <code>&lt;article am-layout="card" am-vertical&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card vertical">
+            <article am-layout="card" am-vertical>
                 <section>
                     <h1>
                         This is a card
@@ -368,7 +670,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-layout="card vertical"&gt;
+&lt;article am-layout="card" am-vertical&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card
@@ -405,13 +707,13 @@
         <section class="text-padding-small">
             <blockquote>
                 <h1>
-                    Relative cards
+                    Relative
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="card relative"&gt;</code>
+                    <code>&lt;article am-layout="card" am-relative&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card relative">
+            <article am-layout="card" am-relative>
                 <section>
                     <h1>
                         This is a card
@@ -440,7 +742,7 @@
         </section>
         <section class="text-padding-small">
             <pre>
-&lt;article am-layout="card relative"&gt;
+&lt;article am-layout="card" am-relative&gt;
     &lt;section&gt;
         &lt;h1&gt;
             This is a card

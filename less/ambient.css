@@ -523,6 +523,36 @@ footer {
     position: static;
   }
 }
+article section[am-component][am-padding] {
+  padding: 1vw;
+}
+article section[am-component][am-padding~="top"] {
+  padding-top: 1vw;
+}
+article section[am-component][am-padding~="right"] {
+  padding-right: 1vw;
+}
+article section[am-component][am-padding~="bottom"] {
+  padding-bottom: 1vw;
+}
+article section[am-component][am-padding~="left"] {
+  padding-left: 1vw;
+}
+article section[am-component][am-margin] {
+  margin: 1vw;
+}
+article section[am-component][am-margin~="top"] {
+  margin-top: 1vw;
+}
+article section[am-component][am-margin~="right"] {
+  margin-right: 1vw;
+}
+article section[am-component][am-margin~="bottom"] {
+  margin-bottom: 1vw;
+}
+article section[am-component][am-margin~="left"] {
+  margin-left: 1vw;
+}
 /**
 * multi-column shell [holy grail]
 */
@@ -701,75 +731,125 @@ footer {
   border-radius: 5px;
   padding: 2vw 3vw;
 }
-[am-layout~="gutter-margin"] > section {
-  margin-left: 1em;
-}
-[am-layout~="gutter-margin"] > section:first-of-type,
-[am-layout~="gutter-margin"] header + section,
-[am-layout~="gutter-margin"] nav + section,
-[am-layout~="gutter-margin"] footer + section,
-[am-layout~="gutter-margin"] h1 + section,
-[am-layout~="gutter-margin"] h2 + section,
-[am-layout~="gutter-margin"] h3 + section,
-[am-layout~="gutter-margin"] h4 + section,
-[am-layout~="gutter-margin"] h5 + section,
-[am-layout~="gutter-margin"] h6 + section,
-[am-layout~="gutter-margin"] hr + section,
-[am-layout~="gutter-margin"] p + section {
-  margin-left: 0;
-}
-[am-layout~="gutter-padding"] > section {
-  padding-left: 1em;
-}
-[am-layout~="gutter-padding"] header + section,
-[am-layout~="gutter-padding"] nav + section,
-[am-layout~="gutter-padding"] footer + section,
-[am-layout~="gutter-padding"] h1 + section,
-[am-layout~="gutter-padding"] h2 + section,
-[am-layout~="gutter-padding"] h3 + section,
-[am-layout~="gutter-padding"] h4 + section,
-[am-layout~="gutter-padding"] h5 + section,
-[am-layout~="gutter-padding"] h6 + section,
-[am-layout~="gutter-padding"] hr + section,
-[am-layout~="gutter-padding"] p + section {
-  padding-left: 0;
-}
-[am-layout~="display-grid"] section,
-[am-layout~="display-grid"] aside {
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-}
-[am-layout~="card"] > section {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  margin-bottom: 1vw;
+article[am-layout][am-padding] {
   padding: 1vw;
 }
-[am-layout~="vertical"] > section {
+article[am-layout][am-padding~="top"] {
+  padding-top: 1vw;
+}
+article[am-layout][am-padding~="right"] {
+  padding-right: 1vw;
+}
+article[am-layout][am-padding~="bottom"] {
+  padding-bottom: 1vw;
+}
+article[am-layout][am-padding~="left"] {
+  padding-left: 1vw;
+}
+article[am-layout][am-margin] {
+  margin: 1vw;
+}
+article[am-layout][am-margin~="top"] {
+  margin-top: 1vw;
+}
+article[am-layout][am-margin~="right"] {
+  margin-right: 1vw;
+}
+article[am-layout][am-margin~="bottom"] {
+  margin-bottom: 1vw;
+}
+article[am-layout][am-margin~="left"] {
+  margin-left: 1vw;
+}
+article[am-layout][am-vertical] > section {
   -webkit-flex-basis: 100%;
   -moz-flex-basis: 100%;
   -ms-flex-basis: 100%;
   flex-basis: 100%;
 }
-[am-layout~="horizontal"] > section {
-  margin-left: 1vw;
-}
-[am-layout~="horizontal"] > section:first-child {
-  margin-left: 0;
-}
-[am-layout~="relative"] > section {
+article[am-layout][am-relative] > section {
   -webkit-flex-basis: 33.333333%;
   -moz-flex-basis: 33.333333%;
   -ms-flex-basis: 33.333333%;
   flex-basis: 33.333333%;
 }
-[am-layout~="relative"] > section:nth-of-type(even) {
+article[am-layout][am-relative] > section:nth-of-type(even) {
+  margin-left: 1vw;
+}
+article[am-layout~="gutter"][am-padding] {
+  padding: 0;
+}
+article[am-layout~="gutter"][am-padding] > section {
+  padding-left: 1em;
+}
+article[am-layout~="gutter"][am-padding] > section:first-of-type {
+  margin-left: -1em;
+}
+article[am-layout~="gutter"][am-margin] {
+  margin: 0;
+}
+article[am-layout~="gutter"][am-margin] > section {
+  margin-left: 1em;
+}
+article[am-layout~="gutter"][am-margin] > section:first-of-type,
+article[am-layout~="gutter"][am-margin] header + section,
+article[am-layout~="gutter"][am-margin] nav + section,
+article[am-layout~="gutter"][am-margin] footer + section,
+article[am-layout~="gutter"][am-margin] h1 + section,
+article[am-layout~="gutter"][am-margin] h2 + section,
+article[am-layout~="gutter"][am-margin] h3 + section,
+article[am-layout~="gutter"][am-margin] h4 + section,
+article[am-layout~="gutter"][am-margin] h5 + section,
+article[am-layout~="gutter"][am-margin] h6 + section,
+article[am-layout~="gutter"][am-margin] hr + section,
+article[am-layout~="gutter"][am-margin] p + section {
+  margin-left: 0;
+}
+article[am-layout~="outline"][am-padding] p {
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+article[am-layout~="outline"] section,
+article[am-layout~="outline"] aside {
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+article[am-layout~="card"] > section {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+article[am-layout~="card"][am-horizontal] > section {
+  margin-left: 1vw;
+}
+article[am-layout~="card"][am-horizontal] > section:first-child {
+  margin-left: 0;
+}
+article[am-layout~="card"][am-vertical] > section {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  margin-left: 0;
+}
+article[am-layout~="card"][am-relative] > section {
+  -webkit-flex-basis: 33.333333%;
+  -moz-flex-basis: 33.333333%;
+  -ms-flex-basis: 33.333333%;
+  flex-basis: 33.333333%;
+  margin-left: 0;
+}
+article[am-layout~="card"][am-relative] > section:nth-of-type(even) {
   margin-left: 1vw;
 }
 @media (orientation: portrait) {
-  [am-layout~="gutter-margin"] section {
+  article[am-layout~="gutter"][am-padding] > section {
+    padding-left: 0;
+  }
+  article[am-layout~="gutter"][am-padding] > section:first-of-type {
     margin-left: 0;
   }
-  [am-layout~="horizontal"] > section {
+  article[am-layout~="gutter"][am-margin] > section {
     margin-left: 0;
   }
 }
