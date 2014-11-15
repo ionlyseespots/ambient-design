@@ -162,73 +162,114 @@
 
 article[am-layout] {
   &[am-padding] {
-    padding: 1vw;
-  }
-  &[am-padding~="top"] {
     padding-top: 1vw;
-  }
-  &[am-padding~="right"] {
     padding-right: 1vw;
-  }
-  &[am-padding~="bottom"] {
     padding-bottom: 1vw;
-  }
-  &[am-padding~="left"] {
     padding-left: 1vw;
   }
-  //  extend initial padding size value as:
-  //  &[am-padding~="VALUENAME"] {
-  //    padding:VALUESIZE;
-  //  }
+  &[am-padding="top"] {
+    padding-top: 1vw;
+  }
+  &[am-padding="right"] {
+    padding-right: 1vw;
+  }
+  &[am-padding="bottom"] {
+    padding-bottom: 1vw;
+  }
+  &[am-padding="left"] {
+    padding-left: 1vw;
+  }
+  &[am-padding="small"] {
+    padding-top: .5vw;
+    padding-right: .5vw;
+    padding-bottom: 5vw;
+    padding-left: .5vw;
+  }
+  &[am-padding="medium"] {
+    padding-top: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 1.5vw;
+    padding-left: 1.5vw;
+  }
+  &[am-padding="large"] {
+    padding-top: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 3vw;
+  }
+
   &[am-margin] {
-    margin: 1vw;
-  }
-  &[am-margin~="top"] {
     margin-top: 1vw;
-  }
-  &[am-margin~="right"] {
     margin-right: 1vw;
-  }
-  &[am-margin~="bottom"] {
     margin-bottom: 1vw;
-  }
-  &[am-margin~="left"] {
     margin-left: 1vw;
   }
-  //  extend initial margin size values as"
-  //  &[am-margin~="VALUENAME"] {
-  //       margin:VALUESIZE;
-  //  }
+  &[am-margin="larger"] {
+    margin-top: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+  }
+  &[am-margin="top"] {
+    margin-top: 1vw;
+  }
+  &[am-margin="right"] {
+    margin-right: 1vw;
+  }
+  &[am-margin="bottom"] {
+    margin-bottom: 1vw;
+  }
+  &[am-margin="left"] {
+    margin-left: 1vw;
+  }
+  &[am-margin="small"] {
+    margin-top: .5vw;
+    margin-right: .5vw;
+    margin-bottom: 5vw;
+    margin-left: .5vw;
+  }
+  &[am-margin="medium"] {
+    margin-top: 1.5vw;
+    margin-right: 1.5vw;
+    margin-bottom: 1.5vw;
+    margin-left: 1.5vw;
+  }
+  &[am-margin="large"] {
+    margin-top: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+  }
 
   &[am-vertical] {
     & > section {
       .flex-basis(100%);
+      margin-left: 0;
     }
   }
 
   &[am-relative] {
     & > section {
       .flex-basis( 33.333333%);
+      margin-left: 0;
       &:nth-of-type(even) {
         margin-left: 1vw;
       }
     }
   }
-
 }
 
 article[am-layout~="gutter"] {
- &[am-padding] {
-   padding: 0;
-   & > section {
-     padding-left:1em;
-   }
-   & > section:first-of-type {
-     margin-left:-1em;
-   }
- }
-
-  &[am-margin] {
+  &[am-gutter="padding"] {
+    padding: 0;
+    & > section {
+      padding-left:1em;
+    }
+    & > section:first-of-type {
+      margin-left:-1em;
+    }
+  }
+  &[am-gutter="margin"] {
     margin: 0;
     & > section {
       margin-left:1em;
@@ -240,7 +281,7 @@ article[am-layout~="gutter"] {
 }
 
 article[am-layout~="outline"] {
-  &[am-padding] p {
+  &[am-gutter~="padding"] p {
     background-color: rgba(86, 61, 124, 0.15);
     border: 1px solid rgba(86, 61, 124, 0.2);
   }
@@ -255,39 +296,16 @@ article[am-layout~="card"] {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     margin-bottom: 1vw;
     padding: 1vw;
-
-  }
-
-  &[am-horizontal] {
-    & > section {
-      margin-left: 1vw;
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-
-  &[am-vertical] {
-    & > section {
-      .flex-basis(100%);
+    margin-left: 1vw;
+    &:first-child {
       margin-left: 0;
-    }
-  }
-
-  &[am-relative] {
-    & > section {
-      .flex-basis( 33.333333%);
-      margin-left: 0;
-      &:nth-of-type(even) {
-        margin-left: 1vw;
-      }
     }
   }
 }
 
 @media (orientation:portrait){
   article[am-layout~="gutter"] {
-    &[am-padding] {
+    &[am-gutter~="padding"] {
       & > section {
         padding-left:0;
       }
@@ -296,10 +314,16 @@ article[am-layout~="card"] {
       }
     }
 
-    &[am-margin] {
+    &[am-gutter~="margin"] {
       & > section {
         margin-left:0;
       }
+    }
+  }
+
+  article[am-layout~="card"] {
+    & > section {
+margin-left: 0;
     }
   }
 }

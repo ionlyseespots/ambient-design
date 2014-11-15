@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Ambient is a methodology for creating layout.</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="dist/css/ambient.min.css">
+    <link rel="stylesheet" href="less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -24,7 +24,7 @@
     <a href="https://github.com/ionlyseespots/ambient-design"><strong>GitHub</strong></a>
 </nav>
 <main role="main">
-    <article class="text-center bg-primary content-padding-large">
+    <article am-layout am-padding="large" class="text-center bg-primary">
         <h1 class="text-padding-medium">
             Ambient
         </h1>
@@ -34,7 +34,7 @@
             <a href="design-patterns/index.html#navs"><i class="fa fa-compass fa-4x"></i><br /><span>Navs</span></a>
             <a href="design-patterns/index.html#form-states"><i class="fa fa-tasks fa-4x"></i><br /><span>Forms</span></a>
         </nav>
-        <footer class="content-padding-small">
+        <footer>
             <a href="examples/grid/index.html" class="btn btn-default ghost">View grid examples</a>
             <a href="https://github.com/ionlyseespots/ambient-design" class="btn btn-default ghost">View on GitHub</a>
             <h1 class="text-padding-large">
@@ -43,7 +43,7 @@
         </footer>
     </article>
 
-    <article class="text-center bg-secondary content-padding-large">
+    <article am-layout am-padding="large" class="text-center bg-secondary">
         <h1 class="text-padding-small">
             Features
         </h1>
@@ -52,7 +52,7 @@
             <br />
             which is simple to use, extendable and easy to customize.
         </p>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h1>
                 LESS
             </h1>
@@ -60,7 +60,7 @@
                 Built with LESS to write well-structured, extendable code which is easy to maintain.
             </p>
         </section>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h1>
                 Flexbox
             </h1>
@@ -68,7 +68,7 @@
                 A very basic flexbox grid and style with a clean separation of content and presentation.
             </p>
         </section>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h1>
                 Patterns
             </h1>
@@ -76,7 +76,7 @@
                 A collection of design patterns using consistent and conflict-free namespaces.
             </p>
         </section>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h1>
                 Responsive
             </h1>
@@ -85,7 +85,7 @@
             </p>
         </section>
     </article>
-    <article class="text-center content-padding-large">
+    <article am-layout am-padding="large" class="text-center">
         <h1 class="text-center">
             <i class="fa fa-html5"></i><i class="fa fa-css3"></i>
             <br />
@@ -94,10 +94,19 @@
         <p class="text-padding-small">
             Ambient makes use of HTML5 elements & CSS3 properties to convey a consistent visual structure within a semantic grid.
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid.
-            The semantic grid avoids presentational CSS classes in the HTML markup itself.
+            The semantic grid avoids grid CSS classes in the HTML markup itself.
+        </p>
+        <h2>
+            Background
+        </h2>
+        <p>
+            Sometimes I have a UI that plays well with a traditional grid column paradigm but sometimes I want to mix and match.
+            This means learning grid classes for structure with floats, columns and media queries.
+            I liked reusing classes for design. Other times I became frustrated reusing classes for structure that were not very clear.
+            I wanted to build a grid that could layout UI for the unpredictable. The grid should be should be dynamic, and fit any range of viewports.
         </p>
     </article>
-    <article class="text-center content-padding-large bg-secondary">
+    <article am-layout am-padding="large" class="text-center bg-secondary">
         <h1 class="text-padding-small">
             Open Source
         </h1>
@@ -106,7 +115,7 @@
             <br />
             while also maintaining a separation from content that adapts across different devices.
         </p>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h2>
                 MIT License
             </h2>
@@ -114,7 +123,7 @@
                 Ambient is free to use, copy, merge, publish and distribute without any limitations. This content is released under the <a href="https://github.com/ionlyseespots/ambient-design/blob/master/LICENSE">MIT License</a>.
             </p>
         </section>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h2>
                 Simple is beautiful
             </h2>
@@ -122,7 +131,7 @@
                 Developers can focus on HTML for a consistent visual structure and designers can focus on extending design patterns for content.
             </p>
         </section>
-        <section class="content-padding-large">
+        <section am-component am-padding="large">
             <h2>
                 Early & Active Development
             </h2>
@@ -132,7 +141,7 @@
         </section>
     </article>
 </main>
-<footer class="text-center content-padding-large">
+<footer class="text-center">
     <p>
         Ambient makes use of HTML5 elements & CSS3 properties to convey a consistent visual structure within a semantic grid.
     </p>

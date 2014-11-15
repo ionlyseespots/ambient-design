@@ -18,7 +18,7 @@ Install with [Bower] (http://bower.io/): bower install ambient
 
 Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information, templates and examples.
 
-> Please note that source code and documentation is the most current development (unstable) version of Ambient
+> Please note that source is the most current development (unstable) version of Ambient
 
 ## Development
 
@@ -38,8 +38,26 @@ Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambie
 
 ## Background
 
-Ambient is a methodology for creating layout.
+Sometimes I have a UI that plays well with a traditional grid column paradigm but sometimes I want to mix and match. This means learning grid classes for structure with floats, columns and media queries.
 
-This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). The semantic grid avoids presentational CSS classes in the HTML markup itself.
+I liked reusing classes for design. Other times I became frustrated reusing classes for structure that were not very clear. I wanted to build a grid that could layout UI for the unpredictable. The grid should be should be dynamic, and fit any range of viewports. 
+
+This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). Ambient avoids grid CSS classes in the HTML markup itself.
 
 While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic grid.
+
+## Inspiration
+
+* http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* http://www.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/
+* http://philipwalton.github.io/solved-by-flexbox/
+
+* http://semantic.gs/
+* http://oocss.org/
+
+* http://www.google.com/design/spec/material-design/introduction.html
+
+* http://getbootstrap.com/
+
+* https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+* https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes

@@ -1,31 +1,47 @@
 article section[am-component]{
   &[am-padding] {
-    padding:1vw;
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1vw;
   }
-//  extend initial padding size value as:
-//  &[am-padding~="VALUENAME"] {
-//    padding:VALUESIZE;
-//  }
-  &[am-padding~="top"] {
+  &[am-padding="top"] {
     padding-top:1vw;
   }
-  &[am-padding~="right"] {
+  &[am-padding="right"] {
     padding-right:1vw;
   }
-  &[am-padding~="bottom"] {
+  &[am-padding="bottom"] {
     padding-bottom:1vw;
   }
-  &[am-padding~="left"] {
+  &[am-padding="left"] {
     padding-left:1vw;
+  }
+  &[am-padding="small"] {
+    padding-top: .5vw;
+    padding-right: .5vw;
+    padding-bottom: 5vw;
+    padding-left: .5vw;
+  }
+  &[am-padding="medium"] {
+    padding-top: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 1.5vw;
+    padding-left: 1.5vw;
+  }
+  &[am-padding="large"] {
+    padding-top: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 3vw;
   }
 
   &[am-margin] {
-    margin:1vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
   }
-//  extend initial margin size values as"
-//  &[am-margin~="VALUENAME"] {
-//       margin:VALUESIZE;
-//  }
   &[am-margin~="top"] {
     margin-top:1vw;
   }
@@ -38,9 +54,23 @@ article section[am-component]{
   &[am-margin~="left"] {
     margin-left:1vw;
   }
-
-
-
-
+  &[am-margin="small"] {
+    margin-top: .5vw;
+    margin-right: .5vw;
+    margin-bottom: 5vw;
+    margin-left: .5vw;
+  }
+  &[am-margin="medium"] {
+    margin-top: 1.5vw;
+    margin-right: 1.5vw;
+    margin-bottom: 1.5vw;
+    margin-left: 1.5vw;
+  }
+  &[am-margin="large"] {
+    margin-top: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+  }
 }
 
