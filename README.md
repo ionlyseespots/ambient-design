@@ -26,8 +26,8 @@ This project is in early development.
 
 Ambient makes use of HTML5 elements & CSS3 properties to convey a consistent layout. UI patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach. 
 
-* Web site: http://ionlyseespots.github.io/ambient-design/index.html
-* View layout example: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
+* Website: http://ionlyseespots.github.io/ambient-design/index.html
+* View layout examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
 * Layout: http://ionlyseespots.github.io/ambient-design/layout/index.html
 * UI patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html

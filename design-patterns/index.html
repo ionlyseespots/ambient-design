@@ -35,7 +35,7 @@
         Overview
     </h2>
     <p>
-        Attribute selectors | Initial properties | Components | Layouts | Navs | Forms | Angular
+        Attribute selectors | Initial patterns | Components | Layouts | Navs | Forms | Angular
     </p>
     <article>
         <section>
@@ -133,13 +133,13 @@
     <hr />
 
     <h2>
-        Initial properties
+        Initial patterns
     </h2>
     <p>
-        Initial properties are margin, padding, and alignment which can be added to base UI patterns. Base UI patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
+        Initial patterns are <strong>margin</strong>, <strong>padding</strong>, and <strong>alignment</strong> and can be added to base UI patterns. Base UI patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
     </p>
     <p>
-        Pattern matching is something I am yet working on for initial properties.
+        Pattern matching (& daisy chaining) is new, and something I am yet working on. This happens when a base UI pattern makes use of the same attribute and value as an initial pattern.
     </p>
     <article am-layout am-padding>
         <section am-component am-margin>
@@ -150,7 +150,7 @@
                 Initial margin is 0
             </p>
             <p>
-                To add space outside, add the attribute <code>am-margin</code> to any base design pattern.
+                To add space outside, add the attribute <code>am-margin</code> to any base UI pattern.
             </p>
             <blockquote>
                 <p>
@@ -187,7 +187,7 @@
                 Initial padding is 0
             </p>
             <p>
-                To add space inside, add the attribute <code>am-padding</code> to any base design pattern.
+                To add space inside, add the attribute <code>am-padding</code> to any base UI pattern.
             </p>
             <blockquote>
                 <p>
@@ -268,7 +268,7 @@
                 Vertical alignment
             </h3>
             <p>
-                To create vertical alignment, add the attribute <code>am-vertical</code> to the base design pattern for layouts and component containers.
+                To create vertical alignment, add the attribute <code>am-vertical</code> to the base UI pattern for layouts and component containers.
             </p>
             <article am-layout="outline" am-vertical>
                 <section>
@@ -297,7 +297,7 @@
                 Relative alignment
             </h3>
             <p>
-                To create relative alignment, add the attribute <code>am-relative</code> to the base design pattern for layouts and component containers.
+                To create relative alignment, add the attribute <code>am-relative</code> to the base UI pattern for layouts and component containers.
             </p>
             <article am-layout="outline" am-relative>
                 <section>
@@ -331,7 +331,7 @@
             <i class="fa fa-cube"></i> Components
         </h1>
         <p>
-            A set of UI patterns for the layout of section elements, attributes & values. This base design pattern is the basic building block for UI components.
+            A set of UI patterns for the layout of section elements, attributes & values. This base UI pattern is the basic building block for components.
         </p>
     </article>
     <hr />
@@ -341,7 +341,7 @@
             <i class="fa fa-cubes"></i> Layouts
         </h1>
         <p>
-            A set of UI patterns for the layout of article elements, attributes & values. This is the base design pattern for layouts and component containers.
+            A set of UI patterns for the layout of article elements, attributes & values. This is the base UI pattern for layouts and component containers.
         </p>
 
 
@@ -349,7 +349,7 @@
             Outline the layout
         </h2>
         <p>
-            If needed, to outline your UI with the base layout design pattern, add the attribute and value <code>am-layout="outline"</code> to any article.
+            If needed, to outline your UI with the base layout UI pattern, add the attribute and value <code>am-layout="outline"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -427,7 +427,7 @@
             Gutters with margin
         </h3>
         <p>
-            To create gutter margin with the base layout design pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="margin"</code>.
+            To create gutter margin with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="margin"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -481,7 +481,7 @@
             Gutters with padding
         </h3>
         <p>
-            To create gutter padding with the base layout design pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="padding"</code>.
+            To create gutter padding with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="padding"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -538,7 +538,7 @@
             Complex nested gutters with margin and padding
         </h3>
         <p>
-            To create complex gutters with the base layout design pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value<code>gutter</code> as <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
+            To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value<code>gutter</code> as <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -626,7 +626,7 @@
             Complex nested gutters with padding and margin
         </h3>
         <p>
-            To create complex gutters with the base layout design pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
+            To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article and extend the value <code>gutter</code> as <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -717,7 +717,7 @@
             Horizontal cards
         </h3>
         <p>
-            To create horizontal cards with the base layout design pattern, add the attribute and value <code>am-layout="card"</code> to any article.
+            To create horizontal cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -789,7 +789,7 @@
             Vertical
         </h3>
         <p>
-            To create vertical cards with the base layout design pattern, add the attribute and value <code>am-layout="card"</code> to any article and extend the value <code>card</code> as <code>am-card="vertical"</code>.
+            To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article and extend the value <code>card</code> as <code>am-card="vertical"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -861,7 +861,7 @@
             Relative cards
         </h3>
         <p>
-            To create relative cards with the base layout design pattern, add the attribute and value <code>am-layout="card"</code> to any article and extend the value <code>card</code> as <code>am-card="relative"</code>.
+            To create relative cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article and extend the value <code>card</code> as <code>am-card="relative"</code>.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -937,7 +937,7 @@
             <i class="fa fa-compass"></i> Navs
         </h1>
         <p>
-            A set of UI patterns for the layout of nav elements, attributes & values. This is the base design pattern for navs.
+            A set of UI patterns for the layout of nav elements, attributes & values. This is the base UI pattern for navs.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -969,7 +969,7 @@
             Left aligned nav
         </h1>
         <p>
-            To create a left aligned nav with the base nav design pattern, add the attribute <code>am-nav="left-align"</code> to any nav.
+            To create a left aligned nav with the base nav UI pattern, add the attribute <code>am-nav="left-align"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1001,7 +1001,7 @@
             Right aligned nav
         </h1>
         <p>
-            To create a right aligned nav with the base nav design pattern, add the attribute <code>am-nav="right-aligned"</code> to any nav.
+            To create a right aligned nav with the base nav UI pattern, add the attribute <code>am-nav="right-aligned"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1033,7 +1033,7 @@
             Centered nav
         </h1>
         <p>
-            To create a center aligned nav with the base nav design pattern, add the attribute <code>am-nav="center"</code> to any nav.
+            To create a center aligned nav with the base nav UI pattern, add the attribute <code>am-nav="center"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1065,7 +1065,7 @@
             Justified nav
         </h1>
         <p>
-            To create a justify aligned nav with the base nav design pattern, add the attribute <code>am-nav="justify"</code> to any nav.
+            To create a justify aligned nav with the base nav UI pattern, add the attribute <code>am-nav="justify"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1097,7 +1097,7 @@
             Vertical nav
         </h1>
         <p>
-            To create a vertical nav with the base nav design pattern, add the attribute <code>am-nav="vertical"</code> to any nav.
+            To create a vertical nav with the base nav UI pattern, add the attribute <code>am-nav="vertical"</code> to any nav.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1133,7 +1133,7 @@
             <i class="fa fa-tasks"></i> Forms
         </h1>
         <p>
-            A set of UI patterns for the layout of form elements, attributes & values. This is the base design pattern for forms.
+            A set of UI patterns for the layout of form elements, attributes & values. This is the base UI pattern for forms.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1179,7 +1179,7 @@
             Inline form
         </h2>
         <p>
-            To create an inline form with the base form state design pattern, add the attribute <code>am-form</code> to any form.
+            To create an inline form with the base form state UI pattern, add the attribute <code>am-form</code> to any form.
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1228,7 +1228,7 @@
             To create a stacked form, add the attribute <code>am-form</code> = <code>stacked</code> to any form.
         </p>
         <p>
-            Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential design pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
+            Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential UI pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
         </p>
         <section class="text-padding-small">
             <blockquote>
@@ -1670,7 +1670,7 @@
             Angular
         </h1>
         <h2>
-            By defining our own namespace for a design pattern, we are able to combine custom attributes + custom directive names.
+            By defining our own namespace for a UI pattern, we are able to combine custom attributes + custom directive names.
         </h2>
         <section class="text-padding-small">
             <blockquote>
@@ -1682,11 +1682,11 @@
                 </p>
             </blockquote>
             <p>
-                We can use the directive name as the attribute selector for the custom design pattern. Now, when we use the angularJS directive "foobar" it will:
+                We can use the directive name as the attribute selector for the custom UI pattern. Now, when we use the angularJS directive "foobar" it will:
             </p>
             <ol>
                 <li>inherit the Ambient semantic grid for <code>&lt;article&gt;</code></li>
-                <li>apply its own design pattern  <code>[foobar] { //css }</code></li>
+                <li>apply its own UI pattern  <code>[foobar] { //css }</code></li>
                 <li>apply any contextual overrides  <code>&lt;article foobar="value"&gt; &lt;/article &gt;</code> as individual design components (values) <code>[foobar~="value"] { //css }</code></li>
             </ol>
             <p>

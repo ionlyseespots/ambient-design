@@ -35,7 +35,7 @@
         Overview
     </h2>
     <p>
-        Semantic layout | View layout - HTML5/CSS3 definitions
+        Semantic layout | Layout examples - HTML5/CSS3 definitions
     </p>
     <article>
         <h1>
@@ -52,12 +52,153 @@
             Here's how Ambient layout works:
         </p>
         <section class="content-padding-small">
-        <h1>
-            <i class="fa fa-th"></i> Layout
-        </h1>
-        <p>
-            Basic examples to get you familiar with the Ambient layout.
-        </p>
+            <h1>
+                <i class="fa fa-th"></i> Layout examples
+            </h1>
+            <article am-layout="outline">
+                <h1>
+                    Basic page layout
+                </h1>
+                <p>
+                    Ambient is a method for creating semantic layout not constrained by the browser.
+                </p>
+                <p>
+                    DO use HTML5 elements in Ambient create to a semantic layout for your content.
+                </p>
+                <p>
+                    Do NOT use HTML5 elements as a replacement for divs or classes.
+                </p>
+                <section>
+                    <header>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <p>
+                            Paragraph
+                        </p>
+                    </header>
+                    <hr />
+                    <nav>
+                        <a href="#">Nav</a>
+                        <a href="#">Nav</a>
+                        <a href="#">Nav</a>
+                    </nav>
+                    <hr />
+                    <article>
+                        <header>
+                            <h1>
+                                Heading 1
+                            </h1>
+                            <p>
+                                Paragraph
+                            </p>
+                        </header>
+                        <section>
+                            <header>
+                                <h1>
+                                    Heading 1
+                                </h1>
+                                <h2>
+                                    Heading 2
+                                </h2>
+                                <h3>
+                                    Heading 3
+                                </h3>
+                            </header>
+                            <p>
+                                Paragraph
+                            </p>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <article>
+                                <section>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                </section>
+                                <section>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                </section>
+                                <section>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                </section>
+                            </article>
+                            <footer>
+                                <p>
+                                    Paragraph
+                                </p>
+                            </footer>
+                        </section>
+                        <aside>
+                            <p>
+                                Paragraph
+                            </p>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                        </aside>
+                        <footer>
+                            <p>
+                                Paragraph
+                            </p>
+                        </footer>
+                    </article>
+                    <footer>
+                        <p>
+                            Paragraph
+                        </p>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                    </footer>
+                </section>
+                <pre>
+Code example for basic page layout will go here.
+                </pre>
+            </article>
+            <hr />
+
             <article am-layout="outline">
                 <h1>
                     Three equal columns
@@ -618,90 +759,92 @@
             </article>
         </section>
         <section class="content-padding-small">
-        <table>
-            <thead>
-            <tr>
-                <th>Element</th>
-                <th>Layout</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th><code>body</code></th>
-                <td>Column</td>
-                <td>Represents the content.</td>
-            </tr>
-            <tr>
-                <th><code>header</code></th>
-                <td>Row</td>
-                <td>Base element which defines the header for a page or section.</td>
-            </tr>
-            <tr>
-                <th><code>nav</code></th>
-                <td>Row</td>
-                <td>Base element which groups navigation links on one horizontal line.</td>
-            </tr>
-            <tr>
-                <th><code>main</code></th>
-                <td>100%</td>
-                <td>Defines the main or important content.</td>
-            </tr>
-            <tr>
-                <th><code>h1,h2,h3,h4,h5,h6</code></th>
-                <td>100%</td>
-                <td>Briefly describes the topic of the section it introduces.</td>
-            </tr>
-            <tr>
-                <th><code>article</code></th>
-                <td>Row</td>
-                <td>Base element which groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
-            </tr>
-            <tr>
-                <th><code>section</code></th>
-                <td>Column</td>
-                <td>Base element which divides an article content into equal sections (columns).</td>
-            </tr>
-            <tr>
-                <th><code>aside</code></th>
-                <td>Column</td>
-                <td>Base element which extends content into sections (columns) loosely related to the page.</td>
-            </tr>
-            <tr>
-                <th><code>footer</code></th>
-                <td>100%</td>
-                <td>Defines the footer for a page or section.</td>
-            </tr>
-            <tr>
-                <th><code>hr</code></th>
-                <td>100%</td>
-                <td>Represents a thematic break and <i>optionally</i> defines framing.</td>
-            </tr>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">
-                        <p>
-                            <strong>Column clearing</strong>
-                        </p>
-                        <p>
-                            Traditional HTML & CSS column grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
-                        </p>
-                        <hr />
-                        <p>
-                            <strong>Infinitely nestable gutterless mixed layouts</strong>
-                        </p>
-                        <p>
-                            This means you can consistently build UI into simple or complex layouts.
-                        </p>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
             <h1>
-                <i class="fa fa-html5"></i> HTML5
+                Ambient
             </h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Layout</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><code>body</code></th>
+                    <td>Column</td>
+                    <td>Represents the content.</td>
+                </tr>
+                <tr>
+                    <th><code>header</code></th>
+                    <td>Row</td>
+                    <td>Base element which defines the header for a page or section.</td>
+                </tr>
+                <tr>
+                    <th><code>nav</code></th>
+                    <td>Row</td>
+                    <td>Base element which groups navigation links on one horizontal line.</td>
+                </tr>
+                <tr>
+                    <th><code>main</code></th>
+                    <td>100%</td>
+                    <td>Defines the main or important content.</td>
+                </tr>
+                <tr>
+                    <th><code>h1,h2,h3,h4,h5,h6</code></th>
+                    <td>100%</td>
+                    <td>Briefly describes the topic of the section it introduces.</td>
+                </tr>
+                <tr>
+                    <th><code>article</code></th>
+                    <td>Row</td>
+                    <td>Base element which groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
+                </tr>
+                <tr>
+                    <th><code>section</code></th>
+                    <td>Column</td>
+                    <td>Base element which divides an article content into equal sections (columns).</td>
+                </tr>
+                <tr>
+                    <th><code>aside</code></th>
+                    <td>Column</td>
+                    <td>Base element which extends content into sections (columns) loosely related to the page.</td>
+                </tr>
+                <tr>
+                    <th><code>footer</code></th>
+                    <td>100%</td>
+                    <td>Defines the footer for a page or section.</td>
+                </tr>
+                <tr>
+                    <th><code>hr</code></th>
+                    <td>100%</td>
+                    <td>Represents a thematic break and <i>optionally</i> defines framing.</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <p>
+                                <strong>Column clearing</strong>
+                            </p>
+                            <p>
+                                Traditional HTML & CSS column grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
+                            </p>
+                            <hr />
+                            <p>
+                                <strong>Infinitely nestable gutterless mixed layouts</strong>
+                            </p>
+                            <p>
+                                This means you can consistently build UI into simple or complex layouts.
+                            </p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <h2>
+                <i class="fa fa-html5"></i> HTML5
+            </h2>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
                 <h1>Sections</h1>
                 <table>
@@ -766,15 +909,15 @@
                     It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.
                 </p>
             </blockquote>
-            <h1>
-                <i class="fa fa-css3"></i> CSS3
-            </h1>
-            <p>
-                ambient is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout.
-            </p>
             <h2>
-                Normalize.css
+                <i class="fa fa-css3"></i> CSS3
             </h2>
+            <p>
+                Ambient is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout.
+            </p>
+            <h3>
+                Normalize.css
+            </h3>
             <p>
                 For improved cross-browser rendering, we use
                 <a target="_blank" href="http://necolas.github.io/normalize.css/">Normalize.css</a>, a project by
@@ -782,17 +925,17 @@
                 and
                 <a target="_blank" href="http://twitter.com/jon_neal">Jonathan Neal</a>.
             </p>
-            <h2>
+            <h3>
                 Flexbox LESS mixin
-            </h2>
+            </h3>
             <p>
                 For improved flexbox rendering and maintainability, we use
                 <a target="_blank" href="https://gist.github.com/jayj/4012969">flexbox.less</a>, a project by
                 <a target="_blank" href="https://twitter.com/jayjdk">Jesper Johansen</a>.
             </p>
-            <h2>
+            <h3>
                 Cursor Reset
-            </h2>
+            </h3>
             <p>
                 For improved cursor rendering, we use
                 <a target="_blank" href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>, a project by

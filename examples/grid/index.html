@@ -14,18 +14,164 @@
         <a href="../../index.html" title="index">Ambient</a>
     </h1>
     <h2>
-        <i class="fa fa-th"></i> Grid examples
+        <i class="fa fa-th"></i> Layout examples
     </h2>
     <p>
-        Basic view to get you familiar with the Ambient <a href="../../layout/index.html">semantic layout</a>.
+        Get familiar with the Ambient <a href="../../layout/index.html">semantic layout</a>.
     </p>
     <p>
-        <em>This site is built with Ambient v1.1.3</em>
+        <em>Ambient website is built with Ambient v1.1.3</em>
     </p>
 </header>
 <hr />
 
 <main role="main">
+    <article am-layout="outline">
+        <h1>
+            Basic page layout
+        </h1>
+        <p>
+            Ambient is a method for creating semantic layout not constrained by the browser.
+        </p>
+        <p>
+            DO use HTML5 elements in Ambient create to a semantic layout for your content.
+        </p>
+        <p>
+            Do NOT use HTML5 elements as a replacement for divs or classes.
+        </p>
+        <section>
+            <header>
+                <h1>
+                    Heading 1
+                </h1>
+                <p>
+                    Paragraph
+                </p>
+            </header>
+            <hr />
+            <nav>
+                <a href="#">Nav</a>
+                <a href="#">Nav</a>
+                <a href="#">Nav</a>
+            </nav>
+            <hr />
+            <article>
+                <header>
+                    <h1>
+                        Heading 1
+                    </h1>
+                    <p>
+                        Paragraph
+                    </p>
+                </header>
+                <section>
+                    <header>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <h2>
+                            Heading 2
+                        </h2>
+                        <h3>
+                            Heading 3
+                        </h3>
+                    </header>
+                    <p>
+                        Paragraph
+                    </p>
+                    <div>
+                        div
+                    </div>
+                    <div>
+                        div
+                    </div>
+                    <div>
+                        div
+                    </div>
+                    <article>
+                        <section>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                        </section>
+                    </article>
+                    <footer>
+                        <p>
+                            Paragraph
+                        </p>
+                    </footer>
+                </section>
+                <aside>
+                    <p>
+                        Paragraph
+                    </p>
+                    <div>
+                        div
+                    </div>
+                    <div>
+                        div
+                    </div>
+                    <div>
+                        div
+                    </div>
+                </aside>
+                <footer>
+                    <p>
+                        Paragraph
+                    </p>
+                </footer>
+            </article>
+            <footer>
+                <p>
+                    Paragraph
+                </p>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+            </footer>
+        </section>
+        <section am-component am-padding>
+            <pre>
+                Code example for basic page layout will go here.
+            </pre>
+        </section>
+    </article>
+    <hr />
+
     <article am-layout="outline">
         <h1>
             Three equal columns
@@ -231,38 +377,23 @@
             This means you can consistently build UI into simple or complex layouts.
         </p>
         <section>
-            <h1>
-                Section H1
-            </h1>
             <p>
                 1
             </p>
             <article>
-                <h1>
-                    Nested Article H1
-                </h1>
                 <section>
-                    <h1>
-                        Nested Section H1
-                    </h1>
                     <p>
-                        1
+                        Nest 1
                     </p>
                 </section>
                 <section>
-                    <h1>
-                        Nested Section H1
-                    </h1>
                     <p>
-                        2
+                        Nest 2
                     </p>
                 </section>
             </article>
         </section>
         <section>
-            <h1>
-                Section H1
-            </h1>
             <p>
                 2
             </p>
@@ -271,38 +402,23 @@
             <pre><code>
 &lt;article&gt;
     &lt;section&gt;
-        &lt;h1&gt;
-            Section H1
-        &lt;/h1&gt;
         &lt;p&gt;
             1
         &lt;/p&gt;
         &lt;article&gt;
-            &lt;h1&gt;
-                Nested Article H1
-            &lt;/h1&gt;
                 &lt;section&gt;
-                    &lt;h1&gt;
-                        Nested Section H1
-                    &lt;/h1&gt;
                     &lt;p&gt;
-                        1
+                        Nest 1
                     &lt;/p&gt;
                 &lt;/section&gt;
                 &lt;section&gt;
-                    &lt;h1&gt;
-                        Nested Section H1
-                    &lt;/h1&gt;
                     &lt;p&gt;
-                        2
+                        Nest 2
                     &lt;/p&gt;
                 &lt;/section&gt;
         &lt;/article&gt;
     &lt;/section&gt;
     &lt;section&gt;
-        &lt;h1&gt;
-            Section H1
-        &lt;/h1&gt;
         &lt;p&gt;
             2
         &lt;/p&gt;
