@@ -396,44 +396,29 @@ Code example for basic page layout will go here.
                     Nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
-                    <strong>Infinitely nestable gutterless mixed layouts</strong>
+                    <strong>Nestable mixed layouts</strong>
                 </p>
                 <p>
                     This means you can consistently build UI into simple or complex layouts.
                 </p>
                 <section>
-                    <h1>
-                        Section H1
-                    </h1>
                     <p>
                         1
                     </p>
                     <article>
-                        <h1>
-                            Nested Article H1
-                        </h1>
                         <section>
-                            <h1>
-                                Nested Section H1
-                            </h1>
                             <p>
-                                1
+                                Nest 1
                             </p>
                         </section>
                         <section>
-                            <h1>
-                                Nested Section H1
-                            </h1>
                             <p>
-                                2
+                                Nest 2
                             </p>
                         </section>
                     </article>
                 </section>
                 <section>
-                    <h1>
-                        Section H1
-                    </h1>
                     <p>
                         2
                     </p>
@@ -442,38 +427,23 @@ Code example for basic page layout will go here.
                     <pre><code>
 &lt;article&gt;
     &lt;section&gt;
-        &lt;h1&gt;
-            Section H1
-        &lt;/h1&gt;
         &lt;p&gt;
             1
         &lt;/p&gt;
         &lt;article&gt;
-            &lt;h1&gt;
-                Nested Article H1
-            &lt;/h1&gt;
             &lt;section&gt;
-                &lt;h1&gt;
-                    Nested Section H1
-                &lt;/h1&gt;
                 &lt;p&gt;
-                    1
+                    Nest 1
                 &lt;/p&gt;
             &lt;/section&gt;
             &lt;section&gt;
-                &lt;h1&gt;
-                    Nested Section H1
-                &lt;/h1&gt;
                 &lt;p&gt;
-                    2
+                    Nest 22
                 &lt;/p&gt;
             &lt;/section&gt;
         &lt;/article&gt;
     &lt;/section&gt;
     &lt;section&gt;
-        &lt;h1&gt;
-            Section H1
-        &lt;/h1&gt;
         &lt;p&gt;
             2
         &lt;/p&gt;
@@ -797,6 +767,11 @@ Code example for basic page layout will go here.
                     <td>Briefly describes the topic of the section it introduces.</td>
                 </tr>
                 <tr>
+                    <th><code>P</code></th>
+                    <td>100%</td>
+                    <td>Represents a paragraph of text. </td>
+                </tr>
+                <tr>
                     <th><code>article</code></th>
                     <td>Row</td>
                     <td>Base element which groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
@@ -833,7 +808,7 @@ Code example for basic page layout will go here.
                             </p>
                             <hr />
                             <p>
-                                <strong>Infinitely nestable gutterless mixed layouts</strong>
+                                <strong>Nestable mixed layouts</strong>
                             </p>
                             <p>
                                 This means you can consistently build UI into simple or complex layouts.
