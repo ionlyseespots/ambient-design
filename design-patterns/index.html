@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Design patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -136,7 +136,10 @@
         Initial properties
     </h2>
     <p>
-        Margin, padding, and alignment can be added to base design patterns. Base design patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
+        Initial properties are margin, padding, and alignment which can be added to base design patterns. Base design patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
+    </p>
+    <p>
+        Pattern matching is something I am yet working on for initial properties.
     </p>
     <article am-layout am-padding>
         <section am-component am-margin>
@@ -265,7 +268,7 @@
                 Vertical alignment
             </h3>
             <p>
-                To create vertical alignment, add the attribute <code>am-vertical</code> to any base design pattern for layouts and component containers.
+                To create vertical alignment, add the attribute <code>am-vertical</code> to the base design pattern for layouts and component containers.
             </p>
             <article am-layout="outline" am-vertical>
                 <section>
@@ -294,7 +297,7 @@
                 Relative alignment
             </h3>
             <p>
-                To create relative alignment, add the attribute <code>am-relative</code> to any base design pattern for layouts and component containers.
+                To create relative alignment, add the attribute <code>am-relative</code> to the base design pattern for layouts and component containers.
             </p>
             <article am-layout="outline" am-relative>
                 <section>

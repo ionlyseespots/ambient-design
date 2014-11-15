@@ -52,7 +52,6 @@ While presentation changes can require changes in structure, content can be chan
 * http://www.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/
 * http://philipwalton.github.io/solved-by-flexbox/
 
-* http://semantic.gs/
 * http://oocss.org/
 
 * http://www.google.com/design/spec/material-design/introduction.html
