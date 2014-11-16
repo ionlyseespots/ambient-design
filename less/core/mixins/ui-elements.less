@@ -99,3 +99,40 @@ article section[am-component], article aside[am-component]{
   }
 }
 
+section[am-component~="gutter"] {
+  &[am-gutter="padding"] {
+    padding: 0;
+    & > div {
+      padding-left:1em;
+    }
+    & > div:first-of-type {
+      margin-left:-1em;
+    }
+  }
+  &[am-gutter="margin"] {
+    margin: 0;
+    & > div {
+      margin-left:1em;
+    }
+    & > div:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+section[am-component~="grid"] {
+  & div {
+    /**
+   * column
+   */
+    .flex(1 8.3333%);
+    word-wrap: break-word;
+    /**
+    * help content on absolute positioning
+    */
+    position: relative; }
+}
+
+
+
+
