@@ -28,7 +28,7 @@
 <main role="main">
     <article am-layout="outline">
         <h1>
-            Basic page layout
+            Semantic layout
         </h1>
         <p>
             Ambient is a method for creating semantic layout not constrained by the browser.
@@ -89,15 +89,28 @@
                         div
                     </div>
                     <article>
-                        <section>
-                            <div>
-                                div
+                        <section am-component="grid">
+                            <div am-grid="row">
+                                <div am-grid="70">
+                                    grid 70%
+                                </div>
+                                <div>
+                                    grid
+                                </div>
                             </div>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
+                            <div am-grid="row">
+                                <div>
+                                    grid
+                                </div>
+                                <div>
+                                    grid
+                                </div>
+                                <div>
+                                    grid
+                                </div>
+                                <div am-grid="50">
+                                    grid 50%
+                                </div>
                             </div>
                         </section>
                         <section>
@@ -159,16 +172,11 @@
                 <div>
                     div
                 </div>
-                <div>
-                    div
-                </div>
             </footer>
         </section>
-        <section am-component am-padding>
-            <pre>
-                Code example for basic page layout will go here.
-            </pre>
-        </section>
+                <pre>
+Code example for basic page layout will go here.
+                </pre>
     </article>
     <hr />
 
