@@ -635,6 +635,97 @@ article aside[am-component][am-margin="large"] {
     margin-bottom: 3vw;
     margin-left: 3vw;
 }
+section[am-component~="gutter"][am-gutter="padding"] {
+    padding: 0;
+}
+section[am-component~="gutter"][am-gutter="padding"] > div {
+    padding-left: 1em;
+}
+section[am-component~="gutter"][am-gutter="padding"] > div:first-of-type {
+    margin-left: -1em;
+}
+section[am-component~="gutter"][am-gutter="margin"] {
+    margin: 0;
+}
+section[am-component~="gutter"][am-gutter="margin"] > div {
+    margin-left: 1em;
+}
+section[am-component~="gutter"][am-gutter="margin"] > div:first-of-type {
+    margin-left: 0;
+}
+section[am-component~="grid"] {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+section[am-component~="grid"] div {
+    /**
+     * column
+     */
+    -webkit-flex: 1 8.3333%;
+    -moz-flex: 1 8.3333%;
+    -ms-flex: 1 8.3333%;
+    flex: 1 8.3333%;
+    word-wrap: break-word;
+    font-size: vmax;
+    /**
+      * help content on absolute positioning
+      */
+    position: relative;
+}
+section[am-component~="grid"] div[am-grid="row"] {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="10"] {
+    flex-basis: 8.33333%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="20"] {
+    flex-basis: 16.6667%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="30"] {
+    flex-basis: 25%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="40"] {
+    flex-basis: 33.3333%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="45"] {
+    flex-basis: 41.6667%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="50"] {
+    flex-basis: 50%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="55"] {
+    flex-basis: 58.3333%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="60"] {
+    flex-basis: 66.6667%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="70"] {
+    flex-basis: 75%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="80"] {
+    flex-basis: 83.3333%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="90"] {
+    flex-basis: 91.6667%;
+}
+section[am-component~="grid"] div[am-grid="row"] div[am-grid="100"] {
+    flex-basis: 100%;
+}
 /**
 * multi-column shell [holy grail]
 */
@@ -960,7 +1051,8 @@ article[am-layout~="outline"][am-gutter~="padding"] p {
     border: 1px solid rgba(86, 61, 124, 0.2);
 }
 article[am-layout~="outline"] section,
-article[am-layout~="outline"] aside {
+article[am-layout~="outline"] aside,
+article[am-layout~="outline"] div {
     background-color: rgba(86, 61, 124, 0.15);
     border: 1px solid rgba(86, 61, 124, 0.2);
 }
@@ -1155,14 +1247,14 @@ article[am-layout~="card"] > section:first-child {
 body {
     background-color: #fff;
     color: #333;
-    font-size: 14px;
+    font-size: 100%;
     line-height: 1.42857;
 }
 nav a:hover {
-    background-color: #eee;
+    background-color: #E9E9E9;
 }
 nav a:active {
-    background-color: #eee;
+    background-color: #E9E9E9;
 }
 nav a {
     -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
@@ -1249,7 +1341,7 @@ blockquote:after {
     content: "";
 }
 blockquote {
-    border-left: 5px solid #eee;
+    border-left: 5px solid #E9E9E9;
     margin: 20px 0;
     padding: 10px 20px;
     font-size: small;
@@ -1321,7 +1413,7 @@ table th {
     position: absolute;
 }
 .active {
-    background-color: #eee;
+    background-color: #E9E9E9;
 }
 .text-left {
     text-align: left;
@@ -1389,17 +1481,14 @@ table th {
     color: #fff;
 }
 .bg-primary {
-    background-color: #2C9FD2;
-    color: #fff;
+    background-color: #E9E9E9;
 }
 .bg-secondary {
-    background-color: #5AC8FC;
-    color: #fff;
+    background-color: #F7F7F7;
 }
 .ghost {
     background-color: transparent;
     padding: 1vw;
-    color: #fff;
     -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
     -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
     -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
