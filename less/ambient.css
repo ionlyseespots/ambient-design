@@ -683,6 +683,7 @@ section[am-component~="grid"] div[am-grid="row"] {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
+  flex-basis: 100%;
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
