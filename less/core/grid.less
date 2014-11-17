@@ -9,6 +9,11 @@ body {
   min-height: 100%;
   .flex-display;
   .flex-direction(column);
+  & > footer {
+    /***
+    * page footer is a sticky footer
+    */
+    .flex-order(2); }
   & > article  {
     /**
     * center the content in first article not in main horizontally and vertically
@@ -58,7 +63,8 @@ section {
 aside {
   .flex(0 0 20%);  }
 footer {
-  .flex-order(2); }
+  .flex-display;
+  .flex-flow(row wrap); }
 
 
 @media (orientation:portrait){
