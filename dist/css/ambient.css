@@ -488,7 +488,6 @@ section {
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
-    word-wrap: break-word;
     /**
     * help content on absolute positioning
     */
