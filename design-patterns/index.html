@@ -84,10 +84,10 @@
                 Built with LESS to write well-structured, extensible code which is easy to maintain.
             </p>
             <p>
-                <strong>Infinitely nestable gutterless mixed layouts</strong>
+                <em>Pattern matching</em> a UI pattern is something I am working on. This happens when a base UI pattern makes use of the same attribute and value as an initial pattern.
             </p>
             <p>
-                This means you can consistently build UI into simple or complex layouts.
+                <em>Daisy chaining</em> a UI pattern is something I am working on. this happens when a base UI pattern has a value that becomes an atribute for the next vaue. ie: <code>am-component="grid"</code> -- <code>am-grid="row"</code> or <code>am-grid="block"</code> -- <code>am-row="VALUE"</code> or <code>am-block="VALUE"</code>.
             </p>
         </section>
         <section am-component am-padding>
@@ -135,9 +135,6 @@
         </h2>
         <p  class="text-center">
             Initial patterns are <em>margin</em> & <em>padding</em> and can be added to base UI patterns. Base UI patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
-        </p>
-        <p>
-            Pattern matching (& daisy chaining) is new, and something I am yet working on. This happens when a base UI pattern makes use of the same attribute and value as an initial pattern.
         </p>
         <section am-component am-margin>
             <h3>
@@ -234,7 +231,7 @@
             The first component <code>am-component="grid"</code> is on its way.
         </p>
         <p>
-            Currently I am building out values as <code>am-component="grid"</code> -- <code>am-grid="row"</code> or <code>am-grid="block"</code> -- <code>am-row="SIZE"</code> or <code>am-block="SIZE"</code>.
+            Currently I am building out values as <code>am-component="grid"</code> -- <code>am-grid="row"</code> or <code>am-grid="block"</code> -- <code>am-row="VALUE"</code> or <code>am-block="VALUE"</code>.
         </p>
     </article>
     <hr />
@@ -1750,13 +1747,9 @@ return obj;
         </small>
     </p>
     <p>
+        &middot;
         <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
         &middot;
-        <a href="docs/index.html">Examples</a>
-        &middot;
-        <a href="docs/index.html">v1 docs</a>
-        &middot;
-        <a href="#">About</a>
     </p>
 </footer>
 </body>
