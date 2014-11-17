@@ -451,10 +451,10 @@ nav {
     flex-flow: row wrap;
 }
 nav a {
-    -webkit-flex: 1 0.01%;
-    -moz-flex: 1 0.01%;
-    -ms-flex: 1 0.01%;
-    flex: 1 0.01%;
+    -webkit-flex: 1 8.3333%;
+    -moz-flex: 1 8.3333%;
+    -ms-flex: 1 8.3333%;
+    flex: 1 8.3333%;
 }
 main {
     -webkit-flex: 1 0 auto;
@@ -672,8 +672,6 @@ section[am-component~="grid"] div {
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
-    word-wrap: break-word;
-    font-size: vmax;
     /**
       * help content on absolute positioning
       */
