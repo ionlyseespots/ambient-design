@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
 
-Our goal is to deliver a lean, lightweight semantic layout for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
+Our goal is to deliver a semantic layout for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
 
 Developers can focus on HTML to convey a consistent layout and designers can focus on extending UI patterns for content.
 
