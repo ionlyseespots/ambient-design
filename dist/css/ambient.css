@@ -382,9 +382,10 @@ input[disabled] {
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 html {
+    box-sizing: border-box;
     height: 100%;
 }
 body {
@@ -411,7 +412,7 @@ body > footer {
 }
 body > article {
     /**
-      * center the content in first article not in main horizontally and vertically
+      * center page content in first article not in main horizontally and vertically
       */
     -webkit-align-items: center;
     -moz-align-items: center;
@@ -518,6 +519,10 @@ footer {
     -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 @media (orientation: portrait) {
     section,
@@ -656,10 +661,10 @@ footer {
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 [am-component~="grid"] div {
     /**
@@ -675,51 +680,51 @@ footer {
     position: relative;
 }
 [am-component~="grid"] div[am-grid="row"] {
+    flex-basis: 100%;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    flex-basis: 100%;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="10"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="10"] {
     flex-basis: 8.33333%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="20"] {
+[am-component~="grid"] div[am-grid="row"] div[am-gblock="20"] {
     flex-basis: 16.6667%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="30"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="30"] {
     flex-basis: 25%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="40"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="40"] {
     flex-basis: 33.3333%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="45"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="45"] {
     flex-basis: 41.6667%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="50"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="50"] {
     flex-basis: 50%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="55"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="55"] {
     flex-basis: 58.3333%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="60"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="60"] {
     flex-basis: 66.6667%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="70"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="70"] {
     flex-basis: 75%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="80"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="80"] {
     flex-basis: 83.3333%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="90"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="90"] {
     flex-basis: 91.6667%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-grid="100"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="100"] {
     flex-basis: 100%;
 }
 /**
@@ -1373,10 +1378,6 @@ hr {
     border-width: 1px 0 0;
     margin-bottom: 0;
     margin-top: 0;
-}
-img {
-    max-width: 100%;
-    height: auto;
 }
 table {
     display: block;
