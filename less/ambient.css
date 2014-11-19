@@ -1048,14 +1048,14 @@ img {
   margin-left: 0;
 }
 [am-layout~="outline"][am-gutter~="padding"] p {
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  background-color: rgba(93, 116, 137, 0.15);
+  border: 1px solid rgba(93, 116, 137, 0.2);
 }
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
 [am-layout~="outline"] div {
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  background-color: rgba(93, 116, 137, 0.15);
+  border: 1px solid rgba(93, 116, 137, 0.2);
 }
 [am-layout~="card"] > section {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -1252,10 +1252,10 @@ body {
   line-height: 1.42857;
 }
 nav a:hover {
-  background-color: #E9E9E9;
+  background-color: #CEE1EF;
 }
 nav a:active {
-  background-color: #E9E9E9;
+  background-color: #CEE1EF;
 }
 nav a {
   -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
@@ -1343,7 +1343,7 @@ blockquote:after {
   content: "";
 }
 blockquote {
-  border-left: 5px solid #E9E9E9;
+  border-left: 5px solid #e9e9e9;
   margin: 20px 0;
   padding: 10px 20px;
   font-size: small;
@@ -1411,7 +1411,7 @@ table th {
   position: absolute;
 }
 .active {
-  background-color: #E9E9E9;
+  background-color: #CEE1EF;
 }
 .text-left {
   text-align: left;
@@ -1479,7 +1479,7 @@ table th {
   color: #fff;
 }
 .bg-primary {
-  background-color: #E9E9E9;
+  background-color: #CEE1EF;
 }
 .bg-secondary {
   background-color: #F7F7F7;
@@ -1487,6 +1487,7 @@ table th {
 .ghost {
   background-color: transparent;
   padding: 1vw;
+  border-color: #fff;
   -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
