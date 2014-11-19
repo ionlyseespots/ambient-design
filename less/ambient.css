@@ -382,9 +382,10 @@ input[disabled] {
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 html {
+  box-sizing: border-box;
   height: 100%;
 }
 body {
@@ -411,7 +412,7 @@ body > footer {
 }
 body > article {
   /**
-    * center the content in first article not in main horizontally and vertically
+    * center page content in first article not in main horizontally and vertically
     */
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -518,6 +519,10 @@ footer {
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 @media (orientation: portrait) {
   section,
@@ -1373,10 +1378,6 @@ hr {
   border-width: 1px 0 0;
   margin-bottom: 0;
   margin-top: 0;
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 table {
   display: block;

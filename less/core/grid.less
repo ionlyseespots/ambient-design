@@ -1,8 +1,11 @@
 // Grid
-// Ambient base grid
+// Ambient semantic layout
+
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 html {
+  box-sizing: border-box;
   height: 100%; }
 body {
   min-width: 100%;
@@ -16,7 +19,7 @@ body {
     .flex-order(2); }
   & > article  {
     /**
-    * center the content in first article not in main horizontally and vertically
+    * center page content in first article not in main horizontally and vertically
     */
     .align-items(center);
     margin: auto;
@@ -65,7 +68,9 @@ aside {
 footer {
   .flex-display;
   .flex-flow(row wrap); }
-
+img {
+  max-width: 100%;
+  height: auto; }
 
 @media (orientation:portrait){
   section, aside {
