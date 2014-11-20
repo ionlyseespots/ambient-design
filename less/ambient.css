@@ -671,7 +671,7 @@ img {
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 100%;
+  width: 100%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -699,42 +699,42 @@ img {
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 25%;
+  width: 25%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="third"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 33.333%;
+  width: 33.333%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="half"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 50%;
+  width: 50%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="two-thirds"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 66.6667%;
+  width: 66.6667%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="three-fourths"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 75%;
+  width: 75%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="full"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  min-width: 100%;
+  width: 100%;
 }
 /**
 * multi-column shell [holy grail]
