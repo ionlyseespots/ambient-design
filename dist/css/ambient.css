@@ -670,10 +670,14 @@ img {
     /**
      * column
      */
-    -webkit-flex: 1 8.3333%;
-    -moz-flex: 1 8.3333%;
-    -ms-flex: 1 8.3333%;
-    flex: 1 8.3333%;
+    -webkit-flex: 0 0 8.3333%;
+    -moz-flex: 0 0 8.3333%;
+    -ms-flex: 0 0 8.3333%;
+    flex: 0 0 8.3333%;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     /**
       * help content on absolute positioning
       */
@@ -691,40 +695,23 @@ img {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="10"] {
-    flex-basis: 8.33333%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-gblock="20"] {
-    flex-basis: 16.6667%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-block="30"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="fourth"] {
+    flex: 0;
     flex-basis: 25%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="40"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="third"] {
     flex-basis: 33.3333%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="45"] {
-    flex-basis: 41.6667%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-block="50"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="half"] {
     flex-basis: 50%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="55"] {
-    flex-basis: 58.3333%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-block="60"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="two-thirds"] {
     flex-basis: 66.6667%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="70"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="three-fourths"] {
     flex-basis: 75%;
 }
-[am-component~="grid"] div[am-grid="row"] div[am-block="80"] {
-    flex-basis: 83.3333%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-block="90"] {
-    flex-basis: 91.6667%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-block="100"] {
+[am-component~="grid"] div[am-grid="row"] div[am-block="full"] {
     flex-basis: 100%;
 }
 /**

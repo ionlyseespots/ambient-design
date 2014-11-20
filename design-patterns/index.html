@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>UI patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -251,7 +251,7 @@
             To create a grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section.
         </p>
         <p>
-            Base grid rows group blocks on one horizontal line.  Base grid blocks divide content into equal sections (blocks).
+            Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
         </p>
         <p>
             To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
@@ -260,7 +260,7 @@
             To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
         </p>
         <h2>
-            Grid with equal blocks
+            Basic grid
         </h2>
 
         <section am-component am-padding>
@@ -400,16 +400,16 @@ code will go here
             </pre>
         </section>
         <h2>
-            Grid with unequal blocks
+            Complex grid with specified block widths & nested blocks
         </h2>
         <p>
-            To create an unequal block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Width values are percentage based. ie: 20 = 20%.
+            To create an unequal block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base block width values are <code>third</code>, <code>two-thirds</code>, <code>half</code>, <code>three-fourths</code> and <code>full</code>
         </p>
         <section am-component am-padding>
             <article am-layout="outline">
                 <section am-component="grid">
                     <div am-grid="row">
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="full">
                             <p>
                                 1
                             </p>
@@ -417,12 +417,12 @@ code will go here
                     </div>
                     </div>
                     <div am-grid="row">
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="half">
                             <p>
                                 1
                             </p>
                         </div>
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="half">
                             <p>
                                 2
                             </p>
@@ -430,90 +430,81 @@ code will go here
                     </div>
                     </div>
                     <div am-grid="row">
-                        <div am-grid="block" am-block="20">
+                        <div am-grid="block" am-block="third">
                             <p>
                                 1
                             </p>
                         </div>
-                        <div am-grid="block" am-block="60">
+                        <div am-grid="block" am-block="third">
                             <p>
                                 2
                             </p>
                         </div>
-                        <div am-grid="block" am-block="20">
+                        <div am-grid="block" am-block="third">
                             <p>
                                 3
                             </p>
                         </div>
                     </div>
                     <div am-grid="row">
-                        <div am-grid="block" am-block="80">
+                        <div am-grid="block" am-block="two-thirds">
                             <p>
                                 1
                             </p>
                         </div>
-                        <div am-grid="block" am-block="20">
+                        <div am-grid="block" am-block="third">
                             <p>
                                 2
                             </p>
                         </div>
                     </div>
                     <div am-grid="row">
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="fourth">
                             <p>
                                 1
                             </p>
                         </div>
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="half">
                             <p>
                                 2
                             </p>
                         </div>
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="fourth">
                             <p>
                                 3
-                            </p>
-                        </div>
-                        <div am-grid="block">
-                            <p>
-                                4
-                            </p>
-                        </div>
-                        <div am-grid="block">
-                            <p>
-                                5
                             </p>
                         </div>
                     </div>
                     <div am-grid="row">
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="three-fourths">
                             <p>
                                 1
                             </p>
                         </div>
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="fourth">
                             <p>
                                 2
                             </p>
                         </div>
-                        <div am-grid="block">
-                            <p>
-                                3
-                            </p>
+                    </div>
+                    <div am-grid="row">
+                        <div am-grid="block" am-block="three-fourths">
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="half">
+                                    <p>
+                                        1
+                                    </p>
+                                </div>
+                                <div am-grid="block" am-block="half">
+                                    <p>
+                                        2
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div am-grid="block">
+                        <div am-grid="block" am-block="fourth">
                             <p>
-                                4
-                            </p>
-                        </div>
-                        <div am-grid="block">
-                            <p>
-                                5
-                            </p>
-                        </div>
-                        <div am-grid="block">
-                            <p>
-                                6
+                                2
                             </p>
                         </div>
                     </div>
