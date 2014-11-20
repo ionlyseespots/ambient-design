@@ -32,7 +32,7 @@
         Overview
     </h2>
     <p class="bg-secondary">
-        Attribute selectors | Initial patterns | Components | Layouts | Navs | Forms | Angular
+        Attribute selectors | Initial patterns | Components | Layouts | Navs | Forms
     </p>
     <article>
         <section>
@@ -1959,52 +1959,6 @@ code will go here
     <hr />
 
     <article>
-        <h1 class="text-center">
-            Angular
-        </h1>
-        <p class="text-center">
-            By defining our own namespace for a UI Pattern, we are able to combine custom attributes + custom directive names.
-        </p>
-        <section am-component am-padding>
-            <blockquote>
-                <h3>
-                    <code>&lt;article foobar&gt; &lt;/article &gt;</code>
-                </h3>
-                <p>
-                    <code>[foobar] { //css }</code>
-                </p>
-            </blockquote>
-            <p>
-                We can use the directive name as the attribute selector for the custom UI Pattern. Now, when we use the angularJS directive "foobar" it will:
-            </p>
-            <ol>
-                <li>inherit the Ambient semantic layout for <code>&lt;article&gt;</code></li>
-                <li>apply its own UI Pattern  <code>[foobar] { //css }</code></li>
-                <li>apply any contextual overrides  <code>&lt;article foobar="value"&gt; &lt;/article &gt;</code> as individual design components (values) <code>[foobar~="value"] { //css }</code></li>
-            </ol>
-            <p>
-                All without needing to use or duplicate class names for layout.
-            </p>
-        </section>
-        <section am-component am-padding>
-            <blockquote>
-                <h1>A Basic Directive</h1>
-                <pre>
-.directive('foobar', function() {
-var obj = {
-restrict: 'AC',
-templateUrl: 'partials/foobar.html'
-}
-return obj;
-});
-                </pre>
-                </code>
-            </blockquote>
-        </section>
-    </article>
-    <hr />
-
-    <article>
         <h1>
             Ambient is a methodology for creating layout.
         </h1>
@@ -2023,11 +1977,6 @@ return obj;
     </p>
     <p>
         UI patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
-    </p>
-    <p>
-        <small>
-            This site is built with Ambient v1.2.1
-        </small>
     </p>
     <p>
         &middot;
