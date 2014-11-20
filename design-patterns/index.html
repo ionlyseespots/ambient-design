@@ -385,23 +385,93 @@
                     </div>
                 </section>
             </article>
+            <p>
+                ...scales up to 12 equal blocks
+            </p>
         </section>
         <section am-component am-padding>
             <pre>
-&lt;article&gt;
-    &lt;section am-component="grid"&gt;
-
-code will go here
-
-    &lt;/section&gt;
-&lt;/article&gt;
+&lt;section am-component="grid"&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            3
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            3
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            4
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            3
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            4
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            5
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            3
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            4
+        &lt;/div&gt;
+        &lt;div am-grid="block"&gt;
+            5
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
             </pre>
         </section>
         <h2>
             Complex grid with specified block widths & nested blocks
         </h2>
         <p>
-            To create a specified block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base width values are <code>third</code>, <code>two-thirds</code>, <code>half</code> and <code>three-fourths</code> and <code>full</code>.
+            To create a specified block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base width values are <code>third</code>, <code>two-thirds</code>, <code>half</code>, <code>three-fourths</code> and <code>full</code>.
         </p>
         <section am-component am-padding>
             <article am-layout="outline">
@@ -488,12 +558,12 @@ code will go here
                             <div am-grid="row">
                                 <div am-grid="block" am-block="half">
                                     <p>
-                                        1
+                                        nest 1
                                     </p>
                                 </div>
                                 <div am-grid="block" am-block="half">
                                     <p>
-                                        2
+                                        nest 2
                                     </p>
                                 </div>
                             </div>
@@ -509,13 +579,74 @@ code will go here
         </section>
         <section am-component am-padding>
             <pre>
-&lt;article&gt;
-    &lt;section am-component="grid"&gt;
-
-code will go here
-
-    &lt;/section&gt;
-&lt;/article&gt;
+&lt;section am-component="grid"&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="full"&gt;
+            1
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="half"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="half"&gt;
+            2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="third"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="third"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="third"&gt;
+            3
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="two-thirds"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="third"&gt;
+            2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="fourth"&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="half"&gt;
+            2
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="fourth"&gt;
+            3
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="three-fourths&gt;
+            1
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="fourth&gt;
+            2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div am-grid="row"&gt;
+        &lt;div am-grid="block" am-block="three-fourths&gt;
+            &lt;div am-grid="row"&gt;
+                &lt;div am-grid="block" am-block="half"&gt;
+                    nest 1
+                &lt;/div&gt;
+                &lt;div am-grid="block" am-block="half"&gt;
+                    nest 2
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div am-grid="block" am-block="fourth&gt;
+            2
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
             </pre>
         </section>
     </article>
