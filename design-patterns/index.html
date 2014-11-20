@@ -243,14 +243,12 @@
             A set of UI patterns for the layout of section elements, attributes & values. The base UI Pattern <code>am-component</code> is the basic building block for components.
         </p>
         <h2>
-            Grids <em>(Unstable)</em>
+            Grid
         </h2>
         <p>
-            To create a grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section.
+            To create a grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
         </p>
-        <p>
-            Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
-        </p>
+
         <p>
             To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
         </p>
@@ -260,7 +258,9 @@
         <h2>
             Basic grid
         </h2>
-
+        <p>
+            Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
+        </p>
         <section am-component am-padding>
             <article am-layout="outline">
                 <section am-component="grid">
@@ -401,7 +401,7 @@ code will go here
             Complex grid with specified block widths & nested blocks
         </h2>
         <p>
-            To create an unequal block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base block width values are <code>third</code>, <code>two-thirds</code>, <code>half</code>, <code>three-fourths</code> and <code>full</code>
+            To create a specified block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base width values are <code>third</code>, <code>two-thirds</code>, <code>half</code> and <code>three-fourths</code> and <code>full</code>.
         </p>
         <section am-component am-padding>
             <article am-layout="outline">

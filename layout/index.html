@@ -53,17 +53,19 @@
                 <i class="fa fa-th"></i> Layout examples
             </h1>
             <article am-layout="outline">
+                <blockquote>
+                    <p>
+                        <strong>DO</strong> use HTML5 elements in Ambient to display semantic layout for content.
+                    </p>
+                    <p>
+                        Do <strong>NOT</strong> use HTML5 elements in Ambient as a replacement for divs.
+                    </p>
+                </blockquote>
                 <h1>
                     Semantic layout
                 </h1>
                 <p>
                     Ambient is a method for creating semantic layout not constrained by the browser.
-                </p>
-                <p>
-                    <strong>DO</strong> use HTML5 elements in Ambient to display semantic layout for content.
-                </p>
-                <p>
-                    Do <strong>NOT</strong> use HTML5 elements in Ambient as a replacement for divs.
                 </p>
                 <section>
                     <header>
@@ -315,7 +317,7 @@
                     Three equal columns
                 </h1>
                 <p>
-                    Get three equal-width columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+                    Get three equal-width columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <section>
                     <p>
@@ -359,7 +361,7 @@
                     Three unequal columns
                 </h1>
                 <p>
-                    Get three unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+                    Get three unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
                     Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
@@ -406,7 +408,7 @@
                     Two unequal columns with content on the left
                 </h1>
                 <p>
-                    Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+                    Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
                     Remember, unequal columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
@@ -443,7 +445,7 @@
                     Two unequal columns with content on the right
                 </h1>
                 <p>
-                    Get two unequal columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>. On orientation portrait, the columns will automatically stack.
+                    Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
                 <p>
                     Remember, unequal columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
@@ -504,13 +506,7 @@
                     Complex nested equal columns
                 </h1>
                 <p>
-                    Nesting gives you columns <strong>starting at orientation portrait and scaling to orientation landscape</strong>, within the larger column. On orientation portrait, the columns will automatically stack.
-                </p>
-                <p>
-                    <strong>Nestable mixed layouts</strong>
-                </p>
-                <p>
-                    This means you can consistently build UI into simple or complex layouts.
+                    Nesting gives you columns <em>starting at orientation portrait and scaling to orientation landscape</em>, within the larger column. On orientation portrait, the columns will automatically stack.
                 </p>
                 <section>
                     <p>
@@ -565,10 +561,10 @@
             </article>
             <article>
                 <h1>
-                    Orientation: Portrait and Landscape.
+                    Orientation
                 </h1>
                 <p>
-                    Two default orientations, Portrait & Landscape, make Ambient ideal for responsive layouts.
+                    Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
                 </p>
             </article>
 
@@ -577,7 +573,7 @@
                     Column clearing
                 </h1>
                 <p>
-                    Traditional HTML & CSS column grid clearing makes use of <code>article, header, nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, footer, hr</code>.
+                    Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                 </p>
             </article>
 
@@ -885,12 +881,12 @@
                 <tr>
                     <th><code>article</code></th>
                     <td>Row</td>
-                    <td>Base element which groups content on one horizontal line. Note: for mobile layout content will automatically stack.</td>
+                    <td>Base element which groups content on one horizontal line. Note: on orientation portrait, the content will automatically stack.</td>
                 </tr>
                 <tr>
                     <th><code>section</code></th>
                     <td>Column</td>
-                    <td>Base element which divides an article content into equal sections (columns).</td>
+                    <td>Base element which divides an article content into equal sections (columns) that scales up to 12 columns.</td>
                 </tr>
                 <tr>
                     <th><code>aside</code></th>

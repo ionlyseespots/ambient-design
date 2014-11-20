@@ -123,44 +123,53 @@
 [am-component~="grid"] {
   .flex-display;
   .flex-flow(row wrap);
-  & div {
+  & div[am-grid="row"] {
 
-  &[am-grid="row"] {
-    flex-basis: 100%;
+    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    min-width: 100%;
     .flex-display;
     .flex-flow(row wrap);
-    & div {
+
+
+    & div[am-grid="block"] {
       /**
     * column
     */
+
       .flex(1 8.3333%);
+
       //    .flex-direction(column);
       /**
       * help content on absolute positioning
       */
 
       &[am-block="fourth"] {
-        flex-basis: 25%;
+        .flex-basis(auto);
+        min-width: 25%;
       }
       &[am-block="third"] {
-        flex-basis: 33.3333%;
+        .flex-basis(auto);
+        min-width: 33.333%;
       }
       &[am-block="half"] {
-        flex-basis: 50%;
+        .flex-basis(auto);
+        min-width: 50%;
       }
       &[am-block="two-thirds"] {
-        flex-basis: 66.6667%;
+        .flex-basis(auto);
+        min-width: 66.6667%;
       }
       &[am-block="three-fourths"] {
-        flex-basis: 75%;
+        .flex-basis(auto);
+        min-width: 75%;
       }
       &[am-block="full"] {
-        flex-basis: 100%;
+        .flex-basis(auto);
+        min-width: 100%;
       }
     }
 
 
-    }
   }
 }
 
