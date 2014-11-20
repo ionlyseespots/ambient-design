@@ -124,38 +124,42 @@
   .flex-display;
   .flex-flow(row wrap);
   & div {
-    /**
-   * column
-   */
-    .flex(0 0 8.3333%);
-    .flex-direction(column);
-    /**
-    * help content on absolute positioning
-    */
-    position: relative;
+
   &[am-grid="row"] {
     flex-basis: 100%;
     .flex-display;
     .flex-flow(row wrap);
-      & div[am-block="fourth"] {
-        flex: 0;
+    & div {
+      /**
+    * column
+    */
+      .flex(1 8.3333%);
+      //    .flex-direction(column);
+      /**
+      * help content on absolute positioning
+      */
+
+      &[am-block="fourth"] {
         flex-basis: 25%;
       }
-      & div[am-block="third"] {
+      &[am-block="third"] {
         flex-basis: 33.3333%;
       }
-      & div[am-block="half"] {
+      &[am-block="half"] {
         flex-basis: 50%;
       }
-      & div[am-block="two-thirds"] {
+      &[am-block="two-thirds"] {
         flex-basis: 66.6667%;
       }
-      & div[am-block="three-fourths"] {
+      &[am-block="three-fourths"] {
         flex-basis: 75%;
       }
-      & div[am-block="full"] {
+      &[am-block="full"] {
         flex-basis: 100%;
       }
+    }
+
+
     }
   }
 }
