@@ -32,7 +32,7 @@
         Overview
     </h2>
     <p  class="bg-secondary">
-        Semantic layout | Layout examples - Ambient/HTML5/CSS3 definitions
+        Semantic layout | Layout & column examples - Ambient/HTML5/CSS3 definitions
     </p>
     <blockquote>
         <p>
@@ -148,6 +148,9 @@
                 <h1>
                     Complex layout
                 </h1>
+                <p>
+                    Complex layout with the UI pattern<code>ui-component="grid"</code> for a section of content.
+                </p>
                 <section>
                     <header>
                         <h1>
@@ -174,6 +177,12 @@
                             </p>
                         </header>
                         <section>
+                            <nav>
+                                <a href="#">Nav</a>
+                                <a href="#">Nav</a>
+                                <a href="#">Nav</a>
+                            </nav>
+                            <hr />
                             <header>
                                 <h1>
                                     Heading 1
@@ -185,13 +194,6 @@
                                     Heading 3
                                 </h3>
                             </header>
-                            <hr />
-                            <nav>
-                                <a href="#">Nav</a>
-                                <a href="#">Nav</a>
-                                <a href="#">Nav</a>
-                            </nav>
-                            <hr />
                             <p>
                                 Paragraph
                             </p>
@@ -208,18 +210,50 @@
                                 <h1>
                                     Heading 1
                                 </h1>
-                                <section>
+                                <section am-component="grid">
                                     <h1>
                                         Heading 1
                                     </h1>
-                                    <div>
-                                        div
+                                    <div am-grid="row">
+                                        <div am-grid="block">
+                                            1
+                                        </div>
+                                        <div am-grid="block">
+                                            2
+                                        </div>
                                     </div>
-                                    <div>
-                                        div
+                                    <div am-grid="row">
+                                        <div am-grid="block">
+                                            1
+                                        </div>
+                                        <div am-grid="block">
+                                            2
+                                        </div>
+                                        <div am-grid="block">
+                                            3
+                                        </div>
                                     </div>
-                                    <div>
-                                        div
+                                    <div am-grid="row">
+                                        <div am-grid="block">
+                                            1
+                                        </div>
+                                        <div am-grid="block">
+                                            2
+                                        </div>
+                                        <div am-grid="block">
+                                            3
+                                        </div>
+                                        <div am-grid="block">
+                                            4
+                                        </div>
+                                    </div>
+                                    <div am-grid="row">
+                                        <div am-grid="block" am-block="three-fourths">
+                                            1
+                                        </div>
+                                        <div am-grid="block" am-block="fourth">
+                                            2
+                                        </div>
                                     </div>
                                 </section>
                                 <section>
@@ -244,20 +278,6 @@
                                         </p>
                                     </footer>
                                 </section>
-                                <section>
-                                    <h1>
-                                        Heading 1
-                                    </h1>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                </section>
                             </article>
                             <footer>
                                 <p>
@@ -265,20 +285,6 @@
                                 </p>
                             </footer>
                         </section>
-                        <aside>
-                            <p>
-                                Paragraph
-                            </p>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                        </aside>
                         <footer>
                             <p>
                                 Paragraph
@@ -317,6 +323,12 @@
        &lt;/p&gt;
     &lt;/header&gt;
     &lt;section&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;hr /&gt;
         &lt;header&gt;
            &lt;h1&gt;
                 Heading 1
@@ -328,13 +340,6 @@
                 Heading 3
            &lt;/h3&gt;
         &lt;/header&gt;
-        &lt;hr /&gt;
-        &lt;nav&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-        &lt;/nav&gt;
-        &lt;hr /&gt;
         &lt;p&gt;
             Paragraph
         &lt;/p&gt;
@@ -351,19 +356,50 @@
            &lt;h1&gt;
                 Heading 1
            &lt;/h1&gt;
-            &lt;section&gt;
+            &lt;section am-component="grid"&gt;
                 &lt;h1&gt;
                     Heading 1
                 &lt;/h1&gt;
-                &lt;div&gt;
-                    div
+                &lt;div am-grid="row"&gt;
+                    &lt;div am-grid="block"&gt;
+                        1
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        2
+                    &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;div&gt;
-                    div
+                &lt;div am-grid="row"&gt;
+                    &lt;div am-grid="block"&gt;
+                        1
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        2
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        3
+                    &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;div&gt;
-                    div
+                &lt;div am-grid="row"&gt;
+                    &lt;div am-grid="block"&gt;
+                        1
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        2
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        3
+                    &lt;/div&gt;
+                    &lt;div am-grid="block"&gt;
+                        4
+                    &lt;/div&gt;
                 &lt;/div&gt;
+                &lt;div am-grid="row"&gt;
+                    &lt;div am-grid="block" am-block="three-fourths"&gt;
+                        1
+                    &lt;/div&gt;
+                    &lt;div am-grid="block" am-block="fourth"&gt;
+                        2
+                    &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/section&gt;
             &lt;section&gt;
@@ -388,46 +424,18 @@
                     &lt;/p&gt;
                 &lt;/footer&gt;
             &lt;/section&gt;
-            &lt;section&gt;
-                &lt;h1&gt;
-                    Heading 1
-                &lt;/h1&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-            &lt;/section&gt;
         &lt;/article&gt;
     &lt;/section&gt;
-    &lt;aside&gt;
-       &lt;p&gt;
-            Paragraph
-       &lt;/p&gt;
-       &lt;div&gt;
-            div
-       &lt;/div&gt;
-       &lt;div&gt;
-            div
-       &lt;/div&gt;
-       &lt;div&gt;
-            div
-       &lt;/div&gt;
-    &lt;/aside&gt;
     &lt;footer&gt;
-       &lt;p&gt;
+        &lt;p&gt;
             Paragraph
-       &lt;/p&gt;
+        &lt;/p&gt;
     &lt;/footer&gt;
 &lt;/article&gt;
 &lt;footer&gt;
-   &lt;p&gt;
+    &lt;p&gt;
         Paragraph
-   &lt;/p&gt;
+    &lt;/p&gt;
 &lt;/footer&gt;
                 </pre>
             </article>

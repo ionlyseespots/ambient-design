@@ -655,23 +655,11 @@ img {
 [am-component~="gutter"][am-gutter="margin"] > div:first-of-type {
   margin-left: 0;
 }
-[am-component~="grid"] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
 [am-component~="grid"] div[am-grid="row"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
-  width: 100%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -681,6 +669,7 @@ img {
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  width: 100%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"] {
   /**
