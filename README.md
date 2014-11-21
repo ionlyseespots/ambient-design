@@ -2,15 +2,15 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
 
-Our goal is to deliver a semantic layout for HTML elements, attributes and values while also maintaining a separation from content that scales up from Portrait to Landscape.
+Our goal is to deliver semantic layout for HTML elements, attributes and values while also maintaining a separation from content that scales up from Portrait to Landscape.
 
 Developers can focus on HTML5 elements to create layout and designers can focus on extending UI patterns for content.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
-## Demo
+## Semantic Layout
 
-To see Ambient in action: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
+View layout: http://ionlyseespots.github.io/ambient-design/layout/index.html
 
 ## Quick Start
 
@@ -27,7 +27,6 @@ This project is in early development.
 Ambient layout makes use of HTML5 elements & CSS3 properties to layout semantic markup. Ambient UI patterns are layout-related attributes for content.
 
 * Website: http://ionlyseespots.github.io/ambient-design/index.html
-* View layout examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
 * Layout: http://ionlyseespots.github.io/ambient-design/layout/index.html
 * UI patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
