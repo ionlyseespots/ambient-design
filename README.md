@@ -4,7 +4,7 @@
 
 Our goal is to deliver a semantic layout for HTML elements, attributes and values while also maintaining a separation from content that adapts across different devices.
 
-Developers can focus on HTML to convey layout and designers can focus on extending UI patterns for content.
+Developers can focus on HTML5 elements to create layout and designers can focus on extending UI patterns for content.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
@@ -24,7 +24,7 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 
 This project is in early development.
 
-Ambient makes use of HTML5 elements & CSS3 properties to convey layout. UI patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
+Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. UI patterns are about defining namespaces for the HTML to live in. It works by generating styles for elements, attributes & values. And it's the key to unlocking this new approach.
 
 * Website: http://ionlyseespots.github.io/ambient-design/index.html
 * View layout examples: http://ionlyseespots.github.io/ambient-design/examples/grid/index.html
