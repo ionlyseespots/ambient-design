@@ -7,20 +7,30 @@
     <title>Ambient is a semantic layout</title>
     <!-- Ambient -->
     <link rel="stylesheet" href="../../dist/css/ambient.min.css">
+    <!-- website -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
 <header>
     <h1>
         <a href="../../index.html" title="index">Ambient</a>
+        <a href="https://github.com/ionlyseespots/ambient-design" class="pull-right"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
     </h1>
-    <h2>
-        <i class="fa fa-th"></i> Layout examples
-    </h2>
-    <p>
-        Get familiar with the Ambient <a href="../../layout/index.html">semantic layout</a>.
-    </p>
 </header>
+<nav role="navigation">
+    <a href="../layout/index.html"  class="active">Semantic layout</a>
+</nav>
 <main role="main">
+    <h1 class="bg-primary">
+        Semantic layout
+    </h1>
+    <h2 class="bg-secondary">
+        Overview
+    </h2>
+    <p  class="bg-secondary">
+        Simple layout | Complex layout | Section layout
+    </p>
     <article am-layout="outline">
     <blockquote>
         <p>
@@ -34,7 +44,295 @@
         </p>
     </blockquote>
     <h1>
-        Example semantic layout
+        Simple semantic layout
+    </h1>
+    <p>
+        Ambient is a method for creating semantic layout not constrained by the browser.
+    </p>
+    <section>
+        <header>
+            <h1>
+                Heading 1
+            </h1>
+            <p>
+                Paragraph
+            </p>
+        </header>
+        <hr />
+        <nav>
+            <a href="#">Nav</a>
+            <a href="#">Nav</a>
+            <a href="#">Nav</a>
+        </nav>
+        <hr />
+        <article>
+            <header>
+                <h1>
+                    Heading 1
+                </h1>
+                <p>
+                    Paragraph
+                </p>
+            </header>
+            <section>
+                <header>
+                    <h1>
+                        Heading 1
+                    </h1>
+                    <h2>
+                        Heading 2
+                    </h2>
+                    <h3>
+                        Heading 3
+                    </h3>
+                </header>
+                <hr />
+                <nav>
+                    <a href="#">Nav</a>
+                    <a href="#">Nav</a>
+                    <a href="#">Nav</a>
+                </nav>
+                <hr />
+                <p>
+                    Paragraph
+                </p>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+                <article>
+                    <h1>
+                        Heading 1
+                    </h1>
+                    <section>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                    </section>
+                    <section>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                        <p>
+                            Paragraph
+                        </p>
+                        <footer>
+                            <p>
+                                Paragraph
+                            </p>
+                        </footer>
+                    </section>
+                    <section>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                        <div>
+                            div
+                        </div>
+                    </section>
+                </article>
+                <footer>
+                    <p>
+                        Paragraph
+                    </p>
+                </footer>
+            </section>
+            <aside>
+                <p>
+                    Paragraph
+                </p>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+                <div>
+                    div
+                </div>
+            </aside>
+            <footer>
+                <p>
+                    Paragraph
+                </p>
+            </footer>
+        </article>
+        <footer>
+            <p>
+                Paragraph
+            </p>
+        </footer>
+    </section>
+                <pre>
+&lt;header&gt;
+   &lt;h1&gt;
+        Heading 1
+   &lt;/h1&gt;
+   &lt;p&gt;
+        Paragraph
+   &lt;/p&gt;
+&lt;/header&gt;
+&lt;hr /&gt;
+&lt;nav&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+    &lt;a href="#"&gt;nav&lt;/a&gt;
+&lt;/nav&gt;
+&lt;hr /&gt;
+&lt;article&gt;
+    &lt;header&gt;
+       &lt;h1&gt;
+            Heading 1
+       &lt;/h1&gt;
+       &lt;p&gt;
+            Paragraph
+       &lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+        &lt;header&gt;
+           &lt;h1&gt;
+                Heading 1
+           &lt;/h1&gt;
+           &lt;h2&gt;
+                Heading 2
+           &lt;/h2&gt;
+           &lt;h3&gt;
+                Heading 3
+           &lt;/h3&gt;
+        &lt;/header&gt;
+        &lt;hr /&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+            &lt;a href="#"&gt;nav&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+        &lt;div&gt;
+            div
+        &lt;/div&gt;
+        &lt;div&gt;
+            div
+        &lt;/div&gt;
+        &lt;div&gt;
+            div
+        &lt;/div&gt;
+        &lt;article&gt;
+           &lt;h1&gt;
+                Heading 1
+           &lt;/h1&gt;
+            &lt;section&gt;
+                &lt;h1&gt;
+                    Heading 1
+                &lt;/h1&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h1&gt;
+                    Heading 1
+                &lt;/h1&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;p&gt;
+                    Paragraph
+                &lt;/p&gt;
+                &lt;footer&gt;
+                    &lt;p&gt;
+                        Paragraph
+                    &lt;/p&gt;
+                &lt;/footer&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h1&gt;
+                    Heading 1
+                &lt;/h1&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+                &lt;div&gt;
+                    div
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+       &lt;p&gt;
+            Paragraph
+       &lt;/p&gt;
+       &lt;div&gt;
+            div
+       &lt;/div&gt;
+       &lt;div&gt;
+            div
+       &lt;/div&gt;
+       &lt;div&gt;
+            div
+       &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+       &lt;p&gt;
+            Paragraph
+       &lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;footer&gt;
+   &lt;p&gt;
+        Paragraph
+   &lt;/p&gt;
+&lt;/footer&gt;
+                </pre>
+    <h1>
+        Complex semantic layout
     </h1>
     <p>
         Ambient is a method for creating semantic layout not constrained by the browser.

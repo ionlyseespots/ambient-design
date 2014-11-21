@@ -97,15 +97,33 @@ ambient/
             Starter template
         </h1>
         <section am-component am-padding>
-            <h1>
-                Start with this starter HTML5 template, or modify our examples.
-            </h1>
-            <p>
-                Copy the  <a href="../examples/starter-template/index.html">starter HTML5 template</a> to begin a web project with Ambient, or modify our examples below.
-            </p>
+            <article am-layout="outline">
+                <section>
+                    <header role="banner">
+                        <h1>Hello, header!</h1>
+                    </header>
+                    <hr />
+
+                    <nav role="navigation">
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                    </nav>
+                    <hr />
+
+                    <main role="main">
+                        <article>
+                            <h1>Hello, world!</h1>
+                        </article>
+                    </main>
+                    <footer role="contentinfo">
+                        <p>Hello, sticky footer!</p>
+                    </footer>
+                </section>
+            </article>
         </section>
         <section am-component am-padding>
-            <pre>
+            <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -120,27 +138,24 @@ ambient/
    &lt;h1&gt;Hello, header!&lt;/h1&gt;
 &lt;/header&gt;
 &lt;hr /&gt;
-
 &lt;nav role="navigation"&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
 &lt;/nav&gt;
 &lt;hr /&gt;
-
 &lt;main role="main"&gt;
     &lt;article&gt;
             &lt;h1&gt;Hello, world!&lt;/h1&gt;
     &lt;/article&gt;
 &lt;/main&gt;
 &lt;hr /&gt;
-
 &lt;footer role="contentinfo"&gt;
-       &lt;h1&gt;Hello, sticky footer!&lt;/h1&gt;
+       &lt;p&gt;Hello, sticky footer!&lt;/p&gt;
 &lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-            </pre>
+            </code></pre>
         </section>
     </article>
     <hr />
@@ -157,30 +172,22 @@ ambient/
                 <a href="../examples/starter-template/index.html" class="btn btn-default">View starter template</a>
             </p>
         </section>
-        <section class="text-center">
-            <h1>
-                View layout
-            </h1>
-            <p>
-                <a href="../examples/grid/index.html" class="btn btn-default">View layout</a>
-            </p>
-        </section>
-        <section class="text-center">
-            <h1>
-                Landing page
-            </h1>
-            <p>
-                <a href="../examples/landing-page/index.html" class="btn btn-default">View landing page</a>
-            </p>
-        </section>
-        <section class="text-center">
-            <h1>
-                Admin template
-            </h1>
-            <p>
-                <a href="../examples/admin-shell/index.html" class="btn btn-default">View admin template</a>
-            </p>
-        </section>
+        <!--<section class="text-center">-->
+            <!--<h1>-->
+                <!--Landing page-->
+            <!--</h1>-->
+            <!--<p>-->
+                <!--<a href="../examples/landing-page/index.html" class="btn btn-default">View landing page</a>-->
+            <!--</p>-->
+        <!--</section>-->
+        <!--<section class="text-center">-->
+            <!--<h1>-->
+                <!--Admin template-->
+            <!--</h1>-->
+            <!--<p>-->
+                <!--<a href="../examples/admin-shell/index.html" class="btn btn-default">View admin template</a>-->
+            <!--</p>-->
+        <!--</section>-->
     </article>
     <hr />
 
