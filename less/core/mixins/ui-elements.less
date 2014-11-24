@@ -97,12 +97,21 @@
     margin-bottom: 3vw;
     margin-left: 3vw;
   }
+  &[am-relative] {
+    & > div {
+      .flex-basis( 33.333333%);
+      margin-left: 0;
+      &:nth-of-type(even) {
+        margin-left: 1vw;
+      }
+    }
+  }
 }
-
+// working on gutters for grid
 [am-component~="gutter"] {
   &[am-gutter="padding"] {
     padding: 0;
-    & > div {
+    & div {
       padding-left:1em;
     }
     & > div:first-of-type {
@@ -111,7 +120,7 @@
   }
   &[am-gutter="margin"] {
     margin: 0;
-    & > div {
+    & div {
       margin-left:1em;
     }
     & > div:first-of-type {
@@ -171,3 +180,24 @@
 }
 
 
+
+[am-component~="card"]   {
+  -webkit-columns: auto 15em;
+  -moz-columns: auto 15em;
+  columns: auto 15em;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+display: block;
+  margin-left: -.25vw;
+
+  & > div {
+    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
+    margin-bottom: .5vw;
+    padding: 1vw;
+    border-radius: 2px;
+    margin-left: .25vw; margin-right: .25vw;
+    display: inline-block;
+
+  }
+}

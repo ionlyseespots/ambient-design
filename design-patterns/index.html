@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>UI patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -1163,30 +1163,42 @@
                     <code>&lt;article am-layout="card""&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card">
-                <section>
-                    <h1>
-                        This is a card
-                    </h1>
-                    <P>
-                        Cards have a constant width and variable height.
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        This is a card
-                    </h1>
-                    <P>
-                        Cards have a constant width and variable height.
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        This is a card
-                    </h1>
-                    <P>
-                        Cards have a constant width and variable height.
-                    </P>
+            <article>
+                <section am-component="card">
+                    <div>
+                        <h1>
+                            This is a card
+                        </h1>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h1>
+                            This is a card
+                        </h1>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+
+                    </div>
+                    <div>
+                        <h1>
+                            This is a card
+                        </h1>
+                        <P>
+                            Cards have a constant width and variable height.
+                        </P>
+                    </div>
                 </section>
             </article>
         </section>
@@ -1235,30 +1247,32 @@
                     <code>&lt;article am-layout="card" am-vertical&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card" am-vertical>
-                <section>
+            <article>
+                <section am-component="card">
+                    <div>
                     <h1>
                         This is a card
                     </h1>
                     <P>
                         Cards have a constant width and variable height.
                     </P>
-                </section>
-                <section>
+                    </div>
+                    <div>
                     <h1>
                         This is a card
                     </h1>
                     <P>
                         Cards have a constant width and variable height.
                     </P>
-                </section>
-                <section>
+                    </div>
+                    <div>
                     <h1>
                         This is a card
                     </h1>
                     <P>
                         Cards have a constant width and variable height.
                     </P>
+                    </div>
                 </section>
             </article>
         </section>
@@ -1307,30 +1321,34 @@
                     <code>&lt;article am-layout="card" am-relative&gt;</code>
                 </p>
             </blockquote>
-            <article am-layout="card" am-relative>
-                <section>
+            <article>
+                <section am-component="card">
+                    <div>
+                    <h1>
+                        This is a card
+                    </h1>
+                    <P>
+                        Cards have a constant width and variable height.
+                    </P>       <P>
+                        Cards have a constant width and variable height.
+                    </P>
+                    </div>
+                    <div>
                     <h1>
                         This is a card
                     </h1>
                     <P>
                         Cards have a constant width and variable height.
                     </P>
-                </section>
-                <section>
+                    </div>
+                    <div>
                     <h1>
                         This is a card
                     </h1>
                     <P>
                         Cards have a constant width and variable height.
                     </P>
-                </section>
-                <section>
-                    <h1>
-                        This is a card
-                    </h1>
-                    <P>
-                        Cards have a constant width and variable height.
-                    </P>
+                    </div>
                 </section>
             </article>
         </section>

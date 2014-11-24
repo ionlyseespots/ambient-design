@@ -266,16 +266,6 @@
       margin-left: 0;
     }
   }
-
-  &[am-relative] {
-    & > section {
-      .flex-basis( 33.333333%);
-      margin-left: 0;
-      &:nth-of-type(even) {
-        margin-left: 1vw;
-      }
-    }
-  }
 }
 
 [am-layout~="gutter"] {
@@ -310,17 +300,7 @@
   }
 }
 
-[am-layout~="card"]   {
-  & > section {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    margin-bottom: 1vw;
-    padding: 1vw;
-    margin-left: 1vw;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
+
 
 @media (orientation:portrait){
   [am-layout~="gutter"] {
