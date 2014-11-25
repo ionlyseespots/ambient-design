@@ -1,3 +1,148 @@
+
+// working on gutters for grid
+[am-component~="gutter"] {
+  &[am-gutter="padding"] {
+    padding: 0;
+    & div {
+      padding-left:1em;
+    }
+    & > div:first-of-type {
+      margin-left:-1em;
+    }
+  }
+  &[am-gutter="margin"] {
+    margin: 0;
+    & div {
+      margin-left:1em;
+    }
+    & > div:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+[am-component~="grid"] {
+  & div[am-grid="row"] {
+
+    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    .flex-display;
+    .flex-flow(row wrap);
+    width: 100%;
+
+    & div[am-grid="block"] {
+      /**
+    * column
+    */
+
+      .flex(1 8.3333%);
+
+      //    .flex-direction(column);
+      /**
+      * help content on absolute positioning
+      */
+
+      &[am-block="fourth"] {
+        .flex-basis(auto);
+        width: 25%;
+      }
+      &[am-block="third"] {
+        .flex-basis(auto);
+        width: 33.333%;
+      }
+      &[am-block="half"] {
+        .flex-basis(auto);
+        width: 50%;
+      }
+      &[am-block="two-thirds"] {
+        .flex-basis(auto);
+        width: 66.6667%;
+      }
+      &[am-block="three-fourths"] {
+        .flex-basis(auto);
+        width: 75%;
+      }
+      &[am-block="full"] {
+        .flex-basis(auto);
+        width: 100%;
+      }
+    }
+
+
+  }
+}
+
+
+
+[am-component~="card"]   {
+    -webkit-column-width:  15em;
+    -webkit-column-gap: 0;
+    -webkit-column-count: auto;
+    -moz-column-width:  15em;
+    -moz-column-gap: 0;
+    -moz-column-count: auto;
+    -ms-column-width:  15em;
+    -ms-column-gap: 0;
+    -ms-column-count: auto;
+    column-width:  15em;
+    column-gap: 0;
+    column-count: auto;
+    margin-left: -1vw;
+
+  & div[am-card="block"] {
+    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
+    padding: 1vw;
+    border-radius: 2px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    display: inline-block;
+    width: calc(100% - 2vw);
+  }
+
+  &[am-card~="linear"] {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+    margin-left: 0;
+    & div[am-card="row"] {
+      .flex-basis(auto);
+      .flex-display;
+      .flex-flow(row wrap);
+      width: 100%;
+      & div[am-card="block"] {
+        .flex(1 8.3333%);
+        margin-left: .5vw;
+        margin-right: 0;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+    &[am-vertical] {
+      & div[am-card="row"] {
+        & div[am-card="block"] {
+          .flex-basis(100%);
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+    }
+    &[am-relative] {
+      & div[am-card="row"] {
+        & div[am-card="block"] {
+          .flex-basis(33.333333%);
+          margin-left: 0;
+          &:nth-of-type(even) {
+            margin-left: 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+
 [am-component]{
   &[am-padding] {
     padding-top: 1vw;
@@ -97,107 +242,7 @@
     margin-bottom: 3vw;
     margin-left: 3vw;
   }
-  &[am-relative] {
-    & > div {
-      .flex-basis( 33.333333%);
-      margin-left: 0;
-      &:nth-of-type(even) {
-        margin-left: 1vw;
-      }
-    }
-  }
-}
-// working on gutters for grid
-[am-component~="gutter"] {
-  &[am-gutter="padding"] {
-    padding: 0;
-    & div {
-      padding-left:1em;
-    }
-    & > div:first-of-type {
-      margin-left:-1em;
-    }
-  }
-  &[am-gutter="margin"] {
-    margin: 0;
-    & div {
-      margin-left:1em;
-    }
-    & > div:first-of-type {
-      margin-left: 0;
-    }
-  }
-}
-
-[am-component~="grid"] {
-  & div[am-grid="row"] {
-
-    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-    .flex-display;
-    .flex-flow(row wrap);
-    width: 100%;
-
-    & div[am-grid="block"] {
-      /**
-    * column
-    */
-
-      .flex(1 8.3333%);
-
-      //    .flex-direction(column);
-      /**
-      * help content on absolute positioning
-      */
-
-      &[am-block="fourth"] {
-        .flex-basis(auto);
-        width: 25%;
-      }
-      &[am-block="third"] {
-        .flex-basis(auto);
-        width: 33.333%;
-      }
-      &[am-block="half"] {
-        .flex-basis(auto);
-        width: 50%;
-      }
-      &[am-block="two-thirds"] {
-        .flex-basis(auto);
-        width: 66.6667%;
-      }
-      &[am-block="three-fourths"] {
-        .flex-basis(auto);
-        width: 75%;
-      }
-      &[am-block="full"] {
-        .flex-basis(auto);
-        width: 100%;
-      }
-    }
-
-
-  }
-}
 
 
 
-[am-component~="card"]   {
-  -webkit-columns: auto 15em;
-  -moz-columns: auto 15em;
-  columns: auto 15em;
-  -webkit-column-gap: 0;
-  -moz-column-gap: 0;
-  column-gap: 0;
-display: block;
-  margin-left: -.25vw;
-
-  & > div {
-    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
-    margin-bottom: .5vw;
-    padding: 1vw;
-    border-radius: 2px;
-    margin-left: .25vw; margin-right: .25vw;
-    display: inline-block;
-
-  }
 }

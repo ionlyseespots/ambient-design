@@ -541,6 +541,172 @@ img {
     position: static;
   }
 }
+[am-component~="gutter"][am-gutter="padding"] {
+  padding: 0;
+}
+[am-component~="gutter"][am-gutter="padding"] div {
+  padding-left: 1em;
+}
+[am-component~="gutter"][am-gutter="padding"] > div:first-of-type {
+  margin-left: -1em;
+}
+[am-component~="gutter"][am-gutter="margin"] {
+  margin: 0;
+}
+[am-component~="gutter"][am-gutter="margin"] div {
+  margin-left: 1em;
+}
+[am-component~="gutter"][am-gutter="margin"] > div:first-of-type {
+  margin-left: 0;
+}
+[am-component~="grid"] div[am-grid="row"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"] {
+  /**
+    * column
+    */
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
+  /**
+      * help content on absolute positioning
+      */
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="fourth"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 25%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="third"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 33.333%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="half"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 50%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="two-thirds"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 66.6667%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="three-fourths"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 75%;
+}
+[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="full"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 100%;
+}
+[am-component~="card"] {
+  -webkit-column-width: 15em;
+  -webkit-column-gap: 0;
+  -webkit-column-count: auto;
+  -moz-column-width: 15em;
+  -moz-column-gap: 0;
+  -moz-column-count: auto;
+  -ms-column-width: 15em;
+  -ms-column-gap: 0;
+  -ms-column-count: auto;
+  column-width: 15em;
+  column-gap: 0;
+  column-count: auto;
+  margin-left: -1vw;
+}
+[am-component~="card"] div[am-card="block"] {
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 1vw;
+  border-radius: 2px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  display: inline-block;
+  width: calc(98%);
+}
+[am-component~="card"][am-card~="linear"] {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;
+  margin-left: 0;
+}
+[am-component~="card"][am-card~="linear"] div[am-card="row"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+}
+[am-component~="card"][am-card~="linear"] div[am-card="row"] div[am-card="block"] {
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
+  margin-left: .5vw;
+  margin-right: 0;
+}
+[am-component~="card"][am-card~="linear"] div[am-card="row"] div[am-card="block"]:first-of-type {
+  margin-left: 0;
+}
+[am-component~="card"][am-card~="linear"][am-vertical] div[am-card="row"] div[am-card="block"] {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+[am-component~="card"][am-card~="linear"][am-relative] div[am-card="row"] div[am-card="block"] {
+  -webkit-flex-basis: 33.333333%;
+  -moz-flex-basis: 33.333333%;
+  -ms-flex-basis: 33.333333%;
+  flex-basis: 33.333333%;
+  margin-left: 0;
+}
+[am-component~="card"][am-card~="linear"][am-relative] div[am-card="row"] div[am-card="block"]:nth-of-type(even) {
+  margin-left: 1vw;
+}
 [am-component][am-padding] {
   padding-top: 1vw;
   padding-right: 1vw;
@@ -636,123 +802,6 @@ img {
   margin-right: 3vw;
   margin-bottom: 3vw;
   margin-left: 3vw;
-}
-[am-component][am-relative] > div {
-  -webkit-flex-basis: 33.333333%;
-  -moz-flex-basis: 33.333333%;
-  -ms-flex-basis: 33.333333%;
-  flex-basis: 33.333333%;
-  margin-left: 0;
-}
-[am-component][am-relative] > div:nth-of-type(even) {
-  margin-left: 1vw;
-}
-[am-component~="gutter"][am-gutter="padding"] {
-  padding: 0;
-}
-[am-component~="gutter"][am-gutter="padding"] div {
-  padding-left: 1em;
-}
-[am-component~="gutter"][am-gutter="padding"] > div:first-of-type {
-  margin-left: -1em;
-}
-[am-component~="gutter"][am-gutter="margin"] {
-  margin: 0;
-}
-[am-component~="gutter"][am-gutter="margin"] div {
-  margin-left: 1em;
-}
-[am-component~="gutter"][am-gutter="margin"] > div:first-of-type {
-  margin-left: 0;
-}
-[am-component~="grid"] div[am-grid="row"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  width: 100%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"] {
-  /**
-    * column
-    */
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
-  /**
-      * help content on absolute positioning
-      */
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="fourth"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 25%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="third"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 33.333%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="half"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 50%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="two-thirds"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 66.6667%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="three-fourths"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 75%;
-}
-[am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="full"] {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 100%;
-}
-[am-component~="card"] {
-  -webkit-columns: auto 15em;
-  -moz-columns: auto 15em;
-  columns: auto 15em;
-  -webkit-column-gap: 0;
-  -moz-column-gap: 0;
-  column-gap: 0;
-  display: block;
-  margin-left: -0.25vw;
-}
-[am-component~="card"] > div {
-  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: .5vw;
-  padding: 1vw;
-  border-radius: 2px;
-  margin-left: .25vw;
-  margin-right: .25vw;
-  display: inline-block;
 }
 /**
 * multi-column shell [holy grail]
@@ -1034,6 +1083,16 @@ img {
   -ms-flex-basis: 100%;
   flex-basis: 100%;
   margin-left: 0;
+}
+[am-layout][am-relative] > section {
+  -webkit-flex-basis: 33.333333%;
+  -moz-flex-basis: 33.333333%;
+  -ms-flex-basis: 33.333333%;
+  flex-basis: 33.333333%;
+  margin-left: 0;
+}
+[am-layout][am-relative] > section:nth-of-type(even) {
+  margin-left: 1vw;
 }
 [am-layout~="gutter"][am-gutter="padding"] {
   padding: 0;
