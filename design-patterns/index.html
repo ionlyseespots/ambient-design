@@ -394,7 +394,7 @@
         <p>
             To create vertical alignment, add the attribute <code>am-vertical</code> to any article, header or footer.
         </p>
-        <article am-layout="outline" am-vertical>
+        <article am-layout="outline vertical">
             <section>
                 <P>
                     1
@@ -412,7 +412,7 @@
             </section>
         </article>
             <pre>
-&lt;article am-layout am-vertical&gt;
+&lt;article am-layout="vertical" &gt;
 ...
             </pre>
     </section>
@@ -423,7 +423,7 @@
         <p>
             To create relative alignment, add the attribute <code>am-relative</code> to any article, header or footer.
         </p>
-        <article am-layout="outline" am-relative>
+        <article am-layout="outline relative">
             <section>
                 <P>
                     1
@@ -441,7 +441,7 @@
             </section>
         </article>
             <pre>
-&lt;article am-layout am-relative&gt;
+&lt;article am-layout="relative"&gt;
 ...
             </pre>
     </section>
@@ -755,12 +755,7 @@
             To create a grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
         </p>
 
-        <p>
-            To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
-        </p>
-        <p>
-            To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
-        </p>
+
         <h2>
             Basic grid
         </h2>
@@ -768,6 +763,20 @@
             Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
         </p>
         <section am-component am-padding>
+            <blockquote>
+                <h1>
+                    Basic
+                </h1>
+                <p>
+                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
+                </p>
+                <p>
+                    To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
+                </p>
+                <p>
+                    <code>&lt;section am-component="grid"&gt;</code>
+                </p>
+            </blockquote>
             <article am-layout="outline">
                 <section am-component="grid">
                     <div am-grid="row">
@@ -977,9 +986,29 @@
             Complex grid with specified block widths & nested blocks
         </h2>
         <p>
-            To create a specified block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>. Base width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
+            To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+        </p>
+        <p>
+            Width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
         </p>
         <section am-component am-padding>
+            <blockquote>
+                <h1>
+                    Complex
+                </h1>
+                <p>
+                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
+                </p>
+                <p>
+                    To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
+                </p>
+                <p>
+                    To create a block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>
+                </p>
+                <p>
+                    <code>&lt;section am-component="grid"&gt;</code>
+                </p>
+            </blockquote>
             <article am-layout="outline">
                 <section am-component="grid">
                     <div am-grid="row">
@@ -1159,16 +1188,20 @@
             Cards
         </h2>
         <h3>
-            Multiple column cards
+            Basic cards
         </h3>
         <p>
-            To create Multiple column cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section.
+            To create cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
+
         <section am-component am-padding>
             <blockquote>
                 <h1>
-                    Multiple column
+                    Multiple
                 </h1>
+                <p>
+                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                </p>
                 <p>
                     <code>&lt;section am-component="card"&gt;</code>
                 </p>
@@ -1270,22 +1303,28 @@
             </pre>
         </section>
         <h3>
-            Linear horizontal cards
+            Horizontal cards
         </h3>
         <p>
-            To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article, header or footer and chain the value <code>card</code> as <code>am-card="vertical"</code>.
+            To create horizontal cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="horizontal"</code>. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
         <section am-component am-padding>
             <blockquote>
                 <h1>
-                    Linear horizontal
+                    Horizontal
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="card" am-vertical&gt;</code>
+                    To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
+                </p>
+                <p>
+                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                </p>
+                <p>
+                    <code>&lt;section am-component="card" am-card="horizontal"&gt;</code>
                 </p>
             </blockquote>
             <article>
-                <section am-component="card" am-card="linear">
+                <section am-component="card" am-card="horizontal">
                     <div am-card="row">
                         <div am-card="block">
                             <h1>
@@ -1352,7 +1391,7 @@
             </pre>
         </section>
         <h3>
-            Linear vertical cards
+            Vertical cards
         </h3>
         <p>
             To create vertical cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any article, header or footer and chain the value <code>card</code> as <code>am-card="vertical"</code>.
@@ -1360,14 +1399,14 @@
         <section am-component am-padding>
             <blockquote>
                 <h1>
-                    Linear vertical
+                    Vertical
                 </h1>
                 <p>
                     <code>&lt;article am-layout="card" am-vertical&gt;</code>
                 </p>
             </blockquote>
             <article>
-                <section am-component="card" am-card="linear" am-vertical>
+                <section am-component="card" am-card="vertical">
                     <div am-card="row">
                         <div am-card="block">
                             <h1>
@@ -1431,7 +1470,7 @@
             </pre>
         </section>
         <h3>
-            Linear relative cards
+            Relative cards
         </h3>
         <p>
             To create relative cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article, header or footer and chain the value <code>card</code> as <code>am-card="relative"</code>.
@@ -1439,14 +1478,14 @@
         <section am-component am-padding>
             <blockquote>
                 <h1>
-                    Linear relative
+                    Relative
                 </h1>
                 <p>
                     <code>&lt;article am-layout="card" am-relative&gt;</code>
                 </p>
             </blockquote>
             <article>
-                <section am-component="card" am-card="linear" am-relative>
+                <section am-component="card" am-card="relative">
                     <div am-card="row">
                         <div am-card="block">
                             <h1>

@@ -75,31 +75,29 @@
 
 [am-component~="card"]   {
     -webkit-column-width:  15em;
-    -webkit-column-gap: 0;
+    -webkit-column-gap: 1em;
     -webkit-column-count: auto;
     -moz-column-width:  15em;
-    -moz-column-gap: 0;
+    -moz-column-gap: 1em;
     -moz-column-count: auto;
     -ms-column-width:  15em;
-    -ms-column-gap: 0;
+    -ms-column-gap: 1em;
     -ms-column-count: auto;
     column-width:  15em;
-    column-gap: 0;
+    column-gap: 1em;
     column-count: auto;
-    margin-left: -1vw;
+    margin-left: -1em;
 
   & div[am-card="block"] {
-    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
     padding: 1vw;
     border-radius: 2px;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vh;
+    margin-left: 1em;
+    margin-bottom: 1em;
     display: inline-block;
-    width: calc(100% - 2vw);
   }
 
-  &[am-card~="linear"] {
+  &[am-card~="horizontal"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     -ms-column-count: 1;
@@ -112,34 +110,59 @@
       width: 100%;
       & div[am-card="block"] {
         .flex(1 8.3333%);
-        margin-left: .5vw;
+        margin-left: 1em;
         margin-right: 0;
         &:first-of-type {
           margin-left: 0;
         }
       }
     }
-    &[am-vertical] {
+  }
+
+    &[am-card~="vertical"] {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      -ms-column-count: 1;
+      column-count: 1;
+      margin-left: 0;
       & div[am-card="row"] {
         & div[am-card="block"] {
-          .flex-basis(100%);
+          .flex(1 auto);
           margin-left: 0;
           margin-right: 0;
           width: 100%;
         }
       }
     }
-    &[am-relative] {
+
+    &[am-card~="relative"] {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      -ms-column-count: 1;
+      column-count: 1;
+      margin-left: 0;
       & div[am-card="row"] {
+        .flex-basis(auto);
+        .flex-display;
+        .flex-flow(row wrap);
+        width: 100%;
         & div[am-card="block"] {
-          .flex-basis(33.333333%);
+          .flex(1 auto);
           margin-left: 0;
+          margin-right: 0;
+          width: 33.333%;
           &:nth-of-type(even) {
-            margin-left: 1vw;
+            margin-left: 1em;
           }
         }
       }
     }
+
+  @media (orientation:portrait){
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    column-count: 2;
   }
 }
 

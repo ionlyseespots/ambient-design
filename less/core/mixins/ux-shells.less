@@ -260,22 +260,25 @@
     margin-left: 3vw;
   }
 
-  &[am-vertical] {
-    & > section {
-      .flex-basis(100%);
-      margin-left: 0;
-    }
-  }
-
-  &[am-relative] {
-    & > section {
-      .flex-basis( 33.333333%);
-      margin-left: 0;
-      &:nth-of-type(even) {
-        margin-left: 1vw;
+    &[am-layout~="vertical"] {
+      & > section {
+        .flex-basis(100%);
+        margin-left: 0;
       }
     }
-  }
+
+    &[am-layout~="relative"] {
+      & > section {
+        .flex(1 auto);
+        margin-left: 0;
+        margin-right: 0;
+        width: 33.333%;
+        &:nth-of-type(even) {
+          margin-left: 1vw;
+        }
+      }
+    }
+
 }
 
 [am-layout~="gutter"] {
@@ -327,12 +330,6 @@
       & > section {
         margin-left:0;
       }
-    }
-  }
-
-  [am-layout~="card"] {
-    & > section {
-margin-left: 0;
     }
   }
 }
