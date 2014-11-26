@@ -86,14 +86,14 @@
     column-width:  15em;
     column-gap: 1em;
     column-count: auto;
-    margin-left: -1em;
+    padding-left: .5em;
+    padding-right: .5em;
 
   & div[am-card="block"] {
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
     padding: 1vw;
     border-radius: 2px;
-    margin-left: 1em;
-    margin-bottom: 1em;
+    margin: .5em 0;
     display: inline-block;
   }
 
@@ -102,18 +102,19 @@
     -moz-column-count: 1;
     -ms-column-count: 1;
     column-count: 1;
-    margin-left: 0;
+    padding: 0;
+
     & div[am-card="row"] {
       .flex-basis(auto);
       .flex-display;
       .flex-flow(row wrap);
       width: 100%;
+      padding: 0 .5em;
       & div[am-card="block"] {
         .flex(1 8.3333%);
         margin-left: 1em;
-        margin-right: 0;
         &:first-of-type {
-          margin-left: 0;
+        margin-left: 0;
         }
       }
     }
@@ -124,36 +125,12 @@
       -moz-column-count: 1;
       -ms-column-count: 1;
       column-count: 1;
-      margin-left: 0;
+      padding: 0;
       & div[am-card="row"] {
+        padding: 0 .5em;
         & div[am-card="block"] {
           .flex(1 auto);
-          margin-left: 0;
-          margin-right: 0;
           width: 100%;
-        }
-      }
-    }
-
-    &[am-card~="relative"] {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      -ms-column-count: 1;
-      column-count: 1;
-      margin-left: 0;
-      & div[am-card="row"] {
-        .flex-basis(auto);
-        .flex-display;
-        .flex-flow(row wrap);
-        width: 100%;
-        & div[am-card="block"] {
-          .flex(1 auto);
-          margin-left: 0;
-          margin-right: 0;
-          width: 33.333%;
-          &:nth-of-type(even) {
-            margin-left: 1em;
-          }
         }
       }
     }

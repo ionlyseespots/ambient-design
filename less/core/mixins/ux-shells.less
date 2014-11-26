@@ -159,6 +159,38 @@
   padding: 2vw 3vw;
 }
 
+[am-layout~="gutter"] {
+  &[am-gutter="padding"] {
+    padding: 0;
+    & > section {
+      padding-left:1em;
+    }
+    & > section:first-of-type {
+      margin-left:-1em;
+    }
+  }
+  &[am-gutter="margin"] {
+    margin: 0;
+    & > section {
+      margin-left:1em;
+    }
+    & > section:first-of-type, header + section, nav + section, footer + section, h1 + section, h2 + section, h3 + section, h4 + section, h5 + section, h6 + section, hr + section, p + section {
+      margin-left: 0;
+    }
+  }
+}
+
+[am-layout~="outline"] {
+  &[am-gutter~="padding"] p {
+    background-color: rgba(93, 116, 137, 0.15);
+    border: 1px solid rgba(93, 116, 137, 0.2);
+  }
+  section, aside, div {
+    background-color: rgba(93, 116, 137, 0.15);
+    border: 1px solid rgba(93, 116, 137, 0.2);
+  }
+}
+
 
 [am-layout]   {
   &[am-padding] {
@@ -260,59 +292,13 @@
     margin-left: 3vw;
   }
 
-    &[am-layout~="vertical"] {
-      & > section {
-        .flex-basis(100%);
-        margin-left: 0;
-      }
-    }
-
-    &[am-layout~="relative"] {
-      & > section {
-        .flex(1 auto);
-        margin-left: 0;
-        margin-right: 0;
-        width: 33.333%;
-        &:nth-of-type(even) {
-          margin-left: 1vw;
-        }
-      }
-    }
-
-}
-
-[am-layout~="gutter"] {
-  &[am-gutter="padding"] {
-    padding: 0;
+  &[am-layout~="vertical"] {
     & > section {
-      padding-left:1em;
-    }
-    & > section:first-of-type {
-      margin-left:-1em;
-    }
-  }
-  &[am-gutter="margin"] {
-    margin: 0;
-    & > section {
-      margin-left:1em;
-    }
-    & > section:first-of-type, header + section, nav + section, footer + section, h1 + section, h2 + section, h3 + section, h4 + section, h5 + section, h6 + section, hr + section, p + section {
+      .flex-basis(100%);
       margin-left: 0;
     }
   }
 }
-
-[am-layout~="outline"] {
-  &[am-gutter~="padding"] p {
-    background-color: rgba(93, 116, 137, 0.15);
-    border: 1px solid rgba(93, 116, 137, 0.2);
-  }
-  section, aside, div {
-    background-color: rgba(93, 116, 137, 0.15);
-    border: 1px solid rgba(93, 116, 137, 0.2);
-  }
-}
-
 
 
 @media (orientation:portrait){

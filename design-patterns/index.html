@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>UI patterns for Ambient</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -340,16 +340,22 @@
     <h2>
         Alignment
     </h2>
+    <h3>
+        Horizontal alignment
+    </h3>
+    <p>
+        Initial alignment is horizontal
+    </p>
+
     <section am-component am-margin>
-        <h3>
-            Horizontal alignment
-        </h3>
-        <p>
-            Initial alignment is horizontal
-        </p>
-        <p>
-            The base element groups content on one horizontal line. You're good to go.
-        </p>
+        <blockquote>
+            <h1>
+                Horizontal
+            </h1>
+            <p>
+                The base element groups content on one horizontal line. You're good to go.
+            </p>
+        </blockquote>
         <article am-layout="outline">
             <section>
                 <P>
@@ -367,7 +373,10 @@
                 </P>
             </section>
         </article>
-            <pre>
+
+    </section>
+    <section>
+                    <pre>
 &lt;article&gt;
     &lt;section&gt;
         &lt;p&gt;
@@ -387,13 +396,22 @@
 &lt;/article&gt;
             </pre>
     </section>
+
+    <h3>
+        Vertical alignment
+    </h3>
+    <p>
+        To create vertical alignment, add the attribute and value <code>am-layout="vertical"</code> to any article, header or footer.
+    </p>
     <section am-component am-margin>
-        <h3>
-            Vertical alignment
-        </h3>
-        <p>
-            To create vertical alignment, add the attribute <code>am-vertical</code> to any article, header or footer.
-        </p>
+        <blockquote>
+            <h1>
+                Vertical
+            </h1>
+            <p>
+                <code>&lt;article am-layout="vertical"&gt;</code>
+            </p>
+        </blockquote>
         <article am-layout="outline vertical">
             <section>
                 <P>
@@ -411,38 +429,26 @@
                 </P>
             </section>
         </article>
-            <pre>
-&lt;article am-layout="vertical" &gt;
-...
-            </pre>
     </section>
-    <section am-component am-margin>
-        <h3>
-            Relative alignment
-        </h3>
-        <p>
-            To create relative alignment, add the attribute <code>am-relative</code> to any article, header or footer.
-        </p>
-        <article am-layout="outline relative">
-            <section>
-                <P>
-                    1
-                </P>
-            </section>
-            <section>
-                <P>
-                    2
-                </P>
-            </section>
-            <section>
-                <P>
-                    3
-                </P>
-            </section>
-        </article>
-            <pre>
-&lt;article am-layout="relative"&gt;
-...
+    <section>
+        <pre>
+&lt;article am-layout="vertical"&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            1
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            2
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;
+            3
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
             </pre>
     </section>
     <h2>
@@ -749,16 +755,17 @@
             A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.
         </p>
         <h2>
-            Grid
+            Grids
         </h2>
-        <p>
-            To create a grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
-        </p>
+
 
 
         <h2>
             Basic grid
         </h2>
+        <p>
+            To create a basic grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
+        </p>
         <p>
             Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
         </p>
@@ -901,7 +908,7 @@
                 </section>
             </article>
             <p>
-                ...scales up to 12 equal blocks
+                ...scales up to 12 equal blocks per row
             </p>
         </section>
         <section am-component am-padding>
@@ -989,7 +996,7 @@
             To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
         <p>
-            Width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
+            Block width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
         </p>
         <section am-component am-padding>
             <blockquote>
@@ -1187,11 +1194,14 @@
         <h2>
             Cards
         </h2>
+        <p>
+            <em>Cards will be added in the next Bower update.</em>
+        </p>
         <h3>
-            Basic cards
+            Multiple cards
         </h3>
         <p>
-            To create cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+            To create multiple cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
 
         <section am-component am-padding>
@@ -1210,63 +1220,63 @@
                 <section am-component="card">
                     <div am-card="block">
                         <h1>
-                            Column card
+                            Multiple card
                         </h1>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                     </div>
                     <div am-card="block">
                         <h2>
-                            Column card
+                            Multiple  card
                         </h2>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                     </div>
                     <div am-card="block">
                         <h3>
-                            Column card
+                            Multiple card
                         </h3>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                     </div>
                     <div am-card="block">
                         <h4>
-                            Column card
+                            Multiple card
                         </h4>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                     </div>
                     <div am-card="block">
                         <h5>
-                            Column card
+                            Multiple card
                         </h5>
                         <P>
-                            Column cards have a constant width and variable height.
+                            Multiple cards have a consistent, flexible width and variable height.
                         </P>
                     </div>
                 </section>
@@ -1274,30 +1284,69 @@
         </section>
         <section am-component am-padding>
             <pre>
-&lt;article am-layout="card"&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
+&lt;article&gt;
+    &lt;section am-component="card"&gt;
+        &lt;div am-card="block"&gt;
+            &lt;h1&gt;
+                Multiple card
+            &lt;/h1&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div am-card="block"&gt;
+            &lt;h2&gt;
+                Multiple card
+            &lt;/h2&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div am-card="block"&gt;
+            &lt;h3&gt;
+                Multiple card
+            &lt;/h3&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div am-card="block"&gt;
+            &lt;h4&gt;
+                Multiple card
+            &lt;/h4&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+           &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div am-card="block"&gt;
+            &lt;h5&gt;
+                Multiple card
+            &lt;/h5&gt;
+            &lt;p&gt;
+                Multiple cards have a consistent, flexible width and variable height.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
             </pre>
@@ -1331,61 +1380,68 @@
                                 Horizontal card
                             </h1>
                             <P>
-                                Linear cards have a constant width and equal height.
+                                Horizontal cards have a consistent, flexible width and equal height.
                             </P>
                             <P>
-                                Linear cards have a constant width and equal height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h1>
-                                Horizontal card
-                            </h1>
-                            <P>
-                                Linear cards have a constant width and equal height.
+                                Horizontal cards have a consistent, flexible width and equal height.
                             </P>
                         </div>
                         <div am-card="block">
-                            <h1>
+                            <h2>
                                 Horizontal card
-                            </h1>
+                            </h2>
                             <P>
-                                Linear cards have a constant width and equal height.
+                                Horizontal cards have a consistent, flexible width and equal height.
+                            </P>
+                        </div>
+                        <div am-card="block">
+                            <h3>
+                                Horizontal card
+                            </h3>
+                            <P>
+                                Horizontal cards have a consistent, flexible width and equal height.
                             </P>
                         </div>
                     </div>
                 </section>
             </article>
             <p>
-                ...scales up to 12 equal blocks
+                ...scales up to 12 equal blocks per row
             </p>
         </section>
         <section am-component am-padding>
             <pre>
-&lt;article am-layout="card" am-vertical&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
+&lt;article&gt;
+    &lt;section am-component="card" am-card="horizontal"&gt;
+        &lt;div am-card="row"&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h1&gt;
+                    Horizontal card
+                &lt;/h1&gt;
+                &lt;p&gt;
+                    Horizontal cards have a consistent, flexible width and equal height.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    Horizontal cards have a consistent, flexible width and equal height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h2&gt;
+                    Horizontal card
+                &lt;/h2&gt;
+                &lt;p&gt;
+                    Horizontal cards have a consistent, flexible width and equal height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h3&gt;
+                    Horizontal card
+                &lt;/h3&gt;
+                &lt;p&gt;
+                    Horizontal cards have a consistent, flexible width and equal height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
             </pre>
@@ -1394,7 +1450,7 @@
             Vertical cards
         </h3>
         <p>
-            To create vertical cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any article, header or footer and chain the value <code>card</code> as <code>am-card="vertical"</code>.
+            To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="vertical"</code>.
         </p>
         <section am-component am-padding>
             <blockquote>
@@ -1402,7 +1458,13 @@
                     Vertical
                 </h1>
                 <p>
-                    <code>&lt;article am-layout="card" am-vertical&gt;</code>
+                    To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
+                </p>
+                <p>
+                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                </p>
+                <p>
+                    <code>&lt;section am-component="card" am-card="vertical"&gt;</code>
                 </p>
             </blockquote>
             <article>
@@ -1420,17 +1482,17 @@
                             </P>
                         </div>
                         <div am-card="block">
-                            <h1>
+                            <h2>
                                 Vertical card
-                            </h1>
+                            </h2>
                             <P>
                                 Vertical cards have a constant width and variable height.
                             </P>
                         </div>
                         <div am-card="block">
-                            <h1>
+                            <h3>
                                 Vertical card
-                            </h1>
+                            </h3>
                             <P>
                                 Vertical cards have a constant width and variable height.
                             </P>
@@ -1441,109 +1503,37 @@
         </section>
         <section am-component am-padding>
             <pre>
-&lt;article am-layout="card" am-vertical&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-&lt;/article&gt;
-            </pre>
-        </section>
-        <h3>
-            Relative cards
-        </h3>
-        <p>
-            To create relative cards with the base layout UI pattern, add the attribute and value <code>am-layout="card"</code> to any article, header or footer and chain the value <code>card</code> as <code>am-card="relative"</code>.
-        </p>
-        <section am-component am-padding>
-            <blockquote>
-                <h1>
-                    Relative
-                </h1>
-                <p>
-                    <code>&lt;article am-layout="card" am-relative&gt;</code>
-                </p>
-            </blockquote>
-            <article>
-                <section am-component="card" am-card="relative">
-                    <div am-card="row">
-                        <div am-card="block">
-                            <h1>
-                                Relative card
-                            </h1>
-                            <P>
-                                Relative cards have a constant width and equal height.
-                            </P>
-                            <P>
-                                Relative cards have a constant width and equal height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h1>
-                                Relative card
-                            </h1>
-                            <P>
-                                Relative cards have a constant width and equal height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h1>
-                                Relative card
-                            </h1>
-                            <P>
-                                Relative cards have a constant width and equal height.
-                            </P>
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section am-component am-padding>
-            <pre>
-&lt;article am-layout="card" am-relative&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            This is a card
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Cards have a constant width and variable height.
-        &lt;/p&gt;
+&lt;article&gt;
+    &lt;section am-component="card" am-card="vertical"&gt;
+        &lt;div am-card="row"&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h1&gt;
+                    Vertical card
+                &lt;/h1&gt;
+                &lt;p&gt;
+                    Vertical cards have a constant width and variable height.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    Vertical cards have a constant width and variable height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h2&gt;
+                    Vertical card
+                &lt;/h2&gt;
+                &lt;p&gt;
+                    Vertical cards have a constant width and variable height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div am-card="block"&gt;
+                &lt;h3&gt;
+                    Vertical card
+                &lt;/h3&gt;
+                &lt;p&gt;
+                    Vertical cards have a constant width and variable height.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
             </pre>
