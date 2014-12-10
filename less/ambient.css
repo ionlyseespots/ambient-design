@@ -380,16 +380,15 @@ input[disabled] {
   cursor: default;
 }
 html {
-  font-size: 100%;
+  font-size: 112.5%;
+  line-height: 1.65;
 }
 body {
   background-color: #fff;
   color: #444;
   word-wrap: break-word;
-  font-size: 112.5%;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.65;
 }
 h1,
 h2,
@@ -457,19 +456,6 @@ small {
 img {
   max-width: 100%;
   height: auto;
-}
-nav a:hover {
-  background-color: #CEE1EF;
-}
-nav a:active {
-  background-color: #CEE1EF;
-}
-nav a {
-  -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  transition: background 0.3s ease 0s;
 }
 a {
   display: inline-block;
@@ -596,6 +582,16 @@ var {
   height: 99.9%;
   position: absolute;
 }
+@media (orientation: portrait) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 30em) {
+  html {
+    font-size: 80%;
+  }
+}
 *,
 *:before,
 *:after {
@@ -640,7 +636,8 @@ h4,
 h5,
 h6,
 hr,
-p {
+p,
+div {
   /**
   * column (section) clearing
   */
@@ -674,6 +671,12 @@ nav a {
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
+}
+nav a:hover {
+  background-color: #CEE1EF;
+}
+nav a:active {
+  background-color: #CEE1EF;
 }
 main {
   -webkit-flex: 1 0 auto;
@@ -1345,6 +1348,15 @@ footer {
     margin-left: 0;
   }
 }
+[am-nav] a {
+  padding: 1em;
+  text-align: center;
+  -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  transition: background 0.3s ease 0s;
+}
 [am-nav~="left-align"] {
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
@@ -1512,6 +1524,24 @@ footer {
 }
 .active {
   background-color: #CEE1EF;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
 }
 .btn {
   -moz-user-select: none;

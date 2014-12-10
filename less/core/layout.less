@@ -1,11 +1,15 @@
 // Grid
 // Ambient semantic layout
 
+// http://www.w3.org/TR/CSS2/visuren.html
+// Block elements are 100% width of parent element, if width is not specified.
+
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
   box-sizing: inherit; }
 html {
   box-sizing: border-box;
+  // http://css-tricks.com/a-couple-of-use-cases-for-calc/
   height: calc(100%); }
 body {
   min-width: 100%;
@@ -20,7 +24,7 @@ body {
     margin: auto;
     width: auto; }
 }
-main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
+main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
   /**
   * column (section) clearing
   */
@@ -36,6 +40,10 @@ nav {
   .flex-flow(row wrap);
   & a {
     .flex(1 8.3333%);
+    &:hover {
+      background-color:#CEE1EF; }
+    &:active {
+      background-color:#CEE1EF; }
   }
 }
 main {
@@ -84,4 +92,3 @@ footer {
     background-color: transparent;
     position: static; }
 }
-
