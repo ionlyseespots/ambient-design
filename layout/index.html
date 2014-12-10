@@ -6,7 +6,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Ambient semantic layout documentation</title>
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -610,30 +610,7 @@
                     </code></pre>
                 </footer>
             </article>
-            <article am-layout="outline">
-                <h1>
-                    Full width single column
-                </h1>
-                <p>
-                    An <code>&lt;article&gt;</code> displays full width.
-                </p>
-                <section>
-                    <p>
-                        Alternatively, a single <code>&lt;section&gt;</code> also displays full width.
-                    </p>
-                </section>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        &lt;p&gt;
-            Alternatively, a single <code>&lt;section&gt;</code> also displays full width by default and defines a section in the document.
-        &lt;/p&gt;
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
-            </article>
+
             <article am-layout="outline">
                 <h1>
                     Complex nested equal columns
@@ -700,7 +677,6 @@
                     Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
                 </p>
             </article>
-
             <article>
                 <h1>
                     Column clearing
@@ -709,7 +685,6 @@
                     Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                 </p>
             </article>
-
             <article am-layout="outline">
                 <h1>
                     Example columns
@@ -717,10 +692,13 @@
                 <h2>
                     1 equal column
                 </h2>
+                <p>
+                    An <code>&lt;article&gt;</code> displays full width.
+                </p>
                 <section>
-                    <P>
-                        Full width
-                    </P>
+                    <p>
+                        A single <code>&lt;section&gt;</code> also displays full width.
+                    </p>
                 </section>
                 <pre><code>
 &lt;article&gt;
@@ -971,6 +949,7 @@
                 </p>
             </article>
         </section>
+
         <section am-component am-padding>
             <h1>
                 Ambient

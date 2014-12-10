@@ -1,3 +1,14 @@
 body > header, body > footer {background-color:#333; color: #CEE1EF;}
 body > header a {color:#CEE1EF;}
 body > header a:hover {color:#fff;}
+.ghost {
+    background-color: transparent;
+    padding: 1vw; border-color: #fff;
+    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+.ghost:hover {
+    background-color: #fff;
+}

@@ -1,10 +1,7 @@
 // Theme
 // Ambient base styles
-body {
-  background-color: #fff;
-  color: #333;
-  font-size: 100%;
-  line-height: 1.42857; }
+// Let's keep a vertical rhythm for the semantic layout
+
 nav a:hover {
   background-color:#CEE1EF; }
 nav a:active {
@@ -16,39 +13,9 @@ nav a {
   transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   text-align: center;
   transition: background 0.3s ease 0s;
-  padding: 1.5vw 1vw; }
-nav {
-  min-height: 65px; }
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding-bottom: 1vw;
-  padding-top: 1vw;
-  color: inherit;
-  font-family: inherit;
-  font-weight: 500; }
-h1 {
-  font-size: 4vmin;
-  line-height: 4vh; }
-h2 {
-  font-size: 3.5vmin;
-  line-height: 3.5vh; }
-h3 {
-  font-size: 3vmin;
-  line-height: 3vh; }
-h4 {
-  font-size: 2.5vmin;
-  line-height: 3vh; }
-h5 {
-  font-size: 2.5vmin;
-  line-height: 3vh; }
-h6 {
-  font-size: 2.5vmin;
-  line-height: 3vh; }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;}
 
-p {
-  padding: 6px 0 10px;
-  margin: 0;
- }
 a {
   display: inline-block;
   color: #428bca;
@@ -121,6 +88,10 @@ table th, table td {
 }
 table th {
   font-weight: bold;
+}
+
+@media screen and (max-width: 40em) {
+
 }
 
 
