@@ -5,16 +5,9 @@
 *, *:before, *:after {
   box-sizing: inherit; }
 html {
-  font-size: 100%; // mostly 16px by browser default
   box-sizing: border-box;
   height: calc(100%); }
 body {
-  background-color: #fff;
-  color: #333;
-  font-size: 1rem;
-  font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-  // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-  line-height: 1.5;
   min-width: 100%;
   min-height: 100%;
   .flex-display;
@@ -33,8 +26,6 @@ main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p {
   */
   width: 100%;
   word-wrap: break-word;
-  margin: 0;
-  padding: 0;
 }
 header {
   .flex-display;
@@ -73,63 +64,17 @@ aside {
   .flex(0 0 20%);  }
 footer {
   /***
-  * <main> element flex-basis: auto allows page footer to become a sticky footer
+  * <main> element flex-basis: auto defines body > footer as sticky footer
   */
   .flex-display;
   .flex-flow(row wrap); }
 
-h1, h2, h3, h4, h5, h6 {
-  padding-top: .25em;
-  padding-bottom: .5em;
-  font-weight: 300; }
-h1 {
-  font-size: 4rem;
-  font-size: 4vmin;
-  letter-spacing: -0.1rem;
-  line-height: 1.2; }
-h2 {
-  font-size: 3.2rem;
-  font-size: 3.5vmin;
-  letter-spacing: -0.1rem;
-  line-height: 1.25;}
-h3 {
-  font-size: 2.6rem;
-  font-size: 3vmin;
-  letter-spacing: -0.1rem;
-  line-height: 1.3; }
-h4 {
-  font-size: 2rem;
-  font-size: 2.5vmin;
-  letter-spacing: -0.08rem;
-  line-height: 1.35; }
-h5 {
-  font-size: 1.4rem;
-  font-size: 2.5vmin;
-  letter-spacing: -0.05rem;
-  line-height: 1.5; }
-h6 {
-  font-size: 1rem;
-  font-size: 2.5vmin;
-  letter-spacing: 0;
-  line-height: 1.6; }
-p {
-  margin-bottom: 1em;
-}
 
-img {
-  max-width: 100%;
-  height: auto; }
 
 // portrait
 @media (orientation:portrait){
-  html {
-    font-size:90%;
-  }
   article {
     .flex-direction(column);
-  }
-  section, aside {
-
   }
   /**
   * change vertical rule back to horizontal rule for portrait view
@@ -140,12 +85,3 @@ img {
     position: static; }
 }
 
-// small screens
-@media screen and (max-width: 30em) {
-  html {
-    font-size:80%;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: initial;
-  }
-}
