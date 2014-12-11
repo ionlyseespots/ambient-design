@@ -39,20 +39,20 @@
             <p>
                 Introduction
             </p>
-            <h1>
+            <h2>
                 Ambient is semantic layout
-            </h1>
+            </h2>
             <p>
                 Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Feel free to use semantic HTML5 tags, whenever and wherever you like.
-                Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5 elements</a>.
+                Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">HTML5 elements</a>.
             </p>
         </header>
         <section am-component am-padding>
-            <h1>
+            <h3>
                 Layout examples
-            </h1>
+            </h3>
             <p>
-                Ambient is ready to adopt whatever your design or style is. HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline.
+                Ambient is ready to adopt whatever your design or style is. <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">HTML5 sections and outlines</a> within Ambient define themselves, creating a visual structure for the document outline.
                 This means you can build content into simple or complex layouts.
             </p>
             <blockquote>
@@ -63,26 +63,23 @@
             </blockquote>
             <article am-layout="outline">
                 <section>
-                    <p>
-                        Example simple layout.
-                    </p>
-                    <h1>
-                        Simple layout
-                    </h1>
+                    <header>
+                        <p>
+                            Example simple layout.
+                        </p>
+                        <h4>
+                            Simple layout
+                        </h4>
+                    </header>
+                    <hr />
+
                     <nav>
                         <a href="#">Nav</a>
                         <a href="#">Nav</a>
                         <a href="#">Nav</a>
                     </nav>
                     <hr />
-                    <header>
-                        <h1>
-                            Heading 1
-                        </h1>
-                        <p>
-                            Paragraph
-                        </p>
-                    </header>
+
                     <article>
                         <section>
                             <h1>
@@ -146,19 +143,23 @@
 &lt;/footer&gt;
                 </code></pre>
                 <section am-component am-margin="top">
-                    <p>
-                        Example complex layout with UI patterns.
-                    </p>
-                    <h1>
-                        Complex layout
-                    </h1>
+                    <header>
+                        <p>
+                            Example complex layout with UI patterns.
+                        </p>
+                        <h4>
+                            Complex layout
+                        </h4>
+                    </header>
                     <hr />
+
                     <nav>
                         <a href="#">Nav</a>
                         <a href="#">Nav</a>
                         <a href="#">Nav</a>
                     </nav>
                     <hr />
+
                     <article>
                         <aside>
                             <nav am-nav="vertical">
@@ -434,10 +435,10 @@
             </article>
             <hr />
 
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Three equal columns
-                </h1>
+                </h4>
                 <p>
                     Get three equal-width columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
@@ -478,10 +479,10 @@
                     </code></pre>
                 </footer>
             </article>
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Three unequal columns
-                </h1>
+                </h4>
                 <p>
                     Get three unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
@@ -527,9 +528,9 @@
             </article>
 
             <article am-layout="outline" am-margin="top">
-                <h1>
+                <h4>
                     Full width single column
-                </h1>
+                </h4>
                 <p>
                     <code>&lt;article&gt;</code> displays full width.<br />
                     <code>&lt;section&gt;</code> displays full width.
@@ -537,10 +538,10 @@
             </article>
             <hr />
 
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Two unequal columns with content on the left
-                </h1>
+                </h4>
                 <p>
                     Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
@@ -574,10 +575,10 @@
                     </code></pre>
                 </footer>
             </article>
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Two unequal columns with content on the right
-                </h1>
+                </h4>
                 <p>
                     Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
                 </p>
@@ -612,10 +613,10 @@
                 </footer>
             </article>
 
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Complex nested equal columns
-                </h1>
+                </h4>
                 <p>
                     Nesting gives you columns <em>starting at orientation portrait and scaling to orientation landscape</em>, within the larger column. On orientation portrait, the columns will automatically stack.
                 </p>
@@ -670,40 +671,40 @@
                     </code></pre>
                 </footer>
             </article>
-            <article>
-                <h1>
+            <article am-layout am-margin="top">
+                <h4>
                     Orientation
-                </h1>
+                </h4>
                 <p>
                     Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
                 </p>
             </article>
             <hr />
 
-            <article>
-                <h1>
+            <article am-layout am-margin="top">
+                <h4>
                     Column clearing
-                </h1>
+                </h4>
                 <p>
                     Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                 </p>
             </article>
             <hr />
 
-            <article am-layout="outline">
-                <h1>
+            <article am-layout="outline" am-margin="top">
+                <h4>
                     Example columns
-                </h1>
-                <h2>
+                </h4>
+                <h5>
                     1 equal column
-                </h2>
+                </h5>
                 <p>
                     <code>&lt;article&gt;</code> displays full width.<br />
                     <code>&lt;section&gt;</code> displays full width.
                 </p>
-                <h2>
+                <h5>
                     2 equal columns
-                </h2>
+                </h5>
                 <section>
                     <P>
                         1
@@ -728,9 +729,9 @@
     &lt;/section&gt;
 &lt;/article&gt;
                 </code></pre>
-                <h2>
+                <h5>
                     3 equal columns
-                </h2>
+                </h5>
                 <section>
                     <P>
                         1
@@ -765,9 +766,9 @@
     &lt;/section&gt;
 &lt;/article&gt;
                 </code></pre>
-                <h2>
+                <h5>
                     4 equal columns
-                </h2>
+                </h5>
                 <section>
                     <P>
                         1
@@ -812,9 +813,9 @@
     &lt;/section&gt;
 &lt;/article&gt;
                 </code></pre>
-                <h2>
+                <h5>
                     5 equal columns
-                </h2>
+                </h5>
                 <section>
                     <P>
                         1
@@ -869,9 +870,9 @@
     &lt;/section&gt;
 &lt;/article&gt;
                 </code></pre>
-                <h2>
+                <h5>
                     6 equal columns
-                </h2>
+                </h5>
                 <section>
                     <P>
                         1
@@ -943,23 +944,21 @@
         </section>
 
         <section am-component am-padding>
-            <h1>
+            <h3>
                 <i class="fa fa-html5"></i>  <i class="fa fa-css3"></i> Ambient
-            </h1>
-
-                <blockquote cite="http://dictionary.reference.com/browse/ambient">
-                    <p>
-                        am·bi·ent /'ambēənt/ <i>adjective</i>
-                    </p>
-                    <ol>
-                        <li>of the surrounding area or environment</li>
-                        <li>completely surrounding; encompassing</li>
-                        <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
-                        <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
-                        <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
-                    </ol>
-                </blockquote>
-
+            </h3>
+            <blockquote cite="http://dictionary.reference.com/browse/ambient">
+                <p>
+                    am·bi·ent /'ambēənt/ <i>adjective</i>
+                </p>
+                <ol>
+                    <li>of the surrounding area or environment</li>
+                    <li>completely surrounding; encompassing</li>
+                    <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
+                    <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
+                    <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
+                </ol>
+            </blockquote>
             <blockquote>
             <table>
                 <thead>
@@ -1043,9 +1042,9 @@
                 </tfoot>
             </table>
             </blockquote>
-            <h2>
+            <h3>
                 <i class="fa fa-html5"></i> HTML5
-            </h2>
+            </h3>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
                 <table>
                     <thead>
@@ -1109,47 +1108,47 @@
                     It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.
                 </p>
             </blockquote>
-            <h2>
+            <h3>
                 <i class="fa fa-css3"></i> CSS3
-            </h2>
+            </h3>
             <p>
                 Ambient is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout.
             </p>
-            <h3>
+            <h4>
                 Normalize.css
-            </h3>
+            </h4>
             <p>
                 For improved cross-browser rendering, we use
-                <a target="_blank" href="http://necolas.github.io/normalize.css/">Normalize.css</a>, a project by
-                <a target="_blank" href="http://twitter.com/necolas">Nicolas Gallagher</a>
+                <a href="http://necolas.github.io/normalize.css/">Normalize.css</a>, a project by
+                <a href="http://twitter.com/necolas">Nicolas Gallagher</a>
                 and
-                <a target="_blank" href="http://twitter.com/jon_neal">Jonathan Neal</a>.
+                <a href="http://twitter.com/jon_neal">Jonathan Neal</a>.
             </p>
-            <h3>
+            <h4>
                 Flexbox LESS mixin
-            </h3>
+            </h4>
             <p>
                 For improved flexbox rendering and maintainability, we use
-                <a target="_blank" href="https://gist.github.com/jayj/4012969">flexbox.less</a>, a project by
-                <a target="_blank" href="https://twitter.com/jayjdk">Jesper Johansen</a>.
+                <a href="https://gist.github.com/jayj/4012969">flexbox.less</a>, a project by
+                <a href="https://twitter.com/jayjdk">Jesper Johansen</a>.
             </p>
-            <h3>
+            <h4>
                 Cursor Reset
-            </h3>
+            </h4>
             <p>
                 For improved cursor rendering, we use
-                <a target="_blank" href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>, a project by
-                <a target="_blank" href="https://twitter.com/murtaugh">Tim Murtaugh</a>.
+                <a href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>, a project by
+                <a href="https://twitter.com/murtaugh">Tim Murtaugh</a>.
             </p>
-            <h3>
+            <h4>
                 Typography
-            </h3>
+            </h4>
             <p>
                 For defining proper markup with extensible styling for common typographic patterns, we use
-                <a target="_blank" href="https://github.com/typeplate/starter-kit">Typeplate.css</a>, a project by
-                <a target="_blank" href="https://github.com/grayghostvisuals">Dennis Gaebel</a>.
+                <a href="https://github.com/typeplate/starter-kit">Typeplate.css</a>, a project by
+                <a href="https://github.com/grayghostvisuals">Dennis Gaebel</a>.
                 and
-                <a target="_blank" href="https://github.com/zakkain">Zachary Kain</a>.
+                <a href="https://github.com/zakkain">Zachary Kain</a>.
             </p>
         </section>
     </article>

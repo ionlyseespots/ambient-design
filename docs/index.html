@@ -39,70 +39,69 @@
             <p>
                 Introduction
             </p>
-            <h1>
+            <h2>
                 Ambient is a method for creating layout not constrained by the browser
-            </h1>
+            </h2>
             <p>
                 HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts.
             </p>
         </header>
-        <section am-component="grid">
-            <h1>
-                Download
-            </h1>
+        <section am-component am-padding>
+            <h3>
+                Bower
+            </h3>
             <p>
                 <small>Bower: v1.2.3 Source: v1.2.4</small>
             </p>
-            <div am-grid="row">
-                <div am-grid="block">
-                    <p>
-                        <strong>Bower</strong>
-                    </p>
-                    <pre><code>
+            <pre><code>
 $ bower install ambient
-                    </code></pre>
-                    <p>
-                        This is the basic form of Ambient.
-                    </p>
-                    <pre><code>
+            </code></pre>
+            <p>
+                This is the basic form of Ambient.
+            </p>
+            <pre><code>
 ambient/
 └── css/
     ├── ambient.css
     └── ambient.min.css
-                    </code></pre>
-                    <p>
-                        The <code>css/</code> folder includes the semantic layout and UI patterns. The file comes as a single CSS file as well as a minified version.
-                    </p>
-                    <p>
-                        Alternatively, <a href="https://github.com/ionlyseespots/ambient-design/tree/master/dist/css">get the ambient.min.css file from the repo</a> and save the file in your directory.
-                   </p>
-                </div>
-
-                <div am-grid="block">
-                    <p>
-                        <i class="fa fa-github"></i> <strong>Source</strong><br />
-                        <a href="https://github.com/ionlyseespots/ambient-design">Clone, fork or download the repo</a> for complete source code, docs and this website.
-                        Ambient source files are in the <code>less/</code> folder.
-                        <em>Source code is the most current development (unstable) version of Ambient.</em>
-                    </p>
-                </div>
-            </div>
+            </code></pre>
+            <p>
+                The <code>css/</code> folder includes the semantic layout and UI patterns. The file comes as a single CSS file as well as a minified version.
+            </p>
+        </section>
+        <section am-component am-padding>
+            <h3>
+                <i class="fa fa-github"></i> Source
+            </h3>
+            <p>
+                <a href="https://github.com/ionlyseespots/ambient-design">Clone, fork or download the repo</a> for complete source code, docs and this website.
+                Ambient source files are in the <code>less/</code> folder.
+                <em>Source code is the most current development (unstable) version of Ambient.</em>
+            </p>
+        </section>
+        <section am-component am-padding>
+            <h3>
+                Download
+            </h3>
+            <p>
+                Alternatively, <a href="https://github.com/ionlyseespots/ambient-design/tree/master/dist/css">get the ambient.min.css file from the repo</a> and save the file in your directory.
+            </p>
         </section>
     </article>
     <hr />
 
     <article>
-        <h1>
+        <h2>
             Ambient is ready to adopt whatever your design or style is
-        </h1>
+        </h2>
         <p>
 
             Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Feel free to use semantic HTML5 tags, whenever and wherever you like.
         </p>
         <section am-component am-padding>
-            <h1>
+            <h3>
                 Starting HTML5 example
-            </h1>
+            </h3>
             <article am-layout="outline">
                 <section>
                     <header role="banner">
@@ -140,9 +139,9 @@ ambient/
             </article>
         </section>
         <section am-component am-padding>
-            <h1>
+            <h3>
                 Code
-            </h1>
+            </h3>
             <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -195,9 +194,9 @@ ambient/
     <hr />
 
     <article>
-        <h1>
+        <h2>
             Examples
-        </h1>
+        </h2>
         <p class="text-center">
             Starting HTML5 example<br />
             <a href="../examples/starter-template/index.html" class="btn btn-default">View starter template</a>

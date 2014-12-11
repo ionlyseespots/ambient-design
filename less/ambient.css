@@ -601,7 +601,7 @@ html {
   box-sizing: border-box;
   height: calc(100%);
 }
-body {
+html body {
   min-width: 100%;
   min-height: 100%;
   display: -webkit-flex;
@@ -614,7 +614,22 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-body > article {
+html body header,
+html body nav,
+html body footer,
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body hr,
+html body p,
+html body div {
+  width: 100%;
+  word-wrap: break-word;
+}
+html body > article {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -622,23 +637,7 @@ body > article {
   margin: auto;
   width: auto;
 }
-main,
-header,
-nav,
-footer,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-div {
-  width: 100%;
-  word-wrap: break-word;
-}
-header {
+html body header {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -649,7 +648,7 @@ header {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-nav {
+html body nav {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -660,25 +659,34 @@ nav {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-nav a {
+html body nav a {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
 }
-nav a:hover {
-  background-color: #CEE1EF;
+html body footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-order: 2;
+  -moz-order: 2;
+  -ms-order: 2;
+  order: 2;
 }
-nav a:active {
-  background-color: #CEE1EF;
-}
-main {
+html body main {
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
-article {
+html body main article {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -690,7 +698,7 @@ article {
   flex-flow: row wrap;
   position: relative;
 }
-section {
+html body main article section {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
@@ -701,23 +709,11 @@ section {
   flex-flow: row wrap;
   position: relative;
 }
-aside {
+html body main article aside {
   -webkit-flex: 0 0 20%;
   -moz-flex: 0 0 20%;
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
-  -moz-order: 2;
-}
-footer {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
 }
 @media (orientation: portrait) {
   article {
@@ -1337,6 +1333,12 @@ footer {
   -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: background 0.3s ease 0s;
+}
+[am-nav] a:hover {
+  background-color: #CEE1EF;
+}
+[am-nav] a:active {
+  background-color: #CEE1EF;
 }
 [am-nav~="left-align"] {
   -webkit-justify-content: flex-start;
