@@ -1,7 +1,10 @@
 {
   "name": "ambient",
-  "version": "1.1.0",
-  "description": "Ambient design is a methodology for creating layout.",
+  "version": "1.2.3",
+    "dependencies": {
+    "normalize-css": "latest"
+    },
+  "description": "Ambient is a methodology for creating semantic layout.",
   "main": [
     "dist/css/ambient.css",
     "dist/css/ambient.min.css"

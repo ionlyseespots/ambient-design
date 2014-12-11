@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Ambient semantic layout documentation</title>
+    <!--- dependency -->
+    <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css">
     <!-- Ambient -->
     <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
@@ -44,18 +46,15 @@
             </h1>
             <p>
                 Ambient is a lightweight and modular HTML5 UI development methodology. Feel free to use semantic HTML5 tags, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
-            </p>
-            <p>
-                Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> elements.
-                Here's how Ambient works:
+                Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5 elements</a>.
             </p>
         </header>
         <section am-component am-padding>
             <h1>
-                <i class="fa fa-th"></i> Layout examples
+                Layout examples
             </h1>
             <p>
-                Ambient is a method for creating semantic layout not constrained by the browser. HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts.
+                Ambient is a method for creating layout not constrained by the browser. HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts.
             </p>
             <blockquote>
                 <p>
@@ -974,14 +973,29 @@
 
         <section am-component am-padding>
             <h1>
-                Ambient
+                <i class="fa fa-html5"></i>  <i class="fa fa-css3"></i> Ambient
             </h1>
+
+                <blockquote cite="http://dictionary.reference.com/browse/ambient">
+                    <p>
+                        am·bi·ent /'ambēənt/ <i>adjective</i>
+                    </p>
+                    <ol>
+                        <li>of the surrounding area or environment</li>
+                        <li>completely surrounding; encompassing</li>
+                        <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
+                        <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
+                        <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
+                    </ol>
+                </blockquote>
+
+            <blockquote>
             <table>
                 <thead>
                 <tr>
-                    <th>Semantic</th>
-                    <th>Layout</th>
-                    <th>Description</th>
+                    <th scope="col">Semantic</th>
+                    <th scope="col">Layout</th>
+                    <th scope="col">Description</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -1045,27 +1059,23 @@
                     <tr>
                         <td colspan="3">
                             <p>
-                                <strong>Column clearing</strong>
-                            </p>
-                            <p>
+                                <strong>Column clearing</strong><br />
                                 Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                             </p>
                             <hr />
                             <p>
-                                <strong>Nestable mixed layouts</strong>
-                            </p>
-                            <p>
+                                <strong>Nestable mixed layouts</strong><br />
                                 This means you can build UI into simple or complex layouts.
                             </p>
                         </td>
                     </tr>
                 </tfoot>
             </table>
+            </blockquote>
             <h2>
                 <i class="fa fa-html5"></i> HTML5
             </h2>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
-                <h1>Sections</h1>
                 <table>
                     <thead>
                     <tr>
@@ -1160,6 +1170,16 @@
                 <a target="_blank" href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>, a project by
                 <a target="_blank" href="https://twitter.com/murtaugh">Tim Murtaugh</a>.
             </p>
+            <h3>
+                Typography
+            </h3>
+            <p>
+                For defining proper markup with extensible styling for common typographic patterns, we use
+                <a target="_blank" href="https://github.com/typeplate/starter-kit">Typeplate.css</a>, a project by
+                <a target="_blank" href="https://github.com/grayghostvisuals">Dennis Gaebel</a>.
+                and
+                <a target="_blank" href="https://github.com/zakkain">Zachary Kain</a>.
+            </p>
         </section>
     </article>
     <hr />
@@ -1171,8 +1191,6 @@
         <p>
             This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
-        </p>
-        <p>
             Our goal is to deliver semantic layout for HTML elements, attributes and values, while also maintaining a separation from content from content that scales up from Portrait to Landscape.
         </p>
     </article>
@@ -1180,11 +1198,7 @@
 <footer am-layout am-padding="large" class="text-center">
     <p>
         Ambient layout makes use of HTML5 elements & CSS3 properties to layout semantic markup.
-    </p>
-    <p>
-        Ambient UI patterns are layout-related attributes for content.
-    </p>
-    <p>
+        Ambient UI patterns are layout-related attributes for content.<br />
         &middot;
         <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
         &middot;
