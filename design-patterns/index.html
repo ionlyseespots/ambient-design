@@ -35,22 +35,22 @@
         </h1>
     </header>
     <article>
-        <header class="bg-secondary">
+        <header class="bg-default">
             <p>
                 Introduction
             </p>
-            <h1>
+            <h2>
                 UI patterns extend Ambient's <a href="../layout/index.html">semantic layout</a>
-            </h1>
+            </h2>
             <p>
                 UI patterns are layout-related attributes for content.
                 While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
             </p>
         </header>
         <section am-component am-padding>
-            <h2>
+            <h3>
                 We define our own namespaces
-            </h2>
+            </h3>
             <blockquote>
                 <p>
                     <code>am-layout</code><br />
@@ -103,9 +103,9 @@
             </ul>
         </section>
         <section am-component am-padding>
-            <h2>
+            <h3>
                 Attribute selectors
-            </h2>
+            </h3>
             <p>
                 It is possible to style HTML elements that have specific attributes and values, not just class and id.
             </p>
@@ -149,17 +149,17 @@
 
     <article am-layout am-padding>
         <header>
-            <h1>
+            <h2>
                 Initial patterns
-            </h1>
+            </h2>
             <p>
                 Initial patterns are <em>margin</em> & <em>padding</em> and can be added to any base UI pattern. Base UI patterns are: <code>am-component</code> <code>am-layout</code> <code>am-nav</code> <code>am-form</code>.
             </p>
         </header>
         <section am-component am-margin>
-            <h2>
+            <h3>
                 Margin
-            </h2>
+            </h3>
             <p>
                 Default layout margin is 0<br />
                 To add space outside, add the attribute <code>am-margin</code> to any base UI pattern.
@@ -179,9 +179,9 @@
             </blockquote>
         </section>
         <section am-component am-margin>
-            <h2>
+            <h3>
                 Padding
-            </h2>
+            </h3>
             <p>
                 Default layout padding is 0<br />
                 To add space inside, add the attribute <code>am-padding</code> to any base UI pattern.
@@ -202,7 +202,7 @@
         </section>
     </article>
     <article id="ux-shells">
-        <header am-layout am-padding class="bg-secondary text-center" >
+        <header am-layout am-padding="large" class="bg-default text-center" >
             <h1 class="text-uppercase text-center">
                 <i class="fa fa-cubes"></i> Layouts
             </h1>
@@ -697,7 +697,7 @@
         </section>
     </article>
     <article id="ui-elements">
-        <header am-layout am-padding class="bg-secondary text-center">
+        <header am-layout am-padding="large" class="bg-default text-center">
             <h1 class="text-uppercase">
                 <i class="fa fa-cube"></i> Components
             </h1>
@@ -1487,7 +1487,7 @@
         </section>
     </article>
     <article id="navs">
-        <header am-layout am-padding class="bg-secondary text-center">
+        <header am-layout am-padding="large" class="bg-default text-center">
             <h1 class="text-uppercase">
                 <i class="fa fa-compass"></i> Navs
             </h1>
@@ -1739,7 +1739,7 @@
         </section>
     </article>
     <article id="form-states">
-        <header am-layout am-padding class="text-center bg-secondary">
+        <header am-layout am-padding="large" class="text-center bg-default">
             <h1 class="text-uppercase">
                 <i class="fa fa-tasks"></i> Forms
             </h1>
@@ -1747,10 +1747,13 @@
                 A set of UI patterns for the layout of form elements, attributes & values. The base UI pattern <code>am-form</code> is for forms.
             </p>
         </header>
+        <h2>
+            Example form
+        </h2>
         <section am-component am-padding>
-            <h2>
-                Example form
-            </h2>
+            <h3>
+                Example
+            </h3>
             <blockquote>
                 <p>
                     <code>&lt;form&gt;</code>
@@ -1771,9 +1774,9 @@
             </form>
         </section>
         <section am-component am-padding>
-            <h2>
+            <h3>
                 Code
-            </h2>
+            </h3>
             <pre><code>
 &lt;form&gt;
     &lt;label for="example-email"&gt;Email&lt;/label&gt;
@@ -2283,9 +2286,7 @@
             </code></pre>
         </section>
     </article>
-    <hr />
-
-    <article>
+    <article class="bg-default">
         <h1>
             Ambient is a methodology for creating layout
         </h1>

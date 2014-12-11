@@ -12,7 +12,6 @@ html {
   box-sizing: border-box;
   // http://css-tricks.com/a-couple-of-use-cases-for-calc/
   height: calc(100%);
-  // column
   body {
     min-width: 100%;
     min-height: 100%;
@@ -29,12 +28,10 @@ html {
       margin: auto;
       width: auto;
     }
-    // row
     header {
       .flex-display;
       .flex-flow(row wrap);
     }
-    // row
     nav {
       .flex-display;
       .flex-flow(row wrap);
@@ -42,17 +39,14 @@ html {
         .flex(1 8.3333%);
       }
     }
-    // row
     // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
     footer {
       .flex-display;
       .flex-flow(row wrap);
       .flex-order(2);
     }
-    // column
     main {
       .flex(1 0 auto);
-      // row
       article {
         .flex-display;
         .flex-flow(row wrap);
@@ -69,18 +63,17 @@ html {
           .flex(0 0 20%);
         }
       }
+      @media (orientation:portrait){
+        article {
+          .flex-direction(column);
+        }
+        // change vertical rule back to horizontal rule for portrait view
+        [am-verticalrule] {
+          width: 100%;
+          background-color: transparent;
+          position: static;
+        }
+      }
     }
   }
-}
-
-// portrait
-@media (orientation:portrait){
-  article {
-    .flex-direction(column);
-  }
-  // change vertical rule back to horizontal rule for portrait view
-  [am-verticalrule] {
-    width: 100%;
-    background-color: transparent;
-    position: static; }
 }

@@ -716,13 +716,13 @@ html body main article aside {
   flex: 0 0 20%;
 }
 @media (orientation: portrait) {
-  article {
+  html body main article {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  [am-verticalrule] {
+  html body main [am-verticalrule] {
     width: 100%;
     background-color: transparent;
     position: static;
@@ -1558,6 +1558,6 @@ html body main article aside {
 .bg-primary {
   background-color: #CEE1EF;
 }
-.bg-secondary {
+.bg-default {
   background-color: #F7F7F7;
 }
