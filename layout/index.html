@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Ambient semantic layout documentation</title>
-    <!--- dependency -->
-    <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css">
     <!-- Ambient -->
     <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
@@ -30,7 +28,7 @@
     <header class="bg-primary">
         <p>
             Overview<br />
-            Semantic layout | Layout examples and HTML5/CSS3 definitions
+            Layout | Layout examples and HTML5/CSS3 definitions
         </p>
         <h1>
             Layout
@@ -42,10 +40,10 @@
                 Introduction
             </p>
             <h1>
-                Ambient is semantic layout.
+                Ambient is semantic layout
             </h1>
             <p>
-                Ambient is a lightweight and modular HTML5 UI development methodology. Feel free to use semantic HTML5 tags, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
+                Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Feel free to use semantic HTML5 tags, whenever and wherever you like.
                 Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup. The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout is defined by <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5 elements</a>.
             </p>
         </header>
@@ -54,7 +52,8 @@
                 Layout examples
             </h1>
             <p>
-                Ambient is a method for creating layout not constrained by the browser. HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts.
+                Ambient is ready to adopt whatever your design or style is. HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline.
+                This means you can build content into simple or complex layouts.
             </p>
             <blockquote>
                 <p>
@@ -63,13 +62,13 @@
                 </p>
             </blockquote>
             <article am-layout="outline">
-                <h1>
-                    Simple layout
-                </h1>
-                <p>
-                    Example simple layout.
-                </p>
                 <section>
+                    <p>
+                        Example simple layout.
+                    </p>
+                    <h1>
+                        Simple layout
+                    </h1>
                     <nav>
                         <a href="#">Nav</a>
                         <a href="#">Nav</a>
@@ -110,7 +109,7 @@
                         </p>
                     </footer>
                 </section>
-                <pre>
+                <pre><code>
 &lt;nav&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
@@ -145,16 +144,13 @@
         Paragraph
    &lt;/p&gt;
 &lt;/footer&gt;
-                </pre>
-                <h1>
-                    Complex layout
-                </h1>
-                <p>
-                    Example complex layout with UI patterns.
-                </p>
-                <section>
+                </code></pre>
+                <section am-component am-margin="top">
+                    <p>
+                        Example complex layout with UI patterns.
+                    </p>
                     <h1>
-                        Heading 1
+                        Complex layout
                     </h1>
                     <hr />
                     <nav>
@@ -164,6 +160,13 @@
                     </nav>
                     <hr />
                     <article>
+                        <aside>
+                            <nav am-nav="vertical">
+                                <a href="#">Nav</a>
+                                <a href="#">Nav</a>
+                                <a href="#">Nav</a>
+                            </nav>
+                        </aside>
                         <section am-component="grid">
                             <header>
                                 <p>
@@ -176,113 +179,102 @@
                             <p>
                                 Paragraph
                             </p>
-                            <div am-grid="row">
-                                <div am-grid="block" am-block="fourth">
-                                    <nav am-nav="vertical">
-                                        <a href="#">Nav</a>
-                                        <a href="#">Nav</a>
-                                        <a href="#">Nav</a>
-                                    </nav>
-                                </div>
-                                <div am-grid="block" am-block="three-fourths">
-                                    <h2>
-                                        Heading 2
-                                    </h2>
+                            <h2>
+                                Heading 2
+                            </h2>
+                            <p>
+                                Paragraph
+                            </p>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <article>
+                                <h1>
+                                    Heading 1
+                                </h1>
+                                <section>
+                                    <h1>
+                                        Grid
+                                    </h1>
+                                    <div am-grid="row">
+                                        <div am-grid="block" am-block="half">
+                                            1
+                                        </div>
+                                        <div am-grid="block" am-block="fourth">
+                                            2
+                                        </div>
+                                        <div am-grid="block" am-block="fourth">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div am-grid="row">
+                                        <div am-grid="block">
+                                            1
+                                        </div>
+                                        <div am-grid="block">
+                                            2
+                                        </div>
+                                        <div am-grid="block">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div am-grid="row">
+                                        <div am-grid="block">
+                                            1
+                                        </div>
+                                        <div am-grid="block">
+                                            2
+                                        </div>
+                                        <div am-grid="block">
+                                            3
+                                        </div>
+                                        <div am-grid="block">
+                                            4
+                                        </div>
+                                    </div>
+                                    <div am-grid="row">
+                                        <div am-grid="block" am-block="three-fourths">
+                                            1
+                                        </div>
+                                        <div am-grid="block" am-block="fourth">
+                                            2
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h1>
+                                        Heading 1
+                                    </h1>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
+                                    <div>
+                                        div
+                                    </div>
                                     <p>
                                         Paragraph
                                     </p>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                    <article>
-                                        <h1>
-                                            Heading 1
-                                        </h1>
-                                        <section>
-                                            <h1>
-                                                Grid
-                                            </h1>
-                                            <div am-grid="row">
-                                                <div am-grid="block" am-block="half">
-                                                    1
-                                                </div>
-                                                <div am-grid="block" am-block="fourth">
-                                                    2
-                                                </div>
-                                                <div am-grid="block" am-block="fourth">
-                                                    3
-                                                </div>
-                                            </div>
-                                            <div am-grid="row">
-                                                <div am-grid="block">
-                                                    1
-                                                </div>
-                                                <div am-grid="block">
-                                                    2
-                                                </div>
-                                                <div am-grid="block">
-                                                    3
-                                                </div>
-                                            </div>
-                                            <div am-grid="row">
-                                                <div am-grid="block">
-                                                    1
-                                                </div>
-                                                <div am-grid="block">
-                                                    2
-                                                </div>
-                                                <div am-grid="block">
-                                                    3
-                                                </div>
-                                                <div am-grid="block">
-                                                    4
-                                                </div>
-                                            </div>
-                                            <div am-grid="row">
-                                                <div am-grid="block" am-block="three-fourths">
-                                                    1
-                                                </div>
-                                                <div am-grid="block" am-block="fourth">
-                                                    2
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section>
-                                            <h1>
-                                                Heading 1
-                                            </h1>
-                                            <div>
-                                                div
-                                            </div>
-                                            <div>
-                                                div
-                                            </div>
-                                            <div>
-                                                div
-                                            </div>
-                                            <p>
-                                                Paragraph
-                                            </p>
-                                            <footer>
-                                                <p>
-                                                    Paragraph
-                                                </p>
-                                            </footer>
-                                        </section>
-                                    </article>
                                     <footer>
                                         <p>
                                             Paragraph
                                         </p>
                                     </footer>
-                                </div>
-                            </div>
+                                </section>
+                            </article>
+                            <footer>
+                                <p>
+                                    Paragraph
+                                </p>
+                            </footer>
                         </section>
                         <footer>
                             <p>
@@ -534,28 +526,16 @@
                 </footer>
             </article>
 
-            <article am-layout="outline">
+            <article am-layout="outline" am-margin="top">
                 <h1>
                     Full width single column
                 </h1>
                 <p>
-                    An <code>&lt;article&gt;</code> displays full width.
-                </p>
-                <section>
-                    <p>
-                        Alternatively, a single <code>&lt;section&gt;</code> also displays full width.
-                    </p>
-                </section>
-                <footer>
-                    <pre>
-
-                        &lt;p&gt;
-                        Alternatively, a single also displays full width by default and defines a section in the document.
-                        &lt;/p&gt;
-
-                  </pre>
-                </footer>
+                    <code>&lt;article&gt;</code> displays full width.<br />
+                    <code>&lt;section&gt;</code> displays full width.
+                 </p>
             </article>
+            <hr />
 
             <article am-layout="outline">
                 <h1>
@@ -698,6 +678,8 @@
                     Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
                 </p>
             </article>
+            <hr />
+
             <article>
                 <h1>
                     Column clearing
@@ -706,6 +688,8 @@
                     Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                 </p>
             </article>
+            <hr />
+
             <article am-layout="outline">
                 <h1>
                     Example columns
@@ -714,22 +698,9 @@
                     1 equal column
                 </h2>
                 <p>
-                    An <code>&lt;article&gt;</code> displays full width.
+                    <code>&lt;article&gt;</code> displays full width.<br />
+                    <code>&lt;section&gt;</code> displays full width.
                 </p>
-                <section>
-                    <p>
-                        A single <code>&lt;section&gt;</code> also displays full width.
-                    </p>
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        &lt;p&gt;
-            Full width
-        &lt;/p&gt;
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
                 <h2>
                     2 equal columns
                 </h2>
@@ -1186,7 +1157,7 @@
 
     <article>
         <h1>
-            Ambient is a methodology for creating layout.
+            Ambient is a methodology for creating layout
         </h1>
         <p>
             This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
@@ -1197,7 +1168,7 @@
 </main>
 <footer am-layout am-padding="large" class="text-center">
     <p>
-        Ambient layout makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+        Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
         Ambient UI patterns are layout-related attributes for content.<br />
         &middot;
         <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>

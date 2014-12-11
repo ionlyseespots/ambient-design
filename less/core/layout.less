@@ -6,28 +6,26 @@
 
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 html {
   box-sizing: border-box;
   // http://css-tricks.com/a-couple-of-use-cases-for-calc/
-  height: calc(100%); }
+  height: calc(100%);
+}
 body {
   min-width: 100%;
   min-height: 100%;
   .flex-display;
   .flex-direction(column);
   & > article  {
-    /**
-    * center page content in first article not in main horizontally and vertically
-    */
+    // center page content in first article not in main horizontally and vertically
     .align-items(center);
     margin: auto;
     width: auto; }
 }
 main, header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
-  /**
-  * column (section) clearing
-  */
+  // column (section) clearing
   width: 100%;
   word-wrap: break-word;
 }
@@ -47,46 +45,36 @@ nav {
   }
 }
 main {
-  .flex(1 0 auto); }
+  .flex(1 0 auto);
+}
 article {
-  /**
- * row
- */
+  // row
   .flex-display;
   .flex-flow(row wrap);
-  /**
-  * help content on absolute positioning
-  */
+  // help content on absolute positioning
   position: relative;
 }
 section {
-  /**
- * column
- */
+  // column
   .flex(1 8.3333%);
-  /**
-  * help content on absolute positioning
-  */
+  .flex-flow(row wrap);
+  // help content on absolute positioning
   position: relative; }
 aside {
-  .flex(0 0 20%);  }
+  .flex(0 0 20%);-moz-order: 2;
+}
 footer {
-  /***
-  * <main> element flex-basis: auto defines body > footer as sticky footer
-  */
+  // <main> element flex-basis: auto defines body > footer as sticky footer/
   .flex-display;
-  .flex-flow(row wrap); }
-
-
+  .flex-flow(row wrap);
+}
 
 // portrait
 @media (orientation:portrait){
   article {
     .flex-direction(column);
   }
-  /**
-  * change vertical rule back to horizontal rule for portrait view
-  */
+  // change vertical rule back to horizontal rule for portrait view
   [am-verticalrule] {
     width: 100%;
     background-color: transparent;

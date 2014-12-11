@@ -18,79 +18,57 @@
         <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
     </h1>
 </header>
-<nav role="navigation">
+<nav am-nav role="navigation">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html">Layout</a>
     <a href="../design-patterns/index.html" class="active">UI Patterns</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <h1 class="bg-primary">
-        UI patterns
-    </h1>
-    <h2 class="bg-secondary">
-        Overview
-    </h2>
-    <p class="bg-secondary">
-        Attribute selectors | Initial patterns | Components | Layouts | Navs | Forms
-    </p>
+    <header class="bg-primary">
+        <p>
+            Overview<br />
+            UI patterns | Initial patterns | Components | Layouts | Navs | Forms
+        </p>
+        <h1>
+            UI patterns
+        </h1>
+    </header>
     <article>
-        <section>
-            <blockquote>
-                <p>
-                    <strong>DO</strong> use UI patterns to layout content.
-                </p>
-                <p>
-                    <strong>DO</strong> use class names to handle styling elements & content.
-                </p>
-                <p>
-                    Do <strong>NOT</strong> use class names as a replacement for semantic layout.
-                </p>
-            </blockquote>
+        <header class="bg-secondary">
+            <p>
+                Introduction
+            </p>
             <h1>
-                UI patterns are built on Ambient's <a href="../layout/index.html">semantic layout</a>.
+                UI patterns extend Ambient's <a href="../layout/index.html">semantic layout</a>
             </h1>
             <p>
+                UI patterns are layout-related attributes for content.
                 While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
             </p>
-            <h2>
-                Introduction
-            </h2>
-            <p>
-                UI patterns are layout-related attributes for content.
-            </p>
-        </section>
-    </article>
-    <hr />
-
-    <article>
-        <h1 class="text-center">
-            Attribute selectors
-        </h1>
-        <p class="text-center">
-            It is possible to style HTML elements that have specific attributes and values, not just class and id.
-        </p>
+        </header>
         <section am-component am-padding>
+            <h1>
+                We define our own namespaces
+            </h1>
             <blockquote>
-                <h1>
-                    We define our own namespaces.
-                </h1>
                 <p>
-                    <code>am-layout</code>
-                </p>
-                <p>
-                    <code>am-component</code>
-                </p>
-                <p>
-                    <code>am-nav</code>
-                </p>
-                <p>
+                    <code>am-layout</code><br />
+                    <code>am-component</code><br />
+                    <code>am-nav</code><br />
                     <code>am-form</code>
                 </p>
             </blockquote>
             <p>
-                Because we define our own custom attribute, we can prescribe base UI patterns.
+                Because we define our own custom attribute, we can prescribe base UI patterns to extend.
             </p>
+            <blockquote>
+                <p>
+                    <strong>DO</strong> use UI patterns to layout content.<br />
+                    <strong>DO</strong> use class names to handle styling elements & content.<br />
+                    Do <strong>NOT</strong> use class names as a replacement for semantic layout.
+                </p>
+            </blockquote>
             <hr />
 
             <p>
@@ -105,9 +83,7 @@
             </p>
             <blockquote>
                 <p>
-                    <strong>DO</strong> chain down a base UI pattern value.
-                </p>
-                <p>
+                    <strong>DO</strong> chain down a base UI pattern value.<br />
                     Do <strong>NOT</strong> chain more than 3 levels deep.
                 </p>
             </blockquote>
@@ -127,6 +103,12 @@
             </ul>
         </section>
         <section am-component am-padding>
+            <h1>
+                Attribute selectors
+            </h1>
+            <p>
+                It is possible to style HTML elements that have specific attributes and values, not just class and id.
+            </p>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
                 <h1>Summary</h1>
                 <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
@@ -166,105 +148,68 @@
     <hr />
 
     <article am-layout am-padding>
-        <h2>
-            Initial patterns
-        </h2>
-        <p>
-            Initial patterns are <em>margin</em> & <em>padding</em> and can be added to base UI patterns. Base UI patterns are: <code>am-component</code>, <code>am-layout</code>, <code>am-nav</code>, <code>am-form</code>.
-        </p>
-        <section am-component am-margin>
-            <h3>
-                Margin
-            </h3>
+        <header>
+            <h1>
+                Initial patterns
+            </h1>
             <p>
-                Initial margin is 0
+                Initial patterns are <em>margin</em> & <em>padding</em> and can be added to any base UI pattern. Base UI patterns are: <code>am-component</code> <code>am-layout</code> <code>am-nav</code> <code>am-form</code>.
             </p>
+        </header>
+        <section am-component am-margin>
+            <h1>
+                Margin
+            </h1>
             <p>
+                Default layout margin is 0<br />
                 To add space outside, add the attribute <code>am-margin</code> to any base UI pattern.
             </p>
             <blockquote>
                 <p>
-                    If needed, set a specific direction or size with the attribute and value as
-                </p>
-                <p>
-                    <code>am-margin</code>
-                </p>
-                <p>
-                    <code>am-margin="top"</code>
-                </p>
-                <p>
-                    <code>am-margin="right"</code>
-                </p>
-                <p>
-                    <code>am-margin="bottom"</code>
-                </p>
-                <p>
-                    <code>am-margin="left"</code>
-                </p>
-                <p>
-                    <code>am-margin="small"</code>
-                </p>
-                <p>
-                    <code>am-margin="medium"</code>
-                </p>
-                <p>
+                    If needed, set a specific direction or size with the attribute and value as:<br />
+                    <code>am-margin</code><br />
+                    <code>am-margin="top"</code><br />
+                    <code>am-margin="right"</code><br />
+                    <code>am-margin="bottom"</code><br />
+                    <code>am-margin="left"</code><br />
+                    <code>am-margin="small"</code><br />
+                    <code>am-margin="medium"</code><br />
                     <code>am-margin="large"</code>
                 </p>
             </blockquote>
         </section>
         <section am-component am-margin>
-            <h3>
+            <h1>
                 Padding
-            </h3>
+            </h1>
             <p>
-                Initial padding is 0
-            </p>
-            <p>
+                Default layout padding is 0<br />
                 To add space inside, add the attribute <code>am-padding</code> to any base UI pattern.
             </p>
             <blockquote>
                 <p>
-                    If needed, set a specific direction or size with the attribute and value as
-                </p>
-                <p>
-                    <code>am-padding</code>
-                </p>
-                <p>
-                    <code>am-padding="top"</code>
-                </p>
-                <p>
-                    <code>am-padding="right"</code>
-                </p>
-                <p>
-                    <code>am-padding="bottom"</code>
-                </p>
-                <p>
-                    <code>am-padding="left"</code>
-                </p>
-                <p>
-                    <code>am-padding="small"</code>
-                </p>
-                <p>
-                    <code>am-padding="medium"</code>
-                </p>
-                <p>
+                    If needed, set a specific direction or size with the attribute and value as:<br />
+                    <code>am-padding</code><br />
+                    <code>am-padding="top"</code><br />
+                    <code>am-padding="right"</code><br />
+                    <code>am-padding="bottom"</code><br />
+                    <code>am-padding="left"</code><br />
+                    <code>am-padding="small"</code><br />
+                    <code>am-padding="medium"</code><br />
                     <code>am-padding="large"</code>
                 </p>
             </blockquote>
         </section>
-
     </article>
-    <hr />
-
     <article id="ux-shells">
-    <h1 class="text-uppercase text-center">
-        <i class="fa fa-cubes"></i> Layouts
-    </h1>
-    <p  class="text-center">
-        A set of UI patterns for the layout of article, header or footer elements, attributes & values. The base UI pattern <code>am-layout</code> is for layouts and content sections.
-    </p>
-
-
+    <header am-layout am-padding class="bg-secondary text-center" >
+        <h1 class="text-uppercase text-center">
+            <i class="fa fa-cubes"></i> Layouts
+        </h1>
+        <p>
+            A set of UI patterns for the layout of article, header or footer elements, attributes & values. The base UI pattern <code>am-layout</code> is for layouts and content sections.
+        </p>
+    </header>
     <h2>
         Outline the layout
     </h2>
@@ -272,10 +217,10 @@
         If needed, to outline your UI with the base layout UI pattern, add the attribute and value <code>am-layout="outline"</code> to any article, header or footer.
     </p>
     <section am-component am-padding>
+        <h1>
+            Outline
+        </h1>
         <blockquote>
-            <h1>
-                Outline
-            </h1>
             <p>
                 <code>&lt;article am-layout="outline"&gt;</code>
             </p>
@@ -308,6 +253,9 @@
         </article>
     </section>
     <section am-component am-padding>
+        <h1>
+            Code
+        </h1>
             <pre>
 &lt;article am-layout="outline"&gt;
     &lt;section&gt;
@@ -340,18 +288,15 @@
     <h2>
         Alignment
     </h2>
-    <h3>
-        Horizontal alignment
-    </h3>
     <p>
         Initial alignment is horizontal
     </p>
 
     <section am-component am-margin>
+        <h1>
+            Horizontal
+        </h1>
         <blockquote>
-            <h1>
-                Horizontal
-            </h1>
             <p>
                 The base element groups content on one horizontal line. You're good to go.
             </p>
@@ -373,9 +318,11 @@
                 </P>
             </section>
         </article>
-
     </section>
     <section>
+        <h1>
+            Code
+        </h1>
                     <pre>
 &lt;article&gt;
     &lt;section&gt;
@@ -397,17 +344,17 @@
             </pre>
     </section>
 
-    <h3>
+    <h2>
         Vertical alignment
-    </h3>
+    </h2>
     <p>
         To create vertical alignment, add the attribute and value <code>am-layout="vertical"</code> to any article, header or footer.
     </p>
     <section am-component am-margin>
+        <h1>
+            Vertical
+        </h1>
         <blockquote>
-            <h1>
-                Vertical
-            </h1>
             <p>
                 <code>&lt;article am-layout="vertical"&gt;</code>
             </p>
@@ -431,6 +378,9 @@
         </article>
     </section>
     <section>
+        <h1>
+            Code
+        </h1>
         <pre>
 &lt;article am-layout="vertical"&gt;
     &lt;section&gt;
@@ -464,10 +414,10 @@
         To create gutter margin with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
     </p>
     <section am-component am-padding>
+        <h1>
+            Margin
+        </h1>
         <blockquote>
-            <h1>
-                Margin
-            </h1>
             <p>
                 <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
             </p>
@@ -491,6 +441,9 @@
         </article>
     </section>
     <section am-component am-padding>
+        <h1>
+            Code
+        </h1>
             <pre>
 &lt;article am-layout="gutter" am-gutter="margin"&gt;
     &lt;section&gt;
@@ -518,10 +471,10 @@
         To create gutter padding with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
     </p>
     <section am-component am-padding>
+        <h1>
+            Padding
+        </h1>
         <blockquote>
-            <h1 gutter="padding">
-                Padding
-            </h1>
             <p>
                 <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
             </p>
@@ -545,6 +498,9 @@
         </article>
     </section>
     <section am-component am-padding>
+        <h1>
+            Code
+        </h1>
             <pre>
 &lt;article am-layout="gutter" am-gutter="padding"&gt;
     &lt;section&gt;
@@ -575,10 +531,10 @@
         To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
     </p>
     <section am-component am-padding>
+        <h1>
+            Margin + padding
+        </h1>
         <blockquote>
-            <h1>
-                Margin + padding
-            </h1>
             <p>
                 <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
             </p>
@@ -619,6 +575,9 @@
         </article>
     </section>
     <section am-component am-padding>
+        <h1>
+            Code
+        </h1>
             <pre>
 &lt;article am-layout="gutter" am-gutter="margin"&gt;
     &lt;section&gt;
@@ -663,10 +622,10 @@
         To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
     </p>
     <section am-component am-padding>
+        <h1>
+            Padding + margin
+        </h1>
         <blockquote>
-            <h1>
-                Padding + margin
-            </h1>
             <p>
                 <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
             </p>
@@ -707,6 +666,9 @@
         </article>
     </section>
     <section am-component am-padding>
+        <h1>
+            Code
+        </h1>
             <pre>
 &lt;article am-layout="gutter" am-gutter="padding"&gt;
     &lt;section&gt;
@@ -745,39 +707,32 @@
             </pre>
     </section>
     </article>
-    <hr />
-
     <article id="ui-elements">
-        <h1 class="text-uppercase text-center">
-            <i class="fa fa-cube"></i> Components
-        </h1>
-        <p  class="text-center">
-            A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.
-        </p>
+        <header am-layout am-padding class="bg-secondary text-center">
+            <h1 class="text-uppercase">
+                <i class="fa fa-cube"></i> Components
+            </h1>
+            <p>
+                A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.
+            </p>
+        </header>
         <h2>
             Grids
         </h2>
-
-
-
-        <h2>
+        <h3>
             Basic grid
-        </h2>
+        </h3>
         <p>
             To create a basic grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
-        </p>
-        <p>
             Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
         </p>
         <section am-component am-padding>
+            <h1>
+                Basic
+            </h1>
             <blockquote>
-                <h1>
-                    Basic
-                </h1>
                 <p>
-                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
-                </p>
-                <p>
+                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.<br />
                     To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
                 </p>
                 <p>
@@ -912,6 +867,9 @@
             </p>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre>
 &lt;section am-component="grid"&gt;
     &lt;div am-grid="row"&gt;
@@ -989,20 +947,18 @@
 &lt;/section&gt;
             </pre>
         </section>
-        <h2>
+        <h3>
             Complex grid with specified block widths & nested blocks
-        </h2>
+        </h3>
         <p>
             To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
-        </p>
-        <p>
             Block width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
         </p>
         <section am-component am-padding>
+            <h1>
+                Complex
+            </h1>
             <blockquote>
-                <h1>
-                    Complex
-                </h1>
                 <p>
                     To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
                 </p>
@@ -1120,6 +1076,9 @@
             </article>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre>
 &lt;section am-component="grid"&gt;
     &lt;div am-grid="row"&gt;
@@ -1203,12 +1162,11 @@
         <p>
             To create multiple cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
-
         <section am-component am-padding>
+            <h1>
+                Multiple
+            </h1>
             <blockquote>
-                <h1>
-                    Multiple
-                </h1>
                 <p>
                     To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
                 </p>
@@ -1283,6 +1241,9 @@
             </article>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre>
 &lt;article&gt;
     &lt;section am-component="card"&gt;
@@ -1358,10 +1319,10 @@
             To create horizontal cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="horizontal"</code>. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
         </p>
         <section am-component am-padding>
+            <h1>
+                Horizontal
+            </h1>
             <blockquote>
-                <h1>
-                    Horizontal
-                </h1>
                 <p>
                     To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
                 </p>
@@ -1410,6 +1371,9 @@
             </p>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre>
 &lt;article&gt;
     &lt;section am-component="card" am-card="horizontal"&gt;
@@ -1453,10 +1417,10 @@
             To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="vertical"</code>.
         </p>
         <section am-component am-padding>
+            <h1>
+                Vertical
+            </h1>
             <blockquote>
-                <h1>
-                    Vertical
-                </h1>
                 <p>
                     To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
                 </p>
@@ -1502,6 +1466,9 @@
             </article>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre>
 &lt;article&gt;
     &lt;section am-component="card" am-card="vertical"&gt;
@@ -1539,22 +1506,20 @@
             </pre>
         </section>
     </article>
-    <hr />
-
-
-
     <article id="navs">
-        <h1 class="text-uppercase text-center">
-            <i class="fa fa-compass"></i> Navs
-        </h1>
-        <p class="text-center">
-            A set of UI patterns for the layout of nav elements, attributes & values. The base UI pattern <code>am-nav</code> is for navs.
-        </p>
+        <header am-layout am-padding class="bg-secondary text-center">
+            <h1 class="text-uppercase">
+                <i class="fa fa-compass"></i> Navs
+            </h1>
+            <p>
+                A set of UI patterns for the layout of nav elements, attributes & values. The base UI pattern <code>am-nav</code> is for navs.
+            </p>
+        </header>
         <section am-component am-padding>
+            <h1>
+                Example nav
+            </h1>
             <blockquote>
-                <h1>
-                    Example nav
-                </h1>
                 <p>
                     <code>&lt;nav&gt;</code>
                 </p>
@@ -1568,6 +1533,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1576,17 +1544,55 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
-        <h1>
+        <h2>
+            Base Nav
+        </h2>
+        <p>
+            To create a base nav with the base nav UI pattern, add the attribute <code>am-nav</code> to any nav.
+        </p>
+        <section am-component am-padding>
+            <h1>
+                Base
+            </h1>
+            <blockquote>
+                <p>
+                    <code>&lt;nav am-nav&gt;</code>
+                </p>
+            </blockquote>
+            <hr />
+            <nav am-nav>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </section>
+        <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
+            <h1>
+                Code
+            </h1>
+            <pre><code>
+&lt;nav am-nav&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+    &lt;a href="#"&gt;Link Text&lt;/al&gt;
+&lt;/nav&gt;
+            </code></pre>
+        </section>
+        <h2>
             Left aligned nav
-        </h1>
+        </h2>
         <p>
             To create a left aligned nav with the base nav UI pattern, add the attribute <code>am-nav="left-align"</code> to any nav.
         </p>
         <section am-component am-padding>
+            <h1>
+                Left align
+            </h1>
             <blockquote>
-                <h1>
-                    Left align
-                </h1>
                 <p>
                     <code>&lt;nav am-nav="left-align"&gt;</code>
                 </p>
@@ -1600,6 +1606,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav am-nav="left-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1608,17 +1617,17 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
-        <h1>
+        <h2>
             Right aligned nav
-        </h1>
+        </h2>
         <p>
             To create a right aligned nav with the base nav UI pattern, add the attribute <code>am-nav="right-aligned"</code> to any nav.
         </p>
         <section am-component am-padding>
+            <h1>
+                Right align
+            </h1>
             <blockquote>
-                <h1>
-                    Right align
-                </h1>
                 <p>
                     <code>&lt;nav am-nav="right-align"&gt;</code>
                 </p>
@@ -1632,6 +1641,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav am-nav="right-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1640,17 +1652,17 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
-        <h1>
+        <h2>
             Centered nav
-        </h1>
+        </h2>
         <p>
             To create a center aligned nav with the base nav UI pattern, add the attribute <code>am-nav="center"</code> to any nav.
         </p>
         <section am-component am-padding>
+            <h1>
+                Centered
+            </h1>
             <blockquote>
-                <h1>
-                    Centered
-                </h1>
                 <p>
                     <code>&lt;nav am-nav="center"&gt;</code>
                 </p>
@@ -1664,6 +1676,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav am-nav="center"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1672,17 +1687,17 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
-        <h1>
+        <h2>
             Justified nav
-        </h1>
+        </h2>
         <p>
             To create a justify aligned nav with the base nav UI pattern, add the attribute <code>am-nav="justify"</code> to any nav.
         </p>
         <section am-component am-padding>
+            <h1>
+                Justified
+            </h1>
             <blockquote>
-                <h1>
-                    Justified
-                </h1>
                 <p>
                     <code>&lt;nav am-nav="justify"&gt;</code>
                 </p>
@@ -1696,6 +1711,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav am-nav="justify"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1704,17 +1722,17 @@
 &lt;/nav&gt;
             </code></pre>
         </section>
-        <h1>
+        <h2>
             Vertical nav
-        </h1>
+        </h2>
         <p>
             To create a vertical nav with the base nav UI pattern, add the attribute <code>am-nav="vertical"</code> to any nav.
         </p>
         <section am-component am-padding>
+            <h1>
+                Vertical
+            </h1>
             <blockquote>
-                <h1>
-                    Vertical
-                </h1>
                 <p>
                     <code>&lt;nav am-nav="vertical"&gt;</code>
                 </p>
@@ -1728,6 +1746,9 @@
             <hr />
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;nav am-nav="vertical"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1737,20 +1758,20 @@
             </code></pre>
         </section>
     </article>
-    <hr />
-
     <article id="form-states">
-        <h1 class="text-uppercase text-center">
+    <header am-layout am-padding class="text-center bg-secondary">
+        <h1 class="text-uppercase">
             <i class="fa fa-tasks"></i> Forms
         </h1>
-        <p class="text-center">
+        <p>
             A set of UI patterns for the layout of form elements, attributes & values. The base UI pattern <code>am-form</code> is for forms.
         </p>
+    </header>
         <section am-component am-padding>
+            <h1>
+                Example form
+            </h1>
             <blockquote>
-                <h1>
-                    Example form
-                </h1>
                 <p>
                     <code>&lt;form&gt;</code>
                 </p>
@@ -1770,6 +1791,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form&gt;
     &lt;label for="example-email"&gt;Email&lt;/label&gt;
@@ -1793,10 +1817,10 @@
             To create an inline form with the base form state UI pattern, add the attribute <code>am-form</code> to any form.
         </p>
         <section am-component am-padding>
+            <h1>
+                Inline
+            </h1>
             <blockquote>
-                <h1>
-                    Inline
-                </h1>
                 <p>
                     <code>&lt;form am-form&gt;</code>
                 </p>
@@ -1816,6 +1840,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form&gt;
     &lt;label for="inline-email"&gt;Email&lt;/label&gt;
@@ -1842,10 +1869,10 @@
             Also included in this example: <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons as a potential UI pattern idea for attribute <code>value=</code>"<a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">unicode</a>".
         </p>
         <section am-component am-padding>
+            <h1>
+                Stacked
+            </h1>
             <blockquote>
-                <h1>
-                    Stacked
-                </h1>
                 <p>
                     <code>&lt;form am-form="stacked"&gt;</code>
                 </p>
@@ -1874,6 +1901,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form="stacked"&gt;
     &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
@@ -1900,10 +1930,10 @@
             Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
         </p>
         <section am-component am-padding>
+            <h1>
+                Aligned
+            </h1>
             <blockquote>
-                <h1>
-                    Aligned
-                </h1>
                 <p>
                     <code>&lt;form am-form="aligned"&gt;</code>
                 </p>
@@ -1926,6 +1956,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form="aligned"&gt;
     &lt;span&gt;
@@ -1955,10 +1988,10 @@
             Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
         </p>
         <section am-component am-padding>
+            <h1>
+                Multi-column
+            </h1>
             <blockquote>
-                <h1>
-                    Multi-column
-                </h1>
                 <p>
                     <code>&lt;form am-form="multicolumn"&gt;</code>
                 </p>
@@ -1993,6 +2026,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form="multicolumn"&gt;
     &lt;div&gt;
@@ -2024,24 +2060,14 @@
 &lt;/form&gt;
             </code></pre>
         </section>
-    </article>
-    <hr />
-
-    <article>
-        <h1>
-            Mix & match form states
-        </h1>
-        <p>
-            To mix & match form states add the attribute <code>am-form</code> = <code>value value</code> for the UI patterns you want to mix & match to any form.
-        </p>
         <h2>
             Stacked + Aligned form
         </h2>
         <section am-component am-padding>
+            <h1>
+                Stacked + Aligned
+            </h1>
             <blockquote>
-                <h1>
-                    Stacked + Aligned
-                </h1>
                 <p>
                     <code>&lt;form am-form="stacked aligned"&gt;</code>
                 </p>
@@ -2069,6 +2095,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form="stacked aligned"&gt;
     &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
@@ -2097,10 +2126,10 @@
             Multi-column + Stacked form
         </h2>
         <section am-component am-padding>
+            <h1>
+                Multi-column + Stacked
+            </h1>
             <blockquote>
-                <h1>
-                    Multi-column + Stacked
-                </h1>
                 <p>
                     <code>&lt;form am-form="multicolumn stacked "&gt;</code>
                 </p>
@@ -2142,6 +2171,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
 &lt;form am-form="multicolumn stacked"&gt;
     &lt;div&gt;
@@ -2184,10 +2216,10 @@
             Multi-column + Aligned form
         </h2>
         <section am-component am-padding>
+            <h1>
+                Multi-column + Aligned
+            </h1>
             <blockquote>
-                <h1>
-                    Multi-column + Aligned
-                </h1>
                 <p>
                     <code>&lt;form am-form="multicolumn aligned"&gt;</code>
                 </p>
@@ -2232,6 +2264,9 @@
             </form>
         </section>
         <section am-component am-padding>
+            <h1>
+                Code
+            </h1>
             <pre><code>
  &lt;form am-form="multicolumn aligned"&gt;
      &lt;div&gt;
@@ -2278,25 +2313,19 @@
 
     <article>
         <h1>
-            Ambient is a methodology for creating layout.
+            Ambient is a methodology for creating layout
         </h1>
         <p>
             This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
-        </p>
-        <p>
             Our goal is to deliver semantic layout for HTML elements, attributes and values, while also maintaining a separation from content that scales up from Portrait to Landscape.
         </p>
     </article>
 </main>
 <footer am-layout am-padding="large" class="text-center">
     <p>
-        Ambient layout makes use of HTML5 elements & CSS3 properties to layout semantic markup.
-    </p>
-    <p>
-        Ambient UI patterns are layout-related attributes for content.
-    </p>
-    <p>
+        Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+        Ambient UI patterns are layout-related attributes for content.<br />
         &middot;
         <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
         &middot;
