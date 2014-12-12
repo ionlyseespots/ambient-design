@@ -577,7 +577,7 @@ var {
 }
 @media (orientation: portrait) {
     html {
-        font-size: 80%;
+        font-size: 90%;
     }
 }
 @media (max-width: 30em) {
