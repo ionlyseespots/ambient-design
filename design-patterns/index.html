@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -28,11 +28,11 @@
 <nav am-nav role="navigation">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html">Layout</a>
-    <a href="../design-patterns/index.html" class="active">UI Patterns</a>
+    <a href="../design-patterns/index.html" class="am-active">UI Patterns</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header class="bg-primary">
+    <header class="am-bg-primary">
         <p>
             Overview<br />
             UI patterns | Initial patterns | Components | Layouts | Navs | Forms
@@ -42,7 +42,7 @@
         </h1>
     </header>
     <article>
-        <header am-layout am-padding="large" class="bg-default">
+        <header am-layout am-padding="large" class="am-bg-default">
             <p>
                 Introduction
             </p>
@@ -153,7 +153,7 @@
         </section>
     </article>
     <article>
-        <header am-layout am-padding="large"  class="text-center bg-default">
+        <header am-layout am-padding="large"  class="am-text-center am-bg-default">
             <h2>
                 Initial patterns
             </h2>
@@ -207,8 +207,8 @@
         </section>
     </article>
     <article id="ux-shells">
-        <header am-layout am-padding="large" class="bg-default text-center" >
-            <h1 class="text-uppercase text-center">
+        <header am-layout am-padding="large" class="am-bg-default am-text-center" >
+            <h1 class="am-text-uppercase text-center">
                 <i class="fa fa-cubes"></i> Layouts
             </h1>
             <p>
@@ -606,8 +606,8 @@
         </section>
     </article>
     <article id="ui-elements">
-        <header am-layout am-padding="large" class="bg-default text-center">
-            <h1 class="text-uppercase">
+        <header am-layout am-padding="large" class="am-bg-default am-text-center">
+            <h1 class="am-text-uppercase">
                 <i class="fa fa-cube"></i> Components
             </h1>
             <p>
@@ -640,7 +640,6 @@
                         <div am-grid="block">
                             1
                         </div>
-                        </div>
                     </div>
                     <div am-grid="row">
                         <div am-grid="block">
@@ -648,7 +647,6 @@
                         </div>
                         <div am-grid="block">
                             2
-                        </div>
                         </div>
                     </div>
                     <div am-grid="row">
@@ -1322,8 +1320,8 @@
         </section>
     </article>
     <article id="navs">
-        <header am-layout am-padding="large" class="bg-default text-center">
-            <h1 class="text-uppercase">
+        <header am-layout am-padding="large" class="am-bg-default am-text-center">
+            <h1 class="am-text-uppercase">
                 <i class="fa fa-compass"></i> Navs
             </h1>
             <p>
@@ -1574,8 +1572,8 @@
         </section>
     </article>
     <article id="form-states">
-        <header am-layout am-padding="large" class="text-center bg-default">
-            <h1 class="text-uppercase">
+        <header am-layout am-padding="large" class="am-text-center am-bg-default">
+            <h1 class="am-text-uppercase">
                 <i class="fa fa-tasks"></i> Forms
             </h1>
             <p>
@@ -1605,7 +1603,7 @@
                     <input id="example-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1654,7 +1652,7 @@
                     <input id="inline-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1687,7 +1685,7 @@
         <section am-component am-padding>
             <h3>
                 Stacked
-            </h2>
+            </h3>
             <blockquote>
                 <p>
                     <code>&lt;form am-form="stacked"&gt;</code>
@@ -1713,7 +1711,7 @@
                     <input id="stacked-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1766,7 +1764,7 @@
                         <input id="aligned-remember" type="checkbox"> Remember me
                     </label>
                 </span>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1834,7 +1832,7 @@
                     <input id="multicolumn-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1903,7 +1901,7 @@
                     <input id="stacked-aligned-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -1979,7 +1977,7 @@
                     <input id="multicolumn-stacked-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -2072,7 +2070,7 @@
                     <input id="multicolumn-aligned-remember" type="checkbox"> Remember me
                 </label>
 
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="am-btn am-btn-primary">Sign in</button>
             </form>
         </section>
         <section am-component am-padding>
@@ -2121,7 +2119,7 @@
             </code></pre>
         </section>
     </article>
-    <article class="bg-default">
+    <article class="am-bg-default">
         <h1>
             Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
@@ -2130,7 +2128,7 @@
         </p>
     </article>
 </main>
-<footer am-layout am-padding="large" class="text-center">
+<footer am-layout am-padding="large" class="am-text-center">
     <p>
         Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
         Ambient UI patterns are layout-related attributes for content.<br />

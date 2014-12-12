@@ -82,11 +82,11 @@ img {
   max-width: 100%;
   height: auto; }
 a {
-  color: #428bca;
+  color: @am-primary;
   &:hover,
   &:focus,
   &:active,  {
-    color:#2a6496;
+    color:darken(@am-primary, 50%);
   }
 }
 code {
@@ -124,6 +124,7 @@ pre {
   margin: 1em 0 0 0;
   padding: 1em 1em 1em 1em; }
 label {
+  font-size: 80%;
   font-weight: 700;
   margin-bottom: 5px; }
 input, button, select, textarea {

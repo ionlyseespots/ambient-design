@@ -2,8 +2,6 @@
 // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
 // <input> is a replaced element and does not allow ::psuedo CSS so pre/post icons are prescribed with label + input design pattern
 [am-form] input, [am-form] select, [am-form] textarea {
-  display:block;
-  width:100%;
   height:34px;
   padding:6px 12px;
   font-size:14px;
@@ -18,7 +16,6 @@
   -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
   -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-
 }
 
 [am-form] input:focus, [am-form] select:focus, [am-form] textarea:focus {
@@ -49,7 +46,7 @@
   .justify-content(justify);
   width: 100%;
   & label,  & input, & select, & textarea {
-    .flex(1 .01%); }
+    .flex(1 8.3333%); }
 }
 
 // Multi-column
@@ -59,7 +56,7 @@
   & input, select, textarea, label {
     width: 100%; }
   & > div  {
-    .flex(1 .01%); }
+    .flex(1 8.3333%); }
 }
 
 
@@ -68,23 +65,23 @@
   position: relative; }
 
 [am-preicon] + input {
-  padding-left: 3vh; }
+  padding-left: 2em; }
 
 [am-posticon] + input {
-  padding-right: 3vh; }
+  padding-right: 2em; }
 
 [am-preicon]:before {
   font-family: FontAwesome;
   position: absolute;
-  left: .5%;
-  top: 30px;
+  left: .5em;
+  top: 34px;
   content: attr(am-preicon);
-  font-size: 2vh; }
+ }
 
 [am-posticon]:after {
   font-family: FontAwesome;
   position: absolute;
-  right: .5%;
-  top: 30px;
+  right: .5em;
+  top: 34px;
   content: attr(am-posticon);
-  font-size: 2vh; }
+   }
