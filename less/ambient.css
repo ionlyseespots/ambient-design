@@ -525,7 +525,7 @@ table {
   display: block;
   overflow: auto;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 1em;
   word-break: keep-all;
   border-collapse: collapse;
   border-spacing: 0;
@@ -534,7 +534,7 @@ table {
   table {
     overflow-x: auto;
     width: 100%;
-    margin-bottom: 1vw;
+    margin-bottom: 1em;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ccc;

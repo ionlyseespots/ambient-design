@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -830,7 +830,6 @@
                     <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
                 </ol>
             </blockquote>
-            <blockquote>
             <table>
                 <thead>
                 <tr>
@@ -841,57 +840,57 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th><code>body</code></th>
+                    <td>body</td>
                     <td>Column</td>
                     <td>Represents the content.</td>
                 </tr>
                 <tr>
-                    <th><code>header</code></th>
+                    <td>header</td>
                     <td>Row</td>
-                    <td>Base element which defines the header for a page or section.</td>
+                    <td>Defines the header for a page or section.</td>
                 </tr>
                 <tr>
-                    <th><code>nav</code></th>
+                    <td>nav</td>
                     <td>Row</td>
-                    <td>Base element which groups navigation links on one horizontal line.</td>
+                    <td>Groups navigation links on one horizontal line.</td>
                 </tr>
                 <tr>
-                    <th><code>main</code></th>
+                    <td>main</td>
                     <td>100%</td>
                     <td>Defines the main or important content.</td>
                 </tr>
                 <tr>
-                    <th><code>h1,h2,h3,h4,h5,h6</code></th>
+                    <td>h1,h2,h3,h4,h5,h6</td>
                     <td>100%</td>
                     <td>Briefly describes the topic of the section it introduces.</td>
                 </tr>
                 <tr>
-                    <th><code>P</code></th>
+                    <td>p</td>
                     <td>100%</td>
                     <td>Represents a paragraph of text. </td>
                 </tr>
                 <tr>
-                    <th><code>article</code></th>
+                    <td>article</td>
                     <td>Row</td>
-                    <td>Base element which groups content on one horizontal line. Note: on orientation portrait, the content will automatically stack.</td>
+                    <td>Groups content on one horizontal line. Note: on orientation portrait, the content will automatically stack.</td>
                 </tr>
                 <tr>
-                    <th><code>section</code></th>
+                    <td>section</td>
                     <td>Column</td>
-                    <td>Base element which divides an article content into equal sections (columns) that scales up to 12 columns.</td>
+                    <td>Groups content into equal sections that scales up to 12 columns.</td>
                 </tr>
                 <tr>
-                    <th><code>aside</code></th>
+                    <td>sside</td>
                     <td>Column</td>
-                    <td>Base element which extends content into sections (columns) loosely related to the page.</td>
+                    <td>Extends content into sections loosely related to the page.</td>
                 </tr>
                 <tr>
-                    <th><code>footer</code></th>
+                    <td>footer</td>
                     <td>Row</td>
                     <td>Defines the footer for a page or section.</td>
                 </tr>
                 <tr>
-                    <th><code>hr</code></th>
+                    <td>hr</td>
                     <td>100%</td>
                     <td>Represents a thematic break and <i>optionally</i> defines framing.</td>
                 </tr>
@@ -912,10 +911,12 @@
                     </tr>
                 </tfoot>
             </table>
-            </blockquote>
             <h3>
                 <i class="fa fa-html5"></i> HTML5
             </h3>
+            <p>
+                Ambient makes use of <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">HTML5 elements</a> to define different parts of a web page.
+            </p>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
                 <table>
                     <thead>
@@ -985,42 +986,77 @@
             <p>
                 Ambient is a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">CSS3 flexbox</a> layout.
             </p>
-            <h4>
-                Normalize.css
-            </h4>
-            <p>
-                For improved cross-browser rendering, we use
-                <a href="http://necolas.github.io/normalize.css/">Normalize.css</a>, a project by
-                <a href="http://twitter.com/necolas">Nicolas Gallagher</a>
-                and
-                <a href="http://twitter.com/jon_neal">Jonathan Neal</a>.
-            </p>
-            <h4>
-                Flexbox LESS mixin
-            </h4>
-            <p>
-                For improved flexbox rendering and maintainability, we use
-                <a href="https://gist.github.com/jayj/4012969">flexbox.less</a>, a project by
-                <a href="https://twitter.com/jayjdk">Jesper Johansen</a>.
-            </p>
-            <h4>
-                Cursor Reset
-            </h4>
-            <p>
-                For improved cursor rendering, we use
-                <a href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>, a project by
-                <a href="https://twitter.com/murtaugh">Tim Murtaugh</a>.
-            </p>
-            <h4>
-                Typography
-            </h4>
-            <p>
-                For defining proper markup with extensible styling for common typographic patterns, we use
-                <a href="https://github.com/typeplate/starter-kit">Typeplate.css</a>, a project by
-                <a href="https://github.com/grayghostvisuals">Dennis Gaebel</a>.
-                and
-                <a href="https://github.com/zakkain">Zachary Kain</a>.
-            </p>
+            <h3>
+                Keeping It Simple
+            </h3>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Project</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="http://necolas.github.io/normalize.css/">Normalize.css</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="http://twitter.com/necolas">Nicolas Gallagher</a>
+                        and
+                        <a href="http://twitter.com/jon_neal">Jonathan Neal</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://lesscss.org/">Less</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="http://lesscss.org/about/#team">lots of people</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://gist.github.com/jayj/4012969">flexbox.less</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="https://twitter.com/jayjdk">Jesper Johansen</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="https://twitter.com/murtaugh">Tim Murtaugh</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://typeplate.com/">Typeplate.css</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="https://github.com/grayghostvisuals">Dennis Gaebel</a>
+                        and
+                        <a href="https://github.com/zakkain">Zachary Kain</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="https://twitter.com/h5bp">lots of people</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </section>
     </article>
     <article class="am-bg-default">
