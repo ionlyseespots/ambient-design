@@ -1327,7 +1327,6 @@ footer {
 }
 [am-nav] a {
     padding: 1em;
-    line-height: 1;
     text-align: center;
     height: auto;
     -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
