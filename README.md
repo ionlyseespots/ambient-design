@@ -2,9 +2,9 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
 
-Our goal is to deliver semantic layout for HTML elements, attributes and values while also maintaining a separation from content that scales up from Portrait to Landscape.
+Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
 
-Developers can focus on HTML5 elements to create layout and designers can focus on extending UI patterns for content.
+Ambient is ready to adopt whatever your design or style is. HTML5 sections and outlines within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts. 
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
