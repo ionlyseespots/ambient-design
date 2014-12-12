@@ -1,7 +1,9 @@
 [am-nav] {
   a {
   padding: 1em;
+  line-height: 1;
   text-align: center;
+    height: auto;
   -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
@@ -44,4 +46,8 @@
 
 [am-nav~="vertical"] {
   .flex-direction(column);
+  a {
+    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    width: 100%;
+  }
 }
