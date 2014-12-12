@@ -37,9 +37,9 @@ Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambie
 
 ## Background
 
-Sometimes I have UI that plays well with a traditional (4, 6, 8, and 12 column) grid paradigm but sometimes I need a more complex grid. This means learning grid classes for structure with floats, columns and media queries.
+Sometimes I have UI that plays well with a traditional (4, 6, 8, and 12 column) grid paradigm but sometimes I need a more complex grid. This can mean learning grid classes for structure with floats, columns and media queries.
 
-I liked reusing classes for design. Other times I became frustrated reusing classes for structure that were not very clear. I wanted to create a methodology for layout for the unpredictable. The layout should be dynamic, and fit any range of viewports. 
+I liked reusing classes for design. Other times I became frustrated reusing classes for structure that were not very clear. I wanted to get back to basics with HTML5 and create a methodology for layout for the unpredictable. The layout should be dynamic, and fit any range of viewports. 
 
 This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
 
