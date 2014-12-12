@@ -12,68 +12,72 @@ html {
   box-sizing: border-box;
   // http://css-tricks.com/a-couple-of-use-cases-for-calc/
   height: calc(100%);
-  body {
-    min-width: 100%;
-    min-height: 100%;
-    .flex-display;
+}
+body {
+  min-width: 100%;
+  min-height: 100%;
+  .flex-display;
+  .flex-direction(column);
+  // center page content in first article not in main horizontally and vertically
+  & > article  {
+    .align-items(center);
+    margin: auto;
+    width: auto;
+  }
+}
+// column (section) clearing
+header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
+  width: 100%;
+  word-wrap: break-word;
+}
+header {
+  .flex-display;
+  .flex-flow(row wrap);
+}
+nav {
+  .flex-display;
+  .flex-flow(row wrap);
+  & a {
+    .flex(1 8.3333%);
+  }
+}
+main {
+  .flex(1 0 auto);
+}
+article {
+  .flex-display;
+  .flex-flow(row wrap);
+  // help content on absolute positioning
+  position: relative;
+}
+section {
+  .flex(1 8.3333%);
+  // help content on absolute positioning
+  position: relative;
+}
+aside {
+  .flex(0 0 20%);
+}
+// row::sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
+footer {
+  .flex-display;
+  .flex-flow(row wrap);
+  .flex-order(2);
+}
+
+// portrait
+@media (orientation:portrait){
+  article {
     .flex-direction(column);
-    // column (section) clearing
-    header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
-      width: 100%;
-      word-wrap: break-word;
-    }
-    // center page content in first article not in main horizontally and vertically
-    & > article  {
-      .align-items(center);
-      margin: auto;
-      width: auto;
-    }
-    header {
-      .flex-display;
-      .flex-flow(row wrap);
-    }
-    nav {
-      .flex-display;
-      .flex-flow(row wrap);
-      & a {
-        .flex(1 8.3333%);
-      }
-    }
-    // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
-    footer {
-      .flex-display;
-      .flex-flow(row wrap);
-      .flex-order(2);
-    }
-    main {
-      .flex(1 0 auto);
-      article {
-        .flex-display;
-        .flex-flow(row wrap);
-        // help content on absolute positioning
-        position: relative;
-        // column
-        section {
-          .flex(1 8.3333%);
-          .flex-flow(row wrap);
-          // help content on absolute positioning
-          position: relative;
-        }
-        aside {
-          .flex(0 0 20%);
-        }
-      }
-      @media (orientation:portrait){
-        article {
-          .flex-direction(column);
-        }
-        // change vertical rule back to horizontal rule for portrait view
-        [am-verticalrule] {
-          width: 100%;
-          background-color: transparent;
-          position: static;
-        }
-      }
-    }
+  }
+  section, aside {
+    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    width: 100%;
+  }
+  // change vertical rule back to horizontal rule for portrait view
+  [am-verticalrule] {
+    width: 100%;
+    background-color: transparent;
+    position: static;
   }
 }
