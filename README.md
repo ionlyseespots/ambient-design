@@ -4,7 +4,7 @@
 
 Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
 
-Ambient is ready to adopt whatever your design or style is. HTML5 sections and outlines within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts. 
+Ambient is ready to adopt whatever your design or style is. Feel free to use semantic HTML5 tags, whenever and wherever you like. HTML5 sections and outlines within Ambient define themselves, creating a visual structure for the document outline.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
