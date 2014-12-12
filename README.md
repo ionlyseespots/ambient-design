@@ -55,3 +55,4 @@ While presentation changes can require changes in structure, content can be chan
 * http://getbootstrap.com/
 * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
 * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+* https://github.com/h5bp/html5-boilerplate
