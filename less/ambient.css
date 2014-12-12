@@ -864,10 +864,11 @@ footer {
   padding: 0 .5em;
 }
 [am-component~="card"][am-card~="horizontal"] div[am-card="row"] div[am-card="block"] {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  width: 8.3333%;
   margin-left: 1em;
 }
 [am-component~="card"][am-card~="horizontal"] div[am-card="row"] div[am-card="block"]:first-of-type {
@@ -1308,10 +1309,11 @@ footer {
   margin-left: 3vw;
 }
 [am-layout][am-layout~="vertical"] > section {
-  -webkit-flex-basis: 100%;
-  -moz-flex-basis: 100%;
-  -ms-flex-basis: 100%;
-  flex-basis: 100%;
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 100%;
   margin-left: 0;
 }
 @media (orientation: portrait) {
