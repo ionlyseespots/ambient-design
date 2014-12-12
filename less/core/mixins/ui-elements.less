@@ -1,26 +1,4 @@
-
-// working on gutters for grid
-[am-component~="gutter"] {
-  &[am-gutter="padding"] {
-    padding: 0;
-    & div {
-      padding-left:1em;
-    }
-    & > div:first-of-type {
-      margin-left:-1em;
-    }
-  }
-  &[am-gutter="margin"] {
-    margin: 0;
-    & div {
-      margin-left:1em;
-    }
-    & > div:first-of-type {
-      margin-left: 0;
-    }
-  }
-}
-
+// grids
 [am-component~="grid"] {
   & div[am-grid="row"] {
 
@@ -28,19 +6,8 @@
     .flex-display;
     .flex-flow(row wrap);
     width: 100%;
-
     & div[am-grid="block"] {
-      /**
-    * column
-    */
-
       .flex(1 8.3333%);
-
-      //    .flex-direction(column);
-      /**
-      * help content on absolute positioning
-      */
-
       &[am-block="fourth"] {
         .flex-basis(auto);
         width: 25%;
@@ -66,13 +33,10 @@
         width: 100%;
       }
     }
-
-
   }
 }
 
-
-
+// cards
 [am-component~="card"]   {
     -webkit-column-width:  15em;
     -webkit-column-gap: 1em;
@@ -88,22 +52,19 @@
     column-count: auto;
     padding-left: .5em;
     padding-right: .5em;
-
-  & div[am-card="block"] {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
-    padding: 1vw;
-    border-radius: 2px;
-    margin: .5em 0;
-    display: inline-block;
+    & div[am-card="block"] {
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+      padding: 1vw;
+      border-radius: 2px;
+      margin: .5em 0;
+      display: inline-block;
   }
-
   &[am-card~="horizontal"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     -ms-column-count: 1;
     column-count: 1;
     padding: 0;
-
     & div[am-card="row"] {
       .flex-basis(auto);
       .flex-display;
@@ -120,22 +81,20 @@
       }
     }
   }
-
-    &[am-card~="vertical"] {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      -ms-column-count: 1;
-      column-count: 1;
-      padding: 0;
-      & div[am-card="row"] {
-        padding: 0 .5em;
-        & div[am-card="block"] {
-          .flex(1 auto);
-          width: 100%;
-        }
+  &[am-card~="vertical"] {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+    padding: 0;
+    & div[am-card="row"] {
+      padding: 0 .5em;
+      & div[am-card="block"] {
+        .flex(1 auto);
+        width: 100%;
       }
     }
-
+  }
   @media (orientation:portrait){
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -144,6 +103,7 @@
   }
 }
 
+// viewport widths ensure vertical rhythm with white spacing around content in a section
 [am-component]{
   &[am-padding] {
     padding-top: 1vw;
@@ -168,7 +128,6 @@
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
-
   }
   &[am-padding="left"] {
     padding-left: 1vw;
@@ -194,7 +153,6 @@
     padding-bottom: 3vw;
     padding-left: 3vw;
   }
-
   &[am-margin] {
     margin-top: 1vw;
     margin-right: 1vw;
@@ -243,7 +201,4 @@
     margin-bottom: 3vw;
     margin-left: 3vw;
   }
-
-
-
 }

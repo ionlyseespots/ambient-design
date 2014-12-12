@@ -403,6 +403,7 @@ h6 {
     color: #222;
     font-weight: 300;
 }
+/*  base font-size * base line-height = current font-size */
 h1 {
     font-size: 60px;
     font-size: 3.33333rem;
@@ -464,6 +465,7 @@ a:active {
     color: #2a6496;
 }
 code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     background-color: #f1f1f1;
     border-radius: 4px;
     color: #c7254e;
@@ -471,15 +473,10 @@ code {
     font-size: 90%;
     padding: 2px 4px;
 }
-code,
 kbd,
 pre,
 samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-blockquote:before,
-blockquote:after {
-    content: "";
 }
 blockquote {
     border-left: 5px solid #e9e9e9;
@@ -487,6 +484,10 @@ blockquote {
     margin: 1em 0;
     padding: .5em 1em;
     font-size: small;
+}
+blockquote:before,
+blockquote:after {
+    content: "";
 }
 pre {
     width: 100%;
@@ -527,6 +528,27 @@ table {
     word-break: keep-all;
     border-collapse: collapse;
     border-spacing: 0;
+}
+@media screen and (max-width: 30em) {
+    table {
+        overflow-x: auto;
+        width: 100%;
+        margin-bottom: 1vw;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ccc;
+    }
+    table > .table {
+        margin-bottom: 0;
+    }
+    table > .table > thead > tr > th,
+    table > .table > tbody > tr > th,
+    table > .table > tfoot > tr > th,
+    table > .table > thead > tr > td,
+    table > .table > tbody > tr > td,
+    table > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
 }
 table tr {
     background-color: #fff;
@@ -725,24 +747,6 @@ footer {
         position: static;
     }
 }
-[am-component~="gutter"][am-gutter="padding"] {
-    padding: 0;
-}
-[am-component~="gutter"][am-gutter="padding"] div {
-    padding-left: 1em;
-}
-[am-component~="gutter"][am-gutter="padding"] > div:first-of-type {
-    margin-left: -1em;
-}
-[am-component~="gutter"][am-gutter="margin"] {
-    margin: 0;
-}
-[am-component~="gutter"][am-gutter="margin"] div {
-    margin-left: 1em;
-}
-[am-component~="gutter"][am-gutter="margin"] > div:first-of-type {
-    margin-left: 0;
-}
 [am-component~="grid"] div[am-grid="row"] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
@@ -760,16 +764,10 @@ footer {
     width: 100%;
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"] {
-    /**
-      * column
-      */
     -webkit-flex: 1 8.3333%;
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
-    /**
-        * help content on absolute positioning
-        */
 }
 [am-component~="grid"] div[am-grid="row"] div[am-grid="block"][am-block="fourth"] {
     -webkit-flex-basis: auto;
@@ -992,184 +990,6 @@ footer {
     margin-bottom: 3vw;
     margin-left: 3vw;
 }
-/**
-* multi-column shell [holy grail]
-*/
-[am-multicolumn] > section:first-of-type {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    order: 1;
-    -webkit-order: 1;
-    -moz-order: 1;
-    -ms-order: 1;
-    -webkit-flex: 1 auto;
-    -moz-flex: 1 auto;
-    -ms-flex: 1 auto;
-    flex: 1 auto;
-}
-[am-multicolumn] section:first-of-type aside:last-of-type {
-    order: -1;
-    -webkit-order: -1;
-    -moz-order: -1;
-    -ms-order: -1;
-}
-[am-multicolumn] {
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-}
-/**
-* panel shell
-*/
-[am-leftpanel] nav {
-    flex-direction: column;
-    flex-flow: column;
-    -webkit-flex-flow: column;
-    -moz-flex-flow: column;
-    -ms-flex-flow: column;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-[am-leftpanel] > section:last-of-type header {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-[am-leftpanel] > section:last-of-type {
-    flex: 4;
-    -webkit-flex: 4;
-    -moz-flex: 4;
-    -ms-flex: 4;
-}
-[am-leftpanel] nav ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-}
-[am-leftpanel] nav ul li {
-    transition: background 0.3s ease 0s;
-}
-[am-leftpanel] nav ul li:hover {
-    background: #eee;
-}
-[am-leftpanel] nav ul li:hover a {
-    color: #000033;
-}
-[am-leftpanel] nav ul li.active {
-    box-shadow: inset -6px 0 0 #e86f56;
-}
-[am-leftpanel] nav ul li.active a {
-    color: #3e3e3e;
-}
-[am-leftpanel] nav ul li a {
-    color: #9f9f9f;
-    padding: 1vw;
-    text-decoration: none;
-    width: 100%;
-}
-[am-leftpanel] li.active a i,
-[am-leftpanel] li.active:hover a i {
-    color: #e86f56;
-}
-@media (orientation: portrait) {
-    [am-leftpanel] > nav:first-child ul li:first-child {
-        width: 100%;
-    }
-    [am-leftpanel] nav ul {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    }
-    [am-leftpanel] nav ul li {
-        -webkit-box-flex: 1 0 auto;
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-        position: relative;
-        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-        transition: background 0.3s ease 0s;
-    }
-    [am-leftpanel] nav ul li.active {
-        box-shadow: none;
-    }
-    [am-leftpanel] nav ul li a {
-        padding: 2vw 0;
-    }
-    [am-leftpanel] nav ul li.active a:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        padding: 0;
-        margin-left: -7px;
-        width: 0;
-        height: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-top: 9px solid #7a706e;
-        z-index: 1;
-    }
-    [am-leftpanel] > section:last-of-type header {
-        padding: 2vw 0;
-    }
-    .panel-info {
-        width: 100%;
-    }
-}
-/**dd
-* landing page shell
-*/
-[am-layout="landingpage"] {
-    min-height: 12%;
-    position: absolute;
-    top: 87%;
-    z-index: 2;
-    background-color: inherit;
-}
-[am-layout~="landingpage"] h1 {
-    margin: 2vw 0;
-}
-[am-layout~="landingpage"] nav {
-    background-color: #fff;
-    height: 5vw;
-}
-[am-layout~="landingpage"] article {
-    padding-top: 2vw;
-}
-[am-layout~="landingpage"] footer {
-    padding: 2vw 0;
-    margin-top: 2vw;
-}
-[am-layout="landingpage splash"] {
-    height: 88%;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    justify-content: center;
-    z-index: 1;
-}
-[am-layout~="splash"] h1 {
-    border: 3px solid white;
-    border-radius: 5px;
-    padding: 2vw 3vw;
-}
 [am-layout~="gutter"][am-gutter="padding"] {
     padding: 0;
 }
@@ -1210,10 +1030,10 @@ footer {
     border: 1px solid rgba(93, 116, 137, 0.2);
 }
 [am-layout][am-padding] {
-    padding-top: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-left: 1em;
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1vw;
 }
 [am-layout][am-padding="top"] {
     padding-top: 1vw;
@@ -1390,19 +1210,25 @@ footer {
     flex-basis: auto;
     width: 100%;
 }
-/* form States */
-/**
-* <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
-* <input> is a replaced element and does not allow ::psuedo CSS so pre/post icons are prescribed with label + input design pattern
-*/
 [am-form] input,
 [am-form] select,
 [am-form] textarea {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
     border: 1px solid #ccc;
-    border-radius: .5vw;
-    min-height: 2vw;
-    padding: 0.5vw 1vw;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 [am-form] input:focus,
 [am-form] select:focus,
@@ -1421,18 +1247,12 @@ footer {
 [am-form] label input {
     width: auto;
 }
-/**
-* Stacked
-*/
 [am-form~="stacked"] input,
 [am-form~="stacked"] select,
 [am-form~="stacked"] textarea,
 [am-form~="stacked"] label {
     width: 100%;
 }
-/**
-* Aligned
-*/
 [am-form~="aligned"] > span {
     display: -webkit-flex;
     display: -moz-flex;
@@ -1458,9 +1278,6 @@ footer {
     -ms-flex: 1 0.01%;
     flex: 1 0.01%;
 }
-/**
-* Multi-column
-*/
 [am-form~="multicolumn"] {
     display: -webkit-flex;
     display: -moz-flex;
@@ -1484,9 +1301,6 @@ footer {
     -ms-flex: 1 0.01%;
     flex: 1 0.01%;
 }
-/**
-* Iconography
-*/
 [am-preicon],
 [am-posticon] {
     position: relative;
