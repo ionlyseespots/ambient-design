@@ -456,15 +456,12 @@ img {
   height: auto;
 }
 a {
-  display: inline-block;
   color: #428bca;
-  text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
   color: #2a6496;
-  outline: 0 none;
 }
 code {
   background-color: #f1f1f1;
@@ -1330,18 +1327,18 @@ footer {
 [am-nav] a {
   padding: 1em;
   text-align: center;
-  height: auto;
+  text-decoration: none;
   -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: background 0.3s ease 0s;
 }
-[am-nav] a:hover {
-  background-color: #CEE1EF;
-}
+[am-nav] a:hover,
+[am-nav] a:focus,
 [am-nav] a:active {
   background-color: #CEE1EF;
+  outline: 0 none;
 }
 [am-nav~="left-align"] {
   -webkit-justify-content: flex-start;

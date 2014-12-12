@@ -2,16 +2,18 @@
   a {
   padding: 1em;
   text-align: center;
-    height: auto;
+  text-decoration: none;
   -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
   transition: background 0.3s ease 0s;
-  &:hover {
-    background-color:#CEE1EF; }
-  &:active {
-    background-color:#CEE1EF; }
+  &:hover,
+  &:focus,
+  &:active,  {
+    background-color:#CEE1EF;
+    outline: 0 none;
+    }
   }
 }
 
