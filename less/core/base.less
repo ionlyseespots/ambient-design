@@ -29,14 +29,14 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
   color: #222;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 // base font-size * base line-height = current font-size
 h1 {
 
   font-size: 60px;
   font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
-  letter-spacing: -0.1rem;
   margin-bottom: 8.91px;
   margin-bottom: 0.495rem;
 }
@@ -86,12 +86,10 @@ a {
   display: inline-block;
   color: #428bca;
   text-decoration: none;
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  &:hover, &:focus {
+  &:hover, &:focus,  &:active,  {
     color:#2a6496;
+    outline: 0 none;
   }
-  &:active, &:hover {
-    outline: 0 none; }
 }
 
 

@@ -407,7 +407,6 @@ h1 {
   font-size: 60px;
   font-size: 3.33333rem;
   /* 60 / 18 = 3.3333 */
-  letter-spacing: -0.1rem;
   margin-bottom: 8.91px;
   margin-bottom: 0.495rem;
 }
@@ -460,14 +459,11 @@ a {
   display: inline-block;
   color: #428bca;
   text-decoration: none;
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 a:hover,
-a:focus {
+a:focus,
+a:active {
   color: #2a6496;
-}
-a:active,
-a:hover {
   outline: 0 none;
 }
 code {

@@ -407,7 +407,6 @@ h1 {
     font-size: 60px;
     font-size: 3.33333rem;
     /* 60 / 18 = 3.3333 */
-    letter-spacing: -0.1rem;
     margin-bottom: 8.91px;
     margin-bottom: 0.495rem;
 }
@@ -460,14 +459,11 @@ a {
     display: inline-block;
     color: #428bca;
     text-decoration: none;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 a:hover,
-a:focus {
+a:focus,
+a:active {
     color: #2a6496;
-}
-a:active,
-a:hover {
     outline: 0 none;
 }
 code {
@@ -601,7 +597,7 @@ html {
     box-sizing: border-box;
     height: calc(100%);
 }
-html body {
+body {
     min-width: 100%;
     min-height: 100%;
     display: -webkit-flex;
@@ -614,22 +610,7 @@ html body {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-html body header,
-html body nav,
-html body footer,
-html body h1,
-html body h2,
-html body h3,
-html body h4,
-html body h5,
-html body h6,
-html body hr,
-html body p,
-html body div {
-    width: 100%;
-    word-wrap: break-word;
-}
-html body > article {
+body > article {
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
@@ -637,7 +618,22 @@ html body > article {
     margin: auto;
     width: auto;
 }
-html body header {
+header,
+nav,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+div {
+    width: 100%;
+    word-wrap: break-word;
+}
+header {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -648,7 +644,7 @@ html body header {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-html body nav {
+nav {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -659,13 +655,44 @@ html body nav {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-html body nav a {
+nav a {
     -webkit-flex: 1 8.3333%;
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
 }
-html body footer {
+main {
+    -webkit-flex: 1 0 auto;
+    -moz-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+article {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    position: relative;
+}
+section {
+    -webkit-flex: 1 8.3333%;
+    -moz-flex: 1 8.3333%;
+    -ms-flex: 1 8.3333%;
+    flex: 1 8.3333%;
+    position: relative;
+}
+aside {
+    -webkit-flex: 0 0 20%;
+    -moz-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+}
+footer {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -680,49 +707,22 @@ html body footer {
     -ms-order: 2;
     order: 2;
 }
-html body main {
-    -webkit-flex: 1 0 auto;
-    -moz-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-}
-html body main article {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    position: relative;
-}
-html body main article section {
-    -webkit-flex: 1 8.3333%;
-    -moz-flex: 1 8.3333%;
-    -ms-flex: 1 8.3333%;
-    flex: 1 8.3333%;
-    -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    position: relative;
-}
-html body main article aside {
-    -webkit-flex: 0 0 20%;
-    -moz-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-}
 @media (orientation: portrait) {
-    html body main article {
+    article {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    html body main [am-verticalrule] {
+    section,
+    aside {
+        -webkit-flex-basis: auto;
+        -moz-flex-basis: auto;
+        -ms-flex-basis: auto;
+        flex-basis: auto;
+        width: 100%;
+    }
+    [am-verticalrule] {
         width: 100%;
         background-color: transparent;
         position: static;
