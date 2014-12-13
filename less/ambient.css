@@ -1324,7 +1324,7 @@ footer {
     margin-left: 0;
   }
   [am-layout~="gutter"][am-gutter~="margin"] > section {
-    margin-left: 0;
+    margin-left: 5px;
   }
 }
 [am-nav] a {
