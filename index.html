@@ -3,19 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Ambient is a methodology for creating layout.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
     <link rel="stylesheet" href="dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 <header>
     <h1>
         <a href="index.html" title="index">Ambient</a>
-        <a href="https://github.com/ionlyseespots/ambient-design" class="pull-right"><i class="fa fa-github"></i></a>
-        <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
     </h1>
 </header>
 <nav am-nav role="navigation">
@@ -25,16 +32,12 @@
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header class="text-center bg-primary">
+    <header am-layout am-padding="large" class="am-text-center am-bg-primary">
         <h2>
-            <a href="layout/index.html">
-                <img src="assets/css/img/ambientLogo.png" alt="Ambient semantic layout" />
-            </a><br />
+            <img src="assets/css/img/ambientLogo.png" alt="Ambient semantic layout" />
+            <br />
             Ambient is semantic layout
         </h2>
-        <p>
-            <small>Semantic <em>Markup + Page</em> Layout</small>
-        </p>
         <nav am-nav>
             <a href="design-patterns/index.html#ui-elements"><i class="fa fa-cube fa-4x"></i><br /><span>Components</span></a>
             <a href="design-patterns/index.html#ux-shells"><i class="fa fa-cubes fa-4x"></i><br /><span>Layouts</span></a>
@@ -42,15 +45,18 @@
             <a href="design-patterns/index.html#form-states"><i class="fa fa-tasks fa-4x"></i><br /><span>Forms</span></a>
         </nav>
         <p>
-            <a href="layout/index.html" class="btn btn-default ghost">View Layout</a>
-            <a href="https://github.com/ionlyseespots/ambient-design" class="btn btn-default ghost">View GitHub</a>
+            <a href="layout/index.html">View Layout</a>
+            <a href="https://github.com/ionlyseespots/ambient-design">View GitHub</a>
         </p>
     </header>
-    <article am-layout am-padding="large" class="text-center bg-default">
+    <article am-layout am-padding="large" class="am-text-center am-bg-default">
         <header>
             <h1>
                 Features
             </h1>
+            <p>
+                <small>Semantic <em>Markup + Page</em> Layout</small>
+            </p>
             <p>
                 HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline.<br />
                 This means you can build content into simple or complex layouts.
@@ -89,7 +95,7 @@
             </p>
         </section>
     </article>
-    <article am-layout am-padding="large" class="text-center">
+    <article am-layout am-padding="large" class="am-text-center">
         <h1>
             <i class="fa fa-html5"></i><i class="fa fa-css3"></i>
             <br />
@@ -100,15 +106,15 @@
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
         </p>
         <p>
-            Sometimes I have a UI that plays well with a traditional (4, 6, 8, and 12 column) grid paradigm but sometimes I need a more complex grid.
+            Sometimes I have a UI that plays well with a traditional grid paradigm but sometimes I need a more complex grid.
             This can mean learning grid classes for structure with floats, columns and media queries.
-            I liked reusing classes for design. Other times I became frustrated reusing classes for structure that were not very clear.
+            I liked reusing classes for design but I became frustrated with classes for structure that were not very clear.
         </p>
         <p>
-            I wanted to get back to basics with HTML5 and create a methodology for layout for the unpredictable. The layout should be dynamic, and fit any range of viewports.
+            I wanted to get back to basics with HTML5 and create a methodology for the document outline layout. The layout should be dynamic, and fit any range of viewports.
         </p>
     </article>
-    <article am-layout am-padding="large" class="text-center bg-default">
+    <article am-layout am-padding="large" class="am-text-center am-bg-default">
         <header>
             <h1>
                 Open Source
@@ -143,13 +149,12 @@
         </section>
     </article>
 </main>
-<footer am-layout am-padding="large" class="text-center">
+<footer am-layout am-padding="large" class="am-text-center">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
         Ambient UI patterns are layout-related attributes for content.<br />
-        &middot;
-        <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
-        &middot;
+        <a href="https://github.com/ionlyseespots/ambient-design"><i class="fa fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-3x"></i></a>
     </p>
 </footer>
 </body>

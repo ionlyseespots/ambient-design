@@ -3,29 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Getting started with Ambient semantic layout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 <header>
     <h1>
         <a href="../index.html" title="index">Ambient</a>
-        <a href="https://github.com/ionlyseespots/ambient-design" class="pull-right"><i class="fa fa-github"></i></a>
-        <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
     </h1>
 </header>
 <nav am-nav role="navigation">
-    <a href="../docs/index.html"  class="active">Getting Started</a>
+    <a href="../docs/index.html" class="am-active">Getting Started</a>
     <a href="../layout/index.html">Layout</a>
     <a href="../design-patterns/index.html">UI Patterns</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header class="bg-primary">
+    <header class="am-bg-primary">
         <p>
             Overview<br />
             Download | Starting HTML5 example
@@ -35,12 +42,12 @@
         </h1>
     </header>
     <article>
-        <header class="bg-default">
+        <header am-layout am-padding="large" class="am-bg-default">
             <p>
                 Introduction
             </p>
             <h2>
-                Ambient is a method for creating layout not constrained by the browser
+                Ambient is a lightweight and modular HTML5 UI development methodology.
             </h2>
             <p>
                 HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline. This means you can build content into simple or complex layouts.
@@ -101,7 +108,7 @@ ambient/
                 Back to basics
             </h2>
             <p>
-                Ambient is ready to adopt whatever your design or style is. Ambient is a lightweight and modular HTML5 UI development methodology.<br />
+                Ambient is ready to adopt whatever your design or style is. Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.<br />
                 Feel free to use semantic HTML5 tags, whenever and wherever you like.
             </p>
         </header>
@@ -204,29 +211,26 @@ ambient/
         <h3>
             Examples
         </h3>
-        <p class="text-center">
+        <p class="am-text-center">
             Starting HTML5 example<br />
-            <a href="../examples/starter-template/index.html" class="btn btn-default">View starter template</a>
+            <a href="../examples/starter-template/index.html">View starter template</a>
         </p>
     </article>
-    <article class="bg-default">
+    <article class="am-bg-default">
         <h1>
-            Ambient is a methodology for creating layout
+            Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
         <p>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
-            While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
-            Our goal is to deliver semantic layout for HTML elements, attributes and values, while also maintaining a separation from content that scales up from Portrait to Landscape.
+            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
         </p>
     </article>
 </main>
-<footer am-layout am-padding="large" class="text-center">
+<footer am-layout am-padding="large" class="am-text-center">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
-        Ambient UI patterns are layout-related attributes for content. <br />
-        &middot;
-        <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
-        &middot;
+        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
+        Ambient UI patterns are layout-related attributes for content.<br />
+        <a href="https://github.com/ionlyseespots/ambient-design"><i class="fa fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-3x"></i></a>
     </p>
 </footer>
 </body>

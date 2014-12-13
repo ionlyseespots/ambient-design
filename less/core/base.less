@@ -2,6 +2,7 @@
 // Ambient base styles
 // Let's keep a Vertical Rhythm
 
+// viewport sizing on type is impacted by virtual keyboard and debugger opening making it too experimental
 
 // Typography via Typeplate
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-// base font-size * base line-height = current font-size
+/*  base font-size * base line-height = current font-size */
 h1 {
 
   font-size: 60px;
@@ -71,7 +72,6 @@ h6 {
   margin-bottom: 1.65rem;
 }
 
-
 p {
   margin: 0 0 1.5em;
 }
@@ -81,37 +81,35 @@ small {
 img {
   max-width: 100%;
   height: auto; }
-
 a {
-  display: inline-block;
-  color: #428bca;
-  text-decoration: none;
+  color: @link-color;
   &:hover,
   &:focus,
   &:active,  {
-    color:#2a6496;
-    outline: 0 none;
+    color:darken(@link-color, 50%);
   }
 }
-
-
 code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   background-color: #f1f1f1;
   border-radius: 4px;
   color: #c7254e;
   font-weight: normal;
   font-size: 90%;
   padding: 2px 4px; }
-code, kbd, pre, samp {
+kbd, pre, samp {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
-blockquote:before, blockquote:after {
-  content: ""; }
 blockquote {
   border-left: 5px solid #e9e9e9;
   background-color: #fafafa;
   margin: 1em 0;
   padding: .5em 1em;
-  font-size: small; }
+  font-size: small;
+  &:before,
+  &:after {
+    content: "";
+  }
+}
 pre {
   width: 100%;
   background-color: #f1f1f1;
@@ -126,6 +124,7 @@ pre {
   margin: 1em 0 0 0;
   padding: 1em 1em 1em 1em; }
 label {
+  font-size: 80%;
   font-weight: 700;
   margin-bottom: 5px; }
 input, button, select, textarea {
@@ -141,10 +140,34 @@ table {
   display: block;
   overflow: auto;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 1em;
   word-break: keep-all;
   border-collapse: collapse;
   border-spacing: 0;
+  // default bootstrap table-responsive
+  @media screen and (max-width: 30em) {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 1em;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ccc;
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
 }
 
 table tr {
@@ -212,4 +235,5 @@ var {
   html {
     font-size: 80%;
   }
+
 }
