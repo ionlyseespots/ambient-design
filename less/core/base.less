@@ -6,7 +6,7 @@
 
 // Typography via Typeplate
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
-///https://github.com/typeplate/typeplate.github.io
+// https://github.com/typeplate/typeplate.github.io
 html {
   font-size: 112.5%; //* base font size 18px with 1.65 line-height */
   // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
@@ -20,7 +20,21 @@ body {
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
+  & > header,
+  & > footer {
+    background-color: @am-closure;
+    color: @am-primary-bg;
+    & a {
+      color: @am-primary-bg;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
 }
+
+
 
 // Agree::: Do NOT use heading as sub titles
 // http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
@@ -82,11 +96,11 @@ img {
   max-width: 100%;
   height: auto; }
 a {
-  color: @link-color;
+  color: @am-link-color;
   &:hover,
   &:focus,
   &:active,  {
-    color:darken(@link-color, 50%);
+    color:darken(@am-link-color, 50%);
   }
 }
 code {
@@ -203,18 +217,14 @@ kbd,
 q,
 samp,
 var {
-  /* Accepted values: [ none | manual | auto ] */ /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation */
+  // Accepted values: [ none | manual | auto ] */ /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
 
-
-
-/**
-* vertical rule
-*/
+// Vertical rule
 [am-verticalrule] {
   width: 1px;
   padding: 0;
@@ -223,17 +233,14 @@ var {
   position: absolute;
 }
 
-
 @media (orientation:portrait){
   html {
     font-size: 90%;
   }
 }
 
-
 @media (max-width: 30em){
   html {
     font-size: 80%;
   }
-
 }

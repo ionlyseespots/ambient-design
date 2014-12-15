@@ -390,6 +390,19 @@ body {
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+body > header,
+body > footer {
+  background-color: #333333;
+  color: #cee1ef;
+}
+body > header a,
+body > footer a {
+  color: #cee1ef;
+}
+body > header a:hover,
+body > footer a:hover {
+  color: #fff;
+}
 h1,
 h2,
 h3,
@@ -581,16 +594,11 @@ kbd,
 q,
 samp,
 var {
-  /* Accepted values: [ none | manual | auto ] */
-  /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation */
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
-/**
-* vertical rule
-*/
 [am-verticalrule] {
   width: 1px;
   padding: 0;
