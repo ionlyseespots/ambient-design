@@ -1,13 +1,13 @@
-body > header,
-body > footer {
-    background-color:#333;
-    color: #CEE1EF;
-}
-body > header a,
-body > footer a {
-    color:#CEE1EF;
-}
-body > header a:hover,
-body > footer a:hover  {
-    color:#fff;
-}
+/*body > header,*/
+/*body > footer {*/
+    /*background-color:#333;*/
+    /*color: #CEE1EF;*/
+/*}*/
+/*body > header a,*/
+/*body > footer a {*/
+    /*color:#CEE1EF;*/
+/*}*/
+/*body > header a:hover,*/
+/*body > footer a:hover  {*/
+    /*color:#fff;*/
+/*}*/
