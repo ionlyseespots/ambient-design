@@ -634,10 +634,10 @@
 
             <article am-layout am-margin="top">
                 <h4>
-                    Column clearing
+                    Section clearing
                 </h4>
                 <p>
-                    Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
+                    Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                 </p>
             </article>
             <hr />
@@ -852,37 +852,37 @@
                 <tr>
                     <td>nav</td>
                     <td>Row</td>
-                    <td>Groups navigation links on one horizontal line.</td>
+                    <td>Defines navigation links on one horizontal line.</td>
                 </tr>
                 <tr>
                     <td>main</td>
                     <td>100%</td>
-                    <td>Defines the main or important content.</td>
+                    <td>The main or important content.</td>
                 </tr>
                 <tr>
-                    <td>h1,h2,h3,h4,h5,h6</td>
+                    <td>h1, h2, h3, h4, h5, h6</td>
                     <td>100%</td>
                     <td>Briefly describes the topic of the section it introduces.</td>
                 </tr>
                 <tr>
                     <td>p</td>
                     <td>100%</td>
-                    <td>Represents a paragraph of text. </td>
+                    <td>A paragraph of text. </td>
                 </tr>
                 <tr>
                     <td>article</td>
                     <td>Row</td>
-                    <td>Groups content on one horizontal line. Note: on orientation portrait, the content will automatically stack.</td>
+                    <td>Defines content on one horizontal line. Alternatively, you can define a vertical layout for sections with the <code>am-layout</code> UI pattern.</td>
                 </tr>
                 <tr>
                     <td>section</td>
                     <td>Column</td>
-                    <td>Groups content into equal sections that scales up to 12 columns.</td>
+                    <td>Represents content as equal sections.</td>
                 </tr>
                 <tr>
                     <td>aside</td>
                     <td>Column</td>
-                    <td>Extends content into sections loosely related to the page.</td>
+                    <td>Represents content tangentially related to the content surrounding it.</td>
                 </tr>
                 <tr>
                     <td>footer</td>
@@ -892,15 +892,15 @@
                 <tr>
                     <td>hr</td>
                     <td>100%</td>
-                    <td>Represents a thematic break and <i>optionally</i> defines framing.</td>
+                    <td>A thematic break and <i>optionally</i> defines framing.</td>
                 </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="3">
                             <p>
-                                <strong>Column clearing</strong><br />
-                                Clear layout sections (columns) with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
+                                <strong>Section clearing</strong><br />
+                                Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
                             </p>
                             <hr />
                             <p>
@@ -951,7 +951,16 @@
                         <td>Defines some content loosely related to the page content. If it is removed, the remaining content still makes sense.</td>
                     </tr>
                     <tr>
-                        <td><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</code></td>
+                        <td>
+                            <code>
+&lt;h1&gt;
+&lt;h2&gt
+&lt;h3&gt;
+&lt;h4&gt;
+&lt;h5&gt;
+&lt;h6&gt;
+                            </code>
+                        </td>
                         <td>Heading elements implement six levels of document headings; <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> is the least. A heading element briefly describes the topic of the section it introduces.</td>
                     </tr>
                     <tr>
@@ -1073,12 +1082,41 @@
         <p>
             Here is a list of resources I have found to be the most helpful when working with HTML5 & CSS3.
         </p>
+        <h5>
+            Articles
+        </h5>
         <ul>
             <li>
-               <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/"> HTML5 And The Document Outlining Algorithm</a>
+               <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/">HTML5 And The Document Outlining Algorithm</a> <small>Smashing Magazine</small>
             </li>
             <li>
-                <a href="http://alistapart.com/article/semanticsinhtml5">Semantics in HTML 5</a>
+                <a href="http://html5doctor.com/outlines/">Document outlines</a> <small>HTML5 doctor</small>
+            </li>
+            <li>
+                <a href="http://alistapart.com/article/semanticsinhtml5">Semantics in HTML 5</a> <small>A list apart</small>
+            </li>
+        </ul>
+        <h5>
+            Projects
+        </h5>
+        <ul>
+            <li>
+                <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html">HTML5 Working Draft Specification</a>
+            </li>
+            <li>
+                <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
+            </li>
+            <li>
+                <a href="http://html5doctor.com/">HTML5 Doctor</a>
+            </li>
+            <li>
+                <a href="http://prefixr.com/">Prefixr</a>
+            </li>
+            <li>
+                <a href="http://caniuse.com/">Can I use</a>
+            </li>
+            <li>
+                <a href="http://modernizr.com/">Modernizr</a>
             </li>
         </ul>
         </section>
