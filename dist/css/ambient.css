@@ -895,101 +895,12 @@ footer {
         column-count: 2;
     }
 }
-[am-component][am-padding] {
-    padding-top: 1vw;
-    padding-right: 1vw;
-    padding-bottom: 1vw;
-    padding-left: 1vw;
-}
-[am-component][am-padding="top"] {
-    padding-top: 1vw;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-}
-[am-component][am-padding="right"] {
-    padding-right: 1vw;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-top: 0;
-}
-[am-component][am-padding="bottom"] {
-    padding-bottom: 1vw;
-    padding-left: 0;
-    padding-top: 0;
-    padding-right: 0;
-}
-[am-component][am-padding="left"] {
-    padding-left: 1vw;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-}
-[am-component][am-padding="small"] {
-    padding-top: .5vw;
-    padding-right: .5vw;
-    padding-bottom: 5vw;
-    padding-left: .5vw;
-}
-[am-component][am-padding="medium"] {
-    padding-top: 1.5vw;
-    padding-right: 1.5vw;
-    padding-bottom: 1.5vw;
-    padding-left: 1.5vw;
-}
-[am-component][am-padding="large"] {
-    padding-top: 3vw;
-    padding-right: 3vw;
-    padding-bottom: 3vw;
-    padding-left: 3vw;
-}
-[am-component][am-margin] {
-    margin-top: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 1vw;
-}
-[am-component][am-margin="top"] {
-    margin-top: 1vw;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-}
-[am-component][am-margin="right"] {
-    margin-right: 1vw;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-top: 0;
-}
-[am-component][am-margin="bottom"] {
-    margin-bottom: 1vw;
-    margin-left: 0;
-    margin-top: 0;
-    margin-right: 0;
-}
-[am-component][am-margin="left"] {
-    margin-left: 1vw;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-}
-[am-component][am-margin="small"] {
-    margin-top: .5vw;
-    margin-right: .5vw;
-    margin-bottom: 5vw;
-    margin-left: .5vw;
-}
-[am-component][am-margin="medium"] {
-    margin-top: 1.5vw;
-    margin-right: 1.5vw;
-    margin-bottom: 1.5vw;
-    margin-left: 1.5vw;
-}
-[am-component][am-margin="large"] {
-    margin-top: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vw;
-    margin-left: 3vw;
+[am-layout~="vertical"] > section {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    -ms-flex-basis: auto;
+    flex-basis: auto;
+    width: 100%;
 }
 [am-layout~="gutter"][am-gutter="padding"] {
     padding: 0;
@@ -999,6 +910,14 @@ footer {
 }
 [am-layout~="gutter"][am-gutter="padding"] > section:first-of-type {
     margin-left: -1em;
+}
+@media (orientation: portrait) {
+    [am-layout~="gutter"][am-gutter="padding"][am-gutter~="padding"] > section {
+        padding-left: 0;
+    }
+    [am-layout~="gutter"][am-gutter="padding"][am-gutter~="padding"] > section:first-of-type {
+        margin-left: 0;
+    }
 }
 [am-layout~="gutter"][am-gutter="margin"] {
     margin: 0;
@@ -1020,6 +939,11 @@ footer {
 [am-layout~="gutter"][am-gutter="margin"] p + section {
     margin-left: 0;
 }
+@media (orientation: portrait) {
+    [am-layout~="gutter"][am-gutter="margin"][am-gutter~="margin"] > section {
+        margin-left: 0;
+    }
+}
 [am-layout~="outline"][am-gutter~="padding"] p {
     background-color: rgba(93, 116, 137, 0.15);
     border: 1px solid rgba(93, 116, 137, 0.2);
@@ -1029,121 +953,6 @@ footer {
 [am-layout~="outline"] div {
     background-color: rgba(93, 116, 137, 0.15);
     border: 1px solid rgba(93, 116, 137, 0.2);
-}
-[am-layout][am-padding] {
-    padding-top: 1vw;
-    padding-right: 1vw;
-    padding-bottom: 1vw;
-    padding-left: 1vw;
-}
-[am-layout][am-padding="top"] {
-    padding-top: 1vw;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-}
-[am-layout][am-padding="right"] {
-    padding-right: 1vw;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-top: 0;
-}
-[am-layout][am-padding="bottom"] {
-    padding-bottom: 1vw;
-    padding-left: 0;
-    padding-top: 0;
-    padding-right: 0;
-}
-[am-layout][am-padding="left"] {
-    padding-left: 1vw;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-}
-[am-layout][am-padding="small"] {
-    padding-top: .5vw;
-    padding-right: .5vw;
-    padding-bottom: 5vw;
-    padding-left: .5vw;
-}
-[am-layout][am-padding="medium"] {
-    padding-top: 1.5vw;
-    padding-right: 1.5vw;
-    padding-bottom: 1.5vw;
-    padding-left: 1.5vw;
-}
-[am-layout][am-padding="large"] {
-    padding-top: 3vw;
-    padding-right: 3vw;
-    padding-bottom: 3vw;
-    padding-left: 3vw;
-}
-[am-layout][am-margin] {
-    margin-top: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 1vw;
-}
-[am-layout][am-margin="top"] {
-    margin-top: 1vw;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-}
-[am-layout][am-margin="right"] {
-    margin-right: 1vw;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-top: 0;
-}
-[am-layout][am-margin="bottom"] {
-    margin-bottom: 1vw;
-    margin-left: 0;
-    margin-top: 0;
-    margin-right: 0;
-}
-[am-layout][am-margin="left"] {
-    margin-left: 1vw;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-}
-[am-layout][am-margin="small"] {
-    margin-top: .5vw;
-    margin-right: .5vw;
-    margin-bottom: 5vw;
-    margin-left: .5vw;
-}
-[am-layout][am-margin="medium"] {
-    margin-top: 1.5vw;
-    margin-right: 1.5vw;
-    margin-bottom: 1.5vw;
-    margin-left: 1.5vw;
-}
-[am-layout][am-margin="large"] {
-    margin-top: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vw;
-    margin-left: 3vw;
-}
-[am-layout][am-layout~="vertical"] > section {
-    -webkit-flex-basis: auto;
-    -moz-flex-basis: auto;
-    -ms-flex-basis: auto;
-    flex-basis: auto;
-    width: 100%;
-    margin-left: 0;
-}
-@media (orientation: portrait) {
-    [am-layout~="gutter"][am-gutter~="padding"] > section {
-        padding-left: 0;
-    }
-    [am-layout~="gutter"][am-gutter~="padding"] > section:first-of-type {
-        margin-left: 0;
-    }
-    [am-layout~="gutter"][am-gutter~="margin"] > section {
-        margin-left: 0;
-    }
 }
 [am-nav] a {
     padding: 1em;
@@ -1323,6 +1132,104 @@ footer {
     right: .5em;
     top: 34px;
     content: attr(am-posticon);
+}
+[am-layout][am-padding],
+[am-component][am-padding] {
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+}
+[am-layout][am-padding="top"],
+[am-component][am-padding="top"] {
+    padding-top: 1vw;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+[am-layout][am-padding="right"],
+[am-component][am-padding="right"] {
+    padding-right: 1vw;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+[am-layout][am-padding="bottom"],
+[am-component][am-padding="bottom"] {
+    padding-bottom: 1vw;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+}
+[am-layout][am-padding="left"],
+[am-component][am-padding="left"] {
+    padding-left: 1vw;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+[am-layout][am-padding="small"],
+[am-component][am-padding="small"] {
+    padding-top: .5vw;
+    padding-right: .5vw;
+    padding-bottom: 5vw;
+    padding-left: .5vw;
+}
+[am-layout][am-padding="large"],
+[am-component][am-padding="large"] {
+    padding-top: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 3vw;
+}
+[am-layout][am-margin],
+[am-component][am-margin] {
+    margin-top: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+}
+[am-layout][am-margin="top"],
+[am-component][am-margin="top"] {
+    margin-top: 1vw;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+[am-layout][am-margin="right"],
+[am-component][am-margin="right"] {
+    margin-right: 1vw;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+[am-layout][am-margin="bottom"],
+[am-component][am-margin="bottom"] {
+    margin-bottom: 1vw;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+}
+[am-layout][am-margin="left"],
+[am-component][am-margin="left"] {
+    margin-left: 1vw;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+[am-layout][am-margin="small"],
+[am-component][am-margin="small"] {
+    margin-top: .5vw;
+    margin-right: .5vw;
+    margin-bottom: 5vw;
+    margin-left: .5vw;
+}
+[am-layout][am-margin="large"],
+[am-component][am-margin="large"] {
+    margin-top: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
 }
 .am-active {
     background-color: #cee1ef;
