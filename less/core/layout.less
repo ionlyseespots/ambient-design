@@ -58,7 +58,7 @@ section {
 aside {
   .flex(0 0 20%);
 }
-// row::sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
+// sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
 footer {
   .flex-display;
   .flex-flow(row wrap);
@@ -69,7 +69,6 @@ footer {
 @media (orientation:portrait){
   article {
     .flex-direction(column);
-
   }
   section, aside {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
