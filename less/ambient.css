@@ -535,6 +535,20 @@ body > footer {
   background-color: #333333;
   color: #cde1f1;
 }
+body > header h1,
+body > footer h1,
+body > header h2,
+body > footer h2,
+body > header h3,
+body > footer h3,
+body > header h4,
+body > footer h4,
+body > header h5,
+body > footer h5,
+body > header h6,
+body > footer h6 {
+  color: #cde1f1;
+}
 body > header a,
 body > footer a {
   color: #cde1f1;
