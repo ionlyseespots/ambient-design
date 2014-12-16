@@ -17,7 +17,7 @@
   -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   &:focus {
-    border-color: #66afe9;
+    border-color: @am-input-focus-border;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
     outline: 0 none;
   }
@@ -46,7 +46,8 @@
   .justify-content(justify);
   width: 100%;
   & label,  & input, & select, & textarea {
-    .flex(1 8.3333%); }
+    .flex(1 8.3333%);
+  }
 }
 
 // Multi-column
@@ -56,19 +57,23 @@
   & input, select, textarea, label {
     width: 100%; }
   & > div  {
-    .flex(1 8.3333%); }
+    .flex(1 8.3333%);
+  }
 }
 
 
 // Iconography
 [am-preicon], [am-posticon] {
-  position: relative; }
+  position: relative;
+}
 
 [am-preicon] + input {
-  padding-left: 2em; }
+  padding-left: 2em;
+}
 
 [am-posticon] + input {
-  padding-right: 2em; }
+  padding-right: 2em;
+}
 
 [am-preicon]:before {
   font-family: FontAwesome;

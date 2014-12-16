@@ -1,13 +1,13 @@
 // grids
 [am-component~="grid"] {
-  & div[am-grid="row"] {
+  & [am-grid="row"] {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     .flex-display;
     .flex-flow(row wrap);
     width: 100%;
-    & div[am-grid="block"] {
+    & [am-grid="block"] {
       .flex(1 8.3333%);
-      & div[am-block="fourth"] {
+      & [am-block="fourth"] {
         .flex-basis(auto);
         width: 25%;
       }
@@ -15,19 +15,19 @@
         .flex-basis(auto);
         width: 33.333%;
       }
-      & div[am-block="half"] {
+      & [am-block="half"] {
         .flex-basis(auto);
         width: 50%;
       }
-      & div[am-block="two-thirds"] {
+      & [am-block="two-thirds"] {
         .flex-basis(auto);
         width: 66.6667%;
       }
-      & div[am-block="three-fourths"] {
+      & [am-block="three-fourths"] {
         .flex-basis(auto);
         width: 75%;
       }
-      & div[am-block="full"] {
+      & [am-block="full"] {
         .flex-basis(auto);
         width: 100%;
       }
@@ -51,9 +51,9 @@
     column-count: auto;
     padding-left: .5em;
     padding-right: .5em;
-    & div[am-card="block"] {
+    & [am-card="block"] {
       box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
-      padding: 1vw;
+      padding: 1em;
       border-radius: 2px;
       margin: .5em 0;
       display: inline-block;
@@ -64,13 +64,13 @@
     -ms-column-count: 1;
     column-count: 1;
     padding: 0;
-    & div[am-card="row"] {
+    & [am-card="row"] {
       .flex-basis(auto);
       .flex-display;
       .flex-flow(row wrap);
       width: 100%;
       padding: 0 .5em;
-      & div[am-card="block"] {
+      & [am-card="block"] {
         .flex(1 auto);
         width: 8.3333%;
         margin-left: 1em;
@@ -86,9 +86,9 @@
     -ms-column-count: 1;
     column-count: 1;
     padding: 0;
-    & div[am-card="row"] {
+    & [am-card="row"] {
       padding: 0 .5em;
-      & div[am-card="block"] {
+      & [am-card="block"] {
         .flex(1 auto);
         width: 100%;
       }

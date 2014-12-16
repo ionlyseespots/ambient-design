@@ -3,22 +3,28 @@
 // --------------------------------------------------
 
 //== Colors
-// http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
+// nice hex-to-rgb converter:: http://hex.colorrrs.com/
 
 // Primary
-@am-primary: #428bca;
-@am-primary-bg: #CEE1EF;
+@am-primary:  rgb(66, 139, 202); // #CEE1EF
+@am-primary-bg: lighten(@am-primary, 35%);
 
 // Secondary
-@am-secondary-bg: #F7F7F7;
+@am-secondary: lighten(@am-primary, 20%);
+@am-secondary-bg: lighten(@am-primary-bg, 6.5%);
 
 // Gestalt Principles
-@am-closure: #333333;
+// http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
+@am-closure: rgb(51,51,51); // #333333
+
+
 
 //
 // Functional Variables
 // --------------------------------------------------
-
-
-//== Links
+@am-input-focus-border: rgb(102, 175, 233); // #66afe9
 @am-link-color: darken(@am-primary, 6.5%);
+
+// // viewport widths ensure vertical rhythm with white spacing and are only used on UI patterns for header, footer, nav, form, article & sections
+@am-padding: 1vw;
+@am-margin: 1vw;
