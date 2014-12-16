@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -32,7 +32,7 @@
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header class="am-bg-primary">
+    <header class="am-primary">
         <p>
             Overview<br />
             UI patterns | Initial patterns | Components | Layouts | Navs | Forms
@@ -42,7 +42,7 @@
         </h1>
     </header>
     <article>
-        <header am-layout am-padding="large" class="am-bg-default">
+        <header am-padding="large" class="am-secondary">
             <p>
                 Introduction
             </p>
@@ -153,7 +153,7 @@
         </section>
     </article>
     <article>
-        <header am-layout am-padding="large"  class="am-text-center am-bg-default">
+        <header am-padding="large"  class="am-text-center am-secondary">
             <h2>
                 Initial patterns
             </h2>
@@ -205,7 +205,7 @@
         </section>
     </article>
     <article id="ux-shells">
-        <header am-layout am-padding="large" class="am-bg-default am-text-center" >
+        <header am-padding="large" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
                 <i class="fa fa-cubes"></i> Layouts
             </h1>
@@ -213,53 +213,55 @@
                 A set of UI patterns for the layout of article, header or footer elements, attributes & values. The base UI pattern <code>am-layout</code> is for layouts and content sections.
             </p>
         </header>
-        <h2>
-            Outline the layout
-        </h2>
-        <p>
-            If needed, to outline your UI with the base layout UI pattern, add the attribute and value <code>am-layout="outline"</code> to any article, header or footer.
-        </p>
-        <section am-padding>
-            <h3>
-                Outline
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="outline"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Outline the layout
+                    </h2>
+                    <p>
+                        If needed, to outline your UI with the base layout UI pattern, add the attribute and value <code>am-layout="outline"</code> to any article, header or footer.
+                    </p>
+                    <h3>
+                        Outline
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="outline"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="outline">
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article am-layout="outline"&gt;
     &lt;section&gt;
         &lt;h1&gt;
@@ -286,40 +288,46 @@
         &lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
-                </pre>
+                        </pre>
+                    </div>
+                </div>
         </section>
-        <h2>
-            Alignment
-        </h2>
-        <p>
-            Initial alignment is horizontal
-        </p>
-        <section am-padding>
-            <h3>
-                Horizontal
-            </h3>
-            <blockquote>
-                <p>
-                    The base element groups content on one horizontal line. You're good to go.
-                </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Alignment
+                    </h2>
+                    <p>
+                        Initial alignment is horizontal
+                    </p>
+                    <h3>
+                        Horizontal
+                    </h3>
+                    <blockquote>
+                        <p>
+                            The base element groups content on one horizontal line. You're good to go.
+                        </p>
+                    </blockquote>
+                    <article am-layout="outline">
+                        <section>
+                            1
+                        </section>
+                        <section>
+                            2
+                        </section>
+                        <section>
+                            3
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article&gt;
     &lt;section&gt;
         1
@@ -331,40 +339,46 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Vertical alignment
-        </h2>
-        <p>
-            To create vertical alignment, add the attribute and value <code>am-layout="vertical"</code> to any article, header or footer.
-        </p>
-        <section am-padding>
-            <h3>
-                Vertical
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="vertical"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="outline vertical">
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Vertical alignment
+                    </h2>
+                    <p>
+                        To create vertical alignment, add the attribute and value <code>am-layout="vertical"</code> to any article, header or footer.
+                    </p>
+                    <h3>
+                        Vertical
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="vertical"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="outline vertical">
+                        <section>
+                            1
+                        </section>
+                        <section>
+                            2
+                        </section>
+                        <section>
+                            3
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article am-layout="vertical"&gt;
     &lt;section&gt;
         1
@@ -376,40 +390,46 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Gutters with margin
-        </h2>
-        <p>
-            To create gutter margin with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Margin
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="gutter outline" am-gutter="margin">
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Gutters with margin
+                    </h2>
+                    <p>
+                        To create gutter margin with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
+                    </p>
+                    <h3>
+                        Margin
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="gutter outline" am-gutter="margin">
+                        <section>
+                            1
+                        </section>
+                        <section>
+                            2
+                        </section>
+                        <section>
+                            3
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article am-layout="gutter" am-gutter="margin"&gt;
     &lt;section&gt;
         1
@@ -421,71 +441,29 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Gutters with padding
-        </h2>
-        <p>
-            To create gutter padding with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Padding
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="gutter outline" am-gutter="padding">
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
-&lt;article am-layout="gutter" am-gutter="padding"&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-            </pre>
-        </section>
-        <h2>
-            Complex nested gutters with margin and padding
-        </h2>
-        <p>
-            To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Margin + padding
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="gutter outline" am-gutter="margin">
-                <section>
-                        1
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Gutters with padding
+                    </h2>
+                    <p>
+                        To create gutter padding with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
+                    </p>
+                    <h3>
+                        Padding
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
+                        </p>
+                    </blockquote>
                     <article am-layout="gutter outline" am-gutter="padding">
                         <section>
                             1
@@ -497,20 +475,74 @@
                             3
                         </section>
                     </article>
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
+&lt;article am-layout="gutter" am-gutter="padding"&gt;
+    &lt;section&gt;
+        1
+    &lt;/section&gt;
+    &lt;section&gt;
+        2
+    &lt;/section&gt;
+    &lt;section&gt;
+        3
+    &lt;/section&gt;
+&lt;/article&gt;
+                    </pre>
+                </div>
+            </div>
         </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Complex nested gutters with margin and padding
+                    </h2>
+                    <p>
+                        To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
+                    </p>
+                    <h3>
+                        Margin + padding
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="gutter outline" am-gutter="margin">
+                        <section>
+                                1
+                            <article am-layout="gutter outline" am-gutter="padding">
+                                <section>
+                                    1
+                                </section>
+                                <section>
+                                    2
+                                </section>
+                                <section>
+                                    3
+                                </section>
+                            </article>
+                        </section>
+                        <section>
+                            2
+                        </section>
+                        <section>
+                            3
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article am-layout="gutter" am-gutter="margin"&gt;
     &lt;section&gt;
         1
@@ -533,29 +565,44 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Complex nested gutters with padding and margin
-        </h2>
-        <p>
-            To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Padding + margin
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="gutter outline" am-gutter="padding">
-                <section>
-                    1
-                    <article am-layout="gutter outline" am-gutter="margin">
+        <hr />
+
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Complex nested gutters with padding and margin
+                    </h2>
+                    <p>
+                        To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
+                    </p>
+                    <h3>
+                        Padding + margin
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="gutter outline" am-gutter="padding">
                         <section>
                             1
+                            <article am-layout="gutter outline" am-gutter="margin">
+                                <section>
+                                    1
+                                </section>
+                                <section>
+                                    2
+                                </section>
+                                <section>
+                                    3
+                                </section>
+                            </article>
                         </section>
                         <section>
                             2
@@ -564,20 +611,12 @@
                             3
                         </section>
                     </article>
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article am-layout="gutter" am-gutter="padding"&gt;
     &lt;section&gt;
         1
@@ -600,11 +639,13 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;
-                </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
     </article>
     <article id="ui-elements">
-        <header am-padding="large" class="am-bg-default am-text-center">
+        <header am-padding="large" class="am-secondary am-text-center">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-cube"></i> Components
             </h1>
@@ -612,114 +653,116 @@
                 A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.
             </p>
         </header>
-        <h2>
-            Basic grid
-        </h2>
-        <p>
-            To create a basic grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
-            Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
-        </p>
-        <section am-padding>
-            <h3>
-                Basic
-            </h3>
-            <blockquote>
-                <p>
-                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.<br />
-                    To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
-                </p>
-                <p>
-                    <code>&lt;section am-component="grid"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section am-component="grid">
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                        <div am-grid="block">
-                            2
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                        <div am-grid="block">
-                            2
-                        </div>
-                        <div am-grid="block">
-                            3
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                        <div am-grid="block">
-                            2
-                        </div>
-                        <div am-grid="block">
-                            3
-                        </div>
-                        <div am-grid="block">
-                            4
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                        <div am-grid="block">
-                            2
-                        </div>
-                        <div am-grid="block">
-                            3
-                        </div>
-                        <div am-grid="block">
-                            4
-                        </div>
-                        <div am-grid="block">
-                            5
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block">
-                            1
-                        </div>
-                        <div am-grid="block">
-                            2
-                        </div>
-                        <div am-grid="block">
-                            3
-                        </div>
-                        <div am-grid="block">
-                            4
-                        </div>
-                        <div am-grid="block">
-                            5
-                        </div>
-                        <div am-grid="block">
-                            6
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <p>
-                ...scales up to 12 equal blocks per row
-            </p>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Basic grid
+                    </h2>
+                    <p>
+                        To create a basic grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
+                        Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
+                    </p>
+                    <h3>
+                        Basic
+                    </h3>
+                    <blockquote>
+                        <p>
+                            To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.<br />
+                            To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
+                        </p>
+                        <p>
+                            <code>&lt;section am-component="grid"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="outline">
+                        <section am-component="grid">
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                                <div am-grid="block">
+                                    2
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                                <div am-grid="block">
+                                    2
+                                </div>
+                                <div am-grid="block">
+                                    3
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                                <div am-grid="block">
+                                    2
+                                </div>
+                                <div am-grid="block">
+                                    3
+                                </div>
+                                <div am-grid="block">
+                                    4
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                                <div am-grid="block">
+                                    2
+                                </div>
+                                <div am-grid="block">
+                                    3
+                                </div>
+                                <div am-grid="block">
+                                    4
+                                </div>
+                                <div am-grid="block">
+                                    5
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block">
+                                    1
+                                </div>
+                                <div am-grid="block">
+                                    2
+                                </div>
+                                <div am-grid="block">
+                                    3
+                                </div>
+                                <div am-grid="block">
+                                    4
+                                </div>
+                                <div am-grid="block">
+                                    5
+                                </div>
+                                <div am-grid="block">
+                                    6
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                    <p>
+                        ...scales up to 12 equal blocks per row
+                    </p>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;section am-component="grid"&gt;
     &lt;div am-grid="row"&gt;
         &lt;div am-grid="block"&gt;
@@ -794,88 +837,64 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Complex grid with specified block widths & nested blocks
-        </h2>
-        <p>
-            To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
-            Block width values are <code>fourth</code>, <code>third</code>, <code>half</code>, <code>two-thirds</code>, <code>three-fourths</code> and <code>full</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Complex
-            </h3>
-            <blockquote>
-                <p>
-                    To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.
-                </p>
-                <p>
-                    To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
-                </p>
-                <p>
-                    To create a block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>
-                </p>
-                <p>
-                    <code>&lt;section am-component="grid"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section am-component="grid">
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="full">
-                            1
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="half">
-                            1
-                        </div>
-                        <div am-grid="block" am-block="half">
-                            2
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="third">
-                            1
-                        </div>
-                        <div am-grid="block" am-block="third">
-                            2
-                        </div>
-                        <div am-grid="block" am-block="third">
-                            3
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="two-thirds">
-                            1
-                        </div>
-                        <div am-grid="block" am-block="third">
-                            2
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="fourth">
-                            1
-                        </div>
-                        <div am-grid="block" am-block="half">
-                            2
-                        </div>
-                        <div am-grid="block" am-block="fourth">
-                            3
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="three-fourths">
-                            1
-                        </div>
-                        <div am-grid="block" am-block="fourth">
-                            2
-                        </div>
-                    </div>
-                    <div am-grid="row">
-                        <div am-grid="block" am-block="three-fourths">
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Complex grid with offset widths
+                    </h2>
+                    <p>
+                        To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, grid content does <strong>NOT</strong> automatically stack.
+                    </p>
+                    <h3>
+                        Complex
+                    </h3>
+                    <blockquote>
+                        <p>
+                            To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div. <br />
+                            To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div. <br />
+                            To create a block width, chain the value <code>block</code> as the attribute and value <code>am-block="WIDTH"</code>
+                        </p>
+                        <p>
+                            <code>&lt;section am-component="grid"&gt;</code>
+                        </p>
+                        <p>
+                            Block width values are available as
+                        </p>
+                        <ul>
+                            <li>
+                                <code>fourth</code>
+                            </li>
+                            <li>
+                                <code>third</code>
+                            </li>
+                            <li>
+                                <code>half</code>
+                            </li>
+                            <li>
+                                <code>two-thirds</code>
+                            </li>
+                            <li>
+                                <code>three-fourths</code>
+                            </li>
+                            <li>
+                                <code>full</code>
+                            </li>
+                        </ul>
+                    </blockquote>
+                    <article am-layout="outline">
+                        <section am-component="grid">
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="full">
+                                    1
+                                </div>
+                            </div>
                             <div am-grid="row">
                                 <div am-grid="block" am-block="half">
                                     1
@@ -884,19 +903,67 @@
                                     2
                                 </div>
                             </div>
-                        </div>
-                        <div am-grid="block" am-block="fourth">
-                            2
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="third">
+                                    1
+                                </div>
+                                <div am-grid="block" am-block="third">
+                                    2
+                                </div>
+                                <div am-grid="block" am-block="third">
+                                    3
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="two-thirds">
+                                    1
+                                </div>
+                                <div am-grid="block" am-block="third">
+                                    2
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="fourth">
+                                    1
+                                </div>
+                                <div am-grid="block" am-block="half">
+                                    2
+                                </div>
+                                <div am-grid="block" am-block="fourth">
+                                    3
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="three-fourths">
+                                    1
+                                </div>
+                                <div am-grid="block" am-block="fourth">
+                                    2
+                                </div>
+                            </div>
+                            <div am-grid="row">
+                                <div am-grid="block" am-block="three-fourths">
+                                    <div am-grid="row">
+                                        <div am-grid="block" am-block="half">
+                                            1
+                                        </div>
+                                        <div am-grid="block" am-block="half">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div am-grid="block" am-block="fourth">
+                                    2
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;section am-component="grid"&gt;
     &lt;div am-grid="row"&gt;
         &lt;div am-grid="block" am-block="full"&gt;
@@ -965,97 +1032,103 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Multiple cards
-        </h2>
-        <p>
-            To create multiple cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
-        </p>
-        <section am-padding>
-            <h3>
-                Multiple
-            </h3>
-            <blockquote>
-                <p>
-                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
-                </p>
-                <p>
-                    <code>&lt;section am-component="card"&gt;</code>
-                </p>
-            </blockquote>
-            <article>
-                <section am-component="card">
-                    <div am-card="block">
-                        <h1>
-                            Multiple card
-                        </h1>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                    </div>
-                    <div am-card="block">
-                        <h2>
-                            Multiple  card
-                        </h2>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                    </div>
-                    <div am-card="block">
-                        <h3>
-                            Multiple card
-                        </h3>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                    </div>
-                    <div am-card="block">
-                        <h4>
-                            Multiple card
-                        </h4>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                    </div>
-                    <div am-card="block">
-                        <h5>
-                            Multiple card
-                        </h5>
-                        <P>
-                            Multiple cards have a consistent, flexible width and variable height.
-                        </P>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Multiple cards
+                    </h2>
+                    <p>
+                        To create multiple cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+                    </p>
+                    <h3>
+                        Multiple
+                    </h3>
+                    <blockquote>
+                        <p>
+                            To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                        </p>
+                        <p>
+                            <code>&lt;section am-component="card"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article>
+                        <section am-component="card">
+                            <div am-card="block">
+                                <h1>
+                                    Multiple card
+                                </h1>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                            </div>
+                            <div am-card="block">
+                                <h2>
+                                    Multiple  card
+                                </h2>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                            </div>
+                            <div am-card="block">
+                                <h3>
+                                    Multiple card
+                                </h3>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                            </div>
+                            <div am-card="block">
+                                <h4>
+                                    Multiple card
+                                </h4>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                            </div>
+                            <div am-card="block">
+                                <h5>
+                                    Multiple card
+                                </h5>
+                                <P>
+                                    Multiple cards have a consistent, flexible width and variable height.
+                                </P>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article&gt;
     &lt;section am-component="card"&gt;
         &lt;div am-card="block"&gt;
@@ -1121,71 +1194,77 @@
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Horizontal cards
-        </h2>
-        <p>
-            To create horizontal cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="horizontal"</code>. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
-        </p>
-        <section am-padding>
-            <h3>
-                Horizontal
-            </h3>
-            <blockquote>
-                <p>
-                    To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
-                </p>
-                <p>
-                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
-                </p>
-                <p>
-                    <code>&lt;section am-component="card" am-card="horizontal"&gt;</code>
-                </p>
-            </blockquote>
-            <article>
-                <section am-component="card" am-card="horizontal">
-                    <div am-card="row">
-                        <div am-card="block">
-                            <h1>
-                                Horizontal card
-                            </h1>
-                            <P>
-                                Horizontal cards have a consistent, flexible width and equal height.
-                            </P>
-                            <P>
-                                Horizontal cards have a consistent, flexible width and equal height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h2>
-                                Horizontal card
-                            </h2>
-                            <P>
-                                Horizontal cards have a consistent, flexible width and equal height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h3>
-                                Horizontal card
-                            </h3>
-                            <P>
-                                Horizontal cards have a consistent, flexible width and equal height.
-                            </P>
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <p>
-                ...scales up to 12 equal blocks per row
-            </p>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Horizontal cards
+                    </h2>
+                    <p>
+                        To create horizontal cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="horizontal"</code>. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+                    </p>
+                    <h3>
+                        Horizontal
+                    </h3>
+                    <blockquote>
+                        <p>
+                            To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
+                        </p>
+                        <p>
+                            To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                        </p>
+                        <p>
+                            <code>&lt;section am-component="card" am-card="horizontal"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article>
+                        <section am-component="card" am-card="horizontal">
+                            <div am-card="row">
+                                <div am-card="block">
+                                    <h1>
+                                        Horizontal card
+                                    </h1>
+                                    <P>
+                                        Horizontal cards have a consistent, flexible width and equal height.
+                                    </P>
+                                    <P>
+                                        Horizontal cards have a consistent, flexible width and equal height.
+                                    </P>
+                                </div>
+                                <div am-card="block">
+                                    <h2>
+                                        Horizontal card
+                                    </h2>
+                                    <P>
+                                        Horizontal cards have a consistent, flexible width and equal height.
+                                    </P>
+                                </div>
+                                <div am-card="block">
+                                    <h3>
+                                        Horizontal card
+                                    </h3>
+                                    <P>
+                                        Horizontal cards have a consistent, flexible width and equal height.
+                                    </P>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                    <p>
+                        ...scales up to 12 equal blocks per row
+                    </p>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article&gt;
     &lt;section am-component="card" am-card="horizontal"&gt;
         &lt;div am-card="row"&gt;
@@ -1219,68 +1298,74 @@
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
-        <h2>
-            Vertical cards
-        </h2>
-        <p>
-            To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="vertical"</code>.
-        </p>
-        <section am-padding>
-            <h3>
-                Vertical
-            </h3>
-            <blockquote>
-                <p>
-                    To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
-                </p>
-                <p>
-                    To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
-                </p>
-                <p>
-                    <code>&lt;section am-component="card" am-card="vertical"&gt;</code>
-                </p>
-            </blockquote>
-            <article>
-                <section am-component="card" am-card="vertical">
-                    <div am-card="row">
-                        <div am-card="block">
-                            <h1>
-                                Vertical card
-                            </h1>
-                            <P>
-                                Vertical cards have a constant width and variable height.
-                            </P>
-                            <P>
-                                Vertical cards have a constant width and variable height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h2>
-                                Vertical card
-                            </h2>
-                            <P>
-                                Vertical cards have a constant width and variable height.
-                            </P>
-                        </div>
-                        <div am-card="block">
-                            <h3>
-                                Vertical card
-                            </h3>
-                            <P>
-                                Vertical cards have a constant width and variable height.
-                            </P>
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section am-padding>
-            <h3>
-                Code
-            </h3>
-            <pre>
+        <hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block" am-padding>
+                    <h2>
+                        Vertical cards
+                    </h2>
+                    <p>
+                        To create vertical cards with the base layout UI pattern, add the attribute and value <code>am-component="card"</code> to any section and chain the value <code>card</code> as <code>am-card="vertical"</code>.
+                    </p>
+                    <h3>
+                        Vertical
+                    </h3>
+                    <blockquote>
+                        <p>
+                            To add a row, chain the value <code>card</code> as the attribute and value <code>am-card="row"</code> to any div.
+                        </p>
+                        <p>
+                            To add a card, chain the value <code>card</code> as the attribute and value <code>am-card="block"</code> to any div.
+                        </p>
+                        <p>
+                            <code>&lt;section am-component="card" am-card="vertical"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article>
+                        <section am-component="card" am-card="vertical">
+                            <div am-card="row">
+                                <div am-card="block">
+                                    <h1>
+                                        Vertical card
+                                    </h1>
+                                    <P>
+                                        Vertical cards have a constant width and variable height.
+                                    </P>
+                                    <P>
+                                        Vertical cards have a constant width and variable height.
+                                    </P>
+                                </div>
+                                <div am-card="block">
+                                    <h2>
+                                        Vertical card
+                                    </h2>
+                                    <P>
+                                        Vertical cards have a constant width and variable height.
+                                    </P>
+                                </div>
+                                <div am-card="block">
+                                    <h3>
+                                        Vertical card
+                                    </h3>
+                                    <P>
+                                        Vertical cards have a constant width and variable height.
+                                    </P>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h4>
+                        Code
+                    </h4>
+                    <pre>
 &lt;article&gt;
     &lt;section am-component="card" am-card="vertical"&gt;
         &lt;div am-card="row"&gt;
@@ -1314,11 +1399,13 @@
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/article&gt;
-            </pre>
+                    </pre>
+                </div>
+            </div>
         </section>
     </article>
     <article id="navs">
-        <header am-layout am-padding="large" class="am-bg-default am-text-center">
+        <header am-padding="large" class="am-secondary am-text-center">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-compass"></i> Navs
             </h1>
@@ -1604,7 +1691,7 @@
         </section>
     </article>
     <article id="form-states">
-        <header am-layout am-padding="large" class="am-text-center am-bg-default">
+        <header am-padding="large" class="am-text-center am-secondary">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-tasks"></i> Forms
             </h1>
@@ -2198,7 +2285,7 @@
             </div>
         </section>
     </article>
-    <article class="am-bg-default">
+    <article class="am-secondary">
         <h1>
             Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
@@ -2207,7 +2294,7 @@
         </p>
     </article>
 </main>
-<footer am-layout am-padding="large" class="am-text-center">
+<footer am-padding="large" class="am-text-center">
     <p>
         Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
         Ambient UI patterns are layout-related attributes for content.<br />

@@ -1,11 +1,11 @@
 // grids
 [am-component~="grid"] {
-  & div[am-grid="row"] {
+  & [am-grid="row"] {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     .flex-display;
     .flex-flow(row wrap);
     width: 100%;
-    & div[am-grid="block"] {
+    & [am-grid="block"] {
       .flex(1 8.3333%);
       &[am-block="fourth"] {
         .flex-basis(auto);
