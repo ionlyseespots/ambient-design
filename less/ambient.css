@@ -630,7 +630,6 @@ a:hover,
 a:focus,
 a:active {
   color: #000000;
-  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
