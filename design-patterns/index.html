@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -32,7 +32,7 @@
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header class="am-primary">
+    <header am-padding class="am-primary">
         <p>
             Overview<br />
             UI patterns | Initial patterns | Components | Layouts | Navs | Forms
@@ -42,7 +42,7 @@
         </h1>
     </header>
     <article>
-        <header am-padding="large" class="am-secondary">
+        <header am-padding="large" am-layer="z-1" class="am-secondary">
             <p>
                 Introduction
             </p>
@@ -153,12 +153,12 @@
         </section>
     </article>
     <article>
-        <header am-padding="large"  class="am-text-center am-secondary">
+        <header am-padding="large" am-layer="z-1" class="am-text-center am-secondary">
             <h2>
                 Initial patterns
             </h2>
             <p>
-                Initial patterns are <em>margin</em> & <em>padding</em> and can be added to any element.
+                Initial patterns are <em>margin</em>, <em>padding</em> & <em>layers</em> and can be added to any element.
             </p>
         </header>
         <section am-padding>
@@ -167,45 +167,115 @@
             </h3>
             <p>
                 Default layout margin is 0<br />
-                To add space outside, add the attribute <code>am-margin</code> to any base UI pattern.
+                To add space outside, add the attribute <code>am-margin</code> to any element.
             </p>
             <blockquote>
                 <p>
-                    If needed, set a specific direction or size with the attribute and value as:<br />
-                    <code>am-margin</code><br />
-                    <code>am-margin="top"</code><br />
-                    <code>am-margin="right"</code><br />
-                    <code>am-margin="bottom"</code><br />
-                    <code>am-margin="left"</code><br />
-                    <code>am-margin="small"</code><br />
-                    <code>am-margin="large"</code>
-                </p>
+                    If needed, specific direction or size is available as:
+                <p>
+                <ul>
+                    <li>
+                        <code>am-margin="top"</code>
+                    </li>
+                    <li>
+                        <code>am-margin="right"</code>
+                    </li>
+                    <li>
+                        <code>am-margin="bottom"</code>
+                    </li>
+                    <li>
+                        <code>am-margin="left"</code>
+                    </li>
+                    <li>
+                        <code>am-margin="small"</code>
+                    </li>
+                    <li>
+                        <code>am-margin="large"</code>
+                    </li>
+                </ul>
             </blockquote>
-        </section>
-        <section am-padding>
             <h3>
                 Padding
             </h3>
             <p>
                 Default layout padding is 0<br />
-                To add space inside, add the attribute <code>am-padding</code> to any base UI pattern.
+                To add space inside, add the attribute <code>am-padding</code> to any element.
             </p>
             <blockquote>
                 <p>
-                    If needed, set a specific direction or size with the attribute and value as:<br />
-                    <code>am-padding</code><br />
-                    <code>am-padding="top"</code><br />
-                    <code>am-padding="right"</code><br />
-                    <code>am-padding="bottom"</code><br />
-                    <code>am-padding="left"</code><br />
-                    <code>am-padding="small"</code><br />
-                    <code>am-padding="large"</code>
-                </p>
+                    If needed, specific direction or size is available as:
+                <p>
+                <ul>
+                    <li>
+                        <code>am-padding="top"</code>
+                    </li>
+                    <li>
+                        <code>am-padding="right"</code>
+                    </li>
+                    <li>
+                        <code>am-padding="bottom"</code>
+                    </li>
+                    <li>
+                        <code>am-padding="left"</code>
+                    </li>
+                    <li>
+                        <code>am-padding="small"</code>
+                    </li>
+                    <li>
+                        <code>am-padding="large"</code>
+                    </li>
+                </ul>
             </blockquote>
+        </section>
+        <section am-padding>
+
+            <h3>
+                Layers
+            </h3>
+            <p>
+                Default layer is 0<br />
+                To add a z-axis, add the attribute <code>am-layer="AXIS"</code> to any element.
+            </p>
+            <blockquote>
+                <p> Axis layers are available as
+                </p>
+                <ul>
+                    <li>
+                        <code>am-layer="z-1"</code>
+                    </li>
+                    <li>
+                        <code>am-layer="z-2"</code>
+                    </li>
+                    <li>
+                        <code>am-layer="z-3"</code>
+                    </li>
+                    <li>
+                        <code>am-layer="z-4"</code>
+                    </li>
+                    <li>
+                        <code>am-layer="z-5"</code>
+                    </li>
+                </ul>
+            </blockquote>
+            <div am-layer="z-1" am-padding am-margin="bottom">
+                Z-1
+            </div>
+            <div am-layer="z-2" am-padding am-margin="bottom">
+                Z-2
+            </div>
+            <div am-layer="z-3" am-padding am-margin="bottom">
+                Z-3
+            </div>
+            <div am-layer="z-4" am-padding am-margin="bottom">
+                Z-4
+            </div>
+            <div am-layer="z-5" am-padding am-margin="bottom">
+                Z-5
+            </div>
         </section>
     </article>
     <article id="ux-shells">
-        <header am-padding="large" class="am-secondary am-text-center" >
+        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
                 <i class="fa fa-cubes"></i> Layouts
             </h1>
@@ -645,7 +715,7 @@
         </section>
     </article>
     <article id="ui-elements">
-        <header am-padding="large" class="am-secondary am-text-center">
+        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-cube"></i> Components
             </h1>
@@ -1399,7 +1469,7 @@
         </section>
     </article>
     <article id="navs">
-        <header am-padding="large" class="am-secondary am-text-center">
+        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-compass"></i> Navs
             </h1>
@@ -1691,7 +1761,7 @@
         </section>
     </article>
     <article id="form-states">
-        <header am-padding="large" class="am-text-center am-secondary">
+        <header am-padding="large" am-layer="z-1" class="am-text-center am-secondary">
             <h1 class="am-text-uppercase">
                 <i class="fa fa-tasks"></i> Forms
             </h1>
@@ -2276,7 +2346,7 @@
             </div>
         </section>
     </article>
-    <article class="am-secondary">
+    <article class="am-secondary" am-padding>
         <h1>
             Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
