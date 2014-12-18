@@ -356,29 +356,6 @@ td,
 th {
   padding: 0;
 }
-html,
-body {
-  cursor: default;
-}
-code {
-  cursor: text;
-}
-/*
-textarea and input[type="text"] already receive
-"cursor: text" via browsers' base stylesheets
-*/
-a,
-label,
-button,
-input[type="radio"],
-input[type="submit"],
-input[type="checkbox"] {
-  cursor: pointer;
-}
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
 *,
 *:before,
 *:after {
@@ -841,6 +818,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-1"]:before {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
@@ -850,6 +828,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-2"]:after {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
@@ -859,6 +838,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-2"]:before {
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -868,6 +848,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-3"]:after {
   box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -877,6 +858,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-3"]:before {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
@@ -886,6 +868,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-4"]:after {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
@@ -895,6 +878,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-4"]:before {
   box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -904,6 +888,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-5"]:after {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
@@ -913,6 +898,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layer][am-layer~="z-5"]:before {
   box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -922,6 +908,7 @@ var {
   left: 0;
   position: absolute;
   right: 0;
+  pointer-events: none;
 }
 [am-layout~="vertical"] > section {
   -webkit-flex-basis: auto;
