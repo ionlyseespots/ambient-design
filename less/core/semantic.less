@@ -81,3 +81,277 @@ footer {
     position: static;
   }
 }
+
+// Theme
+// Ambient base styles
+// Let's keep a Vertical Rhythm
+
+// viewport sizing on type is impacted by virtual keyboard and debugger opening making it too experimental
+
+// Typography via Typeplate
+// Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
+// https://github.com/typeplate/typeplate.github.io
+// TODO bring in typeplate as less
+
+html {
+  font-size: 112.5%; //* base font size 18px with 1.65 line-height */
+  // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  line-height: 1.65;
+}
+
+// % root font size + rem element font sizes + em for margins + padding
+body {
+  background-color: #fff;
+  color: #444;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
+  & > header,
+  & > footer {
+    background-color: @am-closure;
+    color: @am-primary-bg;
+    & h1, h2, h3, h4, h5, h6 {
+      color: @am-primary-bg;
+    }
+    & a {
+      color: @am-primary-bg;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+}
+
+
+
+// Agree::: Do NOT use heading as sub titles
+// http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
+// http://stackoverflow.com/questions/22444118/correct-markup-for-headers/22451639#22451639
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  margin-top: 0;
+  color: #222;
+  font-weight: 300;
+}
+
+/*  base font-size * base line-height = current font-size */
+h1 {
+
+  font-size: 60px;
+  font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+}
+h2 {
+  font-size: 48px;
+  font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+}
+h3 {
+  font-size: 36px;
+  font-size: 2rem; /* 36 / 18 = 2 */
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+}
+h5 {
+  font-size: 21px;
+  font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+}
+h6 {
+  font-size: 18px;
+  font-size: 1rem; /* 18 = 18 × 1 */
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+small {
+  font-size: 65%;
+}
+img {
+  max-width: 100%;
+  height: auto; }
+a {
+  color: @am-link-color;
+  &:hover,
+  &:focus,
+  &:active,  {
+    color:darken(@am-link-color, 50%);
+  }
+}
+code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #c7254e;
+  font-weight: normal;
+  font-size: 90%;
+  padding: 2px 4px; }
+kbd, pre, samp {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+blockquote {
+  border-left: 5px solid #e9e9e9;
+  background-color: #fafafa;
+  margin: 1em 0;
+  padding: .5em 1em;
+  font-size: small;
+  &:before,
+  &:after {
+    content: "";
+  }
+}
+pre {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #333;
+  display: block;
+  font-size: 13px;
+  line-height: 1.42857;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  tab-size: 4;
+  margin: 1em 0 0 0;
+  padding: 1em 1em 1em 1em;
+}
+label {
+  font-size: 80%;
+  font-weight: 700;
+  margin-bottom: 5px; }
+input, select, textarea {
+  font-size: inherit;
+  line-height: inherit; }
+
+// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_%3Cbutton%3E_to_finish
+button {
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+
+hr {
+  border-color: rgba(0, 0, 0, 0.12);
+  border-width: 1px 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 1em;
+  word-break: keep-all;
+  border-collapse: collapse;
+  border-spacing: 0;
+  // default bootstrap table-responsive
+  @media screen and (max-width: 30em) {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 1em;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ccc;
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+
+}
+table th {
+  font-weight: bold;
+}
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  // Accepted values: [ none | manual | auto ] */ /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+// Vertical rule
+[am-verticalrule] {
+  width: 1px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  height: 99.9%;
+  position: absolute;
+}
+
+@media (orientation:portrait){
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 30em){
+  html {
+    font-size: 80%;
+  }
+}

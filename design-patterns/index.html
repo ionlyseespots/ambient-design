@@ -35,7 +35,7 @@
     <header am-padding class="am-primary">
         <p>
             Overview<br />
-            Introduction | Page layout examples and CSS3 definitions
+            Introduction | Page layout examples for elements
         </p>
         <h1>
             Layout
@@ -50,7 +50,7 @@
                 <i class="fa fa-css3"></i> Ambient is page layout
             </h2>
             <p>
-                Ambient creates page layout for content defined in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
+                Ambient displays page layout for defined content.
             </p>
         </header>
         <section am-padding>
@@ -60,104 +60,24 @@
             <blockquote>
                 <p>
                     <code>am-layout</code><br />
-                    <!--<code>am-component</code><br />-->
-                    <!--<code>am-nav</code><br />-->
-                    <!--<code>am-form</code>-->
                 </p>
             </blockquote>
             <p>
-                Because we define our own custom attribute, we can prescribe extendable layout patterns.
+                Because we define our own custom attribute <code>am-layout</code>, we can define extendable layout properties to semantic markup.
             </p>
             <blockquote>
                 <p>
-                    <!--<strong>DO</strong> use UI patterns to layout content.<br />-->
                     Do use CSS3 attributes to layout content in the document outline.<br />
                     Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
                 </p>
             </blockquote>
-            <!--<hr />-->
-
-            <!--<p>-->
-                <!--<em>Matching UI patterns</em> is something I am working on.-->
-                <!--This is when a base UI pattern makes use of the same attribute and value as an initial pattern.-->
-            <!--</p>-->
-            <!--<hr />-->
-
-            <!--<p>-->
-                <!--<em>Chaining UI patterns</em> is in the beginning stages.  This is when a base UI pattern value assigns its value as an attribute for the next value.-->
-                <!--All you need to do is make sure that your attributes return to a value (up to a base UI pattern value).-->
-            <!--</p>-->
-            <!--<blockquote>-->
-                <!--<p>-->
-                    <!--<strong>DO</strong> chain down a base UI pattern value.<br />-->
-                    <!--Do <strong>NOT</strong> chain more than 3 levels deep.-->
-                <!--</p>-->
-            <!--</blockquote>-->
-            <!--<ul>-->
-                <!--<li> <code>am-component="grid"</code>-->
-                    <!--<ul>-->
-                        <!--<li>-->
-                            <!--<code>am-grid="block"</code>-->
-                            <!--<ul>-->
-                                <!--<li>-->
-                                    <!--<code>am-block="three-fourths"</code>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-            <!--</ul>-->
         </section>
-        <section am-padding>
-            <h3>
-                Attribute selectors
-            </h3>
-            <p>
-                It is possible to style HTML elements that have specific attributes and values, not just class and id.
-            </p>
-            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">
-                <h1>Summary</h1>
-                <p>Attribute selectors select an element using the presence of a given attribute or attribute value.</p>
-                <dl>
-                    <dt>
-                        <code>[<em>attr</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr.</dd>
-                    <dt>
-                        <code>[<em>attr</em>=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is exactly "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>~=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>|=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-” (U+002D). It can be used for language subcode matches.</dd>
-                    <dt>
-                        <code>[<em>attr</em>^=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is prefixed by "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>$=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value is suffixed by "value".</dd>
-                    <dt>
-                        <code>[<em>attr</em>*=<em>value</em>]</code></dt>
-                    <dd>
-                        Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</dd>
-                </dl>
-            </blockquote>
-        </section>
-    </article>
-    <article>
         <header am-padding="large" am-layer="z-1" class="am-text-center am-secondary">
             <h2>
-                Initial patterns
+                Initial properties
             </h2>
             <p>
-                Initial patterns are <em>margin</em>, <em>padding</em> & <em>layers</em> and can be added to any element.
+                Initial properties are <em>margin</em>, <em>padding</em> & <em>layers</em> and can be added to any element.
             </p>
         </header>
         <section am-padding>
@@ -275,10 +195,10 @@
     <article id="ux-shells">
         <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
-                <i class="fa fa-cubes"></i> Layouts
+                Layout properties
             </h1>
             <p>
-                A set of UI patterns for the layout of article, header or footer elements, attributes & values. The base UI pattern <code>am-layout</code> is for layouts and content sections.
+                Layout properties are defined by adding <code>am-layout</code> to semantic markup.
             </p>
         </header>
         <section am-component="grid" am-padding>

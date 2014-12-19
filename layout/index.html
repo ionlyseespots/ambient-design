@@ -50,7 +50,7 @@
                 <i class="fa fa-html5"></i> Ambient is semantic markup
             </h2>
             <p>
-                Ambient creates semantic (visual) scaffolding for content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
+                Ambient displays semantic scaffolding for defined content sections & outlines.
             </p>
         </header>
         <section am-padding>
@@ -90,11 +90,6 @@
                             <p>
                                 Paragraph
                             </p>
-                            <footer>
-                                <p>
-                                    Paragraph
-                                </p>
-                            </footer>
                         </section>
                         <aside>
                             <p>
@@ -149,9 +144,9 @@
                         <p>
                             Example complex outline.
                         </p>
-                        <h4>
+                        <h1>
                             Complex outline
-                        </h4>
+                        </h1>
                     </header>
                     <hr />
 
@@ -163,94 +158,23 @@
                     <hr />
 
                     <article>
-                        <aside>
-                            <nav am-nav="vertical">
-                                <a href="#">Nav</a>
-                                <a href="#">Nav</a>
-                                <a href="#">Nav</a>
-                            </nav>
-                        </aside>
-                        <section am-component="grid">
-                            <header>
-                                <p>
-                                    Subtitle
-                                </p>
-                                <h1>
-                                    Heading 1
-                                </h1>
-                            </header>
-                            <p>
-                                Paragraph
-                            </p>
+                        <h1>
+                            Heading 1
+                        </h1>
+                        <section>
+                            <h1>
+                                Heading 1
+                            </h1>
                             <h2>
                                 Heading 2
                             </h2>
-                            <p>
-                                Paragraph
-                            </p>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
                             <article>
-                                <h1>
-                                    Heading 1
-                                </h1>
                                 <section>
-                                    <h1>
-                                        Grid
-                                    </h1>
-                                    <div am-grid="row">
-                                        <div am-grid="block" am-block="half">
-                                            1
-                                        </div>
-                                        <div am-grid="block" am-block="fourth">
-                                            2
-                                        </div>
-                                        <div am-grid="block" am-block="fourth">
-                                            3
-                                        </div>
-                                    </div>
-                                    <div am-grid="row">
-                                        <div am-grid="block">
-                                            1
-                                        </div>
-                                        <div am-grid="block">
-                                            2
-                                        </div>
-                                        <div am-grid="block">
-                                            3
-                                        </div>
-                                    </div>
-                                    <div am-grid="row">
-                                        <div am-grid="block">
-                                            1
-                                        </div>
-                                        <div am-grid="block">
-                                            2
-                                        </div>
-                                        <div am-grid="block">
-                                            3
-                                        </div>
-                                        <div am-grid="block">
-                                            4
-                                        </div>
-                                    </div>
-                                    <div am-grid="row">
-                                        <div am-grid="block" am-block="three-fourths">
-                                            1
-                                        </div>
-                                        <div am-grid="block" am-block="fourth">
-                                            2
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
+                                    <nav>
+                                        <a href="#">Nav</a>
+                                        <a href="#">Nav</a>
+                                        <a href="#">Nav</a>
+                                    </nav>
                                     <h1>
                                         Heading 1
                                     </h1>
@@ -263,16 +187,40 @@
                                     <div>
                                         div
                                     </div>
-                                    <p>
-                                        Paragraph
-                                    </p>
-                                    <footer>
-                                        <p>
-                                            Paragraph
-                                        </p>
-                                    </footer>
                                 </section>
+
                             </article>
+                            <footer>
+                                <p>
+                                    Paragraph
+                                </p>
+                            </footer>
+                        </section>
+                        <section>
+                            <h3>
+                                Heading 3
+                            </h3>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                        </section>
+                        <section>
+                            <h2>
+                                Heading 2
+                            </h2>
+
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
+                            <div>
+                                div
+                            </div>
                             <footer>
                                 <p>
                                     Paragraph
@@ -285,11 +233,6 @@
                             </p>
                         </footer>
                     </article>
-                    <footer>
-                        <p>
-                            Paragraph
-                        </p>
-                    </footer>
                 </section>
                 <pre>
 &lt;header&gt;
@@ -435,226 +378,6 @@
 &lt;/footer&gt;
                 </pre>
             </article>
-            <hr />
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Example columns
-                </h4>
-                <h5>
-                    1 equal column
-                </h5>
-                <p>
-                    <code>&lt;article&gt;</code> displays full width.<br />
-                    <code>&lt;section&gt;</code> displays full width.
-                </p>
-                <h5>
-                    2 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <pre><code>
-                    &lt;article&gt;
-                    &lt;section&gt;
-                    1
-                    &lt;/section&gt;
-                    &lt;section&gt;
-                    2
-                    &lt;/section&gt;
-                    &lt;/article&gt;
-                </code></pre>
-                <h5>
-                    3 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-                <pre><code>
-                    &lt;article&gt;
-                    &lt;section&gt;
-                    1
-                    &lt;/section&gt;
-                    &lt;section&gt;
-                    2
-                    &lt;/section&gt;
-                    &lt;section&gt;
-                    3
-                    &lt;/section&gt;
-                    &lt;/article&gt;
-                </code></pre>
-                <p>
-                    ...scales up to 12 equal columns
-                </p>
-            </article>
-            <hr />
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Three unequal columns
-                </h4>
-                <p>
-                    Get three unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
-                </p>
-                <p>
-                    Remember, unequal grid columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
-                </p>
-                <aside>
-                    1/4
-                </aside>
-                <section>
-                    1/2
-                </section>
-                <aside>
-                    1/4
-                </aside>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;aside&gt;
-        1/4
-    &lt;/aside&gt;
-    &lt;section&gt;
-        1/2
-    &lt;/section&gt;
-    &lt;aside&gt;
-        1/4
-    &lt;/aside&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
-            </article>
-            <hr />
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Two unequal columns with content on the left
-                </h4>
-                <p>
-                    Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
-                </p>
-                <p>
-                    Remember, unequal columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
-                </p>
-                <section>
-                    3/4
-                </section>
-                <aside>
-                    1/4
-                </aside>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        3/4
-    &lt;/section&gt;
-    &lt;aside&gt;
-        1/4
-    &lt;/aside&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
-            </article>
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Two unequal columns with content on the right
-                </h4>
-                <p>
-                    Get two unequal columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
-                </p>
-                <p>
-                    Remember, unequal columns are prescribed by the Pareto principle widths of 80/20 and 20/60/20.
-                </p>
-                <aside>
-                    1/4
-                </aside>
-                <section>
-                    3/4
-                </section>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;aside&gt;
-        1/4
-    &lt;/aside&gt;
-    &lt;section&gt;
-        3/4
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
-            </article>
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Complex columns
-                </h4>
-                <p>
-                    Nesting gives you columns <em>starting at orientation portrait and scaling to orientation landscape</em>, within the larger column. On orientation portrait, the columns will automatically stack.
-                </p>
-                <section>
-                    1
-                    <article>
-                        <section>
-                            1
-                        </section>
-                        <section>
-                            2
-                        </section>
-                    </article>
-                </section>
-                <section>
-                    2
-                </section>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-        &lt;article&gt;
-            &lt;section&gt;
-                1
-            &lt;/section&gt;
-            &lt;section&gt;
-                2
-            &lt;/section&gt;
-        &lt;/article&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
-            </article>
-            <article am-margin="top">
-                <h4>
-                    Orientation
-                </h4>
-                <p>
-                    Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
-                </p>
-            </article>
-            <hr />
-
-            <!--<article am-margin="top">-->
-                <!--<h4>-->
-                    <!--Section clearing-->
-                <!--</h4>-->
-                <!--<p>-->
-                    <!--Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.-->
-                <!--</p>-->
-            <!--</article>-->
-            <!--<hr />-->
         </section>
 
         <section am-padding>
@@ -662,9 +385,17 @@
                 Define the intent of your content
             </h3>
             <p>
-                Back to basics. Feel free to use HTML5 semantic elements, whenever and wherever you like.
-                This means you can scaffold content into simple or complex sections & outlines.
+                Back to basics. Feel free to use HTML5 semantic elements to define content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>, whenever and wherever you like.
             </p>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">
+                <h3>
+                    Explicit
+                </h3>
+                <p>
+                    All content lying inside the <code>body</code> element is part of a section. Sections in HTML5 can be nested. Beside the main section, defined by the <code>body</code> element, section limits are defined either explicitly or implicitly. Explicitly-defined sections are:
+                </p>
+            </blockquote>
+
             <table>
                 <thead>
                 <tr>
@@ -676,77 +407,75 @@
                 <tbody>
                 <tr>
                     <td>body</td>
-                    <td>Column</td>
+                    <td>column</td>
                     <td>Represents the content of an HTML document.</td>
                 </tr>
                 <tr>
                     <td>header</td>
-                    <td>Row</td>
+                    <td>row</td>
                     <td>Defines the header for a page or section.</td>
                 </tr>
                 <tr>
                     <td>nav</td>
-                    <td>Row</td>
+                    <td>row</td>
                     <td>Defines navigation links on one horizontal line.</td>
                 </tr>
                 <tr>
-                    <td>main</td>
-                    <td>100%</td>
-                    <td>The main or important content.</td>
-                </tr>
-                <tr>
-                    <td>h1, h2, h3, h4, h5, h6</td>
-                    <td>100%</td>
-                    <td>Briefly describes the topic of the section it introduces.</td>
-                </tr>
-                <tr>
-                    <td>p</td>
-                    <td>100%</td>
-                    <td>A paragraph of text. </td>
-                </tr>
-                <tr>
                     <td>article</td>
-                    <td>Row</td>
-                    <td>Defines content on a horizontal (or vertical) line.</td>
+                    <td>row</td>
+                    <td>Defines content on one horizontal line.</td>
                 </tr>
                 <tr>
                     <td>section</td>
-                    <td>Column</td>
-                    <td>Represents content as equal sections.</td>
+                    <td>column</td>
+                    <td>Represents content as equal (scales up to 12) sections.</td>
                 </tr>
                 <tr>
                     <td>aside</td>
-                    <td>Column</td>
+                    <td>column</td>
                     <td>Represents content tangentially related to the content surrounding it.</td>
                 </tr>
                 <tr>
                     <td>footer</td>
-                    <td>Row</td>
+                    <td>row</td>
                     <td>Defines the footer for a page or section.</td>
                 </tr>
+                </tbody>
+            </table>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">
+                <h3>
+                    Implicit
+                </h3>
+                <p>
+                    The HTML Headings Elements (h1 to h6) defines a new, implicit, section when they aren't the first heading of their parent, explicit, sections. The way this implicit section is positioned in the outline is defined by its relative rank with the previous heading in their parent section. If it is of a lower rank than the previous heading, it opens a implicit sub-section of the section.     </p>
+            </blockquote>
+
+            <table>
+                <thead>
                 <tr>
-                    <td>hr</td>
-                    <td>100%</td>
-                    <td>A thematic break and <i>optionally</i> defines framing.</td>
+                    <th scope="col">HTML5</th>
+                    <th scope="col">Scaffold</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <code>
+                            &lt;h1&gt;
+                            &lt;h2&gt
+                            &lt;h3&gt;
+                            &lt;h4&gt;
+                            &lt;h5&gt;
+                            &lt;h6&gt;
+                        </code>
+                    </td>
+                    <td>Row</td>
+                    <td>Briefly describes the topic of the section it introduces.</td>
                 </tr>
                 </tbody>
-                <!--<tfoot>-->
-                    <!--<tr>-->
-                        <!--<td colspan="3">-->
-                            <!--<p>-->
-                                <!--<strong>Section clearing</strong><br />-->
-                                <!--Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.-->
-                            <!--</p>-->
-                            <!--<hr />-->
-                            <!--<p>-->
-                                <!--<strong>Nestable mixed layouts</strong><br />-->
-                                <!--This means you can build UI into simple or complex layouts.-->
-                            <!--</p>-->
-                        <!--</td>-->
-                    <!--</tr>-->
-                <!--</tfoot>-->
             </table>
-
+            </section>
     </article>
     <article class="am-secondary" am-padding>
         <h1>
