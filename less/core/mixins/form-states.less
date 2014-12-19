@@ -1,7 +1,7 @@
 // Forms
 // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
 // <input> is a replaced element and does not allow ::pseudo CSS so pre/post icons are prescribed with label + input design pattern
-[am-form] input, [am-form] select, [am-form] textarea {
+form[am-layout] input, form[am-layout] select, form[am-layout] textarea {
   height:34px;
   padding:6px 12px;
   font-size:14px;
@@ -23,24 +23,24 @@
   }
 }
 
-[am-form] input[type="checkbox"] {
+form[am-layout] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle; }
 
-[am-form] label {
+form[am-layout] label {
   display: inline-block;
   & input {
     width: auto; }
  }
 
 // stacked
-[am-form~="stacked"] {
+form[am-layout~="stacked"] {
   & input, & select, & textarea, & label {
     width: 100%; }
 }
 
 // aligned
-[am-form~="aligned"] > span {
+form[am-layout~="aligned"] > span {
   .flex-display;
   .flex-flow(row wrap);
   .justify-content(justify);
@@ -51,7 +51,7 @@
 }
 
 // Multi-column
-[am-form~="multicolumn"]  {
+form[am-layout~="multicolumn"]  {
   .flex-display;
   .flex-flow(row wrap);
   & input, select, textarea, label {
@@ -63,19 +63,19 @@
 
 
 // Iconography
-[am-preicon], [am-posticon] {
+form[am-preicon], form[am-posticon] {
   position: relative;
 }
 
-[am-preicon] + input {
+form[am-preicon] + input {
   padding-left: 2em;
 }
 
-[am-posticon] + input {
+form[am-posticon] + input {
   padding-right: 2em;
 }
 
-[am-preicon]:before {
+form[am-preicon]:before {
   font-family: FontAwesome;
   position: absolute;
   left: .5em;
@@ -83,7 +83,7 @@
   content: attr(am-preicon);
 }
 
-[am-posticon]:after {
+form[am-posticon]:after {
   font-family: FontAwesome;
   position: absolute;
   right: .5em;

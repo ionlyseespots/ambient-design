@@ -25,7 +25,7 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-nav role="navigation">
+<nav am-layout="equal" role="navigation">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html">Semantic</a>
     <a href="../design-patterns/index.html" class="am-active">Layout</a>
@@ -35,10 +35,10 @@
     <header am-padding class="am-primary">
         <p>
             Overview<br />
-            UI patterns | Initial patterns | Components | Layouts | Navs | Forms
+            Introduction | Page layout examples and CSS3 definitions
         </p>
         <h1>
-            UI patterns
+            Layout
         </h1>
     </header>
     <article>
@@ -47,67 +47,66 @@
                 Introduction
             </p>
             <h2>
-                UI patterns extend Ambient's <a href="../layout/index.html">semantic layout</a>
+                <i class="fa fa-css3"></i> Ambient is page layout
             </h2>
             <p>
-                UI patterns are layout-related attributes for content.
-                While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
+                Ambient creates page layout for content defined in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
             </p>
         </header>
         <section am-padding>
             <h3>
-                We define our own namespaces
+                We define our own namespace
             </h3>
             <blockquote>
                 <p>
                     <code>am-layout</code><br />
                     <!--<code>am-component</code><br />-->
-                    <code>am-nav</code><br />
-                    <code>am-form</code>
+                    <!--<code>am-nav</code><br />-->
+                    <!--<code>am-form</code>-->
                 </p>
             </blockquote>
             <p>
-                Because we define our own custom attribute, we can prescribe base UI patterns to extend.
+                Because we define our own custom attribute, we can prescribe extendable layout patterns.
             </p>
             <blockquote>
                 <p>
                     <!--<strong>DO</strong> use UI patterns to layout content.<br />-->
-                    <strong>DO</strong> use class names to handle styling elements & content.<br />
-                    Do <strong>NOT</strong> use class names as a replacement for structure.
+                    Do use CSS3 attributes to layout content in the document outline.<br />
+                    Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
                 </p>
             </blockquote>
-            <hr />
+            <!--<hr />-->
 
-            <p>
-                <em>Matching UI patterns</em> is something I am working on.
-                This is when a base UI pattern makes use of the same attribute and value as an initial pattern.
-            </p>
-            <hr />
+            <!--<p>-->
+                <!--<em>Matching UI patterns</em> is something I am working on.-->
+                <!--This is when a base UI pattern makes use of the same attribute and value as an initial pattern.-->
+            <!--</p>-->
+            <!--<hr />-->
 
-            <p>
-                <em>Chaining UI patterns</em> is in the beginning stages.  This is when a base UI pattern value assigns its value as an attribute for the next value.
-                All you need to do is make sure that your attributes return to a value (up to a base UI pattern value).
-            </p>
-            <blockquote>
-                <p>
-                    <strong>DO</strong> chain down a base UI pattern value.<br />
-                    Do <strong>NOT</strong> chain more than 3 levels deep.
-                </p>
-            </blockquote>
-            <ul>
-                <li> <code>am-component="grid"</code>
-                    <ul>
-                        <li>
-                            <code>am-grid="block"</code>
-                            <ul>
-                                <li>
-                                    <code>am-block="three-fourths"</code>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <!--<p>-->
+                <!--<em>Chaining UI patterns</em> is in the beginning stages.  This is when a base UI pattern value assigns its value as an attribute for the next value.-->
+                <!--All you need to do is make sure that your attributes return to a value (up to a base UI pattern value).-->
+            <!--</p>-->
+            <!--<blockquote>-->
+                <!--<p>-->
+                    <!--<strong>DO</strong> chain down a base UI pattern value.<br />-->
+                    <!--Do <strong>NOT</strong> chain more than 3 levels deep.-->
+                <!--</p>-->
+            <!--</blockquote>-->
+            <!--<ul>-->
+                <!--<li> <code>am-component="grid"</code>-->
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<code>am-grid="block"</code>-->
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<code>am-block="three-fourths"</code>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
         </section>
         <section am-padding>
             <h3>
@@ -166,8 +165,8 @@
                 Margin
             </h3>
             <p>
-                Default layout margin is 0<br />
-                To add space outside, add the attribute <code>am-margin</code> to any element.
+                Default margin is 0<br />
+                To add space outside an element, add the attribute <code>am-margin</code> to any element.
             </p>
             <blockquote>
                 <p>
@@ -198,8 +197,8 @@
                 Padding
             </h3>
             <p>
-                Default layout padding is 0<br />
-                To add space inside, add the attribute <code>am-padding</code> to any element.
+                Default padding is 0<br />
+                To add space inside an element, add the attribute <code>am-padding</code> to any element.
             </p>
             <blockquote>
                 <p>
@@ -233,10 +232,10 @@
             </h3>
             <p>
                 Default layer is 0<br />
-                To add a z-axis, add the attribute <code>am-layer="AXIS"</code> to any element.
+                To add depth to an element, add the attribute <code>am-layer="DEPTH VALUE"</code> to any element.
             </p>
             <blockquote>
-                <p> Axis layers are available as
+                <p> Layer depths are available as
                 </p>
                 <ul>
                     <li>
@@ -1532,7 +1531,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav>
+                    <nav am-layout="equal">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1573,7 +1572,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav="left-align">
+                    <nav am-layout="left-align">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1614,7 +1613,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav="right-align">
+                    <nav am-layout="right-align">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1655,7 +1654,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav="center">
+                    <nav am-layout="center">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1696,7 +1695,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav="justify">
+                    <nav am-layout="justify">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1737,7 +1736,7 @@
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-nav="vertical">
+                    <nav am-layout="vertical">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1894,7 +1893,7 @@
                             <code>&lt;form am-form="stacked"&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="stacked">
+                    <form am-layout="stacked">
                         <label for="stacked-email" am-preicon="&#xf118;">Email</label>
                         <input id="stacked-email" type="email" placeholder="Email">
 

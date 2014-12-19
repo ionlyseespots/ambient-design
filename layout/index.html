@@ -25,7 +25,7 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav role="navigation" am-nav>
+<nav role="navigation" am-layout="equal">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html" class="am-active">Semantic</a>
     <a href="../design-patterns/index.html">Layout</a>
@@ -35,7 +35,7 @@
     <header class="am-primary" am-padding>
         <p>
             Overview<br />
-            Semantic | Sectioning examples and HTML5/CSS3 definitions
+            Introduction | Semantic markup examples and HTML5 definitions
         </p>
         <h1>
             Semantic
@@ -47,34 +47,30 @@
                 Introduction
             </p>
             <h2>
-                Ambient is a lightweight and modular HTML5 UI development methodology.
+                <i class="fa fa-html5"></i> Ambient is semantic markup
             </h2>
             <p>
-                Back to basics. Feel free to use semantic HTML5 tags, whenever and wherever you like.
+                Ambient creates semantic (visual) scaffolding for content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
             </p>
         </header>
         <section am-padding>
             <h3>
-                Layout examples
+                Scaffold examples
             </h3>
-            <p>
-                Ambient is ready to adopt whatever your design or style is.
-                This means you can build content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a> into simple or complex layouts.
-            </p>
             <blockquote>
                 <p>
-                    <strong>DO</strong> use HTML5 sectioning elements to layout content.<br />
-                    Do <strong>NOT</strong> use HTML5 sectioning elements as a replacement for content better suited in a div.
+                    Do use HTML5 sectioning elements to scaffold content in the document outline.<br />
+                    Do <strong>NOT</strong> use HTML5 sectioning elements as a replacement for containing content better suited to a div.
                 </p>
             </blockquote>
             <article am-layout="outline">
                 <section>
                     <header>
                         <p>
-                            Example simple layout.
+                            Example simple outline.
                         </p>
                         <h4>
-                            Simple layout
+                            Simple outline
                         </h4>
                     </header>
                     <hr />
@@ -151,10 +147,10 @@
                 <section am-margin="top">
                     <header>
                         <p>
-                            Example complex layout with UI patterns.
+                            Example complex outline.
                         </p>
                         <h4>
-                            Complex layout
+                            Complex outline
                         </h4>
                     </header>
                     <hr />
@@ -443,11 +439,37 @@
 
             <article am-layout="outline" am-margin="top">
                 <h4>
-                    Three equal columns
+                    Example columns
                 </h4>
+                <h5>
+                    1 equal column
+                </h5>
                 <p>
-                    Get three equal-width columns <em>starting at orientation portrait and scaling to orientation landscape</em>. On orientation portrait, the columns will automatically stack.
+                    <code>&lt;article&gt;</code> displays full width.<br />
+                    <code>&lt;section&gt;</code> displays full width.
                 </p>
+                <h5>
+                    2 equal columns
+                </h5>
+                <section>
+                    1
+                </section>
+                <section>
+                    2
+                </section>
+                <pre><code>
+                    &lt;article&gt;
+                    &lt;section&gt;
+                    1
+                    &lt;/section&gt;
+                    &lt;section&gt;
+                    2
+                    &lt;/section&gt;
+                    &lt;/article&gt;
+                </code></pre>
+                <h5>
+                    3 equal columns
+                </h5>
                 <section>
                     1
                 </section>
@@ -457,22 +479,25 @@
                 <section>
                     3
                 </section>
-                <footer>
-                    <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </code></pre>
-                </footer>
+                <pre><code>
+                    &lt;article&gt;
+                    &lt;section&gt;
+                    1
+                    &lt;/section&gt;
+                    &lt;section&gt;
+                    2
+                    &lt;/section&gt;
+                    &lt;section&gt;
+                    3
+                    &lt;/section&gt;
+                    &lt;/article&gt;
+                </code></pre>
+                <p>
+                    ...scales up to 12 equal columns
+                </p>
             </article>
+            <hr />
+
             <article am-layout="outline" am-margin="top">
                 <h4>
                     Three unequal columns
@@ -507,16 +532,6 @@
 &lt;/article&gt;
                     </code></pre>
                 </footer>
-            </article>
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Full width single column
-                </h4>
-                <p>
-                    <code>&lt;article&gt;</code> displays full width.<br />
-                    <code>&lt;section&gt;</code> displays full width.
-                 </p>
             </article>
             <hr />
 
@@ -581,7 +596,7 @@
 
             <article am-layout="outline" am-margin="top">
                 <h4>
-                    Complex nested equal columns
+                    Complex columns
                 </h4>
                 <p>
                     Nesting gives you columns <em>starting at orientation portrait and scaling to orientation landscape</em>, within the larger column. On orientation portrait, the columns will automatically stack.
@@ -631,218 +646,38 @@
             </article>
             <hr />
 
-            <article am-margin="top">
-                <h4>
-                    Section clearing
-                </h4>
-                <p>
-                    Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.
-                </p>
-            </article>
-            <hr />
-
-            <article am-layout="outline" am-margin="top">
-                <h4>
-                    Example columns
-                </h4>
-                <h5>
-                    1 equal column
-                </h5>
-                <p>
-                    <code>&lt;article&gt;</code> displays full width.<br />
-                    <code>&lt;section&gt;</code> displays full width.
-                </p>
-                <h5>
-                    2 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
-                <h5>
-                    3 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
-                <h5>
-                    4 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-                <section>
-                    4
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-    &lt;section&gt;
-        4
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
-                <h5>
-                    5 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-                <section>
-                    4
-                </section>
-                <section>
-                    5
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-    &lt;section&gt;
-        4
-    &lt;/section&gt;
-    &lt;section&gt;
-        5
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
-                <h5>
-                    6 equal columns
-                </h5>
-                <section>
-                    1
-                </section>
-                <section>
-                    2
-                </section>
-                <section>
-                    3
-                </section>
-                <section>
-                    4
-                </section>
-                <section>
-                    5
-                </section>
-                <section>
-                    6
-                </section>
-                <pre><code>
-&lt;article&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-    &lt;section&gt;
-        4
-    &lt;/section&gt;
-    &lt;section&gt;
-        5
-    &lt;/section&gt;
-    &lt;section&gt;
-        6
-    &lt;/section&gt;
-&lt;/article&gt;
-                </code></pre>
-                <p>
-                    ...scales up to 12 columns
-                </p>
-            </article>
+            <!--<article am-margin="top">-->
+                <!--<h4>-->
+                    <!--Section clearing-->
+                <!--</h4>-->
+                <!--<p>-->
+                    <!--Clear sections with <code>article</code>, <code>header</code>, <code>footer</code> and <code>nav</code> base elements as well as 100% width elements <code>h1, h2, h3, h4, h5, h6, p, hr</code>.-->
+                <!--</p>-->
+            <!--</article>-->
+            <!--<hr />-->
         </section>
 
         <section am-padding>
             <h3>
-                <i class="fa fa-html5"></i>  <i class="fa fa-css3"></i>  Ambient
+                Define the intent of your content
             </h3>
-
-            <blockquote cite="http://dictionary.reference.com/browse/ambient">
-                <p>
-                    am·bi·ent /'ambēənt/ <i>adjective</i>
-                </p>
-                <ol>
-                    <li>of the surrounding area or environment</li>
-                    <li>completely surrounding; encompassing</li>
-                    <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
-                    <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
-                    <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
-                </ol>
-            </blockquote>
+            <p>
+                Back to basics. Feel free to use HTML5 semantic elements, whenever and wherever you like.
+                This means you can scaffold content into simple or complex sections & outlines.
+            </p>
             <table>
                 <thead>
                 <tr>
                     <th scope="col">HTML5</th>
-                    <th scope="col">CSS3</th>
-                    <th scope="col">Semantic Description</th>
+                    <th scope="col">Scaffold</th>
+                    <th scope="col">Description</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>body</td>
                     <td>Column</td>
-                    <td>Represents the content.</td>
+                    <td>Represents the content of an HTML document.</td>
                 </tr>
                 <tr>
                     <td>header</td>
@@ -872,7 +707,7 @@
                 <tr>
                     <td>article</td>
                     <td>Row</td>
-                    <td>Defines content on one horizontal line. Alternatively, you can define a vertical layout for content in an article with <code>am-layout="vertical"</code></td>
+                    <td>Defines content on a horizontal (or vertical) line.</td>
                 </tr>
                 <tr>
                     <td>section</td>
@@ -911,139 +746,7 @@
                     <!--</tr>-->
                 <!--</tfoot>-->
             </table>
-            <h3>
-                Keeping It Simple
-            </h3>
-            <p>
-                Ambient is built with HTML5, CSS3, Normalize.css, cursor-rest.css, Less (a flexbox prefixer mixin) and Typeplate.
-            </p>
-            <table>
-                <thead>
-                <tr>
-                    <th scope="col">Project</th>
-                    <th scope="col">Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <a href="http://necolas.github.io/normalize.css/">Normalize.css</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="http://twitter.com/necolas">Nicolas Gallagher</a>
-                        and
-                        <a href="http://twitter.com/jon_neal">Jonathan Neal</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="http://lesscss.org/">Less</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="http://lesscss.org/about/#team">lots of people</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://gist.github.com/jayj/4012969">flexbox.less</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="https://twitter.com/jayjdk">Jesper Johansen</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://gist.github.com/murtaugh/5247154">cursor-reset.css</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="https://twitter.com/murtaugh">Tim Murtaugh</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="http://typeplate.com/">Typeplate.css</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="https://github.com/grayghostvisuals">Dennis Gaebel</a>
-                        and
-                        <a href="https://github.com/zakkain">Zachary Kain</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
-                    </td>
-                    <td>
-                        A project by
-                        <a href="https://twitter.com/h5bp">lots of people</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        <h3>
-            Move the web forward
-        </h3>
-        <p>
-            Ambient is a project by <a href="https://twitter.com/av8boogie">Ken Buras</a>. I am excited to contribute to the the advancement (and understanding) of HTML5.
 
-        </p>
-        <h4>
-            Resources
-        </h4>
-        <p>
-            Here is a list of resources I have found to be the most helpful when working with HTML5 & CSS3.
-        </p>
-        <h5>
-            Articles
-        </h5>
-        <ul>
-            <li>
-               <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/">HTML5 And The Document Outlining Algorithm</a> <small>Smashing Magazine</small>
-            </li>
-            <li>
-                <a href="http://html5doctor.com/outlines/">Document outlines</a> <small>HTML5 doctor</small>
-            </li>
-            <li>
-                <a href="http://alistapart.com/article/semanticsinhtml5">Semantics in HTML 5</a> <small>A list apart</small>
-            </li>
-        </ul>
-        <h5>
-            Projects
-        </h5>
-        <ul>
-            <li>
-                <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html">HTML5 Working Draft Specification</a>
-            </li>
-            <li>
-                <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
-            </li>
-            <li>
-                <a href="http://html5doctor.com/">HTML5 Doctor</a>
-            </li>
-            <li>
-                <a href="http://prefixr.com/">Prefixr</a>
-            </li>
-            <li>
-                <a href="http://caniuse.com/">Can I use</a>
-            </li>
-            <li>
-                <a href="http://modernizr.com/">Modernizr</a>
-            </li>
-        </ul>
-        <h5>
-            Tools
-        </h5>
-        <ul>
-            <li>
-                <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a> <small>I am currently building a CSS outliner as a UI pattern</small>
-            </li>
-        </ul>
-        </section>
     </article>
     <article class="am-secondary" am-padding>
         <h1>
