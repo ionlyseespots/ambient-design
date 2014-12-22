@@ -57,10 +57,27 @@
             <h3>
                 We define our own namespaces
             </h3>
+            <p>
+                Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as HTML5 semantic elements.
+            </p>
+            <blockquote>
+                <p>
+                    Do use CSS3 attributes to layout defined content.<br />
+                    Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
+                </p>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h3>
+                Global and Root namespaces
+            </h3>
             <blockquote>
                 <h4>
-                    Initial properties
+                    Global attributes
                 </h4>
+                <p>
+                    Global attributes are layout properties common to all HTML elements. These attributes can be used on any element.
+                </p>
                 <p>
                     <code>am-margin</code><br />
                     <code>am-padding</code><br />
@@ -69,23 +86,27 @@
             </blockquote>
             <blockquote>
                 <h4>
-                    Layout property
+                    Root attribute
                 </h4>
+                <p>
+                    Define your layout. The root layout attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
+                    Once you've defined the root element, you can add additional layout properties as child attributes to gradually build a hierarchy that defines your layout.
+                </p>
                 <p>
                     <code>am-layout</code><br />
                 </p>
             </blockquote>
-            <p>
-                Because we define our own custom attributes, we can define extendable properties to semantic markup.
-            </p>
-            <blockquote>
-                <p>
-                    Do use CSS3 attributes to layout content in the document outline.<br />
-                    Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
-                </p>
-            </blockquote>
         </section>
-
+    </article>
+    <article id="ux-shells">
+        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
+            <h1 class="am-text-uppercase text-center">
+                Global attributes
+            </h1>
+            <p>
+                Global attributes are layout properties common to all HTML elements. These attributes can be used on any element.
+            </p>
+        </header>
         <section am-padding>
             <h3>
                 Margin
@@ -201,20 +222,21 @@
     <article id="ux-shells">
         <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
-                Layout properties
+                Root attribute
             </h1>
             <p>
-                Layout properties are defined by adding <code>am-layout</code> to an element.
+                Define your layout. The root layout attribute <code>am-layout</code> must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
+                Once you've defined the root element, you can add additional layout properties as child attributes to gradually build a hierarchy that defines your layout.
             </p>
         </header>
         <section am-component="grid" am-padding>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
-                        Outline the layout
+                        Outline the scaffold
                     </h2>
                     <p>
-                        If needed, to outline your UI with the base layout UI pattern, add the attribute and value <code>am-layout="outline"</code> to any semantic element.
+                        If needed, to outline (background-color & border) your UI add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
                     </p>
                     <h3>
                         Outline
@@ -289,20 +311,21 @@
         <hr />
 
         <section am-component="grid" am-padding>
+            <h2>
+                Layout for sections and outlines is linear.
+            </h2>
+            <p>
+                The HTML5 <code>article</code> element equally aligns all HTML5 <code>section</code> elements in a single direction, vertically or horizontally.
+            </p>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
-                    <h2>
-                        Alignment
-                    </h2>
-                    <p>
-                        Initial alignment is horizontal
-                    </p>
+
                     <h3>
                         Horizontal
                     </h3>
                     <blockquote>
                         <p>
-                            The base element groups content on one horizontal line. You're good to go.
+                            The HTML5 <code>article</code> element groups defined content in a HTML5 <code>section</code> element on one horizontal line. You're good to go.
                         </p>
                     </blockquote>
                     <article am-layout="outline">
@@ -336,22 +359,16 @@
                     </pre>
                 </div>
             </div>
-        </section>
-        <hr />
 
-        <section am-component="grid" am-padding>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
-                    <h2>
-                        Vertical alignment
-                    </h2>
-                    <p>
-                        To create vertical alignment, add the attribute and value <code>am-layout="vertical"</code> to any article, header or footer.
-                    </p>
                     <h3>
                         Vertical
                     </h3>
                     <blockquote>
+                        <p>
+                            You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
+                        </p>
                         <p>
                             <code>&lt;article am-layout="vertical"&gt;</code>
                         </p>
@@ -397,7 +414,7 @@
                         Gutters with margin
                     </h2>
                     <p>
-                        To create gutter margin with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
+                        To create gutter margin add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
                     </p>
                     <h3>
                         Margin
@@ -448,7 +465,7 @@
                         Gutters with padding
                     </h2>
                     <p>
-                        To create gutter padding with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
+                        To create gutter padding add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
                     </p>
                     <h3>
                         Padding
@@ -499,7 +516,7 @@
                         Complex nested gutters with margin and padding
                     </h2>
                     <p>
-                        To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
+                        To create complex gutters add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
                     </p>
                     <h3>
                         Margin + padding
@@ -573,7 +590,7 @@
                         Complex nested gutters with padding and margin
                     </h2>
                     <p>
-                        To create complex gutters with the base layout UI pattern, add the attribute and value <code>am-layout="gutter"</code> to any article, header or footer and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
+                        To create complex gutters add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
                     </p>
                     <h3>
                         Padding + margin
@@ -639,14 +656,14 @@
         </section>
     </article>
     <article id="ui-elements">
-        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">
-            <h1 class="am-text-uppercase">
-                <i class="fa fa-cube"></i> Components
-            </h1>
-            <p>
-                A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.
-            </p>
-        </header>
+        <!--<header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">-->
+            <!--<h1 class="am-text-uppercase">-->
+                <!--<i class="fa fa-cube"></i> Components-->
+            <!--</h1>-->
+            <!--<p>-->
+                <!--A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.-->
+            <!--</p>-->
+        <!--</header>-->
         <section am-component="grid" am-padding>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
@@ -654,16 +671,18 @@
                         Basic grid
                     </h2>
                     <p>
-                        To create a basic grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, base grid columns do <strong>NOT</strong> automatically stack.
-                        Base <em>grid rows</em> group blocks on one horizontal line.  Base <em>grid blocks</em> divide content into equal sections (blocks).
+                        To create a basic grid add the attribute and value <code>am-layout="grid"</code> to any HTML5 semantic element. On orientation portrait, grid layout does <strong>NOT</strong> automatically stack.
                     </p>
                     <h3>
                         Basic
                     </h3>
                     <blockquote>
                         <p>
-                            To add a row, chain the value <code>grid</code> as the attribute and value <code>am-grid="row"</code> to any div.<br />
-                            To add a block, chain the value <code>grid</code> as the attribute and value <code>am-grid="block"</code> to any div.
+                            Grid layout automatically displays columns into equal sections.
+                        </p>
+                        <p>
+                            To add a row, add the attribute and value <code>am-layout="row"</code> to a child div.<br />
+                            To add a block, add the attribute and value <code>am-layout="column"</code> to a child div.
                         </p>
                         <p>
                             <code>&lt;section am-component="grid"&gt;</code>
@@ -844,7 +863,7 @@
                         Complex grid with offset widths
                     </h2>
                     <p>
-                        To create a complex grid with the base component UI pattern, add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, grid content does <strong>NOT</strong> automatically stack.
+                        To create a complex grid add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, grid content does <strong>NOT</strong> automatically stack.
                     </p>
                     <h3>
                         Complex
@@ -1039,7 +1058,7 @@
                         Multiple cards
                     </h2>
                     <p>
-                        To create multiple cards with the base component UI pattern, add the attribute and value <code>am-component="card"</code> to any section. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any HTML semantic element. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
                     </p>
                     <h3>
                         Multiple
