@@ -90,7 +90,7 @@
                 </h4>
                 <p>
                     Define your layout. The root layout attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
-                    Once you've defined the root element, you can add additional layout properties as child attributes to gradually build a hierarchy that defines your layout.
+                    Once you've defined the root element, you can add additional layout properties to your scaffold as child attributes to gradually build a hierarchy that defines your layout.
                 </p>
                 <p>
                     <code>am-layout</code><br />
@@ -226,17 +226,17 @@
             </h1>
             <p>
                 Define your layout. The root layout attribute <code>am-layout</code> must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
-                Once you've defined the root element, you can add additional layout properties as child attributes to gradually build a hierarchy that defines your layout.
+                Once you've defined the root element, you can add additional layout properties to your scaffold as child attributes to gradually build a hierarchy that defines your layout.
             </p>
         </header>
         <section am-component="grid" am-padding>
             <div am-grid="row">
-                <div am-grid="block" am-padding>
+                <div am-grid="block">
                     <h2>
-                        Outline the scaffold
+                        Outline the layout
                     </h2>
                     <p>
-                        If needed, to outline (background-color & border) your UI add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
+                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
                     </p>
                     <h3>
                         Outline
@@ -312,20 +312,19 @@
 
         <section am-component="grid" am-padding>
             <h2>
-                Layout for sections and outlines is linear.
+                The default layout for HTML5 explicit sections is linear layout.
             </h2>
             <p>
-                The HTML5 <code>article</code> element equally aligns all HTML5 <code>section</code> elements in a single direction, vertically or horizontally.
+                The HTML5 <code>article</code> element aligns explicit sections in a single direction, vertically or horizontally. The default orientation is horizontal.
             </p>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
-
                     <h3>
                         Horizontal
                     </h3>
                     <blockquote>
                         <p>
-                            The HTML5 <code>article</code> element groups defined content in a HTML5 <code>section</code> element on one horizontal line. You're good to go.
+                            The HTML5 <code>article</code> element groups explicit sections (scales up to 12 equal sections) on one horizontal line. You're good to go.
                         </p>
                     </blockquote>
                     <article am-layout="outline">
@@ -367,7 +366,7 @@
                     </h3>
                     <blockquote>
                         <p>
-                            You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
+                            You can specify a vertical layout direction for explicit sections by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
                         </p>
                         <p>
                             <code>&lt;article am-layout="vertical"&gt;</code>
@@ -405,271 +404,25 @@
                 </div>
             </div>
         </section>
-        <hr />
+    <hr />
 
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Gutters with margin
-                    </h2>
-                    <p>
-                        To create gutter margin add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="margin"</code>.
-                    </p>
-                    <h3>
-                        Margin
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="gutter outline" am-gutter="margin">
-                        <section>
-                            1
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre>
-&lt;article am-layout="gutter" am-gutter="margin"&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Gutters with padding
-                    </h2>
-                    <p>
-                        To create gutter padding add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code>.
-                    </p>
-                    <h3>
-                        Padding
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="gutter outline" am-gutter="padding">
-                        <section>
-                            1
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre>
-&lt;article am-layout="gutter" am-gutter="padding"&gt;
-    &lt;section&gt;
-        1
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Complex nested gutters with margin and padding
-                    </h2>
-                    <p>
-                        To create complex gutters add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value<code>gutter</code> as the attribute and value <code>am-gutter="margin"</code> or <code>am-gutter="padding"</code>.
-                    </p>
-                    <h3>
-                        Margin + padding
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="gutter" am-gutter="margin"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="gutter outline" am-gutter="margin">
-                        <section>
-                                1
-                            <article am-layout="gutter outline" am-gutter="padding">
-                                <section>
-                                    1
-                                </section>
-                                <section>
-                                    2
-                                </section>
-                                <section>
-                                    3
-                                </section>
-                            </article>
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre>
-&lt;article am-layout="gutter" am-gutter="margin"&gt;
-    &lt;section&gt;
-        1
-        &lt;article am-layout="gutter" am-gutter="padding"&gt;
-            &lt;section&gt;
-                1
-            &lt;/section&gt;
-            &lt;section&gt;
-                2
-            &lt;/section&gt;
-            &lt;section&gt;
-                3
-            &lt;/section&gt;
-        &lt;/article&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
 
 
         <section am-component="grid" am-padding>
+            <header am-padding>
+                <h1 class="am-text-uppercase">
+                    Grid layout
+                </h1>
+                <p>
+                    Grid layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
+                </p>
+            </header>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
-                        Complex nested gutters with padding and margin
+                        Basic grid layout with equal widths
                     </h2>
-                    <p>
-                        To create complex gutters add the attribute and value <code>am-layout="gutter"</code> to any HTML5 semantic element and chain the value <code>gutter</code> as the attribute and value <code>am-gutter="padding"</code> or <code>am-gutter="margin"</code>.
-                    </p>
-                    <h3>
-                        Padding + margin
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="gutter" am-gutter="padding"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="gutter outline" am-gutter="padding">
-                        <section>
-                            1
-                            <article am-layout="gutter outline" am-gutter="margin">
-                                <section>
-                                    1
-                                </section>
-                                <section>
-                                    2
-                                </section>
-                                <section>
-                                    3
-                                </section>
-                            </article>
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre>
-&lt;article am-layout="gutter" am-gutter="padding"&gt;
-    &lt;section&gt;
-        1
-        &lt;article am-layout="gutter" am-gutter="margin"&gt;
-            &lt;section&gt;
-                1
-            &lt;/section&gt;
-            &lt;section&gt;
-                2
-            &lt;/section&gt;
-            &lt;section&gt;
-                3
-            &lt;/section&gt;
-        &lt;/article&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        2
-    &lt;/section&gt;
-    &lt;section&gt;
-        3
-    &lt;/section&gt;
-&lt;/article&gt;
-                    </pre>
-                </div>
-            </div>
-        </section>
-    </article>
-    <article id="ui-elements">
-        <!--<header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">-->
-            <!--<h1 class="am-text-uppercase">-->
-                <!--<i class="fa fa-cube"></i> Components-->
-            <!--</h1>-->
-            <!--<p>-->
-                <!--A set of UI patterns for the layout of section elements, attributes & values. The base UI pattern <code>am-component</code> is the basic building block for a section of content.-->
-            <!--</p>-->
-        <!--</header>-->
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Basic grid
-                    </h2>
+
                     <p>
                         To create a basic grid add the attribute and value <code>am-layout="grid"</code> to any HTML5 semantic element. On orientation portrait, grid layout does <strong>NOT</strong> automatically stack.
                     </p>
@@ -678,14 +431,11 @@
                     </h3>
                     <blockquote>
                         <p>
-                            Grid layout automatically displays columns into equal sections.
-                        </p>
-                        <p>
                             To add a row, add the attribute and value <code>am-layout="row"</code> to a child div.<br />
-                            To add a block, add the attribute and value <code>am-layout="column"</code> to a child div.
+                            To add a column, add the attribute and value <code>am-layout="column"</code> to a child div.
                         </p>
                         <p>
-                            <code>&lt;section am-component="grid"&gt;</code>
+                            <code>&lt;section am-layout="grid"&gt;</code>
                         </p>
                     </blockquote>
                     <article am-layout="outline">
@@ -714,61 +464,10 @@
                                     3
                                 </div>
                             </div>
-                            <div am-grid="row">
-                                <div am-grid="block">
-                                    1
-                                </div>
-                                <div am-grid="block">
-                                    2
-                                </div>
-                                <div am-grid="block">
-                                    3
-                                </div>
-                                <div am-grid="block">
-                                    4
-                                </div>
-                            </div>
-                            <div am-grid="row">
-                                <div am-grid="block">
-                                    1
-                                </div>
-                                <div am-grid="block">
-                                    2
-                                </div>
-                                <div am-grid="block">
-                                    3
-                                </div>
-                                <div am-grid="block">
-                                    4
-                                </div>
-                                <div am-grid="block">
-                                    5
-                                </div>
-                            </div>
-                            <div am-grid="row">
-                                <div am-grid="block">
-                                    1
-                                </div>
-                                <div am-grid="block">
-                                    2
-                                </div>
-                                <div am-grid="block">
-                                    3
-                                </div>
-                                <div am-grid="block">
-                                    4
-                                </div>
-                                <div am-grid="block">
-                                    5
-                                </div>
-                                <div am-grid="block">
-                                    6
-                                </div>
-                            </div>
                         </section>
                     </article>
                     <p>
-                        ...scales up to 12 equal blocks per row
+                        Scales up to 12 equal columns.
                     </p>
                 </div>
                 <div am-grid="block" am-block="portrait-full" am-padding>
@@ -801,54 +500,6 @@
             3
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-grid="row"&gt;
-        &lt;div am-grid="block"&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            2
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            3
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            4
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-grid="row"&gt;
-        &lt;div am-grid="block"&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            2
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            3
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            4
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            5
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-grid="row"&gt;
-        &lt;div am-grid="block"&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            2
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            3
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            4
-        &lt;/div&gt;
-        &lt;div am-grid="block"&gt;
-            5
-        &lt;/div&gt;
-    &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
                 </div>
@@ -860,7 +511,7 @@
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
-                        Complex grid with offset widths
+                        Complex grid layout with offset widths
                     </h2>
                     <p>
                         To create a complex grid add the attribute and value <code>am-component="grid"</code> to any section. On orientation portrait, grid content does <strong>NOT</strong> automatically stack.
@@ -893,9 +544,6 @@
                             <li>
                                 <code>three-fourths</code>
                             </li>
-                            <li>
-                                <code>full</code>
-                            </li>
                         </ul>
                         <p>
                             <code>&lt;section am-component="grid"&gt;</code>
@@ -904,7 +552,7 @@
                     <article am-layout="outline">
                         <section am-component="grid">
                             <div am-grid="row">
-                                <div am-grid="block" am-block="full">
+                                <div am-grid="block">
                                     1
                                 </div>
                             </div>
@@ -1410,7 +1058,7 @@
                 </div>
             </div>
         </section>
-    </article>
+
     <article id="navs">
         <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">
             <h1 class="am-text-uppercase">
@@ -2294,14 +1942,13 @@
             Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
         <p>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
         </p>
     </article>
 </main>
 <footer am-padding="large" class="am-text-center">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
-        Ambient UI patterns are layout-related attributes for content.<br />
+        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.<br />
         <a href="https://github.com/ionlyseespots/ambient-design"><i class="fa fa-github fa-3x"></i></a>
         <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-3x"></i></a>
     </p>

@@ -1,9 +1,12 @@
+// Layout for sections and outlines is linear.
+// ou can specify a vertical layout direction by adding the attribute and value am-layout="vertical" to the HTML5 article element.
 [am-layout~="vertical"] {
   & > section {
     .flex-basis(auto); //  https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
   }
 }
+
 // em for margin & padding is more consistent than viewport sizing for inner HTML
 [am-layout~="gutter"] {
   &[am-gutter="padding"] {
@@ -44,7 +47,7 @@
 }
 
 // useful for testing document outline and displaying nested content
-// uses same color as color primary RGB value
+// uses same color as default primary RGB color value
 [am-layout~="outline"] {
   &[am-gutter~="padding"] p {
     background-color: rgba(93, 116, 137, 0.15);

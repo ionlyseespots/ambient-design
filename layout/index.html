@@ -385,7 +385,10 @@
                 Build the intent of your content
             </h3>
             <p>
-                Back to basics. Feel free to use HTML5 semantic elements to define content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>, whenever and wherever you like.
+                Back to basics. Feel free to use HTML5 semantic elements to scaffold content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>, whenever and wherever you like.
+            </p>
+            <p>
+                You can add additional layout properties to your scaffold as child attributes to gradually build a hierarchy that defines your layout.
             </p>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">
                 <h3>
@@ -395,7 +398,6 @@
                     All content lying inside the <code>body</code> element is part of a section. Sections in HTML5 can be nested. Beside the main section, defined by the <code>body</code> element, section limits are defined either explicitly or implicitly. Explicitly-defined sections are:
                 </p>
             </blockquote>
-
             <table>
                 <thead>
                 <tr>
@@ -418,22 +420,22 @@
                 <tr>
                     <td>nav</td>
                     <td>row</td>
-                    <td>Defines navigation links on one horizontal line.</td>
+                    <td>Defines navigation links.</td>
                 </tr>
                 <tr>
                     <td>article</td>
                     <td>row</td>
-                    <td>Defines content on one horizontal line.</td>
+                    <td>Defines content sections in a single direction, vertically or horizontally. You can specify the layout direction with the <code>am-layout</code> attribute. The default orientation is horizontal.</td>
                 </tr>
                 <tr>
                     <td>section</td>
                     <td>column</td>
-                    <td>Represents content as equal (scales up to 12) sections.</td>
+                    <td>Represents a content section.</td>
                 </tr>
                 <tr>
                     <td>aside</td>
                     <td>column</td>
-                    <td>Represents content tangentially related to the content surrounding it.</td>
+                    <td>Represents a content section tangentially related to the content surrounding it.</td>
                 </tr>
                 <tr>
                     <td>footer</td>
@@ -482,14 +484,13 @@
             Ambient is a lightweight and modular HTML5 UI development methodology.
         </h1>
         <p>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS). Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
         </p>
     </article>
 </main>
 <footer am-padding="large" class="am-text-center">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
-        Ambient UI patterns are layout-related attributes for content.<br />
+        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.<br />
         <a href="https://github.com/ionlyseespots/ambient-design"><i class="fa fa-github fa-3x"></i></a>
         <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-3x"></i></a>
     </p>
