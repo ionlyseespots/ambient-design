@@ -101,7 +101,7 @@
     <article>
         <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
-                Global attributes
+                Global layout attributes
             </h1>
             <p>
                 Global layout attributes are layout properties common to all HTML elements. These attributes can be used on any element.
@@ -222,7 +222,7 @@
     <article id="ux-shells">
         <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
             <h1 class="am-text-uppercase text-center">
-                Root attribute
+                Root layout attribute
             </h1>
             <p>
                 Define your layout. The layout attribute <code>am-layout</code> must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
@@ -230,90 +230,9 @@
 
             </p>
         </header>
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block">
-                    <h2>
-                        Outline the layout
-                    </h2>
-                    <p>
-                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
-                    </p>
-                    <h3>
-                        Outline
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="outline"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                    </article>
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre>
-&lt;article am-layout="outline"&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-&lt;/article&gt;
-                        </pre>
-                    </div>
-                </div>
-        </section>
-        <hr />
-
         <section id="section" am-component="grid" am-padding>
             <h2>
-                Layout for HTML5 explicit sections is linear
+                Linear layout
             </h2>
             <p>
                 The HTML5 <code>article</code> element aligns explicit sections in a single direction, vertically or horizontally.
@@ -418,8 +337,7 @@
                 </h1>
                 <p>
                     Grid layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
-                    You can specify an orientation portrait stack for grid layout by adding the value <code>portrait-full</code> to the layout attribute.
-                    The default orientation on portrait for grid layout does <strong>NOT</strong> stack.
+                    The default orientation on portrait for grid layout does not stack.
                 </p>
             </header>
             <div am-grid="row">
@@ -538,7 +456,7 @@
                         </p>
                         <p>
                             To add a row, add the attribute and value <code>am-layout="row"</code> to a child div.<br />
-                            To add an offset width column, add the attribute and value <code>am-layout_column="WIDTH"</code> to a child div.
+                            To add an offset width column, add the attribute and value <code>am-layout="column WIDTH"</code> to a child div.
                         </p>
 
                         <p>
@@ -767,19 +685,16 @@
         </section>
         <hr />
 
-
-
-
-
-
-
-
-
-
-
-
-
         <section am-component="grid" am-padding>
+            <header am-padding>
+                <h1 class="am-text-uppercase">
+                    Card layout
+                </h1>
+                <p>
+                    Card layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
+                    The default orientation on portrait for card layout does not stack.
+                </p>
+            </header>
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
@@ -1138,17 +1053,19 @@
                 </div>
             </div>
         </section>
+<hr />
 
     <article id="nav">
-        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center">
-            <h1 class="am-text-uppercase">
-                <i class="fa fa-compass"></i> Navs
-            </h1>
-            <p>
-                A set of UI patterns for the layout of nav elements, attributes & values. The base UI pattern <code>am-nav</code> is for navs.
-            </p>
-        </header>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Nav layout
+        </h1>
+        <p>
+            Nav layout is used to structure navigation, and thus relies on the root HTML5 semantic <code>nav</code> element for intent.
+        </p>
+    </header>
         <section am-component="grid" am-padding>
+
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
@@ -1431,17 +1348,19 @@
             </div>
         </section>
     </article>
-    <article id="form">
-        <header am-padding="large" am-layer="z-1" class="am-text-center am-secondary">
-            <h1 class="am-text-uppercase">
-                <i class="fa fa-tasks"></i> Forms
-            </h1>
-            <p>
-                A set of UI patterns for the layout of form elements, attributes & values. The base UI pattern <code>am-form</code> is for forms.
-            </p>
-        </header>
+        <hr />
 
+    <article id="form">
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Form layout
+        </h1>
+        <p>
+            Form layout is used to structure forms, and thus relies on the root HTML5 semantic <code>form</code> element for intent.
+        </p>
+    </header>
         <section am-component="grid" am-padding>
+
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
@@ -1510,7 +1429,7 @@
                             <code>&lt;form am-form&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form>
+                    <form am-layout="inline">
                         <label for="inline-email">Email</label>
                         <input id="inline-email" type="email" placeholder="Email">
 
@@ -1622,7 +1541,7 @@
                             <code>&lt;form am-form="aligned"&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="aligned">
+                    <form am-layout="aligned">
                         <span>
                             <label for="aligned-email">Email</label>
                             <input id="aligned-email" type="email" placeholder="Email">
@@ -1684,7 +1603,7 @@
                             <code>&lt;form am-form="multicolumn"&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="multicolumn">
+                    <form am-layout="multicolumn">
                         <div>
                             <label for="multicolumn-email">Email</label>
                             <input id="multicolumn-email" type="email" placeholder="Email">
@@ -1766,7 +1685,7 @@
                             <code>&lt;form am-form="stacked aligned"&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="stacked aligned">
+                    <form am-layout="stacked aligned">
                         <label for="stacked-aligned-email">Email</label>
                         <input id="stacked-aligned-email" type="email" placeholder="Email">
 
@@ -1834,7 +1753,7 @@
                             <code>&lt;form am-form="multicolumn stacked "&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="multicolumn stacked">
+                    <form am-layout="multicolumn stacked">
                         <div>
                             <label for="multicolumn-stacked-email">Email</label>
                             <input id="multicolumn-stacked-email" type="email" placeholder="Email">
@@ -1930,7 +1849,7 @@
                             <code>&lt;form am-form="multicolumn aligned"&gt;</code>
                         </p>
                     </blockquote>
-                    <form am-form="multicolumn aligned">
+                    <form am-layout="multicolumn aligned">
                         <div>
                             <label for="multicolumn-aligned-email">Email</label>
                             <input id="multicolumn-aligned-email" type="email" placeholder="Email">
@@ -2016,6 +1935,88 @@
                 </div>
             </div>
         </section>
+<hr />
+
+        <section am-component="grid" am-padding>
+            <div am-grid="row">
+                <div am-grid="block">
+                    <h2>
+                        Outline the layout
+                    </h2>
+                    <p>
+                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
+                    </p>
+                    <h3>
+                        Outline
+                    </h3>
+                    <blockquote>
+                        <p>
+                            <code>&lt;article am-layout="outline"&gt;</code>
+                        </p>
+                    </blockquote>
+                    <article am-layout="outline">
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                        <section>
+                            <h1>
+                                Heading
+                            </h1>
+                            <P>
+                                Paragraph
+                            </P>
+                        </section>
+                    </article>
+                </div>
+                <div am-grid="block" am-block="portrait-full" am-padding>
+                    <h3>
+                        Code
+                    </h3>
+                    <pre>
+&lt;article am-layout="outline"&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        &lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        &lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;
+            Heading
+        &lt;/h1&gt;
+        &lt;p&gt;
+            Paragraph
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+                        </pre>
+                </div>
+            </div>
+        </section>
+        <hr />
     </article>
     <article class="am-secondary" am-padding>
         <h1>

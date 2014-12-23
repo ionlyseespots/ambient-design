@@ -1,62 +1,9 @@
 // Layout for sections and outlines is linear.
-// ou can specify a vertical layout direction by adding the attribute and value am-layout="vertical" to the HTML5 article element.
+// You can specify a vertical layout direction by adding the attribute and value am-layout="vertical" to the HTML5 article element.
 [am-layout~="vertical"] {
   & > section {
     .flex-basis(auto); //  https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
-  }
-}
-
-//// em for margin & padding is more consistent than viewport sizing for inner HTML
-//[am-layout~="grid"] {
-//  & [am-layout_gutter="padding"] {
-//    padding: 0;
-//    & > div[am-layout="column"] {
-//      padding-left:1em;
-//    }
-//    & > [am-layout="column"]:first-of-type {
-//      margin-left:-1em;
-//    }
-//    @media (orientation:portrait){
-//      &[am-layout_gutter~="padding"] {
-//        & > [am-layout="column"] {
-//          padding-left:0;
-//        }
-//        & > [am-layout="column"]:first-of-type {
-//          margin-left:0;
-//        }
-//      }
-//    }
-//  }
-//  & [am-layout_gutter="margin"] {
-//    margin: 0;
-//    & > [am-layout="column"] {
-//      margin-left:1em;
-//    }
-//    & > section:first-of-type, header + div[am-layout="column"], nav + div[am-layout="column"], footer + div[am-layout="column"], h1 + div[am-layout="column"], h2 + div[am-layout="column"], h3 + div[am-layout="column"], h4 + div[am-layout="column"], h5 + div[am-layout="column"], h6 + div[am-layout="column"], hr + div[am-layout="column"], p + div[am-layout="column"] {
-//      margin-left: 0;
-//    }
-//    @media (orientation:portrait){
-//      &[am-layout_gutter~="margin"] {
-//        & > [am-layout="column"] {
-//          margin-left: 0;
-//        }
-//      }
-//    }
-//
-//  }
-//}
-
-// useful for testing document outline and displaying nested content
-// uses same color as default primary RGB color value
-[am-layout~="outline"] {
-  &[am-gutter~="padding"] p {
-    background-color: rgba(93, 116, 137, 0.15);
-    border: 1px solid rgba(93, 116, 137, 0.2);
-  }
-  article, section, aside, div {
-    background-color: rgba(66,139,202, 0.15);
-    border: 1px solid rgba(66,139,202, 0.2);
   }
 }
 
@@ -539,5 +486,18 @@ nav[am-layout~="vertical"] {
 
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
+  }
+}
+
+// useful for testing document outline and displaying nested content
+// uses same color as default primary RGB color value
+[am-layout~="outline"] {
+  &[am-gutter~="padding"] p {
+    background-color: rgba(93, 116, 137, 0.15);
+    border: 1px solid rgba(93, 116, 137, 0.2);
+  }
+  article, section, aside, div {
+    background-color: rgba(66,139,202, 0.15);
+    border: 1px solid rgba(66,139,202, 0.2);
   }
 }
