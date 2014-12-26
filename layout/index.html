@@ -62,331 +62,79 @@
             </p>
             <blockquote>
                 <p>
-                    Do use HTML5 sectioning elements to scaffold content in the document outline.<br />
+                    Do use HTML5 sectioning elements to build the intent of content in the document outline.<br />
                     Do <strong>NOT</strong> use HTML5 sectioning elements as a replacement for content better suited to a <code>div</code>.
                 </p>
             </blockquote>
             <article am-layout="outline">
                 <section>
-                    <header>
-                        <p>
-                            Example simple outline.
-                        </p>
-                        <h4>
-                            Simple outline
-                        </h4>
+                    <header role="banner">
+                        <h1>
+                            header
+                        </h1>
                     </header>
                     <hr />
 
-                    <nav>
-                        <a href="#">Nav</a>
-                        <a href="#">Nav</a>
-                        <a href="#">Nav</a>
+                    <nav role="navigation">
+                        <a href="#">nav</a>
+                        <a href="#">nav</a>
+                        <a href="#">nav</a>
                     </nav>
                     <hr />
 
                     <article>
-                        <h1>
-                            Heading 1
-                        </h1>
-                        <p>
-                            Paragraph
-                        </p>
                         <section>
                             <h1>
-                                Heading 1
+                                Hello, world!
                             </h1>
-                            <p>
-                                Paragraph
-                            </p>
                         </section>
                         <aside>
                             <p>
-                                Paragraph
+                                aside
                             </p>
                         </aside>
                     </article>
-                    <footer>
+                    <footer role="contentinfo">
                         <p>
-                            Paragraph
+                            sticky footer
                         </p>
                     </footer>
                 </section>
-                <pre><code>
-&lt;nav&gt;
+            </article>
+                <pre>
+&lt;header role="banner"&gt;
+   &lt;h1&gt;
+        header
+   &lt;/h1&gt;
+&lt;/header&gt;
+&lt;hr /&gt;
+
+&lt;nav role="navigation"&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
     &lt;a href="#"&gt;nav&lt;/a&gt;
 &lt;/nav&gt;
 &lt;hr /&gt;
-&lt;header&gt;
-   &lt;h1&gt;
-        Heading 1
-   &lt;/h1&gt;
-   &lt;p&gt;
-        Paragraph
-   &lt;/p&gt;
-&lt;/header&gt;
+
 &lt;article&gt;
     &lt;section&gt;
-           &lt;h1&gt;
-                Heading 1
-           &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
+        &lt;h1&gt;
+            Hello, world!
+        &lt;/h1&gt;
     &lt;/section&gt;
     &lt;aside&gt;
-       &lt;p&gt;
-            Paragraph
-       &lt;/p&gt;
+        &lt;h1&gt;
+            aside
+        &lt;/h1&gt;
     &lt;/aside&gt;
 &lt;/article&gt;
-&lt;footer&gt;
-   &lt;p&gt;
-        Paragraph
-   &lt;/p&gt;
-&lt;/footer&gt;
-                </code></pre>
-                <section am-margin="top">
-                    <header>
-                        <p>
-                            Example complex outline.
-                        </p>
-                        <h1>
-                            Complex outline
-                        </h1>
-                    </header>
-                    <hr />
-
-                    <nav>
-                        <a href="#">Nav</a>
-                        <a href="#">Nav</a>
-                        <a href="#">Nav</a>
-                    </nav>
-                    <hr />
-
-                    <article>
-                        <h1>
-                            Heading 1
-                        </h1>
-                        <section>
-                            <h1>
-                                Heading 1
-                            </h1>
-                            <h2>
-                                Heading 2
-                            </h2>
-                            <article>
-                                <section>
-                                    <nav>
-                                        <a href="#">Nav</a>
-                                        <a href="#">Nav</a>
-                                        <a href="#">Nav</a>
-                                    </nav>
-                                    <h1>
-                                        Heading 1
-                                    </h1>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                    <div>
-                                        div
-                                    </div>
-                                </section>
-
-                            </article>
-                            <footer>
-                                <p>
-                                    Paragraph
-                                </p>
-                            </footer>
-                        </section>
-                        <section>
-                            <h3>
-                                Heading 3
-                            </h3>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                        </section>
-                        <section>
-                            <h2>
-                                Heading 2
-                            </h2>
-
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                            <div>
-                                div
-                            </div>
-                            <footer>
-                                <p>
-                                    Paragraph
-                                </p>
-                            </footer>
-                        </section>
-                        <footer>
-                            <p>
-                                Paragraph
-                            </p>
-                        </footer>
-                    </article>
-                </section>
-                <pre>
-&lt;header&gt;
-   &lt;h1&gt;
-        Heading 1
-   &lt;/h1&gt;
-   &lt;p&gt;
-        Paragraph
-   &lt;/p&gt;
-&lt;/header&gt;
-&lt;hr /&gt;
-&lt;nav&gt;
-    &lt;a href="#"&gt;nav&lt;/a&gt;
-    &lt;a href="#"&gt;nav&lt;/a&gt;
-    &lt;a href="#"&gt;nav&lt;/a&gt;
-&lt;/nav&gt;
-&lt;hr /&gt;
-&lt;article&gt;
-    &lt;header&gt;
-       &lt;h1&gt;
-            Heading 1
-       &lt;/h1&gt;
-       &lt;p&gt;
-            Paragraph
-       &lt;/p&gt;
-    &lt;/header&gt;
-    &lt;section&gt;
-        &lt;nav&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-            &lt;a href="#"&gt;nav&lt;/a&gt;
-        &lt;/nav&gt;
-        &lt;hr /&gt;
-        &lt;header&gt;
-           &lt;h1&gt;
-                Heading 1
-           &lt;/h1&gt;
-           &lt;h2&gt;
-                Heading 2
-           &lt;/h2&gt;
-           &lt;h3&gt;
-                Heading 3
-           &lt;/h3&gt;
-        &lt;/header&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-        &lt;div&gt;
-            div
-        &lt;/div&gt;
-        &lt;div&gt;
-            div
-        &lt;/div&gt;
-        &lt;div&gt;
-            div
-        &lt;/div&gt;
-        &lt;article&gt;
-           &lt;h1&gt;
-                Heading 1
-           &lt;/h1&gt;
-            &lt;section am-component="grid"&gt;
-                &lt;div am-grid="row"&gt;
-                    &lt;div am-grid="block" am-block="half"&gt;
-                        &lt;h1&gt;
-                            Grid
-                        &lt;/h1&gt;
-                    &lt;/div&gt;
-                    &lt;div am-grid="block" am-block="fourth"&gt;
-                        1
-                    &lt;/div&gt;
-                    &lt;div am-grid="block" am-block="fourth"&gt;
-                        2
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div am-grid="row"&gt;
-                    &lt;div am-grid="block"&gt;
-                        1
-                    &lt;/div&gt;
-                    &lt;div am-grid="block"&gt;
-                        2
-                    &lt;/div&gt;
-                    &lt;div am-grid="block"&gt;
-                        3
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div am-grid="row"&gt;
-                    &lt;div am-grid="block"&gt;
-                        1
-                    &lt;/div&gt;
-                    &lt;div am-grid="block"&gt;
-                        2
-                    &lt;/div&gt;
-                    &lt;div am-grid="block"&gt;
-                        3
-                    &lt;/div&gt;
-                    &lt;div am-grid="block"&gt;
-                        4
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div am-grid="row"&gt;
-                    &lt;div am-grid="block" am-block="three-fourths"&gt;
-                        1
-                    &lt;/div&gt;
-                    &lt;div am-grid="block" am-block="fourth"&gt;
-                        2
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/section&gt;
-            &lt;section&gt;
-                &lt;h1&gt;
-                    Heading 1
-                &lt;/h1&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-                &lt;div&gt;
-                    div
-                &lt;/div&gt;
-                &lt;p&gt;
-                    Paragraph
-                &lt;/p&gt;
-                &lt;footer&gt;
-                    &lt;p&gt;
-                        Paragraph
-                    &lt;/p&gt;
-                &lt;/footer&gt;
-            &lt;/section&gt;
-        &lt;/article&gt;
-    &lt;/section&gt;
-    &lt;footer&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/article&gt;
-&lt;footer&gt;
+&lt;footer role="contentinfo"&gt;
     &lt;p&gt;
-        Paragraph
+        sticky footer
     &lt;/p&gt;
 &lt;/footer&gt;
-                </pre>
-            </article>
+               </pre>
+
         </section>
 
         <section am-padding>
@@ -394,10 +142,10 @@
                 Build the intent of your content
             </h3>
             <p>
-                Back to basics. Feel free to use HTML5 semantic elements to scaffold content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>, whenever and wherever you like.
+                Back to basics. Feel free to use HTML5 semantic elements to build your content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>, whenever and wherever you like.
             </p>
             <p>
-                You can add additional layout properties to your scaffold as child attributes to gradually build a hierarchy that defines your layout.
+                you can add additional <code>am-layout</code> properties as well as extend child attributes <code>am-layout_SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
             </p>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">
                 <h3>
@@ -411,7 +159,7 @@
                 <thead>
                 <tr>
                     <th scope="col">HTML5</th>
-                    <th scope="col">Scaffold</th>
+                    <th scope="col">Scaffolding</th>
                     <th scope="col">Description</th>
                 </tr>
                 </thead>
@@ -467,7 +215,7 @@
                 <thead>
                 <tr>
                     <th scope="col">HTML5</th>
-                    <th scope="col">Scaffold</th>
+                    <th scope="col">Scaffolding</th>
                     <th scope="col">Description</th>
                 </tr>
                 </thead>

@@ -873,6 +873,79 @@ article[am-layout~="vertical"] > section {
 [am-layout~="grid"][am-layout_gutter="padding"] div[am-layout="row"] div[am-layout^="column"]:first-of-type {
   padding-left: 0;
 }
+[am-component~="grid"] [am-grid="row"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"] {
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="fourth"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 25%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="third"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 33.333%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="half"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 50%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="two-thirds"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 66.6667%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="three-fourths"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 75%;
+}
+[am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="full"] {
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+  width: 100%;
+}
+@media (orientation: portrait) {
+  [am-component~="grid"] [am-grid="row"] [am-grid="block"][am-block="portrait-full"] {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    -ms-flex-basis: auto;
+    flex-basis: auto;
+    width: 100%;
+  }
+}
 [am-layout~="card"] {
   -webkit-column-width: 15em;
   -webkit-column-gap: 1em;
