@@ -1,9 +1,4 @@
-// Grid
-// Ambient semantic layout
-
-// http://www.w3.org/TR/CSS2/visuren.html
-// Block elements are 100% width of parent element, if width is not specified.
-
+// Ambient
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
   box-sizing: inherit;
@@ -25,8 +20,21 @@ body {
     width: auto;
   }
 }
+// http://www.w3.org/TR/CSS2/visuren.html
+// Block elements are 100% width of parent element, if width is not specified.
 // section clearing
-header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
+header,
+nav,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+div {
   width: 100%;
   word-wrap: break-word;
 }
@@ -64,13 +72,13 @@ footer {
   .flex-flow(row wrap);
   .flex-order(2);
 }
-
 // portrait
 @media (orientation:portrait){
   article {
     .flex-direction(column);
   }
-  section, aside {
+  section,
+  aside {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
   }
@@ -81,24 +89,19 @@ footer {
     position: static;
   }
 }
-
 // Theme
 // Ambient base styles
 // Let's keep a Vertical Rhythm
-
-// viewport sizing on type is impacted by virtual keyboard and debugger opening making it too experimental
-
+// I prefer viewport units on type but is too experimental
 // Typography via Typeplate
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
 // https://github.com/typeplate/typeplate.github.io
 // TODO bring in typeplate as less
-
 html {
   font-size: 112.5%; //* base font size 18px with 1.65 line-height */
   // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
   line-height: 1.65;
 }
-
 // % root font size + rem element font sizes + em for margins + padding
 body {
   background-color: #fff;
@@ -111,7 +114,13 @@ body {
   & > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
-    & h1, h2, h3, h4, h5, h6 {
+    &
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: @am-primary-bg;
     }
     & a {
@@ -122,20 +131,21 @@ body {
     }
   }
 }
-
-
-
 // Agree::: Do NOT use heading as sub titles
 // http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
 // http://stackoverflow.com/questions/22444118/correct-markup-for-headers/22451639#22451639
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
   color: #222;
   font-weight: 300;
 }
-
 /*  base font-size * base line-height = current font-size */
 h1 {
 
@@ -174,7 +184,6 @@ h6 {
   margin-bottom: 29.7px;
   margin-bottom: 1.65rem;
 }
-
 p {
   margin: 0 0 1.5em;
 }
@@ -199,8 +208,11 @@ code {
   color: #c7254e;
   font-weight: normal;
   font-size: 90%;
-  padding: 2px 4px; }
-kbd, pre, samp {
+  padding: 2px 4px;
+}
+kbd,
+pre,
+samp {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 blockquote {
   border-left: 5px solid #e9e9e9;
@@ -231,10 +243,12 @@ label {
   font-size: 80%;
   font-weight: 700;
   margin-bottom: 5px; }
-input, select, textarea {
+input,
+select,
+textarea {
   font-size: inherit;
-  line-height: inherit; }
-
+  line-height: inherit;
+}
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_%3Cbutton%3E_to_finish
 button {
   -moz-user-select: none;
@@ -254,7 +268,6 @@ button {
   border-color: #ccc;
   color: #333;
 }
-
 hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
@@ -294,21 +307,18 @@ table {
     }
   }
 }
-
 table tr {
   background-color: #fff;
   border-top: 1px solid #ccc;
 }
-
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 6px 13px;
-
 }
 table th {
   font-weight: bold;
 }
-
 abbr {
   -webkit-font-variant: small-caps;
   -moz-font-variant: small-caps;
@@ -334,7 +344,6 @@ var {
   -ms-hyphens: none;
   hyphens: none;
 }
-
 // Vertical rule
 [am-verticalrule] {
   width: 1px;
@@ -343,13 +352,11 @@ var {
   height: 99.9%;
   position: absolute;
 }
-
 @media (orientation:portrait){
   html {
     font-size: 90%;
   }
 }
-
 @media (max-width: 30em){
   html {
     font-size: 80%;

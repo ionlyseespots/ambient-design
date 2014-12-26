@@ -25,7 +25,7 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="equal" role="navigation">
+<nav am-layout="horizontal" role="navigation">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html">Semantic</a>
     <a href="../design-patterns/index.html" class="am-active">Layout</a>
@@ -50,7 +50,7 @@
                 <i class="fa fa-css3"></i> Ambient is layout
             </h2>
             <p>
-                Ambient displays page layout as CSS3 attributes on elements.
+                Ambient makes use of CSS3 attributes on elements for page layout.
             </p>
         </header>
         <section am-padding>
@@ -1006,21 +1006,21 @@
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
-                        Base Nav
+                        Horizontal nav
                     </h2>
                     <p>
-                        To create a base nav with the base nav UI pattern, add the attribute <code>am-nav</code> to any nav.
+                        To create a horizontal nav add the attribute and value <code>am-layout="horizontal"</code> to any <code>nav</code>.
                     </p>
                     <h3>
-                        Base
+                        Horizontal
                     </h3>
                     <blockquote>
                         <p>
-                            <code>&lt;nav am-nav&gt;</code>
+                            <code>&lt;nav am-layout="horizontal"&gt;</code>
                         </p>
                     </blockquote>
                     <hr />
-                    <nav am-layout="equal">
+                    <nav am-layout="horizontal">
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
                         <a href="#">Link Text</a>
@@ -1047,181 +1047,17 @@
             <div am-grid="row">
                 <div am-grid="block" am-padding>
                     <h2>
-                        Left aligned nav
-                    </h2>
-                    <p>
-                        To create a left aligned nav with the base nav UI pattern, add the attribute <code>am-nav="left-align"</code> to any nav.
-                    </p>
-                    <h3>
-                        Left align
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-nav="left-align"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="left-align">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre><code>
-&lt;nav am-nav="left-align"&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-&lt;/nav&gt;
-                    </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Right aligned nav
-                    </h2>
-                    <p>
-                        To create a right aligned nav with the base nav UI pattern, add the attribute <code>am-nav="right-aligned"</code> to any nav.
-                    </p>
-                    <h3>
-                        Right align
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-nav="right-align"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="right-align">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre><code>
-&lt;nav am-nav="right-align"&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-&lt;/nav&gt;
-                    </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Centered nav
-                    </h2>
-                    <p>
-                        To create a center aligned nav with the base nav UI pattern, add the attribute <code>am-nav="center"</code> to any nav.
-                    </p>
-                    <h3>
-                        Centered
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-nav="center"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="center">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre><code>
-&lt;nav am-nav="center"&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-&lt;/nav&gt;
-                    </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
-                        Justified nav
-                    </h2>
-                    <p>
-                        To create a justify aligned nav with the base nav UI pattern, add the attribute <code>am-nav="justify"</code> to any nav.
-                    </p>
-                    <h3>
-                        Justified
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-nav="justify"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="justify">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-grid="block" am-block="portrait-full" am-padding>
-                    <h3>
-                        Code
-                    </h3>
-                    <pre><code>
-&lt;nav am-nav="justify"&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-    &lt;a href="#"&gt;Link Text&lt;/al&gt;
-&lt;/nav&gt;
-                    </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
-
-        <section am-component="grid" am-padding>
-            <div am-grid="row">
-                <div am-grid="block" am-padding>
-                    <h2>
                         Vertical nav
                     </h2>
                     <p>
-                        To create a vertical nav with the base nav UI pattern, add the attribute <code>am-nav="vertical"</code> to any nav.
+                        To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
                     </p>
                     <h3>
                         Vertical
                     </h3>
                     <blockquote>
                         <p>
-                            <code>&lt;nav am-nav="vertical"&gt;</code>
+                            <code>&lt;nav am-layout="vertical"&gt;</code>
                         </p>
                     </blockquote>
                     <hr />
