@@ -35,7 +35,7 @@
     <header am-padding class="am-primary">
         <p>
             Overview<br />
-            Introduction | Namespaces | Layout examples: linear, grid, card, nav & form
+            Introduction | Namespaces | Define your layout
         </p>
         <h1>
             Layout attributes
@@ -691,7 +691,7 @@
                 </h1>
                 <p>
                     Card layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
-                    The default orientation on portrait for card layout does not stack.
+                    The default orientation on portrait for card layout is 2 columns.
                 </p>
             </header>
             <div am-grid="row">
@@ -700,7 +700,7 @@
                         Multiple cards
                     </h2>
                     <p>
-                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any HTML semantic element. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any HTML semantic element.
                     </p>
                     <h3>
                         Multiple
@@ -862,7 +862,7 @@
                         Vertical cards
                     </h2>
                     <p>
-                        *To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any HTML semantic element. On orientation portrait, cards do <strong>NOT</strong> automatically stack.
+                        *To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any HTML semantic element.
                     </p>
                     <p>
                         <small>*Ambient values are interchangeable. Because we define the layout as <code>card</code>, we can extend the linear layout value <code>vertical</code> to the card layout.</small>
@@ -1050,7 +1050,10 @@
                         Vertical nav
                     </h2>
                     <p>
-                        To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
+                        *To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
+                    </p>
+                    <p>
+                        <small>*Ambient values are interchangeable. Because we define the root semantic element as <code>nav</code>, we can extend the linear layout value <code>vertical</code> to the nav layout.</small>
                     </p>
                     <h3>
                         Vertical
@@ -1751,7 +1754,6 @@
                 </div>
             </div>
         </section>
-        <hr />
     </article>
     <article class="am-secondary" am-padding>
         <h1>

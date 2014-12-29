@@ -1,7 +1,7 @@
 // Define your layout.
 // The am-layout attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements. Once you've defined the root element, you can add additional am-layout properties as well as extend child attributes am-layout_SOMETHING to your scaffold to gradually build a hierarchy that defines your layout.
-// Linear layout
-// You can specify a vertical layout direction by adding the attribute and value am-layout="vertical" to the HTML5 article element.
+// Linear layout :: explicit sections are horizontal by default
+// ---------------------------------------------------
 article[am-layout~="vertical"] {
   & > section {
     .flex-basis(auto); //  https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
@@ -9,6 +9,7 @@ article[am-layout~="vertical"] {
   }
 }
 // grid layout
+// ---------------------------------------------------
 [am-layout~="grid"] {
   & div[am-layout="row"] {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
@@ -115,6 +116,7 @@ article[am-layout~="vertical"] {
   }
 }
 // card layout
+// ---------------------------------------------------
 [am-layout~="card"]   {
   -webkit-column-width:  15em;
   -webkit-column-gap: 1em;
@@ -152,6 +154,7 @@ article[am-layout~="vertical"] {
   }
 }
 // Forms
+// ---------------------------------------------------
 // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
 // <input> is a replaced element and does not allow ::pseudo CSS so pre/post icons are prescribed with label + input design pattern
 form[am-layout] input, form[am-layout] select, form[am-layout] textarea {
@@ -184,12 +187,16 @@ form[am-layout] label {
   & input {
     width: auto; }
 }
-// stacked
+//== Inline
+form[am-layout~="inline"] {
+  // inherits default am-layout semantic root element properties
+}
+//== Stacked
 form[am-layout~="stacked"] {
   & input, & select, & textarea, & label {
     width: 100%; }
 }
-// aligned
+//== Aligned
 form[am-layout~="aligned"] > span {
   .flex-display;
   .flex-flow(row wrap);
@@ -199,7 +206,7 @@ form[am-layout~="aligned"] > span {
     .flex(1 8.3333%);
   }
 }
-// Multi-column
+//== Multi-column
 form[am-layout~="multicolumn"]  {
   .flex-display;
   .flex-flow(row wrap);
@@ -235,9 +242,13 @@ form[am-posticon]:after {
   content: attr(am-posticon);
 }
 // Nav
+// ---------------------------------------------------
 nav[am-layout] {
     &[am-layout~="horizontal"] {
       .justify-content(flex-start);
+      a {
+        // inherits default am-layout semantic root element properties
+      }
     }
     &[am-layout~="vertical"] {
       .flex-direction(column);
@@ -264,8 +275,8 @@ nav[am-layout] {
     }
   }
 }
-// useful for testing document outline and displaying nested content
-// uses same color as default primary RGB color value
+// Outline :: useful for testing document outline and displaying nested content :: uses same color as default primary RGB color value
+// ---------------------------------------------------
 [am-layout~="outline"] {
   article,
   section,
