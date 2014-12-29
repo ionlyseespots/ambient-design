@@ -18,7 +18,6 @@ article[am-layout~="vertical"] {
     width: 100%;
     & div[am-layout="column"] {
       .flex(1 8.3333%);
-
       &[am-layout_columnWidth="third"] {
         .flex-basis(auto);
         width: 33.333%;
@@ -31,22 +30,19 @@ article[am-layout~="vertical"] {
         .flex-basis(auto);
         width: 25%;
       }
-
       &[am-layout_columnWidth="half"] {
         .flex-basis(auto);
         width: 50%;
       }
-
       &[am-layout_columnWidth="three-fourths"] {
         .flex-basis(auto);
         width: 75%;
       }
-    }
-    // portrait sizing is a possibility, making use of full width for now but will potentially have variables for both portrait & landscape
-    & div[am-layout="portrait-full"] {
-      @media (orientation:portrait){
-        .flex-basis(auto);
-        width: 100%;
+      &[am-layout_columnWidth="portrait-full"] {
+        @media (orientation:portrait){
+          .flex-basis(auto);
+          width: 100%;
+        }
       }
     }
   }
