@@ -794,7 +794,7 @@ article[am-layout~="vertical"] > section {
     flex-basis: auto;
     width: 100%;
 }
-[am-layout~="grid"] div[am-layout="row"] {
+[am-layout^="grid"] div[am-row] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-basis: auto;
@@ -810,41 +810,41 @@ article[am-layout~="vertical"] > section {
     flex-flow: row wrap;
     width: 100%;
 }
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"] {
+[am-layout^="grid"] div[am-row] div[am-col] {
     -webkit-flex: 1 8.3333%;
     -moz-flex: 1 8.3333%;
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
 }
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="third"] {
-    -webkit-flex-basis: auto;
-    -moz-flex-basis: auto;
-    -ms-flex-basis: auto;
-    flex-basis: auto;
-    width: 33.333%;
-}
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="two-thirds"] {
-    -webkit-flex-basis: auto;
-    -moz-flex-basis: auto;
-    -ms-flex-basis: auto;
-    flex-basis: auto;
-    width: 66.6667%;
-}
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="fourth"] {
+[am-layout^="grid"] div[am-row] div[am-col][am-col="25"] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-basis: auto;
     flex-basis: auto;
     width: 25%;
 }
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="half"] {
+[am-layout^="grid"] div[am-row] div[am-col][am-col="33"] {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    -ms-flex-basis: auto;
+    flex-basis: auto;
+    width: 33.333%;
+}
+[am-layout^="grid"] div[am-row] div[am-col][am-col="66"] {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    -ms-flex-basis: auto;
+    flex-basis: auto;
+    width: 66.6667%;
+}
+[am-layout^="grid"] div[am-row] div[am-col][am-col="50"] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-basis: auto;
     flex-basis: auto;
     width: 50%;
 }
-[am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="three-fourths"] {
+[am-layout^="grid"] div[am-row] div[am-col][am-col="75"] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-basis: auto;
@@ -852,7 +852,7 @@ article[am-layout~="vertical"] > section {
     width: 75%;
 }
 @media (orientation: portrait) {
-    [am-layout~="grid"] div[am-layout="row"] div[am-layout="column"][am-layout_columnWidth="portrait-full"] {
+    [am-layout^="grid"] div[am-row] div[am-col][am-col="portrait-100"] {
         -webkit-flex-basis: auto;
         -moz-flex-basis: auto;
         -ms-flex-basis: auto;
@@ -860,20 +860,20 @@ article[am-layout~="vertical"] > section {
         width: 100%;
     }
 }
-[am-layout~="grid"][am-layout_gutter="margin"] div[am-layout="row"] div[am-layout^="column"] {
+[am-layout^="grid"][am-layout$="gutter margin"] div[am-row] div[am-col] {
     margin-left: 1em;
 }
-[am-layout~="grid"][am-layout_gutter="margin"] div[am-layout="row"] div[am-layout^="column"]:first-of-type {
+[am-layout^="grid"][am-layout$="gutter margin"] div[am-row] div[am-col]:first-of-type {
     margin-left: -1em;
     padding-left: 1em;
 }
-[am-layout~="grid"][am-layout_gutter="padding"] div[am-layout="row"] div[am-layout^="column"] {
+[am-layout^="grid"][am-layout$="gutter padding"] div[am-row] div[am-col] {
     padding-left: 1em;
 }
-[am-layout~="grid"][am-layout_gutter="padding"] div[am-layout="row"] div[am-layout^="column"]:first-of-type {
+[am-layout^="grid"][am-layout$="gutter padding"] div[am-row] div[am-col]:first-of-type {
     padding-left: 0;
 }
-[am-layout~="card"] {
+[am-layout^="card"] {
     -webkit-column-width: 15em;
     -webkit-column-gap: 1em;
     -webkit-column-count: auto;
@@ -889,14 +889,14 @@ article[am-layout~="vertical"] > section {
     padding-left: .5em;
     padding-right: .5em;
 }
-[am-layout~="card"] > div {
+[am-layout^="card"] > div {
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
     padding: 1em;
     border-radius: 2px;
     margin: .5em 0;
     display: inline-block;
 }
-[am-layout~="card"][am-layout~="vertical"] {
+[am-layout^="card"][am-layout~="vertical"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     -ms-column-count: 1;
@@ -904,7 +904,7 @@ article[am-layout~="vertical"] > section {
     padding: 0;
 }
 @media (orientation: portrait) {
-    [am-layout~="card"] {
+    [am-layout^="card"] {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         -ms-column-count: 2;

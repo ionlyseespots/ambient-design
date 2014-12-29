@@ -10,35 +10,35 @@ article[am-layout~="vertical"] {
 }
 // grid layout
 // ---------------------------------------------------
-[am-layout~="grid"] {
-  & div[am-layout="row"] {
+[am-layout^="grid"] {
+  & div[am-row] {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     .flex-display;
     .flex-flow(row wrap);
     width: 100%;
-    & div[am-layout="column"] {
+    & div[am-col] {
       .flex(1 8.3333%);
-      &[am-layout_columnWidth="third"] {
-        .flex-basis(auto);
-        width: 33.333%;
-      }
-      &[am-layout_columnWidth="two-thirds"] {
-        .flex-basis(auto);
-        width: 66.6667%;
-      }
-      &[am-layout_columnWidth="fourth"] {
+      &[am-col="25"] {
         .flex-basis(auto);
         width: 25%;
       }
-      &[am-layout_columnWidth="half"] {
+      &[am-col="33"] {
+        .flex-basis(auto);
+        width: 33.333%;
+      }
+      &[am-col="66"] {
+        .flex-basis(auto);
+        width: 66.6667%;
+      }
+      &[am-col="50"] {
         .flex-basis(auto);
         width: 50%;
       }
-      &[am-layout_columnWidth="three-fourths"] {
+      &[am-col="75"] {
         .flex-basis(auto);
         width: 75%;
       }
-      &[am-layout_columnWidth="portrait-full"] {
+      &[am-col="portrait-100"] {
         @media (orientation:portrait){
           .flex-basis(auto);
           width: 100%;
@@ -46,9 +46,9 @@ article[am-layout~="vertical"] {
       }
     }
   }
-  &[am-layout_gutter="margin"] {
-    & div[am-layout="row"] {
-      & div[am-layout^="column"] {
+  &[am-layout$="gutter margin"] {
+    & div[am-row] {
+      & div[am-col] {
         margin-left:1em;
         &:first-of-type {
           margin-left: -1em;
@@ -57,9 +57,9 @@ article[am-layout~="vertical"] {
       }
     }
   }
-  &[am-layout_gutter="padding"] {
-    & div[am-layout="row"] {
-      & div[am-layout^="column"] {
+  &[am-layout$="gutter padding"] {
+    & div[am-row] {
+      & div[am-col] {
         padding-left:1em;
         &:first-of-type {
           padding-left: 0;
@@ -70,7 +70,7 @@ article[am-layout~="vertical"] {
 }
 // card layout
 // ---------------------------------------------------
-[am-layout~="card"]   {
+[am-layout^="card"]   {
   -webkit-column-width:  15em;
   -webkit-column-gap: 1em;
   -webkit-column-count: auto;

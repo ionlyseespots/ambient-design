@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>UI patterns for Ambient</title>
+    <title>Ambient layout attributes</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,7 +58,7 @@
                 We define our own namespaces
             </h3>
             <p>
-                Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as HTML5 semantic elements.
+                Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as semantic elements.
             </p>
             <blockquote>
                 <p>
@@ -89,8 +89,9 @@
                     Root
                 </h4>
                 <p>
-                    Define your layout. The <code>am-layout</code> attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
-                    Once you've defined the root element, you can add additional <code>am-layout</code> properties as well as extend child attributes <code>am-layout_SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
+                    Define your layout. The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
+                    Once you've defined the root semantic element layout,
+                    you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
                 </p>
                 <p>
                     <code>am-layout</code><br />
@@ -229,8 +230,9 @@
                 Root
             </h1>
             <p>
-                Define your layout. The <code>am-layout</code> attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements.
-                Once you've defined the root element, you can add additional <code>am-layout</code> properties as well as extend child attributes <code>am-layout_SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
+                Define your layout. The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
+                Once you've defined the root semantic element layout,
+                you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
             </p>
         </header>
         <section id="section" am-layout="grid" am-padding>
@@ -239,13 +241,16 @@
                     Linear layout
                 </h1>
                 <p>
+                    <small>Default</small>
+                </p>
+                <p>
                     The HTML5 <code>article</code> element aligns explicit sections in a single direction, vertically or horizontally.
                     You can specify a vertical layout direction for explicit sections by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
                     The default orientation is horizontal.
                 </p>
             </header>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h3>
                         Horizontal
                     </h3>
@@ -266,7 +271,7 @@
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -286,8 +291,8 @@
                 </div>
             </div>
 
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h3>
                         Vertical
                     </h3>
@@ -311,7 +316,7 @@
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -339,17 +344,17 @@
                     Grid layout
                 </h1>
                 <p>
-                    Grid layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
+                    Grid layout is used to structure content, and thus relies on the root semantic element for intent.
                     The default orientation on portrait for grid layout does not stack.
                 </p>
             </header>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Grid layout with equal widths
                     </h2>
                     <p>
-                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any HTML5 semantic element.
+                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any semantic element.
 
                     </p>
                     <blockquote>
@@ -357,47 +362,47 @@
                             <code>&lt;section am-layout="grid"&gt;</code>
                         </p>
                         <p>
-                            To add a row, add the attribute and value <code>am-layout="row"</code> to a child div.<br />
-                            To add a column, add the attribute and value <code>am-layout="column"</code> to a child div.
+                            To add a row, add the child attribute <code>am-row</code> to a child div.<br />
+                            To add a column, add the child attribute <code>am-col</code> to a child div.
                         </p>
                     </blockquote>
                     <article am-layout="outline">
                         <section am-layout="grid">
-                            <div am-layout="row">
-                                <div am-layout="column">
+                            <div am-row>
+                                <div am-col>
                                     1
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column">
+                            <div am-row>
+                                <div am-col>
                                     1/2
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/2
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column">
+                            <div am-row>
+                                <div am-col>
                                     1/3
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/3
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/3
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column">
+                            <div am-row>
+                                <div am-col>
                                     1/4
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/4
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/4
                                 </div>
-                                <div am-layout="column">
+                                <div am-col>
                                     1/4
                                 </div>
                             </div>
@@ -407,47 +412,47 @@
                         Scales up to 12 equal columns.
                     </p>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
                     <pre>
 &lt;section am-layout="grid"&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1/2
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             2/2
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1/3
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             1/3
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             1/3
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             1/4
         &lt;/div&gt;
     &lt;/div&gt;
@@ -459,116 +464,112 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Grid layout with offset widths
                     </h2>
                     <p>
-                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any HTML5 semantic element.
+                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any semantic element.
                     </p>
                     <blockquote>
                         <p>
                             <code>&lt;section am-layout="grid"&gt;</code>
                         </p>
                         <p>
-                            To add a row, add the attribute and value <code>am-layout="row"</code> to a child div.<br />
-                            To add an offset width column, add the attribute and value <code>am-layout="column"</code> and define the offset width as <code>am-layout_columnWidth="VALUE"</code> to a child div.
+                            To add a row, add the child attribute <code>am-row</code> to a child div.<br />
+                            To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a child div.
                         </p>
                         <p>
                             Offset width values are available as
                         </p>
                         <ul>
                             <li>
-                                <code>third</code>
+                                <code>25</code>
                             </li>
                             <li>
-                                <code>two-thirds</code>
+                                <code>33</code>
                             </li>
                             <li>
-                                <code>fourth</code>
+                                <code>66</code>
                             </li>
                             <li>
-                                <code>three-fourths</code>
+                                <code>75</code>
                             </li>
                         </ul>
                     </blockquote>
                     <article am-layout="outline">
                         <section am-layout="grid">
-                            <div am-layout="row">
-                                <div am-layout="column" am-layout_columnWidth="two-thirds">
+                            <div am-row>
+                                <div am-col="66">
                                     2/3
                                 </div>
-                                <div am-layout="column" am-layout_columnWidth="third">
+                                <div am-col="33">
                                     1/3
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column" am-layout_columnWidth="third">
+                            <div am-row>
+                                <div am-col="33">
                                     1/3
                                 </div>
-                                <div am-layout="column" am-layout_columnWidth="two-thirds" >
+                                <div am-col="66" >
                                     2/3
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column" am-layout_columnWidth="three-fourths">
+                            <div am-row>
+                                <div am-col="75">
                                     3/4
                                 </div>
-                                <div am-layout="column" am-layout_columnWidth="fourth">
+                                <div am-col="25">
                                     1/4
                                 </div>
                             </div>
-                            <div am-layout="row">
-                                <div am-layout="column" am-layout_columnWidth="fourth">
+                            <div am-row>
+                                <div am-col="25">
                                     1/4
                                 </div>
-                                <div am-layout="column" am-layout_columnWidth="three-fourths" >
+                                <div am-col="75" >
                                     3/4
                                 </div>
                             </div>
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
                     <pre>
 &lt;section am-layout="grid"&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="two-thirds"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col="66"&gt;
             2/3
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="third"&gt;
+        &lt;div am-col="33"&gt;
             1/3
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="third"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col="33"&gt;
             1/3
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="two-thirds"&gt;
+        &lt;div am-col="66"&gt;
             2/3
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="three-fourths"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col="75"&gt;
             3/4
         &lt;/div&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="fourth"&gt;
+        &lt;div am-col="25"&gt;
             1/4
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="fourth"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col="25"&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-layout="column" am-layout_columnWidth="three-fourths"&gt;
+        &lt;div am-col="75"&gt;
             3/4
         &lt;/div&gt;
     &lt;/div&gt;
@@ -580,20 +581,20 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Grid layout with gutter
                     </h2>
                     <p>
-                        To create a grid layout with gutter add the child attribute and value <code>am-layout_gutter="VALUE"</code> to the root HTML5 semantic element defined with the layout attribute value <code>grid</code>.
+                        To create a grid layout with gutter add the value <code>gutter</code> as well as the gutter type to the root semantic element defined with the layout attribute value <code>am-layout="grid"</code>.
                     </p>
                     <blockquote>
                         <p>
-                            <code>&lt;section am-layout="grid" am-layout_gutter="VALUE"&gt;</code>
+                            <code>&lt;section am-layout="grid gutter"&gt;</code>
                         </p>
                         <p>
-                            Gutter width values are available as
+                            Gutter type values are available as:
                         </p>
                         <ul>
                             <li>
@@ -606,120 +607,123 @@
 
                     </blockquote>
                     <article am-layout="outline">
-                        <section am-layout="grid" am-layout_gutter="margin" am-padding>
+                        <section am-layout="grid gutter margin" am-padding>
                             <h3>Margin</h3>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
                                 </div>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         2
                                     </div>
                                 </div>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         2
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         3
                                     </div>
                                 </div>
                         </section>
-                        <section am-layout="grid" am-layout_gutter="padding" am-padding>
+                        <section am-layout="grid gutter padding" am-padding>
                             <h3>Padding</h3>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
                                 </div>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         2
                                     </div>
                                 </div>
-                                <div am-layout="row">
-                                    <div am-layout="column">
+                                <div am-row>
+                                    <div am-col>
                                         1
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         2
                                     </div>
-                                    <div am-layout="column">
+                                    <div am-col>
                                         3
                                     </div>
                                 </div>
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
+                    <p>
+                        Margin
+                    </p>
                     <pre>
-&lt;section am-layout="grid" am-layout_gutter="margin"&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column""&gt;
+&lt;section am-layout="grid gutter margin"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col"&gt;
             1
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             2
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             2
         &lt;/div&gt;
-        &lt;div am-layout="column""&gt;
+        &lt;div am-col"&gt;
             3
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
                     <p>
-                        or
+                        Padding
                     </p>
                     <pre>
-&lt;section am-layout="grid" am-layout_gutter="padding"&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column""&gt;
+&lt;section am-layout="grid gutter padding"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col"&gt;
             1
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             2
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-layout="row"&gt;
-        &lt;div am-layout="column"&gt;
+    &lt;div am-row&gt;
+        &lt;div am-col&gt;
             1
         &lt;/div&gt;
-        &lt;div am-layout="column"&gt;
+        &lt;div am-col&gt;
             2
         &lt;/div&gt;
-        &lt;div am-layout="column""&gt;
+        &lt;div am-col"&gt;
             3
         &lt;/div&gt;
     &lt;/div&gt;
@@ -736,17 +740,17 @@
                     Card layout
                 </h1>
                 <p>
-                    Card layout is used to structure content, and thus relies on the root HTML5 semantic element for intent.
+                    Card layout is used to structure content, and thus relies on the root semantic element for intent.
                     The default orientation on portrait for card layout is 2 columns.
                 </p>
             </header>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Multiple cards
                     </h2>
                     <p>
-                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any HTML semantic element.
+                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element.
                     </p>
                     <h3>
                         Multiple
@@ -825,7 +829,7 @@
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -900,16 +904,13 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Vertical cards
                     </h2>
                     <p>
-                        *To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any HTML semantic element.
-                    </p>
-                    <p>
-                        <small>*Ambient values are interchangeable. Because we define the layout as <code>card</code>, we can extend the linear layout value <code>vertical</code> to the card layout.</small>
+                        To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element.
                     </p>
                     <h3>
                         Vertical
@@ -954,13 +955,12 @@
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
                     <pre>
 &lt;section am-layout="card vertical"&gt;
-    &lt;div"&gt;
         &lt;div&gt;
             &lt;h1&gt;
                 Vertical card
@@ -988,7 +988,6 @@
                 Vertical cards have a constant width and variable height.
             &lt;/p&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
                 </div>
@@ -1003,12 +1002,12 @@
                 Nav layout
             </h1>
             <p>
-                Nav layout is used to structure navigation, and thus relies on the root HTML5 semantic <code>nav</code> element for intent.
+                Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
             </p>
         </header>
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Example nav
                     </h2>
@@ -1028,7 +1027,7 @@
                     </nav>
                     <hr />
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1045,8 +1044,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Horizontal nav
                     </h2>
@@ -1069,7 +1068,7 @@
                     </nav>
                     <hr />
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1086,16 +1085,13 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Vertical nav
                     </h2>
                     <p>
-                        *To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
-                    </p>
-                    <p>
-                        <small>*Ambient values are interchangeable. Because we define the root semantic element as <code>nav</code>, we can extend the linear layout value <code>vertical</code> to the nav layout.</small>
+                        To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
                     </p>
                     <h3>
                         Vertical
@@ -1113,7 +1109,7 @@
                     </nav>
                     <hr />
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1136,12 +1132,12 @@
                 Form layout
             </h1>
             <p>
-                Form layout is used to structure forms, and thus relies on the root HTML5 semantic <code>form</code> element for intent.
+                Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
             </p>
         </header>
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Example form
                     </h2>
@@ -1167,7 +1163,7 @@
                         <button type="submit">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1192,8 +1188,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Inline form
                     </h2>
@@ -1222,7 +1218,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1247,8 +1243,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Stacked form
                     </h2>
@@ -1278,7 +1274,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1303,8 +1299,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Aligned form
                     </h2>
@@ -1337,7 +1333,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1365,8 +1361,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Multi-column form
                     </h2>
@@ -1411,7 +1407,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1451,8 +1447,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Stacked + Aligned form
                     </h2>
@@ -1486,7 +1482,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1519,8 +1515,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Multi-column + Stacked form
                     </h2>
@@ -1568,7 +1564,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1615,8 +1611,8 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column" am-padding>
+            <div am-row>
+                <div am-col am-padding>
                     <h2>
                         Multi-column + Aligned form
                     </h2>
@@ -1667,7 +1663,7 @@
                         <button type="submit" class="am-btn-primary">Sign in</button>
                     </form>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>
@@ -1717,13 +1713,13 @@
         <hr />
 
         <section am-layout="grid" am-padding>
-            <div am-layout="row">
-                <div am-layout="column">
+            <div am-row>
+                <div am-col>
                     <h2>
                         Outline the layout
                     </h2>
                     <p>
-                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any HTML5 semantic element.
+                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any semantic element.
                     </p>
                     <h3>
                         Outline
@@ -1760,7 +1756,7 @@
                         </section>
                     </article>
                 </div>
-                <div am-layout="column" am-layout_columnWidth="portrait-full" am-padding>
+                <div am-col="portrait-100" am-padding>
                     <h3>
                         Code
                     </h3>

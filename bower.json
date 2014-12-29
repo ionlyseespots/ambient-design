@@ -1,6 +1,6 @@
 {
   "name": "ambient",
-  "version": "1.2.3",
+  "version": "1.2.5",
     "dependencies": {
     "normalize-css": "latest"
     },
