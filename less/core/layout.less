@@ -72,49 +72,6 @@ article[am-layout~="vertical"] {
     }
   }
 }
-// grids
-[am-component~="grid"] {
-  & [am-grid="row"] {
-    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-    .flex-display;
-    .flex-flow(row wrap);
-    width: 100%;
-    & [am-grid="block"] {
-      .flex(1 8.3333%);
-      &[am-block="fourth"] {
-        .flex-basis(auto);
-        width: 25%;
-      }
-      &[am-block="third"] {
-        .flex-basis(auto);
-        width: 33.333%;
-      }
-      &[am-block="half"] {
-        .flex-basis(auto);
-        width: 50%;
-      }
-      &[am-block="two-thirds"] {
-        .flex-basis(auto);
-        width: 66.6667%;
-      }
-      &[am-block="three-fourths"] {
-        .flex-basis(auto);
-        width: 75%;
-      }
-      &[am-block="full"] {
-        .flex-basis(auto);
-        width: 100%;
-      }
-      // portrait sizing is a possibility, making use of full width for now but will potentially have variables for both portrait & landscape
-      &[am-block="portrait-full"] {
-        @media (orientation:portrait){
-          .flex-basis(auto);
-          width: 100%;
-        }
-      }
-    }
-  }
-}
 // card layout
 // ---------------------------------------------------
 [am-layout~="card"]   {
