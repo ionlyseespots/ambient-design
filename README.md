@@ -28,8 +28,8 @@ Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 
 
 * Website: http://ionlyseespots.github.io/ambient-design/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
-* Layout: http://ionlyseespots.github.io/ambient-design/layout/index.html
-* UI patterns: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
+* Semantic: http://ionlyseespots.github.io/ambient-design/layout/index.html
+* Layout: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
 
 ## Usage
 
