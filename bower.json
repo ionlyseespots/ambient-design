@@ -4,7 +4,7 @@
     "dependencies": {
     "normalize-css": "latest"
     },
-  "description": "Ambient is a methodology for creating semantic layout.",
+  "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
     "dist/css/*",
     "less/*"
@@ -35,6 +35,7 @@
     "docs",
     "examples",
     "less/ambient.min.css",
-    "index.html"
+    "index.html",
+    "apple-touch-icon.png"
   ]
 }

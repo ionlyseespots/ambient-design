@@ -2,16 +2,18 @@
 // ---------------------------------------------------
 @import "core/variables";
 
-// Reset and dependencies
-@import "../bower_components/normalize.less/normalize";
+// Core dependencies
+// Normalize
+//@import "../bower_components/normalize.less/normalize";
+//== normalize.css is included in the /dist ambient.min.css file
+//== normalize.css is NOT included in the src /less ambient.css file to allow you to build your own tasks
 @import "mixins/flexbox";
 @import "mixins/cursor-reset";
 
-
 // Semantic layout
-//== Semantic scaffolding semantic scaffolding for sections & outlines
+//== Semantic scaffolding
 @import "core/semantic";
-//== Page layout for defined content
+//== Page layout
 @import "core/layout";
 
 // Mixins
