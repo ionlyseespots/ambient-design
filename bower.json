@@ -6,11 +6,12 @@
     },
   "description": "Ambient is a methodology for creating semantic layout.",
   "main": [
-    "dist/css/ambient.css",
-    "dist/css/ambient.min.css"
+    "dist/css/*",
+    "less/*"
   ],
   "keywords": [
-    "css",
+    "css3",
+    "html5",
     "flexbox",
     "front-end",
     "framework",
@@ -33,7 +34,6 @@
     "design-patterns",
     "docs",
     "examples",
-    "less",
     "index.html"
   ]
 }
