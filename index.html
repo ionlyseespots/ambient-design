@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ambient is a methodology for creating layout.</title>
+    <title>Ambient Ambient is a lightweight and modular HTML5 UI development methodology.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="dist/css/ambient.min.css">
+    <link rel="stylesheet" href="less/ambient.min.css">
     <!-- website -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -25,10 +25,10 @@
         <a href="index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-nav role="navigation">
+<nav am-layout="horizontal" role="navigation">
     <a href="docs/index.html">Getting Started</a>
-    <a href="layout/index.html">Layout</a>
-    <a href="design-patterns/index.html">UI Patterns</a>
+    <a href="layout/index.html">Semantic</a>
+    <a href="design-patterns/index.html">Layout</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
@@ -37,31 +37,24 @@
         <h2>
             Ambient is semantic layout
         </h2>
-        <nav am-nav>
-            <a href="design-patterns/index.html#ui-elements"><i class="fa fa-cube fa-4x"></i><br /><span>Components</span></a>
-            <a href="design-patterns/index.html#ux-shells"><i class="fa fa-cubes fa-4x"></i><br /><span>Layouts</span></a>
-            <a href="design-patterns/index.html#navs"><i class="fa fa-compass fa-4x"></i><br /><span>Navs</span></a>
-            <a href="design-patterns/index.html#form-states"><i class="fa fa-tasks fa-4x"></i><br /><span>Forms</span></a>
-        </nav>
         <p>
-            <a href="layout/index.html">View Layout</a>
-            <a href="https://github.com/ionlyseespots/ambient-design">View GitHub</a>
+            Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
         </p>
+        <nav am-layout="horizontal">
+            <a href="layout/index.html"><i class="fa fa-cubes fa-4x"></i><br /><span>HTML5 semantic scaffolding</span></a>
+            <a href="design-patterns/index.html"><i class="fa fa-cube fa-4x"></i><br /><span>CSS3 layout attributes</span></a>
+        </nav>
     </header>
     <article am-layout am-padding="large" class="am-text-center am-secondary">
-        <header>
+        <header am-margin="bottom">
             <h1>
                 Features
             </h1>
             <p>
-                <small>Semantic <em>Markup + Page</em> Layout</small>
-            </p>
-            <p>
-                HTML5 sectioning elements within Ambient define themselves, creating a visual structure for the document outline.<br />
-                This means you can build content into simple or complex layouts.
+                Back to basics. Feel free to use HTML, whenever and wherever you like.
             </p>
         </header>
-        <section>
+        <section am-padding>
             <h2>
                 LESS
             </h2>
@@ -69,39 +62,38 @@
                 Built with LESS to write well-structured, extensible code which is easy to maintain.
             </p>
         </section>
-        <section>
+        <section am-padding>
             <h2>
-                Flexbox
+                Semantic
             </h2>
             <p>
-                A very basic flexbox layout and style for sectioning content in the document outline
+                Ambient make use of HTML5 sections & outlines for semantic scaffolding.
             </p>
         </section>
-        <section>
+        <section am-padding>
             <h2>
-                Patterns
+                Layout
             </h2>
             <p>
-                A collection of UI patterns using consistent and conflict-free namespaces.
+                Ambient makes use of CSS3 attributes on elements for page layout.
             </p>
         </section>
-        <section>
+        <section am-padding>
             <h2>
                 Orientation
             </h2>
             <p>
-                Portrait & Landscape views make Ambient ideal for both responsive web design and adaptive content.
+                Portrait & Landscape views make Ambient ideal for both responsive and adaptive content.
             </p>
         </section>
     </article>
     <article am-layout am-padding="large" class="am-text-center">
-        <h1>
-            <i class="fa fa-html5"></i><i class="fa fa-css3"></i>
-            <br />
+        <h1 am-margin="bottom">
+            <i class="fa fa-html5"></i><i class="fa fa-css3"></i><br />
             Background
         </h1>
         <p>
-            Ambient makes use of HTML5 elements & CSS3 properties to layout semantic markup.
+            Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
             While presentation changes can require changes in structure, content can be changed without any need for structural change beyond the semantic layout.
         </p>
         <p>
@@ -110,11 +102,11 @@
             I liked reusing classes for design but I became frustrated with classes for structure that were not very clear.
         </p>
         <p>
-            I wanted to get back to basics with HTML5 and create a methodology for the document outline layout. The layout should be dynamic, and fit any range of viewports.
+            I wanted to get back to basics with HTML5 and create a methodology to layout the document outline. The layout should be dynamic, and fit any range of viewports.
         </p>
     </article>
     <article am-layout am-padding="large" class="am-text-center am-secondary">
-        <header>
+        <header am-margin="bottom">
             <h1>
                 Open Source
             </h1>
@@ -122,7 +114,7 @@
                 Ambient is a lightweight and modular HTML5 UI development methodology.
             </p>
         </header>
-        <section>
+        <section am-padding>
             <h2>
                 MIT License
             </h2>
@@ -130,15 +122,15 @@
                 Ambient is free to use, copy, merge, publish and distribute without any limitations. This content is released under the <a href="https://github.com/ionlyseespots/ambient-design/blob/master/LICENSE">MIT License</a>.
             </p>
         </section>
-        <section>
+        <section am-padding>
             <h2>
                 Simple is beautiful
             </h2>
             <p>
-                Feel free to use semantic HTML5 tags, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
+                Feel free to use HTML5 semantic elements, whenever and wherever you like.
             </p>
         </section>
-        <section>
+        <section am-padding>
             <h2>
                 Active Development
             </h2>
@@ -150,8 +142,7 @@
 </main>
 <footer am-layout am-padding="large" class="am-text-center">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.
-        Ambient UI patterns are layout-related attributes for content.<br />
+        Ambient makes use of HTML5 elements & CSS3 properties to layout the document outline.<br />
         <a href="https://github.com/ionlyseespots/ambient-design"><i class="fa fa-github fa-3x"></i></a>
         <a href="https://twitter.com/av8boogie"><i class="fa fa-twitter fa-3x"></i></a>
     </p>

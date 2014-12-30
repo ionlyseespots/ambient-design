@@ -1,83 +1,241 @@
-// Grid
-// Ambient semantic layout
-
-// http://www.w3.org/TR/CSS2/visuren.html
-// Block elements are 100% width of parent element, if width is not specified.
-
-// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-html {
-  box-sizing: border-box;
-  // http://css-tricks.com/a-couple-of-use-cases-for-calc/
-  height: calc(100%);
-}
-body {
-  min-width: 100%;
-  min-height: 100%;
-  .flex-display;
-  .flex-direction(column);
-  // center page content in first article not in main horizontally and vertically
-  & > article  {
-    .align-items(center);
-    margin: auto;
-    width: auto;
+// Define your layout.
+// The am-layout attribute must be used on a root HTML5 semantic element, though the attribute may have no effect on some elements. Once you've defined the root element, you can add additional am-layout properties as well as extend child attributes am-layout_SOMETHING to your scaffold to gradually build a hierarchy that defines your layout.
+// Linear layout :: explicit sections are horizontal by default
+// ---------------------------------------------------
+article[am-layout~="vertical"] {
+  & > section {
+    .flex-basis(auto); //  https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    width: 100%;
   }
 }
-// section clearing
-header, nav, footer, h1, h2, h3, h4, h5, h6, hr, p, div {
+// grid layout
+// ---------------------------------------------------
+[am-layout^="grid"] {
+  & div[am-row] {
+    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    .flex-display;
+    .flex-flow(row wrap);
+    width: 100%;
+    & div[am-col] {
+      .flex(1 8.3333%);
+      &[am-col="25"] {
+        .flex-basis(auto);
+        width: 25%;
+      }
+      &[am-col="33"] {
+        .flex-basis(auto);
+        width: 33.333%;
+      }
+      &[am-col="66"] {
+        .flex-basis(auto);
+        width: 66.6667%;
+      }
+      &[am-col="50"] {
+        .flex-basis(auto);
+        width: 50%;
+      }
+      &[am-col="75"] {
+        .flex-basis(auto);
+        width: 75%;
+      }
+      &[am-col="portrait-100"] {
+        @media (orientation:portrait){
+          .flex-basis(auto);
+          width: 100%;
+        }
+      }
+    }
+  }
+  &[am-layout$="gutter margin"] {
+    & div[am-row] {
+      & div[am-col] {
+        margin-left:1em;
+        &:first-of-type {
+          margin-left: -1em;
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+  &[am-layout$="gutter padding"] {
+    & div[am-row] {
+      & div[am-col] {
+        padding-left:1em;
+        &:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+// card layout
+// ---------------------------------------------------
+[am-layout^="card"]   {
+  -webkit-column-width:  15em;
+  -webkit-column-gap: 1em;
+  -webkit-column-count: auto;
+  -moz-column-width:  15em;
+  -moz-column-gap: 1em;
+  -moz-column-count: auto;
+  -ms-column-width:  15em;
+  -ms-column-gap: 1em;
+  -ms-column-count: auto;
+  column-width:  15em;
+  column-gap: 1em;
+  column-count: auto;
+  padding-left: .5em;
+  padding-right: .5em;
+  & > div {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+    padding: 1em;
+    border-radius: 2px;
+    margin: .5em 0;
+    display: inline-block;
+  }
+  &[am-layout~="vertical"] {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+    padding: 0;
+  }
+  @media (orientation:portrait){
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    column-count: 2;
+  }
+}
+// Forms
+// ---------------------------------------------------
+// <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
+// <input> is a replaced element and does not allow ::pseudo CSS so pre/post icons are prescribed with label + input design pattern
+form[am-layout] input, form[am-layout] select, form[am-layout] textarea {
+  height:34px;
+  padding:6px 12px;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#555;
+  background-color:#fff;
+  background-image:none;
+  border:1px solid #ccc;
+  border-radius:4px;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  &:focus {
+    border-color: @am-input-focus-border;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+  }
+}
+form[am-layout] input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+form[am-layout] label {
+  display: inline-block;
+  & input {
+    width: auto; }
+}
+//== Inline
+form[am-layout~="inline"] {
+  // inherits default am-layout semantic root element properties
+}
+//== Stacked
+form[am-layout~="stacked"] {
+  & input, & select, & textarea, & label {
+    width: 100%; }
+}
+//== Aligned
+form[am-layout~="aligned"] > span {
+  .flex-display;
+  .flex-flow(row wrap);
+  .justify-content(justify);
   width: 100%;
-  word-wrap: break-word;
-}
-header {
-  .flex-display;
-  .flex-flow(row wrap);
-}
-nav {
-  .flex-display;
-  .flex-flow(row wrap);
-  & a {
+  & label,  & input, & select, & textarea {
     .flex(1 8.3333%);
   }
 }
-main {
-  .flex(1 0 auto);
-}
-article {
+//== Multi-column
+form[am-layout~="multicolumn"]  {
   .flex-display;
   .flex-flow(row wrap);
-  // help content on absolute positioning
+  & input, select, textarea, label {
+    width: 100%; }
+  & > div  {
+    .flex(1 8.3333%);
+  }
+}
+// Iconography
+form[am-preicon], form[am-posticon] {
   position: relative;
 }
-section {
-  .flex(1 8.3333%);
-  // help content on absolute positioning
-  position: relative;
+form[am-preicon] + input {
+  padding-left: 2em;
 }
-aside {
-  .flex(0 0 20%);
+form[am-posticon] + input {
+  padding-right: 2em;
 }
-// sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
-footer {
-  .flex-display;
-  .flex-flow(row wrap);
-  .flex-order(2);
+form[am-preicon]:before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: .5em;
+  top: 34px;
+  content: attr(am-preicon);
 }
 
-// portrait
-@media (orientation:portrait){
-  article {
-    .flex-direction(column);
+form[am-posticon]:after {
+  font-family: FontAwesome;
+  position: absolute;
+  right: .5em;
+  top: 34px;
+  content: attr(am-posticon);
+}
+// Nav
+// ---------------------------------------------------
+nav[am-layout] {
+    &[am-layout~="horizontal"] {
+      .justify-content(flex-start);
+      a {
+        // inherits default am-layout semantic root element properties
+      }
+    }
+    &[am-layout~="vertical"] {
+      .flex-direction(column);
+      a {
+        .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+        width: 100%;
+      }
+    }
+  & a {
+    padding: .75em;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    transition: background 0.3s ease 0s;
+    &:hover,
+    &:focus,
+    &:active, {
+      background-color: @am-primary-bg;
+      outline: 0 none;
+    }
   }
-  section, aside {
-    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-    width: 100%;
-  }
-  // change vertical rule back to horizontal rule for portrait view
-  [am-verticalrule] {
-    width: 100%;
-    background-color: transparent;
-    position: static;
+}
+// Outline :: useful for testing document outline and displaying nested content :: uses same color as default primary RGB color value
+// ---------------------------------------------------
+[am-layout~="outline"] {
+  article,
+  section,
+  aside,
+  div {
+    background-color: rgba(66,139,202, 0.15);
+    border: 1px solid rgba(66,139,202, 0.2);
   }
 }
