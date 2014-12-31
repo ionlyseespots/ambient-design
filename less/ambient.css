@@ -38,10 +38,10 @@ body {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 body > article {
   -webkit-align-items: center;
@@ -94,17 +94,14 @@ nav a {
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
 }
-aside + main {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
-}
 main {
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+aside + main {
+  width: 8.3333%;
 }
 article {
   display: -webkit-flex;
@@ -118,8 +115,7 @@ article {
   flex-flow: row wrap;
   position: relative;
 }
-section,
-aside {
+section {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;

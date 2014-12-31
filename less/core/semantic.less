@@ -13,7 +13,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   .flex-display;
-  .flex-flow(row wrap);
+  .flex-direction(column);
   // center page content in first article not in main horizontally and vertically
   & > article  {
     .align-items(center);
@@ -50,11 +50,11 @@ nav {
     .flex(1 8.3333%);
   }
 }
-aside + main {
-  .flex(1 8.3333%);
-}
 main {
   .flex(1 0 auto);
+}
+aside + main {
+  width: 8.3333%;
 }
 article {
   .flex-display;
@@ -62,7 +62,7 @@ article {
   // help content on absolute positioning
   position: relative;
 }
-section, aside {
+section {
   .flex(1 8.3333%);
   // help content on absolute positioning
   position: relative;
