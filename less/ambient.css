@@ -38,10 +38,10 @@ body {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 body > article {
   -webkit-align-items: center;
@@ -94,6 +94,12 @@ nav a {
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
 }
+aside + main {
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
+}
 main {
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
@@ -112,7 +118,8 @@ article {
   flex-flow: row wrap;
   position: relative;
 }
-section {
+section,
+aside {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
@@ -708,6 +715,7 @@ nav[am-layout] a:active {
 [am-layout~="outline"] div {
   background-color: rgba(66, 139, 202, 0.15);
   border: 1px solid rgba(66, 139, 202, 0.2);
+  padding: 3px;
 }
 [am-padding] {
   padding: 1vw;
