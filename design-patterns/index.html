@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -233,7 +233,7 @@
                 you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
             </p>
         </header>
-        <section id="section" am-layout="grid" am-padding>
+        <section id="section" am-padding>
             <header am-padding>
                 <h1 class="am-text-uppercase">
                     Linear layout
@@ -242,8 +242,8 @@
                     <small>Default</small>
                 </p>
                 <p>
-                    The HTML5 <code>article</code> element aligns explicit sections in a single direction, vertically or horizontally.
-                    You can specify a vertical layout direction for explicit sections by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
+                    The HTML5 <code>article</code> element aligns the explicit sections <code>section</code> and <code>aside</code> in a single direction, vertically or horizontally.
+                    You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
                     The default orientation is horizontal.
                 </p>
             </header>
@@ -336,36 +336,40 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <header am-padding>
                 <h1 class="am-text-uppercase">
                     Grid layout
                 </h1>
                 <p>
                     Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                    The default orientation on portrait for grid layout does not stack.
+
+                </p>
+                <p>
+                   The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> layout attribute for defining a linear vertical layout for grid on portrait.
                 </p>
             </header>
-            <div am-row>
+            <div am-row="portrait-100">
                 <div am-col am-padding>
                     <h2>
                         Grid layout with equal widths
                     </h2>
                     <p>
-                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any semantic element.
-
+                        To create a grid layout add the layout attributes <code>am-row</code> & <code>am-col</code> to a child <code>div</code>
+                    </p>
+                    <p>
+                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> attribute for defining a linear vertical layout for grid on portrait.
+                        </small>
                     </p>
                     <blockquote>
-                        <p>
-                            <code>&lt;section am-layout="grid"&gt;</code>
-                        </p>
                         <p>
                             To add a row, add the child attribute <code>am-row</code> to a child div.<br />
                             To add a column, add the child attribute <code>am-col</code> to a child div.
                         </p>
                     </blockquote>
                     <article am-layout="outline">
-                        <section am-layout="grid">
+                        <section>
                             <div am-row>
                                 <div am-col>
                                     1
@@ -415,7 +419,7 @@
                         Code
                     </h3>
                     <pre>
-&lt;section am-layout="grid"&gt;
+&lt;section&gt;
     &lt;div am-row&gt;
         &lt;div am-col&gt;
             1
@@ -461,19 +465,21 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
                         Grid layout with offset widths
                     </h2>
                     <p>
-                        To create a grid layout add the attribute and value <code>am-layout="grid"</code> to any semantic element.
+                        To create a grid layout add the layout attributes <code>am-row</code> & <code>am-col</code> to a <code>div</code> and define the off-set width value for the <code>am-col</code>.
+                    </p>
+                    <p>
+                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code>  attribute for defining a linear vertical layout for grid on portrait.
+                        </small>
                     </p>
                     <blockquote>
-                        <p>
-                            <code>&lt;section am-layout="grid"&gt;</code>
-                        </p>
                         <p>
                             To add a row, add the child attribute <code>am-row</code> to a child div.<br />
                             To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a child div.
@@ -483,21 +489,21 @@
                         </p>
                         <ul>
                             <li>
-                                <code>25</code>
+                                <code>am-col="25"</code>
                             </li>
                             <li>
-                                <code>33</code>
+                                <code>am-col="33"</code>
                             </li>
                             <li>
-                                <code>66</code>
+                                <code>am-col="66"</code>
                             </li>
                             <li>
-                                <code>75</code>
+                                <code>am-col="75"</code>
                             </li>
                         </ul>
                     </blockquote>
                     <article am-layout="outline">
-                        <section am-layout="grid">
+                        <section>
                             <div am-row>
                                 <div am-col="66">
                                     2/3
@@ -538,7 +544,7 @@
                         Code
                     </h3>
                     <pre>
-&lt;section am-layout="grid"&gt;
+&lt;section&gt;
     &lt;div am-row&gt;
         &lt;div am-col="66"&gt;
             2/3
@@ -578,34 +584,52 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
-            <div am-row>
+        <section am-padding>
+            <div am-row="portrait-100">
                 <div am-col am-padding>
                     <h2>
                         Grid layout with gutter
                     </h2>
                     <p>
-                        To create a grid layout with gutter add the value <code>gutter</code> as well as the gutter type to the root semantic element defined with the layout attribute value <code>am-layout="grid"</code>.
+                        To create a grid layout with gutter, add the layout attributes <code>am-row</code> & <code>am-col</code> to a <code>div</code> and define the gutter type for the individual <code>am-row</code>.
+                    </p>
+                    <p>
+                        Alternatively, create a gutter for all content in an explicit section by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
+                    </p>
+                    <p>
+                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> attribute for defining a linear vertical layout for grid on portrait.
+                        </small>
                     </p>
                     <blockquote>
                         <p>
-                            <code>&lt;section am-layout="grid gutter"&gt;</code>
+                            Ambient allows your grid to have infinite combinations: a row of content can have no gutter, a gutter with margin or a gutter with padding.
                         </p>
                         <p>
                             Gutter type values are available as:
                         </p>
                         <ul>
                             <li>
-                                <code>margin</code>
+                                <code>am-row="gutter margin"</code>
                             </li>
                             <li>
-                                <code>padding</code>
+                                <code>am-row="gutter padding"</code>
                             </li>
                         </ul>
-
+                        <p>
+                            Alternatively, all columns in an explicit section can have no gutter, a gutter with margin or a gutter with padding.
+                        </p>
+                        <ul>
+                            <li>
+                                <code>&lt;section am-layout="gutter margin"&gt;</code>
+                            </li>
+                            <li>
+                                <code>&lt;section am-layout="gutter padding"&gt;</code>
+                            </li>
+                        </ul>
                     </blockquote>
                     <article am-layout="outline">
-                        <section am-layout="grid gutter margin" am-padding>
+                        <section am-layout="gutter margin" am-padding>
                             <h3>Margin</h3>
                                 <div am-row>
                                     <div am-col>
@@ -632,7 +656,7 @@
                                     </div>
                                 </div>
                         </section>
-                        <section am-layout="grid gutter padding" am-padding>
+                        <section am-layout="gutter padding" am-padding>
                             <h3>Padding</h3>
                                 <div am-row>
                                     <div am-col>
@@ -661,7 +685,7 @@
                         </section>
                     </article>
                 </div>
-                <div am-col="portrait-100" am-padding>
+                <div am-col am-padding>
                     <h3>
                         Code
                     </h3>
@@ -669,7 +693,7 @@
                         Margin
                     </p>
                     <pre>
-&lt;section am-layout="grid gutter margin"&gt;
+&lt;section am-layout="gutter margin"&gt;
     &lt;div am-row&gt;
         &lt;div am-col"&gt;
             1
@@ -700,7 +724,7 @@
                         Padding
                     </p>
                     <pre>
-&lt;section am-layout="grid gutter padding"&gt;
+&lt;section am-layout="gutter padding"&gt;
     &lt;div am-row&gt;
         &lt;div am-col"&gt;
             1
@@ -732,7 +756,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <header am-padding>
                 <h1 class="am-text-uppercase">
                     Card layout
@@ -901,7 +925,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1003,7 +1027,7 @@
                 Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
             </p>
         </header>
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1041,7 +1065,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1082,7 +1106,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1133,7 +1157,7 @@
                 Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
             </p>
         </header>
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1185,7 +1209,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1240,7 +1264,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1296,7 +1320,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1358,7 +1382,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1444,7 +1468,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1512,7 +1536,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1608,7 +1632,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col am-padding>
                     <h2>
@@ -1710,7 +1734,7 @@
         </section>
         <hr />
 
-        <section am-layout="grid" am-padding>
+        <section  am-padding>
             <div am-row>
                 <div am-col>
                     <h2>

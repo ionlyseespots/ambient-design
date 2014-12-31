@@ -12,9 +12,9 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.min.css">
 </head>
-<body am-grid>
+<body>
 <!--- Matrix, if anything breaks it will break here --->
 <header>
     <h1>
@@ -32,6 +32,26 @@
     <a href="#"><strong>link</strong></a>
 </nav>
 <hr />
+
+
+
+<div am-row="gutter margin portrait-100">
+    <div am-col="25">
+        <aside>
+            <h1>
+                aside h1
+            </h1>
+            <nav role="navigation" am-layout="vertical">
+                <h1>
+                    Nav h1
+                </h1>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+            </nav>
+        </aside>
+    </div>
+    <div am-col="75">
 
 
 <main role="main" am-layout="outline">
@@ -54,7 +74,9 @@
                 heading h1
             </h1>
             <p>
-                Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i> when they aren't the first heading of their parent, explicit, sections.
+                Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
+                in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
+                when they aren't the first heading of their parent, explicit, sections.
             </p>
             <p>
                 Think of <code>h1-h6</code> as dividers, or labels for the content below it. The content is defined by the heading, the heading does not end at the <code>/</code> it ends when it defines a new implicit section.
@@ -395,6 +417,10 @@
     <hr />
 
 </main>
+
+    </div>
+</div>
+
 <footer>
    <p>Main (sticky) Footer</p>
 </footer>
