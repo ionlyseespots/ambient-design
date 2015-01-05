@@ -1,48 +1,101 @@
 // Global layout attributes are layout properties common to all HTML elements. These attributes can be used on any element.
 // viewport widths ensure vertical rhythm with white spacing within (am-layout & am-component) header, footer article & sections
 // To add space outside and inside an element
+// NOTE
+// http://stackoverflow.com/questions/23717953/padding-bottom-top-not-working-in-flexbox-layout-firefox
+// Percentage margins and padding on flex items are always resolved against their respective dimensions; unlike blocks, they do not always resolve against the inline dimension of their containing block.
 [am-padding] {
   padding: @am-padding;
+  &[am-padding="small"] {
+    padding: calc(@am-padding - .5vw);
+  }
+  &[am-padding="large"] {
+    padding: calc(@am-padding + 2vw);
+  }
+  &[am-padding~="top"] {
+    padding: @am-padding 0 0 0;
+    &[am-padding~="small"] {
+      padding: calc(@am-padding - .5vw) 0 0 0;
+    }
+    &[am-padding~="large"] {
+      padding: calc(@am-padding + 2vw) 0 0 0;
+    }
+  }
+  &[am-padding~="right"] {
+    padding: 0 @am-padding 0 0;
+    &[am-padding~="small"] {
+      padding: 0 calc(@am-padding - .5vw) 0 0;
+    }
+    &[am-padding~="large"] {
+      padding: 0 calc(@am-padding + 2vw) 0 0;
+    }
+  }
+  &[am-padding~="bottom"] {
+    padding: 0 0 @am-padding 0;
+    &[am-padding~="small"] {
+      padding: 0 0 calc(@am-padding - .5vw) 0;
+    }
+    &[am-padding~="large"] {
+      padding: 0 0 calc(@am-padding + 2vw) 0;
+    }
+  }
+  &[am-padding~="left"] {
+    padding: 0 0 0 @am-padding;
+    &[am-padding~="small"] {
+      padding: 0 0 0 calc(@am-padding - .5vw) 0;
+    }
+    &[am-padding~="large"] {
+      padding: 0 0 0 calc(@am-padding + 2vw) 0;
+    }
+  }
 }
-[am-padding="top"] {
-  padding: @am-padding 0 0 0;
-}
-[am-padding="right"] {
-  padding: 0 @am-padding 0 0;
-}
-[am-padding="bottom"] {
-  padding: 0 0 @am-padding 0;
-}
-[am-padding="left"] {
-  padding: 0 0 0 @am-padding;
-}
-[am-padding="small"] {
-  padding: calc(@am-padding - .5vw);
-}
-[am-padding="large"] {
-  padding: calc(@am-padding + 2vw);
-}
-&[am-margin] {
+
+[am-margin] {
   margin: @am-margin;
+  &[am-margin="small"] {
+    margin: calc(@am-margin - .5vw);
+  }
+  &[am-margin="large"] {
+    margin: calc(@am-margin + 2vw);
+  }
+  &[am-margin~="top"] {
+    margin: @am-margin 0 0 0;
+    &[am-margin~="large"] {
+      margin: calc(@am-margin + 2vw) 0 0 0;
+    }
+    &[am-margin~="small"] {
+      margin: calc(@am-margin - .5vw) 0 0 0;
+    }
+  }
+  &[am-margin~="right"] {
+    margin: 0 @am-margin 0 0;
+    &[am-margin~="large"] {
+      margin: 0 calc(@am-margin + 2vw) 0 0;
+    }
+    &[am-margin~="small"] {
+      margin: 0 calc(@am-margin - .5vw) 0 0;
+    }
+  }
+  &[am-margin~="bottom"] {
+    margin: 0 0 @am-margin 0;
+    &[am-margin~="large"] {
+      margin: 0 0 calc(@am-margin + 2vw) 0;
+    }
+    &[am-margin~="small"] {
+      margin: 0 0 calc(@am-margin - .5vw) 0;
+    }
+  }
+  &[am-margin~="left"] {
+    margin: 0 0 0 @am-margin;
+    &[am-margin~="large"] {
+      margin: 0 0 0 calc(@am-margin + 2vw);
+    }
+    &[am-margin~="small"] {
+      margin: 0 0 0 calc(@am-margin - .5vw);
+    }
+  }
 }
-[am-margin="top"] {
-  margin: @am-margin 0 0 0;
-}
-[am-margin="right"] {
-  margin: 0 @am-margin 0 0;
-}
-[am-margin="bottom"] {
-  margin: 0 0 @am-margin 0;
-}
-[am-margin="left"] {
-  margin: 0 0 0 @am-margin;
-}
-[am-margin="small"] {
-  padding: calc(@am-margin - .5vw);
-}
-[am-margin="large"] {
-  padding: calc(@am-margin + 2vw);
-}
+
 // To add depth to an element
 [am-layer] {
   position: relative;

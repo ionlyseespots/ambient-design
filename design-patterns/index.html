@@ -205,19 +205,19 @@
                     </li>
                 </ul>
             </blockquote>
-            <div am-layer="z-1" am-padding am-margin="bottom">
+            <div am-layer="z-1" am-padding am-margin="bottom large">
                 Z-1
             </div>
-            <div am-layer="z-2" am-padding am-margin="bottom">
+            <div am-layer="z-2" am-padding am-margin="bottom large">
                 Z-2
             </div>
-            <div am-layer="z-3" am-padding am-margin="bottom">
+            <div am-layer="z-3" am-padding am-margin="bottom large">
                 Z-3
             </div>
-            <div am-layer="z-4" am-padding am-margin="bottom">
+            <div am-layer="z-4" am-padding am-margin="bottom large">
                 Z-4
             </div>
-            <div am-layer="z-5" am-padding am-margin="bottom">
+            <div am-layer="z-5" am-padding am-margin="bottom large">
                 Z-5
             </div>
         </section>
@@ -346,7 +346,7 @@
 
                 </p>
                 <p>
-                   The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> layout attribute for defining a linear vertical layout for grid on portrait.
+                   The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
                 </p>
             </header>
             <div am-row="portrait-100">
@@ -355,17 +355,17 @@
                         Grid layout with equal widths
                     </h2>
                     <p>
-                        To create a grid layout add the layout attributes <code>am-row</code> & <code>am-col</code> to a child <code>div</code>
+                        To create a grid layout with equal widths, add the layout attributes <code>am-row</code> & <code>am-col</code> to the child unsemantic <code>div</code> elements.
                     </p>
                     <p>
                         <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> attribute for defining a linear vertical layout for grid on portrait.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
                         </small>
                     </p>
                     <blockquote>
                         <p>
                             To add a row, add the child attribute <code>am-row</code> to a child div.<br />
-                            To add a column, add the child attribute <code>am-col</code> to a child div.
+                            To add a column, add the child attribute <code>am-col</code> to a child div. The default for each column is equal and scales up to 12.
                         </p>
                     </blockquote>
                     <article am-layout="outline">
@@ -410,9 +410,6 @@
                             </div>
                         </section>
                     </article>
-                    <p>
-                        Scales up to 12 equal columns.
-                    </p>
                 </div>
                 <div am-col="portrait-100" am-padding>
                     <h3>
@@ -472,11 +469,11 @@
                         Grid layout with offset widths
                     </h2>
                     <p>
-                        To create a grid layout add the layout attributes <code>am-row</code> & <code>am-col</code> to a <code>div</code> and define the off-set width value for the <code>am-col</code>.
+                        To create a grid layout with off-set widths, define the off-set width value for the <code>am-col</code>.
                     </p>
                     <p>
                         <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code>  attribute for defining a linear vertical layout for grid on portrait.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
                         </small>
                     </p>
                     <blockquote>
@@ -591,14 +588,15 @@
                         Grid layout with gutter
                     </h2>
                     <p>
-                        To create a grid layout with gutter, add the layout attributes <code>am-row</code> & <code>am-col</code> to a <code>div</code> and define the gutter type for the individual <code>am-row</code>.
+                        To create a grid layout with gutter, define the gutter & type for the individual unsemantic row by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-row="gutter TYPE"</code>.
                     </p>
                     <p>
-                        Alternatively, create a gutter for all content in an explicit section by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
+                        Alternatively, create a gutter for all content in an explicit section making use of the grid by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
                     </p>
                     <p>
-                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added to any <code>am-row</code> or <code>am-layout</code> attribute for defining a linear vertical layout for grid on portrait.
+                        <small>
+                            Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
                         </small>
                     </p>
                     <blockquote>
@@ -621,16 +619,18 @@
                         </p>
                         <ul>
                             <li>
-                                <code>&lt;section am-layout="gutter margin"&gt;</code>
+                                <code>am-layout="gutter margin"</code>
                             </li>
                             <li>
-                                <code>&lt;section am-layout="gutter padding"&gt;</code>
+                                <code>am-layout="gutter padding"</code>
                             </li>
                         </ul>
                     </blockquote>
                     <article am-layout="outline">
-                        <section am-layout="gutter margin" am-padding>
-                            <h3>Margin</h3>
+                        <section am-padding>
+                            <h3>
+                                Margin on grid for the individual unsemantic row
+                            </h3>
                                 <div am-row>
                                     <div am-col>
                                         1
@@ -644,7 +644,7 @@
                                         2
                                     </div>
                                 </div>
-                                <div am-row>
+                                <div am-row="gutter margin">
                                     <div am-col>
                                         1
                                     </div>
@@ -657,7 +657,9 @@
                                 </div>
                         </section>
                         <section am-layout="gutter padding" am-padding>
-                            <h3>Padding</h3>
+                            <h3>
+                                Padding on entire grid for the root semantic element
+                            </h3>
                                 <div am-row>
                                     <div am-col>
                                         1
@@ -690,10 +692,10 @@
                         Code
                     </h3>
                     <p>
-                        Margin
+                        Margin on grid for the individual unsemantic row
                     </p>
                     <pre>
-&lt;section am-layout="gutter margin"&gt;
+&lt;section&gt;
     &lt;div am-row&gt;
         &lt;div am-col"&gt;
             1
@@ -707,7 +709,7 @@
             2
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div am-row&gt;
+    &lt;div am-row="gutter margin"&gt;
         &lt;div am-col&gt;
             1
         &lt;/div&gt;
@@ -721,7 +723,7 @@
 &lt;/section&gt;
                     </pre>
                     <p>
-                        Padding
+                        Padding on entire grid for the root semantic element
                     </p>
                     <pre>
 &lt;section am-layout="gutter padding"&gt;
@@ -772,7 +774,7 @@
                         Multiple cards
                     </h2>
                     <p>
-                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element.
+                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element and wrap card content in a child <code>div</code>.
                     </p>
                     <h3>
                         Multiple
@@ -932,7 +934,7 @@
                         Vertical cards
                     </h2>
                     <p>
-                        To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element.
+                        To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element and wrap card content in a child <code>div</code>.
                     </p>
                     <h3>
                         Vertical
