@@ -1486,7 +1486,17 @@ nav[am-layout] a:active {
   z-index: 1;
 }
 [am-layer][am-layer~="z-1"]:after {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+}
+[am-layer][am-layer~="z-1"]:before {
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.02);
   content: "";
   top: 0;
   bottom: 0;
