@@ -1209,12 +1209,10 @@ div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
   column-width: 15em;
   column-gap: 1em;
   column-count: auto;
-  padding-left: .5em;
-  padding-right: .5em;
 }
 [am-layout^="card"] > div {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
-  padding: 1em;
+  padding: .5em;
   border-radius: 2px;
   margin: .5em 0;
   display: inline-block;
