@@ -3,114 +3,285 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Semantic layout</title>
+    <title>HTML5 Matrix</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../less/ambient.min.css">
-	</head>
-<body am-grid>
-<!--- Base design pattern, if anything breaks it will break here --->
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+</head>
+<body>
+<!--- Matrix, if anything breaks it will break here --->
 <header>
     <h1>
-        <a href="../index.html" title="index">Ambient Design</a>
-        <a href="https://twitter.com/av8boogie" class="pull-right"><i class="fa fa-twitter"></i></a>
+        <a href="../index.html" title="index">header h1</a>
     </h1>
 </header>
 <hr />
 
-<nav role="navigation">
-    <a href="#"><strong>Nav 1</strong></a>
-    <a href="#"><strong>Nav 2</strong></a>
-    <a href="#"><strong>Nav 3</strong></a>
-    <a href="#"><strong>Nav 4</strong></a>
+<nav role="navigation" am-layout="horizontal">
+    <h1>
+        Nav h1
+    </h1>
+    <a href="#"><strong>link</strong></a>
+    <a href="#"><strong>link</strong></a>
+    <a href="#"><strong>link</strong></a>
 </nav>
 <hr />
 
-<article>
-        <p>
-            First <code>article</code> not in <code>main</code> is centered in the view.
-        </p>
-</article>
-<hr />
 
-<main role="main">
-    <article>
+
+<div am-row="gutter margin portrait-100">
+    <div am-col="25">
+        <aside>
+            <h1>
+                aside h1
+            </h1>
+            <nav role="navigation" am-layout="vertical">
+                <h1>
+                    Nav h1
+                </h1>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+            </nav>
+        </aside>
+    </div>
+    <div am-col="75">
+
+
+<main role="main" am-layout="outline">
+<aside>
+    <h1>
+        aside h1
+    </h1>
+    <nav role="navigation" am-layout="horizontal">
         <h1>
-            Article H1
+            Nav h1
         </h1>
-        <p>
-            Not all articles have a section.
-        </p>
+        <a href="#"><strong>link</strong></a>
+        <a href="#"><strong>link</strong></a>
+        <a href="#"><strong>link</strong></a>
+    </nav>
+</aside>
+    <article>
+        <header>
+            <h1>
+                heading h1
+            </h1>
+            <p>
+                Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
+                in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
+                when they aren't the first heading of their parent, explicit, sections.
+            </p>
+            <p>
+                Think of <code>h1-h6</code> as dividers, or labels for the content below it. The content is defined by the heading, the heading does not end at the <code>/</code> it ends when it defines a new implicit section.
+                I have found this tool very helpful and building a CSS version for <code>am-layout</code>
+                <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a>
+            </p>
+            <h2>
+                 heading h2
+            </h2>
+            <h3>
+                heading h3
+            </h3>
+        </header>
+        <section>
+            <h1>section h1</h1>
+        </section>
+        <aside>
+            <h1>aside h1</h1>
+        </aside>
+         <aside>
+            <h1>aside h1</h1>
+        </aside>
+        <aside>
+            <h1>aside h1</h1>
+        </aside>
+        <h4>
+            article h4
+        </h4>
+        <h2>
+            article h2
+        </h2>
+        <h5>
+            article h5
+        </h5>
+        <h6>
+            article h6
+        </h6>
     </article>
     <hr />
 
     <article>
-        <h1>Article H1</h1>
+        <h1>
+            article heading h1
+        </h1>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
-            <p>
-                1/2
-            </p>
-            <p>
-                A <code>section</code> displays full-height, even when content does not fill the space.
-            </p>
-            <p>
-                The amount of <code>section</code> elements define the amount of columns.
-            </p>
+            <aside>
+                <h1>
+                    aside h1
+                </h1>
+                <h2>
+                    aside h2
+                </h2>
+                <h3>
+                    aside h3
+                </h3>
+                <h4>
+                    aside h4
+                </h4>
+                <h5>
+                    aside h5
+                </h5>
+                <h6>
+                    aside h6
+                </h6>
+            </aside>
+            <aside>
+                <h1>
+                    aside h1
+                </h1>
+                <h2>
+                    aside h2
+                </h2>
+                <h3>
+                    aside h3
+                </h3>
+                <h4>
+                    aside h4
+                </h4>
+                <h5>
+                    aside h5
+                </h5>
+                <h6>
+                    aside h6
+                </h6>
+            </aside>
             <article>
                 <h1>
-                    Nested Article H1
+                     Article h1
                 </h1>
                 <section>
+                    <heading>
+                        <h1>
+                            heading 1 h1
+                        </h1>
+                        <h2>
+                            Heading header h2
+                        </h2>
+                        <h3>
+                            Heading h3
+                        </h3>
+                        <article>
+                            <h1>
+                                  header 1
+                            </h1>
+                            <section>
+                                <h1>
+                                      section header 1
+                                </h1>
+                            </section>
+                            <section>
+                                <h1>
+                                      section header 1
+                                </h1>
+                            </section>
+                        </article>
+                        <h4>
+                            Heading header 4
+                        </h4>
+                        <h5>
+                            Heading header 5
+                        </h5>
+                        <h6>
+                            Heading header 6
+                        </h6>
+                    </heading>
                     <h2>
-                        Nested Section H1
+                         Section H1
                     </h2>
-                    <p>
-                        1/3
-                    </p>
+                    <footer>
+                        <h1>
+                            Footer Header 1
+                        </h1>
+                        <h2>
+                            footer Header 2
+                        </h2>
+                        <h3>
+                            Header 3
+                        </h3>
+                        <h4>
+                            Header 4
+                        </h4>
+                        <h5>
+                            Header 5
+                        </h5>
+                        <h6>
+                            Header 6
+                        </h6>
+                    </footer>
                 </section>
                 <section>
                     <h2>
-                        Nested Section H1
+                         Section H1
                     </h2>
-                    <p>
-                        1/3
-                    </p>
-                </section>
-                <section>
-                    <h2>
-                        Nested Section H1
-                    </h2>
-                    <p>
-                        1/3
-                    </p>
                 </section>
             </article>
         </section>
         <section>
             <h1>
-                Section H1
+                section 2 H1
             </h1>
-            <h2>
-                Section H2
-            </h2>
-            <h3>
-                Section H3
-            </h3>
-            <p>
-                1/2
-            </p>
+            <article>
+                <h1>
+                     Article H1
+                </h1>
+                <section>
+                    <heading>
+                        <h1>
+                            Heading header 1
+                        </h1>
+                        <h2>
+                            Heading header 2
+                        </h2>
+                        <h3>
+                            Heading header 3
+                        </h3>
+                        <h4>
+                            Heading header 4
+                        </h4>
+                    </heading>
+
+                </section>
+                <aside>
+                    <h1>
+                        Aside
+                    </h1>
+                    <h2>
+                        Header 2
+                    </h2>
+                    <h3>
+                        Header 3
+                    </h3>
+                    <h4>
+                        Header 4
+                    </h4>
+                    <footer>
+                        <h1>
+                            Header 1
+                        </h1>
+                    </footer>
+
+                </aside>
         </section>
-        <aside>
-            <h1>
-                Aside
-            </h1>
-            <p>
-                <code>aside</code> is 20% of content.
-            </p>
-        </aside>
     </article>
     <hr />
 
@@ -118,55 +289,34 @@
         <h1>
             Article H1
         </h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        </p>
         <section>
             <header>
                 <h1>
                     Section Header H1
                 </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </p>
             </header>
             <h2>
                 Section H2
             </h2>
-            <p>
-                1/3
-            </p>
             <footer>
                 <p>
                     Section Footer
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cumenatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </p>
             </footer>
         </section>
-        <section>
+        <aside>
             <h1>
-                Section H1
+                Aside
             </h1>
-            <p>
-                1/3
-            </p>
-        </section>
-        <section>
+        </aside>
+        <aside>
             <h1>
-                Section H1
+                Aside
             </h1>
-            <p>
-                1/3
-            </p>
-        </section>
+        </aside>
         <footer>
             <p>
                 Article Footer
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             </p>
         </footer>
     </article>
@@ -180,33 +330,21 @@
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/4
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/4
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/4
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/4
-            </p>
         </section>
     </article>
     <hr />
@@ -219,41 +357,26 @@
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/5
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/5
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/5
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/5
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/5
-            </p>
         </section>
     </article>
     <hr />
@@ -264,54 +387,40 @@
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
         <section>
             <h1>
                 Section H1
             </h1>
-            <p>
-                1/6
-            </p>
         </section>
     </article>
     <hr />
 
 </main>
+
+    </div>
+</div>
+
 <footer>
    <p>Main (sticky) Footer</p>
 </footer>

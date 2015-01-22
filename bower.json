@@ -1,16 +1,17 @@
 {
   "name": "ambient",
-  "version": "1.2.6",
+  "version": "1.2.13",
     "dependencies": {
     "normalize-css": "latest"
     },
-  "description": "Ambient is a methodology for creating semantic layout.",
+  "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
-    "dist/css/ambient.css",
-    "dist/css/ambient.min.css"
+    "dist/css/*",
+    "less/*"
   ],
   "keywords": [
-    "css",
+    "css3",
+    "html5",
     "flexbox",
     "front-end",
     "framework",
@@ -33,7 +34,8 @@
     "design-patterns",
     "docs",
     "examples",
-    "less",
-    "index.html"
+    "less/ambient.min.css",
+    "index.html",
+    "apple-touch-icon.png"
   ]
 }

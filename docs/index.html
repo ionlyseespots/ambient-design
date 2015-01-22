@@ -13,8 +13,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
     <link rel="stylesheet" href="../less/ambient.min.css">
-    <!-- website -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -42,12 +40,12 @@
         </h1>
     </header>
     <article>
-        <header am-padding="large" am-layer="z-1" class="am-secondary">
+        <header am-padding="large" class="am-secondary">
             <p>
                 Introduction
             </p>
             <h2>
-                Ambient is a lightweight and modular HTML5 UI development methodology.
+                Ambient is a lightweight and modular HTML5 UI development methodology
             </h2>
             <p>
                 Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
@@ -58,22 +56,31 @@
                 Bower
             </h3>
             <p>
-                <small>Bower: v1.2.6</small>
+                <small>v1.2.14</small>
             </p>
             <pre><code>
 $ bower install ambient
             </code></pre>
             <p>
-                This is the basic form of Ambient.
+                Install Ambient package.
             </p>
             <pre><code>
 ambient/
-└── css/
-    ├── ambient.css
-    └── ambient.min.css
+├── dist/
+│    └── css/
+│        ├── ambient.css
+│        └── ambient.min.css
+└── less/
+      ├── core/
+      ├── mixins/
+      └── ambient.less
+
             </code></pre>
             <p>
-                The <code>css/</code> folder includes the semantic layout and UI patterns. The file comes as a single CSS file as well as a minified version.
+                The <code>dist/</code> folder includes the ambient.css file as well as a minified version. You're good to go.
+            </p>
+            <p>
+                Ambient source files are in the <code>less/</code> folder and allow you to build your own tasks.
             </p>
         </section>
         <section am-padding>
@@ -81,7 +88,7 @@ ambient/
                 <i class="fa fa-download"></i> Download
             </h3>
             <p>
-                <small>Bower: v1.2.7</small>
+                <small>v1.2.14</small>
             </p>
             <p>
                 Alternatively, <a href="https://github.com/ionlyseespots/ambient-design/tree/master/dist/css">get the ambient.min.css file from the repo</a> and save the file in your directory.
@@ -92,7 +99,7 @@ ambient/
                 <i class="fa fa-github"></i> Source
             </h3>
             <p>
-                <small>Bower: v1.2.7</small>
+                <small>v1.2.15</small>
             </p>
             <p>
                 <a href="https://github.com/ionlyseespots/ambient-design">Clone, fork or download the repo</a> for complete source code, docs and this website.
@@ -111,8 +118,8 @@ ambient/
                 Feel free to use HTML, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
             </p>
         </header>
-        <section am-layout="grid" am-padding>
-            <div am-row>
+        <section am-padding>
+            <div am-row="portrait-100">
                 <div am-col am-padding>
                     <h3>
                         Starting HTML5 example
@@ -121,43 +128,11 @@ ambient/
                         Build the intent of your content.
                         You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
                     </p>
-                    <article am-layout="outline">
-                        <section>
-                            <header role="banner">
-                                <h1>
-                                    header
-                                </h1>
-                            </header>
-                            <hr />
+                    <p data-height="545" data-theme-id="11491" data-slug-hash="gbmJRP" data-default-tab="result" data-user="ionlyseespots" class='codepen'>See the Pen <a href='http://codepen.io/ionlyseespots/pen/gbmJRP/'>Idea for flexbox HTML5 scaffolding & layout attributes</a> by I only see spots (<a href='http://codepen.io/ionlyseespots'>@ionlyseespots</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-                            <nav role="navigation">
-                                <a href="#">nav</a>
-                                <a href="#">nav</a>
-                                <a href="#">nav</a>
-                            </nav>
-                            <hr />
-
-                            <article>
-                                <section>
-                                    <h1>
-                                        Hello, world!
-                                    </h1>
-                                </section>
-                                <aside>
-                                    <p>
-                                        aside
-                                    </p>
-                                </aside>
-                            </article>
-                            <footer role="contentinfo">
-                                <p>
-                                    sticky footer
-                                </p>
-                            </footer>
-                        </section>
-                    </article>
                 </div>
-                <div am-col="portrait-100" am-padding>
+                <div am-col am-padding>
                     <h4>
                         Code
                     </h4>
@@ -171,8 +146,13 @@ ambient/
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
 &lt;title&gt;Ambient starting HTML5 example&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;apple-touch-icon.png&quot; &gt;
+&lt;!-- Place favicon.ico in the root directory --&gt;
 &lt;!-- Ambient --&gt;
-&lt;link href=&quot;ambient/css/ambient.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;ambient/css/ambient.min.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;header role="banner"&gt;
@@ -289,6 +269,9 @@ ambient/
                 <li>
                     <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a> <small>I am currently building a CSS version</small>
                 </li>
+                <li>
+                    <a href="../layout/debugAmbientView.html">HTML5 Matrix</a> <small> If my calculations are correct, when this baby hits eighty-eight miles per hour</small>
+                </li>
             </ul>
         </section>
         <section am-padding>
@@ -379,7 +362,23 @@ ambient/
                         <a href="https://twitter.com/h5bp">lots of people</a>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-warning"></i> <a href="http://clrs.cc">Colors</a>
+                    </td>
+                    <td>
+                        A project by
+                        <a href="https://twitter.com/mrmrs_">Adam Morse</a>
+                    </td>
+                </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="0">
+                            <i class="fa fa-warning"></i> On the road map. Included in source v1.2.15
+                        </td>
+                    </tr>
+            </tfoot>
             </table>
         </section>
     </article>

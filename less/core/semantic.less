@@ -26,6 +26,7 @@ body {
 // section clearing
 header,
 nav,
+article,
 footer,
 h1,
 h2,
@@ -52,6 +53,11 @@ nav {
 }
 main {
   .flex(1 0 auto);
+  .flex-flow(row wrap);
+
+}
+aside + article {
+  .flex(1 8.3333%);
 }
 article {
   .flex-display;
