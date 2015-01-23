@@ -24,12 +24,44 @@
 .am-text-capitalize {
   text-transform: capitalize;
 }
+
+// Buttons
 // http://alistapart.com/article/flat-ui-and-forms
 // http://davidwalsh.name/html5-buttons
+.am-btn {
+  text-decoration: none;
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+  box-shadow: @am-shadow-z-1;
+  &:hover {
+    box-shadow: @am-shadow-hover-z-1;
+  }
+}
 .am-btn-primary {
   background-color: @am-closure;
   color: #fff;
 }
+
+
+
+
+
+
+
 .am-primary {
   background-color: @am-primary-bg;
 }
