@@ -1,0 +1,12 @@
+.github-box-content, .github-box-title, a.download {
+    display: none;
+}
+.github-box-download, .github-box {
+    background: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    height: auto;
+    min-height: 24px;
+    padding: 0;
+    position: relative;
+}
