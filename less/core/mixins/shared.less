@@ -94,108 +94,29 @@
     }
   }
 }
-// To add depth to an element
+// Flexbox takes care of x-y, let's add some z
+// Google Material inspired
+// http://www.google.com/design/spec/what-is-material/environment.html#environment-3d-world
+// z-1 is consistent throughout the framework
 [am-layer] {
-  position: relative;
-  z-index: 1;
-  &[am-layer~="z-1"]:after {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
-    content: "";
-    top:0;
-    bottom:0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
+  &[am-layer~="z-1"] {
+    box-shadow: @am-shadow-z-1;
+    z-index: 1;
   }
-  &[am-layer~="z-1"]:before {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.02);
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
+  &[am-layer~="z-2"] {
+    box-shadow: @am-shadow-z-2;
+    z-index: 2;
   }
-  &[am-layer~="z-2"]:after {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-    content: "";
-    top:0;
-    bottom:0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
+  &[am-layer~="z-3"] {
+    box-shadow: @am-shadow-z-3;
+    z-index: 3;
   }
-  &[am-layer~="z-2"]:before {
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.16);
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
+  &[am-layer~="z-4"] {
+    box-shadow: @am-shadow-z-4;
+    z-index: 4;
   }
-  &[am-layer~="z-3"]:after {
-    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    content: "";
-    top:0;
-    bottom:0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-  }
-  &[am-layer~="z-3"]:before {
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-  }
-  &[am-layer~="z-4"]:after {
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-    content: "";
-    top:0;
-    bottom:0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-  }
-  &[am-layer~="z-4"]:before {
-    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-  }
-  &[am-layer~="z-5"]:after {
-    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
-    content: "";
-    top:0;
-    bottom:0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-  }
-  &[am-layer~="z-5"]:before {
-    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    pointer-events: none;
+  &[am-layer~="z-5"] {
+    box-shadow: @am-shadow-z-5;
+    z-index: 5;
   }
 }
