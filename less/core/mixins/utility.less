@@ -28,6 +28,7 @@
 // Buttons
 // http://alistapart.com/article/flat-ui-and-forms
 // http://davidwalsh.name/html5-buttons
+// http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons
 .am-btn {
   text-decoration: none;
   -moz-user-select: none;
@@ -47,8 +48,26 @@
   border-color: #ccc;
   color: #333;
   box-shadow: @am-shadow-z-1;
+  position: relative;
+  &,
+  &:hover,
+  &:focus {
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition:    all ease-in-out .3s;
+    -ms-transition:     all ease-in-out .3s;
+    -o-transition:      all ease-in-out .3s;
+    transition:         all ease-in-out .3s;
+  }
   &:hover {
     box-shadow: @am-shadow-hover-z-1;
+  }
+  &.floating {
+    height: 55.5px;
+    width: 55.5px;
+    background-clip: padding-box;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0;
   }
 }
 .am-btn-primary {
