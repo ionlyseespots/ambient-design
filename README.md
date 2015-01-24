@@ -1,6 +1,6 @@
 # Ambient
 
-[Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
+[Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
 Back to basics. A lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework that makes use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
 
