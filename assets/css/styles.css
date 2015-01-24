@@ -3,6 +3,9 @@
     font-size: 14px;
     font-weight: 500;
 }
+.color-palette h1 {
+    display: none;
+}
 .color-palette ul {
     margin: 0;
     padding: 0;
