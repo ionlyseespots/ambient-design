@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
 
-Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
+Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework that makes use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
 
 Ambient is ready to adopt whatever your design or style is. Feel free to use HTML, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 
@@ -24,7 +24,7 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 
 This project is in early development.
 
-Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout. 
+Ambient is a CSS framework that makes use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout. 
 
 * Website: http://ionlyseespots.github.io/ambient-design/index.html
 * Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
