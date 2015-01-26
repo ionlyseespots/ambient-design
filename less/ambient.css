@@ -1336,3 +1336,6 @@ nav[am-layout] a:active {
 .am-secondary {
   background-color: #e8f3fb;
 }
+.am-red {
+  background-color: #f44336;
+}
