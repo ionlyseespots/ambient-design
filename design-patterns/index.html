@@ -116,36 +116,26 @@
             </p>
             <p>
                 <small>
-                    If needed, additional size values <code>large</code> & <code>small</code> is available.
+                    If needed, additional size values <code>large</code> & <code>small</code> are available.
                 </small>
             </p>
-            <ul>
-                <li>
-                    <code>am-margin</code>
-                </li>
-                <li>
-                    <code>am-margin="large"</code>
-                </li>
-                <li>
-                    <code>am-margin="small"</code>
-                </li>
-            </ul>
             <blockquote>
+                <code>am-margin</code>
                 <p>
                     If needed, specific direction is available as:
                 <p>
                 <ul>
                     <li>
-                        <code>am-margin="top"</code> <code>am-margin="top large"</code> <code>am-margin="top small"</code>
+                        <code>am-margin="top"</code>
                     </li>
                     <li>
-                        <code>am-margin="right"</code> <code>am-margin="right large"</code> <code>am-margin="right small"</code>
+                        <code>am-margin="right"</code>
                     </li>
                     <li>
-                        <code>am-margin="bottom"</code> <code>am-margin="bottom large"</code> <code>am-margin="bottom small"</code>
+                        <code>am-margin="bottom"</code>
                     </li>
                     <li>
-                        <code>am-margin="left"</code> <code>am-margin="left large"</code> <code>am-margin="left small"</code>
+                        <code>am-margin="left"</code>
                     </li>
                 </ul>
             </blockquote>
@@ -158,36 +148,26 @@
             </p>
             <p>
                 <small>
-                    If needed, additional size values <code>large</code> & <code>small</code> is available.
+                    If needed, additional size values <code>large</code> & <code>small</code> are available.
                 </small>
             </p>
-            <ul>
-                <li>
-                    <code>am-padding</code>
-                </li>
-                <li>
-                    <code>am-padding="large"</code>
-                </li>
-                <li>
-                    <code>am-padding="small"</code>
-                </li>
-            </ul>
             <blockquote>
+                <code>am-padding</code>
                 <p>
                     If needed, specific direction is available as:
                 <p>
                 <ul>
                     <li>
-                        <code>am-padding="top"</code> <code>am-padding="top large"</code> <code>am-padding="top small"</code>
+                        <code>am-padding="top"</code>
                     </li>
                     <li>
-                        <code>am-padding="right"</code> <code>am-padding="right large"</code> <code>am-padding="right small</code>
+                        <code>am-padding="right"</code>
                     </li>
                     <li>
-                        <code>am-padding="bottom"</code>  <code>am-padding="bottom large"</code>  <code>am-padding="bottom small"</code>
+                        <code>am-padding="bottom"</code>
                     </li>
                     <li>
-                        <code>am-padding="left"</code>  <code>am-padding="left large"</code>  <code>am-padding="left small"</code>
+                        <code>am-padding="left"</code>
                     </li>
                 </ul>
             </blockquote>
@@ -201,7 +181,7 @@
                 To add depth to an element, add the attribute <code>am-layer="VALUE"</code> to any element.
             </p>
             <p>
-                <small>A potential use case for layers is messaging, call outs and alerts. Assign depth values as priorities for: info, success, danger & warning.</small>
+                <small>If needed, the additional value <code>animate</code> is available.</small>
             </p>
             <blockquote>
                 <p>
@@ -225,20 +205,47 @@
                     </li>
                 </ul>
             </blockquote>
-            <div am-layer="z-1" am-padding am-margin="bottom large">
-                Z-1
-            </div>
-            <div am-layer="z-2" am-padding am-margin="bottom large">
-                Z-2
-            </div>
-            <div am-layer="z-3" am-padding am-margin="bottom large">
-                Z-3
-            </div>
-            <div am-layer="z-4" am-padding am-margin="bottom large">
-                Z-4
-            </div>
-            <div am-layer="z-5" am-padding am-margin="bottom large">
-                Z-5
+            <div am-row="portrait-100">
+                <div am-col am-padding>
+                    <h3>
+                        Static
+                    </h3>
+                    <div am-layer="z-1" am-padding am-margin="bottom large">
+                        Z-1
+                    </div>
+                    <div am-layer="z-2" am-padding am-margin="bottom large">
+                        Z-2
+                    </div>
+                    <div am-layer="z-3" am-padding am-margin="bottom large">
+                        Z-3
+                    </div>
+                    <div am-layer="z-4" am-padding am-margin="bottom large">
+                        Z-4
+                    </div>
+                    <div am-layer="z-5" am-padding am-margin="bottom large">
+                        Z-5
+                    </div>
+                </div>
+                <div am-col am-padding>
+                    <h3>
+                        Animated
+                    </h3>
+                    <div am-layer="z-1 animate" am-padding am-margin="bottom large">
+                        Z-1
+                    </div>
+                    <div am-layer="z-2 animate" am-padding am-margin="bottom large">
+                        Z-2
+                    </div>
+                    <div am-layer="z-3 animate" am-padding am-margin="bottom large">
+                        Z-3
+                    </div>
+                    <div am-layer="z-4 animate" am-padding am-margin="bottom large">
+                        Z-4
+                    </div>
+                    <div am-layer="z-5 animate" am-padding am-margin="bottom large">
+                        Z-5
+                    </div>
+                </div>
             </div>
         </section>
     </article>
