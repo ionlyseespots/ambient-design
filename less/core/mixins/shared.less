@@ -97,26 +97,59 @@
 // Flexbox takes care of x-y, let's add some z
 // Google Material inspired
 // http://www.google.com/design/spec/what-is-material/environment.html#environment-3d-world
-// z-1 is consistent throughout the framework
 [am-layer] {
   &[am-layer~="z-1"] {
-    box-shadow: @am-shadow-z-1;
+    .z-depth(1);
     z-index: 1;
   }
   &[am-layer~="z-2"] {
-    box-shadow: @am-shadow-z-2;
+    .z-depth(2);
     z-index: 2;
   }
   &[am-layer~="z-3"] {
-    box-shadow: @am-shadow-z-3;
+    .z-depth(3);
     z-index: 3;
   }
   &[am-layer~="z-4"] {
-    box-shadow: @am-shadow-z-4;
+    .z-depth(4);
     z-index: 4;
   }
   &[am-layer~="z-5"] {
-    box-shadow: @am-shadow-z-5;
+    .z-depth(5);
     z-index: 5;
   }
 }
+
+// SHADOW MIXINS
+
+// Top & Bottom
+.z-depth(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-bottom}, @{z-depth-@{depth}-top}";
+}
+
+// Top
+.z-depth-top(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-top}";
+}
+// Bottom
+.z-depth-bottom(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-bottom}";
+}
+
+// Animation
+.z-depth-animation(@depth-after, @depth-orientation: full) {
+  &:hover,
+  &:focus {
+    & when (@depth-orientation = full) {
+      .z-depth(@depth-after);
+    }
+    & when (@depth-orientation = top) {
+      .z-depth-top(@depth-after);
+    }
+    & when (@depth-orientation = bottom) {
+      .z-depth-bottom(@depth-after);
+    }
+  }
+}
+
+

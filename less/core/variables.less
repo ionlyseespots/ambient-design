@@ -29,12 +29,29 @@
 @am-padding: 1vw;
 @am-margin: 1vw;
 
-// shadow states
-@am-shadow-z-1: 0 2px 5px 0 hsla(0, 0%, 0%, 0.16), 0 2px 10px 0 hsla(0, 0%, 0%, 0.12);
-@am-shadow-z-2: 0 8px 17px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
-@am-shadow-z-3: 0 12px 15px 0 hsla(0, 0%, 0%, 0.24), 0 17px 50px 0 hsla(0, 0%, 0%, 0.19);
-@am-shadow-z-4: 0 16px 28px 0 hsla(0, 0%, 0%, 0.22), 0 25px 55px 0 hsla(0, 0%, 0%, 0.21);
-@am-shadow-z-5: 0 27px 24px 0 hsla(0, 0%, 0%, 0.2), 0 40px 77px 0 hsla(0, 0%, 0%, 0.22);
+// Shadows
+// shadows are based on Google Material paper shadows
+// http://www.google.com/design/spec/what-is-material/environment.html#environment-3d-world
+// shadow settings
+@z-depth-animation-time: .28s;
+@z-depth-animation-function: cubic-bezier(.4, 0, .2, 1);
+
+// z-depth-1
+@z-depth-1-top: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+@z-depth-1-bottom: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+// z-depth-2
+@z-depth-2-top: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@z-depth-2-bottom: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+// z-depth-3
+@z-depth-3-top: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+@z-depth-3-bottom: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+// z-depth-4
+@z-depth-4-top: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+@z-depth-4-bottom: 0 16px 28px 0 rgba(0, 0, 0, 0.22);
+// z-depth-5
+@z-depth-5-top: 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+@z-depth-5-bottom: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
+
 
 // shadow hover states
-@am-shadow-hover-z-1: 0 5px 11px 0 hsla(0, 0%, 0%, 0.18), 0 4px 15px 0 hsla(0, 0%, 0%, 0.15);
+//@am-shadow-hover: 0 8px 17px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);

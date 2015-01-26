@@ -270,7 +270,8 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   color: #333;
-  box-shadow: @am-shadow-z-1;
+  .z-depth-bottom(1);
+  .z-depth-animation(2);
   background-clip: padding-box;
   border: medium none;
   border-radius: 2px;
@@ -283,14 +284,9 @@ button {
   &,
   &:hover,
   &:focus {
-    -webkit-transition: all ease-in-out .3s;
-    -moz-transition:    all ease-in-out .3s;
-    -ms-transition:     all ease-in-out .3s;
-    -o-transition:      all ease-in-out .3s;
-    transition:         all ease-in-out .3s;
-  }
-  &:hover {
-    box-shadow: @am-shadow-hover-z-1;
+    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   }
 }
 hr {

@@ -705,7 +705,7 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   color: #333;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
   border: medium none;
   border-radius: 2px;
@@ -716,17 +716,16 @@ button {
   padding: 0 2rem;
   text-transform: uppercase;
 }
+button:hover,
+button:focus {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 button,
 button:hover,
 button:focus {
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-button:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 hr {
   border-color: rgba(0, 0, 0, 0.12);
@@ -949,7 +948,7 @@ div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
   column-count: 3;
 }
 [am-layout^="card"] > div {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   padding: .5em;
   border-radius: 2px;
   margin: .5em 0;
@@ -1218,7 +1217,7 @@ nav[am-layout] a:active {
   margin: 0 0 0 calc(0.5vw);
 }
 [am-layer][am-layer~="z-1"] {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   z-index: 1;
 }
 [am-layer][am-layer~="z-2"] {
@@ -1282,7 +1281,7 @@ nav[am-layout] a:active {
   vertical-align: middle;
   white-space: nowrap;
   color: #333;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
   border: medium none;
   border-radius: 2px;
@@ -1293,17 +1292,16 @@ nav[am-layout] a:active {
   padding: 0 2rem;
   text-transform: uppercase;
 }
+.am-btn:hover,
+.am-btn:focus {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .am-btn,
 .am-btn:hover,
 .am-btn:focus {
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-.am-btn:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .am-btn.floating {
   height: 55.5px;
