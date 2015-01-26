@@ -1336,7 +1336,7 @@ nav[am-layout] a:active {
 .am-secondary {
   background-color: #e8f3fb;
 }
-.am-red {
+.am-red-text {
   color: #f44336;
 }
 .am-red-bg {
@@ -1349,66 +1349,6 @@ nav[am-layout] a:active {
   fill: #f44336;
 }
 .am-red-stroke {
-  stroke: #f44336;
-}
-.am-red-bg {
-  color: #f44336;
-}
-.am-red-bg-bg {
-  background-color: #f44336;
-}
-.am-red-bg-border {
-  border-color: #f44336;
-}
-.am-red-bg-fill {
-  fill: #f44336;
-}
-.am-red-bg-stroke {
-  stroke: #f44336;
-}
-.am-red-border {
-  color: #f44336;
-}
-.am-red-border-bg {
-  background-color: #f44336;
-}
-.am-red-border-border {
-  border-color: #f44336;
-}
-.am-red-border-fill {
-  fill: #f44336;
-}
-.am-red-border-stroke {
-  stroke: #f44336;
-}
-.am-red-fill {
-  color: #f44336;
-}
-.am-red-fill-bg {
-  background-color: #f44336;
-}
-.am-red-fill-border {
-  border-color: #f44336;
-}
-.am-red-fill-fill {
-  fill: #f44336;
-}
-.am-red-fill-stroke {
-  stroke: #f44336;
-}
-.am-red-stroke {
-  color: #f44336;
-}
-.am-red-stroke-bg {
-  background-color: #f44336;
-}
-.am-red-stroke-border {
-  border-color: #f44336;
-}
-.am-red-stroke-fill {
-  fill: #f44336;
-}
-.am-red-stroke-stroke {
   stroke: #f44336;
 }
 .am-pink {

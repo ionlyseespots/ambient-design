@@ -84,34 +84,41 @@
 
 
 // Material palette
+
+// Apply color hue / color orientation to classes
 .am-red {
-  .red();
+  &-text {
+    .red(6, text);
+  }
   &-bg {
-    .red();
+    .red(6, bg);
   }
   &-border {
-    .red();
+    .red(6, border);
   }
   &-fill {
-    .red();
+    .red(6, fill);
   }
   &-stroke {
-    .red();
+    .red(6, stroke);
   }
 }
 
-.red(@clr: 6) {
+// Generate color hue and color orientation from variable groups
+.red(@clr, @clr-orientation: bg) {
+  & when (@clr-orientation = text) {
     color: extract(@group-red, @clr);
-  &-bg {
+  }
+  & when (@clr-orientation = bg) {
     background-color: extract(@group-red, @clr);
   }
-  &-border {
-    border-color:  extract(@group-red, @clr);;
+  & when (@clr-orientation = border) {
+    border-color:  extract(@group-red, @clr);
   }
-  &-fill {
+  & when (@clr-orientation = fill) {
     fill: extract(@group-red, @clr);
   }
-  &-stroke {
+  & when (@clr-orientation = stroke) {
     stroke: extract(@group-red, @clr);
   }
 }
