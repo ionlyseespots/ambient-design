@@ -25,6 +25,8 @@
   text-transform: capitalize;
 }
 
+
+
 // Buttons
 // http://alistapart.com/article/flat-ui-and-forms
 // http://davidwalsh.name/html5-buttons
@@ -72,13 +74,6 @@
   background-color: @am-closure;
   color: #fff;
 }
-
-
-
-
-
-
-
 .am-primary {
   background-color: @am-primary-bg;
 }
@@ -87,6 +82,337 @@
 }
 
 
+
+// Material palette
 .am-red {
-  background-color: @clr-red;
+  .red();
+  &-bg {
+    .red();
+  }
+  &-border {
+    .red();
+  }
+  &-fill {
+    .red();
+  }
+  &-stroke {
+    .red();
+  }
+}
+
+.red(@clr: 6) {
+    color: extract(@group-red, @clr);
+  &-bg {
+    background-color: extract(@group-red, @clr);
+  }
+  &-border {
+    border-color:  extract(@group-red, @clr);;
+  }
+  &-fill {
+    fill: extract(@group-red, @clr);
+  }
+  &-stroke {
+    stroke: extract(@group-red, @clr);
+  }
+}
+
+.am-pink {
+  color: @clr-pink;
+  &-bg {
+    background-color: @clr-pink;
+  }
+  &-border {
+    border-color: @clr-pink;
+  }
+  &-fill {
+    fill: @clr-pink;
+  }
+  &-stroke {
+    stroke: @clr-pink;
+  }
+}
+.am-purple {
+  color: @clr-purple;
+  &-bg {
+    background-color: @clr-purple;
+  }
+  &-border {
+    border-color: @clr-purple;
+  }
+  &-fill {
+    fill: @clr-purple;
+  }
+  &-stroke {
+    stroke: @clr-purple;
+  }
+}
+.am-deep-purple {
+  color: @clr-deep-purple;
+  &-bg {
+    background-color: @clr-deep-purple;
+  }
+  &-border {
+    border-color: @clr-deep-purple;
+  }
+  &-fill {
+    fill: @clr-deep-purple;
+  }
+  &-stroke {
+    stroke: @clr-deep-purple;
+  }
+}
+.am-indigo {
+  color: @clr-indigo;
+  &-bg {
+    background-color: @clr-indigo;
+  }
+  &-border {
+    border-color: @clr-indigo;
+  }
+  &-fill {
+    fill: @clr-indigo;
+  }
+  &-stroke {
+    stroke: @clr-indigo;
+  }
+}
+.am-blue {
+  color: @clr-blue;
+  &-bg {
+    background-color: @clr-blue;
+  }
+  &-border {
+    border-color: @clr-blue;
+  }
+  &-fill {
+    fill: @clr-blue;
+  }
+  &-stroke {
+    stroke: @clr-blue;
+  }
+}
+.am-light-blue {
+  color: @clr-light-blue;
+  &-bg {
+    background-color: @clr-light-blue;
+  }
+  &-border {
+    border-color: @clr-light-blue;
+  }
+  &-fill {
+    fill: @clr-light-blue;
+  }
+  &-stroke {
+    stroke: @clr-light-blue;
+  }
+}
+.am-cyan {
+  color: @clr-cyan;
+  &-bg {
+    background-color: @clr-cyan;
+  }
+  &-border {
+    border-color: @clr-cyan;
+  }
+  &-fill {
+    fill: @clr-cyan;
+  }
+  &-stroke {
+    stroke: @clr-cyan;
+  }
+}
+.am-teal {
+  color: @clr-teal;
+  &-bg {
+    background-color: @clr-teal;
+  }
+  &-border {
+    border-color: @clr-teal;
+  }
+  &-fill {
+    fill: @clr-teal;
+  }
+  &-stroke {
+    stroke: @clr-teal;
+  }
+}
+.am-green {
+  color: @clr-green;
+  &-bg {
+    background-color: @clr-green;
+  }
+  &-border {
+    border-color: @clr-green;
+  }
+  &-fill {
+    fill: @clr-green;
+  }
+  &-stroke {
+    stroke: @clr-green;
+  }
+}
+.am-light-green {
+  color: @clr-light-green;
+  &-bg {
+    background-color: @clr-light-green;
+  }
+  &-border {
+    border-color: @clr-light-green;
+  }
+  &-fill {
+    fill: @clr-light-green;
+  }
+  &-stroke {
+    stroke: @clr-light-green;
+  }
+}
+.am-lime {
+  color: @clr-lime;
+  &-bg {
+    background-color: @clr-lime;
+  }
+  &-border {
+    border-color: @clr-lime;
+  }
+  &-fill {
+    fill: @clr-lime;
+  }
+  &-stroke {
+    stroke: @clr-lime;
+  }
+}
+.am-yellow {
+  color: @clr-yellow;
+  &-bg {
+    background-color: @clr-yellow;
+  }
+  &-border {
+    border-color: @clr-yellow;
+  }
+  &-fill {
+    fill:  @clr-yellow;
+  }
+  &-stroke {
+    stroke: @clr-yellow;
+  }
+}
+.am-amber {
+  color: @clr-amber;
+  &-bg {
+    background-color: @clr-amber;
+  }
+  &-border {
+    border-color: @clr-amber;
+  }
+  &-fill {
+    fill:  @clr-amber;
+  }
+  &-stroke {
+    stroke: @clr-amber;
+  }
+}
+.am-orange {
+  color: @clr-orange;
+  &-bg {
+    background-color: @clr-orange;
+  }
+  &-border {
+    border-color: @clr-orange;
+  }
+  &-fill {
+    fill:  @clr-orange;
+  }
+  &-stroke {
+    stroke: @clr-orange;
+  }
+}
+.am-deep-orange {
+  color: @clr-deep-orange;
+  &-bg {
+    background-color: @clr-deep-orange;
+  }
+  &-border {
+    border-color: @clr-deep-orange;
+  }
+  &-fill {
+    fill:  @clr-deep-orange;
+  }
+  &-stroke {
+    stroke: @clr-deep-orange;
+  }
+}
+.am-brown {
+  color: @clr-brown;
+  &-bg {
+    background-color: @clr-brown;
+  }
+  &-border {
+    border-color: @clr-brown;
+  }
+  &-fill {
+    fill:  @clr-brown;
+  }
+  &-stroke {
+    stroke: @clr-brown;
+  }
+}
+.am-grey {
+  color: @clr-grey;
+  &-bg {
+    background-color: @clr-grey;
+  }
+  &-border {
+    border-color: @clr-grey;
+  }
+  &-fill {
+    fill:  @clr-grey;
+  }
+  &-stroke {
+    stroke: @clr-grey;
+  }
+}
+.am-blue-grey {
+  color: @clr-blue-grey;
+  &-bg {
+    background-color: @clr-blue-grey;
+  }
+  &-border {
+    border-color: @clr-blue-grey;
+  }
+  &-fill {
+    fill:  @clr-blue-grey;
+  }
+  &-stroke {
+    stroke: @clr-blue-grey;
+  }
+}
+.am-black {
+  color: @clr-black;
+  &-bg {
+    background-color: @clr-black;
+  }
+  &-border {
+    border-color: @clr-black;
+  }
+  &-fill {
+    fill:  @clr-black;
+  }
+  &-stroke {
+    stroke: @clr-black;
+  }
+}
+.am-white {
+  color: @clr-white;
+  &-bg {
+    background-color: @clr-white;
+  }
+  &-border {
+    border-color: @clr-white;
+  }
+  &-fill {
+    fill:  @clr-white;
+  }
+  &-stroke {
+    stroke: @clr-white;
+  }
 }
