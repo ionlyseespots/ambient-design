@@ -105,7 +105,7 @@
 }
 
 // Generate color hue and color orientation from variable groups
-.red(@clr, @clr-orientation: bg) {
+.red(@clr, @clr-orientation) {
   & when (@clr-orientation = text) {
     color: extract(@group-red, @clr);
   }
