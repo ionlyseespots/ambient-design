@@ -35,3 +35,22 @@
     stroke: extract(@group-pink, @am-clr);
   }
 }
+
+// Purple
+.purple(@am-clr, @am-clr-orientation) {
+  & when (@am-clr-orientation = text) {
+    color: extract(@group-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = bg) {
+    background-color: extract(@group-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = border) {
+    border-color:  extract(@group-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = fill) {
+    fill: extract(@group-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = stroke) {
+    stroke: extract(@group-purple, @am-clr);
+  }
+}
