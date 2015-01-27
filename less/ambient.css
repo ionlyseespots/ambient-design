@@ -1171,6 +1171,21 @@ nav[am-layout] a:active {
 .purple-stroke {
   stroke: #9c27b0;
 }
+.deep-purple-text {
+  color: #673ab7;
+}
+.deep-purple-bg {
+  background-color: #673ab7;
+}
+.deep-purple-border {
+  border-color: #673ab7;
+}
+.deep-purple-fill {
+  fill: #673ab7;
+}
+.deep-purple-stroke {
+  stroke: #673ab7;
+}
 [am-padding] {
   padding: 1vw;
 }

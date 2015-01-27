@@ -54,3 +54,22 @@
     stroke: extract(@group-purple, @am-clr);
   }
 }
+
+// deep-purple
+.deep-purple(@am-clr, @am-clr-orientation) {
+  & when (@am-clr-orientation = text) {
+    color: extract(@group-deep-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = bg) {
+    background-color: extract(@group-deep-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = border) {
+    border-color:  extract(@group-deep-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = fill) {
+    fill: extract(@group-deep-purple, @am-clr);
+  }
+  & when (@am-clr-orientation = stroke) {
+    stroke: extract(@group-deep-purple, @am-clr);
+  }
+}
