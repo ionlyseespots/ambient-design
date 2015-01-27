@@ -3,7 +3,10 @@
     font-size: 14px;
     font-weight: 500;
 }
-.color-palette h1 {
+.color-palette p {
+    border: 1px solid;
+}
+.color-group h1 {
     display: none;
 }
 .color-palette ul {
@@ -33,18 +36,4 @@
 }
 .color-palette .color-group li.color, .color-palette .color-group:last-child li.color {
     padding: 15px;
-}
-.color-palette .color-group li.color .hex, .color-palette .color-group:last-child li.color .hex {
-
-    text-transform: uppercase;
-}
-.color-palette .color-group li.main-color, .color-palette .color-group:last-child li.main-color {
-    border-bottom: 4px solid hsl(0, 0%, 98%);
-}
-.color-palette .color-group li.main-color .name, .color-palette .color-group:last-child li.main-color .name {
-
-    margin-bottom: 60px;
-}
-.color-palette .color-group li.divide, .color-palette .color-group:last-child li.divide {
-    border-top: 4px solid hsl(0, 0%, 98%);
 }

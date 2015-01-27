@@ -1411,6 +1411,36 @@ nav[am-layout] a:active {
 .blue-grey-stroke {
   stroke: #607d8b;
 }
+.black-text {
+  color: #000000;
+}
+.black-bg {
+  background-color: #000000;
+}
+.black-border {
+  border-color: #000000;
+}
+.black-fill {
+  fill: #000000;
+}
+.black-stroke {
+  stroke: #000000;
+}
+.white-text {
+  color: #ffffff;
+}
+.white-bg {
+  background-color: #ffffff;
+}
+.white-border {
+  border-color: #ffffff;
+}
+.white-fill {
+  fill: #ffffff;
+}
+.white-stroke {
+  stroke: #ffffff;
+}
 [am-padding] {
   padding: 1vw;
 }
