@@ -1141,6 +1141,21 @@ nav[am-layout] a:active {
 .red-stroke {
   stroke: #f44336;
 }
+.pink-text {
+  color: #e91e63;
+}
+.pink-bg {
+  background-color: #e91e63;
+}
+.pink-border {
+  border-color: #e91e63;
+}
+.pink-fill {
+  fill: #e91e63;
+}
+.pink-stroke {
+  stroke: #e91e63;
+}
 .am-pink {
   color: #e91e63;
 }

@@ -1,18 +1,3 @@
-//== Color mixin
-// .COLOR(RANGE, ORIENTATION);
-//
-// COLOR: color
-// RANGE: 1-14. The default value of 6.
-// ORIENTATION: text, bg, border, fill, stroke
-//    .example-text {
-//      .red(6, text);
-//    }
-//    .example-2 {
-//      .red(7, bg);
-//    }
-//
-// Generate color hue and orientation
-
 // Red
 .red(@am-clr, @am-clr-orientation) {
   & when (@am-clr-orientation = text) {
@@ -29,5 +14,24 @@
   }
   & when (@am-clr-orientation = stroke) {
     stroke: extract(@group-red, @am-clr);
+  }
+}
+
+// Pink
+.pink(@am-clr, @am-clr-orientation) {
+  & when (@am-clr-orientation = text) {
+    color: extract(@group-pink, @am-clr);
+  }
+  & when (@am-clr-orientation = bg) {
+    background-color: extract(@group-pink, @am-clr);
+  }
+  & when (@am-clr-orientation = border) {
+    border-color:  extract(@group-pink, @am-clr);
+  }
+  & when (@am-clr-orientation = fill) {
+    fill: extract(@group-pink, @am-clr);
+  }
+  & when (@am-clr-orientation = stroke) {
+    stroke: extract(@group-pink, @am-clr);
   }
 }

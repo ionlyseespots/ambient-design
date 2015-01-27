@@ -1,12 +1,30 @@
 //** Material palette
-// The build color variable can be used on its own or as a color orientation
 //
+// Class build:
+// .COLOR-ORIENTATION
+//
+// Examples:
+//  .red-text
+//  .red-bg
+//  .red-border
+//  .red-fill
+//  .red-stroke
+//
+//== Mixin build
+// .COLOR(RANGE, ORIENTATION);
+//
+// COLOR: color
+// RANGE: 1-14. The value of 6 is Material 500.
+// ORIENTATION: text, bg, border, fill, stroke
+//    .example-text {
+//      .red(6, text);
+//    }
+//    .example-background {
+//      .red(7, bg);
+//    }
 //
 
-//
-//
-
-
+// Red
 .red {
   &-text {
     .red(6, text);
@@ -22,6 +40,25 @@
   }
   &-stroke {
     .red(6, stroke);
+  }
+}
+
+// Pink
+.pink {
+  &-text {
+    .pink(6, text);
+  }
+  &-bg {
+    .pink(6, bg);
+  }
+  &-border {
+    .pink(6, border);
+  }
+  &-fill {
+    .pink(6, fill);
+  }
+  &-stroke {
+    .pink(6, stroke);
   }
 }
 
