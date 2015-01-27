@@ -934,22 +934,15 @@ div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
   }
 }
 [am-layout^="card"] {
-  -webkit-column-width: 15em;
-  -webkit-column-gap: 1em;
-  -webkit-column-count: 3;
-  -moz-column-width: 15em;
-  -moz-column-gap: 1em;
-  -moz-column-count: 3;
-  -ms-column-width: 15em;
-  -ms-column-gap: 1em;
-  -ms-column-count: 3;
-  column-width: 15em;
-  column-gap: 1em;
-  column-count: 3;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
 }
 [am-layout^="card"] > div {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-  padding: .5em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 1em;
+  border: 1px solid #e6e6e6;
   border-radius: 2px;
   margin: .5em 0;
   display: inline-block;
@@ -959,15 +952,6 @@ div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
   -moz-column-count: 1;
   -ms-column-count: 1;
   column-count: 1;
-  padding: 0;
-}
-@media (orientation: portrait) {
-  [am-layout^="card"] {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    column-count: 2;
-  }
 }
 form[am-layout] input,
 form[am-layout] select,

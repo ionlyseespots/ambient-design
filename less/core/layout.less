@@ -113,21 +113,14 @@ div[am-row] {
 // card layout
 // ---------------------------------------------------
 [am-layout^="card"]   {
-  -webkit-column-width:  15em;
-  -webkit-column-gap: 1em;
-  -webkit-column-count: 3;
-  -moz-column-width:  15em;
-  -moz-column-gap: 1em;
-  -moz-column-count: 3;
-  -ms-column-width:  15em;
-  -ms-column-gap: 1em;
-  -ms-column-count: 3;
-  column-width:  15em;
-  column-gap: 1em;
-  column-count: 3;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
   & > div {
-    .z-depth(1);
-    padding: .5em;
+    .z-depth-bottom(1);
+    padding: 1em;
+    border: 1px solid hsl(0, 0%, 90%);
     border-radius: 2px;
     margin: .5em 0;
     display: inline-block;
@@ -137,13 +130,6 @@ div[am-row] {
     -moz-column-count: 1;
     -ms-column-count: 1;
     column-count: 1;
-    padding: 0;
-  }
-  @media (orientation:portrait){
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    column-count: 2;
   }
 }
 // Forms
