@@ -1,10 +1,8 @@
-.color-palette {
+/* Ambient color doc styles */
+.color-palette ul {
     color: hsla(0, 0%, 100%, 0.87);
     font-size: 14px;
     font-weight: 500;
-}
-.color-palette p {
-    border: 1px solid;
 }
 .color-group h1 {
     display: none;
@@ -28,12 +26,17 @@
 .color-palette .dark-strong {
     color: hsl(0, 0%, 0%);
 }
-
-
 .color-palette .color-group li, .color-palette .color-group:last-child li {
     list-style-type: none;
 
 }
 .color-palette .color-group li.color, .color-palette .color-group:last-child li.color {
     padding: 15px;
+}
+.backgrounds [am-col] p, .borders-and-text [am-col] p {
+    padding: 1vw;
+
+}
+.borders-and-text [am-col] p {
+    border: 1px solid;
 }
