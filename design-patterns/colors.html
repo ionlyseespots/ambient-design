@@ -28,7 +28,7 @@
 <nav am-layout="horizontal" role="navigation">
     <a href="../docs/index.html">Getting Started</a>
     <a href="../layout/index.html">Semantic</a>
-    <a href="../design-patterns/index.html" class="am-active">Layout</a>
+    <a href="../design-patterns/index.html">Layout</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
@@ -307,15 +307,68 @@
                 <code>.COLOR-stroke</code>
             </blockquote>
         </section>
+        <section am-padding>
+            <div am-row>
+                <div am-col am-padding>
+                    <h1>
+                        LESS
+                    </h1>
+                    <p>
+                        Easily change the hue for a background, text, border, fill or stroke
+                    </p>
+                    <blockquote>
+                        <h2>
+                            Mixin build
+                        </h2>
+                        <p>
+                            .COLOR(RANGE, ORIENTATION);
+                        </p>
+                        <ul>
+                            <li>
+                                COLOR: color
+                            </li>
+                            <li>
+                                RANGE: 1-14. The value of 6 is Material 500.
+                            </li>
+                            <li>
+                                ORIENTATION: text, bg, border, fill, stroke
+                            </li>
+                        </ul>
+                    </blockquote>
+                </div>
+                <div am-col am-padding>
+                    <h1>
+                        Mixin
+                    </h1>
+                     <pre>
+// Red
+.red {
+    &-text {
+        .red(6, text);
+    }
+    &-bg {
+        .red(6, bg);
+    }
+    &-border {
+        .red(6, border);
+    }
+    &-fill {
+        .red(6, fill);
+    }
+    &-stroke {
+        .red(6, stroke);
+    }
+}
+                </pre>
+                </div>
+            </div>
+        </section>
     </article>
     <article class="color-palette">
         <header am-layer="z-1" am-padding="large" class="am-secondary am-text-center">
             <h1>
                 Material palette
             </h1>
-            <p>
-                The Material palette is available as LESS variables.
-            </p>
         </header>
         <section am-padding class="color-group">
             <h1>
