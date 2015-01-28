@@ -306,8 +306,20 @@
                 <code>.COLOR-fill</code><br />
                 <code>.COLOR-stroke</code>
             </blockquote>
+            <p>
+                Example SVG loading indicator with <code>class="blue-fill"</code>
+            </p>
+            <div>
+                <svg x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48" class="blue-fill">
+                    <g width="48" height="48">
+                        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="1.5s" repeatCount="indefinite"/>
+                        <path d="M24,45C12.4,45,3,35.6,3,24S12.4,3,24,3V0l0,0C10.7,0,0,10.7,0,24c0,13.3,10.7,24,24,24V45z"/>
+                        <path fill="#eee" d="M24,3c11.6,0,21,9.4,21,21s-9.4,21-21,21v3l0,0c13.3,0,24-10.7,24-24C48,10.7,37.3,0,24,0V3z"/>
+                    </g>
+                </svg>
+            </div>
         </section>
-        <section am-padding>
+        <section>
             <div am-row="portrait-100">
                 <div am-col am-padding>
                     <h1>
