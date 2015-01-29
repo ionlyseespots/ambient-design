@@ -130,6 +130,30 @@
   }
 }
 
+[am-slide] {
+  margin: 0;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  &:hover figcaption {
+    background: none repeat scroll 0 0 hsla(0, 0%, 0%, 0.5);
+  }
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  figcaption {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0);
+  }
+}
+
 // "Who knows what evil lurks in the hearts of men? The Shadow knows!"
 // Top & Bottom
 .z-depth(@depth: 1) {

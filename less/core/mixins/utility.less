@@ -46,7 +46,6 @@
   .z-depth-bottom(1);
   .z-depth-animation(2);
   background-clip: padding-box;
-  border: medium none;
   border-radius: 2px;
   height: 36px;
   line-height: 36px;
@@ -54,20 +53,20 @@
   outline: 0 none;
   padding: 0 2rem;
   text-transform: uppercase;
+  &.floating {
+    height: 55.5px;
+    width: 55.5px;
+    background-clip: padding-box;
+    border-radius: 50%;
+    padding: 10px 0 0;
+    font-size: 26px;
+  }
   &,
   &:hover,
   &:focus {
     -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-  }
-  &.floating {
-    height: 55.5px;
-    width: 55.5px;
-    background-clip: padding-box;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    padding: 0;
   }
 }
 .am-btn-primary {

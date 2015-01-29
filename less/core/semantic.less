@@ -39,6 +39,8 @@ p,
 div {
   width: 100%;
   word-wrap: break-word;
+  // help content on absolute positioning
+  position: relative;
 }
 header {
   .flex-display;
@@ -62,13 +64,9 @@ aside + article {
 article {
   .flex-display;
   .flex-flow(row wrap);
-  // help content on absolute positioning
-  position: relative;
 }
 section {
   .flex(1 8.3333%);
-  // help content on absolute positioning
-  position: relative;
 }
 aside {
   .flex(0 0 20%);
@@ -105,8 +103,8 @@ footer {
 // https://github.com/typeplate/typeplate.github.io
 // TODO bring in typeplate as less
 html {
-  font-size: 112.5%; //* base font size 18px with 1.65 line-height */
-  // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  font-size: 112.5%; //* Typeplate base font size (112%) 18px with 1.65 line-height */
+  // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
   line-height: 1.65;
 }
 // % root font size + rem element font sizes + em for margins + padding

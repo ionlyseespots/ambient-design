@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambient semantic layout starting HTML5 example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<style>
+    .theme__toolbar-navigation .more {
+        right: 12px;    transform: rotate(-90deg);
+        top: 20px;
+    }
+    .theme__toolbar-navigation .back {
+        left: 20px;
+        top: 20px;
+    }
+    .theme__toolbar-navigation i:hover {
+        transform: rotate(90deg);
+    }
+    /*.showcase {*/
+        /*margin: 0;*/
+        /*position: relative;*/
+    /*}*/
+    /*.showcase > img {*/
+        /*display: block;*/
+        /*height: auto;*/
+        /*width: 100%;*/
+    /*}*/
+    /*.showcase .overlay {*/
+        /*height: 100%;*/
+        /*left: 0;*/
+        /*overflow: hidden;*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*width: 100%;*/
+    /*}*/
+    /*figure {*/
+        /*color: hsl(0, 0%, 100%);*/
+        /*overflow: hidden;*/
+    /*}*/
+    figure .overlay, figure .overlay-header, figure .overlay-content, figure img {
+        transition: all 0.5s ease 0s;
+    }
+    /*figure .overlay {*/
+        /*background-color: hsla(0, 0%, 0%, 0);*/
+
+    /*}*/
+    figure .overlay-header {
+        margin-top: 0;
+        padding-top: 100%;
+        color:#fff
+    }
+
+    section:hover .overlay {
+        background: none repeat scroll 0 0 hsla(0, 0%, 0%, 0.5);
+    }
+    section:hover .overlay-header {
+        padding-top: 0;
+    }
+
+    .theme__toolbar-navigation .more {
+        right: 12px;
+        top: 20px;
+    }
+    .theme__toolbar-navigation i {
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        font-size: 26px;
+        position: absolute;
+        transition: all 200ms ease 0s;
+    }
+    .floating {
+        bottom: -40px;
+
+        color: hsl(0, 0%, 100%);
+        border-color: transparent;
+        background-color:#E040FB;
+z-index: 1;
+        position: absolute;
+        right: 25px;
+    }
+
+    .app-one {
+        margin: 20px auto;
+        max-width: 420px;
+    }
+</style>
+<main>
+    <div am-layer="z-1" class="app-one">
+        <div class="indigo-bg" style="height: 25px;"></div>
+        <nav class="theme__toolbar-navigation blue-bg" style="height: 50px;">
+            <i class="fa fa-ellipsis-h more"></i>
+            <i class="fa fa-bars back"></i>
+        </nav>
+        <header am-padding="large" class="blue-bg">
+            <h1 class="white-text">
+                Ambient
+            </h1>
+            <p class="white-text">HTML5 App Template 1  </p>
+        <a href="" class="am-btn floating purple-bg"><i class="fa fa-star white-text"></i></a>
+        </header>
+        <article am-layout="vertical">
+            <section >
+                <div am-row>
+                    <div am-col="33">
+                        <figure am-slide class="showcase">
+                            <img src="https://raw.githubusercontent.com/ionlyseespots/theme-editor/master/app/css/img/shutterstock_86603806.jpg" alt="" />
+                            <figcaption class="overlay" am-padding>
+                                <h2 class="overlay-header">img</h2>
+                                <p class="overlay-content">Text</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div am-col="66">
+                        <h1>Heading</h1>
+                        <p><em>January 27th</em></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div am-row>
+                    <div am-col="33">
+                        <figure am-slide class="showcase">
+                            <img src="https://raw.githubusercontent.com/ionlyseespots/theme-editor/master/app/css/img/shutterstock_86603806.jpg" alt="" />
+                            <figcaption class="overlay" am-padding>
+                                <h2 class="overlay-header">img</h2>
+                                <p class="overlay-content">Text</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div am-col="66">
+                        <h1>Heading</h1>
+                        <p><em>January 27th</em></p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+</main>
+</body>
+</html>
