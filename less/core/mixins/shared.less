@@ -130,27 +130,32 @@
   }
 }
 
-[am-slide] {
+figure[am-slide] {
   margin: 0;
   position: relative;
-  color: hsl(0, 0%, 100%);
   overflow: hidden;
-  &:hover figcaption {
-    background: none repeat scroll 0 0 hsla(0, 0%, 0%, 0.5);
-  }
-  img {
-    display: block;
-    height: auto;
-    width: 100%;
-  }
   figcaption {
-    height: 100%;
     left: 0;
+    top: 0;
     overflow: hidden;
     position: absolute;
-    top: 0;
+    height: 100%;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0);
+    margin-top: 0;
+    padding-top: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    * {
+      color: hsla(0, 0%, 100%, 0.87);
+    }
+  }
+  &:hover figcaption {
+    padding-top: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
   }
 }
 

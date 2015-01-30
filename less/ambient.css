@@ -630,6 +630,7 @@ small {
   font-size: 65%;
 }
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -1084,6 +1085,15 @@ nav[am-layout][am-layout~="vertical"] a {
   flex-basis: auto;
   width: 100%;
 }
+nav[am-layout][am-layout~="space-between"] {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+nav[am-layout][am-layout~="space-between"] a {
+  flex: none;
+}
 nav[am-layout] a {
   padding: .75em;
   text-align: center;
@@ -1098,7 +1108,6 @@ nav[am-layout] a {
 nav[am-layout] a:hover,
 nav[am-layout] a:focus,
 nav[am-layout] a:active {
-  background-color: #cce5f6;
   outline: 0 none;
 }
 [am-layout~="outline"] article,
@@ -1549,28 +1558,33 @@ nav[am-layout] a:active {
 [am-layer]:focus[am-layer~="animate"]:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-[am-slide] {
+figure[am-slide] {
   margin: 0;
   position: relative;
-  color: #ffffff;
   overflow: hidden;
 }
-[am-slide]:hover figcaption {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-}
-[am-slide] img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-[am-slide] figcaption {
-  height: 100%;
+figure[am-slide] figcaption {
   left: 0;
+  top: 0;
   overflow: hidden;
   position: absolute;
-  top: 0;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
+  margin-top: 0;
+  padding-top: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+figure[am-slide] figcaption * {
+  color: rgba(255, 255, 255, 0.87);
+}
+figure[am-slide]:hover figcaption {
+  padding-top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .am-active {
   background-color: #cce5f6;
@@ -1638,6 +1652,7 @@ nav[am-layout] a:active {
   border-radius: 50%;
   padding: 10px 0 0;
   font-size: 26px;
+  z-index: 1;
 }
 .am-btn,
 .am-btn:hover,

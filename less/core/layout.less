@@ -236,6 +236,12 @@ nav[am-layout] {
         width: 100%;
       }
     }
+  &[am-layout~="space-between"] {
+    .justify-content(space-between);
+    a {
+      flex: none;
+    }
+  }
   & a {
     padding: .75em;
     text-align: center;
@@ -249,7 +255,7 @@ nav[am-layout] {
     &:hover,
     &:focus,
     &:active, {
-      background-color: @am-primary-bg;
+//    background-color: @am-primary-bg; Potentially going away. It can get problematic if you do not want a color on hover.
       outline: 0 none;
     }
   }

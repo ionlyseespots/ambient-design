@@ -19,108 +19,44 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <style>
-    .theme__toolbar-navigation .more {
-        right: 12px;    transform: rotate(-90deg);
-        top: 20px;
-    }
-    .theme__toolbar-navigation .back {
-        left: 20px;
-        top: 20px;
-    }
-    .theme__toolbar-navigation i:hover {
-        transform: rotate(90deg);
-    }
-    /*.showcase {*/
-        /*margin: 0;*/
-        /*position: relative;*/
-    /*}*/
-    /*.showcase > img {*/
-        /*display: block;*/
-        /*height: auto;*/
-        /*width: 100%;*/
-    /*}*/
-    /*.showcase .overlay {*/
-        /*height: 100%;*/
-        /*left: 0;*/
-        /*overflow: hidden;*/
-        /*position: absolute;*/
-        /*top: 0;*/
-        /*width: 100%;*/
-    /*}*/
-    /*figure {*/
-        /*color: hsl(0, 0%, 100%);*/
-        /*overflow: hidden;*/
-    /*}*/
-    figure .overlay, figure .overlay-header, figure .overlay-content, figure img {
-        transition: all 0.5s ease 0s;
-    }
-    /*figure .overlay {*/
-        /*background-color: hsla(0, 0%, 0%, 0);*/
-
-    /*}*/
-    figure .overlay-header {
-        margin-top: 0;
-        padding-top: 100%;
-        color:#fff
-    }
-
-    section:hover .overlay {
-        background: none repeat scroll 0 0 hsla(0, 0%, 0%, 0.5);
-    }
-    section:hover .overlay-header {
-        padding-top: 0;
-    }
-
-    .theme__toolbar-navigation .more {
-        right: 12px;
-        top: 20px;
-    }
-    .theme__toolbar-navigation i {
-        color: hsl(0, 0%, 100%);
-        cursor: pointer;
-        font-size: 26px;
-        position: absolute;
+    nav a i {
+        -webkit-transition: all 200ms ease 0s;
+        -moz-transition: all 200ms ease 0s;
+        -ms-transition: all 200ms ease 0s;
+        -o-transition: all 200ms ease 0s;
         transition: all 200ms ease 0s;
     }
-    .floating {
-        bottom: -40px;
-
-        color: hsl(0, 0%, 100%);
-        border-color: transparent;
-        background-color:#E040FB;
-z-index: 1;
-        position: absolute;
-        right: 25px;
-    }
-
-    .app-one {
-        margin: 20px auto;
-        max-width: 420px;
+    nav a:hover i {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
 </style>
 <main>
-    <div am-layer="z-1" class="app-one">
-        <div class="indigo-bg" style="height: 25px;"></div>
-        <nav class="theme__toolbar-navigation blue-bg" style="height: 50px;">
-            <i class="fa fa-ellipsis-h more"></i>
-            <i class="fa fa-bars back"></i>
+    <div am-layer="z-1" style="margin: 20px auto;max-width: 420px;"><!-- theme container -->
+        <div class="indigo-bg" style="height: 25px;"></div><!-- status bar -->
+        <nav am-layout="space-between" class="blue-bg">
+            <a href="#"><i class="fa fa-gear white-text"></i></a>
+            <a href="#"><i class="fa fa-bars white-text"></i></a>
         </nav>
         <header am-padding="large" class="blue-bg">
             <h1 class="white-text">
                 Ambient
             </h1>
-            <p class="white-text">HTML5 App Template 1  </p>
-        <a href="" class="am-btn floating purple-bg"><i class="fa fa-star white-text"></i></a>
+            <p class="white-text">HTML5 App Template 1</p>
+            <a href="#" class="am-btn floating purple-bg" style="bottom: -40px;position: absolute;right: 25px;"><i class="fa fa-star white-text"></i></a>
         </header>
         <article am-layout="vertical">
-            <section >
+            <section>
                 <div am-row>
                     <div am-col="33">
-                        <figure am-slide class="showcase">
+                        <figure am-slide>
                             <img src="https://raw.githubusercontent.com/ionlyseespots/theme-editor/master/app/css/img/shutterstock_86603806.jpg" alt="" />
-                            <figcaption class="overlay" am-padding>
-                                <h2 class="overlay-header">img</h2>
-                                <p class="overlay-content">Text</p>
+                            <figcaption am-padding>
+                                <h2>Img</h2>
+                                <p>Text</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -133,11 +69,11 @@ z-index: 1;
             <section>
                 <div am-row>
                     <div am-col="33">
-                        <figure am-slide class="showcase">
+                        <figure am-slide>
                             <img src="https://raw.githubusercontent.com/ionlyseespots/theme-editor/master/app/css/img/shutterstock_86603806.jpg" alt="" />
-                            <figcaption class="overlay" am-padding>
-                                <h2 class="overlay-header">img</h2>
-                                <p class="overlay-content">Text</p>
+                            <figcaption am-padding>
+                                <h2>Img</h2>
+                                <p>Text</p>
                             </figcaption>
                         </figure>
                     </div>
