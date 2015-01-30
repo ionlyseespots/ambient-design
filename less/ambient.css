@@ -1110,6 +1110,12 @@ nav[am-layout] a:focus,
 nav[am-layout] a:active {
   outline: 0 none;
 }
+a[am-layout~="split-bottom"],
+button[am-layout~="split-bottom"] {
+  bottom: -40px;
+  position: absolute;
+  right: 25px;
+}
 [am-layout~="outline"] article,
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
