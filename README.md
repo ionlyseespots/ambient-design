@@ -24,16 +24,17 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 
 This project is in early development. Anakin Skywalker release v1.2.14
 
-* Website: http://ionlyseespots.github.io/ambient-design/index.html
-* Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
-* Semantic: http://ionlyseespots.github.io/ambient-design/layout/index.html
-* Layout: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
-* Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap/index.html
+* Website: http://ionlyseespots.github.io/ambient-design
+* Docs: http://ionlyseespots.github.io/ambient-design/docs
+* Semantic: http://ionlyseespots.github.io/ambient-design/layout
+* Layout: http://ionlyseespots.github.io/ambient-design/design-patterns
+* Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap
 
 ## See what is coming!
 
 * Colors: http://ionlyseespots.github.io/ambient-design/design-patterns/colors.html 
-* HTML5 app template: http://ionlyseespots.github.io/ambient-design/examples/app/
+* HTML5 app template 1: http://ionlyseespots.github.io/ambient-design/examples/app
+* HTML5 app template 2: http://ionlyseespots.github.io/ambient-design/examples/template-2
 
 ## Usage
 
