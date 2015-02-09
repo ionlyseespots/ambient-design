@@ -1657,7 +1657,7 @@ figure[am-slide]:hover figcaption {
   background-clip: padding-box;
   border-radius: 50%;
   padding: 10px 0 0;
-  font-size: 26px;
+  font-size: 22px;
   z-index: 1;
 }
 .am-btn,
