@@ -20,6 +20,26 @@ body {
     margin: auto;
     width: auto;
   }
+  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div:first-of-type {
+    .flex-display;
+    .flex-direction(column);
+    & > div:first-of-type {
+      .flex-display;
+      .flex-direction(column);
+      height: calc(100vh);
+      & > article {
+        .align-items(center);
+        margin: auto;
+        width: auto;
+      }
+    }
+    & > article {
+      .align-items(center);
+      margin: auto;
+      width: auto;
+    }
+  }
 }
 // http://www.w3.org/TR/CSS2/visuren.html
 // Block elements are 100% width of parent element, if width is not specified.
@@ -116,7 +136,10 @@ body {
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
   & > header,
-  & > footer {
+  & > footer,
+  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div:first-of-type > header,
+  & div:first-of-type > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
     &

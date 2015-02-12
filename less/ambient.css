@@ -409,6 +409,45 @@ body > article {
   margin: auto;
   width: auto;
 }
+body div:first-of-type {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body div:first-of-type > div:first-of-type {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: calc(100vh);
+}
+body div:first-of-type > div:first-of-type > article {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+}
+body div:first-of-type > article {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+}
 header,
 nav,
 article,
@@ -541,30 +580,48 @@ body {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body > header,
-body > footer {
+body > footer,
+body div:first-of-type > header,
+body div:first-of-type > footer {
   background-color: #22313f;
   color: #cce5f6;
 }
 body > header h1,
 body > footer h1,
+body div:first-of-type > header h1,
+body div:first-of-type > footer h1,
 body > header h2,
 body > footer h2,
+body div:first-of-type > header h2,
+body div:first-of-type > footer h2,
 body > header h3,
 body > footer h3,
+body div:first-of-type > header h3,
+body div:first-of-type > footer h3,
 body > header h4,
 body > footer h4,
+body div:first-of-type > header h4,
+body div:first-of-type > footer h4,
 body > header h5,
 body > footer h5,
+body div:first-of-type > header h5,
+body div:first-of-type > footer h5,
 body > header h6,
-body > footer h6 {
+body > footer h6,
+body div:first-of-type > header h6,
+body div:first-of-type > footer h6 {
   color: #cce5f6;
 }
 body > header a,
-body > footer a {
+body > footer a,
+body div:first-of-type > header a,
+body div:first-of-type > footer a {
   color: #cce5f6;
 }
 body > header a:hover,
-body > footer a:hover {
+body > footer a:hover,
+body div:first-of-type > header a:hover,
+body div:first-of-type > footer a:hover {
   color: #fff;
 }
 h1,
