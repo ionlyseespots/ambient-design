@@ -25,6 +25,8 @@
   text-transform: capitalize;
 }
 
+
+
 // Buttons
 // http://alistapart.com/article/flat-ui-and-forms
 // http://davidwalsh.name/html5-buttons
@@ -41,9 +43,9 @@
   vertical-align: middle;
   white-space: nowrap;
   color: #333;
-  box-shadow: @am-shadow-z-1;
+  .z-depth-bottom(1);
+  .z-depth-animation(2);
   background-clip: padding-box;
-  border: medium none;
   border-radius: 2px;
   height: 36px;
   line-height: 36px;
@@ -51,41 +53,33 @@
   outline: 0 none;
   padding: 0 2rem;
   text-transform: uppercase;
-  &,
-  &:hover,
-  &:focus {
-    -webkit-transition: all ease-in-out .3s;
-    -moz-transition:    all ease-in-out .3s;
-    -ms-transition:     all ease-in-out .3s;
-    -o-transition:      all ease-in-out .3s;
-    transition:         all ease-in-out .3s;
-  }
-  &:hover {
-    box-shadow: @am-shadow-hover-z-1;
-  }
   &.floating {
     height: 55.5px;
     width: 55.5px;
     background-clip: padding-box;
     border-radius: 50%;
-    border: 1px solid transparent;
-    padding: 0;
+    padding: 10px 0 0;
+    font-size: 22px;
+    z-index: 1;
+  }
+  &,
+  &:hover,
+  &:focus {
+    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   }
 }
 .am-btn-primary {
   background-color: @am-closure;
   color: #fff;
 }
-
-
-
-
-
-
-
 .am-primary {
   background-color: @am-primary-bg;
 }
 .am-secondary {
   background-color: @am-secondary-bg;
 }
+
+
+

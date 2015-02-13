@@ -1,8 +1,8 @@
 # Ambient
 
-[Ambient] (http://ionlyseespots.github.io/ambient-design) is semantic layout.
+[Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
-Back to basics. Ambient is a lightweight and modular HTML5 UI development methodology. Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout.
+Back to basics. A lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework. Ambient makes use of HTML5 elements & CSS3 attributes to layout the document outline.
 
 Ambient is ready to adopt whatever your design or style is. Feel free to use HTML, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 
@@ -22,14 +22,19 @@ Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/d
 
 ## Development
 
-This project is in early development.
+This project is in early development. Anakin Skywalker release v1.2.14
 
-Ambient make use of HTML5 sections & outlines for semantic scaffolding and CSS3 attributes on elements for page layout. 
+* Website: http://ionlyseespots.github.io/ambient-design
+* Docs: http://ionlyseespots.github.io/ambient-design/docs
+* Semantic: http://ionlyseespots.github.io/ambient-design/layout
+* Layout: http://ionlyseespots.github.io/ambient-design/design-patterns
+* Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap
 
-* Website: http://ionlyseespots.github.io/ambient-design/index.html
-* Docs: http://ionlyseespots.github.io/ambient-design/docs/index.html
-* Semantic: http://ionlyseespots.github.io/ambient-design/layout/index.html
-* Layout: http://ionlyseespots.github.io/ambient-design/design-patterns/index.html
+## See what is coming!
+
+* Colors: http://ionlyseespots.github.io/ambient-design/design-patterns/colors.html 
+* HTML5 app template 1: http://ionlyseespots.github.io/ambient-design/examples/app
+* HTML5 app template 2: http://ionlyseespots.github.io/ambient-design/examples/template-2
 
 ## Usage
 

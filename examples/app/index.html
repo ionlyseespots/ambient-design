@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambient semantic layout starting HTML5 example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<style>
+    nav a i {
+        -webkit-transition: all 200ms ease 0s;
+        -moz-transition: all 200ms ease 0s;
+        -ms-transition: all 200ms ease 0s;
+        -o-transition: all 200ms ease 0s;
+        transition: all 200ms ease 0s;
+    }
+    nav a:hover i {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+</style>
+<main>
+    <div am-layer="z-1" style="margin: 20px auto;max-width: 420px;"><!-- style a template container -->
+        <div class="indigo-bg" style="height: 25px;"></div><!-- style a status bar -->
+        <nav am-layout="space-between" class="blue-bg">
+            <a href="#"><i class="fa fa-gear white-text"></i></a>
+            <a href="#"><i class="fa fa-bars white-text"></i></a>
+        </nav>
+        <header am-padding="large" class="blue-bg">
+            <h1 class="white-text">
+                Ambient
+            </h1>
+            <p class="white-text">HTML5 App Template</p>
+            <a href="#" am-layout="split-bottom" class="am-btn floating purple-bg"><i class="fa fa-star white-text"></i></a>
+        </header>
+        <article am-layout="vertical">
+            <h1 class="indigo-text">Template 1</h1>
+            <section>
+                <div am-row>
+                    <div am-col="33">
+                        <figure am-slide>
+                            <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png" alt="" />
+                            <figcaption>
+                                <h2>Img</h2>
+                                <p>Text</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div am-col="66">
+                        <h1 class="green-text">Heading</h1>
+                        <p class="grey-text"><em>Paragraph Text</em></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div am-row>
+                    <div am-col="33">
+                        <figure am-slide>
+                            <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png" alt="" />
+                            <figcaption>
+                                <h2>Img</h2>
+                                <p>Text</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div am-col="66">
+                        <h1 class="orange-text">Heading</h1>
+                        <p class="grey-text"><em>Paragraph Text</em></p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+</main>
+</body>
+</html>

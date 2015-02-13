@@ -113,21 +113,14 @@ div[am-row] {
 // card layout
 // ---------------------------------------------------
 [am-layout^="card"]   {
-  -webkit-column-width:  15em;
-  -webkit-column-gap: 1em;
-  -webkit-column-count: 3;
-  -moz-column-width:  15em;
-  -moz-column-gap: 1em;
-  -moz-column-count: 3;
-  -ms-column-width:  15em;
-  -ms-column-gap: 1em;
-  -ms-column-count: 3;
-  column-width:  15em;
-  column-gap: 1em;
-  column-count: 3;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
   & > div {
-    box-shadow: @am-shadow-z-1;
-    padding: .5em;
+    .z-depth-bottom(1);
+    padding: 1em;
+    border: 1px solid hsl(0, 0%, 90%);
     border-radius: 2px;
     margin: .5em 0;
     display: inline-block;
@@ -137,13 +130,6 @@ div[am-row] {
     -moz-column-count: 1;
     -ms-column-count: 1;
     column-count: 1;
-    padding: 0;
-  }
-  @media (orientation:portrait){
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    column-count: 2;
   }
 }
 // Forms
@@ -162,9 +148,9 @@ form[am-layout] input, form[am-layout] select, form[am-layout] textarea {
   border-radius:4px;
   -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
   box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+  -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+  transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   &:focus {
     border-color: @am-input-focus-border;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
@@ -250,6 +236,12 @@ nav[am-layout] {
         width: 100%;
       }
     }
+  &[am-layout~="space-between"] {
+    .justify-content(space-between);
+    a {
+      flex: none;
+    }
+  }
   & a {
     padding: .75em;
     text-align: center;
@@ -263,10 +255,16 @@ nav[am-layout] {
     &:hover,
     &:focus,
     &:active, {
-      background-color: @am-primary-bg;
+//    background-color: @am-primary-bg; Potentially going away. It can get problematic if you do not want a color on hover.
       outline: 0 none;
     }
   }
+}
+// Button
+a[am-layout~="split-bottom"], button[am-layout~="split-bottom"] {
+  bottom: -40px;
+  position: absolute;
+  right: 25px;
 }
 // Outline :: useful for testing document outline and displaying nested content :: uses same color as default primary RGB color value
 // ---------------------------------------------------

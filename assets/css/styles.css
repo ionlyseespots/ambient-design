@@ -1,47 +1,21 @@
-.color-palette {
-    color: hsla(0, 0%, 100%, 0.87);
-    font-size: 14px;
-    font-weight: 500;
-}
-.color-palette ul {
-    margin: 0;
-    padding: 0;
-}
-.color-palette .light {
-    color: hsla(0, 0%, 100%, 0.87);
-}
-.color-palette .light-strong {
-    color: hsl(0, 0%, 100%);
-}
-.color-palette .dark {
-    color: hsla(0, 0%, 0%, 0.87);
-}
-.color-palette .dark-when-small {
-    color: hsla(0, 0%, 0%, 0.87);
-}
-.color-palette .dark-strong {
-    color: hsl(0, 0%, 0%);
-}
-
-
-.color-palette .color-group li, .color-palette .color-group:last-child li {
-    list-style-type: none;
-
-}
-.color-palette .color-group li.color, .color-palette .color-group:last-child li.color {
-    padding: 15px;
-}
-.color-palette .color-group li.color .hex, .color-palette .color-group:last-child li.color .hex {
-
-    text-transform: uppercase;
-}
-.color-palette .color-group li.main-color, .color-palette .color-group:last-child li.main-color {
-    border-bottom: 4px solid hsl(0, 0%, 98%);
-}
-.color-palette .color-group li.main-color .name, .color-palette .color-group:last-child li.main-color .name {
-
+/* Ambient color doc styles */
+.color-group span.name {
+    display: block;
     margin-bottom: 60px;
 }
-.color-palette .color-group li.divide, .color-palette .color-group:last-child li.divide {
-    border-top: 4px solid hsl(0, 0%, 98%);
+.color-palette ul {
+    color: hsla(0, 0%, 100%, 0.87);
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.color-palette li {
+    list-style-type: none;
+    padding: 15px 5px;
+}
+.backgrounds [am-col] p, .borders-and-text [am-col] p {
+    padding: 1vw;
+}
+.borders-and-text [am-col] p {
+    border: 1px solid;
 }

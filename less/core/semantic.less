@@ -1,5 +1,5 @@
 // Ambient
-// Ambient make use of HTML5 sections & outlines for semantic scaffolding.
+// Ambient is a CSS framework that makes use of HTML5 sections & outlines for semantic scaffolding.
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
   box-sizing: inherit;
@@ -20,6 +20,26 @@ body {
     margin: auto;
     width: auto;
   }
+  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div:first-of-type {
+    .flex-display;
+    .flex-direction(column);
+    & > div:first-of-type {
+      .flex-display;
+      .flex-direction(column);
+      height: calc(100vh);
+      & > article {
+        .align-items(center);
+        margin: auto;
+        width: auto;
+      }
+    }
+    & > article {
+      .align-items(center);
+      margin: auto;
+      width: auto;
+    }
+  }
 }
 // http://www.w3.org/TR/CSS2/visuren.html
 // Block elements are 100% width of parent element, if width is not specified.
@@ -39,6 +59,8 @@ p,
 div {
   width: 100%;
   word-wrap: break-word;
+  // help content on absolute positioning
+  position: relative;
 }
 header {
   .flex-display;
@@ -62,13 +84,9 @@ aside + article {
 article {
   .flex-display;
   .flex-flow(row wrap);
-  // help content on absolute positioning
-  position: relative;
 }
 section {
   .flex(1 8.3333%);
-  // help content on absolute positioning
-  position: relative;
 }
 aside {
   .flex(0 0 20%);
@@ -105,8 +123,8 @@ footer {
 // https://github.com/typeplate/typeplate.github.io
 // TODO bring in typeplate as less
 html {
-  font-size: 112.5%; //* base font size 18px with 1.65 line-height */
-  // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  font-size: 112.5%; //* Typeplate base font size (112%) 18px with 1.65 line-height */
+  // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
   line-height: 1.65;
 }
 // % root font size + rem element font sizes + em for margins + padding
@@ -118,7 +136,10 @@ body {
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
   & > header,
-  & > footer {
+  & > footer,
+  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div:first-of-type > header,
+  & div:first-of-type > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
     &
@@ -155,7 +176,6 @@ h6 {
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
-
   font-size: 60px;
   font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
   margin-bottom: 8.91px;
@@ -198,6 +218,7 @@ small {
   font-size: 65%;
 }
 img {
+  display: block;
   max-width: 100%;
   height: auto; }
 a {
@@ -270,7 +291,8 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   color: #333;
-  box-shadow: @am-shadow-z-1;
+  .z-depth-bottom(1);
+  .z-depth-animation(2);
   background-clip: padding-box;
   border: medium none;
   border-radius: 2px;
@@ -283,14 +305,9 @@ button {
   &,
   &:hover,
   &:focus {
-    -webkit-transition: all ease-in-out .3s;
-    -moz-transition:    all ease-in-out .3s;
-    -ms-transition:     all ease-in-out .3s;
-    -o-transition:      all ease-in-out .3s;
-    transition:         all ease-in-out .3s;
-  }
-  &:hover {
-    box-shadow: @am-shadow-hover-z-1;
+    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   }
 }
 hr {
