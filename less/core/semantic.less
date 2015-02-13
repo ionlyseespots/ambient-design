@@ -20,18 +20,11 @@ body {
     margin: auto;
     width: auto;
   }
-  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div:first-of-type {
+  // Needs to work with custom attribute ui-view issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div[ui-view] {
     .flex-display;
     .flex-direction(column);
-    & > div:first-of-type {
-      height: calc(100vh);
-      & > article {
-        .align-items(center);
-        margin: auto;
-        width: auto;
-      }
-    }
+    height: calc(100vh);
     & > article {
       .align-items(center);
       margin: auto;

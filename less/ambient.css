@@ -409,7 +409,7 @@ body > article {
   margin: auto;
   width: auto;
 }
-body div:first-of-type {
+body div[ui-view] {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -419,19 +419,9 @@ body div:first-of-type {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-body div:first-of-type > div:first-of-type {
   height: calc(100vh);
 }
-body div:first-of-type > div:first-of-type > article {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: auto;
-  width: auto;
-}
-body div:first-of-type > article {
+body div[ui-view] > article {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
