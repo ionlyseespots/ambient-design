@@ -1,9 +1,6 @@
 {
   "name": "ambient",
-  "version": "1.2.13",
-    "dependencies": {
-    "normalize-css": "latest"
-    },
+  "version": "1.2.14",
   "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
     "dist/css/*"
