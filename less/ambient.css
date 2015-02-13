@@ -421,15 +421,6 @@ body div:first-of-type {
   flex-direction: column;
 }
 body div:first-of-type > div:first-of-type {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: calc(100vh);
 }
 body div:first-of-type > div:first-of-type > article {
