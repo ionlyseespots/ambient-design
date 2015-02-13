@@ -120,8 +120,8 @@ html {
 }
 // % root font size + rem element font sizes + em for margins + padding
 body {
-  background-color: #fff;
-  color: #444;
+  background-color: @am-clr-white;
+  color: @am-clr-grey-800;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -162,7 +162,7 @@ h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: #222;
+  color: @am-clr-grey-800;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
@@ -269,9 +269,10 @@ textarea {
   line-height: inherit;
 }
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_%3Cbutton%3E_to_finish
-button {
+button, input[type="submit"], input[type="button"] {
   -moz-user-select: none;
   background-image: none;
+  background-color: @am-clr-white;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -281,7 +282,7 @@ button {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: #333;
+  color: @am-clr-black;
   .z-depth-bottom(1);
   .z-depth-animation(2);
   background-clip: padding-box;
@@ -299,6 +300,20 @@ button {
     -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+  }
+  &:disabled {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: none;
+    color: hsl(0, 0%, 60%);
+    text-shadow: 0 1px 0 hsl(0, 0%, 100%);
+  }
+  &.am-primary {
+    background-color: @am-primary-bg;
+    color: darken(@am-primary, 35%);
+  }
+  &.am-secondary {
+    background-color: @am-secondary-bg;
+    color: darken(@am-secondary, 35%);
   }
 }
 hr {

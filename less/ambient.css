@@ -554,8 +554,8 @@ html {
   line-height: 1.65;
 }
 body {
-  background-color: #fff;
-  color: #444;
+  background-color: #ffffff;
+  color: #424242;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -615,7 +615,7 @@ h6 {
   text-rendering: optimizeLegibility;
   /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: #222;
+  color: #424242;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
@@ -730,9 +730,12 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-button {
+button,
+input[type="submit"],
+input[type="button"] {
   -moz-user-select: none;
   background-image: none;
+  background-color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -742,7 +745,7 @@ button {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: #333;
+  color: #000000;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
   border: medium none;
@@ -755,15 +758,45 @@ button {
   text-transform: uppercase;
 }
 button:hover,
-button:focus {
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 button,
+input[type="submit"],
+input[type="button"],
 button:hover,
-button:focus {
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
   -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled {
+  background-color: #fafafa;
+  box-shadow: none;
+  color: #999999;
+  text-shadow: 0 1px 0 #ffffff;
+}
+button.am-primary,
+input[type="submit"].am-primary,
+input[type="button"].am-primary {
+  background-color: #cce5f6;
+  color: #0e354f;
+}
+button.am-secondary,
+input[type="submit"].am-secondary,
+input[type="button"].am-secondary {
+  background-color: #e8f3fb;
+  color: #1d6fa5;
 }
 hr {
   border-color: rgba(0, 0, 0, 0.12);
@@ -1663,10 +1696,17 @@ figure[am-slide]:hover figcaption {
 .am-text-capitalize {
   text-transform: capitalize;
 }
+.am-primary {
+  background-color: #cce5f6;
+}
+.am-secondary {
+  background-color: #e8f3fb;
+}
 .am-btn {
   text-decoration: none;
   -moz-user-select: none;
   background-image: none;
+  background-color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -1674,7 +1714,7 @@ figure[am-slide]:hover figcaption {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: #333;
+  color: #000000;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
   border-radius: 2px;
@@ -1705,13 +1745,18 @@ figure[am-slide]:hover figcaption {
   -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.am-btn-primary {
-  background-color: #22313f;
-  color: #fff;
+.am-btn.am-disabled {
+  background-color: #fafafa;
+  box-shadow: none;
+  color: #999999;
+  text-shadow: 0 1px 0 #ffffff;
+  pointer-events: none;
 }
-.am-primary {
+.am-btn.am-primary {
   background-color: #cce5f6;
+  color: #0e354f;
 }
-.am-secondary {
+.am-btn.am-secondary {
   background-color: #e8f3fb;
+  color: #1d6fa5;
 }

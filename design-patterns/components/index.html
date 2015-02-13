@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Base</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+</body>
+<header>
+    <h1>
+        <a href="../../index.html" title="index">Ambient</a>
+    </h1>
+</header>
+<nav am-layout="horizontal" role="navigation">
+    <a href="../../docs/index.html">Getting Started</a>
+    <a href="../../layout/index.html">Semantic</a>
+    <a href="../../design-patterns/index.html">Layout</a>
+    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
+</nav>
+<main role="main">
+<header am-padding class="am-primary">
+    <h1>
+        Components
+    </h1>
+    <p>
+        All Ambient components at a glance.
+    </p>
+</header>
+    <article>
+        <header am-padding="large" class="am-secondary">
+            <h1>
+                Components
+            </h1>
+            <p>
+                All Ambient components at a glance.
+            </p>
+        </header>
+        <aside>
+            <h1>
+                Rockstep
+            </h1>
+            <ul>
+                <li>Semantic</li>
+                <li><a href="base.html">Base</a></li>
+
+                <li>Layout</li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="panel.html">Panel</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="comment.html">Comment</a></li>
+                <li><a href="utility.html">Utility</a></li>
+
+                <li>Navigation</li>
+                <li><a href="nav.html">Nav</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="subnav.html">Subnav</a></li>
+                <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                <li><a href="pagination.html">Pagination</a></li>
+                <li><a href="tab.html">Tab</a></li>
+
+                <li>Common</li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="icon.html">Icon</a></li>
+                <li><a href="close.html">Close</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="alert.html">Alert</a></li>
+                <li><a href="thumbnail.html">Thumbnail</a></li>
+                <li><a href="overlay.html">Overlay</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="text.html">Text</a></li>
+                <li><a href="animation.html">Animation</a></li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+<h1>
+        Get familiar with the basic setup and structure of Ambient
+</h1>
+<div am-row>
+    <div am-col>
+        <h2>
+            Semantic
+        </h2>
+<p>
+
+
+
+    Elements generally normalize HTML elements for cross browser functionality and add some very basic styling.
+
+</p>
+    </div>
+    <div am-col>
+        <h2>
+            Layout
+        </h2>
+<p>
+
+
+
+    Apply our fully responsive fluid grid system and panels, common layout parts like blog articles and comments and useful utility classes.
+
+</p>
+    </div>
+
+</div>
+                <div am-row>
+                    <div am-col>
+                        <h2>
+                            Navigation
+                        </h2>
+                        <p>
+
+
+
+                            Ambient offers different types of navigations, like navigation bars and side navigations. Use breadcrumbs or a pagination to steer through articles.
+
+                        </p>
+                    </div>
+
+                    <div am-col>
+                        <h2>
+                            Common
+                        </h2>
+<p>
+
+
+
+    Here you'll find components that you often use within your content, like buttons, icons, badges, thumbnails, etc.
+
+</p>
+                    </div>
+
+                </div>
+        <section am-padding>
+            <h1>
+                Headings
+            </h1>
+            <p>
+                Use the <code>h1</code> - <code>h6</code> elements to define your headings
+            </p>
+            <blockquote>
+                <h1>h1 heading</h1>
+                <h2>h1 heading</h2>
+                <h3>h1 heading</h3>
+                <h4>h1 heading</h4>
+                <h5>h1 heading</h5>
+                <h6>h1 heading</h6>
+            </blockquote>
+
+        </section>
+        <section am-padding>
+            <h1>
+                Blockquote
+            </h1>
+            <blockquote>
+                <p>
+                    This is a paragraph in a blockquote.
+                </p>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h1>
+                Code
+            </h1>
+            <pre><code>
+    code
+            </code></pre>
+        </section>
+    </article>
+    <article>
+            <h1>
+                Buttons
+            </h1>
+           <div am-row am-padding>
+               <h2>
+                   Default
+               </h2>
+                <a class="am-btn" href="#">Anchor button</a>
+                <button>Button element</button>
+                <input type="submit" value="submit input">
+                <input type="button" value="button input">
+           </div>
+            <div am-row am-padding>
+                <h2>
+                    Disabled
+                </h2>
+                <a class="am-btn am-disabled" href="#">Anchor button</a>
+                <button disabled>Button element</button>
+                <input type="submit" value="submit input" disabled>
+                <input type="button" value="button input" disabled>
+            </div>
+            <div am-row am-padding>
+                <h2>
+                    Primary
+                </h2>
+                <a class="am-btn am-primary" href="#">Anchor button</a>
+                <button class="am-primary">Button element</button>
+                <input class="am-primary" type="submit" value="submit input">
+                <input class="am-primary" type="button" value="button input">
+            </div>
+            <div am-row am-padding>
+                <h2>
+                    Secondary
+                </h2>
+                <a class="am-btn am-secondary" href="#">Anchor button</a>
+                <button class="am-secondary">Button element</button>
+                <input class="am-secondary" type="submit" value="submit input">
+                <input class="am-secondary" type="button" value="button input">
+            </div>
+    </article>
+    <article>
+        <h1>
+            Forms
+        </h1>
+        <div am-row am-padding>
+            <h2>
+                Default
+            </h2>
+            <form>
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
+
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
+
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit" class="am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-row am-padding>
+            <h2>
+                Inline
+            </h2>
+            <form am-layout="inline">
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
+
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
+
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit" class="am-primary">Sign in</button>
+            </form>
+        </div>
+            </article>
+        </section>
+    </article>
+</main>
+</body>
+</html>

@@ -25,7 +25,12 @@
   text-transform: capitalize;
 }
 
-
+.am-primary {
+  background-color: @am-primary-bg;
+}
+.am-secondary {
+  background-color: @am-secondary-bg;
+}
 
 // Buttons
 // http://alistapart.com/article/flat-ui-and-forms
@@ -35,6 +40,7 @@
   text-decoration: none;
   -moz-user-select: none;
   background-image: none;
+  background-color: @am-clr-white;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -42,7 +48,7 @@
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: #333;
+  color: @am-clr-black;
   .z-depth-bottom(1);
   .z-depth-animation(2);
   background-clip: padding-box;
@@ -69,17 +75,23 @@
     -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   }
+  &.am-disabled {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: none;
+    color: hsl(0, 0%, 60%);
+    text-shadow: 0 1px 0 hsl(0, 0%, 100%);
+    pointer-events: none;
+  }
+  &.am-primary {
+    background-color: @am-primary-bg;
+    color: darken(@am-primary, 35%);
+  }
+  &.am-secondary {
+    background-color: @am-secondary-bg;
+    color: darken(@am-secondary, 35%);
+  }
 }
-.am-btn-primary {
-  background-color: @am-closure;
-  color: #fff;
-}
-.am-primary {
-  background-color: @am-primary-bg;
-}
-.am-secondary {
-  background-color: @am-secondary-bg;
-}
+
 
 
 
