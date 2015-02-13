@@ -6,8 +6,7 @@
     },
   "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
-    "dist/css/*",
-    "less/*"
+    "dist/css/*"
   ],
   "keywords": [
     "css3",
@@ -34,7 +33,7 @@
     "design-patterns",
     "docs",
     "examples",
-    "less/ambient.min.css",
+    "less/*",
     "index.html",
     "apple-touch-icon.png"
   ]
