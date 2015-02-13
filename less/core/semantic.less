@@ -129,8 +129,8 @@ body {
   & > header,
   & > footer,
   // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div:first-of-type > header,
-  & div:first-of-type > footer {
+  & div[ui-view] > header,
+  & div[ui-view] > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
     &

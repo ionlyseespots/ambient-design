@@ -562,47 +562,47 @@ body {
 }
 body > header,
 body > footer,
-body div:first-of-type > header,
-body div:first-of-type > footer {
+body div[ui-view] > header,
+body div[ui-view] > footer {
   background-color: #22313f;
   color: #cce5f6;
 }
 body > header h1,
 body > footer h1,
-body div:first-of-type > header h1,
-body div:first-of-type > footer h1,
+body div[ui-view] > header h1,
+body div[ui-view] > footer h1,
 body > header h2,
 body > footer h2,
-body div:first-of-type > header h2,
-body div:first-of-type > footer h2,
+body div[ui-view] > header h2,
+body div[ui-view] > footer h2,
 body > header h3,
 body > footer h3,
-body div:first-of-type > header h3,
-body div:first-of-type > footer h3,
+body div[ui-view] > header h3,
+body div[ui-view] > footer h3,
 body > header h4,
 body > footer h4,
-body div:first-of-type > header h4,
-body div:first-of-type > footer h4,
+body div[ui-view] > header h4,
+body div[ui-view] > footer h4,
 body > header h5,
 body > footer h5,
-body div:first-of-type > header h5,
-body div:first-of-type > footer h5,
+body div[ui-view] > header h5,
+body div[ui-view] > footer h5,
 body > header h6,
 body > footer h6,
-body div:first-of-type > header h6,
-body div:first-of-type > footer h6 {
+body div[ui-view] > header h6,
+body div[ui-view] > footer h6 {
   color: #cce5f6;
 }
 body > header a,
 body > footer a,
-body div:first-of-type > header a,
-body div:first-of-type > footer a {
+body div[ui-view] > header a,
+body div[ui-view] > footer a {
   color: #cce5f6;
 }
 body > header a:hover,
 body > footer a:hover,
-body div:first-of-type > header a:hover,
-body div:first-of-type > footer a:hover {
+body div[ui-view] > header a:hover,
+body div[ui-view] > footer a:hover {
   color: #fff;
 }
 h1,
