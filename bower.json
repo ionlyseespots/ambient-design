@@ -1,9 +1,6 @@
 {
   "name": "ambient",
   "version": "1.2.13",
-    "dependencies": {
-    "normalize-css": "latest"
-    },
   "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
     "dist/css/*"
@@ -33,7 +30,7 @@
     "design-patterns",
     "docs",
     "examples",
-    "less/*",
+    "less",
     "index.html",
     "apple-touch-icon.png"
   ]
