@@ -730,74 +730,6 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-button,
-input[type="submit"],
-input[type="button"] {
-  -moz-user-select: none;
-  background-image: none;
-  background-color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  color: #000000;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  background-clip: padding-box;
-  border: medium none;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
-  margin-bottom: 15px;
-  outline: 0 none;
-  padding: 0 2rem;
-  text-transform: uppercase;
-}
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-button,
-input[type="submit"],
-input[type="button"],
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus {
-  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-button:disabled,
-input[type="submit"]:disabled,
-input[type="button"]:disabled {
-  background-color: #fafafa;
-  box-shadow: none;
-  color: #999999;
-  text-shadow: 0 1px 0 #ffffff;
-}
-button.am-primary,
-input[type="submit"].am-primary,
-input[type="button"].am-primary {
-  background-color: #cce5f6;
-  color: #0e354f;
-}
-button.am-secondary,
-input[type="submit"].am-secondary,
-input[type="button"].am-secondary {
-  background-color: #e8f3fb;
-  color: #1d6fa5;
-}
 hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
@@ -1703,12 +1635,13 @@ figure[am-slide]:hover figcaption {
   background-color: #e8f3fb;
 }
 .am-btn {
-  text-decoration: none;
   -moz-user-select: none;
   background-image: none;
   background-color: #ffffff;
+  text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  position: relative;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -1717,6 +1650,7 @@ figure[am-slide]:hover figcaption {
   color: #000000;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
+  border: medium none;
   border-radius: 2px;
   height: 36px;
   line-height: 36px;
@@ -1728,15 +1662,6 @@ figure[am-slide]:hover figcaption {
 .am-btn:hover,
 .am-btn:focus {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.am-btn.floating {
-  height: 55.5px;
-  width: 55.5px;
-  background-clip: padding-box;
-  border-radius: 50%;
-  padding: 10px 0 0;
-  font-size: 22px;
-  z-index: 1;
 }
 .am-btn,
 .am-btn:hover,

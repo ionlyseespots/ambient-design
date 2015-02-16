@@ -37,12 +37,13 @@
 // http://davidwalsh.name/html5-buttons
 // http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons
 .am-btn {
-  text-decoration: none;
   -moz-user-select: none;
   background-image: none;
   background-color: @am-clr-white;
+  text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  position: relative;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -52,6 +53,7 @@
   .z-depth-bottom(1);
   .z-depth-animation(2);
   background-clip: padding-box;
+  border: medium none;
   border-radius: 2px;
   height: 36px;
   line-height: 36px;
@@ -59,15 +61,6 @@
   outline: 0 none;
   padding: 0 2rem;
   text-transform: uppercase;
-  &.floating {
-    height: 55.5px;
-    width: 55.5px;
-    background-clip: padding-box;
-    border-radius: 50%;
-    padding: 10px 0 0;
-    font-size: 22px;
-    z-index: 1;
-  }
   &,
   &:hover,
   &:focus {
