@@ -1077,319 +1077,319 @@ button[am-layout~="split-bottom"] {
   border: 1px solid rgba(66, 139, 202, 0.2);
   padding: 3px;
 }
-.red-text {
+.am-clr-1-text {
   color: #f44336;
 }
-.red-bg {
+.am-clr-1-bg {
   background-color: #f44336;
 }
-.red-border {
+.am-clr-1-border {
   border-color: #f44336;
 }
-.red-fill {
+.am-clr-1-fill {
   fill: #f44336;
 }
-.red-stroke {
+.am-clr-1-stroke {
   stroke: #f44336;
 }
-.pink-text {
+.am-clr-2-text {
   color: #e91e63;
 }
-.pink-bg {
+.am-clr-2-bg {
   background-color: #e91e63;
 }
-.pink-border {
+.am-clr-2-border {
   border-color: #e91e63;
 }
-.pink-fill {
+.am-clr-2-fill {
   fill: #e91e63;
 }
-.pink-stroke {
+.am-clr-2-stroke {
   stroke: #e91e63;
 }
-.purple-text {
+.am-clr-3-text {
   color: #9c27b0;
 }
-.purple-bg {
+.am-clr-3-bg {
   background-color: #9c27b0;
 }
-.purple-border {
+.am-clr-3-border {
   border-color: #9c27b0;
 }
-.purple-fill {
+.am-clr-3-fill {
   fill: #9c27b0;
 }
-.purple-stroke {
+.am-clr-3-stroke {
   stroke: #9c27b0;
 }
-.deep-purple-text {
+.am-clr-4-text {
   color: #673ab7;
 }
-.deep-purple-bg {
+.am-clr-4-bg {
   background-color: #673ab7;
 }
-.deep-purple-border {
+.am-clr-4-border {
   border-color: #673ab7;
 }
-.deep-purple-fill {
+.am-clr-4-fill {
   fill: #673ab7;
 }
-.deep-purple-stroke {
+.am-clr-4-stroke {
   stroke: #673ab7;
 }
-.indigo-text {
+.am-clr-5-text {
   color: #3f51b5;
 }
-.indigo-bg {
+.am-clr-5-bg {
   background-color: #3f51b5;
 }
-.indigo-border {
+.am-clr-5-border {
   border-color: #3f51b5;
 }
-.indigo-fill {
+.am-clr-5-fill {
   fill: #3f51b5;
 }
-.indigo-stroke {
+.am-clr-5-stroke {
   stroke: #3f51b5;
 }
-.blue-text {
+.am-clr-6-text {
   color: #2196f3;
 }
-.blue-bg {
+.am-clr-6-bg {
   background-color: #2196f3;
 }
-.blue-border {
+.am-clr-6-border {
   border-color: #2196f3;
 }
-.blue-fill {
+.am-clr-6-fill {
   fill: #2196f3;
 }
-.blue-stroke {
+.am-clr-6-stroke {
   stroke: #2196f3;
 }
-.light-blue-text {
+.am-clr-7-text {
   color: #03a9f4;
 }
-.light-blue-bg {
+.am-clr-7-bg {
   background-color: #03a9f4;
 }
-.light-blue-border {
+.am-clr-7-border {
   border-color: #03a9f4;
 }
-.light-blue-fill {
+.am-clr-7-fill {
   fill: #03a9f4;
 }
-.light-blue-stroke {
+.am-clr-7-stroke {
   stroke: #03a9f4;
 }
-.cyan-text {
+.am-clr-8-text {
   color: #00bcd4;
 }
-.cyan-bg {
+.am-clr-8-bg {
   background-color: #00bcd4;
 }
-.cyan-border {
+.am-clr-8-border {
   border-color: #00bcd4;
 }
-.cyan-fill {
+.am-clr-8-fill {
   fill: #00bcd4;
 }
-.cyan-stroke {
+.am-clr-8-stroke {
   stroke: #00bcd4;
 }
-.teal-text {
+.am-clr-9-text {
   color: #009688;
 }
-.teal-bg {
+.am-clr-9-bg {
   background-color: #009688;
 }
-.teal-border {
+.am-clr-9-border {
   border-color: #009688;
 }
-.teal-fill {
+.am-clr-9-fill {
   fill: #009688;
 }
-.teal-stroke {
+.am-clr-9-stroke {
   stroke: #009688;
 }
-.green-text {
+.am-clr-10-text {
   color: #4caf50;
 }
-.green-bg {
+.am-clr-10-bg {
   background-color: #4caf50;
 }
-.green-border {
+.am-clr-10-border {
   border-color: #4caf50;
 }
-.green-fill {
+.am-clr-10-fill {
   fill: #4caf50;
 }
-.green-stroke {
+.am-clr-10-stroke {
   stroke: #4caf50;
 }
-.light-green-text {
+.am-clr-11-text {
   color: #8bc34a;
 }
-.light-green-bg {
+.am-clr-11-bg {
   background-color: #8bc34a;
 }
-.light-green-border {
+.am-clr-11-border {
   border-color: #8bc34a;
 }
-.light-green-fill {
+.am-clr-11-fill {
   fill: #8bc34a;
 }
-.light-green-stroke {
+.am-clr-11-stroke {
   stroke: #8bc34a;
 }
-.lime-text {
+.am-clr-12-text {
   color: #cddc39;
 }
-.lime-bg {
+.am-clr-12-bg {
   background-color: #cddc39;
 }
-.lime-border {
+.am-clr-12-border {
   border-color: #cddc39;
 }
-.lime-fill {
+.am-clr-12-fill {
   fill: #cddc39;
 }
-.lime-stroke {
+.am-clr-12-stroke {
   stroke: #cddc39;
 }
-.yellow-text {
+.am-clr-13-text {
   color: #ffeb3b;
 }
-.yellow-bg {
+.am-clr-13-bg {
   background-color: #ffeb3b;
 }
-.yellow-border {
+.am-clr-13-border {
   border-color: #ffeb3b;
 }
-.yellow-fill {
+.am-clr-13-fill {
   fill: #ffeb3b;
 }
-.yellow-stroke {
+.am-clr-13-stroke {
   stroke: #ffeb3b;
 }
-.amber-text {
+.am-clr-14-text {
   color: #ffc107;
 }
-.amber-bg {
+.am-clr-14-bg {
   background-color: #ffc107;
 }
-.amber-border {
+.am-clr-14-border {
   border-color: #ffc107;
 }
-.amber-fill {
+.am-clr-14-fill {
   fill: #ffc107;
 }
-.amber-stroke {
+.am-clr-14-stroke {
   stroke: #ffc107;
 }
-.orange-text {
+.am-clr-15-text {
   color: #ff9800;
 }
-.orange-bg {
+.am-clr-15-bg {
   background-color: #ff9800;
 }
-.orange-border {
+.am-clr-15-border {
   border-color: #ff9800;
 }
-.orange-fill {
+.am-clr-15-fill {
   fill: #ff9800;
 }
-.orange-stroke {
+.am-clr-15-stroke {
   stroke: #ff9800;
 }
-.deep-orange-text {
+.am-clr-16-text {
   color: #ff5722;
 }
-.deep-orange-bg {
+.am-clr-16-bg {
   background-color: #ff5722;
 }
-.deep-orange-border {
+.am-clr-16-border {
   border-color: #ff5722;
 }
-.deep-orange-fill {
+.am-clr-16-fill {
   fill: #ff5722;
 }
-.deep-orange-stroke {
+.am-clr-16-stroke {
   stroke: #ff5722;
 }
-.brown-text {
+.am-clr-17-text {
   color: #795548;
 }
-.brown-bg {
+.am-clr-17-bg {
   background-color: #795548;
 }
-.brown-border {
+.am-clr-17-border {
   border-color: #795548;
 }
-.brown-fill {
+.am-clr-17-fill {
   fill: #795548;
 }
-.brown-stroke {
+.am-clr-17-stroke {
   stroke: #795548;
 }
-.grey-text {
+.am-clr-18-text {
   color: #9e9e9e;
 }
-.grey-bg {
+.am-clr-18-bg {
   background-color: #9e9e9e;
 }
-.grey-border {
+.am-clr-18-border {
   border-color: #9e9e9e;
 }
-.grey-fill {
+.am-clr-18-fill {
   fill: #9e9e9e;
 }
-.grey-stroke {
+.am-clr-18-stroke {
   stroke: #9e9e9e;
 }
-.blue-grey-text {
+.am-clr-19-text {
   color: #607d8b;
 }
-.blue-grey-bg {
+.am-clr-19-bg {
   background-color: #607d8b;
 }
-.blue-grey-border {
+.am-clr-19-border {
   border-color: #607d8b;
 }
-.blue-grey-fill {
+.am-clr-19-fill {
   fill: #607d8b;
 }
-.blue-grey-stroke {
+.am-clr-19-stroke {
   stroke: #607d8b;
 }
-.black-text {
+.am-clr-20-text {
   color: #000000;
 }
-.black-bg {
+.am-clr-20-bg {
   background-color: #000000;
 }
-.black-border {
+.am-clr-20-border {
   border-color: #000000;
 }
-.black-fill {
+.am-clr-20-fill {
   fill: #000000;
 }
-.black-stroke {
+.am-clr-20-stroke {
   stroke: #000000;
 }
-.white-text {
+.am-clr-21-text {
   color: #ffffff;
 }
-.white-bg {
+.am-clr-21-bg {
   background-color: #ffffff;
 }
-.white-border {
+.am-clr-21-border {
   border-color: #ffffff;
 }
-.white-fill {
+.am-clr-21-fill {
   fill: #ffffff;
 }
-.white-stroke {
+.am-clr-21-stroke {
   stroke: #ffffff;
 }
 [am-padding] {
