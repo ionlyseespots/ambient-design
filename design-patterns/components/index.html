@@ -11,6 +11,8 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- Ambient -->
     <link rel="stylesheet" href="../../less/ambient.min.css">
+
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -48,27 +50,26 @@
         </header>
         <aside>
             <h1>
-                Rockstep
+                Outline
             </h1>
-            <ul>
-                <li>Semantic</li>
-                <li><a href="base.html">Base</a></li>
+            <nav am-layout="vertical">
+                <h1>
+                    Quick links
+                </h1>
+                <a href="">Elements</a>
+                <a href="">Layouts</a>
+                <a href="">Typography</a>
+                <a href="">Colors</a>
+                <a href="">Navs</a>
+                <a href="">Buttons</a>
+                <a href="">Forms</a>
 
-                <li>Layout</li>
-                <li><a href="grid.html">Grid</a></li>
-
-                <li>Navigation</li>
-                <li><a href="">Nav</a></li>
-
-                <li>Common</li>
-                <li><a href="">Button</a></li>
-            </ul>
+            </nav>
         </aside>
         <section>
-            <article>
-                <h1>
-                    Get started
-                </h1>
+            <h1>
+                Get started
+            </h1>
                 <div am-row>
                     <div am-col>
                         <h2>
@@ -85,43 +86,38 @@
                         <p>
                             Ambient makes use of CSS3 attributes on elements for page layout.
                         </p>
+
                     </div>
                 </div>
-                <div am-row>
-                    <div am-col>
-                        <h2>
-                            Navigation
-                        </h2>
-                        <p>
-                            Ambient offers different types of navigation.
-                        </p>
-                    </div>
-                    <div am-col>
-                        <h2>
-                            Common
-                        </h2>
-                        <p>
-                            Here you'll find component skin classes.
-                        </p>
-                    </div>
-                </div>
-                <section am-padding>
-                    <h1>
-                        Headings
-                    </h1>
-                    <p>
-                        Use the <code>h1</code> - <code>h6</code> elements to define your headings
-                    </p>
-                    <blockquote>
-                        <h1>h1 heading</h1>
-                        <h2>h1 heading</h2>
-                        <h3>h1 heading</h3>
-                        <h4>h1 heading</h4>
-                        <h5>h1 heading</h5>
-                        <h6>h1 heading</h6>
-                    </blockquote>
+                <h2>
+                    Design
+                </h2>
+                <p>
+                    Ambient does not style components by default.
+                </p>
+                <p>
+                    Because we have removed the dependency on base styles, you do not need to override Ambient core CSS to customize the design.
+                    Once your semantic layout is in place, you can then customize the design with optional Ambient skin classes, or your own custom classes.
+                </p>
+            </section>
+    </article>
+    <hr />
+
+            <article am-layout="vertical">
+                <h1>
+                    Typography
+                </h1>
+                <section>
+                    <h1>h1 heading</h1>
+                    <h2>h2 heading</h2>
+                    <h3>h3 heading</h3>
+                    <h4>h4 heading</h4>
+                    <h5>h5 heading</h5>
+                    <h6>h6 heading</h6>
+                    <abbr title="Abbreviation">abbr</abbr>
+                    <a href="">Text link</a>
                 </section>
-                <section am-padding>
+                <section>
                     <h1>
                         Blockquote
                     </h1>
@@ -131,72 +127,368 @@
                         </p>
                     </blockquote>
                 </section>
-                <section am-padding>
+                <section>
                     <h1>
-                        Code
+                        Pre
                     </h1>
-                    <pre><code>
-            code
-                    </code></pre>
+                    <pre>
+                        Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+                    </pre>
+                    <h2>
+                        Code
+                    </h2>
+                    <code>
+                        code
+                    </code>
+                </section>
+                <section>
+                    <h1>
+                        Lists
+                    </h1>
+                    <ul>
+                        <li>Unordered list</li>
+                        <li>
+                            List item
+                            <ol>
+                                <li>Nested ordered list item</li>
+                                <li>Nested ordered list item</li>
+                            </ol>
+                        </li>
+                        <li>List item</li>
+                    </ul>
+                    <ol>
+                        <li>Ordered list</li>
+                        <li>
+                            List item
+                            <ul>
+                                <li>Nested unordered list item</li>
+                                <li>Nested unordered list item</li>
+                            </ul>
+                        </li>
+                        <li>List item</li>
+                    </ol>
                 </section>
             </article>
             <hr />
 
-            <article>
+            <article am-layout="gutter padding portrait-100" am-padding>
+                <h1>
+                    Colors
+                </h1>
+                <section am-layout="gutter padding portrait-100" am-padding class="backgrounds">
+                    <h1>
+                        Backgrounds
+                    </h1>
+                    <blockquote>
+                        <code>.COLOR-bg</code>
+                    </blockquote>
+                    <div am-row>
+                        <div am-col>
+                            <p class="red-bg white-text">
+                                Red
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="pink-bg white-text">
+                                Pink
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="purple-bg white-text">
+                                Purple
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="deep-purple-bg white-text">
+                                Deep Purple
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="indigo-bg white-text">
+                                Indigo
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="blue-bg white-text">
+                                Blue
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="light-blue-bg white-text">
+                                Light blue
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="cyan-bg white-text">
+                                cyan
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="teal-bg white-text">
+                                Teal
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="green-bg white-text">
+                                Green
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="light-green-bg white-text">
+                                Light green
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="lime-bg">
+                                Lime
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="yellow-bg">
+                                Yellow
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="amber-bg">
+                                Amber
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="orange-bg white-text">
+                                Orange
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="deep-orange-bg white-text">
+                                Deep orange
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="brown-bg white-text">
+                                Brown
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="grey-bg white-text">
+                                Grey
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="blue-grey-bg white-text">
+                                Blue grey
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="black-bg white-text">
+                                Black
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <h1>
+                            SVG fills and strokes
+                        </h1>
+                        <p>
+                            Includes a set of classes to set fills and or strokes.
+                        </p>
+                        <blockquote>
+                            <code>.COLOR-fill</code><br />
+                            <code>.COLOR-stroke</code>
+                        </blockquote>
+                    </div>
+                </section>
+                <section am-layout="gutter padding portrait-100" am-padding class="borders-and-text">
+                    <h1>
+                        Borders & Text
+                    </h1>
+                    <blockquote>
+                        <code>.COLOR-text</code><br />
+                        <code>.COLOR-border</code>
+                    </blockquote>
+                    <div am-row>
+                        <div am-col>
+                            <p class="red-border red-text">
+                                Red
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="pink-border pink-text">
+                                Pink
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="purple-border purple-text">
+                                Purple
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="deep-purple-border deep-purple-text">
+                                Deep purple
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="indigo-border indigo-text">
+                                Indigo
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="blue-border blue-text">
+                                Blue
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="light-blue-border light-blue-text">
+                                Light blue
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="cyan-border cyan-text">
+                                cyan
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="teal-border teal-text">
+                                Teal
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="green-border green-text">
+                                Green
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="light-green-border light-green-text">
+                                Light green
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="light-green-border lime-text">
+                                Lime
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="Yellow-border yellow-text">
+                                Yellow
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="amber-border amber-text">
+                                Amber
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="orange-border orange-text">
+                                Orange
+                            </p>
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            <p class="deep-orange-border deep-orange-text">
+                                Deep orange
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="browne-border brown-text">
+                                Brown
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="grey-border grey-text">
+                                Grey
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="blue-grey-border blue-grey-text">
+                                Blue grey
+                            </p>
+                        </div>
+                        <div am-col>
+                            <p class="black-border black-text">
+                                Black
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <article am-layout="vertical">
                 <h1>
                     Buttons
                 </h1>
-                <p>
-                    Ambient does not style components by default. Because we have removed the dependency on base styles, you do not need to override Ambient core CSS to customize the design.
-                </p>
-                <p>
-                    Once your semantic layout is in place, you can then customize the design with optional Ambient skin classes, or your own custom classes.
-                </p>
-               <div am-row am-padding>
-                   <h2>
-                       Default
-                   </h2>
+                <section am-padding>
+                    <h2>
+                        Default
+                    </h2>
                     <a href="#">Anchor button</a>
                     <button>Button element</button>
                     <input type="submit" value="submit input">
                     <input type="button" value="button input">
-               </div>
-                <div am-row am-padding>
+                    <input type="submit" value="submit input disabled" disabled>
+                    <input type="button" value="button input disabled" disabled>
+                </section>
+                <section am-padding>
                     <h2>
-                        Base
+                        Ambient
                     </h2>
                     <a class="am-btn" href="#">Anchor button</a>
                     <button class="am-btn">Button element</button>
                     <input class="am-btn" type="submit" value="submit input">
                     <input class="am-btn" type="button" value="button input">
-                </div>
-                <div am-row am-padding>
+                    <blockquote>
+                        <code>class="am-btn"</code>
+                    </blockquote>
+                </section>
+                <section am-padding>
                     <h2>
-                        Disabled
+                        Ambient disabled
                     </h2>
                     <a class="am-btn am-disabled" href="#">Anchor button</a>
                     <button class="am-btn am-disabled" disabled>Button element</button>
                     <input class="am-btn am-disabled" type="submit" value="submit input" disabled>
                     <input class="am-btn am-disabled" type="button" value="button input" disabled>
-                </div>
-                <div am-row am-padding>
+                    <blockquote>
+                        <code>class="am-btn am-disabled"</code>
+                    </blockquote>
+                </section>
+                <section am-padding>
                     <h2>
-                        Primary
+                        Ambient primary
                     </h2>
                     <a class="am-btn am-primary" href="#">Anchor button</a>
-                    <button class="am-btn  am-primary">Button element</button>
-                    <input class="am-btn  am-primary" type="submit" value="submit input">
-                    <input class="am-btn  am-primary" type="button" value="button input">
-                </div>
-                <div am-row am-padding>
+                    <button class="am-btn am-primary">Button element</button>
+                    <input class="am-btn am-primary" type="submit" value="submit input">
+                    <input class="am-btn am-primary" type="button" value="button input">
+                    <blockquote>
+                        <code>class="am-btn am-primary"</code>
+                    </blockquote>
+                </section>
+                <section am-padding>
                     <h2>
-                        Secondary
+                        Ambient secondary
                     </h2>
                     <a class="am-btn am-secondary" href="#">Anchor button</a>
-                    <button class="am-btn  am-secondary">Button element</button>
-                    <input class="am-btn  am-secondary" type="submit" value="submit input">
-                    <input class="am-btn  am-secondary" type="button" value="button input">
-                </div>
+                    <button class="am-btn am-secondary">Button element</button>
+                    <input class="am-btn am-secondary" type="submit" value="submit input">
+                    <input class="am-btn am-secondary" type="button" value="button input">
+                    <blockquote>
+                        <code>class="am-btn am-secondary"</code>
+                    </blockquote>
+                </section>
             </article>
             <hr />
 
@@ -204,42 +496,22 @@
                 <h1>
                     Forms
                 </h1>
-                <div am-row am-padding>
-                    <h2>
-                        Default
-                    </h2>
-                    <form>
-                        <label for="inline-email">Email</label>
-                        <input id="inline-email" type="email" placeholder="Email">
+                <h2>
+                    Default
+                </h2>
+                <form>
+                    <label for="inline-email">Email</label>
+                    <input id="inline-email" type="email" placeholder="Email">
 
-                        <label for="inline-password">Password</label>
-                        <input id="inline-password" type="password" placeholder="Password">
+                    <label for="inline-password">Password</label>
+                    <input id="inline-password" type="password" placeholder="Password">
 
-                        <label for="inline-remember">
-                            <input id="inline-remember" type="checkbox"> Remember me
-                        </label>
+                    <label for="inline-remember">
+                        <input id="inline-remember" type="checkbox"> Remember me
+                    </label>
 
-                        <button type="submit">Sign in</button>
-                    </form>
-                </div>
-                <div am-row am-padding>
-                    <h2>
-                        Inline
-                    </h2>
-                    <form am-layout="inline">
-                        <label for="inline-email">Email</label>
-                        <input id="inline-email" type="email" placeholder="Email">
-
-                        <label for="inline-password">Password</label>
-                        <input id="inline-password" type="password" placeholder="Password">
-
-                        <label for="inline-remember">
-                            <input id="inline-remember" type="checkbox"> Remember me
-                        </label>
-
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
+                    <button type="submit">Sign in</button>
+                </form>
             </article>
         </section>
     </article>
