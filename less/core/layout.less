@@ -211,8 +211,26 @@ nav[am-layout] {
         width: 100%;
       }
     }
-  &[am-layout~="space-between"] {
+  &[am-layout~="justify-align"] {
     .justify-content(space-between);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="left-align"] {
+    .justify-content(flex-start);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="right-align"] {
+    .justify-content(flex-end);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="center-align"] {
+    .justify-content(center);
     a {
       flex: none;
     }
@@ -236,10 +254,18 @@ nav[am-layout] {
   }
 }
 // Button
-a[am-layout~="split-bottom"], button[am-layout~="split-bottom"] {
-  bottom: -40px;
-  position: absolute;
-  right: 25px;
+a,
+button {
+  &[am-layout~="split-bottom"] {
+    bottom: -45px;
+    position: absolute;
+    right: 25px;
+  }
+  &[am-layout~="split-top"] {
+    top: -25px;
+    position: absolute;
+    right: 25px;
+  }
 }
 // Outline :: useful for testing document outline and displaying nested content :: uses same color as default primary RGB color value
 // ---------------------------------------------------

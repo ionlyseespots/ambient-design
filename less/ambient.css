@@ -692,6 +692,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+button.am-btn-floating {
+  padding: 0;
+}
 hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
@@ -1048,13 +1051,40 @@ nav[am-layout][am-layout~="vertical"] a {
   flex-basis: auto;
   width: 100%;
 }
-nav[am-layout][am-layout~="space-between"] {
+nav[am-layout][am-layout~="justify-align"] {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
 }
-nav[am-layout][am-layout~="space-between"] a {
+nav[am-layout][am-layout~="justify-align"] a {
+  flex: none;
+}
+nav[am-layout][am-layout~="left-align"] {
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+nav[am-layout][am-layout~="left-align"] a {
+  flex: none;
+}
+nav[am-layout][am-layout~="right-align"] {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+nav[am-layout][am-layout~="right-align"] a {
+  flex: none;
+}
+nav[am-layout][am-layout~="center-align"] {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+nav[am-layout][am-layout~="center-align"] a {
   flex: none;
 }
 nav[am-layout] a:not(.am-btn-floating) {
@@ -1075,7 +1105,13 @@ nav[am-layout] a:not(.am-btn-floating):active {
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
-  bottom: -40px;
+  bottom: -45px;
+  position: absolute;
+  right: 25px;
+}
+a[am-layout~="split-top"],
+button[am-layout~="split-top"] {
+  top: -25px;
   position: absolute;
   right: 25px;
 }
