@@ -211,8 +211,26 @@ nav[am-layout] {
         width: 100%;
       }
     }
-  &[am-layout~="space-between"] {
+  &[am-layout~="justify-align"] {
     .justify-content(space-between);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="left-align"] {
+    .justify-content(flex-start);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="right-align"] {
+    .justify-content(flex-end);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="center-align"] {
+    .justify-content(center);
     a {
       flex: none;
     }
