@@ -42,7 +42,11 @@ div {
   // help content on absolute positioning
   position: relative;
 }
-header, nav, main, article, footer {
+header,
+nav,
+main,
+article,
+footer {
   .flex-display;
   .flex-flow(row wrap);
 }
@@ -54,12 +58,9 @@ nav {
 main {
   .flex(1 0 auto);
 }
+section,
 aside + article {
   .flex(1 8.3333%);
-}
-section {
-  .flex(1 8.3333%);
-
 }
 aside {
   .flex(0 0 20%);

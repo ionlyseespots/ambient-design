@@ -453,13 +453,8 @@ main {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
+section,
 aside + article {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
-}
-section {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
@@ -1302,7 +1297,6 @@ figure[am-slide]:hover figcaption {
   background-clip: padding-box;
   border: medium none;
   border-radius: 2px;
-  height: 36px;
   line-height: 36px;
   margin-bottom: 15px;
   outline: 0 none;
