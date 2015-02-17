@@ -129,7 +129,25 @@ body {
   & > header,
   & > footer,
   // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div[ui-view] > header,
+  & div[ui-view] > header {
+    background-color: @am-closure;
+    color: @am-primary-bg;
+    &
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @am-primary-bg;
+    }
+    & a {
+      color: @am-primary-bg;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
   & div[ui-view] > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
