@@ -10,10 +10,10 @@ html {
   height: calc(100%);
 }
 body {
-
+  min-width: 100%;
   min-height: 100%;
   .flex-display;
-  .flex-flow(row wrap);
+  .flex-direction(column);
   // center page content in first article not in main horizontally and vertically
   & > article  {
     .align-items(center);
@@ -53,9 +53,6 @@ nav {
 }
 main {
   .flex(1 0 auto);
-}
-aside + main {
-  .flex(1 8.3333%);
 }
 aside + article {
   .flex(1 8.3333%);
