@@ -473,12 +473,6 @@ main {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-aside + main {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
-}
 aside + article {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
