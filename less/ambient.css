@@ -409,26 +409,6 @@ body > article {
   margin: auto;
   width: auto;
 }
-body div[ui-view] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: calc(100vh);
-}
-body div[ui-view] > article {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: auto;
-  width: auto;
-}
 header,
 nav,
 article,
@@ -561,57 +541,30 @@ body {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body > header,
-body > footer,
-body div[ui-view] > header {
+body > footer {
   background-color: #22313f;
   color: #cce5f6;
 }
 body > header h1,
 body > footer h1,
-body div[ui-view] > header h1,
 body > header h2,
 body > footer h2,
-body div[ui-view] > header h2,
 body > header h3,
 body > footer h3,
-body div[ui-view] > header h3,
 body > header h4,
 body > footer h4,
-body div[ui-view] > header h4,
 body > header h5,
 body > footer h5,
-body div[ui-view] > header h5,
 body > header h6,
-body > footer h6,
-body div[ui-view] > header h6 {
+body > footer h6 {
   color: #cce5f6;
 }
 body > header a,
-body > footer a,
-body div[ui-view] > header a {
+body > footer a {
   color: #cce5f6;
 }
 body > header a:hover,
-body > footer a:hover,
-body div[ui-view] > header a:hover {
-  color: #fff;
-}
-body div[ui-view] > footer {
-  background-color: #22313f;
-  color: #cce5f6;
-}
-body div[ui-view] > footer h1,
-body div[ui-view] > footer h2,
-body div[ui-view] > footer h3,
-body div[ui-view] > footer h4,
-body div[ui-view] > footer h5,
-body div[ui-view] > footer h6 {
-  color: #cce5f6;
-}
-body div[ui-view] > footer a {
-  color: #cce5f6;
-}
-body div[ui-view] > footer a:hover {
+body > footer a:hover {
   color: #fff;
 }
 h1,
@@ -815,6 +768,53 @@ var {
   background-color: rgba(0, 0, 0, 0.12);
   height: 99.9%;
   position: absolute;
+}
+div[ui-view] {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: calc(100vh);
+}
+div[ui-view] > article {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+}
+div[ui-view] > header,
+div[ui-view] > footer {
+  background-color: #22313f;
+  color: #cce5f6;
+}
+div[ui-view] > header h1,
+div[ui-view] > footer h1,
+div[ui-view] > header h2,
+div[ui-view] > footer h2,
+div[ui-view] > header h3,
+div[ui-view] > footer h3,
+div[ui-view] > header h4,
+div[ui-view] > footer h4,
+div[ui-view] > header h5,
+div[ui-view] > footer h5,
+div[ui-view] > header h6,
+div[ui-view] > footer h6 {
+  color: #cce5f6;
+}
+div[ui-view] > header a,
+div[ui-view] > footer a {
+  color: #cce5f6;
+}
+div[ui-view] > header a:hover,
+div[ui-view] > footer a:hover {
+  color: #fff;
 }
 @media (orientation: portrait) {
   html {

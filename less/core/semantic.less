@@ -20,17 +20,6 @@ body {
     margin: auto;
     width: auto;
   }
-  // Needs to work with custom attribute ui-view issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div[ui-view] {
-    .flex-display;
-    .flex-direction(column);
-    height: calc(100vh);
-    & > article {
-      .align-items(center);
-      margin: auto;
-      width: auto;
-    }
-  }
 }
 // http://www.w3.org/TR/CSS2/visuren.html
 // Block elements are 100% width of parent element, if width is not specified.
@@ -127,28 +116,7 @@ body {
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
   & > header,
-  & > footer,
-  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div[ui-view] > header {
-    background-color: @am-closure;
-    color: @am-primary-bg;
-    &
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: @am-primary-bg;
-    }
-    & a {
-      color: @am-primary-bg;
-      &:hover {
-        color:#fff;
-      }
-    }
-  }
-  & div[ui-view] > footer {
+  & > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
     &
@@ -417,6 +385,39 @@ var {
   height: 99.9%;
   position: absolute;
 }
+
+// issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+div[ui-view] {
+  .flex-display;
+  .flex-direction(column);
+  height: calc(100vh);
+  & > article {
+    .align-items(center);
+    margin: auto;
+    width: auto;
+  }
+  & > header,
+  & > footer {
+    background-color: @am-closure;
+    color: @am-primary-bg;
+    &
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @am-primary-bg;
+    }
+    & a {
+      color: @am-primary-bg;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+}
+
 @media (orientation:portrait){
   html {
     font-size: 90%;
