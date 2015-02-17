@@ -254,10 +254,18 @@ nav[am-layout] {
   }
 }
 // Button
-a[am-layout~="split-bottom"], button[am-layout~="split-bottom"] {
-  bottom: -40px;
-  position: absolute;
-  right: 25px;
+a,
+button {
+  &[am-layout~="split-bottom"] {
+    bottom: -45px;
+    position: absolute;
+    right: 25px;
+  }
+  &[am-layout~="split-top"] {
+    top: -25px;
+    position: absolute;
+    right: 25px;
+  }
 }
 // Outline :: useful for testing document outline and displaying nested content :: uses same color as default primary RGB color value
 // ---------------------------------------------------

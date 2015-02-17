@@ -692,6 +692,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+button.am-btn-floating {
+  padding: 0;
+}
 hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
@@ -1102,7 +1105,13 @@ nav[am-layout] a:not(.am-btn-floating):active {
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
-  bottom: -40px;
+  bottom: -45px;
+  position: absolute;
+  right: 25px;
+}
+a[am-layout~="split-top"],
+button[am-layout~="split-top"] {
+  top: -25px;
   position: absolute;
   right: 25px;
 }

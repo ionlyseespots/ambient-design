@@ -16,8 +16,8 @@
 </head>
 <body>
 <!--[if lt IE 10]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 <header>
     <h1>
         <a href="../index.html" title="index">Ambient</a>
@@ -30,279 +30,279 @@
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-    <header am-padding class="am-primary">
+<header am-padding class="am-primary">
+    <p>
+        Overview<br />
+        Introduction | Namespaces | Define your layout
+    </p>
+    <h1>
+        Layout attributes
+    </h1>
+</header>
+<article>
+    <header am-padding="large" class="am-secondary">
         <p>
-            Overview<br />
-            Introduction | Namespaces | Define your layout
+            Introduction
         </p>
-        <h1>
-            Layout attributes
-        </h1>
+        <h2>
+            <i class="fa fa-css3"></i> Ambient is layout
+        </h2>
+        <p>
+            Ambient makes use of CSS3 attributes on elements for page layout.
+        </p>
     </header>
-    <article>
-        <header am-padding="large" class="am-secondary">
+    <section am-padding>
+        <h3>
+            We define our own namespaces
+        </h3>
+        <p>
+            Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as semantic elements.
+        </p>
+        <p>
+            Ambient does not style components by default. <a href="../design-patterns/components/index.html">View all components</a>
+        </p>
+        <blockquote>
             <p>
-                Introduction
+                Do use CSS3 attributes to layout defined content.<br />
+                Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
             </p>
-            <h2>
-                <i class="fa fa-css3"></i> Ambient is layout
-            </h2>
-            <p>
-                Ambient makes use of CSS3 attributes on elements for page layout.
-            </p>
-        </header>
-        <section am-padding>
-            <h3>
-                We define our own namespaces
-            </h3>
-            <p>
-                Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as semantic elements.
-            </p>
-            <p>
-                Ambient does not style components by default. <a href="../design-patterns/components/index.html">View all components</a>
-            </p>
-            <blockquote>
-                <p>
-                    Do use CSS3 attributes to layout defined content.<br />
-                    Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
-                </p>
-            </blockquote>
-        </section>
-        <section am-padding>
-            <h3>
-                Namespaces
-            </h3>
-            <blockquote>
-                <h4>
-                    Global
-                </h4>
-                <p>
-                    Global attributes are layout properties common to all HTML elements. These attributes can be used on any element.
-                </p>
-                <p>
-                    <code>am-margin</code><br />
-                    <code>am-padding</code><br />
-                    <code>am-layer</code><br />
-                </p>
-            </blockquote>
-            <blockquote>
-                <h4>
-                    Root
-                </h4>
-                <p>
-                    Define your layout. The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
-                    Once you've defined the root semantic element,
-                    you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
-                </p>
-                <p>
-                    <code>am-layout</code><br />
-                </p>
-            </blockquote>
-        </section>
-    </article>
-    <article>
-        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
-            <h1 class="am-text-uppercase text-center">
+        </blockquote>
+    </section>
+    <section am-padding>
+        <h3>
+            Namespaces
+        </h3>
+        <blockquote>
+            <h4>
                 Global
-            </h1>
+            </h4>
             <p>
-                Global layout attributes are layout properties common to all HTML elements. These attributes can be used on any element.
-            </p>
-        </header>
-        <section am-padding>
-            <h3>
-                Margin
-            </h3>
-            <p>
-                Default margin is 0<br />
-                To add space outside an element, add the attribute <code>am-margin</code> to any element.
+                Global attributes are layout properties common to all HTML elements. These attributes can be used on any element.
             </p>
             <p>
-                <small>
-                    If needed, additional size values <code>large</code> & <code>small</code> are available.
-                </small>
+                <code>am-margin</code><br />
+                <code>am-padding</code><br />
+                <code>am-layer</code><br />
             </p>
-            <blockquote>
-                <code>am-margin</code>
-                <p>
-                    If needed, specific direction is available as:
-                <p>
-                <ul>
-                    <li>
-                        <code>am-margin="top"</code>
-                    </li>
-                    <li>
-                        <code>am-margin="right"</code>
-                    </li>
-                    <li>
-                        <code>am-margin="bottom"</code>
-                    </li>
-                    <li>
-                        <code>am-margin="left"</code>
-                    </li>
-                </ul>
-            </blockquote>
-            <h3>
-                Padding
-            </h3>
-            <p>
-                Default padding is 0<br />
-                To add space inside an element, add the attribute <code>am-padding</code> to any element.
-            </p>
-            <p>
-                <small>
-                    If needed, additional size values <code>large</code> & <code>small</code> are available.
-                </small>
-            </p>
-            <blockquote>
-                <code>am-padding</code>
-                <p>
-                    If needed, specific direction is available as:
-                <p>
-                <ul>
-                    <li>
-                        <code>am-padding="top"</code>
-                    </li>
-                    <li>
-                        <code>am-padding="right"</code>
-                    </li>
-                    <li>
-                        <code>am-padding="bottom"</code>
-                    </li>
-                    <li>
-                        <code>am-padding="left"</code>
-                    </li>
-                </ul>
-            </blockquote>
-        </section>
-        <section am-padding>
-            <h3>
-                Layers
-            </h3>
-            <p>
-                Default layer is 0<br />
-                To add depth to an element, add the attribute <code>am-layer="VALUE"</code> to any element.
-            </p>
-            <p>
-                <small>If needed, the additional value <code>animate</code> is available.</small>
-            </p>
-            <blockquote>
-                <p>
-                    Layer depth values are available as
-                </p>
-                <ul>
-                    <li>
-                        <code>am-layer="z-1"</code>
-                    </li>
-                    <li>
-                        <code>am-layer="z-2"</code>
-                    </li>
-                    <li>
-                        <code>am-layer="z-3"</code>
-                    </li>
-                    <li>
-                        <code>am-layer="z-4"</code>
-                    </li>
-                    <li>
-                        <code>am-layer="z-5"</code>
-                    </li>
-                </ul>
-            </blockquote>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h3>
-                        Static
-                    </h3>
-                    <div am-layer="z-1" am-padding am-margin="bottom large">
-                        Z-1
-                    </div>
-                    <div am-layer="z-2" am-padding am-margin="bottom large">
-                        Z-2
-                    </div>
-                    <div am-layer="z-3" am-padding am-margin="bottom large">
-                        Z-3
-                    </div>
-                    <div am-layer="z-4" am-padding am-margin="bottom large">
-                        Z-4
-                    </div>
-                    <div am-layer="z-5" am-padding am-margin="bottom large">
-                        Z-5
-                    </div>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Animated
-                    </h3>
-                    <div am-layer="z-1 animate" am-padding am-margin="bottom large">
-                        Z-1
-                    </div>
-                    <div am-layer="z-2 animate" am-padding am-margin="bottom large">
-                        Z-2
-                    </div>
-                    <div am-layer="z-3 animate" am-padding am-margin="bottom large">
-                        Z-3
-                    </div>
-                    <div am-layer="z-4 animate" am-padding am-margin="bottom large">
-                        Z-4
-                    </div>
-                    <div am-layer="z-5 animate" am-padding am-margin="bottom large">
-                        Z-5
-                    </div>
-                </div>
-            </div>
-        </section>
-    </article>
-    <article>
-        <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
-            <h1 class="am-text-uppercase text-center">
+        </blockquote>
+        <blockquote>
+            <h4>
                 Root
-            </h1>
+            </h4>
             <p>
                 Define your layout. The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
                 Once you've defined the root semantic element,
                 you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
             </p>
-        </header>
-        <section id="section" am-padding>
-            <header am-padding>
-                <h1 class="am-text-uppercase">
-                    Linear layout
-                </h1>
-                <p>
-                    <small>Default</small>
-                </p>
-                <p>
-                    The HTML5 <code>article</code> element aligns the explicit sections <code>section</code> and <code>aside</code> in a single direction, vertically or horizontally.
-                    You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
-                    The default orientation is horizontal.
-                </p>
-            </header>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h3>
-                        Horizontal
-                    </h3>
-                    <blockquote>
-                        <p>
-                            The HTML5 <code>article</code> element groups explicit sections (scales up to 12 equal sections) on one horizontal line. You're good to go.
-                        </p>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section>
-                            1
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
+            <p>
+                <code>am-layout</code><br />
+            </p>
+        </blockquote>
+    </section>
+</article>
+<article>
+    <header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
+        <h1 class="am-text-uppercase text-center">
+            Global
+        </h1>
+        <p>
+            Global layout attributes are layout properties common to all HTML elements. These attributes can be used on any element.
+        </p>
+    </header>
+    <section am-padding>
+        <h3>
+            Margin
+        </h3>
+        <p>
+            Default margin is 0<br />
+            To add space outside an element, add the attribute <code>am-margin</code> to any element.
+        </p>
+        <p>
+            <small>
+                If needed, additional size values <code>large</code> & <code>small</code> are available.
+            </small>
+        </p>
+        <blockquote>
+            <code>am-margin</code>
+            <p>
+                If needed, specific direction is available as:
+            <p>
+            <ul>
+                <li>
+                    <code>am-margin="top"</code>
+                </li>
+                <li>
+                    <code>am-margin="right"</code>
+                </li>
+                <li>
+                    <code>am-margin="bottom"</code>
+                </li>
+                <li>
+                    <code>am-margin="left"</code>
+                </li>
+            </ul>
+        </blockquote>
+        <h3>
+            Padding
+        </h3>
+        <p>
+            Default padding is 0<br />
+            To add space inside an element, add the attribute <code>am-padding</code> to any element.
+        </p>
+        <p>
+            <small>
+                If needed, additional size values <code>large</code> & <code>small</code> are available.
+            </small>
+        </p>
+        <blockquote>
+            <code>am-padding</code>
+            <p>
+                If needed, specific direction is available as:
+            <p>
+            <ul>
+                <li>
+                    <code>am-padding="top"</code>
+                </li>
+                <li>
+                    <code>am-padding="right"</code>
+                </li>
+                <li>
+                    <code>am-padding="bottom"</code>
+                </li>
+                <li>
+                    <code>am-padding="left"</code>
+                </li>
+            </ul>
+        </blockquote>
+    </section>
+    <section am-padding>
+        <h3>
+            Layers
+        </h3>
+        <p>
+            Default layer is 0<br />
+            To add depth to an element, add the attribute <code>am-layer="VALUE"</code> to any element.
+        </p>
+        <p>
+            <small>If needed, the additional value <code>animate</code> is available.</small>
+        </p>
+        <blockquote>
+            <p>
+                Layer depth values are available as
+            </p>
+            <ul>
+                <li>
+                    <code>am-layer="z-1"</code>
+                </li>
+                <li>
+                    <code>am-layer="z-2"</code>
+                </li>
+                <li>
+                    <code>am-layer="z-3"</code>
+                </li>
+                <li>
+                    <code>am-layer="z-4"</code>
+                </li>
+                <li>
+                    <code>am-layer="z-5"</code>
+                </li>
+            </ul>
+        </blockquote>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h3>
+                    Static
+                </h3>
+                <div am-layer="z-1" am-padding am-margin="bottom large">
+                    Z-1
                 </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <div am-layer="z-2" am-padding am-margin="bottom large">
+                    Z-2
+                </div>
+                <div am-layer="z-3" am-padding am-margin="bottom large">
+                    Z-3
+                </div>
+                <div am-layer="z-4" am-padding am-margin="bottom large">
+                    Z-4
+                </div>
+                <div am-layer="z-5" am-padding am-margin="bottom large">
+                    Z-5
+                </div>
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Animated
+                </h3>
+                <div am-layer="z-1 animate" am-padding am-margin="bottom large">
+                    Z-1
+                </div>
+                <div am-layer="z-2 animate" am-padding am-margin="bottom large">
+                    Z-2
+                </div>
+                <div am-layer="z-3 animate" am-padding am-margin="bottom large">
+                    Z-3
+                </div>
+                <div am-layer="z-4 animate" am-padding am-margin="bottom large">
+                    Z-4
+                </div>
+                <div am-layer="z-5 animate" am-padding am-margin="bottom large">
+                    Z-5
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<article>
+<header am-padding="large" am-layer="z-1" class="am-secondary am-text-center" >
+    <h1 class="am-text-uppercase text-center">
+        Root
+    </h1>
+    <p>
+        Define your layout. The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
+        Once you've defined the root semantic element,
+        you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
+    </p>
+</header>
+<section id="section" am-padding>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Linear layout
+        </h1>
+        <p>
+            <small>Default</small>
+        </p>
+        <p>
+            The HTML5 <code>article</code> element aligns the explicit sections <code>section</code> and <code>aside</code> in a single direction, vertically or horizontally.
+            You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
+            The default orientation is horizontal.
+        </p>
+    </header>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h3>
+                Horizontal
+            </h3>
+            <blockquote>
+                <p>
+                    The HTML5 <code>article</code> element groups explicit sections (scales up to 12 equal sections) on one horizontal line. You're good to go.
+                </p>
+            </blockquote>
+            <article am-layout="outline">
+                <section>
+                    1
+                </section>
+                <section>
+                    2
+                </section>
+                <section>
+                    3
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;article&gt;
     &lt;section&gt;
@@ -316,38 +316,38 @@
     &lt;/section&gt;
 &lt;/article&gt;
                     </pre>
-                </div>
-            </div>
+        </div>
+    </div>
 
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h3>
-                        Vertical
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="vertical"&gt;</code>
-                        </p>
-                        <p>
-                            You can specify a vertical layout direction for explicit sections by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
-                        </p>
-                    </blockquote>
-                    <article am-layout="outline vertical">
-                        <section>
-                            1
-                        </section>
-                        <section>
-                            2
-                        </section>
-                        <section>
-                            3
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h3>
+                Vertical
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;article am-layout="vertical"&gt;</code>
+                </p>
+                <p>
+                    You can specify a vertical layout direction for explicit sections by adding the attribute and value <code>am-layout="vertical"</code> to the HTML5 <code>article</code> element.
+                </p>
+            </blockquote>
+            <article am-layout="outline vertical">
+                <section>
+                    1
+                </section>
+                <section>
+                    2
+                </section>
+                <section>
+                    3
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;article am-layout="vertical"&gt;
     &lt;section&gt;
@@ -361,90 +361,90 @@
     &lt;/section&gt;
 &lt;/article&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <header am-padding>
-                <h1 class="am-text-uppercase">
-                    Grid layout
-                </h1>
-                <p>
-                    Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+<section  am-padding>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Grid layout
+        </h1>
+        <p>
+            Grid layout is used to structure content, and thus relies on the root semantic element for intent.
 
-                </p>
+        </p>
+        <p>
+            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
+        </p>
+    </header>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Grid layout with equal widths
+            </h2>
+            <p>
+                To create a grid layout with equal widths, add the layout attributes <code>am-row</code> & <code>am-col</code> to the child unsemantic <code>div</code> elements.
+            </p>
+            <p>
+                <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                    The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
+                </small>
+            </p>
+            <blockquote>
                 <p>
-                   The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
+                    To add a row, add the child attribute <code>am-row</code> to a child div.<br />
+                    To add a column, add the child attribute <code>am-col</code> to a child div. The default for each column is equal and scales up to 12.
                 </p>
-            </header>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Grid layout with equal widths
-                    </h2>
-                    <p>
-                        To create a grid layout with equal widths, add the layout attributes <code>am-row</code> & <code>am-col</code> to the child unsemantic <code>div</code> elements.
-                    </p>
-                    <p>
-                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-                        </small>
-                    </p>
-                    <blockquote>
-                        <p>
-                            To add a row, add the child attribute <code>am-row</code> to a child div.<br />
-                            To add a column, add the child attribute <code>am-col</code> to a child div. The default for each column is equal and scales up to 12.
-                        </p>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section>
-                            <div am-row>
-                                <div am-col>
-                                    1
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col>
-                                    1/2
-                                </div>
-                                <div am-col>
-                                    1/2
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col>
-                                    1/3
-                                </div>
-                                <div am-col>
-                                    1/3
-                                </div>
-                                <div am-col>
-                                    1/3
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col>
-                                    1/4
-                                </div>
-                                <div am-col>
-                                    1/4
-                                </div>
-                                <div am-col>
-                                    1/4
-                                </div>
-                                <div am-col>
-                                    1/4
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+            </blockquote>
+            <article am-layout="outline">
+                <section>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1/2
+                        </div>
+                        <div am-col>
+                            1/2
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1/3
+                        </div>
+                        <div am-col>
+                            1/3
+                        </div>
+                        <div am-col>
+                            1/3
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1/4
+                        </div>
+                        <div am-col>
+                            1/4
+                        </div>
+                        <div am-col>
+                            1/4
+                        </div>
+                        <div am-col>
+                            1/4
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;section&gt;
     &lt;div am-row&gt;
@@ -487,89 +487,89 @@
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Grid layout with offset widths
-                    </h2>
-                    <p>
-                        To create a grid layout with off-set widths, define the off-set width value for the <code>am-col</code>.
-                    </p>
-                    <p>
-                        <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-                        </small>
-                    </p>
-                    <blockquote>
-                        <p>
-                            To add a row, add the child attribute <code>am-row</code> to a child div.<br />
-                            To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a child div.
-                        </p>
-                        <p>
-                            Offset width values are available as
-                        </p>
-                        <ul>
-                            <li>
-                                <code>am-col="25"</code>
-                            </li>
-                            <li>
-                                <code>am-col="33"</code>
-                            </li>
-                            <li>
-                                <code>am-col="66"</code>
-                            </li>
-                            <li>
-                                <code>am-col="75"</code>
-                            </li>
-                        </ul>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section>
-                            <div am-row>
-                                <div am-col="66">
-                                    2/3
-                                </div>
-                                <div am-col="33">
-                                    1/3
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col="33">
-                                    1/3
-                                </div>
-                                <div am-col="66" >
-                                    2/3
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col="75">
-                                    3/4
-                                </div>
-                                <div am-col="25">
-                                    1/4
-                                </div>
-                            </div>
-                            <div am-row>
-                                <div am-col="25">
-                                    1/4
-                                </div>
-                                <div am-col="75" >
-                                    3/4
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+<section am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Grid layout with offset widths
+            </h2>
+            <p>
+                To create a grid layout with off-set widths, define the off-set width value for the <code>am-col</code>.
+            </p>
+            <p>
+                <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                    The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
+                </small>
+            </p>
+            <blockquote>
+                <p>
+                    To add a row, add the child attribute <code>am-row</code> to a child div.<br />
+                    To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a child div.
+                </p>
+                <p>
+                    Offset width values are available as
+                </p>
+                <ul>
+                    <li>
+                        <code>am-col="25"</code>
+                    </li>
+                    <li>
+                        <code>am-col="33"</code>
+                    </li>
+                    <li>
+                        <code>am-col="66"</code>
+                    </li>
+                    <li>
+                        <code>am-col="75"</code>
+                    </li>
+                </ul>
+            </blockquote>
+            <article am-layout="outline">
+                <section>
+                    <div am-row>
+                        <div am-col="66">
+                            2/3
+                        </div>
+                        <div am-col="33">
+                            1/3
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col="33">
+                            1/3
+                        </div>
+                        <div am-col="66" >
+                            2/3
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col="75">
+                            3/4
+                        </div>
+                        <div am-col="25">
+                            1/4
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col="25">
+                            1/4
+                        </div>
+                        <div am-col="75" >
+                            3/4
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;section&gt;
     &lt;div am-row&gt;
@@ -606,124 +606,124 @@
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Grid layout with gutter
-                    </h2>
-                    <p>
-                        To create a grid layout with gutter, define the gutter & type for the individual unsemantic row by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-row="gutter TYPE"</code>.
-                    </p>
-                    <p>
-                        Alternatively, create a gutter for all content in an explicit section making use of the grid by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
-                    </p>
-                    <p>
-                        <small>
-                            Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-                        </small>
-                    </p>
-                    <blockquote>
-                        <p>
-                            Ambient allows your grid to have infinite combinations: a row of content can have no gutter, a gutter with margin or a gutter with padding.
-                        </p>
-                        <p>
-                            Gutter type values are available as:
-                        </p>
-                        <ul>
-                            <li>
-                                <code>am-row="gutter margin"</code>
-                            </li>
-                            <li>
-                                <code>am-row="gutter padding"</code>
-                            </li>
-                        </ul>
-                        <p>
-                            Alternatively, all columns in an explicit section can have no gutter, a gutter with margin or a gutter with padding.
-                        </p>
-                        <ul>
-                            <li>
-                                <code>am-layout="gutter margin"</code>
-                            </li>
-                            <li>
-                                <code>am-layout="gutter padding"</code>
-                            </li>
-                        </ul>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section am-padding>
-                            <h3>
-                                Margin on grid for the individual unsemantic row
-                            </h3>
-                                <div am-row>
-                                    <div am-col>
-                                        1
-                                    </div>
-                                </div>
-                                <div am-row>
-                                    <div am-col>
-                                        1
-                                    </div>
-                                    <div am-col>
-                                        2
-                                    </div>
-                                </div>
-                                <div am-row="gutter margin">
-                                    <div am-col>
-                                        1
-                                    </div>
-                                    <div am-col>
-                                        2
-                                    </div>
-                                    <div am-col>
-                                        3
-                                    </div>
-                                </div>
-                        </section>
-                        <section am-layout="gutter padding" am-padding>
-                            <h3>
-                                Padding on entire grid for the root semantic element
-                            </h3>
-                                <div am-row>
-                                    <div am-col>
-                                        1
-                                    </div>
-                                </div>
-                                <div am-row>
-                                    <div am-col>
-                                        1
-                                    </div>
-                                    <div am-col>
-                                        2
-                                    </div>
-                                </div>
-                                <div am-row>
-                                    <div am-col>
-                                        1
-                                    </div>
-                                    <div am-col>
-                                        2
-                                    </div>
-                                    <div am-col>
-                                        3
-                                    </div>
-                                </div>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
+<section am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Grid layout with gutter
+            </h2>
+            <p>
+                To create a grid layout with gutter, define the gutter & type for the individual unsemantic row by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-row="gutter TYPE"</code>.
+            </p>
+            <p>
+                Alternatively, create a gutter for all content in an explicit section making use of the grid by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
+            </p>
+            <p>
+                <small>
+                    Grid layout is used to structure content, and thus relies on the root semantic element for intent.
+                    The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
+                </small>
+            </p>
+            <blockquote>
+                <p>
+                    Ambient allows your grid to have infinite combinations: a row of content can have no gutter, a gutter with margin or a gutter with padding.
+                </p>
+                <p>
+                    Gutter type values are available as:
+                </p>
+                <ul>
+                    <li>
+                        <code>am-row="gutter margin"</code>
+                    </li>
+                    <li>
+                        <code>am-row="gutter padding"</code>
+                    </li>
+                </ul>
+                <p>
+                    Alternatively, all columns in an explicit section can have no gutter, a gutter with margin or a gutter with padding.
+                </p>
+                <ul>
+                    <li>
+                        <code>am-layout="gutter margin"</code>
+                    </li>
+                    <li>
+                        <code>am-layout="gutter padding"</code>
+                    </li>
+                </ul>
+            </blockquote>
+            <article am-layout="outline">
+                <section am-padding>
                     <h3>
-                        Code
-                    </h3>
-                    <p>
                         Margin on grid for the individual unsemantic row
-                    </p>
+                    </h3>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                        <div am-col>
+                            2
+                        </div>
+                    </div>
+                    <div am-row="gutter margin">
+                        <div am-col>
+                            1
+                        </div>
+                        <div am-col>
+                            2
+                        </div>
+                        <div am-col>
+                            3
+                        </div>
+                    </div>
+                </section>
+                <section am-layout="gutter padding" am-padding>
+                    <h3>
+                        Padding on entire grid for the root semantic element
+                    </h3>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                        <div am-col>
+                            2
+                        </div>
+                    </div>
+                    <div am-row>
+                        <div am-col>
+                            1
+                        </div>
+                        <div am-col>
+                            2
+                        </div>
+                        <div am-col>
+                            3
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
+            <p>
+                Margin on grid for the individual unsemantic row
+            </p>
                     <pre>
 &lt;section&gt;
     &lt;div am-row&gt;
@@ -752,9 +752,9 @@
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                    <p>
-                        Padding on entire grid for the root semantic element
-                    </p>
+            <p>
+                Padding on entire grid for the root semantic element
+            </p>
                     <pre>
 &lt;section am-layout="gutter padding"&gt;
     &lt;div am-row&gt;
@@ -783,110 +783,110 @@
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <header am-padding>
-                <h1 class="am-text-uppercase">
-                    Card layout
-                </h1>
+<section  am-padding>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Card layout
+        </h1>
+        <p>
+            Card layout is used to structure content, and thus relies on the root semantic element for intent.
+            The default orientation on portrait for card layout is 2 columns.
+        </p>
+    </header>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Multiple cards
+            </h2>
+            <p>
+                To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element and wrap card content in a child <code>div</code>.
+            </p>
+            <h3>
+                Multiple
+            </h3>
+            <blockquote>
                 <p>
-                    Card layout is used to structure content, and thus relies on the root semantic element for intent.
-                    The default orientation on portrait for card layout is 2 columns.
+                    <code>&lt;section am-layout="card"&gt;</code>
                 </p>
-            </header>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Multiple cards
-                    </h2>
-                    <p>
-                        To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element and wrap card content in a child <code>div</code>.
-                    </p>
-                    <h3>
-                        Multiple
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;section am-layout="card"&gt;</code>
-                        </p>
-                        <p>
-                            To add a card, wrap content within a child div.
-                        </p>
-                    </blockquote>
-                    <article>
-                        <section am-layout="card">
-                            <div>
-                                <h1>
-                                    Multiple card
-                                </h1>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                            </div>
-                            <div>
-                                <h2>
-                                    Multiple  card
-                                </h2>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                            </div>
-                            <div>
-                                <h3>
-                                    Multiple card
-                                </h3>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                            </div>
-                            <div>
-                                <h4>
-                                    Multiple card
-                                </h4>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                            </div>
-                            <div>
-                                <h5>
-                                    Multiple card
-                                </h5>
-                                <P>
-                                    Multiple cards have a consistent, flexible width and variable height.
-                                </P>
-                            </div>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <p>
+                    To add a card, wrap content within a child div.
+                </p>
+            </blockquote>
+            <article>
+                <section am-layout="card">
+                    <div>
+                        <h1>
+                            Multiple card
+                        </h1>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h2>
+                            Multiple  card
+                        </h2>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h3>
+                            Multiple card
+                        </h3>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h4>
+                            Multiple card
+                        </h4>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h5>
+                            Multiple card
+                        </h5>
+                        <P>
+                            Multiple cards have a consistent, flexible width and variable height.
+                        </P>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;section am-layout="card"&gt;
     &lt;div&gt;
@@ -952,67 +952,67 @@
     &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Vertical cards
-                    </h2>
-                    <p>
-                        To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element and wrap card content in a child <code>div</code>.
-                    </p>
-                    <h3>
-                        Vertical
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;section am-layout="card"&gt;</code>
-                        </p>
-                        <p>
-                            To add a card, wrap content within a child div.
-                        </p>
-                    </blockquote>
-                    <article>
-                        <section am-layout="card vertical">
-                                <div>
-                                    <h1>
-                                        Vertical card
-                                    </h1>
-                                    <P>
-                                        Vertical cards have a constant width and variable height.
-                                    </P>
-                                    <P>
-                                        Vertical cards have a constant width and variable height.
-                                    </P>
-                                </div>
-                                <div>
-                                    <h2>
-                                        Vertical card
-                                    </h2>
-                                    <P>
-                                        Vertical cards have a constant width and variable height.
-                                    </P>
-                                </div>
-                                <div>
-                                    <h3>
-                                        Vertical card
-                                    </h3>
-                                    <P>
-                                        Vertical cards have a constant width and variable height.
-                                    </P>
-                                </div>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Vertical cards
+            </h2>
+            <p>
+                To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element and wrap card content in a child <code>div</code>.
+            </p>
+            <h3>
+                Vertical
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;section am-layout="card"&gt;</code>
+                </p>
+                <p>
+                    To add a card, wrap content within a child div.
+                </p>
+            </blockquote>
+            <article>
+                <section am-layout="card vertical">
+                    <div>
+                        <h1>
+                            Vertical card
+                        </h1>
+                        <P>
+                            Vertical cards have a constant width and variable height.
+                        </P>
+                        <P>
+                            Vertical cards have a constant width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h2>
+                            Vertical card
+                        </h2>
+                        <P>
+                            Vertical cards have a constant width and variable height.
+                        </P>
+                    </div>
+                    <div>
+                        <h3>
+                            Vertical card
+                        </h3>
+                        <P>
+                            Vertical cards have a constant width and variable height.
+                        </P>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;section am-layout="card vertical"&gt;
         &lt;div&gt;
@@ -1044,47 +1044,47 @@
         &lt;/div&gt;
 &lt;/section&gt;
                     </pre>
-                </div>
-            </div>
-        </section>
-    </article>
-    <hr />
+        </div>
+    </div>
+</section>
+</article>
+<hr />
 
-    <article>
-        <header am-padding>
-            <h1 class="am-text-uppercase">
-                Nav layout
-            </h1>
-            <p>
-                Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
-            </p>
-        </header>
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Default nav
-                    </h2>
-                    <h3>
-                        Default
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+<article>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Nav layout
+        </h1>
+        <p>
+            Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
+        </p>
+    </header>
+    <section  am-padding>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h2>
+                    Default nav
+                </h2>
+                <h3>
+                    Default
+                </h3>
+                <blockquote>
+                    <p>
+                        <code>&lt;nav&gt;</code>
+                    </p>
+                </blockquote>
+                <hr />
+                <nav>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                </nav>
+                <hr />
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Code
+                </h3>
                     <pre><code>
 &lt;nav&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1092,40 +1092,40 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-                </div>
             </div>
-        </section>
-        <hr />
+        </div>
+    </section>
+    <hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Horizontal nav
-                    </h2>
+    <section  am-padding>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h2>
+                    Horizontal nav
+                </h2>
+                <p>
+                    To create a horizontal nav add the attribute and value <code>am-layout="horizontal"</code> to any <code>nav</code>.
+                </p>
+                <h3>
+                    Horizontal
+                </h3>
+                <blockquote>
                     <p>
-                        To create a horizontal nav add the attribute and value <code>am-layout="horizontal"</code> to any <code>nav</code>.
+                        <code>&lt;nav am-layout="horizontal"&gt;</code>
                     </p>
-                    <h3>
-                        Horizontal
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-layout="horizontal"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="horizontal">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                </blockquote>
+                <hr />
+                <nav am-layout="horizontal">
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                </nav>
+                <hr />
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Code
+                </h3>
                     <pre><code>
 &lt;nav am-layout="horizontal"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1133,40 +1133,40 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-                 </div>
             </div>
-        </section>
-        <hr />
+        </div>
+    </section>
+    <hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Vertical nav
-                    </h2>
+    <section  am-padding>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h2>
+                    Vertical nav
+                </h2>
+                <p>
+                    To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
+                </p>
+                <h3>
+                    Vertical
+                </h3>
+                <blockquote>
                     <p>
-                        To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
+                        <code>&lt;nav am-layout="vertical"&gt;</code>
                     </p>
-                    <h3>
-                        Vertical
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;nav am-layout="vertical"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <hr />
-                    <nav am-layout="vertical">
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                        <a href="#">Link Text</a>
-                    </nav>
-                    <hr />
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                </blockquote>
+                <hr />
+                <nav am-layout="vertical">
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                </nav>
+                <hr />
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Code
+                </h3>
                     <pre><code>
 &lt;nav am-layout="vertical"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1174,41 +1174,41 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-                </div>
             </div>
-        </section>
-    </article>
-    <hr />
+        </div>
+    </section>
+</article>
+<hr />
 
-    <section  am-padding>
-        <div am-row="portrait-100">
-            <div am-col am-padding>
-                <h2>
-                    Left align nav
-                </h2>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Left align nav
+            </h2>
+            <p>
+                To create a left align nav add the attribute and value <code>am-layout="left-align"</code> to any <code>nav</code>.
+            </p>
+            <h3>
+                Left
+            </h3>
+            <blockquote>
                 <p>
-                    To create a left align nav add the attribute and value <code>am-layout="left-align"</code> to any <code>nav</code>.
+                    <code>&lt;nav am-layout="left-align"&gt;</code>
                 </p>
-                <h3>
-                    Left
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="left-align"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="left-align">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-col am-padding>
-                <h3>
-                    Code
-                </h3>
+            </blockquote>
+            <hr />
+            <nav am-layout="left-align">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;nav am-layout="left-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1216,41 +1216,41 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-            </div>
         </div>
-    </section>
-    </article>
-    <hr />
+    </div>
+</section>
+</article>
+<hr />
 
-    <section  am-padding>
-        <div am-row="portrait-100">
-            <div am-col am-padding>
-                <h2>
-                    Right align nav
-                </h2>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Right align nav
+            </h2>
+            <p>
+                To create a right align nav add the attribute and value <code>am-layout="right-align"</code> to any <code>nav</code>.
+            </p>
+            <h3>
+                Right
+            </h3>
+            <blockquote>
                 <p>
-                    To create a right align nav add the attribute and value <code>am-layout="right-alignl"</code> to any <code>nav</code>.
+                    <code>&lt;nav am-layout="right-align"&gt;</code>
                 </p>
-                <h3>
-                    Right
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="right-align"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="right-align">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-col am-padding>
-                <h3>
-                    Code
-                </h3>
+            </blockquote>
+            <hr />
+            <nav am-layout="right-align">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;nav am-layout="right-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1258,41 +1258,41 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-            </div>
         </div>
-    </section>
-    </article>
-    <hr />
+    </div>
+</section>
+</article>
+<hr />
 
-    <section  am-padding>
-        <div am-row="portrait-100">
-            <div am-col am-padding>
-                <h2>
-                    Center nav
-                </h2>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Center nav
+            </h2>
+            <p>
+                To create a center nav add the attribute and value <code>am-layout="center-align"</code> to any <code>nav</code>.
+            </p>
+            <h3>
+                Center
+            </h3>
+            <blockquote>
                 <p>
-                    To create a center nav add the attribute and value <code>am-layout="center-align"</code> to any <code>nav</code>.
+                    <code>&lt;nav am-layout="center-align"&gt;</code>
                 </p>
-                <h3>
-                    Center
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="center-align"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="center-align">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-col am-padding>
-                <h3>
-                    Code
-                </h3>
+            </blockquote>
+            <hr />
+            <nav am-layout="center-align">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;nav am-layout="center-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1300,41 +1300,41 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
-            </div>
         </div>
-    </section>
-    </article>
-    <hr />
+    </div>
+</section>
+</article>
+<hr />
 
-    <section  am-padding>
-        <div am-row="portrait-100">
-            <div am-col am-padding>
-                <h2>
-                    Justified nav
-                </h2>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Justified nav
+            </h2>
+            <p>
+                To create a justified nav add the attribute and value <code>am-layout="justify-align"</code> to any <code>nav</code>.
+            </p>
+            <h3>
+                Justify
+            </h3>
+            <blockquote>
                 <p>
-                    To create a justified nav add the attribute and value <code>am-layout="justify-align"</code> to any <code>nav</code>.
+                    <code>&lt;nav am-layout="justify-align"&gt;</code>
                 </p>
-                <h3>
-                    Justify
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="justify-align"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="justify-align">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-col am-padding>
-                <h3>
-                    Code
-                </h3>
+            </blockquote>
+            <hr />
+            <nav am-layout="justify-align">
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+                <a href="#">Link Text</a>
+            </nav>
+            <hr />
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;nav am-layout="justify-align"&gt;
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
@@ -1342,53 +1342,159 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;
                     </code></pre>
+        </div>
+    </div>
+</section>
+</article>
+<hr />
+
+<article>
+    <header am-padding>
+        <h1 class="am-text-uppercase">
+            Button layout
+        </h1>
+        <p>
+            Button layout is used to structure floating buttons (and in some cases links that display as a button), and thus relies on the root semantic element for intent.
+        </p>
+    </header>
+    <section  am-padding>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h2>
+                    Default button
+                </h2>
+                <h3>
+                    Default
+                </h3>
+                <blockquote>
+                    <p>
+                        <code>&lt;button&gt;</code>
+                    </p>
+                </blockquote>
+                <button>Button element</button>
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Code
+                </h3>
+                    <pre><code>
+&lt;button&gt;button element&lt;/button&gt;
+                    </code></pre>
             </div>
         </div>
     </section>
-    </article>
     <hr />
 
-    <article>
-        <header am-padding>
-            <h1 class="am-text-uppercase">
-                Form layout
-            </h1>
-            <p>
-                Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
-            </p>
-        </header>
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Default form
-                    </h2>
-                    <h3>
-                        Default
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form>
-                        <label for="example-email">Email</label>
-                        <input id="example-email" type="email" placeholder="Email">
-
-                        <label for="example-password">Password</label>
-                        <input id="example-password" type="password" placeholder="Password">
-
-                        <label for="example-remember">
-                            <input id="example-remember" type="checkbox"> Remember me
-                        </label>
-
-                        <button type="submit">Sign in</button>
-                    </form>
+    <section  am-padding>
+        <div am-row="portrait-100">
+            <div am-col am-padding>
+                <h2>
+                    Floating button
+                </h2>
+                <p>
+                    To create a floating button add the class <code>am-btn-floating</code> to any <code>a</code> or <code>button</code> element.
+                </p>
+                <h3>
+                    Floating
+                </h3>
+                <blockquote>
+                    <p>
+                        <code>&lt;button class="am-btn-floating"&gt;</code>
+                    </p>
+                </blockquote>
+                <button class="am-btn-floating"><i class="fa fa-plus"></i></button>
+                <h3>
+                    Split top
+                </h3>
+                <blockquote>
+                    <p>
+                        <code>&lt;button am-layout="split-top" class="am-btn-floating"&gt;</code>
+                    </p>
+                </blockquote>
+                <div am-margin="bottom " style="height: 50px; border: 1px solid #000; background-color:#fff;">
+                    <button am-layout="split-top" class="am-btn-floating"><i class="fa fa-plus"></i></button>
                 </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <h3>
+                    Split bottom
+                </h3>
+                <blockquote>
+                    <p>
+                        <code>&lt;button am-layout="split-bottom" class="am-btn-floating"&gt;</code>
+                    </p>
+                </blockquote>
+                <div style="height: 50px; border: 1px solid #000; background-color:#fff;">
+                    <button am-layout="split-bottom" class="am-btn-floating"><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Code
+                </h3>
+                <h4>
+                    Floating
+                </h4>
+                    <pre><code>
+&lt;button class="am-btn-floating"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+                    </code></pre>
+                <h4>
+                    Split top
+                </h4>
+                    <pre><code>
+&lt;button am-layout="split-top" class="am-btn-floating"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+                    </code></pre>
+                <h4>
+                    Split bottom
+                </h4>
+                    <pre><code>
+&lt;button am-layout="split-top" class="am-btn-floating"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+                    </code></pre>
+            </div>
+        </div>
+    </section>
+    <hr />
+</article>
+
+<article>
+<header am-padding>
+    <h1 class="am-text-uppercase">
+        Form layout
+    </h1>
+    <p>
+        Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
+    </p>
+</header>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Default form
+            </h2>
+            <h3>
+                Default
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form&gt;</code>
+                </p>
+            </blockquote>
+            <form>
+                <label for="example-email">Email</label>
+                <input id="example-email" type="email" placeholder="Email">
+
+                <label for="example-password">Password</label>
+                <input id="example-password" type="password" placeholder="Password">
+
+                <label for="example-remember">
+                    <input id="example-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form&gt;
     &lt;label for="example-email"&gt;Email&lt;/label&gt;
@@ -1398,52 +1504,52 @@
     &lt;input id="example-password" type="password" placeholder="Password"&gt;
 
     &lt;label for="example-remember"&gt;
-        &lt;input id="example-remember" type="checkbox"&gt; Remember me
+    &lt;input id="example-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
-                 </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Inline form
-                    </h2>
-                    <p>
-                        To create an inline form add the attribute and value  <code>am-layout="inline"</code> to any form.
-                    </p>
-                    <h3>
-                        Inline
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="inline"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="inline">
-                        <label for="inline-email">Email</label>
-                        <input id="inline-email" type="email" placeholder="Email">
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Inline form
+            </h2>
+            <p>
+                To create an inline form add the attribute and value  <code>am-layout="inline"</code> to any form.
+            </p>
+            <h3>
+                Inline
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="inline"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="inline">
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
 
-                        <label for="inline-password">Password</label>
-                        <input id="inline-password" type="password" placeholder="Password">
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
 
-                        <label for="inline-remember">
-                            <input id="inline-remember" type="checkbox"> Remember me
-                        </label>
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="inline"&gt;
     &lt;label for="inline-email"&gt;Email&lt;/label&gt;
@@ -1453,52 +1559,52 @@
     &lt;input id="inline-password" type="password" placeholder="Password"&gt;
 
     &lt;label for="inline-remember"&gt;
-        &lt;input id="inline-remember" type="checkbox"&gt; Remember me
+    &lt;input id="inline-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Stacked form
-                    </h2>
-                    <p>
-                        To create a stacked form, add the attribute and value <code>am-layout="stacked"</code> to any form.
-                   </p>
-                    <h3>
-                        Stacked
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="stacked"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="stacked">
-                        <label for="stacked-email" am-preicon="&#xf118;">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Stacked form
+            </h2>
+            <p>
+                To create a stacked form, add the attribute and value <code>am-layout="stacked"</code> to any form.
+            </p>
+            <h3>
+                Stacked
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="stacked"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="stacked">
+                <label for="stacked-email" am-preicon="&#xf118;">Email</label>
+                <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-password" am-posticon="&#xf118;">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
+                <label for="stacked-password" am-posticon="&#xf118;">Password</label>
+                <input id="stacked-password" type="password" placeholder="Password">
 
-                        <label for="stacked-remember">
-                            <input id="stacked-remember" type="checkbox"> Remember me
-                        </label>
+                <label for="stacked-remember">
+                    <input id="stacked-remember" type="checkbox"> Remember me
+                </label>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="stacked"&gt;
     &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
@@ -1508,36 +1614,36 @@
     &lt;input id="stacked-password" type="password" placeholder="Password"&gt;
 
     &lt;label for="stacked-remember"&gt;
-        &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
+    &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Aligned form
-                    </h2>
-                    <p>
-                        To create an aligned form add the attribute and value <code>am-layout="aligned"</code> to any form.
-                        Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
-                    </p>
-                    <h3>
-                        Aligned
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="aligned"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="aligned">
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Aligned form
+            </h2>
+            <p>
+                To create an aligned form add the attribute and value <code>am-layout="aligned"</code> to any form.
+                Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
+            </p>
+            <h3>
+                Aligned
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="aligned"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="aligned">
                         <span>
                             <label for="aligned-email">Email</label>
                             <input id="aligned-email" type="email" placeholder="Email">
@@ -1551,142 +1657,148 @@
                                 <input id="aligned-remember" type="checkbox"> Remember me
                             </label>
                         </span>
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="aligned"&gt;
     &lt;span&gt;
-        &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
+    &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
     &lt;/span&gt;
+
     &lt;span&gt;
-        &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
+    &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
     &lt;/span&gt;
+
     &lt;span&gt;
-        &lt;label for="aligned-remember"&gt;
-            &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
-        &lt;/label&gt;
+    &lt;label for="aligned-remember"&gt;
+    &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
     &lt;/span&gt;
+
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
+        </div>
+    </div>
+</section>
+<hr />
+
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Multi-column form
+            </h2>
+            <p>
+                To create a multi-column form add the attribute and value <code>am-layout="multicolumn"</code> to any form.
+                Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
+            </p>
+            <h3>
+                Multi-column
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="multicolumn"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="multicolumn">
+                <div>
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
                 </div>
-            </div>
-        </section>
-        <hr />
+                <div>
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Multi-column form
-                    </h2>
-                    <p>
-                        To create a multi-column form add the attribute and value <code>am-layout="multicolumn"</code> to any form.
-                        Wrap a <code>&lt;div&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to column. The amount of <code>&lt;div&gt;</code> define the amount of columns.
-                    </p>
-                    <h3>
-                        Multi-column
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="multicolumn"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="multicolumn">
-                        <div>
-                            <label for="multicolumn-email">Email</label>
-                            <input id="multicolumn-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-password">Password</label>
-                            <input id="multicolumn-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-email">Email</label>
-                            <input id="multicolumn-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-password">Password</label>
-                            <input id="multicolumn-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-email">Email</label>
-                            <input id="multicolumn-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-password">Password</label>
-                            <input id="multicolumn-password" type="password" placeholder="Password">
-                        </div>
-                        <label for="multicolumn-remember">
-                            <input id="multicolumn-remember" type="checkbox"> Remember me
-                        </label>
-
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
                 </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <div>
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
+                </div>
+                <label for="multicolumn-remember">
+                    <input id="multicolumn-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="multicolumn"&gt;
     &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
+
     &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
+
     &lt;div&gt;
-        &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
+
     &lt;label for="multicolumn-remember"&gt;
-        &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
+    &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Stacked + Aligned form
-                    </h2>
-                    <h3>
-                        Stacked + Aligned
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="stacked aligned"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="stacked aligned">
-                        <label for="stacked-aligned-email">Email</label>
-                        <input id="stacked-aligned-email" type="email" placeholder="Email">
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Stacked + Aligned form
+            </h2>
+            <h3>
+                Stacked + Aligned
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="stacked aligned"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="stacked aligned">
+                <label for="stacked-aligned-email">Email</label>
+                <input id="stacked-aligned-email" type="email" placeholder="Email">
 
-                        <label for="stacked-aligned-password">Password</label>
-                        <input id="stacked-aligned-password" type="password" placeholder="Password">
+                <label for="stacked-aligned-password">Password</label>
+                <input id="stacked-aligned-password" type="password" placeholder="Password">
 
                          <span>
                             <label for="stacked-aligned-email">Email</label>
@@ -1696,17 +1808,17 @@
                             <label for="stacked-aligned-password">Password</label>
                             <input id="stacked-aligned-password" type="password" placeholder="Password">
                         </span>
-                        <label for="stacked-aligned-remember">
-                            <input id="stacked-aligned-remember" type="checkbox"> Remember me
-                        </label>
+                <label for="stacked-aligned-remember">
+                    <input id="stacked-aligned-remember" type="checkbox"> Remember me
+                </label>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="stacked aligned"&gt;
     &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
@@ -1715,102 +1827,106 @@
     &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
     &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
 
-     &lt;span&gt;
-        &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
     &lt;span&gt;
-        &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
     &lt;/span&gt;
+
+    &lt;span&gt;
+    &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/span&gt;
+
     &lt;label for="stacked-aligned-remember"&gt;
-        &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
+    &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
+        </div>
+    </div>
+</section>
+<hr />
+
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Multi-column + Stacked form
+            </h2>
+            <h3>
+                Multi-column + Stacked
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="multicolumn stacked "&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="multicolumn stacked">
+                <div>
+                    <label for="multicolumn-stacked-email">Email</label>
+                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-stacked-password">Password</label>
+                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
                 </div>
-            </div>
-        </section>
-        <hr />
+                <div>
+                    <label for="multicolumn-stacked-email">Email</label>
+                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Multi-column + Stacked form
-                    </h2>
-                    <h3>
-                        Multi-column + Stacked
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="multicolumn stacked "&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="multicolumn stacked">
-                        <div>
-                            <label for="multicolumn-stacked-email">Email</label>
-                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-stacked-password">Password</label>
-                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-stacked-email">Email</label>
-                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-stacked-password">Password</label>
-                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-stacked-email">Email</label>
-                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-stacked-password">Password</label>
-                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                        </div>
-
-                        <label for="multicolumn-stacked-email">Email</label>
-                        <input id="multicolumn-stacked-email" type="email" placeholder="Email">
-
-                        <label for="multicolumn-stacked-password">Password</label>
-                        <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-
-                        <label for="multicolumn-stacked-remember">
-                            <input id="multicolumn-stacked-remember" type="checkbox"> Remember me
-                        </label>
-
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
+                    <label for="multicolumn-stacked-password">Password</label>
+                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
                 </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <div>
+                    <label for="multicolumn-stacked-email">Email</label>
+                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-stacked-password">Password</label>
+                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+                </div>
+
+                <label for="multicolumn-stacked-email">Email</label>
+                <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+
+                <label for="multicolumn-stacked-password">Password</label>
+                <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+
+                <label for="multicolumn-stacked-remember">
+                    <input id="multicolumn-stacked-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
 &lt;form am-layout="multicolumn stacked"&gt;
     &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;div&gt;
+    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-        &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+    &lt;div&gt;
+    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
     &lt;/div&gt;
 
     &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
@@ -1820,53 +1936,53 @@
     &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
 
     &lt;label for="multicolumn-stacked-remember"&gt;
-        &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
+    &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
                     </code></pre>
+        </div>
+    </div>
+</section>
+<hr />
+
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col am-padding>
+            <h2>
+                Multi-column + Aligned form
+            </h2>
+            <h3>
+                Multi-column + Aligned
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;form am-layout="multicolumn aligned"&gt;</code>
+                </p>
+            </blockquote>
+            <form am-layout="multicolumn aligned">
+                <div>
+                    <label for="multicolumn-aligned-email">Email</label>
+                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-aligned-password">Password</label>
+                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
                 </div>
-            </div>
-        </section>
-        <hr />
+                <div>
+                    <label for="multicolumn-aligned-email">Email</label>
+                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col am-padding>
-                    <h2>
-                        Multi-column + Aligned form
-                    </h2>
-                    <h3>
-                        Multi-column + Aligned
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;form am-layout="multicolumn aligned"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <form am-layout="multicolumn aligned">
-                        <div>
-                            <label for="multicolumn-aligned-email">Email</label>
-                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+                    <label for="multicolumn-aligned-password">Password</label>
+                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                </div>
+                <div>
+                    <label for="multicolumn-aligned-email">Email</label>
+                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
 
-                            <label for="multicolumn-aligned-password">Password</label>
-                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-aligned-email">Email</label>
-                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-aligned-password">Password</label>
-                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                        </div>
-                        <div>
-                            <label for="multicolumn-aligned-email">Email</label>
-                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
-
-                            <label for="multicolumn-aligned-password">Password</label>
-                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                        </div>
+                    <label for="multicolumn-aligned-password">Password</label>
+                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                </div>
 
                             <span>
                                 <label for="multicolumn-aligned-email">Email</label>
@@ -1877,110 +1993,113 @@
                                 <input id="multicolumn-aligned-password" type="password" placeholder="Password">
                             </span>
 
-                        <label for="multicolumn-aligned-remember">
-                            <input id="multicolumn-aligned-remember" type="checkbox"> Remember me
-                        </label>
+                <label for="multicolumn-aligned-remember">
+                    <input id="multicolumn-aligned-remember" type="checkbox"> Remember me
+                </label>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </form>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </form>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre><code>
- &lt;form am-layout="multicolumn aligned"&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+&lt;form am-layout="multicolumn aligned"&gt;
+    &lt;div&gt;
+    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
 
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
 
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-         &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;div&gt;
+    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
 
-         &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-         &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-     &lt;/div&gt;
+    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+
+    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
 
     &lt;span&gt;
-        &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-        &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
     &lt;/span&gt;
+
     &lt;span&gt;
-        &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-        &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
     &lt;/span&gt;
 
-     &lt;label for="multicolumn-aligned-remember"&gt;
-         &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
-     &lt;/label&gt;
+    &lt;label for="multicolumn-aligned-remember"&gt;
+    &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
+    &lt;/label&gt;
 
-     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
- &lt;/form&gt;
+    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
                     </code></pre>
-                </div>
-            </div>
-        </section>
-        <hr />
+        </div>
+    </div>
+</section>
+<hr />
 
-        <section  am-padding>
-            <div am-row="portrait-100">
-                <div am-col>
-                    <h2>
-                        Outline the layout
-                    </h2>
-                    <p>
-                        If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any semantic element.
-                    </p>
-                    <h3>
-                        Outline
-                    </h3>
-                    <blockquote>
-                        <p>
-                            <code>&lt;article am-layout="outline"&gt;</code>
-                        </p>
-                    </blockquote>
-                    <article am-layout="outline">
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                        <section>
-                            <h1>
-                                Heading
-                            </h1>
-                            <P>
-                                Paragraph
-                            </P>
-                        </section>
-                    </article>
-                </div>
-                <div am-col am-padding>
-                    <h3>
-                        Code
-                    </h3>
+<section  am-padding>
+    <div am-row="portrait-100">
+        <div am-col>
+            <h2>
+                Outline the layout
+            </h2>
+            <p>
+                If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any semantic element.
+            </p>
+            <h3>
+                Outline
+            </h3>
+            <blockquote>
+                <p>
+                    <code>&lt;article am-layout="outline"&gt;</code>
+                </p>
+            </blockquote>
+            <article am-layout="outline">
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+            </article>
+        </div>
+        <div am-col am-padding>
+            <h3>
+                Code
+            </h3>
                     <pre>
 &lt;article am-layout="outline"&gt;
     &lt;section&gt;
@@ -2009,18 +2128,18 @@
     &lt;/section&gt;
 &lt;/article&gt;
                         </pre>
-                </div>
-            </div>
-        </section>
-    </article>
-    <article class="am-secondary" am-padding>
-        <h1>
-            Ambient is a lightweight and modular HTML5 UI development methodology.
-        </h1>
-        <p>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
-        </p>
-    </article>
+        </div>
+    </div>
+</section>
+</article>
+<article class="am-secondary" am-padding>
+    <h1>
+        Ambient is a lightweight and modular HTML5 UI development methodology.
+    </h1>
+    <p>
+        This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
+    </p>
+</article>
 </main>
 <footer am-padding="large" class="am-text-center">
     <p>
