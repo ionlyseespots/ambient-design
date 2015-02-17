@@ -1057,7 +1057,7 @@ nav[am-layout][am-layout~="space-between"] {
 nav[am-layout][am-layout~="space-between"] a {
   flex: none;
 }
-nav[am-layout] a {
+nav[am-layout] a:not(.am-btn-floating) {
   padding: .75em;
   text-align: center;
   display: inline-block;
@@ -1068,9 +1068,9 @@ nav[am-layout] a {
   transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: background 0.3s ease 0s;
 }
-nav[am-layout] a:hover,
-nav[am-layout] a:focus,
-nav[am-layout] a:active {
+nav[am-layout] a:not(.am-btn-floating):hover,
+nav[am-layout] a:not(.am-btn-floating):focus,
+nav[am-layout] a:not(.am-btn-floating):active {
   outline: 0 none;
 }
 a[am-layout~="split-bottom"],
@@ -1303,6 +1303,7 @@ figure[am-slide]:hover figcaption {
   outline: 0 none;
   padding: 0 2rem;
   text-transform: uppercase;
+  z-index: 1;
 }
 .am-btn:hover,
 .am-btn:focus {
@@ -1322,7 +1323,29 @@ figure[am-slide]:hover figcaption {
   text-shadow: 0 1px 0 #ffffff;
   pointer-events: none;
 }
-.am-btn.floating {
+.am-btn-floating {
+  -moz-user-select: none;
+  background-image: none;
+  background-color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: inherit;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: medium none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 15px;
+  outline: 0 none;
+  padding: 0 2rem;
+  text-transform: uppercase;
   background-clip: padding-box;
   border-radius: 50%;
   font-size: 26px;
@@ -1330,6 +1353,10 @@ figure[am-slide]:hover figcaption {
   padding: 10px 0 0;
   width: 55.5px;
   z-index: 1;
+}
+.am-btn-floating:hover,
+.am-btn-floating:focus {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .am-btn.am-primary {
   background-color: #cce5f6;
