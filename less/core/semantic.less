@@ -54,9 +54,12 @@ nav {
   }
 }
 main {
+  .flex-display;
   .flex(1 0 auto);
   .flex-flow(row wrap);
-
+}
+main + article {
+  .flex(1 8.3333%);
 }
 aside + article {
   .flex(1 8.3333%);
@@ -67,6 +70,7 @@ article {
 }
 section {
   .flex(1 8.3333%);
+
 }
 aside {
   .flex(0 0 20%);
