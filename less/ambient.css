@@ -765,13 +765,6 @@ var {
   -ms-hyphens: none;
   hyphens: none;
 }
-[am-verticalrule] {
-  width: 1px;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.12);
-  height: 99.9%;
-  position: absolute;
-}
 body > div[ui-view] {
   min-width: 100%;
   min-height: 100vh;
@@ -1114,6 +1107,13 @@ button[am-layout~="split-top"] {
   top: -25px;
   position: absolute;
   right: 25px;
+}
+[am-verticalrule] {
+  width: 1px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  height: 99.9%;
+  position: absolute;
 }
 [am-layout~="outline"] article,
 [am-layout~="outline"] section,

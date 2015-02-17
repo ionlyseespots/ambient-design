@@ -16,7 +16,7 @@ View scaffolding: http://ionlyseespots.github.io/ambient-design/layout/index.htm
 
 Install with [Bower] (http://bower.io/): bower install ambient
 
-Read the [Getting started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information on getting started.
+Read the [Get started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information on getting started.
 
 > Please note that source is the most current version of Ambient
 
