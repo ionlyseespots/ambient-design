@@ -20,20 +20,11 @@ body {
     margin: auto;
     width: auto;
   }
-  // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div:first-of-type {
+  // Needs to work with custom attribute ui-view issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  & div[ui-view] {
     .flex-display;
     .flex-direction(column);
-    & > div:first-of-type {
-      .flex-display;
-      .flex-direction(column);
-      height: calc(100vh);
-      & > article {
-        .align-items(center);
-        margin: auto;
-        width: auto;
-      }
-    }
+    height: calc(100vh);
     & > article {
       .align-items(center);
       margin: auto;
@@ -129,8 +120,8 @@ html {
 }
 // % root font size + rem element font sizes + em for margins + padding
 body {
-  background-color: #fff;
-  color: #444;
+  background-color: @am-clr-white;
+  color: @am-clr-grey-800;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -138,8 +129,8 @@ body {
   & > header,
   & > footer,
   // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  & div:first-of-type > header,
-  & div:first-of-type > footer {
+  & div[ui-view] > header,
+  & div[ui-view] > footer {
     background-color: @am-closure;
     color: @am-primary-bg;
     &
@@ -171,7 +162,7 @@ h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: #222;
+  color: @am-clr-grey-800;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
@@ -278,38 +269,53 @@ textarea {
   line-height: inherit;
 }
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_%3Cbutton%3E_to_finish
-button {
-  -moz-user-select: none;
-  background-image: none;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  color: #333;
-  .z-depth-bottom(1);
-  .z-depth-animation(2);
-  background-clip: padding-box;
-  border: medium none;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
-  margin-bottom: 15px;
-  outline: 0 none;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  &,
-  &:hover,
-  &:focus {
-    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-  }
-}
+//button, input[type="submit"], input[type="button"] {
+//  -moz-user-select: none;
+//  background-image: none;
+//  background-color: @am-clr-white;
+//  text-decoration: none;
+//  cursor: pointer;
+//  display: inline-block;
+//  position: relative;
+//  font-size: 14px;
+//  font-weight: 400;
+//  text-align: center;
+//  vertical-align: middle;
+//  white-space: nowrap;
+//  color: @am-clr-black;
+//  .z-depth-bottom(1);
+//  .z-depth-animation(2);
+//  background-clip: padding-box;
+//  border: medium none;
+//  border-radius: 2px;
+//  height: 36px;
+//  line-height: 36px;
+//  margin-bottom: 15px;
+//  outline: 0 none;
+//  padding: 0 2rem;
+//  text-transform: uppercase;
+//  &,
+//  &:hover,
+//  &:focus {
+//    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+//    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+//    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+//  }
+//  &:disabled {
+//    background-color: hsl(0, 0%, 98%);
+//    box-shadow: none;
+//    color: hsl(0, 0%, 60%);
+//    text-shadow: 0 1px 0 hsl(0, 0%, 100%);
+//  }
+//  &.am-primary {
+//    background-color: @am-primary-bg;
+//    color: darken(@am-primary, 35%);
+//  }
+//  &.am-secondary {
+//    background-color: @am-secondary-bg;
+//    color: darken(@am-secondary, 35%);
+//  }
+//}
 hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
@@ -368,7 +374,6 @@ abbr {
   font-variant: small-caps;
   font-weight: 600;
   text-transform: lowercase;
-  color: gray;
 }
 
 input,

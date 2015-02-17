@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Base</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+</body>
+<header>
+    <h1>
+        <a href="../../index.html" title="index">Ambient</a>
+    </h1>
+</header>
+<nav am-layout="horizontal" role="navigation">
+    <a href="../../docs/index.html">Getting Started</a>
+    <a href="../../layout/index.html">Semantic</a>
+    <a href="../../design-patterns/index.html">Layout</a>
+    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
+</nav>
+<main role="main">
+    <header am-padding class="am-primary">
+        <p>
+            All Ambient components at a glance.
+        </p>
+        <h1>
+            Components
+        </h1>
+    </header>
+    <article>
+        <h1 am-padding="large" class="am-secondary">
+            Get familiar with the basic setup and structure of Ambient
+        </h1>
+        <aside>
+            <h1>
+                Quick links
+            </h1>
+            <nav am-layout="vertical">
+                <a href="">Typography</a>
+                <a href="">Buttons</a>
+                <a href="">Forms</a>
+                <a href="">Colors</a>
+            </nav>
+        </aside>
+        <section>
+            <h1>
+                Semantic layout
+            </h1>
+                <div am-row>
+                    <div am-col>
+                        <h2>
+                            HTML5
+                        </h2>
+                        <p>
+                            Ambient makes use of HTML5 sections & outlines for semantic scaffolding.
+                        </p>
+                    </div>
+                    <div am-col>
+                        <h2>
+                            CSS3
+                        </h2>
+                        <p>
+                            Ambient makes use of CSS3 attributes on elements for page layout.
+                        </p>
+
+                    </div>
+                </div>
+                <h2>
+                    Design
+                </h2>
+                <p>
+                    Ambient does not style components by default.
+                </p>
+                <p>
+                    Because we have removed the dependency on base styles, you do not need to override Ambient core CSS to customize the design.
+                    Once your semantic layout is in place, you can then customize the design with optional Ambient skin classes, or your own custom classes.
+                </p>
+        </section>
+    </article>
+    <hr />
+
+    <article am-layout="vertical">
+        <h1>
+            Typography
+        </h1>
+        <section>
+            <h1>h1 heading</h1>
+            <h2>h2 heading</h2>
+            <h3>h3 heading</h3>
+            <h4>h4 heading</h4>
+            <h5>h5 heading</h5>
+            <h6>h6 heading</h6>
+            <p>
+                <a href="">Text link</a>
+                <abbr title="Abbreviation">abbr</abbr>
+                <cite>Origin of Species</cite>
+                <code>Code tag</code>
+                <em>Emphasis</em>
+                <mark>Mark text</mark>
+                <kbd>Cmd + Shift + i</kbd>
+                <strong>Highlighted text</strong>
+                <b>Bold text</b>
+                <del>Deleted text</del>
+                <sup>superscript</sup>&nbsp;
+                <sub>subscript</sub>&nbsp;
+            </p>
+        </section>
+        <section>
+            <h1>
+                Blockquote
+            </h1>
+            <blockquote>
+                <p>
+                    This is a paragraph in a blockquote.
+                </p>
+            </blockquote>
+        </section>
+        <section>
+            <h1>
+                Pre
+            </h1>
+            <pre>
+                        Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+            </pre>
+            <h2>
+                Code
+            </h2>
+            <code>
+                code
+            </code>
+        </section>
+        <section>
+            <h1>
+                Lists
+            </h1>
+            <ul>
+                <li>Unordered list</li>
+                <li>
+                    List item
+                    <ol>
+                        <li>Nested ordered list item</li>
+                        <li>Nested ordered list item</li>
+                    </ol>
+                </li>
+                <li>List item</li>
+            </ul>
+            <ol>
+                <li>Ordered list</li>
+                <li>
+                    List item
+                    <ul>
+                        <li>Nested unordered list item</li>
+                        <li>Nested unordered list item</li>
+                    </ul>
+                </li>
+                <li>List item</li>
+            </ol>
+        </section>
+    </article>
+    <hr />
+
+    <article am-layout="vertical">
+        <h1>
+            Buttons
+        </h1>
+        <section am-padding>
+            <h2>
+                Default
+            </h2>
+            <a href="#">Anchor button</a>
+            <button>Button element</button>
+            <input type="submit" value="submit input">
+            <input type="button" value="button input">
+            <input type="submit" value="submit input disabled" disabled>
+            <input type="button" value="button input disabled" disabled>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient
+            </h2>
+            <a class="am-btn" href="#">Anchor button</a>
+            <button class="am-btn">Button element</button>
+            <input class="am-btn" type="submit" value="submit input">
+            <input class="am-btn" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn"</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient disabled
+            </h2>
+            <a class="am-btn am-disabled" href="#">Anchor button</a>
+            <button class="am-btn am-disabled" disabled>Button element</button>
+            <input class="am-btn am-disabled" type="submit" value="submit input" disabled>
+            <input class="am-btn am-disabled" type="button" value="button input" disabled>
+            <blockquote>
+                <code>class="am-btn am-disabled"</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient primary
+            </h2>
+            <a class="am-btn am-primary" href="#">Anchor button</a>
+            <button class="am-btn am-primary">Button element</button>
+            <input class="am-btn am-primary" type="submit" value="submit input">
+            <input class="am-btn am-primary" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn am-primary"</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient secondary
+            </h2>
+            <a class="am-btn am-secondary" href="#">Anchor button</a>
+            <button class="am-btn am-secondary">Button element</button>
+            <input class="am-btn am-secondary" type="submit" value="submit input">
+            <input class="am-btn am-secondary" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn am-secondary"</code>
+            </blockquote>
+        </section>
+    </article>
+    <hr />
+
+    <article>
+        <h1>
+            Forms
+        </h1>
+        <h2>
+            Default
+        </h2>
+        <form>
+            <label for="inline-email">Email</label>
+            <input id="inline-email" type="email" placeholder="Email">
+
+            <label for="inline-password">Password</label>
+            <input id="inline-password" type="password" placeholder="Password">
+
+            <label for="inline-remember">
+                <input id="inline-remember" type="checkbox"> Remember me
+            </label>
+
+            <button type="submit">Sign in</button>
+        </form>
+    </article>
+    <hr />
+
+    <article am-layout="gutter padding portrait-100" am-padding>
+        <h1>
+            Colors
+        </h1>
+        <p>
+            Ambient colors are inspired by the Material palette and are designed to work alongside Material.
+        </p>
+        <section am-layout="gutter padding portrait-100" am-padding class="backgrounds">
+            <h1>
+                Backgrounds
+            </h1>
+            <blockquote>
+                <code>.am-clr-NUMBER-bg</code>
+            </blockquote>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-1-bg am-clr-21-text">
+                        Red
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-2-bg am-clr-21-text">
+                        Pink
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-3-bg am-clr-21-text">
+                        Purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-4-bg am-clr-21-text">
+                        Deep Purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-5-bg am-clr-21-text">
+                        Indigo
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-6-bg am-clr-21-text">
+                        Blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-7-bg am-clr-21-text">
+                        Light blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-8-bg am-clr-21-text">
+                        cyan
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-9-bg am-clr-21-text">
+                        Teal
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-10-bg am-clr-21-text">
+                        Green
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-11-bg am-clr-21-text">
+                        Light green
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-12-bg">
+                        Lime
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-13-bg">
+                        Yellow
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-14-bg">
+                        Amber
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-15-bg am-clr-21-text">
+                        Orange
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-16-bg am-clr-21-text">
+                        Deep orange
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-17-bg am-clr-21-text">
+                        Brown
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-18-bg am-clr-21-text">
+                        Grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-19-bg am-clr-21-text">
+                        Blue grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-20-bg am-clr-21-text">
+                        Black
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <h1>
+                    SVG fills and strokes
+                </h1>
+                <p>
+                    Includes a set of classes to set fills and or strokes.
+                </p>
+                <blockquote>
+                    <code>.am-clr-NUMBER-fill</code><br />
+                    <code>.am-clr-NUMBER-stroke</code>
+                </blockquote>
+            </div>
+        </section>
+        <section am-layout="gutter padding portrait-100" am-padding class="borders-and-text">
+            <h1>
+                Borders & Text
+            </h1>
+            <blockquote>
+                <code>.am-clr-NUMBER-text</code><br />
+                <code>.am-clr-NUMBER-border</code>
+            </blockquote>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-1-border am-clr-1-text">
+                        Red
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-2-border am-clr-1-2-text">
+                        Pink
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-3-border am-clr-3-text">
+                        Purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-4-border am-clr-4-text">
+                        Deep purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-5-border am-clr-5-text">
+                        Indigo
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-6-border am-clr-6-text">
+                        Blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-7-border am-clr-7-text">
+                        Light blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-8-border am-clr-8-text">
+                        cyan
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-9-border am-clr-9-text">
+                        Teal
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-10-border am-clr-10-text">
+                        Green
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-11-border am-clr-11n-text">
+                        Light green
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-12-border am-clr-12-text">
+                        Lime
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-13-border am-clr-13-text">
+                        Yellow
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-14-border am-clr-14-text">
+                        Amber
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-15-border am-clr-15-text">
+                        Orange
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-16-border am-clr-16-text">
+                        Deep orange
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-17-border am-clr-17-text">
+                        Brown
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-18-border am-clr-18-text">
+                        Grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-19-border am-clr-19-text">
+                        Blue grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-20-border am-clr-20-text">
+                        Black
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+</body>
+</html>

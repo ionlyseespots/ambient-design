@@ -17,6 +17,9 @@
 <body>
 <!--- Matrix, if anything breaks it will break here --->
 <header>
+    <p>
+        Display / test multiple layouts for HTML5
+    </p>
     <h1>
         <a href="../index.html" title="index">header h1</a>
     </h1>
@@ -33,15 +36,33 @@
 </nav>
 <hr />
 
-
-
-<div am-row="gutter margin portrait-100">
-    <div am-col="25">
+<main role="main" am-layout="outline">
+<article>
+<h1>
+    article h1
+</h1>
+    <aside>
+        <h1>
+            aside h1
+        </h1>
+        <nav role="navigation" am-layout="vertical">
+            <h1>
+                Nav h1
+            </h1>
+            <a href="#"><strong>link</strong></a>
+            <a href="#"><strong>link</strong></a>
+            <a href="#"><strong>link</strong></a>
+        </nav>
+    </aside>
+    <section>
+        <h1>
+            section h1
+        </h1>
         <aside>
             <h1>
                 aside h1
             </h1>
-            <nav role="navigation" am-layout="vertical">
+            <nav role="navigation" am-layout="horizontal">
                 <h1>
                     Nav h1
                 </h1>
@@ -50,72 +71,74 @@
                 <a href="#"><strong>link</strong></a>
             </nav>
         </aside>
-    </div>
-    <div am-col="75">
-
-
-<main role="main" am-layout="outline">
-<aside>
-    <h1>
-        aside h1
-    </h1>
-    <nav role="navigation" am-layout="horizontal">
-        <h1>
-            Nav h1
-        </h1>
-        <a href="#"><strong>link</strong></a>
-        <a href="#"><strong>link</strong></a>
-        <a href="#"><strong>link</strong></a>
-    </nav>
-</aside>
-    <article>
-        <header>
+        <article>
             <h1>
-                heading h1
+                article h1
             </h1>
-            <p>
-                Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
-                in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
-                when they aren't the first heading of their parent, explicit, sections.
-            </p>
-            <p>
-                Think of <code>h1-h6</code> as dividers, or labels for the content below it. The content is defined by the heading, the heading does not end at the <code>/</code> it ends when it defines a new implicit section.
-                I have found this tool very helpful and building a CSS version for <code>am-layout</code>
-                <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a>
-            </p>
-            <h2>
-                 heading h2
-            </h2>
-            <h3>
-                heading h3
-            </h3>
-        </header>
-        <section>
-            <h1>section h1</h1>
-        </section>
-        <aside>
-            <h1>aside h1</h1>
-        </aside>
-         <aside>
-            <h1>aside h1</h1>
-        </aside>
-        <aside>
-            <h1>aside h1</h1>
-        </aside>
-        <h4>
-            article h4
-        </h4>
-        <h2>
-            article h2
-        </h2>
-        <h5>
-            article h5
-        </h5>
-        <h6>
-            article h6
-        </h6>
-    </article>
-    <hr />
+            <section>
+                <header>
+                    <h1>
+                        heading h1
+                    </h1>
+                    <p>
+                        Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
+                        in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
+                        when they aren't the first heading of their parent, explicit, sections.
+                    </p>
+                    <p>
+                        Think of <code>h1-h6</code> as dividers, or labels for the content below it. The content is defined by the heading, the heading does not end at the <code>/</code> it ends when it defines a new implicit section.
+                       <br />
+                        <a href="http://ionlyseespots.github.io/ambient-IDE/">Ambient IDE - Document Outliner</a>
+                    </p>
+                    <h2>
+                        heading h2
+                    </h2>
+                    <h3>
+                        heading h3
+                    </h3>
+                </header>
+                <article>
+                    <h1>
+                        article h1
+                    </h1>
+                    <section>
+                        <h1>section h1</h1>
+                    </section>
+                    <aside>
+                        <h1>aside h1</h1>
+                    </aside>
+                    <aside>
+                        <h1>aside h1</h1>
+                    </aside>
+                    <aside>
+                        <h1>aside h1</h1>
+                    </aside>
+                    <h4>
+                        article h4
+                    </h4>
+                    <h2>
+                        article h2
+                    </h2>
+                    <h5>
+                        article h5
+                    </h5>
+                    <h6>
+                        article h6
+                    </h6>
+                </article>
+
+            </section>
+        </article>
+    </section>
+
+
+
+
+
+
+
+
+
 
     <article>
         <h1>
@@ -259,7 +282,6 @@
                             Heading header 4
                         </h4>
                     </heading>
-
                 </section>
                 <aside>
                     <h1>
@@ -279,7 +301,6 @@
                             Header 1
                         </h1>
                     </footer>
-
                 </aside>
         </section>
     </article>
@@ -414,12 +435,8 @@
             </h1>
         </section>
     </article>
-    <hr />
-
+</article>
 </main>
-
-    </div>
-</div>
 
 <footer>
    <p>Main (sticky) Footer</p>
