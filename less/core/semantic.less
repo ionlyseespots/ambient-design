@@ -42,28 +42,20 @@ div {
   // help content on absolute positioning
   position: relative;
 }
-header {
+header, nav, main, article, footer {
   .flex-display;
   .flex-flow(row wrap);
 }
 nav {
-  .flex-display;
-  .flex-flow(row wrap);
   & a {
     .flex(1 8.3333%);
   }
 }
 main {
-  .flex-display;
   .flex(1 0 auto);
-  .flex-flow(row wrap);
 }
 aside + article {
   .flex(1 8.3333%);
-}
-article {
-  .flex-display;
-  .flex-flow(row wrap);
 }
 section {
   .flex(1 8.3333%);
@@ -74,8 +66,6 @@ aside {
 }
 // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
 footer {
-  .flex-display;
-  .flex-flow(row wrap);
   .flex-order(2);
 }
 // portrait
