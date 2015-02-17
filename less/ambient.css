@@ -769,7 +769,9 @@ var {
   height: 99.9%;
   position: absolute;
 }
-div[ui-view] {
+body > div[ui-view] {
+  min-width: 100%;
+  min-height: 100vh;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -779,9 +781,8 @@ div[ui-view] {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: calc(100vh);
 }
-div[ui-view] > article {
+body > div[ui-view] > article {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -789,31 +790,31 @@ div[ui-view] > article {
   margin: auto;
   width: auto;
 }
-div[ui-view] > header,
-div[ui-view] > footer {
+body > div[ui-view] > header,
+body > div[ui-view] > footer {
   background-color: #22313f;
   color: #cce5f6;
 }
-div[ui-view] > header h1,
-div[ui-view] > footer h1,
-div[ui-view] > header h2,
-div[ui-view] > footer h2,
-div[ui-view] > header h3,
-div[ui-view] > footer h3,
-div[ui-view] > header h4,
-div[ui-view] > footer h4,
-div[ui-view] > header h5,
-div[ui-view] > footer h5,
-div[ui-view] > header h6,
-div[ui-view] > footer h6 {
+body > div[ui-view] > header h1,
+body > div[ui-view] > footer h1,
+body > div[ui-view] > header h2,
+body > div[ui-view] > footer h2,
+body > div[ui-view] > header h3,
+body > div[ui-view] > footer h3,
+body > div[ui-view] > header h4,
+body > div[ui-view] > footer h4,
+body > div[ui-view] > header h5,
+body > div[ui-view] > footer h5,
+body > div[ui-view] > header h6,
+body > div[ui-view] > footer h6 {
   color: #cce5f6;
 }
-div[ui-view] > header a,
-div[ui-view] > footer a {
+body > div[ui-view] > header a,
+body > div[ui-view] > footer a {
   color: #cce5f6;
 }
-div[ui-view] > header a:hover,
-div[ui-view] > footer a:hover {
+body > div[ui-view] > header a:hover,
+body > div[ui-view] > footer a:hover {
   color: #fff;
 }
 @media (orientation: portrait) {

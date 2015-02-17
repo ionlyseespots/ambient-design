@@ -114,7 +114,6 @@ body {
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-  // Becomes problematic when wrapping content after body in a div ie:: some apps may have a ui-view wrapper or some such
   & > header,
   & > footer {
     background-color: @am-closure;
@@ -387,15 +386,17 @@ var {
 }
 
 // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-div[ui-view] {
+body > div[ui-view] {
+  min-width: 100%;
+  min-height: 100vh;
   .flex-display;
   .flex-direction(column);
-  height: calc(100vh);
   & > article {
     .align-items(center);
     margin: auto;
     width: auto;
   }
+  // closure may need some attention when wrapping semantic elements in an unsemantic div with a custom attribute
   & > header,
   & > footer {
     background-color: @am-closure;
