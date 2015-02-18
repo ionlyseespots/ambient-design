@@ -373,7 +373,6 @@
         </h1>
         <p>
             Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-
         </p>
         <p>
             The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
@@ -385,7 +384,10 @@
                 Grid layout with equal widths
             </h2>
             <p>
-                To create a grid layout with equal widths, add the layout attributes <code>am-row</code> & <code>am-col</code> to the child unsemantic <code>div</code> elements.
+                To create a grid layout with equal widths, add the layout attributes <code>am-row</code> & <code>am-col</code> to unsemantic <code>div</code> elements.
+            </p>
+            <p>
+                Alternatively, if you do not need <i>rows</i> and simply want <i>columns</i> add the layout attribute <code>am-row</code> to the root semantic element. i.e., <codE>&lt;section am-row&gt;</code>
             </p>
             <p>
                 <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
@@ -394,7 +396,7 @@
             </p>
             <blockquote>
                 <p>
-                    To add a row, add the child attribute <code>am-row</code> to a child div.<br />
+                    To add a row, add the child attribute <code>am-row</code> to a div.<br />
                     To add a column, add the child attribute <code>am-col</code> to a child div. The default for each column is equal and scales up to 12.
                 </p>
             </blockquote>

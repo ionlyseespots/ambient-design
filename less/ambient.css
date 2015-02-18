@@ -794,7 +794,8 @@ article[am-layout~="vertical"] > section {
   flex-basis: auto;
   width: 100%;
 }
-div[am-row] {
+div[am-row],
+section[am-row] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
@@ -808,68 +809,79 @@ div[am-row] {
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  width: 100%;
 }
-div[am-row] div[am-col] {
+div[am-row] div[am-col],
+section[am-row] div[am-col] {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
 }
-div[am-row] div[am-col][am-col~="25"] {
+div[am-row] div[am-col][am-col~="25"],
+section[am-row] div[am-col][am-col~="25"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
   width: 25%;
 }
-div[am-row] div[am-col][am-col~="33"] {
+div[am-row] div[am-col][am-col~="33"],
+section[am-row] div[am-col][am-col~="33"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
   width: 33.333%;
 }
-div[am-row] div[am-col][am-col~="66"] {
+div[am-row] div[am-col][am-col~="66"],
+section[am-row] div[am-col][am-col~="66"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
   width: 66.6667%;
 }
-div[am-row] div[am-col][am-col~="50"] {
+div[am-row] div[am-col][am-col~="50"],
+section[am-row] div[am-col][am-col~="50"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
   width: 50%;
 }
-div[am-row] div[am-col][am-col~="75"] {
+div[am-row] div[am-col][am-col~="75"],
+section[am-row] div[am-col][am-col~="75"] {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-basis: auto;
   flex-basis: auto;
   width: 75%;
 }
-div[am-row][am-row^="gutter margin"] > div[am-col] {
+div[am-row][am-row^="gutter margin"] > div[am-col],
+section[am-row][am-row^="gutter margin"] > div[am-col] {
   margin-left: 1em;
 }
-div[am-row][am-row^="gutter margin"] > div[am-col]:first-of-type {
+div[am-row][am-row^="gutter margin"] > div[am-col]:first-of-type,
+section[am-row][am-row^="gutter margin"] > div[am-col]:first-of-type {
   margin-left: -1em;
   padding-left: 1em;
 }
-div[am-row][am-row^="gutter padding"] > div[am-col] {
+div[am-row][am-row^="gutter padding"] > div[am-col],
+section[am-row][am-row^="gutter padding"] > div[am-col] {
   padding-left: 1em;
 }
-div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
+div[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type,
+section[am-row][am-row^="gutter padding"] > div[am-col]:first-of-type {
   padding-left: 0;
 }
 @media (orientation: portrait) {
-  div[am-row][am-row~="portrait-100"][am-row^="gutter margin"] > div[am-col] {
+  div[am-row][am-row~="portrait-100"][am-row^="gutter margin"] > div[am-col],
+  section[am-row][am-row~="portrait-100"][am-row^="gutter margin"] > div[am-col] {
     margin-left: 0;
     padding-left: 0;
   }
-  div[am-row][am-row~="portrait-100"] > div[am-col] {
+  div[am-row][am-row~="portrait-100"] > div[am-col],
+  section[am-row][am-row~="portrait-100"] > div[am-col] {
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-basis: auto;
