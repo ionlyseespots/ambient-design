@@ -1087,7 +1087,6 @@ button[am-layout~="split-top"] {
 [am-layout~="outline"] div {
   background-color: rgba(66, 139, 202, 0.15);
   border: 1px solid rgba(66, 139, 202, 0.2);
-  padding: 3px;
 }
 [am-padding] {
   padding: 1vw;
