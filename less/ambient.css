@@ -389,7 +389,6 @@ html {
   height: calc(100%);
 }
 body {
-  min-width: 100%;
   min-height: 100%;
   display: -webkit-flex;
   display: -moz-flex;
@@ -852,6 +851,10 @@ article[am-layout~="vertical"] > section {
 }
 [am-row][am-row^="gutter margin"] > div[am-col] {
   margin-left: 1em;
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  -ms-flex-basis: 0;
+  flex-basis: 0;
 }
 [am-row][am-row^="gutter margin"] > div[am-col]:first-of-type {
   margin-left: -1em;
