@@ -25,11 +25,13 @@
         </h1>
     </div>
     <div am-col="75">
-         <form>
-             <input type="search" name="s" placeholder="Search on simplest" />
-         </form>
-        <a href="#">Gregoire Vella</a>
-        <a href="#"><i class="fa fa-gear"></i></a>
+        <nav am-layout="right-align">
+            <form>
+                <input type="search" name="s" placeholder="Search on simplest" />
+            </form>
+            <a href="#">Gregoire Vella</a>
+            <a href="#"><i class="fa fa-gear"></i></a>
+        </nav>
     </div>
 </header>
 <main>
@@ -58,7 +60,8 @@
             Inbox
         </h1>
         <hr />
-        <aside>
+
+        <aside am-padding>
             <h2>
                 Message list
             </h2>
@@ -161,10 +164,9 @@
             </ul>
         </aside>
         <section am-padding>
-                <h1 am-padding>
-                    The brand new season of Top Gear
-                </h1>
-
+            <h1>
+                The brand new season of Top Gear
+            </h1>
             <hr />
 
             <p>
