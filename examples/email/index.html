@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="max-height: 100vh; ">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,132 +23,139 @@
         <h1>
             <a href="#">Simpl<strong>est</strong></a>
         </h1>
-        <nav am-layout="vertical">
+        <nav am-layout="vertical" am-padding>
             <a href="#">Profile</a>
                     <a href="#">Email</a>
-                    <a href="#" class="btn btn-primary">Compose new</a>
+                    <a href="#" class="am-btn am-primary">Compose new</a>
 
-                    <a href="#">Inbox <span class="btn btn-primary">25</span></a>
+                    <a href="#">Inbox <span class="am-clr-6-bg am-clr-21-text" am-padding  am-margin="left">25</span></a>
                         <a href="#">Drafts</a>
                         <a href="#">Sent</a>
                         <a href="#">Trash</a>
                         <a href="#">Junk Mail</a>
+                        <hr />
 
-                        <a href="#">Clients <span class="btn btn-primary label"></span></a>
-                        <a href="#">Friends <span class="btn btn-primary label"></span></a>
-                        <a href="#">Family <span class="btn btn-primary label"></span></a>
-                        <a href="#">Dribbble <span class="btn btn-primary label"></span></a>
+                        <a href="#">Clients <i class="fa fa-square"></i></a>
+                        <a href="#">Friends <i class="fa fa-square"></i></a>
+                        <a href="#">Family <i class="fa fa-square"></i></a>
+                        <a href="#">Dribbble <i class="fa fa-square"></i></a>
 
                 <a href="#">Docs</a>
                 <a href="#">Stats</a>
         </nav>
+
     </aside>
     <article>
 
-        <header class="header">
-            <form action="">
+
+        <nav am-layout="justify-align">
+            <form>
                 <input type="search" name="s" placeholder="Search on simplest" />
             </form>
-            <nav class="nav-settings">
-                <ul>
-                    <li><a href="#">Gregoire Vella</a></li>
-                    <li><a href="#" class="icon icon-gear"></a></li>
-                </ul>
-            </nav>
-            <div class="clr"></div>
-        </header>
-        <section>
-            <div class="messages">
-                <h1>Inbox <span class="icon icon-arrow-down"></span></h1>
-                <form action="">
-                    <input type="search" class="search" placeholder="Search Inbox" />
-                </form>
-                <ul class="message-list">
-                    <li class="new">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Sarach Connor <small>Jul 15</small></h3>
-                            <p><strong>I've been hunted - </strong>A crazing robot ...</p>
-                        </div>
-                    </li>
-                    <li class="active">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Jeremy Clarkson <small>Jul 15</small></h3>
-                            <p>The brand new season of Top Gear</p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Eureka.com <small>Jul 14</small></h3>
-                            <p><strong>Interface design - </strong>Hi Greg ...</p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Jeremy Legrand <small>Jul 13</small></h3>
-                            <p><strong>CSS Responsive - </strong>Here is my hack to ...</p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Noe Vella <small>Jul 13</small></h3>
-                            <p><strong>Personal resume - </strong>Hi Greg, as expected ...</p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Dribbble <small>Jul 12</small></h3>
-                            <p><strong>Thank you for purchaseing a pro account</strong></p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Dribbble <small>Jul 12</small></h3>
-                            <p><strong>Work inquiry from Andy Blast - </strong>the foll...</p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Behance <small>Jul 12</small></h3>
-                            <p><strong>Raj sent you a direct message - </strong></p>
-                        </div>
-                    </li>
-                    <li class="new">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Behance <small>Jul 12</small></h3>
-                            <p><strong>Raj sent you a direct message - </strong></p>
-                        </div>
-                    </li>
-                    <li class="">
-                        <input type="checkbox" />
-                        <div class="preview">
-                            <h3>Dribbble <small>Jul 11</small></h3>
-                            <p><strong>Peter Avey is now following you - </strong>Hi ...</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <a href="#">Gregoire Vella</a>
+            <a href="#"><i class="fa fa-gear"></i></a>
+        </nav>
+        <hr />
 
+        <aside>
+            <h1>
+                Inbox
+            </h1>
 
+            <hr />
+            <form am-padding>
+                <input type="search" class="search" placeholder="Search Inbox" />
+            </form>
+            <hr />
 
-        </section>
-        <section class="message">
+            <ul style="overflow-y: scroll; list-style-type: none;margin: 0; display: block;padding: 0;max-height: 50vh;">
+                <li class="new">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Sarach Connor <small>Jul 15</small></h3>
+                        <p><strong>I've been hunted - </strong>A crazing robot ...</p>
+                    </div>
+                </li>
+                <li am-row class="am-active">
+                    <div am-col="25">
+                        <input type="checkbox" />
+                    </div>
+
+                    <div am-col="75">
+                        <h3>Jeremy Clarkson <small>Jul 15</small></h3>
+                        <p>The brand new season of Top Gear</p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Eureka.com <small>Jul 14</small></h3>
+                        <p><strong>Interface design - </strong>Hi Greg ...</p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+
+                        <h3>Jeremy Legrand <small>Jul 13</small></h3>
+                        <p><strong>CSS Responsive - </strong>Here is my hack to ...</p>
+
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Noe Vella <small>Jul 13</small></h3>
+                        <p><strong>Personal resume - </strong>Hi Greg, as expected ...</p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Dribbble <small>Jul 12</small></h3>
+                        <p><strong>Thank you for purchaseing a pro account</strong></p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Dribbble <small>Jul 12</small></h3>
+                        <p><strong>Work inquiry from Andy Blast - </strong>the foll...</p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Behance <small>Jul 12</small></h3>
+                        <p><strong>Raj sent you a direct message - </strong></p>
+                    </div>
+                </li>
+                <li class="new">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Behance <small>Jul 12</small></h3>
+                        <p><strong>Raj sent you a direct message - </strong></p>
+                    </div>
+                </li>
+                <li class="">
+                    <input type="checkbox" />
+                    <div>
+                        <h3>Dribbble <small>Jul 11</small></h3>
+                        <p><strong>Peter Avey is now following you - </strong>Hi ...</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <section am-padding>
+
             <h2><span class="icon icon-star-large"></span> The brand new season of Top Gear <span class="icon icon-reply-large"></span><span class="icon icon-delete-large"></span></h2>
-            <div class="meta-data">
-                <p>
-                    <img src="http://placehold.it/40x40" class="avatar" alt="" />
-                    Jeremy Clarkson to <span class="user">me</span>
-                    <span class="date">July 15, 2013</span>
-                </p>
-            </div>
+            <hr />
+            <p >
+                <img src="http://placehold.it/40x40" class="avatar" alt="" />
+                Jeremy Clarkson to <span class="user">me</span>
+                <span class="date">July 15, 2013</span>
+            </p>
+            <hr />
+
             <div class="body">
                 <p>Hi Greg,</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam modi possimus dignissimos maxime ipsa unde voluptatum consectetur harum debitis dolorum quas quibusdam vero iusto ducimus blanditiis. Enim autem illo praesentium est quis ab voluptate sequi quia magnam deleniti vero dicta iste. Harum velit asperiores expedita inventore error nulla eius nostrum voluptas aspernatur at quia eaque ipsa deserunt quas doloribus totam incidunt mollitia iure! Libero laudantium nobis necessitatibus veniam autem molestias distinctio voluptas quos aliquam vitae. Consequuntur adipisci natus hic sed rerum dolore cumque numquam illum rem at quaerat reprehenderit iste quis maiores fuga voluptates delectus suscipit dicta nulla itaque placeat.</p>

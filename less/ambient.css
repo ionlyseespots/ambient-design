@@ -1048,7 +1048,6 @@ nav[am-layout][am-layout~="center-align"] a {
 }
 nav[am-layout] a:not(.am-btn-floating) {
   padding: .75em;
-  text-align: center;
   display: inline-block;
   text-decoration: none;
   -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
@@ -1073,13 +1072,6 @@ button[am-layout~="split-top"] {
   top: -25px;
   position: absolute;
   right: 25px;
-}
-[am-verticalrule] {
-  width: 1px;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.12);
-  height: 99.9%;
-  position: absolute;
 }
 [am-layout~="outline"] article,
 [am-layout~="outline"] section,
