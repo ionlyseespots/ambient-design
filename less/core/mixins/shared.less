@@ -136,14 +136,13 @@ figure[am-slide] {
   overflow: hidden;
   figcaption {
     left: 0;
-    top: 0;
+    bottom: -200%;
     overflow: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0);
     margin-top: 0;
-    padding-top: 200%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -154,7 +153,7 @@ figure[am-slide] {
     }
   }
   &:hover figcaption {
-    padding-top: 0;
+    bottom: 0;
     background-color: hsla(0, 0%, 0%, 0.5);
   }
 }

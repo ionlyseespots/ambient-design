@@ -1197,14 +1197,13 @@ figure[am-slide] {
 }
 figure[am-slide] figcaption {
   left: 0;
-  top: 0;
+  bottom: -200%;
   overflow: hidden;
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
   margin-top: 0;
-  padding-top: 200%;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -1215,7 +1214,7 @@ figure[am-slide] figcaption * {
   color: rgba(255, 255, 255, 0.87);
 }
 figure[am-slide]:hover figcaption {
-  padding-top: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .am-active {

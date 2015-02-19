@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>carousel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<style>
+
+    @keyframes carousel {
+        0% {
+            left: 0;
+        }
+        11% {
+            left: 0;
+        }
+        12.5% {
+            left: -100%;
+        }
+        23.5% {
+            left: -100%;
+        }
+        25% {
+            left: -200%;
+        }
+        36% {
+            left: -200%;
+        }
+        37.5% {
+            left: -300%;
+        }
+        48.5% {
+            left: -300%;
+        }
+        50% {
+            left: -400%;
+        }
+        61% {
+            left: -400%;
+        }
+        62.5% {
+            left: -300%;
+        }
+        73.5% {
+            left: -300%;
+        }
+        75% {
+            left: -200%;
+        }
+        86% {
+            left: -200%;
+        }
+        87.5% {
+            left: -100%;
+        }
+        98.5% {
+            left: -100%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    .carousel {
+        overflow: hidden;
+        width: 100%;
+        /*height: 100%;*/
+    }
+    .carousel > div {
+        animation: 45s ease 0s normal none infinite carousel;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 500%;
+    }
+    .carousel figure {
+        float: left;
+        width: 20%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0;
+        height: 100%;
+    }
+    .carousel img {
+        margin: 0 auto;
+        height: 100%;
+    }
+</style>
+<main>
+    <article>
+        <div class="carousel">
+            <div>
+
+                <figure am-slide>
+                    <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png"  alt="" />
+                    <figcaption>
+                        <h2>Img</h2>
+                        <p>Text</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://placehold.it/350x150&text=Slide%202" alt="">
+                </figure>
+                <figure>
+                    <img src="http://placehold.it/350x150&text=Slide%203" alt="">
+                </figure>
+                <figure>
+                    <img src="http://placehold.it/350x150&text=Slide%204" alt="">
+                </figure>
+                <figure>
+                    <img src="http://placehold.it/350x150&text=Slide%205" alt="">
+                </figure>
+            </div>
+        </div>
+    </article>
+</main>
+</body>
+</html>
