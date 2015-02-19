@@ -16,25 +16,21 @@ article[am-layout~="vertical"] {
   .flex-display;
   .flex-flow(row wrap);
   & div[am-col] {
-    .flex(1 8.3333%);
+    .flex(1 auto);
+    width: 8.3333%;
     &[am-col~="25"] {
-      .flex-basis(auto);
       width: 25%;
     }
     &[am-col~="33"] {
-      .flex-basis(auto);
       width: 33.333%;
     }
     &[am-col~="66"] {
-      .flex-basis(auto);
       width: 66.6667%;
     }
     &[am-col~="50"] {
-      .flex-basis(auto);
       width: 50%;
     }
     &[am-col~="75"] {
-      .flex-basis(auto);
       width: 75%;
     }
   }

@@ -37,27 +37,68 @@
 <main>
     <aside>
         <nav am-layout="vertical" am-padding>
-            <a href="#">Profile</a>
-            <a href="#">Email</a>
+            <a href="#"><i class="fa fa-user"></i> Profile</a>
+            <a href="#"><i class="fa fa-envelope-o"></i>  Email</a>
             <a href="#" class="am-btn am-primary">Compose new</a>
-            <a href="#">Inbox <span class="am-clr-6-bg am-clr-21-text" am-padding  am-margin="left">25</span></a>
+
+            <div am-row class="am-active">
+                <div am-col>
+                    <a href="#">Inbox</a>
+                </div>
+                <div am-col am-padding class="am-text-right">
+                    <span am-padding class="am-clr-6-bg am-clr-21-text">25</span>
+                </div>
+            </div>
+
             <a href="#">Drafts</a>
             <a href="#">Sent</a>
             <a href="#">Trash</a>
             <a href="#">Junk Mail</a>
             <hr />
 
-            <a href="#">Clients <i class="fa fa-square"></i></a>
-            <a href="#">Friends <i class="fa fa-square"></i></a>
-            <a href="#">Family <i class="fa fa-square"></i></a>
-            <a href="#">Dribbble <i class="fa fa-square"></i></a>
-            <a href="#">Docs</a>
-            <a href="#">Stats</a>
+            <div am-row>
+                <div am-col>
+                    <a href="#">Clients </a>
+                </div>
+                <div am-col am-padding class="am-text-right">
+                    <i class="fa fa-square"></i>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <a href="#">Friends</a>
+                </div>
+                <div am-col am-padding class="am-text-right">
+                    <i class="fa fa-square"></i>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <a href="#">Family</a>
+                </div>
+                <div am-col am-padding class="am-text-right">
+                    <i class="fa fa-square"></i>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <a href="#">Dribbble</a>
+                </div>
+                <div am-col am-padding class="am-text-right">
+                    <i class="fa fa-square"></i>
+                </div>
+            </div>
+            <a href="#"><i class="fa fa-files-o"></i>  Docs</a>
+            <a href="#"><i class="fa fa-bar-chart"></i>  Stats</a>
         </nav>
     </aside>
     <article>
         <h1 am-padding>
             Inbox
+            <span class="fa-stack">
+                   <i class="fa fa-angle-down fa-stack-1x"></i>
+                   <i class="fa fa-circle-thin fa-stack-1x"></i>
+            </span>
         </h1>
         <hr />
 
@@ -65,115 +106,228 @@
             <h2>
                 Message list
             </h2>
-            <form am-padding>
+            <form am-padding="bottom">
                 <input type="search" class="search" placeholder="Search Inbox" />
             </form>
             <hr />
 
             <ul style="list-style-type: none;margin: 0;padding: 0;">
-                <li class="new">
+                <li>
                     <input type="checkbox" />
-                    <h3>
-                        Sarach Connor <small>Jul 15</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Sarach Connor
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 15</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>I've been hunted - </strong>A crazing robot ...
                     </p>
                 </li>
                 <li class="am-active">
                     <input type="checkbox" />
-                    <h3>
-                        Jeremy Clarkson <small>Jul 15</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Jeremy Clarkson
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 15</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         The brand new season of Top Gear
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" />
-                    <h3>
-                        Eureka.com <small>Jul 14</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Eureka.com
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 14</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Interface design - </strong>Hi Greg ...
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" />
-                        <h3>
-                            Jeremy Legrand <small>Jul 13</small>
-                        </h3>
-                        <p>
-                            <strong>CSS Responsive - </strong>Here is my hack to ...
-                        </p>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Jeremy Legrand
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 13</small>
+                        </div>
+                    </div>
+                    <p>
+                        <i class="fa fa-star"></i>
+                        <strong>CSS Responsive - </strong>Here is my hack to ...
+                    </p>
                 </li>
                 <li>
                     <input type="checkbox" />
-                    <h3>
-                        Noe Vella <small>Jul 13</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Noe Vella
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 13</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Personal resume - </strong>Hi Greg, as expected ...
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" />
-                    <h3>
-                        Dribbble <small>Jul 12</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Dribbble
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 12</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Thank you for purchaseing a pro account</strong>
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" />
-                    <h3>
-                        Dribbble <small>Jul 12</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Dribbble
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 12</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Work inquiry from Andy Blast - </strong>the foll...
                     </p>
                 </li>
-                <li class="">
+                <li>
                     <input type="checkbox" />
-                    <h3>
-                        Behance <small>Jul 12</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Behance
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 12</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Raj sent you a direct message - </strong>
                     </p>
                 </li>
-                <li class="new">
+                <li>
                     <input type="checkbox" />
-                    <h3>
-                        Behance <small>Jul 12</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Behance
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 12</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Raj sent you a direct message - </strong>
                     </p>
                 </li>
-                <li class="">
+                <li>
                     <input type="checkbox" />
-                    <h3>
-                        Dribbble <small>Jul 11</small>
-                    </h3>
+                    <div am-row>
+                        <div am-col="75">
+                            <h3>
+                                Dribbble
+                            </h3>
+                        </div>
+                        <div am-col="25" class="am-text-right">
+                            <i class="fa fa-paperclip"></i>
+                            <small>Jul 11</small>
+                        </div>
+                    </div>
                     <p>
+                        <i class="fa fa-star-o"></i>
                         <strong>Peter Avey is now following you - </strong>Hi ...
                     </p>
                 </li>
             </ul>
         </aside>
         <section am-padding>
-            <h1>
-                The brand new season of Top Gear
-            </h1>
+            <div am-row>
+                <div am-col="75">
+                    <h1>
+                        <i class="fa fa-star-o"></i>
+                        The brand new season of Top Gear
+                    </h1>
+                </div>
+                <div am-col="25" class="am-text-right">
+                    <span class="fa-stack">
+                        <i class="fa fa-reply fa-stack-1x"></i>
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    </span>
+                    <span class="fa-stack">
+                        <i class="fa fa-times fa-stack-1x"></i>
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    </span>
+                </div>
+            </div>
             <hr />
 
-            <p>
-                <img src="http://placehold.it/40x40" class="avatar" alt="" />
-                Jeremy Clarkson to <span class="user">me</span>
-                <span class="date">July 15, 2013</span>
-            </p>
+            <div am-row>
+                <div am-col>
+                    <p>
+                        <i class="fa fa-user"></i>
+                        Jeremy Clarkson to <span class="user">me</span>
+                    </p>
+                </div>
+                <div am-col class="am-text-right">
+                    <i class="fa fa-paperclip"></i>
+                    <span class="date">July 15, 2013</span>
+                </div>
+            </div>
+
             <hr />
 
             <p>
@@ -185,19 +339,35 @@
             <p>
                 Cheers
             </p>
-            <hr />
-
-            <div>
-                <a href="#" class="active">Answering</a>
-                <a href="#">Forward</a>
-            </div>
-            <textarea name="r">Hello Jeremy,
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui impedit magni fuga velit nobis quas fugit odio voluptas voluptates odit animi quos nam dolorem harum molestiae culpa sint rem ad esse laboriosam vero quod molestias porro ea dolores eligendi!
-            </textarea>
-            <p>
-                My file enclosed.pdf
-                <progress value="65" max="100"></progress>
+            <p class="am-text-center">
+                <i class="fa fa-paperclip"></i>
+                Files enclosed
             </p>
+            <hr />
+            <div am-padding>
+                <div am-margin="bottom">
+                    <a href="#" class="active">Answering</a>
+                    <a href="#">Forward</a>
+                </div>
+                <textarea name="r">Hello Jeremy,
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui impedit magni fuga velit nobis quas fugit odio voluptas voluptates odit animi quos nam dolorem harum molestiae culpa sint rem ad esse laboriosam vero quod molestias porro ea dolores eligendi!
+                </textarea>
+                <div am-row am-padding>
+                    <div am-col>
+                        <p>
+                            My file enclosed.pdf
+                            <progress value="65" max="100"></progress>
+                        </p>
+                    </div>
+                    <div am-col class="am-text-right">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <footer class="am-text-right">
+                <i am-margin="right" class="fa fa-caret-down"></i>
+                <i am-padding class="fa fa-paper-plane am-primary"></i>
+            </footer>
         </section>
     </article>
 </main>
