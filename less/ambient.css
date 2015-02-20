@@ -485,54 +485,6 @@ footer {
     width: 100%;
   }
 }
-body > div[ui-view] {
-  min-width: 100%;
-  min-height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-body > div[ui-view] > article {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: auto;
-  width: auto;
-}
-body > div[ui-view] > header,
-body > div[ui-view] > footer {
-  background-color: #22313f;
-  color: #cce5f6;
-}
-body > div[ui-view] > header h1,
-body > div[ui-view] > footer h1,
-body > div[ui-view] > header h2,
-body > div[ui-view] > footer h2,
-body > div[ui-view] > header h3,
-body > div[ui-view] > footer h3,
-body > div[ui-view] > header h4,
-body > div[ui-view] > footer h4,
-body > div[ui-view] > header h5,
-body > div[ui-view] > footer h5,
-body > div[ui-view] > header h6,
-body > div[ui-view] > footer h6 {
-  color: #cce5f6;
-}
-body > div[ui-view] > header a,
-body > div[ui-view] > footer a {
-  color: #cce5f6;
-}
-body > div[ui-view] > header a:hover,
-body > div[ui-view] > footer a:hover {
-  color: #fff;
-}
 [am-padding] {
   padding: 1vw;
 }
@@ -1054,6 +1006,54 @@ figure[am-slide]:hover figcaption {
 [am-layout~="image-slider"] > div figure img {
   margin: 0 auto;
   height: 100%;
+}
+body > div[am-wrapper] {
+  min-width: 100%;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body > div[am-wrapper] > article {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+}
+body > div[am-wrapper] > header,
+body > div[am-wrapper] > footer {
+  background-color: #22313f;
+  color: #cce5f6;
+}
+body > div[am-wrapper] > header h1,
+body > div[am-wrapper] > footer h1,
+body > div[am-wrapper] > header h2,
+body > div[am-wrapper] > footer h2,
+body > div[am-wrapper] > header h3,
+body > div[am-wrapper] > footer h3,
+body > div[am-wrapper] > header h4,
+body > div[am-wrapper] > footer h4,
+body > div[am-wrapper] > header h5,
+body > div[am-wrapper] > footer h5,
+body > div[am-wrapper] > header h6,
+body > div[am-wrapper] > footer h6 {
+  color: #cce5f6;
+}
+body > div[am-wrapper] > header a,
+body > div[am-wrapper] > footer a {
+  color: #cce5f6;
+}
+body > div[am-wrapper] > header a:hover,
+body > div[am-wrapper] > footer a:hover {
+  color: #fff;
 }
 img {
   display: block;

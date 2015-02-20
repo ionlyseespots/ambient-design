@@ -9,7 +9,7 @@ html {
   height: calc(100%); // http://css-tricks.com/a-couple-of-use-cases-for-calc/
 }
 body {
-  min-height: 100%; //  min-width: 100%; potentially removing this because it impacts am-margin
+  min-height: 100%;
   .flex-display;
   .flex-direction(column);
 
@@ -37,7 +37,7 @@ p,
 div {
   width: 100%;
   word-wrap: break-word;
-  position: relative; // help content on absolute positioning
+  position: relative;
 }
 header,
 nav,
@@ -63,7 +63,7 @@ footer {
 }
 
 
-@media (orientation:portrait){ // portrait
+@media (orientation:portrait){
   article {
     .flex-direction(column);
   }
@@ -71,38 +71,5 @@ footer {
   aside {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
-  }
-}
-
-
-body > div[ui-view] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
-  min-width: 100%;
-  min-height: 100vh;
-  .flex-display;
-  .flex-direction(column);
-  & > article {
-    .align-items(center);
-    margin: auto;
-    width: auto;
-  }
-  & > header,
-  & > footer {
-    background-color: @am-closure;
-    color: @am-primary-bg;
-    &
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: @am-primary-bg;
-    }
-    & a {
-      color: @am-primary-bg;
-      &:hover {
-        color:#fff;
-      }
-    }
   }
 }

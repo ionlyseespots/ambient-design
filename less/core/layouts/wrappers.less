@@ -1,0 +1,31 @@
+body > div[am-wrapper] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+  min-width: 100%;
+  min-height: 100vh;
+  .flex-display;
+  .flex-direction(column);
+  & > article {
+    .align-items(center);
+    margin: auto;
+    width: auto;
+  }
+  & > header,
+  & > footer {
+    background-color: @am-closure;
+    color: @am-primary-bg;
+    &
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @am-primary-bg;
+    }
+    & a {
+      color: @am-primary-bg;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+}
