@@ -1,37 +1,3 @@
-// Utilities
-// Small collection of classes for your content
-.am-active {
-  background-color:@am-primary-bg;
-}
-.am-text-left {
-  text-align: left;
-  .justify-content(flex-start);
-}
-.am-text-right {
-  text-align: right;
-  .justify-content(flex-end);
-}
-.am-text-center {
-  text-align: center;
-  .justify-content(center);
-}
-.am-text-lowercase {
-  text-transform: lowercase;
-}
-.am-text-uppercase {
-  text-transform: uppercase;
-}
-.am-text-capitalize {
-  text-transform: capitalize;
-}
-
-.am-primary {
-  background-color: @am-primary-bg;
-}
-.am-secondary {
-  background-color: @am-secondary-bg;
-}
-
 // Buttons
 // http://alistapart.com/article/flat-ui-and-forms
 // http://davidwalsh.name/html5-buttons
@@ -76,39 +42,13 @@
     text-shadow: 0 1px 0 hsl(0, 0%, 100%);
     pointer-events: none;
   }
-  &-floating {
-    -moz-user-select: none;
-    background-image: none;
-    background-color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    color: inherit;
-    .z-depth-bottom(1);
-    .z-depth-animation(2);
-    background-clip: padding-box;
-    border: medium none;
-    border-radius: 2px;
-    height: 36px;
-    line-height: 36px;
-    margin-bottom: 15px;
-    outline: 0 none;
-    padding: 0 2rem;
-    text-transform: uppercase;
-
+  &.am-floating-action {
     background-clip: padding-box;
     border-radius: 50%;
     font-size: 26px;
     height: 55.5px;
     padding: 10px 0 0;
     width: 55.5px;
-    z-index: 1;
   }
   &.am-primary {
     background-color: @am-primary-bg;
@@ -119,7 +59,3 @@
     color: darken(@am-secondary, 35%);
   }
 }
-
-
-
-

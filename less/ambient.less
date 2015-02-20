@@ -2,6 +2,7 @@
 // ----------------------------------------------------
 @import "core/variables";
 
+
 // Core dependencies
 // Normalize
 @import "../bower_components/normalize.less/normalize";
@@ -16,11 +17,28 @@
 @import "mixins/flexbox";
 @import "mixins/cursor-reset";
 
+// Structure
 @import "core/semantic";
 @import "core/layout";
 
 @import "core/mixins/shared";
-@import "core/mixins/utility";
+
+// layout
+@import "core/layout/padding";
+@import "core/layout/margin";
+@import "core/layout/shadows/mixins";
+@import "core/layout/shadows/shadows";
+
+
+
+// Skin
+@import "core/skin/buttons";
+@import "core/skin/type";
+@import "core/skin/utility";
+
 @import "core/mixins/colors";
 
-@import "core/colors";
+
+@import "core/skin/colors/variables";
+@import "core/skin/colors/mixins";
+@import "core/skin/colors/colors";

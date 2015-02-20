@@ -91,101 +91,7 @@ footer {
 // Ambient base styles
 // Let's keep a Vertical Rhythm
 // I prefer viewport units on type but is too experimental
-// Typography via Typeplate
-// Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
-// https://github.com/typeplate/typeplate.github.io
-// TODO bring in typeplate as less
-html {
-  font-size: 112.5%; //* Typeplate base font size (112%) 18px with 1.65 line-height */
-  // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-  line-height: 1.65;
-}
-// % root font size + rem element font sizes + em for margins + padding
-body {
-  background-color: @am-clr-white;
-  color: @am-clr-grey-800;
-  word-wrap: break-word;
-  font-weight: 400;
-  font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-  & > header,
-  & > footer {
-    background-color: @am-closure;
-    color: @am-primary-bg;
-    &
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: @am-primary-bg;
-    }
-    & a {
-      color: @am-primary-bg;
-      &:hover {
-        color:#fff;
-      }
-    }
-  }
-}
-// Agree::: Do NOT use heading as sub titles
-// http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
-// http://stackoverflow.com/questions/22444118/correct-markup-for-headers/22451639#22451639
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-  margin-top: 0;
-  color: @am-clr-grey-800;
-  font-weight: 300;
-}
-/*  base font-size * base line-height = current font-size */
-h1 {
-  font-size: 60px;
-  font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
-  margin-bottom: 8.91px;
-  margin-bottom: 0.495rem;
-}
-h2 {
-  font-size: 48px;
-  font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
-  margin-bottom: 11.1375px;
-  margin-bottom: 0.61875rem;
-}
-h3 {
-  font-size: 36px;
-  font-size: 2rem; /* 36 / 18 = 2 */
-  margin-bottom: 14.85px;
-  margin-bottom: 0.825rem;
-}
-h4 {
-  font-size: 24px;
-  font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333  */
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem;
-}
-h5 {
-  font-size: 21px;
-  font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
-  margin-bottom: 25.45714px;
-  margin-bottom: 1.41429rem;
-}
-h6 {
-  font-size: 18px;
-  font-size: 1rem; /* 18 = 18 × 1 */
-  margin-bottom: 29.7px;
-  margin-bottom: 1.65rem;
-}
-p {
-  margin: 0 0 1.5em;
-}
-small {
-  font-size: 65%;
-}
+
 img {
   display: block;
   max-width: 100%;
@@ -247,7 +153,7 @@ textarea {
   line-height: inherit;
 }
 button {
-  &.am-btn-floating {
+  &.am-floating-action {
     padding: 0;
   }
 }

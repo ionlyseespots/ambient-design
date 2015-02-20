@@ -1,0 +1,30 @@
+// "Who knows what evil lurks in the hearts of men? The Shadow knows!"
+// Top & Bottom
+.z-depth(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-bottom}, @{z-depth-@{depth}-top}";
+}
+
+// Top
+.z-depth-top(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-top}";
+}
+// Bottom
+.z-depth-bottom(@depth: 1) {
+  box-shadow: ~"@{z-depth-@{depth}-bottom}";
+}
+
+// Animation
+.z-depth-animation(@depth-after, @depth-orientation: full) {
+  &:hover,
+  &:focus {
+    & when (@depth-orientation = full) {
+      .z-depth(@depth-after);
+    }
+    & when (@depth-orientation = top) {
+      .z-depth-top(@depth-after);
+    }
+    & when (@depth-orientation = bottom) {
+      .z-depth-bottom(@depth-after);
+    }
+  }
+}

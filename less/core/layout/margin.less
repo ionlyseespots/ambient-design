@@ -1,0 +1,45 @@
+[am-margin] {
+  margin: @am-margin;
+  &[am-margin="small"] {
+    margin: calc(@am-margin - .5vw);
+  }
+  &[am-margin="large"] {
+    margin: calc(@am-margin + 2vw);
+  }
+  &[am-margin~="top"] {
+    margin: @am-margin 0 0 0;
+    &[am-margin~="large"] {
+      margin: calc(@am-margin + 2vw) 0 0 0;
+    }
+    &[am-margin~="small"] {
+      margin: calc(@am-margin - .5vw) 0 0 0;
+    }
+  }
+  &[am-margin~="right"] {
+    margin: 0 @am-margin 0 0;
+    &[am-margin~="large"] {
+      margin: 0 calc(@am-margin + 2vw) 0 0;
+    }
+    &[am-margin~="small"] {
+      margin: 0 calc(@am-margin - .5vw) 0 0;
+    }
+  }
+  &[am-margin~="bottom"] {
+    margin: 0 0 @am-margin 0;
+    &[am-margin~="large"] {
+      margin: 0 0 calc(@am-margin + 2vw) 0;
+    }
+    &[am-margin~="small"] {
+      margin: 0 0 calc(@am-margin - .5vw) 0;
+    }
+  }
+  &[am-margin~="left"] {
+    margin: 0 0 0 @am-margin;
+    &[am-margin~="large"] {
+      margin: 0 0 0 calc(@am-margin + 2vw);
+    }
+    &[am-margin~="small"] {
+      margin: 0 0 0 calc(@am-margin - .5vw);
+    }
+  }
+}

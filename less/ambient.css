@@ -490,106 +490,6 @@ footer {
     position: static;
   }
 }
-html {
-  font-size: 112.5%;
-  line-height: 1.65;
-}
-body {
-  background-color: #ffffff;
-  color: #424242;
-  word-wrap: break-word;
-  font-weight: 400;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-body > header,
-body > footer {
-  background-color: #22313f;
-  color: #cce5f6;
-}
-body > header h1,
-body > footer h1,
-body > header h2,
-body > footer h2,
-body > header h3,
-body > footer h3,
-body > header h4,
-body > footer h4,
-body > header h5,
-body > footer h5,
-body > header h6,
-body > footer h6 {
-  color: #cce5f6;
-}
-body > header a,
-body > footer a {
-  color: #cce5f6;
-}
-body > header a:hover,
-body > footer a:hover {
-  color: #fff;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-  text-rendering: optimizeLegibility;
-  /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-  margin-top: 0;
-  color: #424242;
-  font-weight: 300;
-}
-/*  base font-size * base line-height = current font-size */
-h1 {
-  font-size: 60px;
-  font-size: 3.33333rem;
-  /* 60 / 18 = 3.3333 */
-  margin-bottom: 8.91px;
-  margin-bottom: 0.495rem;
-}
-h2 {
-  font-size: 48px;
-  font-size: 2.6667rem;
-  /* 48 / 18 = 2.6667 */
-  margin-bottom: 11.1375px;
-  margin-bottom: 0.61875rem;
-}
-h3 {
-  font-size: 36px;
-  font-size: 2rem;
-  /* 36 / 18 = 2 */
-  margin-bottom: 14.85px;
-  margin-bottom: 0.825rem;
-}
-h4 {
-  font-size: 24px;
-  font-size: 1.3333333333333333rem;
-  /* 24 / 18 = 1.3333  */
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem;
-}
-h5 {
-  font-size: 21px;
-  font-size: 1.16667rem;
-  /* 21 / 18 = 1.1667 */
-  margin-bottom: 25.45714px;
-  margin-bottom: 1.41429rem;
-}
-h6 {
-  font-size: 18px;
-  font-size: 1rem;
-  /* 18 = 18 × 1 */
-  margin-bottom: 29.7px;
-  margin-bottom: 1.65rem;
-}
-p {
-  margin: 0 0 1.5em;
-}
-small {
-  font-size: 65%;
-}
 img {
   display: block;
   max-width: 100%;
@@ -653,7 +553,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-button.am-btn-floating {
+button.am-floating-action {
   padding: 0;
 }
 hr {
@@ -1065,6 +965,33 @@ button[am-layout~="split-top"] {
   background-color: rgba(66, 139, 202, 0.15);
   border: 1px solid rgba(66, 139, 202, 0.2);
 }
+figure[am-slide] {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+figure[am-slide] figcaption {
+  left: 0;
+  bottom: -200%;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+figure[am-slide] figcaption * {
+  color: rgba(255, 255, 255, 0.87);
+}
+figure[am-slide]:hover figcaption {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 [am-padding] {
   padding: 1vw;
 }
@@ -1190,72 +1117,6 @@ button[am-layout~="split-top"] {
 [am-layer]:focus[am-layer~="animate"]:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-figure[am-slide] {
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-}
-figure[am-slide] figcaption {
-  left: 0;
-  bottom: -200%;
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  margin-top: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-figure[am-slide] figcaption * {
-  color: rgba(255, 255, 255, 0.87);
-}
-figure[am-slide]:hover figcaption {
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.am-active {
-  background-color: #cce5f6;
-}
-.am-text-left {
-  text-align: left;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  justify-content: flex-start;
-}
-.am-text-right {
-  text-align: right;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  -ms-justify-content: flex-end;
-  justify-content: flex-end;
-}
-.am-text-center {
-  text-align: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-}
-.am-text-lowercase {
-  text-transform: lowercase;
-}
-.am-text-uppercase {
-  text-transform: uppercase;
-}
-.am-text-capitalize {
-  text-transform: capitalize;
-}
-.am-primary {
-  background-color: #cce5f6;
-}
-.am-secondary {
-  background-color: #e8f3fb;
-}
 .am-btn {
   -moz-user-select: none;
   background-image: none;
@@ -1299,40 +1160,13 @@ figure[am-slide]:hover figcaption {
   text-shadow: 0 1px 0 #ffffff;
   pointer-events: none;
 }
-.am-btn-floating {
-  -moz-user-select: none;
-  background-image: none;
-  background-color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  color: inherit;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  border: medium none;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
-  margin-bottom: 15px;
-  outline: 0 none;
-  padding: 0 2rem;
-  text-transform: uppercase;
+.am-btn.am-floating-action {
   background-clip: padding-box;
   border-radius: 50%;
   font-size: 26px;
   height: 55.5px;
   padding: 10px 0 0;
   width: 55.5px;
-  z-index: 1;
-}
-.am-btn-floating:hover,
-.am-btn-floating:focus {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .am-btn.am-primary {
   background-color: #cce5f6;
@@ -1341,6 +1175,145 @@ figure[am-slide]:hover figcaption {
 .am-btn.am-secondary {
   background-color: #e8f3fb;
   color: #1d6fa5;
+}
+html {
+  font-size: 112.5%;
+  line-height: 1.65;
+}
+body {
+  background-color: #ffffff;
+  color: #424242;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body > header,
+body > footer {
+  background-color: #22313f;
+  color: #cce5f6;
+}
+body > header h1,
+body > footer h1,
+body > header h2,
+body > footer h2,
+body > header h3,
+body > footer h3,
+body > header h4,
+body > footer h4,
+body > header h5,
+body > footer h5,
+body > header h6,
+body > footer h6 {
+  color: #cce5f6;
+}
+body > header a,
+body > footer a {
+  color: #cce5f6;
+}
+body > header a:hover,
+body > footer a:hover {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  margin-top: 0;
+  color: #424242;
+  font-weight: 300;
+}
+/*  base font-size * base line-height = current font-size */
+h1 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  /* 60 / 18 = 3.3333 */
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+}
+h2 {
+  font-size: 48px;
+  font-size: 2.6667rem;
+  /* 48 / 18 = 2.6667 */
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+}
+h3 {
+  font-size: 36px;
+  font-size: 2rem;
+  /* 36 / 18 = 2 */
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  /* 24 / 18 = 1.3333  */
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+}
+h5 {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  /* 21 / 18 = 1.1667 */
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+}
+h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  /* 18 = 18 × 1 */
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+}
+p {
+  margin: 0 0 1.5em;
+}
+small {
+  font-size: 65%;
+}
+.am-text-left {
+  text-align: left;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.am-text-right {
+  text-align: right;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.am-text-center {
+  text-align: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.am-text-lowercase {
+  text-transform: lowercase;
+}
+.am-text-uppercase {
+  text-transform: uppercase;
+}
+.am-text-capitalize {
+  text-transform: capitalize;
+}
+.am-active {
+  background-color: #cce5f6;
+}
+.am-primary {
+  background-color: #cce5f6;
+}
+.am-secondary {
+  background-color: #e8f3fb;
 }
 .am-clr-1-text {
   color: #f44336;
