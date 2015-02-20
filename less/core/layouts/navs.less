@@ -1,0 +1,56 @@
+nav[am-layout] {
+  &[am-layout~="horizontal"] {
+    .justify-content(flex-start);
+    a {
+      .flex(1 8.3333%);
+    }
+  }
+  &[am-layout~="vertical"] {
+    .flex-direction(column);
+    a {
+      .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+      width: 100%;
+    }
+  }
+  &[am-layout~="justify-align"] {
+    .justify-content(space-between);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="left-align"] {
+    .justify-content(flex-start);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="right-align"] {
+    .justify-content(flex-end);
+    a {
+      flex: none;
+    }
+  }
+  &[am-layout~="center-align"] {
+    .justify-content(center);
+    a {
+      flex: none;
+    }
+  }
+  & a:not(.am-floating-action) {
+    padding: .75em;
+    //    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+    transition: background 0.3s ease 0s;
+    &:hover,
+    &:focus,
+    &:active, {
+      //    background-color: @am-primary-bg; Potentially going away. It can get problematic if you do not want a color on hover.
+      outline: 0 none;
+    }
+  }
+}

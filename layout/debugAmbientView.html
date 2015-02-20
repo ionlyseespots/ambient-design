@@ -68,88 +68,22 @@
     </aside>
     <section>
         <h1>
-            Carousel
+            section h1
         </h1>
-        <style>
-
-            @keyframes carousel {
-                0% {
-                    left: 0;
-                }
-                11% {
-                    left: 0;
-                }
-                12.5% {
-                    left: -100%;
-                }
-                23.5% {
-                    left: -100%;
-                }
-                25% {
-                    left: -200%;
-                }
-                36% {
-                    left: -200%;
-                }
-                37.5% {
-                    left: -300%;
-                }
-                48.5% {
-                    left: -300%;
-                }
-                50% {
-                    left: -400%;
-                }
-                61% {
-                    left: -400%;
-                }
-                62.5% {
-                    left: -300%;
-                }
-                73.5% {
-                    left: -300%;
-                }
-                75% {
-                    left: -200%;
-                }
-                86% {
-                    left: -200%;
-                }
-                87.5% {
-                    left: -100%;
-                }
-                98.5% {
-                    left: -100%;
-                }
-                100% {
-                    left: 0;
-                }
-            }
-            .carousel {
-                overflow: hidden;
-                width: 100%;
-
-            }
-            .carousel > div {
-                animation: 45s ease 0s normal none infinite carousel;
-                height: 100%;
-                overflow: hidden;
-                width: 500%;
-            }
-            .carousel figure {
-                float: left;
-                width: 20%;
-                margin: 0 auto;
-                overflow: hidden;
-                padding: 0;
-                height: 100%;
-            }
-            .carousel img {
-                margin: 0 auto;
-                height: 100%;
-            }
-        </style>
-        <div class="carousel">
+        <aside>
+            <h1>
+                aside h1
+            </h1>
+            <nav role="navigation" am-layout="horizontal">
+                <h1>
+                    Nav h1
+                </h1>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+                <a href="#"><strong>link</strong></a>
+            </nav>
+        </aside>
+        <div am-layout="image-slider">
             <div>
                 <figure am-slide>
                     <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png"  alt="" />
@@ -173,19 +107,6 @@
                 </figure>
             </div>
         </div>
-        <aside>
-            <h1>
-                aside h1
-            </h1>
-            <nav role="navigation" am-layout="horizontal">
-                <h1>
-                    Nav h1
-                </h1>
-                <a href="#"><strong>link</strong></a>
-                <a href="#"><strong>link</strong></a>
-                <a href="#"><strong>link</strong></a>
-            </nav>
-        </aside>
         <article>
             <h1>
                 article h1
@@ -241,7 +162,6 @@
                         article h6
                     </h6>
                 </article>
-
             </section>
         </article>
     </section>

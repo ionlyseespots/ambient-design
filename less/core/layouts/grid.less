@@ -1,0 +1,93 @@
+[am-row]{
+  .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+  .flex-display;
+  .flex-flow(row wrap);
+  & div[am-col] {
+    .flex(1 auto);
+    width: 8.3333%;
+    &[am-col~="25"] {
+      width: 25%;
+    }
+    &[am-col~="33"] {
+      width: 33.333%;
+    }
+    &[am-col~="66"] {
+      width: 66.6667%;
+    }
+    &[am-col~="50"] {
+      width: 50%;
+    }
+    &[am-col~="75"] {
+      width: 75%;
+    }
+  }
+  &[am-row^="gutter margin"] {
+    & > div[am-col] {
+      margin-left:1em;
+      .flex-basis(0);
+      &:first-of-type {
+        margin-left: -1em;
+        padding-left: 1em;
+      }
+    }
+  }
+  &[am-row^="gutter padding"] {
+    & > div[am-col] {
+      padding-left:1em;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+  &[am-row~="portrait-100"] {
+    @media (orientation:portrait){
+      &[am-row^="gutter margin"] {
+        & > div[am-col] {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+      & > div[am-col] {
+        .flex-basis(auto);
+        width: 100%;
+      }
+    }
+  }
+}
+[am-layout^="gutter margin"] {
+  & > div[am-row] {
+    & > div[am-col] {
+      margin-left:1em;
+      &:first-of-type {
+        margin-left: -1em;
+        padding-left: 1em;
+      }
+    }
+  }
+}
+[am-layout^="gutter padding"] {
+  & > div[am-row] {
+    & > div[am-col] {
+      padding-left: 1em;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+}
+[am-layout~="portrait-100"] {
+  & div[am-row] {
+    & div[am-col] {
+      @media (orientation:portrait) {
+        margin-left: 0;
+        padding-left: 0;
+        .flex-basis(auto);
+        width: 100%;
+        &:first-of-type {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

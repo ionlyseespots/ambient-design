@@ -17,28 +17,34 @@
 @import "mixins/flexbox";
 @import "mixins/cursor-reset";
 
-// Structure
+// Semantic
 @import "core/semantic";
-@import "core/layout";
-
-@import "core/mixins/shared";
-
-// layout
-@import "core/layout/padding";
-@import "core/layout/margin";
-@import "core/layout/shadows/mixins";
-@import "core/layout/shadows/shadows";
 
 
+// layouts
+@import "core/layouts/padding";
+@import "core/layouts/margin";
+@import "core/layouts/grid";
+@import "core/layouts/linear";
+@import "core/layouts/card";
+@import "core/layouts/forms";
+@import "core/layouts/navs";
+@import "core/layouts/buttons";
+@import "core/layouts/tables";
+@import "core/layouts/outlines";
+@import "core/layouts/sliders";
+@import "core/layouts/utility";
 
-// Skin
-@import "core/skin/buttons";
-@import "core/skin/type";
-@import "core/skin/utility";
-
-@import "core/mixins/colors";
+@import "core/layouts/shadows/variables";
+@import "core/layouts/shadows/mixins";
+@import "core/layouts/shadows/shadows";
 
 
-@import "core/skin/colors/variables";
-@import "core/skin/colors/mixins";
-@import "core/skin/colors/colors";
+// Skins
+@import "core/skins/buttons";
+@import "core/skins/type";
+@import "core/skins/utility";
+
+@import "core/skins/colors/variables";
+@import "core/skins/colors/mixins";
+@import "core/skins/colors/colors";

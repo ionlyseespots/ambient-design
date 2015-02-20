@@ -1,0 +1,18 @@
+a,
+button {
+  &[am-layout~="split-bottom"] {
+    bottom: -45px;
+    position: absolute;
+    right: 25px;
+  }
+  &[am-layout~="split-top"] {
+    top: -25px;
+    position: absolute;
+    right: 25px;
+  }
+}
+button {
+  &.am-floating-action {
+    padding-top: 0 !important; // nope, but okay for now
+  }
+}
