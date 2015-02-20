@@ -981,11 +981,24 @@ figure[am-slide]:hover figcaption {
     left: 0;
   }
 }
-[am-layout~="image-slider"] {
+@keyframes go {
+  100% {
+    left: -300%;
+  }
+}
+@keyframes back {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+[am-layout~="image"] {
   overflow: hidden;
   width: 100%;
 }
-[am-layout~="image-slider"] > div {
+[am-layout~="image"] > div {
   -webkit-animation: 45s ease 0s normal none infinite running carousel;
   -moz-animation: 45s ease 0s normal none infinite running carousel;
   -ms-animation: 45s ease 0s normal none infinite running carousel;
@@ -995,7 +1008,7 @@ figure[am-slide]:hover figcaption {
   overflow: hidden;
   width: 500%;
 }
-[am-layout~="image-slider"] > div figure {
+[am-layout~="image"] > div figure {
   float: left;
   width: 20%;
   margin: 0 auto;
@@ -1003,7 +1016,7 @@ figure[am-slide]:hover figcaption {
   padding: 0;
   height: 100%;
 }
-[am-layout~="image-slider"] > div figure img {
+[am-layout~="image"] > div figure img {
   margin: 0 auto;
   height: 100%;
 }
