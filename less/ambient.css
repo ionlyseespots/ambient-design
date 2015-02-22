@@ -1017,7 +1017,75 @@ img {
 [am-layer]:focus[am-layer~="animate"]:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
+@-webkit-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  11.11111111% {
+    opacity: 1;
+  }
+  33.33333333% {
+    opacity: 1;
+  }
+  44.44444444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-moz-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  11.11111111% {
+    opacity: 1;
+  }
+  33.33333333% {
+    opacity: 1;
+  }
+  44.44444444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  11.11111111% {
+    opacity: 1;
+  }
+  33.33333333% {
+    opacity: 1;
+  }
+  44.44444444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  11.11111111% {
+    opacity: 1;
+  }
+  33.33333333% {
+    opacity: 1;
+  }
+  44.44444444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeinout {
   0% {
     opacity: 0;
   }
@@ -1043,20 +1111,36 @@ img {
   left: 0;
   right: 0;
   margin: 0;
+  -webkit-animation: fadeinout 25s infinite;
   -moz-animation: fadeinout 25s infinite;
+  -ms-animation: fadeinout 25s infinite;
+  -o-animation: fadeinout 25s infinite;
+  animation: fadeinout 25s infinite;
 }
 [am-image-slider] figure img {
   height: 100%;
   margin: 0 auto;
 }
 [am-image-slider] figure:nth-child( 1) {
+  -webkit-animation-delay: -2.77777778s;
   -moz-animation-delay: -2.77777778s;
+  -ms-animation-delay: -2.77777778s;
+  -o-animation-delay: -2.77777778s;
+  animation-delay: -2.77777778s;
 }
 [am-image-slider] figure:nth-child( 2) {
+  -webkit-animation-delay: 5.55555556s;
   -moz-animation-delay: 5.55555556s;
+  -ms-animation-delay: 5.55555556s;
+  -o-animation-delay: 5.55555556s;
+  animation-delay: 5.55555556s;
 }
 [am-image-slider] figure:nth-child( 3) {
+  -webkit-animation-delay: 13.88888889s;
   -moz-animation-delay: 13.88888889s;
+  -ms-animation-delay: 13.88888889s;
+  -o-animation-delay: 13.88888889s;
+  animation-delay: 13.88888889s;
 }
 .am-btn {
   -moz-user-select: none;
