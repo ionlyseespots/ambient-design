@@ -905,6 +905,7 @@ figure[am-slide] {
   margin: 0;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 figure[am-slide] figcaption {
   left: 0;
@@ -927,85 +928,6 @@ figure[am-slide] figcaption * {
 figure[am-slide]:hover figcaption {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-}
-@keyframes carousel {
-  0% {
-    left: 0;
-  }
-  11% {
-    left: 0;
-  }
-  12.5% {
-    left: -100%;
-  }
-  23.5% {
-    left: -100%;
-  }
-  25% {
-    left: -200%;
-  }
-  36% {
-    left: -200%;
-  }
-  37.5% {
-    left: -300%;
-  }
-  48.5% {
-    left: -300%;
-  }
-  50% {
-    left: -400%;
-  }
-  61% {
-    left: -400%;
-  }
-  62.5% {
-    left: -300%;
-  }
-  73.5% {
-    left: -300%;
-  }
-  75% {
-    left: -200%;
-  }
-  86% {
-    left: -200%;
-  }
-  87.5% {
-    left: -100%;
-  }
-  98.5% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
-[am-layout~="image-slider"] {
-  overflow: hidden;
-  width: 100%;
-}
-[am-layout~="image-slider"] > div {
-  -webkit-animation: 45s ease 0s normal none infinite running carousel;
-  -moz-animation: 45s ease 0s normal none infinite running carousel;
-  -ms-animation: 45s ease 0s normal none infinite running carousel;
-  -o-animation: 45s ease 0s normal none infinite running carousel;
-  animation: 45s ease 0s normal none infinite runnng carousel;
-  height: 100%;
-  overflow: hidden;
-  width: 500%;
-}
-[am-layout~="image-slider"] > div figure {
-  float: left;
-  width: 20%;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  height: 100%;
-}
-[am-layout~="image-slider"] > div figure img {
-  margin: 0 auto;
-  height: 100%;
 }
 body > div[am-wrapper] {
   min-width: 100%;
@@ -1094,6 +1016,47 @@ img {
 [am-layer]:hover[am-layer~="animate"]:focus,
 [am-layer]:focus[am-layer~="animate"]:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+@-moz-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  11.11111111% {
+    opacity: 1;
+  }
+  33.33333333% {
+    opacity: 1;
+  }
+  44.44444444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+[am-image-slider] {
+  height: 150px;
+}
+[am-image-slider] figure {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  -moz-animation: fadeinout 25s infinite;
+}
+[am-image-slider] figure img {
+  height: 100%;
+  margin: 0 auto;
+}
+[am-image-slider] figure:nth-child( 1) {
+  -moz-animation-delay: -2.77777778s;
+}
+[am-image-slider] figure:nth-child( 2) {
+  -moz-animation-delay: 5.55555556s;
+}
+[am-image-slider] figure:nth-child( 3) {
+  -moz-animation-delay: 13.88888889s;
 }
 .am-btn {
   -moz-user-select: none;
