@@ -12,8 +12,7 @@ body {
   min-height: 100%;
   .flex-display;
   .flex-direction(column);
-
-  & > article  { // center page content in first article not in main horizontally and vertically
+  & > article  { // center first article not in main
     .align-items(center);
     margin: auto;
     width: auto;
@@ -61,7 +60,6 @@ aside {
 footer {
   .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
 }
-
 
 @media (orientation:portrait){
   article {
