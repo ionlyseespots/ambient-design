@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
-Back to basics. A lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework. Ambient makes use of HTML5 elements & CSS3 attributes to layout the document outline.
+Back to basics. A lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework that makes use of HTML5 elements & CSS3 attributes to layout the document outline.
 
 Ambient is ready to adopt whatever your design or style is. Feel free to use HTML, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 
@@ -33,12 +33,18 @@ This project is in early development. Anakin Skywalker release v1.2.14
 ## See what is coming!
 
 * Colors: http://ionlyseespots.github.io/ambient-design/design-patterns/colors.html 
-* HTML5 app template 1: http://ionlyseespots.github.io/ambient-design/examples/app
-* HTML5 app template 2: http://ionlyseespots.github.io/ambient-design/examples/template-2
+* HTML5 portrait example: http://ionlyseespots.github.io/ambient-design/examples/app
+* HTML5 landscape example: http://ionlyseespots.github.io/ambient-design/examples/template-2
+* HTML5 email UI example: http://ionlyseespots.github.io/ambient-design/examples/email/index.html
+
+## Ambient IDE
+
+* Document outliner: http://ionlyseespots.github.io/ambient-IDE/
+
 
 ## Usage
 
-Once you have your [starter HTML5 template](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) linked to the Ambient CSS, start building the intent of your content.
+Feel free to link to the Ambient CSS file and use HTML, whenever and wherever you like. We have created a [starting HTML5 example](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) for you to start building the intent of your content.
 
 ## Background
 
