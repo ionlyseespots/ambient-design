@@ -18,22 +18,34 @@
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<h1>
+    Image slider
+</h1>
 <main>
-    <div am-image-slider>
-        <figure am-slide><!-- optional attribute to slide in for figcaption -->
-            <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png"  alt="" />
-            <figcaption>
-                <h2>Img</h2>
-                <p>Text</p>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="http://placehold.it/350x150&text=Slide%202" alt="">
-        </figure>
-        <figure>
-            <img src="http://placehold.it/350x150&text=Slide%203" alt="">
-        </figure>
-    </div>
+    <article>
+        <h1>
+            Layout attribute: <code>am-image-slider</code>
+        </h1>
+        <p>
+            Ambient default supports 3 HTML5 <code>figure</code> and optional <code>figcaption</code> elements. The number of images, duration and height of the container is customized as a LESS variable.
+        </p>
+        <div am-image-slider>
+            <figure am-slide><!-- optional attribute to slide in for figcaption -->
+                <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png"  alt="" />
+                <figcaption>
+                    <h2>Img</h2>
+                    <p>Text</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="http://placehold.it/350x150&text=Slide%202" alt="">
+            </figure>
+            <figure>
+                <img src="http://placehold.it/350x150&text=Slide%203" alt="">
+            </figure>
+        </div>
+    </article>
+
 </main>
 </body>
 </html>
