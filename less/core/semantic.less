@@ -10,8 +10,10 @@ html {
 }
 body {
   min-height: 100%;
+  height: 100%;
   .flex-display;
-  .flex-direction(column);
+  .flex-flow(row wrap);
+  .justify-content(flex-start;);
   & > article  { // center first article not in main
     .align-items(center);
     margin: auto;
@@ -20,7 +22,6 @@ body {
 }
 // http://www.w3.org/TR/CSS2/visuren.html
 // Block elements are 100% width of parent element, if width is not specified.
-// section clearing
 header,
 nav,
 article,
@@ -40,6 +41,7 @@ div {
 }
 header,
 nav,
+aside,
 main,
 article,
 footer {
@@ -47,9 +49,7 @@ footer {
   .flex-flow(row wrap);
   .align-content(flex-start);
 }
-main {
-  .flex(1 0 auto);
-}
+main,
 section,
 aside + article {
   .flex(1 8.3333%);
@@ -58,7 +58,8 @@ aside {
   .flex(0 0 20%);
 }
 footer {
-  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
+//  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
+  .align-self(flex-end);
 }
 
 @media (orientation:portrait){
