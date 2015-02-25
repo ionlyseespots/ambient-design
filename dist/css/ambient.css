@@ -1201,11 +1201,11 @@ nav[am-layout] a:active {
 [am-margin][am-margin~="left"][am-margin~="small"] {
     margin: 0 0 0 calc(0.5vw);
 }
-[am-layer] {
+[am-shadow] {
     position: relative;
     z-index: 1;
 }
-[am-layer][am-layer~="z-1"]:after {
+[am-shadow][am-shadow~="z-1"]:after {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     content: "";
     top: 0;
@@ -1215,7 +1215,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-1"]:before {
+[am-shadow][am-shadow~="z-1"]:before {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
     content: "";
     top: 0;
@@ -1225,7 +1225,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-2"]:after {
+[am-shadow][am-shadow~="z-2"]:after {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
     content: "";
     top: 0;
@@ -1235,7 +1235,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-2"]:before {
+[am-shadow][am-shadow~="z-2"]:before {
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     content: "";
     top: 0;
@@ -1245,7 +1245,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-3"]:after {
+[am-shadow][am-shadow~="z-3"]:after {
     box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     content: "";
     top: 0;
@@ -1255,7 +1255,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-3"]:before {
+[am-shadow][am-shadow~="z-3"]:before {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
     content: "";
     top: 0;
@@ -1265,7 +1265,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-4"]:after {
+[am-shadow][am-shadow~="z-4"]:after {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
     content: "";
     top: 0;
@@ -1275,7 +1275,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-4"]:before {
+[am-shadow][am-shadow~="z-4"]:before {
     box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     content: "";
     top: 0;
@@ -1285,7 +1285,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-5"]:after {
+[am-shadow][am-shadow~="z-5"]:after {
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
     content: "";
     top: 0;
@@ -1295,7 +1295,7 @@ nav[am-layout] a:active {
     right: 0;
     pointer-events: none;
 }
-[am-layer][am-layer~="z-5"]:before {
+[am-shadow][am-shadow~="z-5"]:before {
     box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     content: "";
     top: 0;
