@@ -843,7 +843,7 @@ nav[am-layout] a:not(.am-floating-action):active {
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
-  bottom: -45px;
+  bottom: -25px;
   position: absolute;
   right: 25px;
 }
