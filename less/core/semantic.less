@@ -49,7 +49,7 @@ footer {
   .flex-display;
   .flex-flow(row wrap);
   .align-content(flex-start);
-  max-width: 100%;
+  max-width: 100%; // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
 }
 main,
 section,
@@ -72,11 +72,5 @@ footer {
   aside {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
-  }
-}
-
-@-moz-document url-prefix() { // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
-  section, aside{
-    overflow: auto; // help keep content inside when deep nesting
   }
 }

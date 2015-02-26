@@ -488,12 +488,6 @@ footer {
     width: 100%;
   }
 }
-@-moz-document url-prefix() {
-  section,
-  aside {
-    overflow: auto;
-  }
-}
 [am-padding] {
   padding: 1vw;
 }
