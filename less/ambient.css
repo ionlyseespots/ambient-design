@@ -460,11 +460,15 @@ aside + article {
   -ms-flex: 1 0 8.3333%;
   flex: 1 0 8.3333%;
 }
+section {
+  min-width: 8.3333%;
+}
 aside {
   -webkit-flex: 0 0 20%;
   -moz-flex: 0 0 20%;
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
+  min-width: 20%;
 }
 footer {
   -webkit-align-self: flex-end;
@@ -486,6 +490,12 @@ footer {
     -ms-flex-basis: auto;
     flex-basis: auto;
     width: 100%;
+  }
+}
+@-moz-document url-prefix() {
+  section,
+  aside {
+    overflow: auto;
   }
 }
 [am-padding] {

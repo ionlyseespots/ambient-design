@@ -49,15 +49,19 @@ footer {
   .flex-display;
   .flex-flow(row wrap);
   .align-content(flex-start);
-  max-width: 100%; // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
+  max-width: 100%;
 }
 main,
 section,
 aside + article {
   .flex(1 0 @am-flex-width-1);
 }
+section {
+  min-width: @am-flex-width-1;
+}
 aside {
   .flex(0 0 20%); // Pareto's Principle: The 80/20 Rule
+  min-width: 20%;
 }
 footer {
 //  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
@@ -72,5 +76,11 @@ footer {
   aside {
     .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
+  }
+}
+
+@-moz-document url-prefix() { // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
+  section, aside{
+    overflow: auto; // help keep content inside when deep nesting
   }
 }
