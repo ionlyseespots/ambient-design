@@ -82,7 +82,7 @@
             <p>
                 <code>am-margin</code><br />
                 <code>am-padding</code><br />
-                <code>am-shadow</code><br />
+                <code>am-layer</code><br />
             </p>
         </blockquote>
         <blockquote>
@@ -101,7 +101,7 @@
     </section>
 </article>
 <article>
-    <header am-padding="large" am-shadow="z1" class="am-secondary am-text-c" >
+    <header am-padding="large" am-layer="z1" class="am-secondary am-text-c" >
         <h1 class="am-text-uppercase text-center">
             Global
         </h1>
@@ -177,13 +177,13 @@
     </section>
     <section am-padding>
         <h3>
-            Shadows
+            Layers
         </h3>
         <p>
-            To add depth to an element, add the attribute <code>am-shadow="VALUE"</code> to any element.
+            To add a layer and/or depth to an element, add the attribute <code>am-layer="VALUE"</code> to any element.
         </p>
         <p>
-            <small>If needed, the additional value <code>hover-animate</code> is available.</small>
+            <small>If needed, the additional value <code>hvr-elevate</code> and <code>shadow</code> is available.</small>
         </p>
         <blockquote>
             <p>
@@ -191,19 +191,19 @@
             </p>
             <ul>
                 <li>
-                    <code>am-shadow="z1"</code>
+                    <code>am-layer="z1"</code>
                 </li>
                 <li>
-                    <code>am-shadow="z2"</code>
+                    <code>am-layer="z2"</code>
                 </li>
                 <li>
-                    <code>am-shadow="z3"</code>
+                    <code>am-layer="z3"</code>
                 </li>
                 <li>
-                    <code>am-shadow="z4"</code>
+                    <code>am-layer="z4"</code>
                 </li>
                 <li>
-                    <code>am-shadow="z5"</code>
+                    <code>am-layer="z5"</code>
                 </li>
             </ul>
         </blockquote>
@@ -212,19 +212,19 @@
                 <h3>
                     Static
                 </h3>
-                <div am-shadow="z1" am-padding am-margin="bottom large">
+                <div am-layer="z1 shadow" am-padding am-margin="bottom large">
                     z1
                 </div>
-                <div am-shadow="z2" am-padding am-margin="bottom large">
+                <div am-layer="z2 shadow" am-padding am-margin="bottom large">
                     z2
                 </div>
-                <div am-shadow="z3" am-padding am-margin="bottom large">
+                <div am-layer="z3 shadow" am-padding am-margin="bottom large">
                     z3
                 </div>
-                <div am-shadow="z4" am-padding am-margin="bottom large">
+                <div am-layer="z4 shadow" am-padding am-margin="bottom large">
                     z4
                 </div>
-                <div am-shadow="z5" am-padding am-margin="bottom large">
+                <div am-layer="z5 shadow" am-padding am-margin="bottom large">
                     z5
                 </div>
             </div>
@@ -232,19 +232,19 @@
                 <h3>
                     Animated
                 </h3>
-                <div am-shadow="z1 hover-animate" am-padding am-margin="bottom large">
+                <div am-layer="z1 shadow hvr-elevate" am-padding am-margin="bottom large">
                     z1
                 </div>
-                <div am-shadow="z2 hover-animate" am-padding am-margin="bottom large">
+                <div am-layer="z2 shadow hvr-elevate" am-padding am-margin="bottom large">
                     z2
                 </div>
-                <div am-shadow="z3 hover-animate" am-padding am-margin="bottom large">
+                <div am-layer="z3 shadow hvr-elevate" am-padding am-margin="bottom large">
                     z3
                 </div>
-                <div am-shadow="z4 hover-animate" am-padding am-margin="bottom large">
+                <div am-layer="z4 shadow hvr-elevate" am-padding am-margin="bottom large">
                     z4
                 </div>
-                <div am-shadow="z5 hover-animate" am-padding am-margin="bottom large">
+                <div am-layer="z5 shadow hvr-elevate" am-padding am-margin="bottom large">
                     z5
                 </div>
             </div>
@@ -252,7 +252,7 @@
     </section>
 </article>
 <article>
-<header am-padding="large" am-shadow="z1" class="am-secondary am-text-c" >
+<header am-padding="large" am-layer="z1" class="am-secondary am-text-c" >
     <h1 class="am-text-uppercase text-center">
         Root
     </h1>

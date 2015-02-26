@@ -985,39 +985,49 @@ img {
   max-width: 100%;
   height: auto;
 }
-[am-shadow][am-shadow~="z1"] {
+[am-layer][am-layer~="z1"] {
   z-index: 1;
+}
+[am-layer][am-layer~="z1"][am-layer~="shadow"] {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
-[am-shadow][am-shadow~="z2"] {
+[am-layer][am-layer~="z2"] {
   z-index: 2;
+}
+[am-layer][am-layer~="z2"][am-layer~="shadow"] {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-[am-shadow][am-shadow~="z3"] {
+[am-layer][am-layer~="z3"] {
   z-index: 3;
+}
+[am-layer][am-layer~="z3"][am-layer~="shadow"] {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-[am-shadow][am-shadow~="z4"] {
+[am-layer][am-layer~="z4"] {
   z-index: 4;
+}
+[am-layer][am-layer~="z4"][am-layer~="shadow"] {
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
-[am-shadow][am-shadow~="z5"] {
+[am-layer][am-layer~="z5"] {
   z-index: 5;
+}
+[am-layer][am-layer~="z5"][am-layer~="shadow"] {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-[am-shadow][am-shadow~="hover-animate"],
-[am-shadow]:hover[am-shadow~="hover-animate"],
-[am-shadow]:focus[am-shadow~="hover-animate"] {
+[am-layer][am-layer~="hvr-elevate"],
+[am-layer]:hover[am-layer~="hvr-elevate"],
+[am-layer]:focus[am-layer~="hvr-elevate"] {
   -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
-[am-shadow][am-shadow~="hover-animate"]:hover,
-[am-shadow]:hover[am-shadow~="hover-animate"]:hover,
-[am-shadow]:focus[am-shadow~="hover-animate"]:hover,
-[am-shadow][am-shadow~="hover-animate"]:focus,
-[am-shadow]:hover[am-shadow~="hover-animate"]:focus,
-[am-shadow]:focus[am-shadow~="hover-animate"]:focus {
+[am-layer][am-layer~="hvr-elevate"]:hover,
+[am-layer]:hover[am-layer~="hvr-elevate"]:hover,
+[am-layer]:focus[am-layer~="hvr-elevate"]:hover,
+[am-layer][am-layer~="hvr-elevate"]:focus,
+[am-layer]:hover[am-layer~="hvr-elevate"]:focus,
+[am-layer]:focus[am-layer~="hvr-elevate"]:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 @-webkit-keyframes fadeinout {
@@ -1742,4 +1752,19 @@ a:active {
 }
 .am-clr-21-stroke {
   stroke: #ffffff;
+}
+.am-shadow-z1 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.am-shadow-z2 {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.am-shadow-z3 {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.am-shadow-z4 {
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.am-shadow-z5 {
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
