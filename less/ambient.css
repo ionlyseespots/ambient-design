@@ -1158,7 +1158,6 @@ img {
 .am-btn {
   -moz-user-select: none;
   background-image: none;
-  background-color: inherit;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -1168,9 +1167,10 @@ img {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: inherit;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
+  color: #000000;
+  background-color: #ffffff;
   border: medium none;
   border-radius: 2px;
   line-height: 36px;
@@ -1311,6 +1311,15 @@ h6 {
 p {
   margin: 0 0 1.5em;
 }
+a {
+  color: #2487ca;
+  background-color: inherit;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #000000;
+}
 small {
   font-size: 65%;
 }
@@ -1421,14 +1430,6 @@ var {
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-}
-a {
-  color: #2487ca;
-}
-a:hover,
-a:focus,
-a:active {
-  color: #000000;
 }
 .am-active {
   background-color: #cce5f6;

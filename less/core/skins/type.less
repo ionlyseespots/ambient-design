@@ -90,6 +90,16 @@ h6 {
 p {
   margin: 0 0 1.5em;
 }
+a {
+  color: @am-link-color;
+  background-color: inherit;
+  &:hover,
+  &:focus,
+  &:active,  {
+    color:darken(@am-link-color, 50%);
+  }
+}
+
 small {
   font-size: 65%;
 }
