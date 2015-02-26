@@ -390,7 +390,6 @@ html {
 }
 body {
   min-height: 100%;
-  height: 100%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -427,7 +426,6 @@ hr,
 p,
 div {
   width: 100%;
-  word-wrap: break-word;
   position: relative;
 }
 header,
@@ -435,6 +433,7 @@ nav,
 aside,
 main,
 article,
+section,
 footer {
   display: -webkit-flex;
   display: -moz-flex;
@@ -449,6 +448,7 @@ footer {
   -moz-align-content: flex-start;
   -ms-align-content: flex-start;
   align-content: flex-start;
+  max-width: 100%;
 }
 main,
 section,
@@ -903,13 +903,13 @@ table th {
   background-color: rgba(66, 139, 202, 0.15);
   border: 1px solid rgba(66, 139, 202, 0.2);
 }
-figure[am-slide] {
+figure[am-hover-caption] {
   margin: 0;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-figure[am-slide] figcaption {
+figure[am-hover-caption] figcaption {
   left: 0;
   bottom: -200%;
   overflow: hidden;
@@ -924,10 +924,10 @@ figure[am-slide] figcaption {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-figure[am-slide] figcaption * {
+figure[am-hover-caption] figcaption * {
   color: rgba(255, 255, 255, 0.87);
 }
-figure[am-slide]:hover figcaption {
+figure[am-hover-caption]:hover figcaption {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
