@@ -1334,6 +1334,7 @@ blockquote {
   margin: 1em 0;
   padding: .5em 1em;
   font-size: small;
+  width: 100%;
 }
 blockquote:before,
 blockquote:after {
