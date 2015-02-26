@@ -427,6 +427,7 @@ hr,
 p,
 div {
   width: 100%;
+  word-wrap: break-word;
   position: relative;
 }
 header,
@@ -605,11 +606,11 @@ footer {
 [am-row] div[am-col][am-col~="33"] {
   width: 33.333%;
 }
-[am-row] div[am-col][am-col~="66"] {
-  width: 66.6667%;
-}
 [am-row] div[am-col][am-col~="50"] {
   width: 50%;
+}
+[am-row] div[am-col][am-col~="66"] {
+  width: 66.6667%;
 }
 [am-row] div[am-col][am-col~="75"] {
   width: 75%;
@@ -1174,11 +1175,10 @@ img {
   border: medium none;
   border-radius: 2px;
   line-height: 36px;
-  margin-bottom: 15px;
   outline: 0 none;
   padding: 0 2rem;
+  margin: 0;
   text-transform: uppercase;
-  z-index: 1;
 }
 .am-btn:hover,
 .am-btn:focus {
@@ -1205,6 +1205,7 @@ img {
   height: 55.5px;
   padding: 10px 0 0;
   width: 55.5px;
+  z-index: 1;
 }
 .am-btn.am-primary {
   background-color: #cce5f6;
@@ -1220,7 +1221,7 @@ html {
 }
 body {
   background-color: #ffffff;
-  color: #424242;
+  color: #333333;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1250,7 +1251,7 @@ body > footer a {
 }
 body > header a:hover,
 body > footer a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 h1,
 h2,
@@ -1262,7 +1263,7 @@ h6 {
   text-rendering: optimizeLegibility;
   /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: #424242;
+  color: #444444;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */

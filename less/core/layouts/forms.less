@@ -24,7 +24,7 @@ form[am-layout~="aligned"] > span {
   .justify-content(justify);
   width: 100%;
   & label,  & input, & select, & textarea {
-    .flex(1 8.3333%);
+    .flex(1 @am-flex-width-1);
   }
 }
 //== Multi-column
@@ -34,6 +34,6 @@ form[am-layout~="multicolumn"]  {
   & input, select, textarea, label {
     width: 100%; }
   & > div  {
-    .flex(1 8.3333%);
+    .flex(1 @am-flex-width-1);
   }
 }

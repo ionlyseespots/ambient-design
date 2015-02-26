@@ -4,21 +4,21 @@
   .flex-flow(row wrap);
   & div[am-col] {
     .flex(1 auto);
-    width: 8.3333%;
+    width: @am-flex-width-1;
     &[am-col~="25"] {
-      width: 25%;
+      width: @am-flex-width-2;
     }
     &[am-col~="33"] {
-      width: 33.333%;
-    }
-    &[am-col~="66"] {
-      width: 66.6667%;
+      width: @am-flex-width-3;
     }
     &[am-col~="50"] {
-      width: 50%;
+      width: @am-flex-width-4;
+    }
+    &[am-col~="66"] {
+      width: @am-flex-width-5;
     }
     &[am-col~="75"] {
-      width: 75%;
+      width: @am-flex-width-6;
     }
   }
   &[am-row^="gutter margin"] {

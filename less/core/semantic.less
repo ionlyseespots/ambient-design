@@ -36,6 +36,7 @@ hr,
 p,
 div {
   width: 100%;
+  word-wrap: break-word;
   position: relative;
 }
 header,
@@ -48,15 +49,15 @@ footer {
   .flex-display;
   .flex-flow(row wrap);
   .align-content(flex-start);
-  max-width: 100%;
+  max-width: 100%; // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
 }
 main,
 section,
 aside + article {
-  .flex(1 0 8.3333%);
+  .flex(1 0 @am-flex-width-1);
 }
 aside {
-  .flex(0 0 20%);
+  .flex(0 0 20%); // Pareto's Principle: The 80/20 Rule
 }
 footer {
 //  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
