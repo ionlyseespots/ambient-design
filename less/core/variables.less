@@ -1,27 +1,23 @@
-//
-// Descriptive Variables
-// --------------------------------------------------
-
-//== Colors
-// nice hex-to-rgb converter:: http://hex.colorrrs.com/
-
-// Primary
 @am-primary:  rgb(52, 152, 219); // #3498DB
-@am-primary-bg: lighten(@am-primary, 35%);
-
-// Secondary
 @am-secondary: lighten(@am-primary, 20%);
-@am-secondary-bg: lighten(@am-primary-bg, 6.5%);
 
-@am-clr-text: #333;
-@am-clr-heading: #444;
-@am-clr-link: darken(@am-primary, 6.5%);
+// Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
+@am-closure: @am-clr-grey-800;
 
-// Gestalt Principles
-// http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
-@am-closure: rgb(34,49,63); // #22313F
+// Viewport widths ensure a vertical rhythm
+@am-padding: 1vw;
+@am-margin: 1vw;
 
-// Flex
+@am-clr-body-bg: @am-clr-white;
+@am-clr-primary-bg: lighten(@am-primary, 35%);
+@am-clr-secondary-bg: lighten(@am-clr-primary-bg, 6.5%);
+@am-clr-body-text: @am-clr-grey-800;
+@am-clr-heading-text: @am-clr-grey-800;
+@am-clr-hr: rgba(0, 0, 0, 0.12);
+@am-clr-link-text: darken(@am-primary, 6.5%);
+@am-clr-btn-bg: @am-clr-white;
+@am-clr-btn-text: @am-clr-black;
+
 @am-flex-width-1: 8.3333%;
 @am-flex-width-2: 25%;
 @am-flex-width-3: 33.333%;
@@ -29,9 +25,7 @@
 @am-flex-width-5: 66.6667%;
 @am-flex-width-6: 75%;
 
-// viewport widths ensure a vertical rhythm
-@am-padding: 1vw;
-@am-margin: 1vw;
+
 
 
 

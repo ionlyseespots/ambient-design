@@ -9,15 +9,15 @@ html {
 }
 // % root font size + rem element font sizes + em for margins + padding
 body {
-  background-color: @am-clr-white;
-  color: @am-clr-text;
+  background-color: @am-clr-body-bg;
+  color: @am-clr-body-text;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   & > header,
   & > footer {
     background-color: @am-closure;
-    color: @am-primary-bg;
+    color: @am-clr-primary-bg;
     &
     h1,
     h2,
@@ -25,12 +25,12 @@ body {
     h4,
     h5,
     h6 {
-      color: @am-primary-bg;
+      color: @am-clr-primary-bg;
     }
     & a {
-      color: @am-primary-bg;
+      color: @am-clr-primary-bg;
       &:hover {
-        color: lighten(@am-primary-bg, 20%);
+        color: lighten(@am-clr-primary-bg, 20%);
       }
     }
   }
@@ -47,7 +47,7 @@ h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: @am-clr-heading;
+  color: @am-clr-heading-text;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
@@ -91,12 +91,12 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: @am-clr-link;
+  color: @am-clr-link-text;
   background-color: inherit;
   &:hover,
   &:focus,
   &:active,  {
-    color:darken(@am-clr-link, 50%);
+    color:darken(@am-clr-link-text, 50%);
   }
 }
 
@@ -154,7 +154,7 @@ textarea {
   line-height: inherit;
 }
 hr {
-  border-color: rgba(0, 0, 0, 0.12);
+  border-color: @am-clr-hr;
   border-width: 1px 0 0;
 }
 abbr {

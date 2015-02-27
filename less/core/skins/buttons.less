@@ -18,15 +18,16 @@
   .z-depth-bottom(1);
   .z-depth-animation(2);
   background-clip: padding-box;
-  color: @am-clr-black;
-  background-color: @am-clr-white;
+  color: @am-clr-btn-text;
+  background-color: @am-clr-btn-bg;
   border: medium none;
   border-radius: 2px;
   line-height: 36px;
   outline: 0 none;
-  padding: 0 2rem;
-  margin: 0;
+  padding: 5px 2rem;
+  margin: 2px;
   text-transform: uppercase;
+  word-wrap: break-word;
   &,
   &:hover,
   &:focus {
@@ -43,19 +44,29 @@
   }
   &.am-floating-action {
     background-clip: padding-box;
-    border-radius: 50%;
     font-size: 26px;
-    height: 55.5px;
-    padding: 10px 0 0;
-    width: 55.5px;
     z-index: 1;
+    border-radius: 50%;
+    width: 55.5px;
+    height: 55.5px;
+    padding-left: 0;
+    padding-right: 0;
+    &:not(button) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   &.am-primary {
-    background-color: @am-primary-bg;
+    background-color: @am-clr-primary-bg;
     color: darken(@am-primary, 35%);
   }
   &.am-secondary {
-    background-color: @am-secondary-bg;
+    background-color: @am-clr-secondary-bg;
     color: darken(@am-secondary, 35%);
+  }
+  @media (max-width: 30em){
+    &:not(.am-floating-action) {
+      width: 100%;
+    }
   }
 }
