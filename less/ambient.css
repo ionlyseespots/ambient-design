@@ -894,8 +894,8 @@ table th {
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
 [am-layout~="outline"] div {
-  background-color: rgba(66, 139, 202, 0.15);
-  border: 1px solid rgba(66, 139, 202, 0.2);
+  background-color: rgba(216, 67, 21, 0.15);
+  border: 1px solid rgba(216, 67, 21, 0.2);
 }
 figure[am-hover-caption] {
   margin: 0;
@@ -949,7 +949,7 @@ body > div[am-wrapper] > article {
 body > div[am-wrapper] > header,
 body > div[am-wrapper] > footer {
   background-color: #424242;
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > div[am-wrapper] > header h1,
 body > div[am-wrapper] > footer h1,
@@ -963,11 +963,11 @@ body > div[am-wrapper] > header h5,
 body > div[am-wrapper] > footer h5,
 body > div[am-wrapper] > header h6,
 body > div[am-wrapper] > footer h6 {
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > div[am-wrapper] > header a:hover,
 body > div[am-wrapper] > footer a:hover {
@@ -1206,12 +1206,12 @@ img {
   padding-bottom: 10px;
 }
 .am-btn.am-primary {
-  background-color: #cce5f6;
-  color: #0e354f;
+  background-color: #f7bba9;
+  color: #351105;
 }
 .am-btn.am-secondary {
-  background-color: #e8f3fb;
-  color: #1d6fa5;
+  background-color: #fad3c7;
+  color: #922d0e;
 }
 @media (max-width: 30em) {
   .am-btn:not(.am-floating-action) {
@@ -1232,7 +1232,7 @@ body {
 body > header,
 body > footer {
   background-color: #424242;
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > header h1,
 body > footer h1,
@@ -1246,11 +1246,11 @@ body > header h5,
 body > footer h5,
 body > header h6,
 body > footer h6 {
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > header a,
 body > footer a {
-  color: #cce5f6;
+  color: #f7bba9;
 }
 body > header a:hover,
 body > footer a:hover {
@@ -1316,7 +1316,7 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: #2487ca;
+  color: #ba3a12;
   background-color: inherit;
 }
 a:hover,
@@ -1439,13 +1439,13 @@ var {
   justify-content: center;
 }
 .am-active {
-  background-color: #cce5f6;
+  background-color: #f7bba9;
 }
 .am-primary {
-  background-color: #cce5f6;
+  background-color: #f7bba9;
 }
 .am-secondary {
-  background-color: #e8f3fb;
+  background-color: #fad3c7;
 }
 .am-clr-1-text {
   color: #f44336;
