@@ -2,7 +2,7 @@ nav[am-layout] {
   &[am-layout~="horizontal"] {
     .justify-content(flex-start);
     a {
-      .flex(1 @am-flex-width-1);
+      .flex(1 @am-flex-width1);
     }
   }
   &[am-layout~="vertical"] {
@@ -37,19 +37,12 @@ nav[am-layout] {
     }
   }
   & a:not(.am-floating-action) {
-    padding: .75em;
-    //    text-align: center;
+    padding: @am-nav-link-padding;
     display: inline-block;
     text-decoration: none;
-    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
-    -moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
-    -o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
-    transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
-    transition: background 0.3s ease 0s;
     &:hover,
     &:focus,
     &:active, {
-      //    background-color: @am-clr-primary-bg; Potentially going away. It can get problematic if you do not want a color on hover.
       outline: 0 none;
     }
   }

@@ -827,14 +827,9 @@ nav[am-layout][am-layout~="center-align"] a {
   flex: none;
 }
 nav[am-layout] a:not(.am-floating-action) {
-  padding: .75em;
+  padding: 1em;
   display: inline-block;
   text-decoration: none;
-  -webkit-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -moz-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  transition: background 0.3s ease 0s;
 }
 nav[am-layout] a:not(.am-floating-action):hover,
 nav[am-layout] a:not(.am-floating-action):focus,
@@ -976,7 +971,7 @@ body > div[am-wrapper] > footer a {
 }
 body > div[am-wrapper] > header a:hover,
 body > div[am-wrapper] > footer a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 img {
   display: block;

@@ -3,11 +3,9 @@
 // https://github.com/typeplate/typeplate.github.io
 // TODO bring in typeplate as less
 html {
-  font-size: 112.5%; //* Typeplate base font size (112%) 18px with 1.65 line-height */
-  // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-  line-height: 1.65;
+  font-size: @am-root-font-size; //* Typeplate base font size (112%) 18px with 1.65 line-height */
+  line-height: @am-root-line-height; // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
 }
-// % root font size + rem element font sizes + em for margins + padding
 body {
   background-color: @am-clr-body-bg;
   color: @am-clr-body-text;
@@ -38,6 +36,7 @@ body {
 // Agree::: Do NOT use heading as sub titles
 // http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
 // http://stackoverflow.com/questions/22444118/correct-markup-for-headers/22451639#22451639
+// % root font size + rem element font sizes + em for margins + padding
 h1,
 h2,
 h3,
