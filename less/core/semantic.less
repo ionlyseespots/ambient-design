@@ -13,7 +13,6 @@ body {
   height: 100%;
   .flex-display;
   .flex-flow(row wrap);
-  .justify-content(flex-start);
   & > article  { // center first article not in main
     .align-items(center);
     margin: auto;
@@ -36,6 +35,7 @@ hr,
 p,
 div {
   width: 100%;
+  max-width: 100%;
   word-wrap: break-word;
   position: relative;
 }
@@ -57,7 +57,7 @@ aside + article {
   .flex(1 0 @am-flex-width1);
 }
 aside {
-  .flex(0 0 20%); // Pareto's Principle: The 80/20 Rule
+  .flex-basis(@am-flex-width-p1);
 }
 footer {
 //  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
