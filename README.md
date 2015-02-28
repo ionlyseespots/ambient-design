@@ -16,13 +16,13 @@ View scaffolding: http://ionlyseespots.github.io/ambient-design/layout/index.htm
 
 Install with [Bower] (http://bower.io/): bower install ambient
 
-Read the [Get started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information on getting started.
+Read the [Get started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information and examples on getting started.
 
-> Please note that source is the most current version of Ambient
+> current release cycle: Anakin Skywalker v1.2.14
 
 ## Development
 
-This project is in early development. Anakin Skywalker release v1.2.14
+This project is in early development.
 
 * Website: http://ionlyseespots.github.io/ambient-design
 * Docs: http://ionlyseespots.github.io/ambient-design/docs
@@ -41,16 +41,9 @@ This project is in early development. Anakin Skywalker release v1.2.14
 
 * Document outliner: http://ionlyseespots.github.io/ambient-IDE/
 
-
 ## Usage
 
 Feel free to link to the Ambient CSS file and use HTML, whenever and wherever you like. We have created a [starting HTML5 example](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) for you to start building the intent of your content.
-
-## Background
-
-Sometimes I have UI that plays well with a traditional grid paradigm but sometimes I need a more complex grid. This can mean learning grid classes for structure with floats, columns and media queries.
-
-I liked reusing classes for design but I became frustrated with classes for structure that were not very clear. I wanted to get back to basics with HTML5 and create a methodology to layout the document outline. The layout should be dynamic, and fit any range of viewports. 
 
 ## Inspiration
 
