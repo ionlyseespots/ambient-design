@@ -396,7 +396,7 @@
             <blockquote>
                 <p>
                     To add a row, add the child attribute <code>am-row</code> to a div.<br />
-                    To add a column, add the child attribute <code>am-col</code> to a child div. The default for each column is equal and scales up to 12.
+                    To add a column, add the child attribute <code>am-col</code> to a div. The default for each column is equal and scales up to 12.
                 </p>
             </blockquote>
             <article am-layout="outline">
@@ -509,8 +509,8 @@
             </p>
             <blockquote>
                 <p>
-                    To add a row, add the child attribute <code>am-row</code> to a child div.<br />
-                    To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a child div.
+                    To add a row, add the child attribute <code>am-row</code> to a div.<br />
+                    To add an offset width column, add the child attribute <code>am-col</code> and define the offset width as <code>am-col="VALUE"</code> to a div.
                 </p>
                 <p>
                     Offset width values are available as
@@ -619,11 +619,9 @@
                 Grid layout with gutter
             </h2>
             <p>
-                To create a grid layout with gutter, define the gutter & type for the individual unsemantic row by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-row="gutter TYPE"</code>.
+                To create a grid layout with gutter, define the gutter & type by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-row="gutter TYPE"</code>.
             </p>
-            <p>
-                Alternatively, create a gutter for all content in an explicit section making use of the grid by adding <code>am-layout="gutter TYPE"</code> to the root semantic element.
-            </p>
+
             <p>
                 <small>
                     Grid layout is used to structure content, and thus relies on the root semantic element for intent.
@@ -632,13 +630,13 @@
             </p>
             <blockquote>
                 <h3>
-                    Mix & match gutters
+                    Mix & match column gutters
                 </h3>
+                <h4>
+                    You can define any combination of layouts which enable you to have multiple types of grids
+                </h4>
                 <p>
-                    Ambient allows your grid to have infinite combinations: a row of content can have no gutter, a gutter with margin or a gutter with padding.
-                </p>
-                <p>
-                    Gutter type values are available as:
+                    All columns in unsemantic div rows
                 </p>
                 <ul>
                     <li>
@@ -649,7 +647,7 @@
                     </li>
                 </ul>
                 <p>
-                    Alternatively, all columns in an explicit section can have no gutter, a gutter with margin or a gutter with padding.
+                    All columns in semantic element rows:
                 </p>
                 <ul>
                     <li>
