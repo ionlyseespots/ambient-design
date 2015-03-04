@@ -18,7 +18,7 @@ Install with [Bower] (http://bower.io/): bower install ambient
 
 Read the [Get started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information and examples on getting started.
 
-> current release cycle: Anakin Skywalker v1.2.14
+> current release cycle: Boba Fett v1.3.1
 
 ## Development
 
@@ -28,14 +28,10 @@ This project is in early development.
 * Docs: http://ionlyseespots.github.io/ambient-design/docs
 * Semantic: http://ionlyseespots.github.io/ambient-design/layout
 * Layout: http://ionlyseespots.github.io/ambient-design/design-patterns
-* Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap
-
-## See what is coming!
-
 * Colors: http://ionlyseespots.github.io/ambient-design/design-patterns/colors.html 
-* HTML5 portrait example: http://ionlyseespots.github.io/ambient-design/examples/app
-* HTML5 landscape example: http://ionlyseespots.github.io/ambient-design/examples/template-2
-* HTML5 email UI example: http://ionlyseespots.github.io/ambient-design/examples/email/index.html
+
+## Road map
+* Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap
 
 ## Ambient IDE
 
