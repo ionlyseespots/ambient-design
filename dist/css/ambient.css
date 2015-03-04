@@ -425,7 +425,6 @@ div {
     width: 100%;
     max-width: 100%;
     word-wrap: break-word;
-    position: relative;
 }
 header,
 nav,
@@ -448,6 +447,7 @@ footer {
     -ms-align-content: flex-start;
     align-content: flex-start;
     max-width: 100%;
+    position: relative;
 }
 main,
 section,
