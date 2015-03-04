@@ -1,36 +1,36 @@
-nav[am-layout] {
-  &[am-layout~="horizontal"] {
+nav[@{layout-var}] {
+  &[@{layout-var}~="horizontal"] {
     .justify-content(flex-start);
     a {
       .flex(1 @am-flex-width1);
     }
   }
-  &[am-layout~="vertical"] {
+  &[@{layout-var}~="vertical"] {
     .flex-direction(column);
     a {
       .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
       width: 100%;
     }
   }
-  &[am-layout~="justify-align"] {
+  &[@{layout-var}~="justify-align"] {
     .justify-content(space-between);
     a {
       flex: none;
     }
   }
-  &[am-layout~="left-align"] {
+  &[@{layout-var}~="left-align"] {
     .justify-content(flex-start);
     a {
       flex: none;
     }
   }
-  &[am-layout~="right-align"] {
+  &[@{layout-var}~="right-align"] {
     .justify-content(flex-end);
     a {
       flex: none;
     }
   }
-  &[am-layout~="center-align"] {
+  &[@{layout-var}~="center-align"] {
     .justify-content(center);
     a {
       flex: none;
