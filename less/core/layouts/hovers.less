@@ -1,0 +1,39 @@
+figure[@{pointer-event-var}] {
+  &[@{pointer-event-var}~="slide-caption"] {
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+    figcaption {
+      left: 0;
+      bottom: -200%;
+      overflow: hidden;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: hsla(0, 0%, 0%, 0);
+      margin-top: 0;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      * {
+        color: hsla(0, 0%, 100%, 0.87);
+      }
+    }
+    &:hover figcaption {
+      bottom: 0;
+      background-color: hsla(0, 0%, 0%, 0.5);
+    }
+  }
+}
+
+[@{pointer-event-var}~="elevate"] {
+  &:hover,
+  &:focus {
+    .z-depth-animation(5);
+    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
+  }
+}
