@@ -425,21 +425,11 @@ nav[am-layout][am-layout~="vertical"] {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-nav[am-layout][am-layout~="vertical"] a {
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  -ms-flex-basis: auto;
-  flex-basis: auto;
-  width: 100%;
-}
 nav[am-layout][am-layout~="justify-align"] {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-}
-nav[am-layout][am-layout~="justify-align"] a {
-  flex: none;
 }
 nav[am-layout][am-layout~="left-align"] {
   -webkit-justify-content: flex-start;
@@ -448,7 +438,10 @@ nav[am-layout][am-layout~="left-align"] {
   justify-content: flex-start;
 }
 nav[am-layout][am-layout~="left-align"] a {
-  flex: none;
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-align-self: flex-start;
+  align-self: flex-start;
 }
 nav[am-layout][am-layout~="right-align"] {
   -webkit-justify-content: flex-end;
@@ -457,7 +450,10 @@ nav[am-layout][am-layout~="right-align"] {
   justify-content: flex-end;
 }
 nav[am-layout][am-layout~="right-align"] a {
-  flex: none;
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-align-self: flex-end;
+  align-self: flex-end;
 }
 nav[am-layout][am-layout~="center-align"] {
   -webkit-justify-content: center;
@@ -466,12 +462,20 @@ nav[am-layout][am-layout~="center-align"] {
   justify-content: center;
 }
 nav[am-layout][am-layout~="center-align"] a {
-  flex: none;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
 }
 nav[am-layout] a:not(.am-floating-action) {
   padding: 1em;
   display: inline-block;
   text-decoration: none;
+}
+@media (max-width: 30em) {
+  nav[am-layout] a:not(.am-floating-action) {
+    font-size: 90%;
+  }
 }
 nav[am-layout] a:not(.am-floating-action):hover,
 nav[am-layout] a:not(.am-floating-action):focus,
@@ -637,32 +641,17 @@ img {
 [am-layer][am-layer~="z1"] {
   z-index: 1;
 }
-[am-layer][am-layer~="z1"][am-layer~="shadow"] {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-}
 [am-layer][am-layer~="z2"] {
   z-index: 2;
-}
-[am-layer][am-layer~="z2"][am-layer~="shadow"] {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 [am-layer][am-layer~="z3"] {
   z-index: 3;
 }
-[am-layer][am-layer~="z3"][am-layer~="shadow"] {
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
 [am-layer][am-layer~="z4"] {
   z-index: 4;
 }
-[am-layer][am-layer~="z4"][am-layer~="shadow"] {
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-}
 [am-layer][am-layer~="z5"] {
   z-index: 5;
-}
-[am-layer][am-layer~="z5"][am-layer~="shadow"] {
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 [am-layer][am-pointer-event~="elevate"],
 [am-layer][am-pointer-event~="elevate"]:hover,
@@ -1070,9 +1059,6 @@ var {
   html {
     font-size: 80%;
   }
-  nav[am-layout] a {
-    font-size: 90%;
-  }
 }
 .am-text-l {
   text-align: left;
@@ -1422,15 +1408,45 @@ var {
 .am-shadow-z1 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
+.am-shadow-z1-top {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.am-shadow-z1-bottom {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
 .am-shadow-z2 {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.am-shadow-z2-top {
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.am-shadow-z2-bottom {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 }
 .am-shadow-z3 {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+.am-shadow-z3-top {
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.am-shadow-z3-bottom {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
 .am-shadow-z4 {
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
+.am-shadow-z4-top {
+  box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.am-shadow-z4-bottom {
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22);
+}
 .am-shadow-z5 {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.am-shadow-z5-top {
+  box-shadow: 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.am-shadow-z5-bottom {
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
 }

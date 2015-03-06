@@ -7,39 +7,35 @@ nav[@{layout-var}] {
   }
   &[@{layout-var}~="vertical"] {
     .flex-direction(column);
-    a {
-      .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-      width: 100%;
-    }
   }
   &[@{layout-var}~="justify-align"] {
     .justify-content(space-between);
-    a {
-      flex: none;
-    }
   }
   &[@{layout-var}~="left-align"] {
     .justify-content(flex-start);
     a {
-      flex: none;
+      .align-self(flex-start);
     }
   }
   &[@{layout-var}~="right-align"] {
     .justify-content(flex-end);
     a {
-      flex: none;
+      .align-self(flex-end);
     }
   }
   &[@{layout-var}~="center-align"] {
     .justify-content(center);
     a {
-      flex: none;
+      .align-self(center);
     }
   }
   & a:not(.am-floating-action) {
     padding: @am-nav-link-padding;
     display: inline-block;
     text-decoration: none;
+    @media (max-width: 30em){
+      font-size: 90%;
+    }
     &:hover,
     &:focus,
     &:active, {
