@@ -35,7 +35,7 @@
     -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
     transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
   }
-  &.@{prefix}-disabled {
+  &.@{prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
     box-shadow: none;
     color: hsl(0, 0%, 60%);
