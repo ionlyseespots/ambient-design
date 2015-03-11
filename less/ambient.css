@@ -705,41 +705,23 @@ form[am-layout] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
 }
+form[am-layout] input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+}
 form[am-layout] label {
   display: inline-block;
 }
 form[am-layout] label input {
   width: auto;
 }
-form[am-layout] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-}
-div[role="group"] {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  margin: .25em;
-  padding: 1em;
-}
-div[role="group"] legend {
-  float: left;
-  margin-top: -2em;
-  background: #ffffff;
-  font-weight: bold;
-  padding: 0 1em;
-}
-div[role="group"] legend + * {
-  clear: both;
-}
-form[am-layout~="stacked"] input,
-form[am-layout~="stacked"] select,
-form[am-layout~="stacked"] textarea,
-form[am-layout~="stacked"] label {
+form[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
+form[am-layout][am-layout~="stacked"] select,
+form[am-layout][am-layout~="stacked"] textarea,
+form[am-layout][am-layout~="stacked"] label {
   width: 100%;
 }
-form[am-layout~="aligned"] > span {
+form[am-layout][am-layout~="aligned"] > span {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -755,16 +737,16 @@ form[am-layout~="aligned"] > span {
   justify-content: justify;
   width: 100%;
 }
-form[am-layout~="aligned"] > span label,
-form[am-layout~="aligned"] > span input,
-form[am-layout~="aligned"] > span select,
-form[am-layout~="aligned"] > span textarea {
+form[am-layout][am-layout~="aligned"] > span label,
+form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+form[am-layout][am-layout~="aligned"] > span select,
+form[am-layout][am-layout~="aligned"] > span textarea {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
 }
-form[am-layout~="multicolumn"] {
+form[am-layout][am-layout~="multicolumn"] {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -775,17 +757,41 @@ form[am-layout~="multicolumn"] {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-form[am-layout~="multicolumn"] input,
-form[am-layout~="multicolumn"] select,
-form[am-layout~="multicolumn"] textarea,
-form[am-layout~="multicolumn"] label {
+form[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
+form[am-layout][am-layout~="multicolumn"] select,
+form[am-layout][am-layout~="multicolumn"] textarea,
+form[am-layout][am-layout~="multicolumn"] label {
   width: 100%;
 }
-form[am-layout~="multicolumn"] > div {
+form[am-layout][am-layout~="multicolumn"] > div {
   -webkit-flex: 1 8.3333%;
   -moz-flex: 1 8.3333%;
   -ms-flex: 1 8.3333%;
   flex: 1 8.3333%;
+}
+@media (max-width: 30em) {
+  form[am-layout] input:not([type="checkbox"]):not([type="radio"]),
+  form[am-layout] select,
+  form[am-layout] textarea,
+  form[am-layout] label {
+    width: 100%;
+  }
+}
+div[role="group"] {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin: .25em;
+  padding: 1em;
+  width: auto;
+}
+div[role="group"] legend {
+  float: left;
+  margin-top: -2em;
+  background: #ffffff;
+  font-weight: bold;
+  padding: 0 1em;
+}
+div[role="group"] legend + * {
+  clear: both;
 }
 nav[am-layout][am-layout~="horizontal"] {
   -webkit-justify-content: flex-start;

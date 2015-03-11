@@ -1,15 +1,73 @@
-form[@{layout-var}] input[type="checkbox"] {
-  display: inline-block;
-  vertical-align: middle;
-}
-form[@{layout-var}] label {
-  display: inline-block;
-  & input {
-    width: auto; }
-}
 form[@{layout-var}] {
-  .flex-display();
+  & input {
+    &[type="checkbox"] {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &[type="radio"] {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &  label {
+    display: inline-block;
+    & input {
+      width: auto;
+    }
+  }
+
+  //== Inline
+  &[@{layout-var}~="inline"] {
+    // inherits default am-layout semantic root element properties
+  }
+
+  //== Stacked
+  &[@{layout-var}~="stacked"] {
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & select,
+    & textarea,
+    & label {
+      width: 100%; }
+  }
+
+  //== Aligned
+  &[@{layout-var}~="aligned"] > span {
+    .flex-display;
+    .flex-flow(row wrap);
+    .justify-content(justify);
+    width: 100%;
+    & label,
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & select,
+    & textarea {
+      .flex(1 @am-flex-width1);
+    }
+  }
+
+  //== Multi-column
+  &[@{layout-var}~="multicolumn"]  {
+    .flex-display;
+    .flex-flow(row wrap);
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & select,
+    & textarea,
+    & label {
+      width: 100%; }
+    & > div  {
+      .flex(1 @am-flex-width1);
+    }
+  }
+  @media (max-width: 30em){
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea,
+    label {
+      width: 100%;
+    }
+  }
 }
+
+
 
 // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
 // http://stackoverflow.com/questions/19679337/why-are-not-all-flexbox-elements-behaving-like-flexbox-divs
@@ -18,7 +76,8 @@ div[role="group"] {
   border: 1px solid @am-clr-hr;
   margin:  .25em;
   padding: 1em;
-  legend {
+  width: auto;
+  & legend {
     float:left;
     margin-top:-2em;
     background: @am-clr-white;
@@ -27,38 +86,5 @@ div[role="group"] {
     & + * {
       clear:both;
     }
-  }
-}
-
-//== Inline
-form[@{layout-var}~="inline"] {
-  // inherits default am-layout semantic root element properties
-}
-
-//== Stacked
-form[@{layout-var}~="stacked"] {
-  & input, & select, & textarea, & label {
-    width: 100%; }
-}
-
-//== Aligned
-form[@{layout-var}~="aligned"] > span {
-  .flex-display;
-  .flex-flow(row wrap);
-  .justify-content(justify);
-  width: 100%;
-  & label,  & input, & select, & textarea {
-    .flex(1 @am-flex-width1);
-  }
-}
-
-//== Multi-column
-form[@{layout-var}~="multicolumn"]  {
-  .flex-display;
-  .flex-flow(row wrap);
-  & input, select, textarea, label {
-    width: 100%; }
-  & > div  {
-    .flex(1 @am-flex-width1);
   }
 }
