@@ -711,6 +711,28 @@ form[am-layout] label {
 form[am-layout] label input {
   width: auto;
 }
+form[am-layout] {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+div[role="group"] {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin: .25em;
+  padding: 1em;
+}
+div[role="group"] legend {
+  float: left;
+  margin-top: -2em;
+  background: #ffffff;
+  font-weight: bold;
+  padding: 0 1em;
+}
+div[role="group"] legend + * {
+  clear: both;
+}
 form[am-layout~="stacked"] input,
 form[am-layout~="stacked"] select,
 form[am-layout~="stacked"] textarea,

@@ -1,4 +1,3 @@
-// <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
 form[@{layout-var}] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
@@ -8,15 +7,40 @@ form[@{layout-var}] label {
   & input {
     width: auto; }
 }
+form[@{layout-var}] {
+  .flex-display();
+}
+
+// <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
+// http://stackoverflow.com/questions/19679337/why-are-not-all-flexbox-elements-behaving-like-flexbox-divs
+// fieldset for flexbox
+div[role="group"] {
+  border: 1px solid @am-clr-hr;
+  margin:  .25em;
+  padding: 1em;
+  legend {
+    float:left;
+    margin-top:-2em;
+    background: @am-clr-white;
+    font-weight: bold;
+    padding: 0 1em;
+    & + * {
+      clear:both;
+    }
+  }
+}
+
 //== Inline
 form[@{layout-var}~="inline"] {
   // inherits default am-layout semantic root element properties
 }
+
 //== Stacked
 form[@{layout-var}~="stacked"] {
   & input, & select, & textarea, & label {
     width: 100%; }
 }
+
 //== Aligned
 form[@{layout-var}~="aligned"] > span {
   .flex-display;
@@ -27,6 +51,7 @@ form[@{layout-var}~="aligned"] > span {
     .flex(1 @am-flex-width1);
   }
 }
+
 //== Multi-column
 form[@{layout-var}~="multicolumn"]  {
   .flex-display;

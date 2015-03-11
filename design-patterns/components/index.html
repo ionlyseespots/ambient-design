@@ -255,17 +255,43 @@ line breaks
             Default
         </h2>
         <form>
-            <label for="inline-email">Email</label>
-            <input id="inline-email" type="email" placeholder="Email">
+            <fieldset>
+                <legend>
+                    My form
+                </legend>
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
 
-            <label for="inline-password">Password</label>
-            <input id="inline-password" type="password" placeholder="Password">
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
 
-            <label for="inline-remember">
-                <input id="inline-remember" type="checkbox"> Remember me
-            </label>
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
 
-            <button type="submit">Sign in</button>
+                <button type="submit">Sign in</button>
+            </fieldset>
+        </form>
+        <h2>
+            Ambient
+        </h2>
+        <form am-layout="inline">
+            <div role="group">
+                <legend>
+                    My form
+                </legend>
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
+
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
+
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit" class="am-btn am-primary">Sign in</button>
+            </div>
         </form>
     </article>
     <hr />
