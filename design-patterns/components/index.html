@@ -247,7 +247,7 @@ line breaks
     </article>
     <hr />
 
-    <article>
+    <article am-padding>
         <h1>
             Forms
         </h1>
@@ -275,26 +275,43 @@ line breaks
         <h2>
             Ambient
         </h2>
-        <form am-layout="inline">
-            <div role="group">
-                <legend>
-                    My form
-                </legend>
-                <label for="inline-email">Email</label>
-                <input id="inline-email" type="email" placeholder="Email">
+        <form am-layout="multicolumn">
+            <fieldset>
+                <div role="group">
+                    <legend>
+                        My form
+                    </legend>
+                    <div>
+                        <label for="multicolumn-email">Email</label>
+                        <input id="multicolumn-email" type="email" placeholder="Email">
 
-                <label for="inline-password">Password</label>
-                <input id="inline-password" type="password" placeholder="Password">
+                        <label for="multicolumn-password">Password</label>
+                        <input id="multicolumn-password" type="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="multicolumn-email">Email</label>
+                        <input id="multicolumn-email" type="email" placeholder="Email">
 
-                <label for="inline-remember">
-                    <input id="inline-remember" type="checkbox"> Remember me
-                </label>
+                        <label for="multicolumn-password">Password</label>
+                        <input id="multicolumn-password" type="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="multicolumn-email">Email</label>
+                        <input id="multicolumn-email" type="email" placeholder="Email">
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
-            </div>
+                        <label for="multicolumn-password">Password</label>
+                        <input id="multicolumn-password" type="password" placeholder="Password">
+                    </div>
+                    <label for="multicolumn-remember">
+                        <input id="multicolumn-remember" type="checkbox"> Remember me
+                    </label>
+
+                    <button type="submit" class="am-btn am-primary">Sign in</button>
+                </div>
+            </fieldset>
         </form>
         <blockquote>
-            <code>am-layout="inline"</code>
+            <code>am-layout="multicolumn"</code>
         </blockquote>
     </article>
     <hr />

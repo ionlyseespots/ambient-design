@@ -701,6 +701,23 @@ article[am-layout~="vertical"] > section {
   -ms-column-count: 1;
   column-count: 1;
 }
+form[am-layout] fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+}
+form[am-layout] fieldset div[role="group"] {
+  width: auto;
+}
+form[am-layout] fieldset div[role="group"] legend {
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+}
 form[am-layout] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
@@ -741,10 +758,53 @@ form[am-layout][am-layout~="aligned"] > span label,
 form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
 form[am-layout][am-layout~="aligned"] > span select,
 form[am-layout][am-layout~="aligned"] > span textarea {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form[am-layout][am-layout~="aligned"] > span label,
+  form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form[am-layout][am-layout~="aligned"] > span select,
+  form[am-layout][am-layout~="aligned"] > span textarea {
+    width: 100%;
+  }
+}
+form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: justify;
+  -moz-justify-content: justify;
+  -ms-justify-content: justify;
+  justify-content: justify;
+  width: 100%;
+}
+form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
+form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
+form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
+  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
+  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
+    width: 100%;
+  }
 }
 form[am-layout][am-layout~="multicolumn"] {
   display: -webkit-flex;
@@ -764,10 +824,46 @@ form[am-layout][am-layout~="multicolumn"] label {
   width: 100%;
 }
 form[am-layout][am-layout~="multicolumn"] > div {
-  -webkit-flex: 1 8.3333%;
-  -moz-flex: 1 8.3333%;
-  -ms-flex: 1 8.3333%;
-  flex: 1 8.3333%;
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form[am-layout][am-layout~="multicolumn"] > div {
+    width: 100%;
+  }
+}
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background-color: yellow;
+}
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] select,
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] textarea,
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] label {
+  width: 100%;
+}
+form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
+    width: 100%;
+  }
 }
 @media (max-width: 30em) {
   form[am-layout] input:not([type="checkbox"]):not([type="radio"]),
@@ -776,22 +872,6 @@ form[am-layout][am-layout~="multicolumn"] > div {
   form[am-layout] label {
     width: 100%;
   }
-}
-div[role="group"] {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  margin: .25em;
-  padding: 1em;
-  width: auto;
-}
-div[role="group"] legend {
-  float: left;
-  margin-top: -2em;
-  background: #ffffff;
-  font-weight: bold;
-  padding: 0 1em;
-}
-div[role="group"] legend + * {
-  clear: both;
 }
 nav[am-layout][am-layout~="horizontal"] {
   -webkit-justify-content: flex-start;
