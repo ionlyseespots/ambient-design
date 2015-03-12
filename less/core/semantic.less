@@ -3,6 +3,7 @@
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
   box-sizing: inherit;
+  max-width: 100%; // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
 }
 html {
   box-sizing: border-box;
@@ -35,7 +36,6 @@ hr,
 p,
 div {
   width: 100%;
-  max-width: 100%;
   word-wrap: break-word;
 }
 header,
@@ -48,13 +48,14 @@ footer {
   .flex-display;
   .flex-flow(row wrap);
   .align-content(flex-start);
-  max-width: 100%; // http://stackoverflow.com/questions/27472595/firefox-34-ignoring-max-width-for-flexbox
   position: relative;
+
 }
 main,
 section,
 aside + article {
-  .flex(1 0 @am-flex-width1);
+  .flex(1 @am-flex-width1);
+  min-width: @am-flex-width1;
 }
 aside {
   .flex-basis(@am-flex-width-p1);

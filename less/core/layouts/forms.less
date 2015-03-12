@@ -3,7 +3,7 @@ form[@{layout-var}] {
       border: none;
       padding: 0;
       margin: 0;
-      .flex-basis(100%); // IE fieldset inherits flex basis so we need to esnure it is 100%
+      .flex-basis(100%); // IE elements inherit flex basis so we need to ensure it is 100%
       // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
       // http://stackoverflow.com/questions/19679337/why-are-not-all-flexbox-elements-behaving-like-flexbox-divs
       // fieldset for flexbox

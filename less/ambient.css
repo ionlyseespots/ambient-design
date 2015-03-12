@@ -383,6 +383,7 @@ input[disabled] {
 *:before,
 *:after {
   box-sizing: inherit;
+  max-width: 100%;
 }
 html {
   box-sizing: border-box;
@@ -423,7 +424,6 @@ hr,
 p,
 div {
   width: 100%;
-  max-width: 100%;
   word-wrap: break-word;
 }
 header,
@@ -446,16 +446,16 @@ footer {
   -moz-align-content: flex-start;
   -ms-align-content: flex-start;
   align-content: flex-start;
-  max-width: 100%;
   position: relative;
 }
 main,
 section,
 aside + article {
-  -webkit-flex: 1 0 8.3333%;
-  -moz-flex: 1 0 8.3333%;
-  -ms-flex: 1 0 8.3333%;
-  flex: 1 0 8.3333%;
+  -webkit-flex: 1 8.3333%;
+  -moz-flex: 1 8.3333%;
+  -ms-flex: 1 8.3333%;
+  flex: 1 8.3333%;
+  min-width: 8.3333%;
 }
 aside {
   -webkit-flex-basis: 20%;
