@@ -845,7 +845,6 @@ form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] {
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  background-color: yellow;
 }
 form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
 form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] select,
