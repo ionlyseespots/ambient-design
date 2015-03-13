@@ -31,6 +31,7 @@ hr,
 p,
 div {
   width: 100%;
+//  max-width: 100%;
   word-wrap: break-word;
 }
 header,
@@ -44,13 +45,13 @@ footer {
   .flex-flow(row wrap);
   .align-content(flex-start);
   position: relative;
-
+//  max-width: 100%;
 }
 main,
 section,
 aside + article {
   .flex(1 @am-flex-width1);
-  min-width: @am-flex-width1;
+  min-width: @am-flex-width1; // firefox issue
 }
 aside {
   .flex-basis(@am-flex-width-p1);

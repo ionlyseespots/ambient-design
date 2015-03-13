@@ -345,10 +345,10 @@
                         </p>
                         <ul>
                             <li>
-                                COLOR: color
+                                COLOR: Material color or Ambient palette variable
                             </li>
                             <li>
-                                RANGE: 1-14. The value of 6 is Material 500.
+                                RANGE: 1-14. Range is the value within the LESS group list for that color or palette.
                             </li>
                             <li>
                                 ORIENTATION: text, bg, border, fill, stroke
@@ -367,19 +367,19 @@
 // Red
 .am-clr-1 {
     &-text {
-        .red(6, text);
+        .am-palette(1, text);
     }
     &-bg {
-        .red(6, bg);
+        .am-palette(1, bg);
     }
     &-border {
-        .red(6, border);
+        .am-palette(1, border);
     }
     &-fill {
-        .red(6, fill);
+        .am-palette(1, fill);
     }
     &-stroke {
-        .red(6, stroke);
+        .am-palette(1, stroke);
     }
 }
                 </pre>
