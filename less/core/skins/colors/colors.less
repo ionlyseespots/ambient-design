@@ -23,35 +23,30 @@
 //== Mixin build
 // .COLOR(RANGE, ORIENTATION);
 //
-// COLOR: color
-// RANGE: 1-14. The value of 6 is Material 500.
+// COLOR: Material (.COLOR) or Ambient (.am-palette) color
+// RANGE: 1-14. Range is the color value within the LESS group list for @group-COLOR or @group-palette
 // ORIENTATION: text, bg, border, fill, stroke
-//
-// Mixin example for red
-//    .example-text {
-//      .red(6, text);
-//    }
-//    .example-background {
-//      .red(2, bg);
-//    }
-//
 
 // Red
 .@{prefix}-clr-1 {
   &-text {
     .am-palette(1, text);
+//    .red(6, text);
   }
   &-bg {
     .am-palette(1, bg);
+//    .red(6, bg);
   }
   &-border {
     .am-palette(1, border);
+//    .red(6, border);
   }
   &-fill {
-    .am-palette(1, fill);
+//    .red(6, fill);
   }
   &-stroke {
     .am-palette(1, stroke);
+//    .red(6, stroke);
   }
 }
 
