@@ -726,6 +726,9 @@ form[am-layout] label {
 form[am-layout] label input {
   width: auto;
 }
+form[am-layout] select {
+  padding: .35em 0;
+}
 form[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
 form[am-layout][am-layout~="stacked"] select,
 form[am-layout][am-layout~="stacked"] textarea,
