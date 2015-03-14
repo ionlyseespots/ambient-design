@@ -320,6 +320,122 @@ line breaks
     </article>
     <hr />
 
+    <article am-padding>
+        <h1>
+            Tables
+        </h1>
+        <p>
+            Tables can have multiple groups of content for <code>tbody</code>. So, let's make an HTML5 table example within Ambient with two <code>tbody</code> elements.
+        </p>
+        <table>
+            <caption>
+                My table caption
+                <details>
+                    <summary>Details summary</summary>
+                    <p>
+                        Example for a complex table
+                    </p>
+                </details>
+            </caption>
+
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">Column header: Item</th>
+                    <th scope="col">Column header:  Qty</th>
+                    <th scope="col">Column header:  Price</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" colspan="4">
+                        <div class="am-text-c">
+                            First Group
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Don&#8217;t Make Me Think</strong>
+                        <a href="">by Steve Krug</a>
+                    </td>
+                    <td>In Stock</td>
+                    <td>1</td>
+                    <td>$30.02</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>A Project Guide to UX Design</strong>
+                        <span>by Russ Unger &#38; Carolyn Chandler</span>
+                    </td>
+                    <td>In Stock</td>
+                    <td>2</td>
+                    <td>$52.94 <span>$26.47 &#215; 2</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Introducing HTML5</strong>
+                        <span>by Bruce Lawson &#38; Remy Sharp</span>
+                    </td>
+                    <td>Out of Stock</td>
+                    <td>1</td>
+                    <td>$22.23</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Bulletproof Web Design</strong>
+                        <span>by Dan Cederholm</span>
+                    </td>
+                    <td>In Stock</td>
+                    <td>1</td>
+                    <td>$30.17</td>
+                </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    <div class="am-text-c">
+                        Second Group
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">Row header: title</th>
+                <td>Cell b1</td>
+                <td>Cell c1</td>
+                <td>Cell d1</td>
+            </tr>
+            <tr>
+                <th scope="row" >Row header: title</th>
+                <td>Cell b2</td>
+                <td>Cell c2</td>
+                <td>Cell d2</td>
+            </tr>
+            <tr>
+                <th scope="row">Row header: title</th>
+                <td>Cell b3</td>
+                <td>Cell c3</td>
+                <td>Cell d3</td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Subtotal</td>
+                    <td>$135.36</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Tax</td>
+                    <td>$13.54</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td>$148.90</td>
+                </tr>
+            </tfoot>
+        </table>
+    </article>
+    <hr />
+
     <article am-layout="gutter padding portrait-100" am-padding>
         <h1>
             Colors
