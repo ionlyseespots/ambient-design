@@ -981,6 +981,16 @@ table[am-layout] caption details summary {
     display: none;
   }
 }
+@media (orientation: portrait) {
+  table[am-layout] tbody tr:first-of-type th {
+    display: block;
+  }
+}
+@media (orientation: portrait) {
+  table[am-layout] tbody {
+    display: block;
+  }
+}
 table[am-layout] th {
   background-color: #fbe0d7;
   border-bottom: 1px solid #f9cec0;
@@ -991,19 +1001,12 @@ table[am-layout] th {
 table[am-layout] th:first-child {
   text-align: left;
 }
+table[am-layout] th[scope="rowgroup"] {
+  text-align: center;
+}
 @media (orientation: portrait) {
   table[am-layout] th {
     display: none;
-  }
-}
-@media (orientation: portrait) {
-  table[am-layout] tbody tr:first-of-type th {
-    display: block;
-  }
-}
-@media (orientation: portrait) {
-  table[am-layout] tbody {
-    display: block;
   }
 }
 table[am-layout] td {

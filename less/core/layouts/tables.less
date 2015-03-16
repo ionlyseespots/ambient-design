@@ -23,6 +23,16 @@ table[@{layout-var}] {
       display: none;
     }
   }
+  & tbody {
+    & tr:first-of-type th {
+      @media (orientation:portrait){
+        display: block;
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+    }
+  }
   & th {
     background-color: @am-clr-table-header-bg;
     border-bottom: 1px solid @am-clr-table-border-bottom;
@@ -32,18 +42,11 @@ table[@{layout-var}] {
     &:first-child {
       text-align: left;
     }
+    &[scope="rowgroup"] {
+      text-align: center;
+    }
     @media (orientation:portrait){
       display: none;
-    }
-  }
-  & tbody {
-    & tr:first-of-type th {
-      @media (orientation:portrait){
-        display: block;
-      }
-    }
-    @media (orientation:portrait){
-      display: block;
     }
   }
   & td {
