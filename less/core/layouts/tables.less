@@ -89,9 +89,6 @@ table[@{layout-var}] {
     }
     &:nth-child(even) td {
       background-color: @am-clr-table-td-even-bg;
-      @media (orientation:portrait){
-        background-color: initial;
-      }
     }
     &:not('tbody'):last-child td {
        border-bottom: 0 none;
@@ -106,9 +103,6 @@ table[@{layout-var}] {
     }
     &:hover td {
       background-color: @am-clr-table-td-hover;
-      @media (orientation:portrait){
-        background-color: initial;
-      }
     }
     @media (orientation:portrait){
       display: block;
@@ -132,11 +126,9 @@ table[@{layout-var}] {
     @media (orientation:portrait){
       display: block;
       margin-bottom: @am-root-margin;
+      border-top: 1px solid @am-clr-table-border;
       & tr {
         border: 0 none;
-        & td {
-          padding: 0;
-        }
       }
     }
   }

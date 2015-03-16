@@ -1053,11 +1053,6 @@ table[am-layout] tr:first-child th:last-child {
 table[am-layout] tr:nth-child(even) td {
   background-color: #fdf2ef;
 }
-@media (orientation: portrait) {
-  table[am-layout] tr:nth-child(even) td {
-    background-color: initial;
-  }
-}
 table[am-layout] tr:not('tbody'):last-child td {
   border-bottom: 0 none;
 }
@@ -1069,11 +1064,6 @@ table[am-layout] tr:last-child td:last-child {
 }
 table[am-layout] tr:hover td {
   background-color: #f9cec0;
-}
-@media (orientation: portrait) {
-  table[am-layout] tr:hover td {
-    background-color: initial;
-  }
 }
 @media (orientation: portrait) {
   table[am-layout] tr {
@@ -1098,12 +1088,10 @@ table[am-layout] tfoot tr:last-child td:last-child {
   table[am-layout] tfoot {
     display: block;
     margin-bottom: 1vw;
+    border-top: 1px solid #f08463;
   }
   table[am-layout] tfoot tr {
     border: 0 none;
-  }
-  table[am-layout] tfoot tr td {
-    padding: 0;
   }
 }
 @media (orientation: portrait) {
