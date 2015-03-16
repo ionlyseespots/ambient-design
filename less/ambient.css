@@ -956,87 +956,157 @@ button[am-layout~="split-top"] {
   position: absolute;
   right: 25px;
 }
-caption {
+table[am-layout] {
+  border-spacing: 0;
+  border: 1px solid #f08463;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 0.778em;
+  border-collapse: initial;
+}
+table[am-layout] caption {
   text-align: left;
   font-size: initial;
 }
-caption details summary {
-  font-weight: bold;
+table[am-layout] caption details summary {
+  font-weight: 700;
   font-size: 24px;
   font-size: 1.3333333333333333rem;
   /* 24 / 18 = 1.3333  */
   margin-bottom: 22.275px;
   margin-bottom: 1.2375rem;
 }
-table {
-  border-spacing: 0;
-  background: none repeat scroll 0 0 #eaebec;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  width: 100%;
-  color: #666666;
-  font-size: 12px;
-  border-collapse: initial;
+@media (orientation: portrait) {
+  table[am-layout] thead {
+    display: none;
+  }
 }
-table th {
-  background: -moz-linear-gradient(center top, #ededed, #ebebeb) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #e0e0e0;
-  border-top: 1px solid #fafafa;
-  padding: 21px 25px 22px;
+table[am-layout] th {
+  background-color: #fbe0d7;
+  border-bottom: 1px solid #f9cec0;
+  border-top: 1px solid #ffffff;
+  padding: 1vw;
   text-transform: uppercase;
 }
-table th:first-child {
-  padding-left: 20px;
+table[am-layout] th:first-child {
   text-align: left;
 }
-table tr:first-child th:first-child {
-  border-top-left-radius: 3px;
+@media (orientation: portrait) {
+  table[am-layout] th {
+    display: none;
+  }
 }
-table tr:first-child th:last-child {
-  border-top-right-radius: 3px;
+@media (orientation: portrait) {
+  table[am-layout] tbody tr:first-of-type th {
+    display: block;
+  }
 }
-table tr {
-  padding-left: 20px;
+@media (orientation: portrait) {
+  table[am-layout] tbody {
+    display: block;
+  }
+}
+table[am-layout] td {
+  border-bottom: 1px solid #f9cec0;
+  border-left: 1px solid #f9cec0;
+  border-top: 1px solid #ffffff;
+  padding: 1vw;
+}
+table[am-layout] td:first-child {
+  border-left: 0 none;
+  text-align: left;
+}
+@media (orientation: portrait) {
+  table[am-layout] td:first-child {
+    text-align: right;
+  }
+}
+@media (orientation: portrait) {
+  table[am-layout] td {
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+    border: 0 none;
+  }
+  table[am-layout] td[data-title]::before {
+    content: attr(data-title);
+    float: left;
+    font-size: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: initial;
+  }
+}
+table[am-layout] tr {
   text-align: center;
 }
-table td:first-child {
-  border-left: 0 none;
-  padding-left: 20px;
-  text-align: left;
+table[am-layout] tr:first-child th:first-child {
+  border-top-left-radius: 3px;
 }
-table td {
-  background: -moz-linear-gradient(center top, #fafafa, #fafafa) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #e0e0e0;
-  border-left: 1px solid #e0e0e0;
-  border-top: 1px solid #ffffff;
-  padding: 18px;
+table[am-layout] tr:first-child th:last-child {
+  border-top-right-radius: 3px;
 }
-table tr:nth-child(even) td {
-  background: -moz-linear-gradient(center top, #f7f7f7, #f5f5f5) repeat scroll 0 0 rgba(0, 0, 0, 0);
+table[am-layout] tr:nth-child(even) td {
+  background-color: #fdf2ef;
 }
-table tr:not('tbody'):last-child td {
+@media (orientation: portrait) {
+  table[am-layout] tr:nth-child(even) td {
+    background-color: initial;
+  }
+}
+table[am-layout] tr:not('tbody'):last-child td {
   border-bottom: 0 none;
 }
-table tr:last-child td:first-child {
+table[am-layout] tr:last-child td:first-child {
   border-bottom-left-radius: 3px;
 }
-table tr:last-child td:last-child {
+table[am-layout] tr:last-child td:last-child {
   border-bottom-right-radius: 3px;
 }
-table tr:hover td {
-  background: -moz-linear-gradient(center top, #f2f2f2, #f0f0f0) repeat scroll 0 0 rgba(0, 0, 0, 0);
+table[am-layout] tr:hover td {
+  background-color: #f9cec0;
 }
-tfoot tr:last-child {
-  font-weight: bold;
+@media (orientation: portrait) {
+  table[am-layout] tr:hover td {
+    background-color: initial;
+  }
 }
-tfoot tr:last-child td:first-child {
+@media (orientation: portrait) {
+  table[am-layout] tr {
+    display: block;
+    border: 1px solid #f08463;
+    margin-bottom: 1vw;
+  }
+}
+table[am-layout] tfoot tr:last-child {
+  font-weight: 700;
+}
+table[am-layout] tfoot tr:last-child td {
+  border-bottom: 0 none;
+}
+table[am-layout] tfoot tr:last-child td:first-child {
   border-bottom-left-radius: 5px;
 }
-tfoot tr:last-child td:last-child {
+table[am-layout] tfoot tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
-tfoot tr:last-child td {
-  border-bottom: 0 none;
+@media (orientation: portrait) {
+  table[am-layout] tfoot {
+    display: block;
+    margin-bottom: 1vw;
+  }
+  table[am-layout] tfoot tr {
+    border: 0 none;
+  }
+  table[am-layout] tfoot tr td {
+    padding: 0;
+  }
+}
+@media (orientation: portrait) {
+  table[am-layout] {
+    border: 0 none;
+  }
 }
 [am-layout~="outline"] article,
 [am-layout~="outline"] section,

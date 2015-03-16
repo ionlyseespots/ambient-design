@@ -1,129 +1,143 @@
-//table {
-//  display: block;
-//  overflow: auto;
-//  width: 100%;
-//  margin-bottom: 1em;
-//  word-break: keep-all;
-//  border-collapse: collapse;
-//  border-spacing: 0;
-//  // default bootstrap table-responsive
-//  @media screen and (max-width: 30em) {
-//    overflow-x: auto;
-//    width: 100%;
-//    margin-bottom: 1em;
-//    overflow-y: hidden;
-//    -ms-overflow-style: -ms-autohiding-scrollbar;
-//    border: 1px solid #ccc;
-//    // Tighten up spacing
-//    > .table {
-//      margin-bottom: 0;
-//      // Ensure the content doesn't wrap
-//      > thead,
-//      > tbody,
-//      > tfoot {
-//        > tr {
-//          > th,
-//          > td {
-//            white-space: nowrap;
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
-//table tr {
-//  background-color: #fff;
-//  border-top: 1px solid #ccc;
-//}
-//table th,
-//table td {
-//  border: 1px solid #ddd;
-//  padding: 6px 13px;
-//}
-//table th {
-//  font-weight: bold;
-//}
-
-caption {
-text-align: left;
-font-size: initial;
-  details {
-    summary{
-      font-weight: bold;  font-size: 24px;
-      font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333  */
-      margin-bottom: 22.275px;
-      margin-bottom: 1.2375rem;
-    }
-  }
-}
-table{
+table[@{layout-var}] {
   border-spacing: 0;
-  background: none repeat scroll 0 0 hsl(210, 5%, 92%);
-  border: 1px solid hsl(0, 0%, 80%);
+  border: 1px solid @am-clr-table-border;
   border-radius: 3px;
   width: 100%;
-  color: hsl(0, 0%, 40%);
-  font-size: 12px;
+  font-size: 0.778em;
   border-collapse: initial;
-}
-table th {
-  background: @am-clr-table-header-bg;
-  border-bottom: 1px solid hsl(0, 0%, 88%);
-  border-top: 1px solid hsl(0, 0%, 98%);
-  padding: 21px 25px 22px;
-  text-transform: uppercase;
-}
-table th:first-child {
-  padding-left: 20px;
-  text-align: left;
-}
-table tr:first-child th:first-child {
-  border-top-left-radius: 3px;
-}
-table tr:first-child th:last-child {
-  border-top-right-radius: 3px;
-}
-table tr {
-  padding-left: 20px;
-  text-align: center;
-}
-table td:first-child {
-  border-left: 0 none;
-  padding-left: 20px;
-  text-align: left;
-}
-table td {
-  background: @am-clr-table-td-bg;
-  border-bottom: 1px solid hsl(0, 0%, 88%);
-  border-left: 1px solid hsl(0, 0%, 88%);
-  border-top: 1px solid hsl(0, 0%, 100%);
-  padding: 18px;
-}
-table tr:nth-child(even) td {
-  background: @am-clr-table-td-even-bg;
-}
-table tr:not('tbody'):last-child td {
-  border-bottom: 0 none;
-}
-table tr:last-child td:first-child {
-  border-bottom-left-radius: 3px;
-}
-table tr:last-child td:last-child {
-  border-bottom-right-radius: 3px;
-}
-table tr:hover td {
-  background: @am-clr-table-td-hover;
-}
-
-tfoot tr:last-child {
-  font-weight: bold;
-}
-tfoot tr:last-child td:first-child {
-  border-bottom-left-radius: 5px;
-}
-tfoot tr:last-child td:last-child {
-  border-bottom-right-radius: 5px;
-}
-tfoot tr:last-child td {
-  border-bottom: 0 none;
+  & caption {
+    text-align: left;
+    font-size: initial;
+    & details {
+      & summary {
+        font-weight: 700;
+        font-size: 24px;
+        font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333  */
+        margin-bottom: 22.275px;
+        margin-bottom: 1.2375rem;
+      }
+    }
+  }
+  & thead {
+    @media (orientation:portrait){
+      display: none;
+    }
+  }
+  & th {
+    background-color: @am-clr-table-header-bg;
+    border-bottom: 1px solid @am-clr-table-border-bottom;
+    border-top: 1px solid @am-clr-table-border-top;
+    padding: @am-root-padding;
+    text-transform: uppercase;
+    &:first-child {
+      text-align: left;
+    }
+    @media (orientation:portrait){
+      display: none;
+    }
+  }
+  & tbody {
+    & tr:first-of-type th {
+      @media (orientation:portrait){
+        display: block;
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+    }
+  }
+  & td {
+    border-bottom: 1px solid @am-clr-table-border-bottom;
+    border-left: 1px solid @am-clr-table-border-bottom;
+    border-top: 1px solid @am-clr-table-border-top;
+    padding: @am-root-padding;
+    &:first-child {
+      border-left: 0 none;
+      text-align: left;
+      @media (orientation:portrait){
+        text-align: right;
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+      text-align: right;
+      vertical-align: middle;
+      width: 100%;
+      border: 0 none;
+      &[data-title]::before {
+        content: attr(data-title);
+        float: left;
+        font-size: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: initial;
+      }
+    }
+  }
+  & tr {
+    text-align: center;
+    &:first-child {
+      th:first-child {
+        border-top-left-radius: 3px;
+      }
+      th:last-child {
+        border-top-right-radius: 3px;
+      }
+    }
+    &:nth-child(even) td {
+      background-color: @am-clr-table-td-even-bg;
+      @media (orientation:portrait){
+        background-color: initial;
+      }
+    }
+    &:not('tbody'):last-child td {
+       border-bottom: 0 none;
+    }
+    &:last-child td {
+      &:first-child {
+        border-bottom-left-radius: 3px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 3px;
+      }
+    }
+    &:hover td {
+      background-color: @am-clr-table-td-hover;
+      @media (orientation:portrait){
+        background-color: initial;
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+      border: 1px solid @am-clr-table-border;
+      margin-bottom: @am-root-margin;
+    }
+  }
+  tfoot {
+    & tr:last-child {
+      font-weight: 700;
+      & td {
+        border-bottom: 0 none;
+        &:first-child {
+          border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+      margin-bottom: @am-root-margin;
+      & tr {
+        border: 0 none;
+        & td {
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media (orientation:portrait){
+    border: 0 none;
+  }
 }
