@@ -6,7 +6,7 @@
 @padding-var: ~'@{prefix}-padding';
 @margin-var: ~'@{prefix}-margin';
 @layer-var: ~'@{prefix}-layer';
-@pointer-event-var: ~'@{prefix}-pointer-event';
+@event-var: ~'@{prefix}-event';
 
 @row-var: ~'@{prefix}-row';
 @col-var: ~'@{prefix}-col';
@@ -21,14 +21,18 @@
 @am-closure: @am-clr-grey-800; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
 
 @am-clr-body-bg: @am-clr-white;
+@am-clr-body-text: @am-clr-grey-800;
 @am-clr-primary-bg: lighten(@am-primary, 35%);
 @am-clr-secondary-bg: lighten(@am-clr-primary-bg, 6.5%);
-@am-clr-body-text: @am-clr-grey-800;
 @am-clr-heading-text: @am-clr-grey-800;
 @am-clr-hr: rgba(0, 0, 0, 0.12);
 @am-clr-link-text: darken(@am-primary, 6.5%);
 @am-clr-btn-bg: @am-clr-white;
 @am-clr-btn-text: @am-clr-black;
+@am-clr-table-header-bg: -moz-linear-gradient(center top , hsl(0, 0%, 93%), hsl(0, 0%, 92%)) repeat scroll 0 0 hsla(0, 0%, 0%, 0);
+@am-clr-table-td-bg: -moz-linear-gradient(center top , hsl(0, 0%, 98%), hsl(0, 0%, 98%)) repeat scroll 0 0 hsla(0, 0%, 0%, 0);
+@am-clr-table-td-even-bg:  -moz-linear-gradient(center top , hsl(0, 0%, 97%), hsl(0, 0%, 96%)) repeat scroll 0 0 hsla(0, 0%, 0%, 0);
+@am-clr-table-td-hover: -moz-linear-gradient(center top , hsl(0, 0%, 95%), hsl(0, 0%, 94%)) repeat scroll 0 0 hsla(0, 0%, 0%, 0);
 
 @am-flex-width1: 8.3333%;
 @am-flex-width2: 25%;
@@ -49,3 +53,5 @@
 @am-btn-split-right: 25px;
 @am-btn-split-bottom: 25px;
 @am-btn-split-left: 25px;
+
+
