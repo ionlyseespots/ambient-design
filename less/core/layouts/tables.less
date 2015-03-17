@@ -1,7 +1,6 @@
 table[@{layout-var}] {
   border-spacing: 0;
   border: 1px solid @am-clr-table-border;
-  border-radius: 3px;
   width: 100%;
   font-size: 0.889em;
   border-collapse: initial;
@@ -24,11 +23,6 @@ table[@{layout-var}] {
     }
   }
   & tbody {
-    & tr:first-of-type th {
-      @media (orientation:portrait){
-        display: block;
-      }
-    }
     @media (orientation:portrait){
       display: block;
     }
@@ -36,19 +30,23 @@ table[@{layout-var}] {
   & th {
     background-color: @am-clr-table-header-bg;
     border-bottom: 1px solid @am-clr-table-border-bottom;
+    border-left: 1px solid @am-clr-table-border-bottom;
     border-top: 1px solid @am-clr-table-border-top;
     padding: @am-root-padding;
     text-transform: uppercase;
-    &:first-child {
+    &:not([scope="colgroup"]):first-child {
       text-align: left;
-    }
-    &[scope="rowgroup"] {
-      text-align: center;
-    }
-    @media (orientation:portrait){
-      &:not([scope="row"]) {
-      display: none;
+      @media (orientation:portrait){
+        &[scope="row"] {
+          text-align: center;
+        }
       }
+    }
+//    &[scope="rowgroup"] {
+//      text-align: center;
+//    }
+    @media (orientation:portrait){
+      display: none;
       &[scope="row"] {
         display: block;
         text-align: center;
@@ -84,35 +82,17 @@ table[@{layout-var}] {
   }
   & tr {
     text-align: center;
-    &:first-child {
-      th:first-child {
-        border-top-left-radius: 3px;
-      }
-      th:last-child {
-        border-top-right-radius: 3px;
-      }
-    }
     &:nth-child(even) td {
       background-color: @am-clr-table-td-even-bg;
     }
     &:not('tbody'):last-child td {
        border-bottom: 0 none;
     }
-    &:last-child td {
-      &:first-child {
-        border-bottom-left-radius: 3px;
-      }
-      &:last-child {
-        border-bottom-right-radius: 3px;
-      }
-    }
     &:hover td {
       background-color: @am-clr-table-td-hover;
     }
     @media (orientation:portrait){
       display: block;
-      border: 1px solid @am-clr-table-border;
-      margin-bottom: @am-root-margin;
     }
   }
   tfoot {
@@ -120,12 +100,6 @@ table[@{layout-var}] {
       font-weight: 700;
       & td {
         border-bottom: 0 none;
-        &:first-child {
-          border-bottom-left-radius: 5px;
-        }
-        &:last-child {
-          border-bottom-right-radius: 5px;
-        }
       }
     }
     @media (orientation:portrait){
@@ -136,8 +110,5 @@ table[@{layout-var}] {
         border: 0 none;
       }
     }
-  }
-  @media (orientation:portrait){
-    border: 0 none;
   }
 }
