@@ -993,21 +993,12 @@ table[am-layout] th {
   padding: 1vw;
   text-transform: uppercase;
 }
-table[am-layout] th:not([scope="colgroup"]):first-child {
-  text-align: left;
-}
-@media (orientation: portrait) {
-  table[am-layout] th:not([scope="colgroup"]):first-child[scope="row"] {
-    text-align: center;
-  }
-}
 @media (orientation: portrait) {
   table[am-layout] th {
     display: none;
   }
   table[am-layout] th[scope="row"] {
     display: block;
-    text-align: center;
   }
 }
 table[am-layout] td {
@@ -1018,7 +1009,6 @@ table[am-layout] td {
 }
 table[am-layout] td:first-child {
   border-left: 0 none;
-  text-align: left;
 }
 @media (orientation: portrait) {
   table[am-layout] td:first-child {
@@ -1040,9 +1030,6 @@ table[am-layout] td:first-child {
     font-weight: 700;
     text-transform: uppercase;
   }
-}
-table[am-layout] tr {
-  text-align: center;
 }
 table[am-layout] tr:nth-child(even) td {
   background-color: #fdf2ef;
@@ -1067,7 +1054,6 @@ table[am-layout] tfoot tr:last-child td {
 @media (orientation: portrait) {
   table[am-layout] tfoot {
     display: block;
-    margin-bottom: 1vw;
     border-top: 1px solid #f08463;
   }
   table[am-layout] tfoot tr {

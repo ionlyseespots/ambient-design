@@ -394,97 +394,146 @@ line breaks
                 </details>
             </caption>
             <thead>
-                <tr>
-                    <th scope="col" colspan="2">Column header: Item</th>
-                    <th scope="col">Column header:  Qty</th>
-                    <th scope="col">Column header:  Price</th>
-                </tr>
+            <tr>
+                <th scope="col" colspan="2">Column header: Item</th>
+                <th scope="col">Column header:  Qty</th>
+                <th scope="col">Column header:  Price</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="rowgroup" colspan="4">
-                        <div class="am-text-c">
-                            First Group
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <strong>Don&#8217;t Make Me Think</strong>
-                        <a href="">by Steve Krug</a>
-                    </td>
-                    <td>In Stock</td>
-                    <td>1</td>
-                    <td>$30.02</td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong>A Project Guide to UX Design</strong>
-                        <span>by Russ Unger &#38; Carolyn Chandler</span>
-                    </td>
-                    <td>In Stock</td>
-                    <td>2</td>
-                    <td>$52.94 <span>$26.47 &#215; 2</span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong>Introducing HTML5</strong>
-                        <span>by Bruce Lawson &#38; Remy Sharp</span>
-                    </td>
-                    <td>Out of Stock</td>
-                    <td>1</td>
-                    <td>$22.23</td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong>Bulletproof Web Design</strong>
-                        <span>by Dan Cederholm</span>
-                    </td>
-                    <td>In Stock</td>
-                    <td>1</td>
-                    <td>$30.17</td>
-                </tr>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    Row Group
+                </th>
+            </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Introducing HTML5</strong>
+                    <span>by Bruce Lawson &#38; Remy Sharp</span>
+                </td>
+                <td>Out of Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$22.23</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Bulletproof Web Design</strong>
+                    <span>by Dan Cederholm</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.17</td>
+            </tr>
             </tbody>
             <tbody>
             <tr>
                 <th scope="rowgroup" colspan="4">
-                    <div class="am-text-c">
-                        Second Group
-                    </div>
+                    Row Group
                 </th>
             </tr>
             <tr>
-                <th scope="row">Row header: whiskey</th>
+                <th scope="row">Row header: Whiskey</th>
                 <td>Cell b1</td>
                 <td>Cell c1</td>
                 <td>Cell d1</td>
             </tr>
             <tr>
-                <th scope="row" >Row header: ghost</th>
+                <th scope="row">Row header: Ghost</th>
                 <td>Cell b2</td>
                 <td>Cell c2</td>
                 <td>Cell d2</td>
             </tr>
             <tr>
-                <th scope="row">Row header: title</th>
-                <td>Cell b3</td>
-                <td>Cell c3</td>
-                <td>Cell d3</td>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
             </tr>
             </tbody>
+
+            <tbody>
+            <tr>
+                <th scope="colgroup" colspan="2" rowspan="2">Column Group</th>
+                <th scope="colgroup" colspan="2">Column Group</th>
+
+            </tr>
+            <tr>
+                <th scope="col">Col a</th>
+                <th scope="col">Col b</th>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 1</th>
+                <th scope="row">Row 1-1</th>
+                <td>Cell a-1-1</td>
+                <td>Cell b-1-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 1-2</th>
+                <td>Cell a-1-2</td>
+                <td>Cell b-1-2</td>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 2</th>
+                <th scope="row">Row 2-1</th>
+                <td>Cell a-2-1</td>
+                <td>Cell b-2-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 2-2</th>
+                <td>Cell a-2-2</td>
+                <td>Cell b-2-2</td>
+
+            </tr>
+            </tbody>
+
+
             <tfoot>
-                <tr>
-                    <td colspan="3">Subtotal</td>
-                    <td>$135.36</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Tax</td>
-                    <td>$13.54</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Total</td>
-                    <td>$148.90</td>
-                </tr>
+            <tr>
+                <td colspan="3">Subtotal</td>
+                <td>$135.36</td>
+            </tr>
+            <tr>
+                <td colspan="3">Tax</td>
+                <td>$13.54</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$148.90</td>
+            </tr>
             </tfoot>
         </table>
         <h2>
@@ -648,34 +697,34 @@ line breaks
 
             </tr>
             <tr>
-                <th scope="col">Col b-a</th>
-                <th scope="col">Col b-b</th>
+                <th scope="col">Col a</th>
+                <th scope="col">Col b</th>
 
             </tr>
             <tr>
                 <th scope="rowgroup" rowspan="2">Row 1</th>
                 <th scope="row">Row 1-1</th>
-                <td>Cell b-a-1-1</td>
-                <td>Cell b-b-1-1</td>
+                <td>Cell a-1-1</td>
+                <td>Cell b-1-1</td>
 
             </tr>
             <tr>
                 <th scope="row">Row 1-2</th>
-                <td>Cell b-a-1-2</td>
-                <td>Cell b-b-1-2</td>
+                <td>Cell a-1-2</td>
+                <td>Cell b-1-2</td>
 
             </tr>
             <tr>
                 <th scope="rowgroup" rowspan="2">Row 2</th>
                 <th scope="row">Row 2-1</th>
-                <td>Cell b-a-2-1</td>
-                <td>Cell b-b-2-1</td>
+                <td>Cell a-2-1</td>
+                <td>Cell b-2-1</td>
 
             </tr>
             <tr>
                 <th scope="row">Row 2-2</th>
-                <td>Cell b-a-2-2</td>
-                <td>Cell b-b-2-2</td>
+                <td>Cell a-2-2</td>
+                <td>Cell b-2-2</td>
 
             </tr>
             </tbody>
