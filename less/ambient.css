@@ -1005,8 +1005,12 @@ table[am-layout] th[scope="rowgroup"] {
   text-align: center;
 }
 @media (orientation: portrait) {
-  table[am-layout] th {
+  table[am-layout] th:not([scope="row"]) {
     display: none;
+  }
+  table[am-layout] th[scope="row"] {
+    display: block;
+    text-align: center;
   }
 }
 table[am-layout] td {
@@ -1038,7 +1042,6 @@ table[am-layout] td:first-child {
     font-size: inherit;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: initial;
   }
 }
 table[am-layout] tr {

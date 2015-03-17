@@ -563,7 +563,7 @@ line breaks
             <tbody>
             <tr>
                 <th scope="rowgroup" colspan="4">
-                    First Group
+                    Row Group
                 </th>
             </tr>
             <tr>
@@ -606,22 +606,81 @@ line breaks
             <tbody>
             <tr>
                 <th scope="rowgroup" colspan="4">
-                    Second Group
+                    Row Group
                 </th>
             </tr>
             <tr>
                 <th scope="row">Row header: Whiskey</th>
-                <td data-title="whiskey">Cell b1</td>
+                <td>Cell b1</td>
                 <td>Cell c1</td>
                 <td>Cell d1</td>
             </tr>
             <tr>
-                <th scope="row" >Row header: Ghost</th>
-                <td data-title="ghost">Cell b2</td>
+                <th scope="row">Row header: Ghost</th>
+                <td>Cell b2</td>
                 <td>Cell c2</td>
                 <td>Cell d2</td>
             </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
             </tbody>
+
+            <tbody>
+            <tr>
+                <th scope="colgroup" colspan="2" rowspan="2">Column Group</th>
+                <th scope="colgroup" colspan="2">Column Group</th>
+
+            </tr>
+            <tr>
+                <th scope="col">Col b-a</th>
+                <th scope="col">Col b-b</th>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 1</th>
+                <th scope="row">Row 1-1</th>
+                <td>Cell b-a-1-1</td>
+                <td>Cell b-b-1-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 1-2</th>
+                <td>Cell b-a-1-2</td>
+                <td>Cell b-b-1-2</td>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 2</th>
+                <th scope="row">Row 2-1</th>
+                <td>Cell b-a-2-1</td>
+                <td>Cell b-b-2-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 2-2</th>
+                <td>Cell b-a-2-2</td>
+                <td>Cell b-b-2-2</td>
+
+            </tr>
+            </tbody>
+
+
             <tfoot>
             <tr>
                 <td colspan="3">Subtotal</td>

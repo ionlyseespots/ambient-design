@@ -46,7 +46,13 @@ table[@{layout-var}] {
       text-align: center;
     }
     @media (orientation:portrait){
+      &:not([scope="row"]) {
       display: none;
+      }
+      &[scope="row"] {
+        display: block;
+        text-align: center;
+      }
     }
   }
   & td {
@@ -73,7 +79,6 @@ table[@{layout-var}] {
         font-size: inherit;
         font-weight: 700;
         text-transform: uppercase;
-        background-color: initial;
       }
     }
   }
