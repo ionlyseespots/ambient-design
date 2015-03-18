@@ -1,16 +1,17 @@
-// interpolate the am- prefix to allow custom name spacing
+//  Custom name spacing: interpolate the am- prefix
 @prefix:am;
 
+// Layout
 @layout-var: ~'@{prefix}-layout';
 @wrapper-var: ~'@{prefix}-wrapper';
 @padding-var: ~'@{prefix}-padding';
 @margin-var: ~'@{prefix}-margin';
 @layer-var: ~'@{prefix}-layer';
 @event-var: ~'@{prefix}-event';
-
 @row-var: ~'@{prefix}-row';
 @col-var: ~'@{prefix}-col';
 
+// Base
 @am-root-font-size:  112.5%; // Golden Ratio Typography Calculator http://www.pearsonified.com/typography/
 @am-root-line-height:  1.65;
 @am-root-padding: 1vw;
@@ -20,6 +21,30 @@
 @am-secondary: lighten(@am-primary, 20%);
 @am-closure: @am-clr-grey-800; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
 
+// Nav
+@am-nav-link-padding: 1em;
+
+// Grid
+@am-flex-width1: 8.3333%;
+@am-flex-width2: 25%;
+@am-flex-width3: 33.333%;
+@am-flex-width4: 50%;
+@am-flex-width5: 66.6667%;
+@am-flex-width6: 75%;
+@am-flex-width7: 100%;
+@am-flex-width-p1: 20%; // Vilfredo Pareto principle
+@am-flex-width-p2: 80%; // Vilfredo Pareto principle
+
+@am-grid-gutter-margin: 1em;
+@am-grid-gutter-padding: 1em;
+
+// Button
+@am-btn-split-top: 25px;
+@am-btn-split-right: 25px;
+@am-btn-split-bottom: 25px;
+@am-btn-split-left: 25px;
+
+// Color
 @am-clr-body-bg: @am-clr-white;
 @am-clr-body-text: @am-clr-grey-800;
 @am-clr-primary-bg: lighten(@am-primary, 35%);
@@ -36,24 +61,24 @@
 @am-clr-table-td-even-bg:  lighten(@am-secondary, 30%);
 @am-clr-table-td-hover: lighten(@am-secondary, 20%);
 
-@am-flex-width1: 8.3333%;
-@am-flex-width2: 25%;
-@am-flex-width3: 33.333%;
-@am-flex-width4: 50%;
-@am-flex-width5: 66.6667%;
-@am-flex-width6: 75%;
-@am-flex-width7: 100%;
-@am-flex-width-p1: 20%; // Vilfredo Pareto principle
-@am-flex-width-p2: 80%; // Vilfredo Pareto principle
-
-@am-nav-link-padding: 1em;
-
-@am-grid-gutter-margin: 1em;
-@am-grid-gutter-padding: 1em;
-
-@am-btn-split-top: 25px;
-@am-btn-split-right: 25px;
-@am-btn-split-bottom: 25px;
-@am-btn-split-left: 25px;
-
-
+// Palette
+@am-palette-1: @am-clr-red-500;
+@am-palette-2: @am-clr-pink-500;
+@am-palette-3: @am-clr-purple-500;
+@am-palette-4: @am-clr-deep-purple-500;
+@am-palette-5: @am-clr-indigo-500;
+@am-palette-6: @am-clr-blue-500;
+@am-palette-7: @am-clr-light-blue-500;
+@am-palette-8: @am-clr-cyan-500;
+@am-palette-9: @am-clr-teal-500;
+@am-palette-10: @am-clr-green-500;
+@am-palette-11: @am-clr-light-green-500;
+@am-palette-12: @am-clr-lime-500;
+@am-palette-13: @am-clr-yellow-500;
+@am-palette-14: @am-clr-amber-500;
+@am-palette-15: @am-clr-orange-500;
+@am-palette-16: @am-clr-deep-orange-500;
+@am-palette-17: @am-clr-brown-500;
+@am-palette-18: @am-clr-grey-500;
+@am-palette-19: @am-clr-blue-grey-500;
+@am-palette-20: @am-clr-black;
