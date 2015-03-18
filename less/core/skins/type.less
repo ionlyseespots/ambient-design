@@ -93,9 +93,12 @@ a {
   color: @am-clr-link-text;
   background-color: inherit;
   &:hover,
-  &:focus,
   &:active,  {
     color:darken(@am-clr-link-text, 50%);
+  }
+  // agree: http://outlinenone.com/
+  &:focus {
+    background-color: @am-clr-link-focus;
   }
 }
 

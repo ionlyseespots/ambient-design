@@ -1351,8 +1351,7 @@ body > div[am-wrapper] > footer a:hover {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .am-btn,
-.am-btn:hover,
-.am-btn:focus {
+.am-btn:hover {
   -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1494,9 +1493,11 @@ a {
   background-color: inherit;
 }
 a:hover,
-a:focus,
 a:active {
   color: #000000;
+}
+a:focus {
+  background-color: #fad3c7;
 }
 small {
   font-size: 65%;
