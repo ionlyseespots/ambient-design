@@ -23,7 +23,7 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="horizontal" role="navigation">
+<nav am-layout="horizontal" role="navigation" class="am-text-c">
     <a href="../docs/index.html">Get Started</a>
     <a href="../layout/index.html">Semantic</a>
     <a href="../design-patterns/index.html" class="am-active">Layout</a>
@@ -183,7 +183,7 @@
             To add a layer and/or depth to an element, add the attribute <code>am-layer="VALUE"</code> to any element.
         </p>
         <p>
-            <small>If needed, the additional value <code>hvr-elevate</code> and <code>shadow</code> is available.</small>
+            <small>If needed, the additional layout attribute <code>am-event="elevate"</code> and skin classes for shadows <code>.am-shadow-VALUE</code> are available.</small>
         </p>
         <blockquote>
             <p>
@@ -210,42 +210,92 @@
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h3>
-                    Static
+                    Default
                 </h3>
-                <div am-layer="z1 shadow" am-padding am-margin="bottom large">
-                    z1
+                <div am-layer="z1">
+                    <p am-padding>
+                        z1
+                    </p>
                 </div>
-                <div am-layer="z2 shadow" am-padding am-margin="bottom large">
-                    z2
+                <div am-layer="z2">
+                    <p am-padding>
+                        z2
+                    </p>
                 </div>
-                <div am-layer="z3 shadow" am-padding am-margin="bottom large">
-                    z3
+                <div am-layer="z3">
+                    <p am-padding>
+                        z3
+                    </p>
                 </div>
-                <div am-layer="z4 shadow" am-padding am-margin="bottom large">
-                    z4
+                <div am-layer="z4">
+                    <p am-padding>
+                        z4
+                    </p>
                 </div>
-                <div am-layer="z5 shadow" am-padding am-margin="bottom large">
-                    z5
+                <div am-layer="z5">
+                    <p am-padding>
+                        z5
+                    </p>
                 </div>
             </div>
             <div am-col am-padding>
                 <h3>
-                    Animated
+                    Shadow
                 </h3>
-                <div am-layer="z1 shadow hvr-elevate" am-padding am-margin="bottom large">
-                    z1
+                <div am-layer="z1" class="am-shadow-z1">
+                    <p am-padding>
+                        z1
+                    </p>
                 </div>
-                <div am-layer="z2 shadow hvr-elevate" am-padding am-margin="bottom large">
-                    z2
+                <div am-layer="z2" class="am-shadow-z2">
+                    <p am-padding>
+                        z2
+                    </p>
                 </div>
-                <div am-layer="z3 shadow hvr-elevate" am-padding am-margin="bottom large">
-                    z3
+                <div am-layer="z3" class="am-shadow-z3">
+                    <p am-padding>
+                        z3
+                    </p>
                 </div>
-                <div am-layer="z4 shadow hvr-elevate" am-padding am-margin="bottom large">
-                    z4
+                <div am-layer="z4" class="am-shadow-z4">
+                    <p am-padding>
+                        z4
+                    </p>
                 </div>
-                <div am-layer="z5 shadow hvr-elevate" am-padding am-margin="bottom large">
-                    z5
+                <div am-layer="z5" class="am-shadow-z5">
+                    <p am-padding>
+                        z5
+                    </p>
+                </div>
+            </div>
+            <div am-col am-padding>
+                <h3>
+                    Elevate
+                </h3>
+                <div am-layer="z1" am-event="elevate" class="am-shadow-z1">
+                    <p am-padding>
+                        z1
+                    </p>
+                </div>
+                <div am-layer="z2" am-event="elevate" class="am-shadow-z2">
+                    <p am-padding>
+                        z2
+                    </p>
+                </div>
+                <div am-layer="z3" am-event="elevate" class="am-shadow-z3">
+                    <p am-padding>
+                        z3
+                    </p>
+                </div>
+                <div am-layer="z4" am-event="elevate" class="am-shadow-z4">
+                    <p am-padding>
+                        z4
+                    </p>
+                </div>
+                <div am-layer="z5" am-event="elevate" class="am-shadow-z5">
+                    <p am-padding>
+                        z5
+                    </p>
                 </div>
             </div>
         </div>
@@ -560,7 +610,7 @@
                         <div am-col="25">
                             1/4
                         </div>
-                        <div am-col="75" >
+                        <div am-col="75">
                             3/4
                         </div>
                     </div>
@@ -1158,7 +1208,7 @@
                     </p>
                 </blockquote>
                 <hr />
-                <nav am-layout="vertical">
+                <nav am-layout="vertical justify-align">
                     <a href="#">Link Text</a>
                     <a href="#">Link Text</a>
                     <a href="#">Link Text</a>
@@ -1400,8 +1450,8 @@
                 </p>
                 <a class="am-btn" href="#">Anchor button</a>
                 <button class="am-btn">Button element</button>
-                <input class="am-btn" type="submit" value="submit input">
-                <input class="am-btn" type="button" value="button input">
+                <input class="am-btn am-primary" type="submit" value="submit input">
+                <input class="am-btn am-secondary" type="button" value="button input">
                 <h3 am-margin="top">
                     Floating action
                 </h3>
@@ -1539,17 +1589,24 @@
                 </p>
             </blockquote>
             <form am-layout="inline">
-                <label for="inline-email">Email</label>
-                <input id="inline-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <label for="inline-email">Email</label>
+                        <input id="inline-email" type="email" placeholder="Email">
 
-                <label for="inline-password">Password</label>
-                <input id="inline-password" type="password" placeholder="Password">
+                        <label for="inline-password">Password</label>
+                        <input id="inline-password" type="password" placeholder="Password">
 
-                <label for="inline-remember">
-                    <input id="inline-remember" type="checkbox"> Remember me
-                </label>
+                        <label for="inline-remember">
+                            <input id="inline-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1558,17 +1615,24 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="inline"&gt;
-    &lt;label for="inline-email"&gt;Email&lt;/label&gt;
-    &lt;input id="inline-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;label for="inline-email"&gt;Email&lt;/label&gt;
+            &lt;input id="inline-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="inline-password"&gt;Password&lt;/label&gt;
-    &lt;input id="inline-password" type="password" placeholder="Password"&gt;
+            &lt;label for="inline-password"&gt;Password&lt;/label&gt;
+            &lt;input id="inline-password" type="password" placeholder="Password"&gt;
 
-    &lt;label for="inline-remember"&gt;
-    &lt;input id="inline-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="inline-remember"&gt;
+            &lt;input id="inline-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1594,17 +1658,24 @@
                 </p>
             </blockquote>
             <form am-layout="stacked">
-                <label for="stacked-email" am-preicon="&#xf118;">Email</label>
-                <input id="stacked-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <label for="stacked-email" am-preicon="&#xf118;">Email</label>
+                        <input id="stacked-email" type="email" placeholder="Email">
 
-                <label for="stacked-password" am-posticon="&#xf118;">Password</label>
-                <input id="stacked-password" type="password" placeholder="Password">
+                        <label for="stacked-password" am-posticon="&#xf118;">Password</label>
+                        <input id="stacked-password" type="password" placeholder="Password">
 
-                <label for="stacked-remember">
-                    <input id="stacked-remember" type="checkbox"> Remember me
-                </label>
+                        <label for="stacked-remember">
+                            <input id="stacked-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1613,17 +1684,24 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="stacked"&gt;
-    &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
-    &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;label for="stacked-email" am-preicon="unicode"&gt;Email&lt;/label&gt;
+            &lt;input id="stacked-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="stacked-password" am-posticon="unicode"&gt;Password&lt;/label&gt;
-    &lt;input id="stacked-password" type="password" placeholder="Password"&gt;
+            &lt;label for="stacked-password" am-posticon="unicode"&gt;Password&lt;/label&gt;
+            &lt;input id="stacked-password" type="password" placeholder="Password"&gt;
 
-    &lt;label for="stacked-remember"&gt;
-    &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="stacked-remember"&gt;
+            &lt;input id="stacked-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1650,6 +1728,11 @@
                 </p>
             </blockquote>
             <form am-layout="aligned">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
                         <span>
                             <label for="aligned-email">Email</label>
                             <input id="aligned-email" type="email" placeholder="Email">
@@ -1663,7 +1746,10 @@
                                 <input id="aligned-remember" type="checkbox"> Remember me
                             </label>
                         </span>
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1672,23 +1758,30 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="aligned"&gt;
-    &lt;span&gt;
-    &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;span&gt;
+            &lt;label for="aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="aligned-email" type="email" placeholder="Email"&gt;
+            &lt;/span&gt;
 
-    &lt;span&gt;
-    &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/span&gt;
 
-    &lt;span&gt;
-    &lt;label for="aligned-remember"&gt;
-    &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="aligned-remember"&gt;
+            &lt;input id="aligned-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
+            &lt;/span&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1715,32 +1808,39 @@
                 </p>
             </blockquote>
             <form am-layout="multicolumn">
-                <div>
-                    <label for="multicolumn-email">Email</label>
-                    <input id="multicolumn-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <div>
+                            <label for="multicolumn-email">Email</label>
+                            <input id="multicolumn-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-password">Password</label>
-                    <input id="multicolumn-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-email">Email</label>
-                    <input id="multicolumn-email" type="email" placeholder="Email">
+                            <label for="multicolumn-password">Password</label>
+                            <input id="multicolumn-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-email">Email</label>
+                            <input id="multicolumn-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-password">Password</label>
-                    <input id="multicolumn-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-email">Email</label>
-                    <input id="multicolumn-email" type="email" placeholder="Email">
+                            <label for="multicolumn-password">Password</label>
+                            <input id="multicolumn-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-email">Email</label>
+                            <input id="multicolumn-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-password">Password</label>
-                    <input id="multicolumn-password" type="password" placeholder="Password">
-                </div>
-                <label for="multicolumn-remember">
-                    <input id="multicolumn-remember" type="checkbox"> Remember me
-                </label>
+                            <label for="multicolumn-password">Password</label>
+                            <input id="multicolumn-password" type="password" placeholder="Password">
+                        </div>
+                        <label for="multicolumn-remember">
+                            <input id="multicolumn-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1749,35 +1849,42 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="multicolumn"&gt;
-    &lt;div&gt;
-    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;label for="multicolumn-remember"&gt;
-    &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="multicolumn-remember"&gt;
+            &lt;input id="multicolumn-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1800,25 +1907,32 @@
                 </p>
             </blockquote>
             <form am-layout="stacked aligned">
-                <label for="stacked-aligned-email">Email</label>
-                <input id="stacked-aligned-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <label for="stacked-aligned-email">Email</label>
+                        <input id="stacked-aligned-email" type="email" placeholder="Email">
 
-                <label for="stacked-aligned-password">Password</label>
-                <input id="stacked-aligned-password" type="password" placeholder="Password">
+                        <label for="stacked-aligned-password">Password</label>
+                        <input id="stacked-aligned-password" type="password" placeholder="Password">
 
-                         <span>
-                            <label for="stacked-aligned-email">Email</label>
-                            <input id="stacked-aligned-email" type="email" placeholder="Email">
-                        </span>
-                        <span>
-                            <label for="stacked-aligned-password">Password</label>
-                            <input id="stacked-aligned-password" type="password" placeholder="Password">
-                        </span>
-                <label for="stacked-aligned-remember">
-                    <input id="stacked-aligned-remember" type="checkbox"> Remember me
-                </label>
+                                 <span>
+                                    <label for="stacked-aligned-email">Email</label>
+                                    <input id="stacked-aligned-email" type="email" placeholder="Email">
+                                </span>
+                                <span>
+                                    <label for="stacked-aligned-password">Password</label>
+                                    <input id="stacked-aligned-password" type="password" placeholder="Password">
+                                </span>
+                        <label for="stacked-aligned-remember">
+                            <input id="stacked-aligned-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1827,27 +1941,34 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="stacked aligned"&gt;
-    &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
 
-    &lt;span&gt;
-    &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="stacked-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="stacked-aligned-email" type="email" placeholder="Email"&gt;
+            &lt;/span&gt;
 
-    &lt;span&gt;
-    &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="stacked-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="stacked-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/span&gt;
 
-    &lt;label for="stacked-aligned-remember"&gt;
-    &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="stacked-aligned-remember"&gt;
+            &lt;input id="stacked-aligned-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1870,39 +1991,46 @@
                 </p>
             </blockquote>
             <form am-layout="multicolumn stacked">
-                <div>
-                    <label for="multicolumn-stacked-email">Email</label>
-                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <div>
+                            <label for="multicolumn-stacked-email">Email</label>
+                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-stacked-password">Password</label>
-                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-stacked-email">Email</label>
-                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+                            <label for="multicolumn-stacked-password">Password</label>
+                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-stacked-email">Email</label>
+                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-stacked-password">Password</label>
-                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-stacked-email">Email</label>
-                    <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+                            <label for="multicolumn-stacked-password">Password</label>
+                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-stacked-email">Email</label>
+                            <input id="multicolumn-stacked-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-stacked-password">Password</label>
-                    <input id="multicolumn-stacked-password" type="password" placeholder="Password">
-                </div>
+                            <label for="multicolumn-stacked-password">Password</label>
+                            <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+                        </div>
 
-                <label for="multicolumn-stacked-email">Email</label>
-                <input id="multicolumn-stacked-email" type="email" placeholder="Email">
+                        <label for="multicolumn-stacked-email">Email</label>
+                        <input id="multicolumn-stacked-email" type="email" placeholder="Email">
 
-                <label for="multicolumn-stacked-password">Password</label>
-                <input id="multicolumn-stacked-password" type="password" placeholder="Password">
+                        <label for="multicolumn-stacked-password">Password</label>
+                        <input id="multicolumn-stacked-password" type="password" placeholder="Password">
 
-                <label for="multicolumn-stacked-remember">
-                    <input id="multicolumn-stacked-remember" type="checkbox"> Remember me
-                </label>
+                        <label for="multicolumn-stacked-remember">
+                            <input id="multicolumn-stacked-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -1911,41 +2039,48 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="multicolumn stacked"&gt;
-    &lt;div&gt;
-    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
+            &lt;label for="multicolumn-stacked-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
+            &lt;label for="multicolumn-stacked-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-stacked-password" type="password" placeholder="Password"&gt;
 
-    &lt;label for="multicolumn-stacked-remember"&gt;
-    &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="multicolumn-stacked-remember"&gt;
+            &lt;input id="multicolumn-stacked-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -1968,42 +2103,49 @@
                 </p>
             </blockquote>
             <form am-layout="multicolumn aligned">
-                <div>
-                    <label for="multicolumn-aligned-email">Email</label>
-                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+                <fieldset>
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <div>
+                            <label for="multicolumn-aligned-email">Email</label>
+                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-aligned-password">Password</label>
-                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-aligned-email">Email</label>
-                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+                            <label for="multicolumn-aligned-password">Password</label>
+                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-aligned-email">Email</label>
+                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-aligned-password">Password</label>
-                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                </div>
-                <div>
-                    <label for="multicolumn-aligned-email">Email</label>
-                    <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+                            <label for="multicolumn-aligned-password">Password</label>
+                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="multicolumn-aligned-email">Email</label>
+                            <input id="multicolumn-aligned-email" type="email" placeholder="Email">
 
-                    <label for="multicolumn-aligned-password">Password</label>
-                    <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                </div>
+                            <label for="multicolumn-aligned-password">Password</label>
+                            <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                        </div>
 
-                            <span>
-                                <label for="multicolumn-aligned-email">Email</label>
-                                <input id="multicolumn-aligned-email" type="email" placeholder="Email">
-                            </span>
-                            <span>
-                                <label for="multicolumn-aligned-password">Password</label>
-                                <input id="multicolumn-aligned-password" type="password" placeholder="Password">
-                            </span>
+                                    <span>
+                                        <label for="multicolumn-aligned-email">Email</label>
+                                        <input id="multicolumn-aligned-email" type="email" placeholder="Email">
+                                    </span>
+                                    <span>
+                                        <label for="multicolumn-aligned-password">Password</label>
+                                        <input id="multicolumn-aligned-password" type="password" placeholder="Password">
+                                    </span>
 
-                <label for="multicolumn-aligned-remember">
-                    <input id="multicolumn-aligned-remember" type="checkbox"> Remember me
-                </label>
+                        <label for="multicolumn-aligned-remember">
+                            <input id="multicolumn-aligned-remember" type="checkbox"> Remember me
+                        </label>
 
-                <button type="submit" class="am-btn am-primary">Sign in</button>
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div am-col am-padding>
@@ -2012,45 +2154,52 @@
             </h3>
                     <pre><code>
 &lt;form am-layout="multicolumn aligned"&gt;
-    &lt;div&gt;
-    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+    &lt;fieldset&gt;
+        &lt;div role="group"&gt;
+            &lt;legend&gt;
+                My form
+            &lt;/legend&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;div&gt;
-    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+            &lt;div&gt;
+            &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
 
-    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/div&gt;
+            &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/div&gt;
 
-    &lt;span&gt;
-    &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="multicolumn-aligned-email"&gt;Email&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-email" type="email" placeholder="Email"&gt;
+            &lt;/span&gt;
 
-    &lt;span&gt;
-    &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
-    &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
-    &lt;/span&gt;
+            &lt;span&gt;
+            &lt;label for="multicolumn-aligned-password"&gt;Password&lt;/label&gt;
+            &lt;input id="multicolumn-aligned-password" type="password" placeholder="Password"&gt;
+            &lt;/span&gt;
 
-    &lt;label for="multicolumn-aligned-remember"&gt;
-    &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
-    &lt;/label&gt;
+            &lt;label for="multicolumn-aligned-remember"&gt;
+            &lt;input id="multicolumn-aligned-remember" type="checkbox"&gt; Remember me
+            &lt;/label&gt;
 
-    &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+            &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
+        &lt;div&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
                     </code></pre>
         </div>
@@ -2159,7 +2308,6 @@
     <p>
         Ambient is a project by <a href="https://twitter.com/av8boogie">@av8boogie</a>.
     </p>
-    <iframe src="https://ghbtns.com/github-btn.html?user=ionlyseespots&repo=ambient-design&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-left: 45px;"></iframe>
 </footer>
 </body>
 </html>

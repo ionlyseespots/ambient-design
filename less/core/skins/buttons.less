@@ -3,7 +3,7 @@
 // http://davidwalsh.name/html5-buttons
 // http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons
 
-.am-btn {
+.@{prefix}-btn {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -16,7 +16,6 @@
   vertical-align: middle;
   white-space: nowrap;
   .z-depth-bottom(1);
-  .z-depth-animation(2);
   background-clip: padding-box;
   color: @am-clr-btn-text;
   background-color: @am-clr-btn-bg;
@@ -28,21 +27,14 @@
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
-  &,
-  &:hover,
-  &:focus {
-    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-  }
-  &.am-disabled {
+  &.@{prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
     box-shadow: none;
     color: hsl(0, 0%, 60%);
     text-shadow: 0 1px 0 hsl(0, 0%, 100%);
     pointer-events: none;
   }
-  &.am-floating-action {
+  &.@{prefix}-floating-action {
     background-clip: padding-box;
     font-size: 26px;
     z-index: 1;
@@ -56,16 +48,16 @@
       padding-bottom: 10px;
     }
   }
-  &.am-primary {
-    background-color: @am-clr-primary-bg;
-    color: darken(@am-primary, 35%);
+  &.@{prefix}-primary {
+    background-color: @am-primary;
+    color: @am-clr-btn-primary-text;
   }
-  &.am-secondary {
-    background-color: @am-clr-secondary-bg;
-    color: darken(@am-secondary, 35%);
+  &.@{prefix}-secondary {
+    background-color: @am-secondary;
+    color: @am-clr-btn-secondary-text;
   }
   @media (max-width: 30em){
-    &:not(.am-floating-action) {
+    &:not(.@{prefix}-floating-action) {
       width: 100%;
     }
   }

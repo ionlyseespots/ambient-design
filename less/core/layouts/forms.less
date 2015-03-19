@@ -1,39 +1,140 @@
-// <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
-form[am-layout] input[type="checkbox"] {
-  display: inline-block;
-  vertical-align: middle;
-}
-form[am-layout] label {
-  display: inline-block;
-  & input {
-    width: auto; }
-}
-//== Inline
-form[am-layout~="inline"] {
-  // inherits default am-layout semantic root element properties
-}
-//== Stacked
-form[am-layout~="stacked"] {
-  & input, & select, & textarea, & label {
-    width: 100%; }
-}
-//== Aligned
-form[am-layout~="aligned"] > span {
-  .flex-display;
-  .flex-flow(row wrap);
-  .justify-content(justify);
+form[@{layout-var}] {
   width: 100%;
-  & label,  & input, & select, & textarea {
-    .flex(1 @am-flex-width1);
+  & fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+      .flex-basis(100%); // IE elements inherit flex basis
+      // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
+      // http://stackoverflow.com/questions/19679337/why-are-not-all-flexbox-elements-behaving-like-flexbox-divs
+      // fieldset for flexbox
+      div[role="group"] {
+        width: auto;
+        legend {
+          width: 100%;
+//          max-width: 100%;
+          word-wrap: break-word;
+        }
+      }
   }
-}
-//== Multi-column
-form[am-layout~="multicolumn"]  {
-  .flex-display;
-  .flex-flow(row wrap);
-  & input, select, textarea, label {
-    width: 100%; }
-  & > div  {
-    .flex(1 @am-flex-width1);
+  & textarea {
+    resize: vertical;
+    width: 100%;
+  }
+  & input {
+    &[type="checkbox"] {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &[type="radio"] {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &  label {
+    display: inline-block;
+    & input {
+      width: auto;
+    }
+  }
+  & select {
+    padding: .35em 0;
+  }
+
+  //== Inline
+  &[@{layout-var}~="inline"] {
+    // inherits default am-layout semantic root element properties
+  }
+
+  //== Stacked
+  &[@{layout-var}~="stacked"] {
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & select,
+    & label {
+      width: 100%;
+    }
+  }
+
+  //== Aligned
+  &[@{layout-var}~="aligned"] {
+    & > span {
+      .flex-display;
+      .flex-flow(row wrap);
+      .justify-content(justify);
+      width: 100%;
+      & label,
+      & input:not([type="checkbox"]):not([type="radio"]),
+      & select,
+      & textarea {
+        .flex(1 auto);
+        width: @am-flex-width1;
+        @media (max-width: 30em){
+        width: 100%;
+        }
+      }
+    }
+    fieldset > div[role="group"] {
+      & > span {
+        .flex-display;
+        .flex-flow(row wrap);
+        .justify-content(justify);
+        width: 100%;
+        & label,
+        & input:not([type="checkbox"]):not([type="radio"]),
+        & select,
+        & textarea {
+          .flex(1 auto);
+          width: @am-flex-width1;
+          @media (max-width: 30em){
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  //== Multi-column
+  &[@{layout-var}~="multicolumn"]  {
+    .flex-display;
+    .flex-flow(row wrap);
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & select,
+    & textarea,
+    & label {
+      width: 100%;
+    }
+    & > div  {
+      .flex(1 auto);
+      width: @am-flex-width1;
+      @media (max-width: 30em){
+        width: 100%;
+      }
+    }
+    fieldset > div[role="group"] {
+      .flex-display;
+      .flex-flow(row wrap);
+      & input:not([type="checkbox"]):not([type="radio"]),
+      & select,
+      & textarea,
+      & label {
+        width: 100%;
+      }
+      & > div  {
+        .flex(1 auto);
+        width: @am-flex-width1;
+        @media (max-width: 30em){
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 30em){
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea,
+    label {
+      width: 100%;
+    }
   }
 }

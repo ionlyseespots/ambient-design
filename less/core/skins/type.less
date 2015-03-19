@@ -91,11 +91,14 @@ p {
 }
 a {
   color: @am-clr-link-text;
-  background-color: inherit;
   &:hover,
-  &:focus,
   &:active,  {
     color:darken(@am-clr-link-text, 50%);
+  }
+  // agree: http://outlinenone.com/
+  &:focus:not(.@{prefix}-btn) {
+    background-color: @am-clr-link-focus-bg;
+    color: @am-clr-link-focus-text;
   }
 }
 
@@ -179,19 +182,22 @@ var {
   -ms-hyphens: none;
   hyphens: none;
 }
+img {
+  display: block;
+  //  max-width: 100%;
+  height: auto;
+}
+// consider this for fieldset reset/design:
+// http://thatemil.com/blog/2015/01/03/reset-your-fieldset/
 
 @media (orientation:portrait){
   html {
     font-size: 90%;
   }
 }
+
 @media (max-width: 30em){
   html {
     font-size: 80%;
-  }
-  nav[am-layout] {
-    a {
-      font-size: 90%;
-    }
   }
 }

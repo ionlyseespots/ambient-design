@@ -1,40 +1,25 @@
 // Google Material inspired
 // http://www.google.com/design/spec/what-is-material/environment.html#environment-3d-world
-[am-layer] {
-  &[am-layer~="z1"] {
+[@{layer-var}] {
+  &[@{layer-var}~="z1"] {
     z-index: 1;
-    &[am-layer~="shadow"] {
-      .z-depth(1);
-    }
   }
-  &[am-layer~="z2"] {
+  &[@{layer-var}~="z2"] {
     z-index: 2;
-    &[am-layer~="shadow"] {
-      .z-depth(2);
-    }
   }
-  &[am-layer~="z3"] {
+  &[@{layer-var}~="z3"] {
     z-index: 3;
-    &[am-layer~="shadow"] {
-      .z-depth(3);
-    }
   }
-  &[am-layer~="z4"] {
+  &[@{layer-var}~="z4"] {
     z-index: 4;
-    &[am-layer~="shadow"] {
-      .z-depth(4);
-    }
   }
-  &[am-layer~="z5"] {
+  &[@{layer-var}~="z5"] {
     z-index: 5;
-    &[am-layer~="shadow"] {
-      .z-depth(5);
-    }
   }
-  &,
-  &:hover,
-  &:focus {
-    &[am-layer~="hvr-elevate"] {
+  &[@{event-var}~="elevate"] {
+    &,
+    &:hover,
+    &:focus {
       .z-depth-animation(5);
       -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
       -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;

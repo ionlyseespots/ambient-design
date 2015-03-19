@@ -25,7 +25,7 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="horizontal" role="navigation">
+<nav am-layout="horizontal" role="navigation" class="am-text-c">
     <a href="../docs/index.html">Get Started</a>
     <a href="../layout/index.html">Semantic</a>
     <a href="../design-patterns/index.html">Layout</a>
@@ -334,21 +334,21 @@
                         LESS
                     </h1>
                     <p>
-                        Easily change the hue for a background, text, border, fill or stroke. Or, use your own custom styles.
+                        Easily change the hue for a Material background, text, border, fill or stroke within the mixin. Or, use your own custom color by updating the base <code>am-palette-1</code> - <code>am-palette-20</code> color variables.
                     </p>
                     <blockquote>
                         <h2>
-                            Mixin build
+                            Material Mixin build
                         </h2>
                         <p>
                             .COLOR(RANGE, ORIENTATION);
                         </p>
                         <ul>
                             <li>
-                                COLOR: color
+                                COLOR: Material unique color name.
                             </li>
                             <li>
-                                RANGE: 1-14. The value of 6 is Material 500.
+                                RANGE: 1-14. Range is the color value within the LESS group list for the color. The value of 6 is Material 500.
                             </li>
                             <li>
                                 ORIENTATION: text, bg, border, fill, stroke
@@ -841,7 +841,6 @@
     <p>
         Ambient is a project by <a href="https://twitter.com/av8boogie">@av8boogie</a>.
     </p>
-    <iframe src="https://ghbtns.com/github-btn.html?user=ionlyseespots&repo=ambient-design&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-left: 45px;"></iframe>
 </footer>
 </body>
 </html>

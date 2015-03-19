@@ -1,8 +1,9 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+[@{layout-var}] {
+  &[@{layout-var}~="vertical-center"] {
+    .flex-display();
+    .align-items(center);
+    margin: auto;
+    width: auto;
+    text-align: center;
+  }
 }
-// consider this for fieldset reset/design:
-// http://thatemil.com/blog/2015/01/03/reset-your-fieldset/
-
