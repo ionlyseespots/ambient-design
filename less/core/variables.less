@@ -16,11 +16,11 @@
 @am-root-line-height:  1.65;
 @am-root-padding: 1vw;
 @am-root-margin: 1vw;
-@am-root-table-padding: @am-root-padding;
+@am-root-table-padding: 1em;
 
-@am-primary: @am-clr-deep-orange-800;
-@am-secondary: lighten(@am-primary, 20%);
-@am-closure: @am-clr-grey-800; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
+@am-primary: @am-clr-deep-orange-500;
+@am-secondary: @am-clr-orange-500;
+@am-closure: @am-clr-blue-grey-800; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
 
 // Nav
 @am-nav-link-padding: 1em;
@@ -48,14 +48,16 @@
 // Color
 @am-clr-body-bg: @am-clr-white;
 @am-clr-body-text: @am-clr-grey-800;
-@am-clr-primary-bg: lighten(@am-primary, 35%);
+@am-clr-primary-bg: lighten(@am-primary, 25%);
 @am-clr-secondary-bg: lighten(@am-clr-primary-bg, 6.5%);
 @am-clr-link-text: darken(@am-primary, 6.5%);
-@am-clr-link-focus: @am-clr-secondary-bg;
+@am-clr-link-focus:  lighten(@am-closure, 25%);
 @am-clr-heading-text: @am-clr-grey-800;
 @am-clr-hr: rgba(0, 0, 0, 0.12);
 @am-clr-btn-bg: @am-clr-white;
 @am-clr-btn-text: @am-clr-black;
+@am-clr-btn-primary-text: @am-clr-white;
+@am-clr-btn-secondary-text: @am-clr-white;
 
 @am-clr-table-border: #D4D4D4;;
 @am-clr-table-border-cell: #E0E0E0;
