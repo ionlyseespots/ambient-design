@@ -91,14 +91,14 @@ p {
 }
 a {
   color: @am-clr-link-text;
-  background-color: inherit;
   &:hover,
   &:active,  {
     color:darken(@am-clr-link-text, 50%);
   }
   // agree: http://outlinenone.com/
-  &:focus {
-    background-color: @am-clr-link-focus;
+  &:focus:not(.@{prefix}-btn) {
+    background-color: @am-clr-link-focus-bg;
+    color: @am-clr-link-focus-text;
   }
 }
 

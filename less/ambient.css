@@ -942,11 +942,6 @@ nav[am-layout] a:not(.am-floating-action) {
     font-size: 90%;
   }
 }
-nav[am-layout] a:not(.am-floating-action):hover,
-nav[am-layout] a:not(.am-floating-action):focus,
-nav[am-layout] a:not(.am-floating-action):active {
-  outline: 0 none;
-}
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
   bottom: -25px;
@@ -1506,14 +1501,14 @@ p {
 }
 a {
   color: #ff3e01;
-  background-color: inherit;
 }
 a:hover,
 a:active {
   color: #010000;
 }
-a:focus {
-  background-color: #6c8a99;
+a:focus:not(.am-btn) {
+  background-color: #ff9f80;
+  color: #801f00;
 }
 small {
   font-size: 65%;
