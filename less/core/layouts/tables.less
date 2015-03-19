@@ -1,5 +1,4 @@
 table[@{layout-var}] {
-  border-spacing: 0;
   border: 1px solid @am-clr-table-border;
   width: 100%;
   & caption {
@@ -7,7 +6,6 @@ table[@{layout-var}] {
   }
   & thead {
     & th {
-        background-color: lighten(@am-primary, 45%);
       &:first-child {
        border-left: 0 none;
       }
@@ -27,22 +25,22 @@ table[@{layout-var}] {
     padding: @am-root-table-padding;
     text-transform: uppercase;
     &[scope="rowgroup"] {
-      background-color: #F1F1F1;
+      background-color: @am-clr-table-th-rowgroup-bg;
       &:first-child {
         border-left: 0 none;
       }
     }
     &[scope="colgroup"] {
-      background-color: #F1F1F1;
+      background-color: @am-clr-table-th-colgroup-bg;
       &:first-child {
         border-left: 0 none;
       }
     }
     &[scope="row"] {
-      background-color: #EBECEE;
+      background-color: @am-clr-table-th-row-bg;
     }
     &[scope="col"] {
-      background-color: #EBECEE;
+      background-color: @am-clr-table-th-col-bg;
     }
     @media (orientation:portrait){
       display: none;

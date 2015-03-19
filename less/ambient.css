@@ -957,15 +957,11 @@ button[am-layout~="split-top"] {
   right: 25px;
 }
 table[am-layout] {
-  border-spacing: 0;
   border: 1px solid #d4d4d4;
   width: 100%;
 }
 table[am-layout] caption {
   text-align: left;
-}
-table[am-layout] thead th {
-  background-color: #fbe0d7;
 }
 table[am-layout] thead th:first-child {
   border-left: 0 none;
@@ -987,22 +983,22 @@ table[am-layout] th {
   text-transform: uppercase;
 }
 table[am-layout] th[scope="rowgroup"] {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 table[am-layout] th[scope="rowgroup"]:first-child {
   border-left: 0 none;
 }
 table[am-layout] th[scope="colgroup"] {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 table[am-layout] th[scope="colgroup"]:first-child {
   border-left: 0 none;
 }
 table[am-layout] th[scope="row"] {
-  background-color: #EBECEE;
+  background-color: #ebecee;
 }
 table[am-layout] th[scope="col"] {
-  background-color: #EBECEE;
+  background-color: #ebecee;
 }
 @media (orientation: portrait) {
   table[am-layout] th {
