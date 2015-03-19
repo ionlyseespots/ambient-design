@@ -17,6 +17,10 @@ form[@{layout-var}] {
         }
       }
   }
+  & textarea {
+    resize: vertical;
+    width: 100%;
+  }
   & input {
     &[type="checkbox"] {
       display: inline-block;
@@ -46,7 +50,6 @@ form[@{layout-var}] {
   &[@{layout-var}~="stacked"] {
     & input:not([type="checkbox"]):not([type="radio"]),
     & select,
-    & textarea,
     & label {
       width: 100%;
     }

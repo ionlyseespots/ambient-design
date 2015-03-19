@@ -712,6 +712,10 @@ form[am-layout] fieldset div[role="group"] legend {
   width: 100%;
   word-wrap: break-word;
 }
+form[am-layout] textarea {
+  resize: vertical;
+  width: 100%;
+}
 form[am-layout] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
@@ -731,7 +735,6 @@ form[am-layout] select {
 }
 form[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
 form[am-layout][am-layout~="stacked"] select,
-form[am-layout][am-layout~="stacked"] textarea,
 form[am-layout][am-layout~="stacked"] label {
   width: 100%;
 }
