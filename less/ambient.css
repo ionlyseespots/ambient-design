@@ -882,10 +882,10 @@ nav[am-layout][am-layout~="horizontal"] a {
   flex: 1 8.3333%;
 }
 nav[am-layout][am-layout~="vertical"] {
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: column nowrap;
+  -moz-flex-direction: column nowrap;
+  -ms-flex-direction: column nowrap;
+  flex-direction: column nowrap;
 }
 nav[am-layout][am-layout~="justify-align"] {
   -webkit-justify-content: space-between;
@@ -958,21 +958,17 @@ button[am-layout~="split-top"] {
 }
 table[am-layout] {
   border-spacing: 0;
-  border: 1px solid #f08463;
+  border: 1px solid #d4d4d4;
   width: 100%;
-  border-collapse: initial;
 }
 table[am-layout] caption {
   text-align: left;
-  font-size: initial;
 }
-table[am-layout] caption details summary {
-  font-weight: 700;
-  font-size: 24px;
-  font-size: 1.3333333333333333rem;
-  /* 24 / 18 = 1.3333  */
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem;
+table[am-layout] thead th {
+  background-color: #fbe0d7;
+}
+table[am-layout] thead th:first-child {
+  border-left: 0 none;
 }
 @media (orientation: portrait) {
   table[am-layout] thead {
@@ -985,12 +981,28 @@ table[am-layout] caption details summary {
   }
 }
 table[am-layout] th {
-  background-color: #fbe0d7;
-  border-bottom: 1px solid #f9cec0;
-  border-left: 1px solid #f9cec0;
-  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
   padding: 1vw;
   text-transform: uppercase;
+}
+table[am-layout] th[scope="rowgroup"] {
+  background-color: #F1F1F1;
+}
+table[am-layout] th[scope="rowgroup"]:first-child {
+  border-left: 0 none;
+}
+table[am-layout] th[scope="colgroup"] {
+  background-color: #F1F1F1;
+}
+table[am-layout] th[scope="colgroup"]:first-child {
+  border-left: 0 none;
+}
+table[am-layout] th[scope="row"] {
+  background-color: #EBECEE;
+}
+table[am-layout] th[scope="col"] {
+  background-color: #EBECEE;
 }
 @media (orientation: portrait) {
   table[am-layout] th {
@@ -998,12 +1010,12 @@ table[am-layout] th {
   }
   table[am-layout] th[scope="row"] {
     display: block;
+    border-left: 0 none;
   }
 }
 table[am-layout] td {
-  border-bottom: 1px solid #f9cec0;
-  border-left: 1px solid #f9cec0;
-  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
   padding: 1vw;
 }
 table[am-layout] td:first-child {
@@ -1030,22 +1042,30 @@ table[am-layout] td:first-child {
     text-transform: uppercase;
   }
 }
-table[am-layout] tr:nth-child(even) td {
-  background-color: #fdf2ef;
-}
 table[am-layout] tr:not('tbody'):last-child td {
   border-bottom: 0 none;
 }
 table[am-layout] tr:hover td {
-  background-color: #f9cec0;
+  background-color: #ebecee;
 }
 @media (orientation: portrait) {
   table[am-layout] tr {
     display: block;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+@media (orientation: portrait) {
+  table[am-layout] tfoot tr:first-child {
+    border-bottom: 1px solid #e0e0e0;
   }
 }
 table[am-layout] tfoot tr:last-child {
   font-weight: 700;
+}
+@media (orientation: portrait) {
+  table[am-layout] tfoot tr:last-child {
+    border-bottom: 0 none;
+  }
 }
 table[am-layout] tfoot tr:last-child td {
   border-bottom: 0 none;
@@ -1053,11 +1073,13 @@ table[am-layout] tfoot tr:last-child td {
 @media (orientation: portrait) {
   table[am-layout] tfoot {
     display: block;
-    border-top: 1px solid #f08463;
   }
-  table[am-layout] tfoot tr {
-    border: 0 none;
-  }
+}
+table[am-layout][am-layout~="zebra-stripe"] tr:nth-child(even) td {
+  background-color: #f7f7f7;
+}
+table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
+  background-color: #ebecee;
 }
 [am-layout~="outline"] article,
 [am-layout~="outline"] section,
@@ -1345,16 +1367,6 @@ body > div[am-wrapper] > footer a:hover {
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
-}
-.am-btn:hover,
-.am-btn:focus {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.am-btn,
-.am-btn:hover {
-  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .am-btn.am-disabled,
 .am-btn[disabled] {

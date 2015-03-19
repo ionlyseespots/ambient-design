@@ -2,21 +2,16 @@ table[@{layout-var}] {
   border-spacing: 0;
   border: 1px solid @am-clr-table-border;
   width: 100%;
-  border-collapse: initial;
   & caption {
     text-align: left;
-    font-size: initial;
-    & details {
-      & summary {
-        font-weight: 700;
-        font-size: 24px;
-        font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333  */
-        margin-bottom: 22.275px;
-        margin-bottom: 1.2375rem;
-      }
-    }
   }
   & thead {
+    & th {
+        background-color: lighten(@am-primary, 45%);
+      &:first-child {
+       border-left: 0 none;
+      }
+    }
     @media (orientation:portrait){
       display: none;
     }
@@ -27,24 +22,40 @@ table[@{layout-var}] {
     }
   }
   & th {
-    background-color: @am-clr-table-header-bg;
-    border-bottom: 1px solid @am-clr-table-border-bottom;
-    border-left: 1px solid @am-clr-table-border-bottom;
-    border-top: 1px solid @am-clr-table-border-top;
-    padding: @am-root-padding;
+    border-bottom: 1px solid @am-clr-table-border-cell;
+    border-left: 1px solid @am-clr-table-border-cell;
+    padding: @am-root-table-padding;
     text-transform: uppercase;
+    &[scope="rowgroup"] {
+      background-color: #F1F1F1;
+      &:first-child {
+        border-left: 0 none;
+      }
+    }
+    &[scope="colgroup"] {
+      background-color: #F1F1F1;
+      &:first-child {
+        border-left: 0 none;
+      }
+    }
+    &[scope="row"] {
+      background-color: #EBECEE;
+    }
+    &[scope="col"] {
+      background-color: #EBECEE;
+    }
     @media (orientation:portrait){
       display: none;
       &[scope="row"] {
         display: block;
+        border-left: 0 none;
       }
     }
   }
   & td {
-    border-bottom: 1px solid @am-clr-table-border-bottom;
-    border-left: 1px solid @am-clr-table-border-bottom;
-    border-top: 1px solid @am-clr-table-border-top;
-    padding: @am-root-padding;
+    border-bottom: 1px solid @am-clr-table-border-cell;
+    border-left: 1px solid @am-clr-table-border-cell;
+    padding: @am-root-table-padding;
     &:first-child {
       border-left: 0 none;
       @media (orientation:portrait){
@@ -67,31 +78,46 @@ table[@{layout-var}] {
     }
   }
   & tr {
-    &:nth-child(even) td {
-      background-color: @am-clr-table-td-even-bg;
-    }
     &:not('tbody'):last-child td {
        border-bottom: 0 none;
     }
     &:hover td {
-      background-color: @am-clr-table-td-hover;
+      background-color: @am-clr-table-row-hover;
     }
+    @media (orientation:portrait){
+      display: block;
+      border-bottom: 1px solid @am-clr-table-border-cell;
+    }
+  }
+  tfoot {
+    & tr {
+      &:first-child {
+        @media (orientation:portrait){
+          border-bottom: 1px solid @am-clr-table-border-cell;
+        }
+      }
+      &:last-child {
+        font-weight: 700;
+        @media (orientation:portrait){
+          border-bottom: 0 none;
+        }
+        & td {
+          border-bottom: 0 none;
+        }
+      }
+    }
+
     @media (orientation:portrait){
       display: block;
     }
   }
-  tfoot {
-    & tr:last-child {
-      font-weight: 700;
-      & td {
-        border-bottom: 0 none;
+  &[@{layout-var}~="zebra-stripe"] {
+    tr {
+      &:nth-child(even) td {
+        background-color: @am-clr-table-zebra-stripe-bg;
       }
-    }
-    @media (orientation:portrait){
-      display: block;
-      border-top: 1px solid @am-clr-table-border;
-      & tr {
-        border: 0 none;
+      &:hover td {
+        background-color: @am-clr-table-row-hover;
       }
     }
   }

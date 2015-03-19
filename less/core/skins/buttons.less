@@ -16,7 +16,6 @@
   vertical-align: middle;
   white-space: nowrap;
   .z-depth-bottom(1);
-  .z-depth-animation(2);
   background-clip: padding-box;
   color: @am-clr-btn-text;
   background-color: @am-clr-btn-bg;
@@ -28,12 +27,6 @@
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
-  &,
-  &:hover {
-    -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-  }
   &.@{prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
     box-shadow: none;
