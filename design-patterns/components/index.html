@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Base</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../../less/ambient.min.css">
+
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+</body>
+<header>
+    <h1>
+        <a href="../../index.html" title="index">Ambient</a>
+    </h1>
+</header>
+<nav am-layout="horizontal" role="navigation" class="am-text-c">
+    <a href="../../docs/index.html">Get Started</a>
+    <a href="../../layout/index.html">Semantic</a>
+    <a href="../../design-patterns/index.html">Layout</a>
+    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
+</nav>
+<main role="main">
+    <header am-padding class="am-primary">
+        <p>
+            All Ambient components at a glance.
+        </p>
+        <h1>
+            Components
+        </h1>
+    </header>
+    <article>
+        <h1 am-padding="large" class="am-secondary">
+            Get familiar with the basic setup and structure of Ambient
+        </h1>
+        <aside>
+            <h1>
+                Quick links
+            </h1>
+            <nav am-layout="vertical">
+                <a href="">Typography</a>
+                <a href="">Buttons</a>
+                <a href="">Forms</a>
+                <a href="">Tables</a>
+                <a href="">Colors</a>
+            </nav>
+        </aside>
+        <section>
+            <h1>
+                Design
+            </h1>
+            <p>
+                Ambient does not style components by default.
+            </p>
+            <p>
+                Because we have removed the dependency on base styles, you do not need to override Ambient core CSS to customize the design.
+                Once your HTML5 structure is in place, customize the design with optional Ambient skin classes, or your own custom classes.
+            </p>
+        </section>
+    </article>
+    <hr />
+
+    <article am-layout="vertical">
+        <h1>
+            Typography
+        </h1>
+        <section>
+            <h1>h1 heading</h1>
+            <h2>h2 heading</h2>
+            <h3>h3 heading</h3>
+            <h4>h4 heading</h4>
+            <h5>h5 heading</h5>
+            <h6>h6 heading</h6>
+            <p>
+                <a href="">Text link</a>
+                <abbr title="Abbreviation">abbr</abbr>
+                <cite>Origin of Species</cite>
+                <code>Code tag</code>
+                <em>Emphasis</em>
+                <mark>Mark text</mark>
+                <kbd>Cmd + Shift + i</kbd>
+                <strong>Highlighted text</strong>
+                <b>Bold text</b>
+                <del>Deleted text</del>
+                <sup>superscript</sup>&nbsp;
+                <sub>subscript</sub>&nbsp;
+            </p>
+        </section>
+        <section>
+            <h1>
+                Blockquote
+            </h1>
+            <blockquote>
+                <p>
+                    This is a paragraph in a blockquote.
+                </p>
+            </blockquote>
+        </section>
+        <section>
+            <h1>
+                Pre
+            </h1>
+            <pre>
+                        Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+            </pre>
+            <h2>
+                Code
+            </h2>
+            <code>
+                code
+            </code>
+        </section>
+        <section>
+            <h1>
+                Lists
+            </h1>
+            <ul>
+                <li>Unordered list</li>
+                <li>
+                    List item
+                    <ol>
+                        <li>Nested ordered list item</li>
+                        <li>Nested ordered list item</li>
+                    </ol>
+                </li>
+                <li>List item</li>
+            </ul>
+            <ol>
+                <li>Ordered list</li>
+                <li>
+                    List item
+                    <ul>
+                        <li>Nested unordered list item</li>
+                        <li>Nested unordered list item</li>
+                    </ul>
+                </li>
+                <li>List item</li>
+            </ol>
+        </section>
+    </article>
+    <hr />
+
+    <article am-layout="vertical">
+        <h1>
+            Buttons
+        </h1>
+        <section am-padding>
+            <h2>
+                Default
+            </h2>
+            <a href="#">Anchor button</a>
+            <button>Button element</button>
+            <input type="submit" value="submit input">
+            <input type="button" value="button input">
+            <input type="submit" value="submit input disabled" disabled>
+            <input type="button" value="button input disabled" disabled>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient
+            </h2>
+            <a class="am-btn" href="#">Anchor button</a>
+            <button class="am-btn">Button element</button>
+            <input class="am-btn" type="submit" value="submit input">
+            <input class="am-btn" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn"</code>
+            </blockquote>
+                <h2>
+                   Ambient floating action
+                </h2>
+                <a class="am-btn am-floating-action" href="#"><i class="fa fa-plus"></i></a>
+            <blockquote>
+                <code>class="am-btn am-floating-action"</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient disabled
+            </h2>
+            <a class="am-btn am-disabled" href="#">Anchor button</a>
+            <button class="am-btn" disabled>Button element</button>
+            <input class="am-btn" type="submit" value="submit input" disabled>
+            <input class="am-btn" type="button" value="button input" disabled>
+
+            <blockquote>
+                <code>&lt;a class="am-btn am-disabled"&gt;</code><br />
+                <code>&lt;button class="am-btn" disabled&gt;</code><br />
+                <code>&lt;input class="am-btn" type="submit" disabled&gt;</code><br />
+                <code>&lt;input class="am-btn" type="button" disabled&gt;</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient primary
+            </h2>
+            <a class="am-btn am-primary" href="#">Anchor button</a>
+            <button class="am-btn am-primary">Button element</button>
+            <input class="am-btn am-primary" type="submit" value="submit input">
+            <input class="am-btn am-primary" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn am-primary"</code>
+            </blockquote>
+        </section>
+        <section am-padding>
+            <h2>
+                Ambient secondary
+            </h2>
+            <a class="am-btn am-secondary" href="#">Anchor button</a>
+            <button class="am-btn am-secondary">Button element</button>
+            <input class="am-btn am-secondary" type="submit" value="submit input">
+            <input class="am-btn am-secondary" type="button" value="button input">
+            <blockquote>
+                <code>class="am-btn am-secondary"</code>
+            </blockquote>
+        </section>
+    </article>
+    <hr />
+
+    <article am-padding>
+        <h1>
+            Forms
+        </h1>
+        <h2>
+            Default
+        </h2>
+        <form>
+            <fieldset>
+                <legend>
+                    My form
+                </legend>
+                <label for="inline-email">Email</label>
+                <input id="inline-email" type="email" placeholder="Email">
+
+                <label for="inline-password">Password</label>
+                <input id="inline-password" type="password" placeholder="Password">
+
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
+
+                <button type="submit">Sign in</button>
+            </fieldset>
+        </form>
+        <h2>
+            Ambient
+        </h2>
+        <form am-layout="stacked">
+            <fieldset>
+                <div role="group">
+                    <legend>
+                        Legend: My form
+                    </legend>
+
+                    <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="textarea">Write something here</textarea>
+
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
+
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
+
+                    <label for="multicolumn-email">Email</label>
+                    <input id="multicolumn-email" type="email" placeholder="Email">
+
+                    <label for="multicolumn-password">Password</label>
+                    <input id="multicolumn-password" type="password" placeholder="Password">
+
+                    <label for="multicolumn-remember">
+                        <input id="multicolumn-remember" type="checkbox"> Remember me
+                    </label>
+
+                    <button type="submit" class="am-btn am-primary">Sign in</button>
+                </div>
+            </fieldset>
+        </form>
+        <blockquote>
+            <code>am-layout="stacked"</code>
+        </blockquote>
+    </article>
+    <hr />
+
+    <article am-padding>
+        <h1>
+            Tables
+        </h1>
+        <p>
+            Tables can have multiple groups of content for <code>tbody</code>. So, let's make an HTML5 table example within Ambient with two <code>tbody</code> elements.
+        </p>
+        <h2>
+            Default
+        </h2>
+        <table>
+            <caption>
+                My table caption
+                <details>
+                    <summary>Details summary</summary>
+                    <p>
+                        Example for a simple table
+                    </p>
+                </details>
+            </caption>
+            <thead>
+            <tr>
+                <th scope="col" colspan="2">Item</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td data-title="stock">In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td data-title="stock">In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Introducing HTML5</strong>
+                    <span>by Bruce Lawson &#38; Remy Sharp</span>
+                </td>
+                <td data-title="stock">Out of Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$22.23</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$148.90</td>
+            </tr>
+            </tfoot>
+        </table>
+        <table>
+            <caption>
+                My table caption
+                <details>
+                    <summary>Details summary</summary>
+                    <p>
+                        Example for a complex table
+                    </p>
+                </details>
+            </caption>
+            <thead>
+            <tr>
+                <th scope="col" colspan="2">Column header: Item</th>
+                <th scope="col">Column header:  Qty</th>
+                <th scope="col">Column header:  Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    Row Group
+                </th>
+            </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Introducing HTML5</strong>
+                    <span>by Bruce Lawson &#38; Remy Sharp</span>
+                </td>
+                <td>Out of Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$22.23</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Bulletproof Web Design</strong>
+                    <span>by Dan Cederholm</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.17</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    Row Group
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">Row header: Whiskey</th>
+                <td>Cell b1</td>
+                <td>Cell c1</td>
+                <td>Cell d1</td>
+            </tr>
+            <tr>
+                <th scope="row">Row header: Ghost</th>
+                <td>Cell b2</td>
+                <td>Cell c2</td>
+                <td>Cell d2</td>
+            </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            </tbody>
+
+            <tbody>
+            <tr>
+                <th scope="colgroup" colspan="2" rowspan="2">Column Group</th>
+                <th scope="colgroup" colspan="2">Column Group</th>
+
+            </tr>
+            <tr>
+                <th scope="col">Col a</th>
+                <th scope="col">Col b</th>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 1</th>
+                <th scope="row">Row 1-1</th>
+                <td>Cell a-1-1</td>
+                <td>Cell b-1-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 1-2</th>
+                <td>Cell a-1-2</td>
+                <td>Cell b-1-2</td>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 2</th>
+                <th scope="row">Row 2-1</th>
+                <td>Cell a-2-1</td>
+                <td>Cell b-2-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 2-2</th>
+                <td>Cell a-2-2</td>
+                <td>Cell b-2-2</td>
+
+            </tr>
+            </tbody>
+
+
+            <tfoot>
+            <tr>
+                <td colspan="3">Subtotal</td>
+                <td>$135.36</td>
+            </tr>
+            <tr>
+                <td colspan="3">Tax</td>
+                <td>$13.54</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$148.90</td>
+            </tr>
+            </tfoot>
+        </table>
+        <h2>
+            Ambient
+        </h2>
+        <table am-layout>
+            <caption>
+                My table caption
+                <details>
+                    <summary>Details summary</summary>
+                    <p>
+                        Example for a simple table
+                    </p>
+                </details>
+            </caption>
+            <thead>
+            <tr>
+                <th scope="col" colspan="2">Item</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Introducing HTML5</strong>
+                    <span>by Bruce Lawson &#38; Remy Sharp</span>
+                </td>
+                <td>Out of Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$22.23</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$148.90</td>
+            </tr>
+            </tfoot>
+        </table>
+        <table am-layout="zebra-stripe">
+            <caption>
+                My table caption
+                <details>
+                    <summary>Details summary</summary>
+                    <p>
+                        Example for a complex table
+                    </p>
+                </details>
+            </caption>
+            <thead>
+            <tr>
+                <th scope="col" colspan="2">Column header: Item</th>
+                <th scope="col">Column header:  Qty</th>
+                <th scope="col">Column header:  Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    Row Group
+                </th>
+            </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Introducing HTML5</strong>
+                    <span>by Bruce Lawson &#38; Remy Sharp</span>
+                </td>
+                <td>Out of Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$22.23</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>Bulletproof Web Design</strong>
+                    <span>by Dan Cederholm</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.17</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th scope="rowgroup" colspan="4">
+                    Row Group
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">Row header: Whiskey</th>
+                <td>Cell b1</td>
+                <td>Cell c1</td>
+                <td>Cell d1</td>
+            </tr>
+            <tr>
+                <th scope="row">Row header: Ghost</th>
+                <td>Cell b2</td>
+                <td>Cell c2</td>
+                <td>Cell d2</td>
+            </tr>
+            <tr>
+                <td data-title="Item">
+                    <strong>Don&#8217;t Make Me Think</strong>
+                    <a href="">by Steve Krug</a>
+                </td>
+                <td>In Stock</td>
+                <td data-title="qty">1</td>
+                <td data-title="price">$30.02</td>
+            </tr>
+            <tr>
+                <td data-title="item">
+                    <strong>A Project Guide to UX Design</strong>
+                    <span>by Russ Unger &#38; Carolyn Chandler</span>
+                </td>
+                <td>In Stock</td>
+                <td data-title="quantity">2</td>
+                <td data-title="price">$52.94 <span>$26.47 &#215; 2</span></td>
+            </tr>
+            </tbody>
+
+            <tbody>
+            <tr>
+                <th scope="colgroup" colspan="2" rowspan="2">Column Group</th>
+                <th scope="colgroup" colspan="2">Column Group</th>
+
+            </tr>
+            <tr>
+                <th scope="col">Col a</th>
+                <th scope="col">Col b</th>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 1</th>
+                <th scope="row">Row 1-1</th>
+                <td>Cell a-1-1</td>
+                <td>Cell b-1-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 1-2</th>
+                <td>Cell a-1-2</td>
+                <td>Cell b-1-2</td>
+
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Row 2</th>
+                <th scope="row">Row 2-1</th>
+                <td>Cell a-2-1</td>
+                <td>Cell b-2-1</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Row 2-2</th>
+                <td>Cell a-2-2</td>
+                <td>Cell b-2-2</td>
+
+            </tr>
+            </tbody>
+
+
+            <tfoot>
+            <tr>
+                <td colspan="3">Subtotal</td>
+                <td>$135.36</td>
+            </tr>
+            <tr>
+                <td colspan="3">Tax</td>
+                <td>$13.54</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$148.90</td>
+            </tr>
+            </tfoot>
+        </table>
+    </article>
+    <hr />
+
+    <article am-layout="gutter padding portrait-100" am-padding>
+        <h1>
+            Colors
+        </h1>
+        <p>
+            Ambient colors are inspired by the Material palette and are designed to work alongside Material.
+        </p>
+        <p>
+            <a href="../colors.html">View all colors</a>
+        </p>
+        <section am-layout="gutter padding portrait-100" am-padding class="backgrounds">
+            <h1>
+                Backgrounds
+            </h1>
+            <blockquote>
+                <code>.am-clr-NUMBER-bg</code>
+            </blockquote>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-1-bg am-clr-21-text">
+                        <span class="name">Red</span>
+                        .am-clr-1-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-2-bg am-clr-21-text">
+                        <span class="name">Pink</span>
+                        .am-clr-2-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-3-bg am-clr-21-text">
+                        <span class="name">Purple</span>
+                        .am-clr-3-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-4-bg am-clr-21-text">
+                        <span class="name">Deep Purple</span>
+                        .am-clr-4-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-5-bg am-clr-21-text">
+                        <span class="name">Indigo</span>
+                        .am-clr-5-bg
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-6-bg am-clr-21-text">
+                        <span class="name">Blue</span>
+                        .am-clr-6-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-7-bg am-clr-21-text">
+                        <span class="name">Light blue</span>
+                        .am-clr-7-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-8-bg am-clr-21-text">
+                        <span class="name">cyan</span>
+                        .am-clr-8-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-9-bg am-clr-21-text">
+                        <span class="name">Teal</span>
+                        .am-clr-9-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-10-bg am-clr-21-text">
+                        <span class="name">Green</span>
+                        .am-clr-10-bg
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-11-bg am-clr-21-text">
+                        <span class="name">Light green</span>
+                        .am-clr-11-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-12-bg">
+                        <span class="name">Lime</span>
+                        .am-clr-12-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-13-bg">
+                        <span class="name">Yellow</span>
+                        .am-clr-13-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-14-bg">
+                        <span class="name">Amber</span>
+                        .am-clr-14-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-15-bg am-clr-21-text">
+                        <span class="name">Orange</span>
+                        .am-clr-15-bg
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-16-bg am-clr-21-text">
+                        <span class="name">Deep orange</span>
+                        .am-clr-16-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-17-bg am-clr-21-text">
+                        <span class="name">Brown</span>
+                        .am-clr-17-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-18-bg am-clr-21-text">
+                        <span class="name">Grey</span>
+                        .am-clr-18-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-19-bg am-clr-21-text">
+                        <span class="name">Blue grey</span>
+                        .am-clr-19-bg
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-20-bg am-clr-21-text">
+                        <span class="name">Black</span>
+                        .am-clr-20-bg
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <h1>
+                    SVG fills and strokes
+                </h1>
+                <p>
+                    Includes a set of classes to set fills and or strokes.
+                </p>
+                <blockquote>
+                    <code>.am-clr-NUMBER-fill</code><br />
+                    <code>.am-clr-NUMBER-stroke</code>
+                </blockquote>
+            </div>
+        </section>
+        <section am-layout="gutter padding portrait-100" am-padding class="borders-and-text">
+            <h1>
+                Borders & Text
+            </h1>
+            <blockquote>
+                <code>.am-clr-NUMBER-text</code><br />
+                <code>.am-clr-NUMBER-border</code>
+            </blockquote>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-1-border am-clr-1-text">
+                        Red
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-2-border am-clr-2-text">
+                        Pink
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-3-border am-clr-3-text">
+                        Purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-4-border am-clr-4-text">
+                        Deep purple
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-5-border am-clr-5-text">
+                        Indigo
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-6-border am-clr-6-text">
+                        Blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-7-border am-clr-7-text">
+                        Light blue
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-8-border am-clr-8-text">
+                        cyan
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-9-border am-clr-9-text">
+                        Teal
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-10-border am-clr-10-text">
+                        Green
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-11-border am-clr-11n-text">
+                        Light green
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-12-border am-clr-12-text">
+                        Lime
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-13-border am-clr-13-text">
+                        Yellow
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-14-border am-clr-14-text">
+                        Amber
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-15-border am-clr-15-text">
+                        Orange
+                    </p>
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    <p class="am-clr-16-border am-clr-16-text">
+                        Deep orange
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-17-border am-clr-17-text">
+                        Brown
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-18-border am-clr-18-text">
+                        Grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-19-border am-clr-19-text">
+                        Blue grey
+                    </p>
+                </div>
+                <div am-col>
+                    <p class="am-clr-20-border am-clr-20-text">
+                        Black
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+</body>
+</html>

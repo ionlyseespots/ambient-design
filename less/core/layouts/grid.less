@@ -1,0 +1,96 @@
+[@{row-var}]{
+  .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+  .flex-display;
+  .flex-flow(row wrap);
+  & div[@{col-var}] {
+    .flex(1 auto);
+    width: @am-flex-width1;
+    &[@{col-var}~="25"] {
+      width: @am-flex-width2;
+    }
+    &[@{col-var}~="33"] {
+      width: @am-flex-width3;
+    }
+    &[@{col-var}~="50"] {
+      width: @am-flex-width4;
+    }
+    &[@{col-var}~="66"] {
+      width: @am-flex-width5;
+    }
+    &[@{col-var}~="75"] {
+      width: @am-flex-width6;
+    }
+    &[@{col-var}~="100"] {
+      width: @am-flex-width7;
+    }
+  }
+  &[@{row-var}^="gutter margin"] {
+    & > div[@{col-var}] {
+      margin-left: @am-grid-gutter-margin;
+      .flex-basis(0);
+      &:first-of-type {
+        margin-left: -@am-grid-gutter-margin;
+        padding-left: @am-grid-gutter-margin;
+      }
+    }
+  }
+  &[@{row-var}^="gutter padding"] {
+    & > div[@{col-var}] {
+      padding-left: @am-grid-gutter-padding;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+  &[@{row-var}~="portrait-100"] {
+    @media (orientation:portrait){
+      &[@{row-var}^="gutter margin"] {
+        & > div[@{col-var}] {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+      & > div[@{col-var}] {
+        .flex-basis(auto);
+        width: 100%;
+      }
+    }
+  }
+}
+[@{layout-var}^="gutter margin"] {
+  & > div[@{row-var}] {
+    & > div[@{col-var}] {
+      margin-left: @am-grid-gutter-margin;
+      &:first-of-type {
+        margin-left: -@am-grid-gutter-margin;;
+        padding-left: @am-grid-gutter-margin;;
+      }
+    }
+  }
+}
+[@{layout-var}^="gutter padding"] {
+  & > div[@{row-var}] {
+    & > div[@{col-var}] {
+      padding-left: @am-grid-gutter-padding;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+}
+[@{layout-var}~="portrait-100"] {
+  & div[@{row-var}] {
+    & div[@{col-var}] {
+      @media (orientation:portrait) {
+        margin-left: 0;
+        padding-left: 0;
+        .flex-basis(auto);
+        width: 100%;
+        &:first-of-type {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// NOTE
+// http://stackoverflow.com/questions/23717953/padding-bottom-top-not-working-in-flexbox-layout-firefox
+// Percentage margins and padding on flex items are always resolved against their respective dimensions; unlike blocks, they do not always resolve against the inline dimension of their containing block.
+[@{padding-var}] {
+  padding: @am-root-padding;
+  &[@{padding-var}="small"] {
+    padding: calc(@am-root-padding - .5vw);
+  }
+  &[@{padding-var}="large"] {
+    padding: calc(@am-root-padding + 2vw);
+  }
+  &[@{padding-var}~="top"] {
+    padding: @am-root-padding 0 0 0;
+    &[@{padding-var}~="small"] {
+      padding: calc(@am-root-padding - .5vw) 0 0 0;
+    }
+    &[@{padding-var}~="large"] {
+      padding: calc(@am-root-padding + 2vw) 0 0 0;
+    }
+  }
+  &[@{padding-var}~="right"] {
+    padding: 0 @am-root-padding 0 0;
+    &[@{padding-var}~="small"] {
+      padding: 0 calc(@am-root-padding - .5vw) 0 0;
+    }
+    &[@{padding-var}~="large"] {
+      padding: 0 calc(@am-root-padding + 2vw) 0 0;
+    }
+  }
+  &[@{padding-var}~="bottom"] {
+    padding: 0 0 @am-root-padding 0;
+    &[@{padding-var}~="small"] {
+      padding: 0 0 calc(@am-root-padding - .5vw) 0;
+    }
+    &[@{padding-var}~="large"] {
+      padding: 0 0 calc(@am-root-padding + 2vw) 0;
+    }
+  }
+  &[@{padding-var}~="left"] {
+    padding: 0 0 0 @am-root-padding;
+    &[@{padding-var}~="small"] {
+      padding: 0 0 0 calc(@am-root-padding - .5vw) 0;
+    }
+    &[@{padding-var}~="large"] {
+      padding: 0 0 0 calc(@am-root-padding + 2vw) 0;
+    }
+  }
+}

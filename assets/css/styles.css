@@ -1,5 +1,5 @@
 /* Ambient color doc styles */
-.color-group span.name {
+span.name {
     display: block;
     margin-bottom: 60px;
 }
@@ -7,7 +7,7 @@
     color: hsla(0, 0%, 100%, 0.87);
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    width: 100%;
 }
 .color-palette li {
     list-style-type: none;

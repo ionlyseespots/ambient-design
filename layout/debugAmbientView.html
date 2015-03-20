@@ -12,126 +12,162 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../less/ambient.css">
 </head>
 <body>
 <!--- Matrix, if anything breaks it will break here --->
 <header>
+    <p>
+        Display HTML5 document outline in multiple layouts and grids within Ambient.
+    </p>
     <h1>
-        <a href="../index.html" title="index">header h1</a>
+        <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
 <hr />
-
-<nav role="navigation" am-layout="horizontal">
+<article am-layout="vertical-center">
     <h1>
-        Nav h1
+        <a href="../examples/centered/index.html">Center</a>
     </h1>
+</article>
+<nav role="navigation" am-layout="horizontal" class="am-text-c">
     <a href="#"><strong>link</strong></a>
     <a href="#"><strong>link</strong></a>
     <a href="#"><strong>link</strong></a>
 </nav>
 <hr />
 
+<aside >
+    <h1>
+        aside h1
+    </h1>
+</aside>
 
-
-<div am-row="gutter margin portrait-100">
-    <div am-col="25">
+<main role="main" am-layout="outline">
+<!--The "outline" layout attribute has been applied to display a visual outline on elements-->
+<aside>
+    <h1>
+        aside h1
+    </h1>
+    <div am-image-slider am-event="slide-caption">
+        <figure><!-- optional attribute to slide in for figcaption -->
+            <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png"  alt="" />
+            <figcaption>
+                <h2>Img</h2>
+                <p>Text</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="http://placehold.it/350x150&text=Slide%202" alt="">
+        </figure>
+        <figure>
+            <img src="http://placehold.it/350x150&text=Slide%203" alt="">
+        </figure>
+    </div>
+</aside>
+<article>
+    <h1>
+        article h1
+    </h1>
+    <section>
+        <h1>
+            section h1
+        </h1>
         <aside>
             <h1>
                 aside h1
             </h1>
-            <nav role="navigation" am-layout="vertical">
-                <h1>
-                    Nav h1
-                </h1>
+            <nav role="navigation"  am-layout="vertical">
                 <a href="#"><strong>link</strong></a>
                 <a href="#"><strong>link</strong></a>
                 <a href="#"><strong>link</strong></a>
             </nav>
         </aside>
-    </div>
-    <div am-col="75">
-
-
-<main role="main" am-layout="outline">
-<aside>
-    <h1>
-        aside h1
-    </h1>
-    <nav role="navigation" am-layout="horizontal">
-        <h1>
-            Nav h1
-        </h1>
-        <a href="#"><strong>link</strong></a>
-        <a href="#"><strong>link</strong></a>
-        <a href="#"><strong>link</strong></a>
-    </nav>
-</aside>
-    <article>
-        <header>
+        <article>
             <h1>
-                heading h1
+                article h1
             </h1>
-            <p>
-                Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
-                in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
-                when they aren't the first heading of their parent, explicit, sections.
-            </p>
-            <p>
-                Think of <code>h1-h6</code> as dividers, or labels for the content below it. The content is defined by the heading, the heading does not end at the <code>/</code> it ends when it defines a new implicit section.
-                I have found this tool very helpful and building a CSS version for <code>am-layout</code>
-                <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a>
-            </p>
-            <h2>
-                 heading h2
-            </h2>
-            <h3>
-                heading h3
-            </h3>
-        </header>
-        <section>
-            <h1>section h1</h1>
-        </section>
-        <aside>
-            <h1>aside h1</h1>
-        </aside>
-         <aside>
-            <h1>aside h1</h1>
-        </aside>
-        <aside>
-            <h1>aside h1</h1>
-        </aside>
-        <h4>
-            article h4
-        </h4>
-        <h2>
-            article h2
-        </h2>
-        <h5>
-            article h5
-        </h5>
-        <h6>
-            article h6
-        </h6>
-    </article>
-    <hr />
-
+            <section>
+                <header>
+                    <h1>
+                        header 1
+                    </h1>
+                    <p>
+                        Do not think of heading tags as simple titles. They define a <i>new, implicit, section</i>
+                        in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>
+                        when they aren't the first heading of their parent, explicit, sections.
+                    </p>
+                    <p>
+                        Think of <code>h1-h6</code> as dividers, or labels for the content.
+                       <br />
+                        <a href="http://ionlyseespots.github.io/ambient-IDE/">Ambient IDE - Document Outliner</a>
+                    </p>
+                    <h2>
+                        header 2
+                    </h2>
+                    <h3>
+                        header 3
+                    </h3>
+                </header>
+                <article>
+                    <h1>
+                        article h1
+                    </h1>
+                    <section>
+                        <h1>
+                            section h1
+                        </h1>
+                    </section>
+                    <aside>
+                        <h1>
+                            aside h1
+                        </h1>
+                    </aside>
+                    <h2>
+                        article h2
+                    </h2>
+                    <h3>
+                        article h3
+                    </h3>
+                    <h4>
+                        article h4
+                    </h4>
+                    <h5>
+                        article h5
+                    </h5>
+                    <h6>
+                        article h6
+                    </h6>
+                </article>
+            </section>
+        </article>
+    </section>
+    <aside>
+        <h1>
+            aside h1
+        </h1>
+        <nav role="navigation">
+            <a href="#"><strong>link</strong></a>
+            <a href="#"><strong>link</strong></a>
+            <a href="#"><strong>link</strong></a>
+        </nav>
+    </aside>
+</article>
     <article>
         <h1>
-            article heading h1
+            article h1
         </h1>
         <section>
             <h1>
                 section h1
-            </h1>
-            <aside>
-                <h1>
-                    aside h1
                 </h1>
-                <h2>
-                    aside h2
-                </h2>
+                <aside>
+                    <h1>
+                        aside h1
+                    </h1>
+                    <h2>
+                        aside h2
+                    </h2>
                 <h3>
                     aside h3
                 </h3>
@@ -145,178 +181,143 @@
                     aside h6
                 </h6>
             </aside>
-            <aside>
-                <h1>
-                    aside h1
-                </h1>
-                <h2>
-                    aside h2
-                </h2>
-                <h3>
-                    aside h3
-                </h3>
-                <h4>
-                    aside h4
-                </h4>
-                <h5>
-                    aside h5
-                </h5>
-                <h6>
-                    aside h6
-                </h6>
-            </aside>
+
             <article>
                 <h1>
-                     Article h1
+                     article h1
                 </h1>
                 <section>
-                    <heading>
+                    <header>
                         <h1>
-                            heading 1 h1
+                            header 1
                         </h1>
                         <h2>
-                            Heading header h2
+                            header 2
                         </h2>
-                        <h3>
-                            Heading h3
-                        </h3>
-                        <article>
-                            <h1>
-                                  header 1
-                            </h1>
-                            <section>
-                                <h1>
-                                      section header 1
-                                </h1>
-                            </section>
-                            <section>
-                                <h1>
-                                      section header 1
-                                </h1>
-                            </section>
-                        </article>
-                        <h4>
-                            Heading header 4
-                        </h4>
-                        <h5>
-                            Heading header 5
-                        </h5>
-                        <h6>
-                            Heading header 6
-                        </h6>
-                    </heading>
-                    <h2>
-                         Section H1
-                    </h2>
+                        <p>
+                            header p
+                        </p>
+                    </header>
+                    <h3>
+                        heading h3
+                    </h3>
+                    <h4>
+                        heading 4
+                    </h4>
+                    <h5>
+                        heading 5
+                    </h5>
+                    <h6>
+                        heading 6
+                    </h6>
                     <footer>
                         <h1>
-                            Footer Header 1
+                            footer h1
                         </h1>
                         <h2>
-                            footer Header 2
+                            footer h2
                         </h2>
                         <h3>
-                            Header 3
+                            footer h3
                         </h3>
                         <h4>
-                            Header 4
+                            footer h4
                         </h4>
                         <h5>
-                            Header 5
+                            footer h5
                         </h5>
                         <h6>
-                            Header 6
+                            footer h6
                         </h6>
                     </footer>
                 </section>
                 <section>
                     <h2>
-                         Section H1
+                         section h1
                     </h2>
                 </section>
             </article>
         </section>
         <section>
             <h1>
-                section 2 H1
+                section h1
             </h1>
             <article>
                 <h1>
-                     Article H1
+                     article h1
                 </h1>
                 <section>
-                    <heading>
+                    <header>
                         <h1>
-                            Heading header 1
+                            header 1
                         </h1>
                         <h2>
-                            Heading header 2
+                            header 2
                         </h2>
                         <h3>
-                            Heading header 3
+                            header 3
                         </h3>
-                        <h4>
-                            Heading header 4
-                        </h4>
-                    </heading>
-
+                    </header>
+                    <h1>
+                        section h1
+                    </h1>
                 </section>
                 <aside>
                     <h1>
-                        Aside
+                        aside h1
                     </h1>
                     <h2>
-                        Header 2
+                        aside h2
                     </h2>
                     <h3>
-                        Header 3
+                        aside h3
                     </h3>
                     <h4>
-                        Header 4
+                        aside h4
                     </h4>
                     <footer>
-                        <h1>
-                            Header 1
-                        </h1>
+                        <p>
+                            aside footer p
+                        </p>
                     </footer>
-
                 </aside>
+            </article>
         </section>
     </article>
     <hr />
 
     <article>
         <h1>
-            Article H1
+            article h1
         </h1>
         <section>
             <header>
                 <h1>
-                    Section Header H1
+                    header 1
                 </h1>
             </header>
             <h2>
-                Section H2
+                section h2
             </h2>
             <footer>
                 <p>
-                    Section Footer
+                    section footer p
                 </p>
             </footer>
         </section>
         <aside>
             <h1>
-                Aside
+                aside h1
             </h1>
         </aside>
         <aside>
             <h1>
-                Aside
+                aside h1
             </h1>
         </aside>
         <footer>
             <p>
-                Article Footer
+                article footer p
             </p>
         </footer>
     </article>
@@ -324,26 +325,21 @@
 
     <article>
         <h1>
-            Article H1
+            article h1
         </h1>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
-            </h1>
-        </section>
-        <section>
-            <h1>
-                Section H1
+                section h1
             </h1>
         </section>
     </article>
@@ -351,78 +347,549 @@
 
     <article>
         <h1>
-            Article H1
+            article h1
         </h1>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
     </article>
     <hr />
 
     <article>
-        <h1>Article H1</h1>
+        <h1>
+            article h1
+        </h1>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
         <section>
             <h1>
-                Section H1
+                section h1
             </h1>
         </section>
     </article>
     <hr />
 
+    <article am-layout="vertical" am-padding>
+        <h1>
+            Grids
+        </h1>
+        <p>
+            This article makes use of the <code>am-layout="vertical"</code> to layout sections vertical and <code>am-row</code> & <code>am-column</code> layout attributes for a grid.
+        </p>
+        <section am-row>
+            <h1>
+                am-col
+            </h1>
+            <div am-col>
+                1
+            </div>
+            <div am-col>
+                2
+            </div>
+            <div am-col>
+                3
+            </div>
+            <div am-col>
+                4
+            </div>
+            <div am-col>
+                5
+            </div>
+            <div am-col>
+                6
+            </div>
+            <div am-col>
+                7
+            </div>
+            <div am-col>
+                8
+            </div>
+            <div am-col>
+                9
+            </div>
+            <div am-col>
+                10
+            </div>
+            <div am-col>
+                11
+            </div>
+            <div am-col>
+                12
+            </div>
+        </section>
+        <section>
+            <h1>
+                am-row + am-col
+            </h1>
+            <div am-row>
+                <div am-col>
+                    1
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/2
+                </div>
+                <div am-col>
+                    1/2
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+            </div>
+            <h2>
+                Offset
+            </h2>
+            <div am-row>
+                <div am-col="66">
+                    2/3
+                </div>
+                <div am-col="33">
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="33">
+                    1/3
+                </div>
+                <div am-col="66" >
+                    2/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="75">
+                    3/4
+                </div>
+                <div am-col="25">
+                    1/4
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="25">
+                    1/4
+                </div>
+                <div am-col="75" >
+                    3/4
+                </div>
+            </div>
+        </section>
+        <section am-row="gutter margin">
+            <h1>
+                am-col
+            </h1>
+            <h2>
+                Gutter margin
+            </h2>
+            <div am-col>
+                1
+            </div>
+            <div am-col>
+                2
+            </div>
+            <div am-col>
+                3
+            </div>
+            <div am-col>
+                4
+            </div>
+            <div am-col>
+                5
+            </div>
+            <div am-col>
+                6
+            </div>
+            <div am-col>
+                7
+            </div>
+            <div am-col>
+                8
+            </div>
+            <div am-col>
+                9
+            </div>
+            <div am-col>
+                10
+            </div>
+            <div am-col>
+                11
+            </div>
+            <div am-col>
+                12
+            </div>
+        </section>
+        <section>
+            <h1>
+                am-row + am-col
+            </h1>
+            <h2>
+                Row gutter margin
+            </h2>
+            <div am-row>
+                <div am-col>
+                    1
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/2
+                </div>
+                <div am-col>
+                    1/2
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+            </div>
+            <div am-row="gutter margin">
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+            </div>
+        </section>
+
+        <section am-layout="gutter margin">
+            <h1>
+                am-row + am-col
+            </h1>
+            <h2>
+                Layout gutter margin
+            </h2>
+            <div am-row>
+                <div am-col>
+                    1
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/2
+                </div>
+                <div am-col>
+                    1/2
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+            </div>
+            <h2>
+                Offset
+            </h2>
+            <div am-row>
+                <div am-col="66">
+                    2/3
+                </div>
+                <div am-col="33">
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="33">
+                    1/3
+                </div>
+                <div am-col="66" >
+                    2/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="75">
+                    3/4
+                </div>
+                <div am-col="25">
+                    1/4
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="25">
+                    1/4
+                </div>
+                <div am-col="75" >
+                    3/4
+                </div>
+            </div>
+        </section>
+        <section am-row="gutter padding">
+            <h1>
+                am-col
+            </h1>
+            <h2>
+                Gutter padding
+            </h2>
+            <div am-col>
+                1
+            </div>
+            <div am-col>
+                2
+            </div>
+            <div am-col>
+                3
+            </div>
+            <div am-col>
+                4
+            </div>
+            <div am-col>
+                5
+            </div>
+            <div am-col>
+                6
+            </div>
+            <div am-col>
+                7
+            </div>
+            <div am-col>
+                8
+            </div>
+            <div am-col>
+                9
+            </div>
+            <div am-col>
+                10
+            </div>
+            <div am-col>
+                11
+            </div>
+            <div am-col>
+                12
+            </div>
+        </section>
+        <section>
+            <h1>
+                am-row + am-col
+            </h1>
+            <h2>
+                Row gutter padding
+            </h2>
+            <div am-row>
+                <div am-col>
+                    1
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/2
+                </div>
+                <div am-col>
+                    1/2
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+            </div>
+            <div am-row="gutter padding">
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+            </div>
+        </section>
+
+        <section am-layout="gutter padding">
+            <h1>
+                am-row + am-col
+            </h1>
+            <h2>
+                Layout gutter padding
+            </h2>
+            <div am-row>
+                <div am-col>
+                    1
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/2
+                </div>
+                <div am-col>
+                    1/2
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+                <div am-col>
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+                <div am-col>
+                    1/4
+                </div>
+            </div>
+            <h2>
+                Offset
+            </h2>
+            <div am-row>
+                <div am-col="66">
+                    2/3
+                </div>
+                <div am-col="33">
+                    1/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="33">
+                    1/3
+                </div>
+                <div am-col="66" >
+                    2/3
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="75">
+                    3/4
+                </div>
+                <div am-col="25">
+                    1/4
+                </div>
+            </div>
+            <div am-row>
+                <div am-col="25">
+                    1/4
+                </div>
+                <div am-col="75" >
+                    3/4
+                </div>
+            </div>
+        </section>
+    </article>
 </main>
-
-    </div>
-</div>
-
 <footer>
-   <p>Main (sticky) Footer</p>
+    <h1>
+        footer
+    </h1>
 </footer>
 </body>
 </html>

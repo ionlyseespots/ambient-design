@@ -1,0 +1,122 @@
+table[@{layout-var}] {
+  border: 1px solid @am-clr-table-border;
+  width: 100%;
+  & caption {
+    text-align: left;
+  }
+  & thead {
+    & th {
+      &:first-child {
+       border-left: 0 none;
+      }
+    }
+    @media (orientation:portrait){
+      display: none;
+    }
+  }
+  & tbody {
+    @media (orientation:portrait){
+      display: block;
+    }
+  }
+  & th {
+    border-bottom: 1px solid @am-clr-table-border-cell;
+    border-left: 1px solid @am-clr-table-border-cell;
+    padding: @am-root-table-padding;
+    text-transform: uppercase;
+    &[scope="rowgroup"] {
+      background-color: @am-clr-table-th-rowgroup-bg;
+      &:first-child {
+        border-left: 0 none;
+      }
+    }
+    &[scope="colgroup"] {
+      background-color: @am-clr-table-th-colgroup-bg;
+      &:first-child {
+        border-left: 0 none;
+      }
+    }
+    &[scope="row"] {
+      background-color: @am-clr-table-th-row-bg;
+    }
+    &[scope="col"] {
+      background-color: @am-clr-table-th-col-bg;
+    }
+    @media (orientation:portrait){
+      display: none;
+      &[scope="row"] {
+        display: block;
+        border-left: 0 none;
+      }
+    }
+  }
+  & td {
+    border-bottom: 1px solid @am-clr-table-border-cell;
+    border-left: 1px solid @am-clr-table-border-cell;
+    padding: @am-root-table-padding;
+    &:first-child {
+      border-left: 0 none;
+      @media (orientation:portrait){
+        text-align: right;
+      }
+    }
+    @media (orientation:portrait){
+      display: block;
+      text-align: right;
+      vertical-align: middle;
+      width: 100%;
+      border: 0 none;
+      &[data-title]::before {
+        content: attr(data-title);
+        float: left;
+        font-size: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  & tr {
+    &:not('tbody'):last-child td {
+       border-bottom: 0 none;
+    }
+    &:hover td {
+      background-color: @am-clr-table-row-hover;
+    }
+    @media (orientation:portrait){
+      display: block;
+      border-bottom: 1px solid @am-clr-table-border-cell;
+    }
+  }
+  tfoot {
+    & tr {
+      &:first-child {
+        @media (orientation:portrait){
+          border-bottom: 1px solid @am-clr-table-border-cell;
+        }
+      }
+      &:last-child {
+        font-weight: 700;
+        @media (orientation:portrait){
+          border-bottom: 0 none;
+        }
+        & td {
+          border-bottom: 0 none;
+        }
+      }
+    }
+
+    @media (orientation:portrait){
+      display: block;
+    }
+  }
+  &[@{layout-var}~="zebra-stripe"] {
+    tr {
+      &:nth-child(even) td {
+        background-color: @am-clr-table-zebra-stripe-bg;
+      }
+      &:hover td {
+        background-color: @am-clr-table-row-hover;
+      }
+    }
+  }
+}

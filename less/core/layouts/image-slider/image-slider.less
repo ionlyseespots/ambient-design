@@ -1,0 +1,21 @@
+[am-image-slider] {
+  height: @height;
+  position: relative;
+  figure{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    -webkit-animation: fadeinout @totalDuration infinite;
+    -moz-animation: fadeinout @totalDuration infinite;
+    -ms-animation: fadeinout @totalDuration infinite;
+    -o-animation: fadeinout @totalDuration infinite;
+    animation: fadeinout @totalDuration infinite;
+    & img {
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+  .generate-delays(@numImages);
+}

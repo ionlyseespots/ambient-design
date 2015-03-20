@@ -1,3 +1,22 @@
+// Palette
+.am-palette(@am-clr, @am-clr-orientation) {
+  & when (@am-clr-orientation = text) {
+    color: extract(@group-palette, @am-clr);
+  }
+  & when (@am-clr-orientation = bg) {
+    background-color: extract(@group-palette, @am-clr);
+  }
+  & when (@am-clr-orientation = border) {
+    border-color:  extract(@group-palette, @am-clr);
+  }
+  & when (@am-clr-orientation = fill) {
+    fill: extract(@group-palette, @am-clr);
+  }
+  & when (@am-clr-orientation = stroke) {
+    stroke: extract(@group-palette, @am-clr);
+  }
+}
+
 // Red
 .red(@am-clr, @am-clr-orientation) {
   & when (@am-clr-orientation = text) {
