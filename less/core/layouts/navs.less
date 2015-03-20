@@ -1,18 +1,16 @@
 nav[@{layout-var}] {
   &[@{layout-var}~="horizontal"] {
-    .justify-content(flex-start);
     a {
       .flex(1 @am-flex-width1);
     }
   }
   &[@{layout-var}~="vertical"] {
-    .flex-direction(column nowrap);
+    .flex-flow(column nowrap);
   }
   &[@{layout-var}~="justify-align"] {
     .justify-content(space-between);
   }
   &[@{layout-var}~="left-align"] {
-    .justify-content(flex-start);
     a {
       .align-self(flex-start);
     }
