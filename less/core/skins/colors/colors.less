@@ -1,10 +1,10 @@
-.am-active {
+.@{prefix}-active {
   background-color:@am-clr-primary-bg;
 }
-.am-primary {
+.@{prefix}-primary {
   background-color: @am-clr-primary-bg;
 }
-.am-secondary {
+.@{prefix}-secondary {
   background-color: @am-clr-secondary-bg;
 }
 
@@ -23,402 +23,397 @@
 //== Mixin build
 // .COLOR(RANGE, ORIENTATION);
 //
-// COLOR: color
-// RANGE: 1-14. The value of 6 is Material 500.
+// COLOR: Material (.COLOR) or Ambient (.am-palette) color
+// RANGE: 1-14. Range is the color value within the LESS group list for @group-COLOR or @group-palette
 // ORIENTATION: text, bg, border, fill, stroke
-//
-// Mixin example for red
-//    .example-text {
-//      .red(6, text);
-//    }
-//    .example-background {
-//      .red(2, bg);
-//    }
-//
 
 // Red
-.am-clr-1 {
+.@{prefix}-clr-1 {
   &-text {
-    .red(6, text);
+    .am-palette(1, text);
+//    .red(6, text);
   }
   &-bg {
-    .red(6, bg);
+    .am-palette(1, bg);
+//    .red(6, bg);
   }
   &-border {
-    .red(6, border);
+    .am-palette(1, border);
+//    .red(6, border);
   }
   &-fill {
-    .red(6, fill);
+//    .red(6, fill);
   }
   &-stroke {
-    .red(6, stroke);
+    .am-palette(1, stroke);
+//    .red(6, stroke);
   }
 }
 
 // Pink
-.am-clr-2 {
+.@{prefix}-clr-2 {
   &-text {
-    .pink(6, text);
+    .am-palette(2, text);
   }
   &-bg {
-    .pink(6, bg);
+    .am-palette(2, bg);
   }
   &-border {
-    .pink(6, border);
+    .am-palette(2, border);
   }
   &-fill {
-    .pink(6, fill);
+    .am-palette(2, fill);
   }
   &-stroke {
-    .pink(6, stroke);
+    .am-palette(2, stroke);
   }
 }
 
 // Purple
-.am-clr-3 {
+.@{prefix}-clr-3 {
   &-text {
-    .purple(6, text);
+    .am-palette(3, text);
   }
   &-bg {
-    .purple(6, bg);
+    .am-palette(3, bg);
   }
   &-border {
-    .purple(6, border);
+    .am-palette(3, border);
   }
   &-fill {
-    .purple(6, fill);
+    .am-palette(3, fill);
   }
   &-stroke {
-    .purple(6, stroke);
+    .am-palette(3, stroke);
   }
 }
 
 // Deep-purple
-.am-clr-4 {
+.@{prefix}-clr-4 {
   &-text {
-    .deep-purple(6, text);
+    .am-palette(4, text);
   }
   &-bg {
-    .deep-purple(6, bg);
+    .am-palette(4, bg);
   }
   &-border {
-    .deep-purple(6, border);
+    .am-palette(4, border);
   }
   &-fill {
-    .deep-purple(6, fill);
+    .am-palette(4, fill);
   }
   &-stroke {
-    .deep-purple(6, stroke);
+    .am-palette(4, stroke);
   }
 }
 
 // Indigo
-.am-clr-5 {
+.@{prefix}-clr-5 {
   &-text {
-    .indigo(6, text);
+    .am-palette(5, text);
   }
   &-bg {
-    .indigo(6, bg);
+    .am-palette(5, bg);
   }
   &-border {
-    .indigo(6, border);
+    .am-palette(5, border);
   }
   &-fill {
-    .indigo(6, fill);
+    .am-palette(5, fill);
   }
   &-stroke {
-    .indigo(6, stroke);
+    .am-palette(5, stroke);
   }
 }
 
 // Blue
-.am-clr-6 {
+.@{prefix}-clr-6 {
   &-text {
-    .blue(6, text);
+    .am-palette(6, text);
   }
   &-bg {
-    .blue(6, bg);
+    .am-palette(6, bg);
   }
   &-border {
-    .blue(6, border);
+    .am-palette(6, border);
   }
   &-fill {
-    .blue(6, fill);
+    .am-palette(6, fill);
   }
   &-stroke {
-    .blue(6, stroke);
+    .am-palette(6, stroke);
   }
 }
 
 // Light-blue
-.am-clr-7 {
+.@{prefix}-clr-7 {
   &-text {
-    .light-blue(6, text);
+    .am-palette(7,text);
   }
   &-bg {
-    .light-blue(6, bg);
+    .am-palette(7, bg);
   }
   &-border {
-    .light-blue(6, border);
+    .am-palette(7, border);
   }
   &-fill {
-    .light-blue(6, fill);
+    .am-palette(7, fill);
   }
   &-stroke {
-    .light-blue(6, stroke);
+    .am-palette(7, stroke);
   }
 }
 
 // Cyan
-.am-clr-8 {
+.@{prefix}-clr-8 {
   &-text {
-    .cyan(6, text);
+    .am-palette(8, text);
   }
   &-bg {
-    .cyan(6, bg);
+    .am-palette(8, bg);
   }
   &-border {
-    .cyan(6, border);
+    .am-palette(8, border);
   }
   &-fill {
-    .cyan(6, fill);
+    .am-palette(8, fill);
   }
   &-stroke {
-    .cyan(6, stroke);
+    .am-palette(8, stroke);
   }
 }
 
 // Teal
-.am-clr-9 {
+.@{prefix}-clr-9 {
   &-text {
-    .teal(6, text);
+    .am-palette(9, text);
   }
   &-bg {
-    .teal(6, bg);
+    .am-palette(9, bg);
   }
   &-border {
-    .teal(6, border);
+    .am-palette(9, border);
   }
   &-fill {
-    .teal(6, fill);
+    .am-palette(9, fill);
   }
   &-stroke {
-    .teal(6, stroke);
+    .am-palette(9, stroke);
   }
 }
 
 // Green
-.am-clr-10 {
+.@{prefix}-clr-10 {
   &-text {
-    .green(6, text);
+    .am-palette(10, text);
   }
   &-bg {
-    .green(6, bg);
+    .am-palette(10, bg);
   }
   &-border {
-    .green(6, border);
+    .am-palette(10, border);
   }
   &-fill {
-    .green(6, fill);
+    .am-palette(10, fill);
   }
   &-stroke {
-    .green(6, stroke);
+    .am-palette(10, stroke);
   }
 }
 
 // Light-green
-.am-clr-11 {
+.@{prefix}-clr-11 {
   &-text {
-    .light-green(6, text);
+    .am-palette(11, text);
   }
   &-bg {
-    .light-green(6, bg);
+    .am-palette(11, bg);
   }
   &-border {
-    .light-green(6, border);
+    .am-palette(11, border);
   }
   &-fill {
-    .light-green(6, fill);
+    .am-palette(11, fill);
   }
   &-stroke {
-    .light-green(6, stroke);
+    .am-palette(11, stroke);
   }
 }
 
 // Lime
-.am-clr-12 {
+.@{prefix}-clr-12 {
   &-text {
-    .lime(6, text);
+    .am-palette(12, text);
   }
   &-bg {
-    .lime(6, bg);
+    .am-palette(12, bg);
   }
   &-border {
-    .lime(6, border);
+    .am-palette(12, border);
   }
   &-fill {
-    .lime(6, fill);
+    .am-palette(12, fill);
   }
   &-stroke {
-    .lime(6, stroke);
+    .am-palette(12, stroke);
   }
 }
 
 // Yellow
-.am-clr-13 {
+.@{prefix}-clr-13 {
   &-text {
-    .yellow(6, text);
+    .am-palette(13, text);
   }
   &-bg {
-    .yellow(6, bg);
+    .am-palette(13, bg);
   }
   &-border {
-    .yellow(6, border);
+    .am-palette(13, border);
   }
   &-fill {
-    .yellow(6, fill);
+    .am-palette(13, fill);
   }
   &-stroke {
-    .yellow(6, stroke);
+    .am-palette(13, stroke);
   }
 }
 
 // Amber
-.am-clr-14 {
+.@{prefix}-clr-14 {
   &-text {
-    .amber(6, text);
+    .am-palette(14, text);
   }
   &-bg {
-    .amber(6, bg);
+    .am-palette(14, bg);
   }
   &-border {
-    .amber(6, border);
+    .am-palette(14, border);
   }
   &-fill {
-    .amber(6, fill);
+    .am-palette(14, fill);
   }
   &-stroke {
-    .amber(6, stroke);
+    .am-palette(14, stroke);
   }
 }
 
 // Orange
-.am-clr-15 {
+.@{prefix}-clr-15 {
   &-text {
-    .orange(6, text);
+    .am-palette(15, text);
   }
   &-bg {
-    .orange(6, bg);
+    .am-palette(15, bg);
   }
   &-border {
-    .orange(6, border);
+    .am-palette(15, border);
   }
   &-fill {
-    .orange(6, fill);
+    .am-palette(15, fill);
   }
   &-stroke {
-    .orange(6, stroke);
+    .am-palette(15, stroke);
   }
 }
 
 
 // Deep-orange
-.am-clr-16 {
+.@{prefix}-clr-16 {
   &-text {
-    .deep-orange(6, text);
+    .am-palette(16, text);
   }
   &-bg {
-    .deep-orange(6, bg);
+    .am-palette(16, bg);
   }
   &-border {
-    .deep-orange(6, border);
+    .am-palette(16, border);
   }
   &-fill {
-    .deep-orange(6, fill);
+    .am-palette(16, fill);
   }
   &-stroke {
-    .deep-orange(6, stroke);
+    .am-palette(16, stroke);
   }
 }
 
 // Brown
-.am-clr-17 {
+.@{prefix}-clr-17 {
   &-text {
-    .brown(6, text);
+    .am-palette(17, text);
   }
   &-bg {
-    .brown(6, bg);
+    .am-palette(17, bg);
   }
   &-border {
-    .brown(6, border);
+    .am-palette(17, border);
   }
   &-fill {
-    .brown(6, fill);
+    .am-palette(17, fill);
   }
   &-stroke {
-    .brown(6, stroke);
+    .am-palette(17, stroke);
   }
 }
 
 // Grey
-.am-clr-18 {
+.@{prefix}-clr-18 {
   &-text {
-    .grey(6, text);
+    .am-palette(18, text);
   }
   &-bg {
-    .grey(6, bg);
+    .am-palette(18, bg);
   }
   &-border {
-    .grey(6, border);
+    .am-palette(18, border);
   }
   &-fill {
-    .grey(6, fill);
+    .am-palette(18, fill);
   }
   &-stroke {
-    .grey(6, stroke);
+    .am-palette(18, stroke);
   }
 }
 
 // Blue-grey
-.am-clr-19 {
+.@{prefix}-clr-19 {
   &-text {
-    .blue-grey(6, text);
+    .am-palette(19, text);
   }
   &-bg {
-    .blue-grey(6, bg);
+    .am-palette(19, bg);
   }
   &-border {
-    .blue-grey(6, border);
+    .am-palette(19, border);
   }
   &-fill {
-    .blue-grey(6, fill);
+    .am-palette(19, fill);
   }
   &-stroke {
-    .blue-grey(6, stroke);
+    .am-palette(19, stroke);
   }
 }
 
 // Black
-.am-clr-20 {
+.@{prefix}-clr-20 {
   &-text {
-    color: @am-clr-black;
+    .am-palette(20, text);
   }
   &-bg {
-    background-color: @am-clr-black;
+    .am-palette(20, bg);
   }
   &-border {
-    border-color: @am-clr-black;;
+    .am-palette(20, border);
   }
   &-fill {
-    fill: @am-clr-black;;
+    .am-palette(20, fill);
   }
   &-stroke {
-    stroke: @am-clr-black;;
+    .am-palette(20, stroke);
   }
 }
 
 // White
-.am-clr-21 {
+.@{prefix}-clr-21 {
   &-text {
     color: @am-clr-white;
   }

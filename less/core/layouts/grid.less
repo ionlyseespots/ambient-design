@@ -1,31 +1,31 @@
-[am-row]{
+[@{row-var}]{
   .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
   .flex-display;
   .flex-flow(row wrap);
-  & div[am-col] {
+  & div[@{col-var}] {
     .flex(1 auto);
     width: @am-flex-width1;
-    &[am-col~="25"] {
+    &[@{col-var}~="25"] {
       width: @am-flex-width2;
     }
-    &[am-col~="33"] {
+    &[@{col-var}~="33"] {
       width: @am-flex-width3;
     }
-    &[am-col~="50"] {
+    &[@{col-var}~="50"] {
       width: @am-flex-width4;
     }
-    &[am-col~="66"] {
+    &[@{col-var}~="66"] {
       width: @am-flex-width5;
     }
-    &[am-col~="75"] {
+    &[@{col-var}~="75"] {
       width: @am-flex-width6;
     }
-    &[am-col~="100"] {
+    &[@{col-var}~="100"] {
       width: @am-flex-width7;
     }
   }
-  &[am-row^="gutter margin"] {
-    & > div[am-col] {
+  &[@{row-var}^="gutter margin"] {
+    & > div[@{col-var}] {
       margin-left: @am-grid-gutter-margin;
       .flex-basis(0);
       &:first-of-type {
@@ -34,32 +34,32 @@
       }
     }
   }
-  &[am-row^="gutter padding"] {
-    & > div[am-col] {
+  &[@{row-var}^="gutter padding"] {
+    & > div[@{col-var}] {
       padding-left: @am-grid-gutter-padding;
       &:first-of-type {
         padding-left: 0;
       }
     }
   }
-  &[am-row~="portrait-100"] {
+  &[@{row-var}~="portrait-100"] {
     @media (orientation:portrait){
-      &[am-row^="gutter margin"] {
-        & > div[am-col] {
+      &[@{row-var}^="gutter margin"] {
+        & > div[@{col-var}] {
           margin-left: 0;
           padding-left: 0;
         }
       }
-      & > div[am-col] {
+      & > div[@{col-var}] {
         .flex-basis(auto);
         width: 100%;
       }
     }
   }
 }
-[am-layout^="gutter margin"] {
-  & > div[am-row] {
-    & > div[am-col] {
+[@{layout-var}^="gutter margin"] {
+  & > div[@{row-var}] {
+    & > div[@{col-var}] {
       margin-left: @am-grid-gutter-margin;
       &:first-of-type {
         margin-left: -@am-grid-gutter-margin;;
@@ -68,9 +68,9 @@
     }
   }
 }
-[am-layout^="gutter padding"] {
-  & > div[am-row] {
-    & > div[am-col] {
+[@{layout-var}^="gutter padding"] {
+  & > div[@{row-var}] {
+    & > div[@{col-var}] {
       padding-left: @am-grid-gutter-padding;
       &:first-of-type {
         padding-left: 0;
@@ -78,9 +78,9 @@
     }
   }
 }
-[am-layout~="portrait-100"] {
-  & div[am-row] {
-    & div[am-col] {
+[@{layout-var}~="portrait-100"] {
+  & div[@{row-var}] {
+    & div[@{col-var}] {
       @media (orientation:portrait) {
         margin-left: 0;
         padding-left: 0;
