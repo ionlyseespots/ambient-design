@@ -665,6 +665,57 @@ footer {
     padding-left: 0;
   }
 }
+[am-block] {
+  float: left;
+}
+[am-block][am-block~="1"] {
+  width: 8.33333%;
+  height: 100%;
+}
+[am-block][am-block~="2"] {
+  width: 16.6667%;
+  height: 100%;
+}
+[am-block][am-block~="3"] {
+  width: 25%;
+  height: 100%;
+}
+[am-block][am-block~="4"] {
+  width: 33.3333%;
+  height: 100%;
+}
+[am-block][am-block~="5"] {
+  width: 41.6667%;
+  height: 100%;
+}
+[am-block][am-block~="6"] {
+  width: 50%;
+  height: 100%;
+}
+[am-block][am-block~="7"] {
+  width: 58.3333%;
+  height: 100%;
+}
+[am-block][am-block~="8"] {
+  width: 66.6667%;
+  height: 100%;
+}
+[am-block][am-block~="9"] {
+  width: 75%;
+  height: 100%;
+}
+[am-block][am-block~="10"] {
+  width: 83.3333%;
+  height: 100%;
+}
+[am-block][am-block~="11"] {
+  width: 91.6667%;
+  height: 100%;
+}
+[am-block][am-block~="12"] {
+  width: 100%;
+  height: 100%;
+}
 article[am-layout~="vertical"] > section {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
