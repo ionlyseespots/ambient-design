@@ -1,10 +1,10 @@
 body > div[@{wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
   min-width: 100%;
   min-height: 100vh;
-  .flex-display;
-  .flex-flow(row wrap);
+  display: flex;
+  flex-flow: row wrap;
   & > article {
-    .align-items(center);
+    align-items: center;
     margin: auto;
     width: auto;
   }
