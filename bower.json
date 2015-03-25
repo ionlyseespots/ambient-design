@@ -35,8 +35,8 @@
     "docs",
     "examples",
     "roadmap",
-    "less/ambient.min.css",
     "index.html",
-    "apple-touch-icon.png"
+    "apple-touch-icon.png",
+    "less/**/*.css"
   ]
 }
