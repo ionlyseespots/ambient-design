@@ -430,29 +430,6 @@ th {
   padding: 0;
 }
 
-html,
-body {
-  cursor: default;
-}
-code {
-  cursor: text;
-}
-/*
-textarea and input[type="text"] already receive
-"cursor: text" via browsers' base stylesheets
-*/
-a,
-label,
-button,
-input[type="radio"],
-input[type="submit"],
-input[type="checkbox"] {
-  cursor: pointer;
-}
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
 *,
 *:before,
 *:after {
@@ -1497,6 +1474,29 @@ body > div[am-wrapper] > footer a:hover {
   .am-btn:not(.am-floating-action) {
     width: 100%;
   }
+}
+html,
+body {
+  cursor: default;
+}
+code {
+  cursor: text;
+}
+/*
+textarea and input[type="text"] already receive
+"cursor: text" via browsers' base stylesheets
+*/
+a,
+label,
+button,
+input[type="radio"],
+input[type="submit"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
 }
 html {
   font-size: 112.5%;
