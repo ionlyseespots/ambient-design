@@ -146,171 +146,108 @@ div[am-block] {
   }
   &[am-block~="12"] {
     width: 100%;
-    display: block;
+    display: table-row;
   }
 
-  & [am-block] {
-
+  @media (orientation:portrait){
     &[am-block~="1P"] {
-      @media (orientation:portrait){
         width: 8.33333%;
         display: table-cell;
-      }
     }
-    &[am-block~="1L"] {
-      @media (orientation:landscape){
-        width: 8.33333%;
-        display: table-cell;
-      }
-    }
-
     &[am-block~="2P"] {
-      @media (orientation:portrait){
         width: 16.6667%;
         display: table-cell;
-      }
     }
-    &[am-block~="2L"] {
-      @media (orientation:landscape){
-        width: 16.6667%;
-        display: table-cell;
-      }
-    }
-
     &[am-block~="3P"] {
-      @media (orientation:portrait){
         width: 25%;
         display: table-cell;
-      }
     }
-    &[am-block~="3L"] {
-      @media (orientation:landscape){
-        width: 25%;
-        display: table-cell;
-      }
-    }
-
     &[am-block~="4P"] {
-      @media (orientation:portrait){
         width: 33.3333%;
         display: table-cell;
-      }
     }
-    &[am-block~="4L"] {
-      @media (orientation:landscape){
-        width: 33.3333%;   display: table-cell;
-
-      }
-    }
-
     &[am-block~="5P"] {
-      @media (orientation:portrait){
         width: 41.6667%;
         display: table-cell;
-      }
     }
-    &[am-block~="5L"] {
-      @media (orientation:landscape){
-        width: 41.6667%; display: table-cell;
-
-      }
-    }
-
     &[am-block~="6P"] {
-      @media (orientation:portrait){
         width: 50%;
         display: table-cell;
-      }
     }
-    &[am-block~="6L"] {
-      @media (orientation:landscape){
-        width: 50%; display: table-cell;
-
-      }
-    }
-
     &[am-block~="7P"] {
-      @media (orientation:portrait){
         width: 58.3333%;
         display: table-cell;
-      }
     }
-    &[am-block~="7L"] {
-      @media (orientation:landscape){
-        width: 58.3333%; display: table-cell;
-
-      }
-    }
-
     &[am-block~="8P"] {
-      @media (orientation:portrait){
         width: 66.6667%;
         display: table-cell;
-      }
     }
-    &[am-block~="8L"] {
-      @media (orientation:landscape){
-        width: 66.6667%; display: table-cell;
-
-      }
-    }
-
     &[am-block~="9P"] {
-      @media (orientation:portrait){
         width: 75%;
         display: table-cell;
-      }
     }
-    &[am-block~="9L"] {
-      @media (orientation:landscape){
-        width: 75%; display: table-cell;
-
-      }
-    }
-
     &[am-block~="10P"] {
-      @media (orientation:portrait){
         width: 83.3333%;
         display: table-cell;
-      }
     }
-    &[am-block~="10L"] {
-      @media (orientation:landscape){
-        width: 83.3333%;   display: table-cell;
-
-      }
-    }
-
-
     &[am-block~="11P"] {
-      @media (orientation:portrait){
         width: 91.6667%;
         display: table-cell;
-      }
     }
-    &[am-block~="11L"] {
-      @media (orientation:landscape){
-        width: 91.6667%;   display: table-cell;
-
-      }
-    }
-
-
     &[am-block~="12P"] {
-      @media (orientation:portrait){
         width: 100%;
-        display: block;
-      }
+        display: table-row;
     }
-    &[am-block~="12L"] {
-      @media (orientation:landscape){
-        width: 100%;
-        display: block;
-      }
-    }
-
-
   }
 
-
+  @media (orientation:landscape){
+    &[am-block~="1L"] {
+        width: 8.33333%;
+        display: table-cell;
+    }
+    &[am-block~="2L"] {
+        width: 16.6667%;
+        display: table-cell;
+    }
+    &[am-block~="3L"] {
+        width: 25%;
+        display: table-cell;
+    }
+    &[am-block~="4L"] {
+        width: 33.3333%;
+        display: table-cell;
+    }
+    &[am-block~="5L"] {
+        width: 41.6667%;
+        display: table-cell;
+    }
+    &[am-block~="6L"] {
+        width: 50%;
+        display: table-cell;
+    }
+    &[am-block~="7L"] {
+        width: 58.3333%;
+        display: table-cell;
+    }
+    &[am-block~="8L"] {
+        width: 66.6667%;
+        display: table-cell;
+    }
+    &[am-block~="9L"] {
+        width: 75%;
+        display: table-cell;
+    }
+    &[am-block~="10L"] {
+        width: 83.3333%;
+        display: table-cell;
+    }
+    &[am-block~="11L"] {
+        width: 91.6667%;
+        display: table-cell;
+    }
+    &[am-block~="12L"] {
+        width: 100%;
+        display: table-row;
+    }
+  }
 }
