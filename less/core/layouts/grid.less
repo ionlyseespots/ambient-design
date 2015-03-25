@@ -1,9 +1,9 @@
 [@{row-var}]{
-  .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-  .flex-display;
-  .flex-flow(row wrap);
+  flex-basis: auto; // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+  display: flex;
+  flex-flow: row wrap;
   & div[@{col-var}] {
-    .flex(1 auto);
+    flex: 1 auto;
     width: @am-flex-width1;
     &[@{col-var}~="25"] {
       width: @am-flex-width2;
@@ -27,7 +27,7 @@
   &[@{row-var}^="gutter margin"] {
     & > div[@{col-var}] {
       margin-left: @am-grid-gutter-margin;
-      .flex-basis(0);
+      flex-basis: 0;
       &:first-of-type {
         margin-left: -@am-grid-gutter-margin;
         padding-left: @am-grid-gutter-margin;
@@ -51,7 +51,7 @@
         }
       }
       & > div[@{col-var}] {
-        .flex-basis(auto);
+        flex-basis: auto;
         width: 100%;
       }
     }
@@ -84,7 +84,7 @@
       @media (orientation:portrait) {
         margin-left: 0;
         padding-left: 0;
-        .flex-basis(auto);
+        flex-basis: auto;
         width: 100%;
         &:first-of-type {
           margin-left: 0;

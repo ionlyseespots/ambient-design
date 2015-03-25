@@ -12,8 +12,8 @@ html {
 body {
   min-height: 100%;
   height: 100%;
-  .flex-display;
-  .flex-flow(row wrap);
+  display:flex;
+  flex-flow: row wrap;
 }
 // http://www.w3.org/TR/CSS2/visuren.html
 // Block elements are 100% width of parent element, if width is not specified.
@@ -41,33 +41,33 @@ main,
 article,
 section,
 footer {
-  .flex-display;
-  .flex-flow(row wrap);
-  .align-content(flex-start);
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
   position: relative;
 //  max-width: 100%;
 }
 main,
 section,
 aside + article {
-  .flex(1 @am-flex-width1);
+  flex: 1 @am-flex-width1;
   min-width: @am-flex-width1; // fixes firefox issue with flex widths
 }
 aside {
-  .flex-basis(@am-flex-width-p1);
+  flex-basis: @am-flex-width-p1;
 }
 footer {
 //  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
-  .align-self(flex-end);
+  align-self: flex-end;
 }
 
 @media (orientation:portrait){
   article {
-    .flex-direction(column);
+    flex-direction: column;
   }
   section,
   aside {
-    .flex-basis(auto); // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+    flex-basis: auto; // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
     width: 100%;
   }
 }
