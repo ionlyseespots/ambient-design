@@ -708,7 +708,7 @@ div[am-block] {
   table-layout: fixed;
 }
 div[am-block][am-block~="1"] {
-  width: 8.33333%;
+  width: 8.3333%;
   display: table-cell;
 }
 div[am-block][am-block~="2"] {
@@ -757,7 +757,7 @@ div[am-block][am-block~="12"] {
 }
 @media (orientation: portrait) {
   div[am-block][am-block~="1P"] {
-    width: 8.33333%;
+    width: 8.3333%;
     display: table-cell;
   }
   div[am-block][am-block~="2P"] {
@@ -807,7 +807,7 @@ div[am-block][am-block~="12"] {
 }
 @media (orientation: landscape) {
   div[am-block][am-block~="1L"] {
-    width: 8.33333%;
+    width: 8.3333%;
     display: table-cell;
   }
   div[am-block][am-block~="2L"] {
