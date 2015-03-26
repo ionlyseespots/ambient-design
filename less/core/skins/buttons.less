@@ -7,7 +7,6 @@
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
-  cursor: pointer;
   display: inline-block;
   position: relative;
   font-size: 14px;
@@ -27,6 +26,11 @@
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
+  &.@{am-prefix}-flat {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
   &.@{am-prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
     box-shadow: none;
