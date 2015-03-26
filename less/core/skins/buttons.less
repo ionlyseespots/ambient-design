@@ -3,7 +3,7 @@
 // http://davidwalsh.name/html5-buttons
 // http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons
 
-.@{prefix}-btn {
+.@{am-prefix}-btn {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -27,14 +27,14 @@
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
-  &.@{prefix}-disabled, &[disabled] {
+  &.@{am-prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
     box-shadow: none;
     color: hsl(0, 0%, 60%);
     text-shadow: 0 1px 0 hsl(0, 0%, 100%);
     pointer-events: none;
   }
-  &.@{prefix}-floating-action {
+  &.@{am-prefix}-floating-action {
     background-clip: padding-box;
     font-size: 26px;
     z-index: 1;
@@ -48,16 +48,16 @@
       padding-bottom: 10px;
     }
   }
-  &.@{prefix}-primary {
+  &.@{am-prefix}-primary {
     background-color: @am-primary;
     color: @am-clr-btn-primary-text;
   }
-  &.@{prefix}-secondary {
+  &.@{am-prefix}-secondary {
     background-color: @am-secondary;
     color: @am-clr-btn-secondary-text;
   }
   @media (max-width: 30em){
-    &:not(.@{prefix}-floating-action) {
+    &:not(.@{am-prefix}-floating-action) {
       width: 100%;
     }
   }

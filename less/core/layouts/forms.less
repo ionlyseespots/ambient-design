@@ -1,4 +1,4 @@
-form[@{layout-var}] {
+form[@{am-layout-var}] {
   width: 100%;
   & fieldset {
       border: none;
@@ -42,12 +42,12 @@ form[@{layout-var}] {
   }
 
   //== Inline
-  &[@{layout-var}~="inline"] {
+  &[@{am-layout-var}~="inline"] {
     // inherits default am-layout semantic root element properties
   }
 
   //== Stacked
-  &[@{layout-var}~="stacked"] {
+  &[@{am-layout-var}~="stacked"] {
     & input:not([type="checkbox"]):not([type="radio"]),
     & select,
     & label {
@@ -56,7 +56,7 @@ form[@{layout-var}] {
   }
 
   //== Aligned
-  &[@{layout-var}~="aligned"] {
+  &[@{am-layout-var}~="aligned"] {
     & > span {
       display: flex;
       flex-flow: row wrap;
@@ -94,7 +94,7 @@ form[@{layout-var}] {
   }
 
   //== Multi-column
-  &[@{layout-var}~="multicolumn"]  {
+  &[@{am-layout-var}~="multicolumn"]  {
     display: flex;
     flex-flow: row wrap;
     & input:not([type="checkbox"]):not([type="radio"]),
