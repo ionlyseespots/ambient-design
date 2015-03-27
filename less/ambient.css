@@ -801,7 +801,6 @@ body > div[am-wrapper] > footer a:hover {
 [am-layout][am-layout~="frame"] header {
   min-height: 100px;
   max-height: 100px;
-  flex: 1;
 }
 [am-layout][am-layout~="frame"] div {
   display: flex;
@@ -813,7 +812,6 @@ body > div[am-wrapper] > footer a:hover {
 [am-layout][am-layout~="frame"] footer {
   min-height: 100px;
   max-height: 100px;
-  flex: 1;
 }
 [am-layout][am-layout~="vertical-center"] {
   display: flex;
