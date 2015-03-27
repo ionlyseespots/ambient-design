@@ -47,6 +47,9 @@ footer {
   position: relative;
 //  max-width: 100%;
 }
+header {
+  align-self: flex-start;
+}
 main,
 section,
 aside + article {
@@ -57,7 +60,7 @@ aside {
   flex-basis: @am-flex-width-p1;
 }
 footer {
-//  .flex-order(2); // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
+//  flex-order: 2; // sticky footer issue in IE is known issue:: https://github.com/philipwalton/solved-by-flexbox/issues/28
   align-self: flex-end;
 }
 

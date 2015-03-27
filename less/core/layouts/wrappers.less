@@ -29,3 +29,27 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
     }
   }
 }
+
+
+[@{am-layout-var}] {
+  &[@{am-layout-var}~="frame"] {
+    flex-flow: column nowrap;
+    & > {
+      header {
+        min-height: @am-frame-header;
+        max-height: @am-frame-header;
+      }
+      div {
+        display: flex;
+        flex-flow: row wrap;
+        overflow-y: auto;
+        min-height: @am-frame-content;
+        max-height: @am-frame-content;
+      }
+      footer {
+        min-height: @am-frame-footer;
+        max-height: @am-frame-footer;
+      }
+    }
+  }
+}
