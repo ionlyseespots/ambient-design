@@ -1,13 +1,8 @@
-body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
   min-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: row wrap;
-  & > article {
-    align-items: center;
-    margin: auto;
-    width: auto;
-  }
   & > header,
   & > footer {
     background-color: @am-closure;
@@ -30,24 +25,25 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
   }
 }
 
-
 [@{am-layout-var}] {
   &[@{am-layout-var}~="frame"] {
     flex-flow: column nowrap;
+    max-height: @am-frame;
     & > {
       header {
-        min-height: @am-frame-header;
+        align-items: flex-start;
+        flex: 0 0 auto;
         max-height: @am-frame-header;
       }
       div {
         display: flex;
         flex-flow: row wrap;
         overflow-y: auto;
-        min-height: @am-frame-content;
         max-height: @am-frame-content;
       }
       footer {
-        min-height: @am-frame-footer;
+        align-items: flex-start;
+        flex: 0 0 auto;
         max-height: @am-frame-footer;
       }
     }

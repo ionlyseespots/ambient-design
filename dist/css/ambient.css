@@ -866,6 +866,27 @@ article[am-layout~="vertical"] > section {
           flex-basis: auto;
   width: 100%;
 }
+[am-layout^="card"] {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
+  max-width: 100%;
+}
+[am-layout^="card"] > div {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin: .5em 0;
+  display: inline-block;
+}
+[am-layout^="card"][am-layout~="vertical"] {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;
+}
 form[am-layout] {
   width: 100%;
 }
@@ -1269,7 +1290,7 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-event~="elevate"]:focus:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-body > div[am-wrapper] {
+div[am-wrapper] {
   min-width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -1280,49 +1301,49 @@ body > div[am-wrapper] {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
 }
-body > div[am-wrapper] > article {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  width: auto;
-}
-body > div[am-wrapper] > header,
-body > div[am-wrapper] > footer {
+div[am-wrapper] > header,
+div[am-wrapper] > footer {
   background-color: #37474f;
   color: #ffb8a2;
 }
-body > div[am-wrapper] > header h1,
-body > div[am-wrapper] > footer h1,
-body > div[am-wrapper] > header h2,
-body > div[am-wrapper] > footer h2,
-body > div[am-wrapper] > header h3,
-body > div[am-wrapper] > footer h3,
-body > div[am-wrapper] > header h4,
-body > div[am-wrapper] > footer h4,
-body > div[am-wrapper] > header h5,
-body > div[am-wrapper] > footer h5,
-body > div[am-wrapper] > header h6,
-body > div[am-wrapper] > footer h6 {
+div[am-wrapper] > header h1,
+div[am-wrapper] > footer h1,
+div[am-wrapper] > header h2,
+div[am-wrapper] > footer h2,
+div[am-wrapper] > header h3,
+div[am-wrapper] > footer h3,
+div[am-wrapper] > header h4,
+div[am-wrapper] > footer h4,
+div[am-wrapper] > header h5,
+div[am-wrapper] > footer h5,
+div[am-wrapper] > header h6,
+div[am-wrapper] > footer h6 {
   color: #ffb8a2;
 }
-body > div[am-wrapper] > header a,
-body > div[am-wrapper] > footer a {
+div[am-wrapper] > header a,
+div[am-wrapper] > footer a {
   color: #ffb8a2;
 }
-body > div[am-wrapper] > header a:hover,
-body > div[am-wrapper] > footer a:hover {
+div[am-wrapper] > header a:hover,
+div[am-wrapper] > footer a:hover {
   color: #ffffff;
 }
 [am-layout][am-layout~="frame"] {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  max-height: 100%;
 }
 [am-layout][am-layout~="frame"] header {
-  min-height: 100px;
-  max-height: 100px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-height: 100%;
 }
 [am-layout][am-layout~="frame"] div {
   display: -webkit-box;
@@ -1333,12 +1354,18 @@ body > div[am-wrapper] > footer a:hover {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   overflow-y: auto;
-  min-height: 400px;
-  max-height: 400px;
+  max-height: calc(300%);
 }
 [am-layout][am-layout~="frame"] footer {
-  min-height: 100px;
-  max-height: 100px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-height: 100%;
 }
 [am-layout][am-layout~="vertical-center"] {
   display: -webkit-box;
@@ -1433,15 +1460,15 @@ body > div[am-wrapper] > footer a:hover {
   height: 100%;
   margin: 0 auto;
 }
-[am-image-slider] figure:nth-child( 1) {
+[am-image-slider] figure:nth-child(1) {
   -webkit-animation-delay: -2.77777778s;
   animation-delay: -2.77777778s;
 }
-[am-image-slider] figure:nth-child( 2) {
+[am-image-slider] figure:nth-child(2) {
   -webkit-animation-delay: 5.55555556s;
   animation-delay: 5.55555556s;
 }
-[am-image-slider] figure:nth-child( 3) {
+[am-image-slider] figure:nth-child(3) {
   -webkit-animation-delay: 13.88888889s;
   animation-delay: 13.88888889s;
 }
