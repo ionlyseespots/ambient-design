@@ -389,6 +389,27 @@ article[am-layout~="vertical"] > section {
   flex-basis: auto;
   width: 100%;
 }
+[am-layout^="card"] {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
+  max-width: 100%;
+}
+[am-layout^="card"] > div {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin: .5em 0;
+  display: inline-block;
+}
+[am-layout^="card"][am-layout~="vertical"] {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;
+}
 form[am-layout] {
   width: 100%;
 }
