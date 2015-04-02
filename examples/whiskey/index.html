@@ -26,17 +26,23 @@
         Left
     </h1>
 </aside>
-<main>
+<main am-layout="frame">
+<header>
+    <h1>main framed header</h1>
+</header>
+<div>
     <article>
         <h1>
             article above frame
         </h1>
-        <section am-layout="frame">
+        <section am-layout="frame overflow-y">
             <header>
                 <h1>
                     frame header
                 </h1>
-
+                <h1>
+                    second frame header
+                </h1>
             </header>
             <div>
 
@@ -112,7 +118,7 @@
                 </p>
             </footer>
         </section>
-        <section am-layout="frame">
+        <section am-layout="frame overflow-y">
             <header>
                 <h1>
                     frame header
@@ -202,8 +208,11 @@
         <h1>
             second article
         </h1>
+        <p>
+            hfhf asdsa fklfsdfsdljfKLSDfj kldfj
+        </p>
     </article>
-    <article am-layout="frame">
+    <article am-layout="frame overflow-x">
         <header>
             <h1>
                 frame header
@@ -215,7 +224,7 @@
                 Content
             </h2>
 
-            <section>
+            <section style="min-width: 2000px;">
                 <h1>
                     section
                 </h1>
@@ -320,6 +329,10 @@
         article below div
     </h1>
 </article>
+</div>
+<footer>
+    <h1>main framed footer</h1>
+</footer>
 </main>
 <aside>
     <h1>

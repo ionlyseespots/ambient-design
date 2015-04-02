@@ -25,26 +25,37 @@ div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-d
   }
 }
 
+//http://www.smashingmagazine.com/2013/05/03/infinite-scrolling-lets-get-to-the-bottom-of-this/
 [@{am-layout-var}] {
   &[@{am-layout-var}~="frame"] {
     flex-flow: column nowrap;
-    max-height: @am-frame;
+    max-height: 100%;
     & > {
       header {
         align-items: flex-start;
         flex: 0 0 auto;
-        max-height: @am-frame-header;
       }
       div {
         display: flex;
         flex-flow: row wrap;
-        overflow-y: auto;
-        max-height: @am-frame-content;
+        -webkit-overflow-scrolling: touch; // https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+        overflow: auto;
       }
       footer {
         align-items: flex-start;
         flex: 0 0 auto;
-        max-height: @am-frame-footer;
+      }
+    }
+    &[@{am-layout-var}~="overflow-y"] {
+      > div {
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    }
+    &[@{am-layout-var}~="overflow-x"] {
+      > div {
+        overflow-x: scroll;
+        overflow-y: hidden;
       }
     }
   }

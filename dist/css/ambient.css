@@ -1343,7 +1343,6 @@ div[am-wrapper] > footer a:hover {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  max-height: 100%;
 }
 [am-layout][am-layout~="frame"] div {
   display: -webkit-box;
@@ -1353,8 +1352,8 @@ div[am-wrapper] > footer a:hover {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  overflow-y: auto;
-  max-height: calc(300%);
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 [am-layout][am-layout~="frame"] footer {
   -webkit-box-align: start;
@@ -1365,7 +1364,14 @@ div[am-wrapper] > footer a:hover {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  max-height: 100%;
+}
+[am-layout][am-layout~="frame"][am-layout~="overflow-y"] > div {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+[am-layout][am-layout~="frame"][am-layout~="overflow-x"] > div {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 [am-layout][am-layout~="vertical-center"] {
   display: -webkit-box;
