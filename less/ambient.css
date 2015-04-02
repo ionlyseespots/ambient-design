@@ -790,6 +790,13 @@ div[am-wrapper] > header a:hover,
 div[am-wrapper] > footer a:hover {
   color: #ffffff;
 }
+*:not(body) > [am-wrapper] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 [am-layout][am-layout~="frame"] {
   flex-flow: column nowrap;
   max-height: 100%;
@@ -798,7 +805,7 @@ div[am-wrapper] > footer a:hover {
   align-items: flex-start;
   flex: 0 0 auto;
 }
-[am-layout][am-layout~="frame"] div {
+[am-layout][am-layout~="frame"] div[am-scrollable] {
   display: flex;
   flex-flow: row wrap;
   -webkit-overflow-scrolling: touch;
@@ -808,12 +815,12 @@ div[am-wrapper] > footer a:hover {
   align-items: flex-start;
   flex: 0 0 auto;
 }
-[am-layout][am-layout~="frame"][am-layout~="overflow-y"] > div {
-  overflow-y: scroll;
+[am-layout][am-layout~="frame"][am-layout~="overflow-y"] > div[am-scrollable] {
+  overflow-y: auto;
   overflow-x: hidden;
 }
-[am-layout][am-layout~="frame"][am-layout~="overflow-x"] > div {
-  overflow-x: scroll;
+[am-layout][am-layout~="frame"][am-layout~="overflow-x"] > div[am-scrollable] {
+  overflow-x: auto;
   overflow-y: hidden;
 }
 [am-layout][am-layout~="vertical-center"] {

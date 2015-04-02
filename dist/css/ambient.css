@@ -1328,6 +1328,13 @@ div[am-wrapper] > header a:hover,
 div[am-wrapper] > footer a:hover {
   color: #ffffff;
 }
+*:not(body) > [am-wrapper] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 [am-layout][am-layout~="frame"] {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
@@ -1366,11 +1373,11 @@ div[am-wrapper] > footer a:hover {
           flex: 0 0 auto;
 }
 [am-layout][am-layout~="frame"][am-layout~="overflow-y"] > div {
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 [am-layout][am-layout~="frame"][am-layout~="overflow-x"] > div {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
 [am-layout][am-layout~="vertical-center"] {

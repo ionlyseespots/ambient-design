@@ -25,7 +25,13 @@ div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-d
   }
 }
 
+*:not(body) > [@{am-wrapper-var}] { // Generic wrapper
+  position:absolute;
+  top:0; right:0; bottom:0; left:0;
+}
+
 //http://www.smashingmagazine.com/2013/05/03/infinite-scrolling-lets-get-to-the-bottom-of-this/
+// frame needs a parent context for max-height to reach 100%
 [@{am-layout-var}] {
   &[@{am-layout-var}~="frame"] {
     flex-flow: column nowrap;
@@ -35,7 +41,7 @@ div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-d
         align-items: flex-start;
         flex: 0 0 auto;
       }
-      div {
+      div[@{am-scrollable-var}] {
         display: flex;
         flex-flow: row wrap;
         -webkit-overflow-scrolling: touch; // https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
@@ -47,14 +53,14 @@ div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-d
       }
     }
     &[@{am-layout-var}~="overflow-y"] {
-      > div {
-        overflow-y: scroll;
+      > div[@{am-scrollable-var}] {
+        overflow-y: auto;
         overflow-x: hidden;
       }
     }
     &[@{am-layout-var}~="overflow-x"] {
-      > div {
-        overflow-x: scroll;
+      > div[@{am-scrollable-var}] {
+        overflow-x: auto;
         overflow-y: hidden;
       }
     }
