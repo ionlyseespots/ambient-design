@@ -789,6 +789,7 @@ div[am-wrapper] > footer a:hover {
   flex-flow: row wrap;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
+  max-height: 100%;
 }
 [am-layout][am-layout~="frame"] footer {
   align-items: flex-start;
