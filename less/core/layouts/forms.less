@@ -1,10 +1,10 @@
-form[@{layout-var}] {
+form[@{am-layout-var}] {
   width: 100%;
   & fieldset {
       border: none;
       padding: 0;
       margin: 0;
-      .flex-basis(100%); // IE elements inherit flex basis
+      flex-basis: 100%; // IE elements inherit flex basis
       // <fieldset> is a  replaced element and does not currently allow you to change its display with CSS, flexbox design pattern will break if you make use of <fieldset> element
       // http://stackoverflow.com/questions/19679337/why-are-not-all-flexbox-elements-behaving-like-flexbox-divs
       // fieldset for flexbox
@@ -42,12 +42,12 @@ form[@{layout-var}] {
   }
 
   //== Inline
-  &[@{layout-var}~="inline"] {
+  &[@{am-layout-var}~="inline"] {
     // inherits default am-layout semantic root element properties
   }
 
   //== Stacked
-  &[@{layout-var}~="stacked"] {
+  &[@{am-layout-var}~="stacked"] {
     & input:not([type="checkbox"]):not([type="radio"]),
     & select,
     & label {
@@ -56,17 +56,17 @@ form[@{layout-var}] {
   }
 
   //== Aligned
-  &[@{layout-var}~="aligned"] {
+  &[@{am-layout-var}~="aligned"] {
     & > span {
-      .flex-display;
-      .flex-flow(row wrap);
-      .justify-content(justify);
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: justify;
       width: 100%;
       & label,
       & input:not([type="checkbox"]):not([type="radio"]),
       & select,
       & textarea {
-        .flex(1 auto);
+        flex: 1 auto;
         width: @am-flex-width1;
         @media (max-width: 30em){
         width: 100%;
@@ -75,15 +75,15 @@ form[@{layout-var}] {
     }
     fieldset > div[role="group"] {
       & > span {
-        .flex-display;
-        .flex-flow(row wrap);
-        .justify-content(justify);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: justify;
         width: 100%;
         & label,
         & input:not([type="checkbox"]):not([type="radio"]),
         & select,
         & textarea {
-          .flex(1 auto);
+          flex: 1 auto;
           width: @am-flex-width1;
           @media (max-width: 30em){
             width: 100%;
@@ -94,9 +94,9 @@ form[@{layout-var}] {
   }
 
   //== Multi-column
-  &[@{layout-var}~="multicolumn"]  {
-    .flex-display;
-    .flex-flow(row wrap);
+  &[@{am-layout-var}~="multicolumn"]  {
+    display: flex;
+    flex-flow: row wrap;
     & input:not([type="checkbox"]):not([type="radio"]),
     & select,
     & textarea,
@@ -104,15 +104,15 @@ form[@{layout-var}] {
       width: 100%;
     }
     & > div  {
-      .flex(1 auto);
+      flex: 1 auto;
       width: @am-flex-width1;
       @media (max-width: 30em){
         width: 100%;
       }
     }
     fieldset > div[role="group"] {
-      .flex-display;
-      .flex-flow(row wrap);
+	  display: flex;
+	  flex-flow: row wrap;
       & input:not([type="checkbox"]):not([type="radio"]),
       & select,
       & textarea,
@@ -120,7 +120,7 @@ form[@{layout-var}] {
         width: 100%;
       }
       & > div  {
-        .flex(1 auto);
+        flex: 1 auto;
         width: @am-flex-width1;
         @media (max-width: 30em){
           width: 100%;

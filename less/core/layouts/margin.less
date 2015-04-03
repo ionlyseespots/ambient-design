@@ -1,45 +1,45 @@
-[@{margin-var}] {
+[@{am-margin-var}] {
   margin: @am-root-margin;
-  &[@{margin-var}="small"] {
-    margin: calc(@am-root-margin - .5vw);
+  &[@{am-margin-var}="small"] {
+    margin: calc(@am-root-margin - .5em);
   }
-  &[@{margin-var}="large"] {
-    margin: calc(@am-root-margin + 2vw);
+  &[@{am-margin-var}="large"] {
+    margin: calc(@am-root-margin + .5em);
   }
-  &[@{margin-var}~="top"] {
+  &[@{am-margin-var}~="top"] {
     margin: @am-root-margin 0 0 0;
-    &[@{margin-var}~="large"] {
-      margin: calc(@am-root-margin + 2vw) 0 0 0;
+    &[@{am-margin-var}~="large"] {
+      margin: calc(@am-root-margin + .5em) 0 0 0;
     }
-    &[@{margin-var}~="small"] {
-      margin: calc(@am-root-margin - .5vw) 0 0 0;
+    &[@{am-margin-var}~="small"] {
+      margin: calc(@am-root-margin - .5em) 0 0 0;
     }
   }
-  &[@{margin-var}~="right"] {
+  &[@{am-margin-var}~="right"] {
     margin: 0 @am-root-margin 0 0;
-    &[@{margin-var}~="large"] {
-      margin: 0 calc(@am-root-margin + 2vw) 0 0;
+    &[@{am-margin-var}~="large"] {
+      margin: 0 calc(@am-root-margin + .5em) 0 0;
     }
-    &[@{margin-var}~="small"] {
-      margin: 0 calc(@am-root-margin - .5vw) 0 0;
+    &[@{am-margin-var}~="small"] {
+      margin: 0 calc(@am-root-margin - .5em) 0 0;
     }
   }
-  &[@{margin-var}~="bottom"] {
+  &[@{am-margin-var}~="bottom"] {
     margin: 0 0 @am-root-margin 0;
-    &[@{margin-var}~="large"] {
-      margin: 0 0 calc(@am-root-margin + 2vw) 0;
+    &[@{am-margin-var}~="large"] {
+      margin: 0 0 calc(@am-root-margin + .5em) 0;
     }
-    &[@{margin-var}~="small"] {
-      margin: 0 0 calc(@am-root-margin - .5vw) 0;
+    &[@{am-margin-var}~="small"] {
+      margin: 0 0 calc(@am-root-margin - .5em) 0;
     }
   }
-  &[@{margin-var}~="left"] {
+  &[@{am-margin-var}~="left"] {
     margin: 0 0 0 @am-root-margin;
-    &[@{margin-var}~="large"] {
-      margin: 0 0 0 calc(@am-root-margin + 2vw);
+    &[@{am-margin-var}~="large"] {
+      margin: 0 0 0 calc(@am-root-margin + .5em);
     }
-    &[@{margin-var}~="small"] {
-      margin: 0 0 0 calc(@am-root-margin - .5vw);
+    &[@{am-margin-var}~="small"] {
+      margin: 0 0 0 calc(@am-root-margin - .5em);
     }
   }
 }
