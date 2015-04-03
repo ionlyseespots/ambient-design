@@ -736,37 +736,37 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-event~="elevate"]:focus:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-div[am-wrapper] {
+body > div[am-wrapper] {
   min-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: row wrap;
 }
-div[am-wrapper] > header,
-div[am-wrapper] > footer {
+body > div[am-wrapper] > header,
+body > div[am-wrapper] > footer {
   background-color: #37474f;
   color: #ffb8a2;
 }
-div[am-wrapper] > header h1,
-div[am-wrapper] > footer h1,
-div[am-wrapper] > header h2,
-div[am-wrapper] > footer h2,
-div[am-wrapper] > header h3,
-div[am-wrapper] > footer h3,
-div[am-wrapper] > header h4,
-div[am-wrapper] > footer h4,
-div[am-wrapper] > header h5,
-div[am-wrapper] > footer h5,
-div[am-wrapper] > header h6,
-div[am-wrapper] > footer h6 {
+body > div[am-wrapper] > header h1,
+body > div[am-wrapper] > footer h1,
+body > div[am-wrapper] > header h2,
+body > div[am-wrapper] > footer h2,
+body > div[am-wrapper] > header h3,
+body > div[am-wrapper] > footer h3,
+body > div[am-wrapper] > header h4,
+body > div[am-wrapper] > footer h4,
+body > div[am-wrapper] > header h5,
+body > div[am-wrapper] > footer h5,
+body > div[am-wrapper] > header h6,
+body > div[am-wrapper] > footer h6 {
   color: #ffb8a2;
 }
-div[am-wrapper] > header a,
-div[am-wrapper] > footer a {
+body > div[am-wrapper] > header a,
+body > div[am-wrapper] > footer a {
   color: #ffb8a2;
 }
-div[am-wrapper] > header a:hover,
-div[am-wrapper] > footer a:hover {
+body > div[am-wrapper] > header a:hover,
+body > div[am-wrapper] > footer a:hover {
   color: #ffffff;
 }
 *:not(body) > [am-wrapper] {
