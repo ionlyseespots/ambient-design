@@ -26,16 +26,18 @@ div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-d
 }
 
 *:not(body) > [@{am-wrapper-var}] { // Generic wrapper
-  position:absolute;
-  top:0; right:0; bottom:0; left:0;
+  max-height: 100%;
 }
 
 //http://www.smashingmagazine.com/2013/05/03/infinite-scrolling-lets-get-to-the-bottom-of-this/
-// frame needs a parent context for max-height to reach 100%
 [@{am-layout-var}] {
   &[@{am-layout-var}~="frame"] {
     flex-flow: column nowrap;
-    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     & > {
       header {
         align-items: flex-start;
