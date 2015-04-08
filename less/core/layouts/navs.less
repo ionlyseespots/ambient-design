@@ -3,28 +3,47 @@ nav[@{am-layout-var}] {
     a {
       flex: 1 @am-flex-width1;
     }
+    &[@{am-layout-var}~="justify-align"] {
+      justify-content: space-between;
+    }
+    &[@{am-layout-var}~="left-align"] {
+      a {
+        align-self: flex-start;
+      }
+    }
+    &[@{am-layout-var}~="right-align"] {
+      justify-content: flex-end;
+      a {
+        align-self: flex-end;
+      }
+    }
+    &[@{am-layout-var}~="center-align"] {
+      justify-content: center;
+      a {
+        align-self: center;
+      }
+    }
   }
   &[@{am-layout-var}~="vertical"] {
     flex-flow: column nowrap;
-  }
-  &[@{am-layout-var}~="justify-align"] {
-    justify-content: space-between;
-  }
-  &[@{am-layout-var}~="left-align"] {
+    display: inline-block; // disable margin-collapse http://stackoverflow.com/questions/19718634/how-to-disable-margin-collapsing
     a {
-      align-self: flex-start;
+      width: 100%;
     }
-  }
-  &[@{am-layout-var}~="right-align"] {
-    justify-content: flex-end;
-    a {
-      align-self: flex-end;
+    &[@{am-layout-var}~="left-align"] {
+      a {
+        text-align: left;
+      }
     }
-  }
-  &[@{am-layout-var}~="center-align"] {
-    justify-content: center;
-    a {
-      align-self: center;
+    &[@{am-layout-var}~="center-align"] {
+         a {
+           text-align: center;
+         }
+       }
+    &[@{am-layout-var}~="right-align"] {
+      a {
+        text-align: right;
+      }
     }
   }
   & a:not(.am-floating-action) {

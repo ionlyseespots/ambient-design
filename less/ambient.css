@@ -522,26 +522,39 @@ form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
 nav[am-layout][am-layout~="horizontal"] a {
   flex: 1 8.3333%;
 }
-nav[am-layout][am-layout~="vertical"] {
-  flex-flow: column nowrap;
-}
-nav[am-layout][am-layout~="justify-align"] {
+nav[am-layout][am-layout~="horizontal"][am-layout~="justify-align"] {
   justify-content: space-between;
 }
-nav[am-layout][am-layout~="left-align"] a {
+nav[am-layout][am-layout~="horizontal"][am-layout~="left-align"] a {
   align-self: flex-start;
 }
-nav[am-layout][am-layout~="right-align"] {
+nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] {
   justify-content: flex-end;
 }
-nav[am-layout][am-layout~="right-align"] a {
+nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] a {
   align-self: flex-end;
 }
-nav[am-layout][am-layout~="center-align"] {
+nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] {
   justify-content: center;
 }
-nav[am-layout][am-layout~="center-align"] a {
+nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] a {
   align-self: center;
+}
+nav[am-layout][am-layout~="vertical"] {
+  flex-flow: column nowrap;
+  display: inline-block;
+}
+nav[am-layout][am-layout~="vertical"] a {
+  width: 100%;
+}
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] a {
+  text-align: left;
+}
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
+  text-align: center;
+}
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
+  text-align: right;
 }
 nav[am-layout] a:not(.am-floating-action) {
   padding: 1em;
@@ -774,11 +787,8 @@ body > div[am-wrapper] > footer a:hover {
 }
 [am-layout][am-layout~="frame"] {
   flex-flow: column nowrap;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  height: 100%;
+  max-height: 100%;
 }
 [am-layout][am-layout~="frame"] header {
   align-items: flex-start;
@@ -789,6 +799,7 @@ body > div[am-wrapper] > footer a:hover {
   flex-flow: row wrap;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
+  height: 100%;
   max-height: 100%;
 }
 [am-layout][am-layout~="frame"] footer {
@@ -802,6 +813,13 @@ body > div[am-wrapper] > footer a:hover {
 [am-layout][am-layout~="frame"][am-layout~="overflow-x"] > div[am-scrollable] {
   overflow-x: auto;
   overflow-y: hidden;
+}
+[am-layout][am-layout~="frame"][am-layout~="absolute"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 [am-layout][am-layout~="vertical-center"] {
   display: flex;
