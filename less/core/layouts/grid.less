@@ -99,14 +99,15 @@
   &[@{am-block-var}~="@{i}@{suffix}"] {
 	width: round((@i * 100% / @n), 4);
 	display: table-cell;
+    float: left;
   }
   .generate-blocks(@n, @suffix, (@i + 1));
 }
 
 .generate-blocks(@n, @suffix, @i) when (@i = @n) {
   &[@{am-block-var}~="@{i}@{suffix}"] {
-	width: 100%;
 	display: table-row;
+    width: 100%;
   }
 }
 
