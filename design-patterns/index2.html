@@ -29,14 +29,14 @@
     <a href="../design-patterns/index.html" class="am-active">Docs</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
-<aside am-layout="frame overflow-y">
+<aside am-layout="frame" am-padding>
     <header>
         <h1>
             Ambient Design
         </h1>
-        <a href class="am-btn am-primary am-flat">Introduction</a>
+        <a href class="am-btn am-primary">Introduction</a>
     </header>
-    <div am-scrollable>
+    <div am-scrollable="overflow-y">
         <nav am-layout="vertical">
             <h1>
                 Docs
@@ -64,21 +64,21 @@
             <a href>Principles</a>
             <a href>Grid</a>
             <a href>Frame</a>
-            <a href>Alignment</a>
+            <a href>Alignment <small>(roadmap)</small></a>
+            <a href>Outline</a>
             <h2>
                 Content
             </h2>
-            <a href>Typography</a>
             <a href>Margin</a>
             <a href>Padding</a>
-            <a href>Outline</a>
+            <a href>Layer</a>
             <h2>
                 Navigation
             </h2>
             <a href>Horizontal</a>
             <a href>Vertical</a>
-            <a href>Menubar</a>
-            <a href>Action sheet</a>
+            <a href>Menubar <small>(roadmap)</small></a>
+            <a href>Action sheet <small>(roadmap)</small></a>
 
             <h2>
                 Components
@@ -90,7 +90,7 @@
             <h2>
                 Patterns
             </h2>
-            <a href>Layer</a>
+            <a href>Typography</a>
             <a href>Color</a>
             <a href>Shadow</a>
             <h2>
@@ -102,26 +102,94 @@
     </div>
     <footer>
         <p>
-            Footer
+            Your stars, shares and comments make us happy!
         </p>
+        <a href>Github</a>
+        <a href>CodePen</a>
+        <a href>Twitter</a>
+
+
     </footer>
 </aside>
 <main role="main">
 
-    <article>
+    <article am-padding>
         <h1>
-            article 1
+            Ambient: An advanced CSS framework with a difference
         </h1>
 
         <section>
             <h1>
-                section 1
+                Ambient differs from traditional CSS frameworks in that provides a solid foundation for HTML5 layout.
             </h1>
-        </section>
-        <section>
-            <h1>
-                section 2
-            </h1>
+            <p>
+                Ambient is intuitive front-end framework for fast, website and app development. It avoids presentational CSS classes in the HTML markup itself, instead using LESS to control the layout in the stylesheet.
+               </p>
+            <p>
+                Ambient extends the power and functionality of CSS3 to HTML5 elements and includes a grid, making it more than enough to get started. And it's completely semantic and responsive, meaning the layout adapts to the orientation of the user's screen or device, using media queries.
+
+                Some practical benefits of this approach are:
+            </p>
+         <ul>
+             <li>Separation of markup and presentation</li>
+             <li>No presentational CSS classes in the HTML markup itself</li>
+             <li>Call mixins (functions) from your CSS layout attributes</li>
+             <li>Nest CSS layout attributes</li>
+             <li>Customizable design patterns</li>
+         </ul>
+            <p>
+                Typography, colors and shadows are designed to create a strong hierarchy of basic styles — however, the font stack, colors and shadows can be easily changed.
+            </p>
+
+<hr />
+
+                <h3>What's included?</h3>
+            <p>
+                Get a high level overview of Ambient below:
+            </p>
+                <div am-block="gutter">
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>Installing</h5>
+                        <p>You can install Ambient using our CLI, Bower, or npm.</p>
+                        <p><a ui-sref="installation" href="#!/installation">Install instructions</a></p>
+                    </div>
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>HTML5</h5>
+                        <p>Learn how to use scaffolding in your website or apps.</p>
+                        <p><a ui-sref="angular" href="#!/angular">HTML5 overview</a></p>
+                    </div>
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>Less</h5>
+                        <p>Our Less-powered codebase includes variables and mixins.</p>
+                        <p><a ui-sref="sass" href="#!/sass">Less overview</a></p>
+                    </div>
+                </div>
+                <div am-block="gutter">
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>The Grid</h5>
+                        <p>The Ambient grid makes flexible, responsive layout easy.</p>
+                        <p><a ui-sref="grid" href="#!/grid">Learn about the grid</a></p>
+                    </div>
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>Patterns</h5>
+                        <p>Quickly build components with customizable styles.</p>
+                        <p><a ui-sref="motion-ui" href="#!/motion-ui">View patterns</a></p>
+                    </div>
+                    <div am-block="4">
+                        <a href><i class="fa fa-star"></i></a>
+                        <h5>Compatibility</h5>
+                        <p>Ambient is a cutting-edge framework for newer browsers.</p>
+                        <p><a ui-sref="compatibility" href="#!/compatibility">View compatibility</a></p>
+                    </div>
+                </div>
+
+
+
         </section>
     </article>
 

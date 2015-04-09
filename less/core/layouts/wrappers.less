@@ -47,22 +47,18 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
         overflow: auto;
         height: 100%;
         max-height: 100%;
+        &[@{am-scrollable-var}~="overflow-y"] {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        &[@{am-scrollable-var}~="overflow-x"] {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
       }
       footer {
         align-items: flex-start;
         flex: 0 0 auto;
-      }
-    }
-    &[@{am-layout-var}~="overflow-y"] {
-      > div[@{am-scrollable-var}] {
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-    }
-    &[@{am-layout-var}~="overflow-x"] {
-      > div[@{am-scrollable-var}] {
-        overflow-x: auto;
-        overflow-y: hidden;
       }
     }
     &[@{am-layout-var}~="absolute"] {
