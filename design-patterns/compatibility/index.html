@@ -12,7 +12,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Ambient -->
-    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+    <link rel="stylesheet" href="../../dist/css/ambient.min.css">
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -24,9 +24,9 @@
     </h1>
 </header>
 <nav am-layout="horizontal" role="navigation" class="am-text-c">
-    <a href="../docs/index.html">Get Started</a>
-    <a href="../layout/index.html">Features</a>
-    <a href="../design-patterns/index.html" class="am-active">Docs</a>
+    <a href="../../docs/index.html">Get Started</a>
+    <a href="../../layout/index.html">Features</a>
+    <a href="../../design-patterns/index.html" class="am-active">Docs</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <aside am-layout="frame" am-padding>
@@ -34,7 +34,7 @@
         <h1>
             Ambient Design
         </h1>
-        <a href class="am-btn am-primary">Introduction</a>
+        <a href="../index.html" class="am-btn am-primary">Introduction</a>
     </header>
     <div am-scrollable="overflow-y">
         <nav am-layout="vertical">
@@ -45,7 +45,7 @@
                 Setup
             </h2>
             <a href>Installation</a>
-            <a href="compatibility/index.html">Compatibility</a>
+            <a href="compatibility/index.html" class="am-active">Compatibility</a>
             <h2>
                 Scaffolding
             </h2>
@@ -107,112 +107,76 @@
     </footer>
 </aside>
 <main role="main">
-    <article>
+    <article am-padding>
         <header>
             <h1>
-                Ambient: An advanced CSS framework with a difference
+                Compatibility
             </h1>
             <p>
-                Ambient is an intuitive front-end framework for fast, app website development.
-                It avoids presentational CSS classes in the HTML markup itself, instead using LESS to control the layout in the stylesheet.
+                Ambient is designed for and tested on numerous browsers and devices.
+                It's built to layout HTML5 and makes use of the CSS3 Flexible Box (flexbox) Layout Module. <br />
+                Here's what to expect for <a href="http://caniuse.com/#feat=flexbox">compatibility</a>.
             </p>
         </header>
-        <section>
-            <h1>
-                Ambient differs from traditional CSS frameworks in that it provides a solid foundation for HTML5 layout.
-            </h1>
-            <p>
-                Ambient extends the power and functionality of CSS3 to HTML5 elements and includes a grid, making it more than enough to get started. And it's completely semantic and responsive, meaning the layout adapts to the orientation of the user's screen or device, using media queries.
-            </p>
-            <blockquote>
-                <p>
-                    <strong>Some practical benefits of this approach are:</strong>
-                </p>
-                <ul>
-                    <li>Separation of markup and presentation</li>
-                    <li>No presentational CSS classes in the HTML markup itself</li>
-                    <li>Call mixins (functions) from your CSS layout attributes</li>
-                    <li>Nest CSS layout attributes</li>
-                    <li>Customizable design patterns</li>
-                </ul>
-            </blockquote>
-            <p>
-                Typography, colors and shadows are designed to create a strong hierarchy of basic styles — however, the font stack, colors and shadows can be easily changed.
-            </p>
-            <hr />
-
-            <h3>
-                What's included?
-            </h3>
-            <p>
-                Get a high level overview of Ambient below:
-            </p>
-            <div am-block>
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        Installing
-                    </h4>
-                    <p>
-                        You can install Ambient using our CLI, Bower, or npm.<br />
-                        <a href>Install instructions</a>
-                    </p>
-                </div>
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        HTML5
-                    </h4>
-                    <p>
-                        Learn how to use scaffolding in your website or apps.<br />
-                        <a href>HTML5 overview</a>
-                    </p>
-                </div>
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        Less
-                    </h4>
-                    <p>
-                        Our Less-powered codebase includes variables and mixins.<br />
-                        <a href>Less overview</a>
-                    </p>
-                </div>
-
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        The Grid
-                    </h4>
-                    <p>
-                        The Ambient grid makes flexible, responsive layout easy.<br />
-                        <a href>Learn about the grid</a>
-                    </p>
-                </div>
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        Patterns
-                    </h4>
-                    <p>
-                        Quickly build components with customizable styles.<br />
-                        <a href>View patterns</a>
-                    </p>
-                </div>
-                <div am-block="4 6P">
-                    <a href><i class="fa fa-star"></i></a>
-                    <h4>
-                        Compatibility
-                    </h4>
-                    <p>
-                        Ambient is a cutting-edge framework for newer browsers.<br />
-                        <a href="compatibility/index.html">View compatibility</a>
-                    </p>
-                </div>
-            </div>
-        </section>
+        <table am-layout="zebra-stripe">
+            <thead>
+                <tr>
+                    <th scope="col">Browser/OS</th>
+                    <th scope="col">Compatibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="Browser/OS">Chrome 31+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Firefox 31+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Safari 7+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">IE 11+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">IE 10</td>
+                    <td data-title="Compatibility" class="am-clr-14-text">(partial)</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">IE6&ndash;9</td>
+                    <td data-title="Compatibility" class="am-clr-1-text">no</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Opera 27+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">iOS Safari 7.1+ (iPhone)</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Android 4.4+</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Android 4.1&ndash; 4.3</td>
+                    <td data-title="Compatibility" class="am-clr-14-text">(partial)</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Chrome 41+ for Android</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+                <tr>
+                    <td data-title="Browser/OS">Opera 8+ (mini)</td>
+                    <td data-title="Compatibility" class="am-clr-10-text">yes</td>
+                </tr>
+            </tbody>
+        </table>
         <hr />
-
         <footer>
             <div am-block>
                 <div am-block="6 12P" colspan="3">
