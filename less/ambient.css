@@ -870,6 +870,9 @@ body > div[am-wrapper] > footer a:hover {
   overflow: auto;
   height: 100%;
   max-height: 100%;
+  border-width: 1px;
+  border-color: #d4d4d4;
+  border-style: solid;
 }
 [am-layout][am-layout~="frame"] div[am-scrollable][am-scrollable~="overflow-y"] {
   overflow-y: auto;
