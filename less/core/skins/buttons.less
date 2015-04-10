@@ -27,11 +27,11 @@
   text-transform: uppercase;
   word-wrap: break-word;
   transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
-//  &.@{am-prefix}-flat {
-//    box-shadow: none;
-//    margin: 0;
-//    padding: 0;
-//  }
+  &.@{am-prefix}-flat {   //TODO  .am-flat is going away in 1.4.0
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
   &:hover {
     background-color: lighten(@am-clr-btn-bg, 8%);
   }
@@ -41,7 +41,7 @@
     color: hsl(0, 0%, 60%);
     text-shadow: 0 1px 0 hsl(0, 0%, 100%);
     pointer-events: none;
-    border: none;
+    border-color: hsl(0, 0%, 98%);
   }
   &.@{am-prefix}-floating-action {
     background-clip: padding-box;

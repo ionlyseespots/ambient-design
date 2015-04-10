@@ -1581,6 +1581,11 @@ body > div[am-wrapper] > footer a:hover {
   -webkit-transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
           transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
 }
+.am-btn.am-flat {
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
 .am-btn:hover {
   background-color: #ffffff;
 }
@@ -1591,7 +1596,7 @@ body > div[am-wrapper] > footer a:hover {
   color: #999999;
   text-shadow: 0 1px 0 #ffffff;
   pointer-events: none;
-  border: none;
+  border-color: #fafafa;
 }
 .am-btn.am-floating-action {
   background-clip: padding-box;
