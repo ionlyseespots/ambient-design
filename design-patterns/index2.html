@@ -29,84 +29,79 @@
     <a href="../design-patterns/index.html" class="am-active">Docs</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
-<aside am-layout="frame" am-padding>
-    <header am-margin="bottom" class="am-text-c">
+<aside am-layout-P="hidden" am-padding>
+    <h1>
+        Ambient Design
+    </h1>
+    <nav am-layout="vertical">
         <h1>
-            Ambient Design
+           Menubar
         </h1>
-        <a href class="am-btn am-primary">Introduction</a>
-    </header>
-    <div am-scrollable="overflow-y">
-        <nav am-layout="vertical">
-            <h1>
-                Menubar <i class="fa fa-angle-down"></i>
-            </h1>
-            <h2>
-                Setup
-            </h2>
-            <a href>Installation</a>
-            <a href="compatibility/index.html">Compatibility</a>
-            <h2>
-                Scaffolding
-            </h2>
-            <a href>body</a>
-            <a href>header</a>
-            <a href>nav</a>
-            <a href>main</a>
-            <a href>article</a>
-            <a href>section</a>
-            <a href>aside</a>
-            <a href>footer</a>
-            <a href>h1 - h6</a>
-            <h2>
-                Layout
-            </h2>
-            <a href>Principles</a>
-            <a href>Grid</a>
-            <a href>Frame</a>
-            <a href>Alignment <small>(roadmap)</small></a>
-            <a href>Outline</a>
-            <h2>
-                Content
-            </h2>
-            <a href>Margin</a>
-            <a href>Padding</a>
-            <a href>Layer</a>
-            <h2>
-                Navigation
-            </h2>
-            <a href>Horizontal</a>
-            <a href>Vertical</a>
-            <a href>Menubar <small>(roadmap)</small></a>
-            <a href>Action sheet <small>(roadmap)</small></a>
+        <a href="../index.html" class="am-btn am-primary">Introduction</a>
+        <h2>
+            Setup
+        </h2>
+        <a href>Installation</a>
+        <a href="compatibility/index.html">Compatibility</a>
+        <h2>
+            Scaffolding
+        </h2>
+        <a href>header</a>
+        <a href>nav</a>
+        <a href>main</a>
+        <a href>article</a>
+        <a href>section</a>
+        <a href>aside</a>
+        <a href>footer</a>
+        <a href>h1 - h6</a>
+        <h2>
+            Layout
+        </h2>
+        <a href>Principles</a>
+        <a href>Grid</a>
+        <a href>Frame</a>
+        <a href>Alignment <small>(roadmap)</small></a>
+        <a href>Outline</a>
+        <h2>
+            Content
+        </h2>
+        <a href>Margin</a>
+        <a href>Padding</a>
+        <a href>Layer</a>
+        <h2>
+            Navigation
+        </h2>
+        <a href>Horizontal</a>
+        <a href>Vertical</a>
+        <a href>Menubar <small>(roadmap)</small></a>
+        <a href>Action sheet <small>(roadmap)</small></a>
 
-            <h2>
-                Components
-            </h2>
-            <a href>Form</a>
-            <a href>Button</a>
-            <a href>Table</a>
-            <a href>Image</a>
-            <h2>
-                Patterns
-            </h2>
-            <a href>Typography</a>
-            <a href>Color</a>
-            <a href>Shadow</a>
-            <h2>
-                Helpers
-            </h2>
-            <a href>Variables</a>
-            <a href>Functions & mixins</a>
-        </nav>
-    </div>
+        <h2>
+            Components
+        </h2>
+        <a href>Form</a>
+        <a href>Button</a>
+        <a href>Table</a>
+        <a href>Image</a>
+        <h2>
+            Patterns
+        </h2>
+        <a href>Typography</a>
+        <a href>Color</a>
+        <a href>Shadow</a>
+        <h2>
+            Helpers
+        </h2>
+        <a href>Variables</a>
+        <a href>Functions & mixins</a>
+    </nav>
     <footer>
         <p>
             Your stars, shares and comments make us happy!
         </p>
     </footer>
 </aside>
-<main role="main">
+<main am-padding role="main">
     <article>
         <header>
             <h1>
@@ -124,6 +119,9 @@
             <p>
                 Ambient extends the power and functionality of CSS3 to HTML5 elements and includes a grid, making it more than enough to get started. And it's completely semantic and responsive, meaning the layout adapts to the orientation of the user's screen or device, using media queries.
             </p>
+            <p>
+                Typography, colors and shadows are designed to create a strong hierarchy of basic styles — however, the font stack, colors and shadows can be easily changed.
+            </p>
             <blockquote>
                 <p>
                     <strong>Some practical benefits of this approach are:</strong>
@@ -136,9 +134,6 @@
                     <li>Customizable design patterns</li>
                 </ul>
             </blockquote>
-            <p>
-                Typography, colors and shadows are designed to create a strong hierarchy of basic styles — however, the font stack, colors and shadows can be easily changed.
-            </p>
             <hr />
 
             <h3>
@@ -220,10 +215,10 @@
                         <a href="../index.html">Ambient</a>
                     </h3>
                     <p>
-                        Ambient is a framework you can use to build flexible, more polished app websites that work in portrait or landscape orientation.
+                        Ambient is a framework you can use to build flexible, clean code for app websites that work in portrait or landscape orientation.
                     </p>
                     <p>
-                        I've taken what I've learned from working with traditional CSS frameworks to build an entirely new framework for building with HTML5.
+                        I've taken what I've learned from working with traditional CSS frameworks to build an entirely new framework.
                     </p>
                 </div>
                 <div am-block="3 6P">
@@ -251,29 +246,28 @@
             <div am-block>
                 <div am-block="3 6P">
                     <p>
-                        <i class="fa fa-star"></i> Move the web forward<br />
-                        <a href="http://h5bp.github.io/movethewebforward/"><small>Level up!</small></a>
+                        <i class="fa fa-star"></i> Level up!<br />
+                        <a href="http://h5bp.github.io/movethewebforward/">Move the web forward</a>
                     </p>
                 </div>
                 <div am-block="3 6P">
                     <p>
                         <i class="fa fa-star"></i> Ambient<br />
-                        <a href="../index.html"><small>An advanced front-end framework for HTML5.</small></a>
+                        <a href="../index.html">Build with HTML5</a>
                     </p>
                 </div>
                 <div am-block="3 6P">
                     <p>
                         <i class="fa fa-star"></i> Notable<br />
-                        <a href="https://github.com/ionlyseespots/ambient-design/releases"><small>View feedback on Releases</small></a>
+                        <a href="https://github.com/ionlyseespots/ambient-design/releases">View feedback on releases</a>
                     </p>
                 </div>
                 <div am-block="3 6P">
                     <p>
                         <i class="fa fa-star"></i> Open source<br />
-                        <a href="https://github.com/ionlyseespots/ambient-design"><small>All are welcome to contribute.</small></a>
+                        <a href="https://github.com/ionlyseespots/ambient-design">All are welcome to contribute</a>
                     </p>
                 </div>
-            </div>
         </footer>
     </article>
 </main>

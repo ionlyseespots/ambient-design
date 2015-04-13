@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.5 - 2015-04-10
+ * ambient - v1.3.5 - 2015-04-13
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -1450,6 +1450,19 @@ body > div[am-wrapper] > footer a:hover {
   bottom: 0;
   left: 0;
   min-height: 100%;
+}
+[am-layout][am-layout~="hidden"] {
+  display: none;
+}
+@media (orientation: portrait) {
+  [am-layout-P~="hidden"] {
+    display: none;
+  }
+}
+@media (orientation: landscape) {
+  [am-layout-lL~="hidden"] {
+    display: none;
+  }
 }
 [am-layout][am-layout~="vertical-center"] {
   display: -webkit-box;

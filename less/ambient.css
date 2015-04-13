@@ -894,6 +894,16 @@ body > div[am-wrapper] > footer a:hover {
   left: 0;
   min-height: 100%;
 }
+@media (orientation: portrait) {
+  [am-layout-P~="hidden"] {
+    display: none;
+  }
+}
+@media (orientation: landscape) {
+  [am-layout-lL~="hidden"] {
+    display: none;
+  }
+}
 [am-layout][am-layout~="vertical-center"] {
   display: flex;
   align-items: center;
