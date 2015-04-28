@@ -33,11 +33,8 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
 [@{am-layout-var}] {
   &[@{am-layout-var}~="frame"] {
     flex-flow: column nowrap;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    height: 100%;
+    max-height: 100%;
     & > {
       header {
         align-items: flex-start;
@@ -48,24 +45,48 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
         flex-flow: row wrap;
         -webkit-overflow-scrolling: touch; // https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
         overflow: auto;
+        height: 100%;
         max-height: 100%;
+        border-width: 1px;
+        border-color: @am-clr-frame-border;
+        border-style: solid;
+        &[@{am-scrollable-var}~="overflow-y"] {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        &[@{am-scrollable-var}~="overflow-x"] {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
       }
       footer {
         align-items: flex-start;
-        flex: 0 0 auto;
+        flex: 1 0 auto;
       }
     }
-    &[@{am-layout-var}~="overflow-y"] {
-      > div[@{am-scrollable-var}] {
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-    }
-    &[@{am-layout-var}~="overflow-x"] {
-      > div[@{am-scrollable-var}] {
-        overflow-x: auto;
-        overflow-y: hidden;
-      }
+    &[@{am-layout-var}~="absolute"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
     }
   }
 }
+
+
+
+@media (orientation:portrait) {
+    [@{am-layout-portrait-var}~="hidden"] {
+      display: none;
+    }
+}
+
+@media (orientation:landscape) {
+    [@{am-layout-landscape-var}~="hidden"] {
+      display: none;
+    }
+}
+
+

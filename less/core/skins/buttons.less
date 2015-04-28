@@ -14,11 +14,11 @@
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  .z-depth-bottom(1);
+//  .z-depth-bottom(1);
   background-clip: padding-box;
   color: @am-clr-btn-text;
   background-color: @am-clr-btn-bg;
-  border: medium none;
+  border: 1px solid @am-clr-btn-bdr;
   border-radius: 2px;
   line-height: 36px;
   outline: 0 none;
@@ -26,10 +26,14 @@
   margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
-  &.@{am-prefix}-flat {
+  transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
+  &.@{am-prefix}-flat {   //TODO  .am-flat is going away in 1.4.0
     box-shadow: none;
     margin: 0;
     padding: 0;
+  }
+  &:hover {
+    background-color: lighten(@am-clr-btn-bg, 8%);
   }
   &.@{am-prefix}-disabled, &[disabled] {
     background-color: hsl(0, 0%, 98%);
@@ -37,6 +41,7 @@
     color: hsl(0, 0%, 60%);
     text-shadow: 0 1px 0 hsl(0, 0%, 100%);
     pointer-events: none;
+    border-color: hsl(0, 0%, 98%);
   }
   &.@{am-prefix}-floating-action {
     background-clip: padding-box;
@@ -47,6 +52,7 @@
     height: 55.5px;
     padding-left: 0;
     padding-right: 0;
+    .z-depth-bottom(1);
     &:not(button) {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -55,10 +61,18 @@
   &.@{am-prefix}-primary {
     background-color: @am-primary;
     color: @am-clr-btn-primary-text;
+    border-color: @am-primary;
+    &:hover {
+      background-color: lighten(@am-primary, 8%);
+    }
   }
   &.@{am-prefix}-secondary {
     background-color: @am-secondary;
     color: @am-clr-btn-secondary-text;
+    border-color: @am-secondary;
+    &:hover {
+      background-color: lighten(@am-secondary, 8%);
+    }
   }
   @media (max-width: 30em){
     &:not(.@{am-prefix}-floating-action) {
