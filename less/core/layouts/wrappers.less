@@ -75,14 +75,18 @@ body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/am
   }
 }
 
-// begin best practice & common portrait/landscape specific layouts
-[@{am-layout-portrait-var}~="hidden"] {
-  @media (orientation:portrait){
-    display: none;
-  }
+
+
+@media (orientation:portrait) {
+    [@{am-layout-portrait-var}~="hidden"] {
+      display: none;
+    }
 }
-[@{am-layout-landscape-var}~="hidden"] {
-  @media (orientation:landscape){
-    display: none;
-  }
+
+@media (orientation:landscape) {
+    [@{am-layout-landscape-var}~="hidden"] {
+      display: none;
+    }
 }
+
+

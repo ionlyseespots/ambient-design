@@ -54,4 +54,66 @@ nav[@{am-layout-var}] {
       font-size: 90%;
     }
   }
+  // 1.4.0 TAB
+  &[@{am-layout-var}~="tab"] {
+    &[@{am-layout-var}~="justify-align"] {
+      nav {
+        justify-content: space-between;
+      }
+    }
+    &[@{am-layout-var}~="right-align"] {
+      nav {
+        justify-content: flex-end;
+        a {
+          flex: none;
+        }
+      }
+    }
+    &[@{am-layout-var}~="left-align"] {
+      nav {
+        justify-content: flex-start;
+        a {
+          flex: none;
+        }
+      }
+    }
+    &[@{am-layout-var}~="center-align"] {
+      nav {
+        justify-content: center;
+        a {
+          flex: none;
+        }
+      }
+    }
+    & nav:nth-of-type(1) {
+      background-color: @am-clr-secondary-bg;
+      padding-top: @am-root-padding;
+      padding-right:  @am-root-padding;
+      padding-left:  @am-root-padding;
+    }
+    & nav:nth-of-type(2) {
+      background-color: @am-clr-primary-bg;
+      padding-top: @am-root-padding;
+      padding-right:  @am-root-padding;
+      padding-left:  @am-root-padding;
+      a.@{am-prefix}-active {
+        background-color: @am-clr-body-bg;
+      }
+    }
+  }
+  // 1.4.0 MENUBAR follows table color schema for now
+  &[@{am-layout-var}~="menubar"] {
+    border: 1px solid @am-clr-table-border;
+    &[@{am-layout-var}~="vertical"] {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        background-color:  @am-clr-table-border-cell;
+        padding: .25em;
+      }
+    }
+  }
 }
