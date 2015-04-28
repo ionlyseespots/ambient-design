@@ -1,4 +1,4 @@
-[@{am-row-var}]{
+[@{am-row-var}]{ //TODO am-row and am-col going away in 1.4.0
   flex-basis: auto; // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
   display: flex;
   flex-flow: row wrap;
@@ -99,25 +99,91 @@
   &[@{am-block-var}~="@{i}@{suffix}"] {
 	width: round((@i * 100% / @n), 4);
 	display: table-cell;
+    float: left;
   }
   .generate-blocks(@n, @suffix, (@i + 1));
 }
 
 .generate-blocks(@n, @suffix, @i) when (@i = @n) {
   &[@{am-block-var}~="@{i}@{suffix}"] {
-	width: 100%;
 	display: table-row;
+    width: 100%;
   }
 }
 
+//div[@{am-block-var}] {
+//  display: table;
+//  table-layout: fixed;
+//  .generate-blocks(@am-block-columns);
+//  @media(orientation:portrait) {
+//	.generate-blocks(@am-block-columns, 'P')
+//  }
+//  @media(orientation:landscape) {
+//	.generate-blocks(@am-block-columns, 'L')
+//  }
+//}
 div[@{am-block-var}] {
   display: table;
   table-layout: fixed;
   .generate-blocks(@am-block-columns);
+  &[@{am-block-var}~="gutter"] {
+    & > [@{am-block-var}] {
+      &:not(:first-of-type) {
+        padding-left:@am-block-gutter/2;
+      }
+      &[@{am-block-var}="first"] {
+        padding-left:0;
+      }
+    }
+    & > [@{am-block-var}] {
+      &:not(:last-of-type) {
+        padding-right:@am-block-gutter/2;
+      }
+      &[@{am-block-var}="last"] {
+        padding-right:0;
+      }
+    }
+  }
   @media(orientation:portrait) {
-	.generate-blocks(@am-block-columns, 'P')
+    .generate-blocks(@am-block-columns, 'P');
+    &[@{am-block-var}~="gutter-P"] {
+      & > [@{am-block-var}] {
+        &:not(:first-of-type) {
+          padding-left:@am-block-gutter/2;
+        }
+        &[@{am-block-var}="first"] {
+          padding-left:0;
+        }
+      }
+      & > [@{am-block-var}] {
+        &:not(:last-of-type) {
+          padding-right:@am-block-gutter/2;
+        }
+        &[@{am-block-var}="last"] {
+          padding-right:0;
+        }
+      }
+    }
   }
   @media(orientation:landscape) {
-	.generate-blocks(@am-block-columns, 'L')
+    .generate-blocks(@am-block-columns, 'L');
+    &[@{am-block-var}~="gutter-L"] {
+      & > [@{am-block-var}] {
+        &:not(:first-of-type) {
+          padding-left:@am-block-gutter/2;
+        }
+        &[@{am-block-var}="first"] {
+          padding-left:0;
+        }
+      }
+      & > [@{am-block-var}] {
+        &:not(:last-of-type) {
+          padding-right:@am-block-gutter/2;
+        }
+        &[@{am-block-var}="last"] {
+          padding-right:0;
+        }
+      }
+    }
   }
 }
