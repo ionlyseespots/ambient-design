@@ -36,6 +36,7 @@ aside,
 main,
 article,
 section,
+form,
 footer {
   display: flex;
   flex-flow: row wrap;
@@ -47,6 +48,7 @@ header {
 }
 main,
 section,
+fieldset,
 aside + article {
   flex: 1 8.3333%;
   min-width: 8.3333%;
@@ -458,135 +460,131 @@ article[am-layout~="vertical"] > section {
   flex-basis: auto;
   width: 100%;
 }
-form[am-layout] {
-  width: 100%;
-}
-form[am-layout] fieldset {
+form fieldset[am-layout] {
   border: none;
   padding: 0;
   margin: 0;
-  flex-basis: 100%;
 }
-form[am-layout] fieldset div[role="group"] {
+form fieldset[am-layout] div[role="group"] {
   width: auto;
 }
-form[am-layout] fieldset div[role="group"] legend {
+form fieldset[am-layout] div[role="group"] legend {
   width: 100%;
   word-wrap: break-word;
 }
-form[am-layout] textarea {
+form fieldset[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="stacked"] select,
+form fieldset[am-layout][am-layout~="stacked"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > span {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: justify;
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > span label,
+form fieldset[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="aligned"] > span select,
+form fieldset[am-layout][am-layout~="aligned"] > span textarea {
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="aligned"] > span label,
+  form fieldset[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout][am-layout~="aligned"] > span select,
+  form fieldset[am-layout][am-layout~="aligned"] > span textarea {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: justify;
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span label,
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span select,
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span textarea {
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span label,
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span select,
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span textarea {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="multicolumn"] {
+  display: flex;
+  flex-flow: row wrap;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="multicolumn"] select,
+form fieldset[am-layout][am-layout~="multicolumn"] textarea,
+form fieldset[am-layout][am-layout~="multicolumn"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div {
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="multicolumn"] > div {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] {
+  display: flex;
+  flex-flow: row wrap;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] select,
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] textarea,
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
+  flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
+    width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout] input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout] select,
+  form fieldset[am-layout] textarea,
+  form fieldset[am-layout] label {
+    width: 100%;
+  }
+}
+form textarea {
   resize: vertical;
   width: 100%;
 }
-form[am-layout] input[type="checkbox"] {
+form input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
 }
-form[am-layout] input[type="radio"] {
+form input[type="radio"] {
   display: inline-block;
   vertical-align: middle;
 }
-form[am-layout] label {
+form label {
   display: inline-block;
 }
-form[am-layout] label input {
+form label input {
   width: auto;
 }
-form[am-layout] select {
+form select {
   padding: .35em 0;
-}
-form[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="stacked"] select,
-form[am-layout][am-layout~="stacked"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] > span {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: justify;
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] > span label,
-form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="aligned"] > span select,
-form[am-layout][am-layout~="aligned"] > span textarea {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="aligned"] > span label,
-  form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout][am-layout~="aligned"] > span select,
-  form[am-layout][am-layout~="aligned"] > span textarea {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: justify;
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="multicolumn"] {
-  display: flex;
-  flex-flow: row wrap;
-}
-form[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="multicolumn"] select,
-form[am-layout][am-layout~="multicolumn"] textarea,
-form[am-layout][am-layout~="multicolumn"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="multicolumn"] > div {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="multicolumn"] > div {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] {
-  display: flex;
-  flex-flow: row wrap;
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] select,
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] textarea,
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
-    width: 100%;
-  }
-}
-@media (max-width: 30em) {
-  form[am-layout] input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout] select,
-  form[am-layout] textarea,
-  form[am-layout] label {
-    width: 100%;
-  }
 }
 nav[am-layout][am-layout~="horizontal"] a {
   flex: 1 8.3333%;
@@ -657,13 +655,13 @@ nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav a {
   flex: none;
 }
 nav[am-layout][am-layout~="tab"] nav:nth-of-type(1) {
-  background-color: #ffd1c3;
+  background-color: #81d7fd;
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
 }
 nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) {
-  background-color: #ffb8a2;
+  background-color: #60ccfd;
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
@@ -821,8 +819,8 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
 [am-layout~="outline"] div:not([class]) {
-  background: rgba(216, 67, 21, 0.15);
-  border: 1px solid rgba(216, 67, 21, 0.2);
+  background: rgba(3, 169, 244, 0.15);
+  border: 1px solid rgba(3, 169, 244, 0.2);
 }
 [am-event][am-event~="slide-caption"] {
   position: relative;
@@ -875,7 +873,7 @@ body > div[am-wrapper] {
 body > div[am-wrapper] > header,
 body > div[am-wrapper] > footer {
   background-color: #37474f;
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > div[am-wrapper] > header h1,
 body > div[am-wrapper] > footer h1,
@@ -889,15 +887,15 @@ body > div[am-wrapper] > header h5,
 body > div[am-wrapper] > footer h5,
 body > div[am-wrapper] > header h6,
 body > div[am-wrapper] > footer h6 {
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > div[am-wrapper] > header a:hover,
 body > div[am-wrapper] > footer a:hover {
-  color: #ffffff;
+  color: #c5ecfe;
 }
 *:not(body) > [am-wrapper] {
   max-height: 100%;
@@ -1172,20 +1170,20 @@ body > div[am-wrapper] > footer a:hover {
   padding-bottom: 10px;
 }
 .am-btn.am-primary {
-  background-color: #ff5722;
+  background-color: #03a9f4;
   color: #ffffff;
-  border-color: #ff5722;
+  border-color: #03a9f4;
 }
 .am-btn.am-primary:hover {
-  background-color: #ff764b;
+  background-color: #23b9fc;
 }
 .am-btn.am-secondary {
-  background-color: #ff9800;
+  background-color: #4fc3f7;
   color: #ffffff;
-  border-color: #ff9800;
+  border-color: #4fc3f7;
 }
 .am-btn.am-secondary:hover {
-  background-color: #ffa829;
+  background-color: #76d0f9;
 }
 @media (max-width: 30em) {
   .am-btn:not(.am-floating-action) {
@@ -1229,7 +1227,7 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > header h1,
 body > footer h1,
@@ -1243,15 +1241,15 @@ body > header h5,
 body > footer h5,
 body > header h6,
 body > footer h6 {
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > header a,
 body > footer a {
-  color: #ffb8a2;
+  color: #60ccfd;
 }
 body > header a:hover,
 body > footer a:hover {
-  color: #ffffff;
+  color: #c5ecfe;
 }
 h1,
 h2,
@@ -1321,15 +1319,15 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: #ff3e01;
+  color: #0392d3;
 }
 a:hover,
 a:active {
-  color: #010000;
+  color: #000000;
 }
 a:focus:not(.am-btn) {
-  background-color: #ff9f80;
-  color: #801f00;
+  background-color: #58cafd;
+  color: #013b55;
 }
 small {
   font-size: 65%;
@@ -1438,13 +1436,13 @@ img {
   justify-content: center;
 }
 .am-active {
-  background-color: #ffb8a2;
+  background-color: #60ccfd;
 }
 .am-primary {
-  background-color: #ffb8a2;
+  background-color: #60ccfd;
 }
 .am-secondary {
-  background-color: #ffd1c3;
+  background-color: #81d7fd;
 }
 .am-clr-1-text {
   color: #f44336;
