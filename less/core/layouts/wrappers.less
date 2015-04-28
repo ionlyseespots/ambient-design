@@ -1,13 +1,8 @@
-body > div[@{wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
+body > div[@{am-wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambient-design/issues/23
   min-width: 100%;
   min-height: 100vh;
-  .flex-display;
-  .flex-flow(row wrap);
-  & > article {
-    .align-items(center);
-    margin: auto;
-    width: auto;
-  }
+  display: flex;
+  flex-flow: row wrap;
   & > header,
   & > footer {
     background-color: @am-closure;
@@ -29,3 +24,69 @@ body > div[@{wrapper-var}] { // issue #23 https://github.com/ionlyseespots/ambie
     }
   }
 }
+
+*:not(body) > [@{am-wrapper-var}] { // Generic wrapper
+  max-height: 100%;
+}
+
+//http://www.smashingmagazine.com/2013/05/03/infinite-scrolling-lets-get-to-the-bottom-of-this/
+[@{am-layout-var}] {
+  &[@{am-layout-var}~="frame"] {
+    flex-flow: column nowrap;
+    height: 100%;
+    max-height: 100%;
+    & > {
+      header {
+        align-items: flex-start;
+        flex: 0 0 auto;
+      }
+      div[@{am-scrollable-var}] {
+        display: flex;
+        flex-flow: row wrap;
+        -webkit-overflow-scrolling: touch; // https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+        overflow: auto;
+        height: 100%;
+        max-height: 100%;
+        border-width: 1px;
+        border-color: @am-clr-frame-border;
+        border-style: solid;
+        &[@{am-scrollable-var}~="overflow-y"] {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        &[@{am-scrollable-var}~="overflow-x"] {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
+      }
+      footer {
+        align-items: flex-start;
+        flex: 1 0 auto;
+      }
+    }
+    &[@{am-layout-var}~="absolute"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
+    }
+  }
+}
+
+
+
+@media (orientation:portrait) {
+    [@{am-layout-portrait-var}~="hidden"] {
+      display: none;
+    }
+}
+
+@media (orientation:landscape) {
+    [@{am-layout-landscape-var}~="hidden"] {
+      display: none;
+    }
+}
+
+

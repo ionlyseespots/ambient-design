@@ -1,3 +1,33 @@
+// Cursor Reset
+// https://gist.github.com/murtaugh/5247154
+html,
+body {
+  cursor: default;
+}
+
+code {
+  cursor: text;
+}
+
+/*
+textarea and input[type="text"] already receive
+"cursor: text" via browsers' base stylesheets
+*/
+
+a,
+label,
+button,
+input[type="radio"],
+input[type="submit"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
 // Typography via Typeplate
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
 // https://github.com/typeplate/typeplate.github.io
@@ -48,6 +78,9 @@ h6 {
   margin-top: 0;
   color: @am-clr-heading-text;
   font-weight: 300;
+  &[id] {
+    padding-top: @am-root-padding;
+  }
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
@@ -96,7 +129,7 @@ a {
     color:darken(@am-clr-link-text, 50%);
   }
   // agree: http://outlinenone.com/
-  &:focus:not(.@{prefix}-btn) {
+  &:focus:not(.@{am-prefix}-btn) {
     background-color: @am-clr-link-focus-bg;
     color: @am-clr-link-focus-text;
   }

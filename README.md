@@ -18,7 +18,10 @@ Install with [Bower] (http://bower.io/): bower install ambient
 
 Read the [Get started page] (http://ionlyseespots.github.io/ambient-design/docs/index.html) for information and examples on getting started.
 
-> current release cycle: Boba Fett v1.3.3
+> current release cycle: Boba Fett v1.3.5
+
+## Source
+Ambient source makes use of [Node] (https://nodejs.org/) and [Grunt] (http://gruntjs.com/)
 
 ## Development
 
