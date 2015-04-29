@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="../../dist/css/ambient.min.css">
 
     <link rel="stylesheet" href="../../assets/css/styles.css">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 </body>
-<header>
+<header am-padding>
     <h1>
         <a href="../../index.html" title="index">Ambient</a>
     </h1>
@@ -188,13 +190,6 @@ line breaks
             <blockquote>
                 <code>class="am-btn am-floating-action"</code>
             </blockquote>
-            <h2>
-                Ambient flat
-            </h2>
-            <a class="am-btn am-flat" href="#"><i class="fa fa-star fa-3x"></i></a>
-            <blockquote>
-                <code>class="am-btn am-flat"</code>
-            </blockquote>
         </section>
         <section am-padding>
             <h2>
@@ -267,8 +262,8 @@ line breaks
         <h2>
             Ambient
         </h2>
-        <form am-layout="stacked">
-            <fieldset>
+        <form>
+            <fieldset am-layout="stacked">
                 <div role="group">
                     <legend>
                         Legend: My form
@@ -533,7 +528,7 @@ line breaks
             </tfoot>
         </table>
         <h2>
-            Ambient tables (portrait & landscape enabled)
+            Ambient tables (portrait & landscape orientation friendly!)
         </h2>
         <table am-layout>
             <caption>
@@ -749,10 +744,7 @@ line breaks
             Colors
         </h1>
         <p>
-            Ambient colors are inspired by the Material palette and are designed to work alongside Material.
-        </p>
-        <p>
-            <a href="../colors.html">View all colors</a>
+            Ambient base (500) color palette is inspired by the Material palette.
         </p>
         <section am-layout="gutter padding portrait-100" am-padding class="backgrounds">
             <h1>

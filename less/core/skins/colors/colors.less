@@ -20,33 +20,25 @@
 //  .am-clr-1-fill
 //  .am-clr-1-stroke
 //
-//== Mixin build
-// .COLOR(RANGE, ORIENTATION);
-//
-// COLOR: Material (.COLOR) or Ambient (.am-palette) color
-// RANGE: 1-14. Range is the color value within the LESS group list for @group-COLOR or @group-palette
+// COLOR: Ambient .am-palette color
 // ORIENTATION: text, bg, border, fill, stroke
 
 // Red
 .@{am-prefix}-clr-1 {
   &-text {
     .am-palette(1, text);
-//    .red(6, text);
   }
   &-bg {
     .am-palette(1, bg);
-//    .red(6, bg);
   }
   &-border {
     .am-palette(1, border);
-//    .red(6, border);
+    .am-clr-bdr(@am-palette-1);
   }
   &-fill {
-//    .red(6, fill);
   }
   &-stroke {
     .am-palette(1, stroke);
-//    .red(6, stroke);
   }
 }
 
@@ -60,6 +52,7 @@
   }
   &-border {
     .am-palette(2, border);
+    .am-clr-bdr(@am-palette-2);
   }
   &-fill {
     .am-palette(2, fill);
@@ -79,6 +72,7 @@
   }
   &-border {
     .am-palette(3, border);
+    .am-clr-bdr(@am-palette-3);
   }
   &-fill {
     .am-palette(3, fill);
@@ -98,6 +92,7 @@
   }
   &-border {
     .am-palette(4, border);
+    .am-clr-bdr(@am-palette-4);
   }
   &-fill {
     .am-palette(4, fill);
@@ -117,6 +112,7 @@
   }
   &-border {
     .am-palette(5, border);
+    .am-clr-bdr(@am-palette-5);
   }
   &-fill {
     .am-palette(5, fill);
@@ -136,6 +132,7 @@
   }
   &-border {
     .am-palette(6, border);
+    .am-clr-bdr(@am-palette-6);
   }
   &-fill {
     .am-palette(6, fill);
@@ -155,6 +152,7 @@
   }
   &-border {
     .am-palette(7, border);
+    .am-clr-bdr(@am-palette-7);
   }
   &-fill {
     .am-palette(7, fill);
@@ -174,6 +172,7 @@
   }
   &-border {
     .am-palette(8, border);
+    .am-clr-bdr(@am-palette-8);
   }
   &-fill {
     .am-palette(8, fill);
@@ -193,6 +192,7 @@
   }
   &-border {
     .am-palette(9, border);
+    .am-clr-bdr(@am-palette-9);
   }
   &-fill {
     .am-palette(9, fill);
@@ -212,6 +212,7 @@
   }
   &-border {
     .am-palette(10, border);
+    .am-clr-bdr(@am-palette-10);
   }
   &-fill {
     .am-palette(10, fill);
@@ -231,6 +232,7 @@
   }
   &-border {
     .am-palette(11, border);
+    .am-clr-bdr(@am-palette-11);
   }
   &-fill {
     .am-palette(11, fill);
@@ -250,6 +252,7 @@
   }
   &-border {
     .am-palette(12, border);
+    .am-clr-bdr(@am-palette-12);
   }
   &-fill {
     .am-palette(12, fill);
@@ -269,6 +272,7 @@
   }
   &-border {
     .am-palette(13, border);
+    .am-clr-bdr(@am-palette-13);
   }
   &-fill {
     .am-palette(13, fill);
@@ -288,6 +292,7 @@
   }
   &-border {
     .am-palette(14, border);
+    .am-clr-bdr(@am-palette-14);
   }
   &-fill {
     .am-palette(14, fill);
@@ -307,6 +312,7 @@
   }
   &-border {
     .am-palette(15, border);
+    .am-clr-bdr(@am-palette-15);
   }
   &-fill {
     .am-palette(15, fill);
@@ -327,6 +333,7 @@
   }
   &-border {
     .am-palette(16, border);
+    .am-clr-bdr(@am-palette-16);
   }
   &-fill {
     .am-palette(16, fill);
@@ -346,6 +353,7 @@
   }
   &-border {
     .am-palette(17, border);
+    .am-clr-bdr(@am-palette-17);
   }
   &-fill {
     .am-palette(17, fill);
@@ -365,6 +373,7 @@
   }
   &-border {
     .am-palette(18, border);
+    .am-clr-bdr(@am-palette-18);
   }
   &-fill {
     .am-palette(18, fill);
@@ -384,6 +393,7 @@
   }
   &-border {
     .am-palette(19, border);
+    .am-clr-bdr(@am-palette-19);
   }
   &-fill {
     .am-palette(19, fill);
@@ -403,6 +413,7 @@
   }
   &-border {
     .am-palette(20, border);
+    .am-clr-bdr(@am-palette-20);
   }
   &-fill {
     .am-palette(20, fill);
@@ -422,6 +433,7 @@
   }
   &-border {
     border-color: @am-clr-white;
+    .am-clr-bdr(@am-clr-white);
   }
   &-fill {
     fill: @am-clr-white;
