@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.6 - 2015-04-28
+ * ambient - v1.3.7 - 2015-04-29
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -473,6 +473,7 @@ aside,
 main,
 article,
 section,
+form,
 footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -493,6 +494,7 @@ header {
 }
 main,
 section,
+fieldset,
 aside + article {
   -webkit-box-flex: 1;
   -webkit-flex: 1 8.3333%;
@@ -935,175 +937,169 @@ article[am-layout~="vertical"] > section {
           flex-basis: auto;
   width: 100%;
 }
-form[am-layout] {
-  width: 100%;
-}
-form[am-layout] fieldset {
+form fieldset[am-layout] {
   border: none;
   padding: 0;
   margin: 0;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
 }
-form[am-layout] fieldset div[role="group"] {
+form fieldset[am-layout] div[role="group"] {
   width: auto;
 }
-form[am-layout] fieldset div[role="group"] legend {
+form fieldset[am-layout] div[role="group"] legend {
   width: 100%;
   word-wrap: break-word;
 }
-form[am-layout] textarea {
+form fieldset[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="stacked"] select,
+form fieldset[am-layout][am-layout~="stacked"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: justify;
+      -ms-flex-pack: justify;
+          justify-content: justify;
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > span label,
+form fieldset[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="aligned"] > span select,
+form fieldset[am-layout][am-layout~="aligned"] > span textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="aligned"] > span label,
+  form fieldset[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout][am-layout~="aligned"] > span select,
+  form fieldset[am-layout][am-layout~="aligned"] > span textarea {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: justify;
+      -ms-flex-pack: justify;
+          justify-content: justify;
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span label,
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span select,
+form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span label,
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span select,
+  form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span textarea {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="multicolumn"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="multicolumn"] select,
+form fieldset[am-layout][am-layout~="multicolumn"] textarea,
+form fieldset[am-layout][am-layout~="multicolumn"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="multicolumn"] > div {
+    width: 100%;
+  }
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] select,
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] textarea,
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] label {
+  width: 100%;
+}
+form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  width: 8.3333%;
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
+    width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  form fieldset[am-layout] input:not([type="checkbox"]):not([type="radio"]),
+  form fieldset[am-layout] select,
+  form fieldset[am-layout] textarea,
+  form fieldset[am-layout] label {
+    width: 100%;
+  }
+}
+form textarea {
   resize: vertical;
   width: 100%;
 }
-form[am-layout] input[type="checkbox"] {
+form input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
 }
-form[am-layout] input[type="radio"] {
+form input[type="radio"] {
   display: inline-block;
   vertical-align: middle;
 }
-form[am-layout] label {
+form label {
   display: inline-block;
 }
-form[am-layout] label input {
+form label input {
   width: auto;
 }
-form[am-layout] select {
+form select {
   padding: .35em 0;
-}
-form[am-layout][am-layout~="stacked"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="stacked"] select,
-form[am-layout][am-layout~="stacked"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] > span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: justify;
-      -ms-flex-pack: justify;
-          justify-content: justify;
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] > span label,
-form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="aligned"] > span select,
-form[am-layout][am-layout~="aligned"] > span textarea {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 auto;
-      -ms-flex: 1 auto;
-          flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="aligned"] > span label,
-  form[am-layout][am-layout~="aligned"] > span input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout][am-layout~="aligned"] > span select,
-  form[am-layout][am-layout~="aligned"] > span textarea {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: justify;
-      -ms-flex-pack: justify;
-          justify-content: justify;
-  width: 100%;
-}
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
-form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 auto;
-      -ms-flex: 1 auto;
-          flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span label,
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span select,
-  form[am-layout][am-layout~="aligned"] fieldset > div[role="group"] > span textarea {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="multicolumn"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-form[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="multicolumn"] select,
-form[am-layout][am-layout~="multicolumn"] textarea,
-form[am-layout][am-layout~="multicolumn"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="multicolumn"] > div {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 auto;
-      -ms-flex: 1 auto;
-          flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="multicolumn"] > div {
-    width: 100%;
-  }
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] select,
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] textarea,
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] label {
-  width: 100%;
-}
-form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 auto;
-      -ms-flex: 1 auto;
-          flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form[am-layout][am-layout~="multicolumn"] fieldset > div[role="group"] > div {
-    width: 100%;
-  }
-}
-@media (max-width: 30em) {
-  form[am-layout] input:not([type="checkbox"]):not([type="radio"]),
-  form[am-layout] select,
-  form[am-layout] textarea,
-  form[am-layout] label {
-    width: 100%;
-  }
 }
 nav[am-layout][am-layout~="horizontal"] a {
   -webkit-box-flex: 1;
@@ -1111,35 +1107,35 @@ nav[am-layout][am-layout~="horizontal"] a {
       -ms-flex: 1 8.3333%;
           flex: 1 8.3333%;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="justify-align"] {
+nav[am-layout][am-layout~="justify-align"] {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="left-align"] a {
+nav[am-layout][am-layout~="left-align"] a {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] {
+nav[am-layout][am-layout~="right-align"] {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] a {
+nav[am-layout][am-layout~="right-align"] a {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] {
+nav[am-layout][am-layout~="center-align"] {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] a {
+nav[am-layout][am-layout~="center-align"] a {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
@@ -1166,80 +1162,14 @@ nav[am-layout] a:not(.am-floating-action) {
   padding: 1em;
   display: inline-block;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
 }
 @media (max-width: 30em) {
   nav[am-layout] a:not(.am-floating-action) {
     font-size: 90%;
   }
-}
-nav[am-layout][am-layout~="tab"][am-layout~="justify-align"] nav {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="right-align"] nav {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="right-align"] nav a {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="left-align"] nav {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="left-align"] nav a {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav a {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(1) {
-  background-color: #ffd1c3;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) {
-  background-color: #ffb8a2;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) a.am-active {
-  background-color: #ffffff;
-}
-nav[am-layout][am-layout~="menubar"] {
-  border: 1px solid #d4d4d4;
-}
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h1,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h2,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h3,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h4,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h5,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h6 {
-  background-color: #e0e0e0;
-  padding: .25em;
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
@@ -1327,6 +1257,7 @@ table[am-layout] td:first-child {
     vertical-align: middle;
     width: 100%;
     border: 0 none;
+    padding: calc(0.5em);
   }
   table[am-layout] td[data-title]::before {
     content: attr(data-title);
@@ -1379,8 +1310,8 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
 [am-layout~="outline"] div:not([class]) {
-  background: rgba(216, 67, 21, 0.15);
-  border: 1px solid rgba(216, 67, 21, 0.2);
+  background: rgba(3, 169, 244, 0.15);
+  border: 1px solid rgba(3, 169, 244, 0.2);
 }
 [am-event][am-event~="slide-caption"] {
   position: relative;
@@ -1434,29 +1365,15 @@ body > div[am-wrapper] {
 body > div[am-wrapper] > header,
 body > div[am-wrapper] > footer {
   background-color: #37474f;
-  color: #ffb8a2;
-}
-body > div[am-wrapper] > header h1,
-body > div[am-wrapper] > footer h1,
-body > div[am-wrapper] > header h2,
-body > div[am-wrapper] > footer h2,
-body > div[am-wrapper] > header h3,
-body > div[am-wrapper] > footer h3,
-body > div[am-wrapper] > header h4,
-body > div[am-wrapper] > footer h4,
-body > div[am-wrapper] > header h5,
-body > div[am-wrapper] > footer h5,
-body > div[am-wrapper] > header h6,
-body > div[am-wrapper] > footer h6 {
-  color: #ffb8a2;
+  color: #1cb6fc;
 }
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
-  color: #ffb8a2;
+  color: #1cb6fc;
 }
 body > div[am-wrapper] > header a:hover,
 body > div[am-wrapper] > footer a:hover {
-  color: #ffffff;
+  color: #81d7fd;
 }
 *:not(body) > [am-wrapper] {
   max-height: 100%;
@@ -1521,12 +1438,12 @@ body > div[am-wrapper] > footer a:hover {
   min-height: 100%;
 }
 @media (orientation: portrait) {
-  [am-layout-P~="hidden"] {
+  [am-layout-portrait~="hidden"] {
     display: none;
   }
 }
 @media (orientation: landscape) {
-  [am-layout-L~="hidden"] {
+  [am-layout-landscape~="hidden"] {
     display: none;
   }
 }
@@ -1693,20 +1610,20 @@ body > div[am-wrapper] > footer a:hover {
   padding-bottom: 10px;
 }
 .am-btn.am-primary {
-  background-color: #ff5722;
+  background-color: #03a9f4;
   color: #ffffff;
-  border-color: #ff5722;
+  border-color: #03a9f4;
 }
 .am-btn.am-primary:hover {
-  background-color: #ff764b;
+  background-color: #23b9fc;
 }
 .am-btn.am-secondary {
-  background-color: #ff9800;
+  background-color: #4fc3f7;
   color: #ffffff;
-  border-color: #ff9800;
+  border-color: #4fc3f7;
 }
 .am-btn.am-secondary:hover {
-  background-color: #ffa829;
+  background-color: #76d0f9;
 }
 @media (max-width: 30em) {
   .am-btn:not(.am-floating-action) {
@@ -1750,29 +1667,15 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
-  color: #ffb8a2;
-}
-body > header h1,
-body > footer h1,
-body > header h2,
-body > footer h2,
-body > header h3,
-body > footer h3,
-body > header h4,
-body > footer h4,
-body > header h5,
-body > footer h5,
-body > header h6,
-body > footer h6 {
-  color: #ffb8a2;
+  color: #1cb6fc;
 }
 body > header a,
 body > footer a {
-  color: #ffb8a2;
+  color: #1cb6fc;
 }
 body > header a:hover,
 body > footer a:hover {
-  color: #ffffff;
+  color: #81d7fd;
 }
 h1,
 h2,
@@ -1786,14 +1689,6 @@ h6 {
   margin-top: 0;
   color: #424242;
   font-weight: 300;
-}
-h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id] {
-  padding-top: 1em;
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
@@ -1842,15 +1737,15 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: #ff3e01;
+  color: #015276;
 }
 a:hover,
 a:active {
-  color: #010000;
+  color: #000000;
 }
 a:focus:not(.am-btn) {
-  background-color: #ff9f80;
-  color: #801f00;
+  background-color: #03a9f4;
+  color: #000000;
 }
 small {
   font-size: 65%;
@@ -1894,7 +1789,7 @@ pre {
   -moz-tab-size: 4;
     -o-tab-size: 4;
        tab-size: 4;
-  margin: 1em 0 0 0;
+  margin: .5em 0 0 0;
   padding: 1em 1em 1em 1em;
 }
 label {
@@ -1970,13 +1865,13 @@ img {
           justify-content: center;
 }
 .am-active {
-  background-color: #ffb8a2;
+  background-color: #1cb6fc;
 }
 .am-primary {
-  background-color: #ffb8a2;
+  background-color: #1cb6fc;
 }
 .am-secondary {
-  background-color: #ffd1c3;
+  background-color: #3dc1fd;
 }
 .am-clr-1-text {
   color: #f44336;
@@ -1986,6 +1881,7 @@ img {
 }
 .am-clr-1-border {
   border-color: #f44336;
+  border: solid 1px #f44336;
 }
 .am-clr-1-stroke {
   stroke: #f44336;
@@ -1998,6 +1894,7 @@ img {
 }
 .am-clr-2-border {
   border-color: #e91e63;
+  border: solid 1px #e91e63;
 }
 .am-clr-2-fill {
   fill: #e91e63;
@@ -2013,6 +1910,7 @@ img {
 }
 .am-clr-3-border {
   border-color: #9c27b0;
+  border: solid 1px #9c27b0;
 }
 .am-clr-3-fill {
   fill: #9c27b0;
@@ -2028,6 +1926,7 @@ img {
 }
 .am-clr-4-border {
   border-color: #673ab7;
+  border: solid 1px #673ab7;
 }
 .am-clr-4-fill {
   fill: #673ab7;
@@ -2043,6 +1942,7 @@ img {
 }
 .am-clr-5-border {
   border-color: #3f51b5;
+  border: solid 1px #3f51b5;
 }
 .am-clr-5-fill {
   fill: #3f51b5;
@@ -2058,6 +1958,7 @@ img {
 }
 .am-clr-6-border {
   border-color: #2196f3;
+  border: solid 1px #2196f3;
 }
 .am-clr-6-fill {
   fill: #2196f3;
@@ -2073,6 +1974,7 @@ img {
 }
 .am-clr-7-border {
   border-color: #03a9f4;
+  border: solid 1px #03a9f4;
 }
 .am-clr-7-fill {
   fill: #03a9f4;
@@ -2088,6 +1990,7 @@ img {
 }
 .am-clr-8-border {
   border-color: #00bcd4;
+  border: solid 1px #00bcd4;
 }
 .am-clr-8-fill {
   fill: #00bcd4;
@@ -2103,6 +2006,7 @@ img {
 }
 .am-clr-9-border {
   border-color: #009688;
+  border: solid 1px #009688;
 }
 .am-clr-9-fill {
   fill: #009688;
@@ -2118,6 +2022,7 @@ img {
 }
 .am-clr-10-border {
   border-color: #4caf50;
+  border: solid 1px #4caf50;
 }
 .am-clr-10-fill {
   fill: #4caf50;
@@ -2133,6 +2038,7 @@ img {
 }
 .am-clr-11-border {
   border-color: #8bc34a;
+  border: solid 1px #8bc34a;
 }
 .am-clr-11-fill {
   fill: #8bc34a;
@@ -2148,6 +2054,7 @@ img {
 }
 .am-clr-12-border {
   border-color: #cddc39;
+  border: solid 1px #cddc39;
 }
 .am-clr-12-fill {
   fill: #cddc39;
@@ -2163,6 +2070,7 @@ img {
 }
 .am-clr-13-border {
   border-color: #ffeb3b;
+  border: solid 1px #ffeb3b;
 }
 .am-clr-13-fill {
   fill: #ffeb3b;
@@ -2178,6 +2086,7 @@ img {
 }
 .am-clr-14-border {
   border-color: #ffc107;
+  border: solid 1px #ffc107;
 }
 .am-clr-14-fill {
   fill: #ffc107;
@@ -2193,6 +2102,7 @@ img {
 }
 .am-clr-15-border {
   border-color: #ff9800;
+  border: solid 1px #ff9800;
 }
 .am-clr-15-fill {
   fill: #ff9800;
@@ -2208,6 +2118,7 @@ img {
 }
 .am-clr-16-border {
   border-color: #ff5722;
+  border: solid 1px #ff5722;
 }
 .am-clr-16-fill {
   fill: #ff5722;
@@ -2223,6 +2134,7 @@ img {
 }
 .am-clr-17-border {
   border-color: #795548;
+  border: solid 1px #795548;
 }
 .am-clr-17-fill {
   fill: #795548;
@@ -2238,6 +2150,7 @@ img {
 }
 .am-clr-18-border {
   border-color: #9e9e9e;
+  border: solid 1px #9e9e9e;
 }
 .am-clr-18-fill {
   fill: #9e9e9e;
@@ -2253,6 +2166,7 @@ img {
 }
 .am-clr-19-border {
   border-color: #607d8b;
+  border: solid 1px #607d8b;
 }
 .am-clr-19-fill {
   fill: #607d8b;
@@ -2268,6 +2182,7 @@ img {
 }
 .am-clr-20-border {
   border-color: #000000;
+  border: solid 1px #000000;
 }
 .am-clr-20-fill {
   fill: #000000;
@@ -2283,6 +2198,7 @@ img {
 }
 .am-clr-21-border {
   border-color: #ffffff;
+  border: solid 1px #ffffff;
 }
 .am-clr-21-fill {
   fill: #ffffff;
