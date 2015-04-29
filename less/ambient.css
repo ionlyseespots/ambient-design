@@ -636,54 +636,6 @@ nav[am-layout] a:not(.am-floating-action) {
     font-size: 90%;
   }
 }
-nav[am-layout][am-layout~="tab"][am-layout~="justify-align"] nav {
-  justify-content: space-between;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="right-align"] nav {
-  justify-content: flex-end;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="right-align"] nav a {
-  flex: none;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="left-align"] nav {
-  justify-content: flex-start;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="left-align"] nav a {
-  flex: none;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav {
-  justify-content: center;
-}
-nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav a {
-  flex: none;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(1) {
-  background-color: #3dc1fd;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) {
-  background-color: #1cb6fc;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) a.am-active {
-  background-color: #ffffff;
-}
-nav[am-layout][am-layout~="menubar"] {
-  border: 1px solid #d4d4d4;
-}
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h1,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h2,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h3,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h4,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h5,
-nav[am-layout][am-layout~="menubar"][am-layout~="vertical"] h6 {
-  background-color: #e0e0e0;
-  padding: .25em;
-}
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
   bottom: -25px;
@@ -770,6 +722,7 @@ table[am-layout] td:first-child {
     vertical-align: middle;
     width: 100%;
     border: 0 none;
+    padding: calc(0.5em);
   }
   table[am-layout] td[data-title]::before {
     content: attr(data-title);
@@ -876,20 +829,6 @@ body > div[am-wrapper] {
 body > div[am-wrapper] > header,
 body > div[am-wrapper] > footer {
   background-color: #37474f;
-  color: #1cb6fc;
-}
-body > div[am-wrapper] > header h1,
-body > div[am-wrapper] > footer h1,
-body > div[am-wrapper] > header h2,
-body > div[am-wrapper] > footer h2,
-body > div[am-wrapper] > header h3,
-body > div[am-wrapper] > footer h3,
-body > div[am-wrapper] > header h4,
-body > div[am-wrapper] > footer h4,
-body > div[am-wrapper] > header h5,
-body > div[am-wrapper] > footer h5,
-body > div[am-wrapper] > header h6,
-body > div[am-wrapper] > footer h6 {
   color: #1cb6fc;
 }
 body > div[am-wrapper] > header a,
@@ -1232,20 +1171,6 @@ body > footer {
   background-color: #37474f;
   color: #1cb6fc;
 }
-body > header h1,
-body > footer h1,
-body > header h2,
-body > footer h2,
-body > header h3,
-body > footer h3,
-body > header h4,
-body > footer h4,
-body > header h5,
-body > footer h5,
-body > header h6,
-body > footer h6 {
-  color: #1cb6fc;
-}
 body > header a,
 body > footer a {
   color: #1cb6fc;
@@ -1266,14 +1191,6 @@ h6 {
   margin-top: 0;
   color: #424242;
   font-weight: 300;
-}
-h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id] {
-  padding-top: 1em;
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
@@ -1455,6 +1372,7 @@ img {
 }
 .am-clr-1-border {
   border-color: #f44336;
+  border: solid 1px #f44336;
 }
 .am-clr-1-stroke {
   stroke: #f44336;
@@ -1467,6 +1385,7 @@ img {
 }
 .am-clr-2-border {
   border-color: #e91e63;
+  border: solid 1px #e91e63;
 }
 .am-clr-2-fill {
   fill: #e91e63;
@@ -1482,6 +1401,7 @@ img {
 }
 .am-clr-3-border {
   border-color: #9c27b0;
+  border: solid 1px #9c27b0;
 }
 .am-clr-3-fill {
   fill: #9c27b0;
@@ -1497,6 +1417,7 @@ img {
 }
 .am-clr-4-border {
   border-color: #673ab7;
+  border: solid 1px #673ab7;
 }
 .am-clr-4-fill {
   fill: #673ab7;
@@ -1512,6 +1433,7 @@ img {
 }
 .am-clr-5-border {
   border-color: #3f51b5;
+  border: solid 1px #3f51b5;
 }
 .am-clr-5-fill {
   fill: #3f51b5;
@@ -1527,6 +1449,7 @@ img {
 }
 .am-clr-6-border {
   border-color: #2196f3;
+  border: solid 1px #2196f3;
 }
 .am-clr-6-fill {
   fill: #2196f3;
@@ -1542,6 +1465,7 @@ img {
 }
 .am-clr-7-border {
   border-color: #03a9f4;
+  border: solid 1px #03a9f4;
 }
 .am-clr-7-fill {
   fill: #03a9f4;
@@ -1557,6 +1481,7 @@ img {
 }
 .am-clr-8-border {
   border-color: #00bcd4;
+  border: solid 1px #00bcd4;
 }
 .am-clr-8-fill {
   fill: #00bcd4;
@@ -1572,6 +1497,7 @@ img {
 }
 .am-clr-9-border {
   border-color: #009688;
+  border: solid 1px #009688;
 }
 .am-clr-9-fill {
   fill: #009688;
@@ -1587,6 +1513,7 @@ img {
 }
 .am-clr-10-border {
   border-color: #4caf50;
+  border: solid 1px #4caf50;
 }
 .am-clr-10-fill {
   fill: #4caf50;
@@ -1602,6 +1529,7 @@ img {
 }
 .am-clr-11-border {
   border-color: #8bc34a;
+  border: solid 1px #8bc34a;
 }
 .am-clr-11-fill {
   fill: #8bc34a;
@@ -1617,6 +1545,7 @@ img {
 }
 .am-clr-12-border {
   border-color: #cddc39;
+  border: solid 1px #cddc39;
 }
 .am-clr-12-fill {
   fill: #cddc39;
@@ -1632,6 +1561,7 @@ img {
 }
 .am-clr-13-border {
   border-color: #ffeb3b;
+  border: solid 1px #ffeb3b;
 }
 .am-clr-13-fill {
   fill: #ffeb3b;
@@ -1647,6 +1577,7 @@ img {
 }
 .am-clr-14-border {
   border-color: #ffc107;
+  border: solid 1px #ffc107;
 }
 .am-clr-14-fill {
   fill: #ffc107;
@@ -1662,6 +1593,7 @@ img {
 }
 .am-clr-15-border {
   border-color: #ff9800;
+  border: solid 1px #ff9800;
 }
 .am-clr-15-fill {
   fill: #ff9800;
@@ -1677,6 +1609,7 @@ img {
 }
 .am-clr-16-border {
   border-color: #ff5722;
+  border: solid 1px #ff5722;
 }
 .am-clr-16-fill {
   fill: #ff5722;
@@ -1692,6 +1625,7 @@ img {
 }
 .am-clr-17-border {
   border-color: #795548;
+  border: solid 1px #795548;
 }
 .am-clr-17-fill {
   fill: #795548;
@@ -1707,6 +1641,7 @@ img {
 }
 .am-clr-18-border {
   border-color: #9e9e9e;
+  border: solid 1px #9e9e9e;
 }
 .am-clr-18-fill {
   fill: #9e9e9e;
@@ -1722,6 +1657,7 @@ img {
 }
 .am-clr-19-border {
   border-color: #607d8b;
+  border: solid 1px #607d8b;
 }
 .am-clr-19-fill {
   fill: #607d8b;
@@ -1737,6 +1673,7 @@ img {
 }
 .am-clr-20-border {
   border-color: #000000;
+  border: solid 1px #000000;
 }
 .am-clr-20-fill {
   fill: #000000;
@@ -1752,6 +1689,7 @@ img {
 }
 .am-clr-21-border {
   border-color: #ffffff;
+  border: solid 1px #ffffff;
 }
 .am-clr-21-fill {
   fill: #ffffff;
