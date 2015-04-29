@@ -589,22 +589,22 @@ form select {
 nav[am-layout][am-layout~="horizontal"] a {
   flex: 1 8.3333%;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="justify-align"] {
+nav[am-layout][am-layout~="justify-align"] {
   justify-content: space-between;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="left-align"] a {
+nav[am-layout][am-layout~="left-align"] a {
   align-self: flex-start;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] {
+nav[am-layout][am-layout~="right-align"] {
   justify-content: flex-end;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="right-align"] a {
+nav[am-layout][am-layout~="right-align"] a {
   align-self: flex-end;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] {
+nav[am-layout][am-layout~="center-align"] {
   justify-content: center;
 }
-nav[am-layout][am-layout~="horizontal"][am-layout~="center-align"] a {
+nav[am-layout][am-layout~="center-align"] a {
   align-self: center;
 }
 nav[am-layout][am-layout~="vertical"] {
@@ -627,6 +627,9 @@ nav[am-layout] a:not(.am-floating-action) {
   padding: 1em;
   display: inline-block;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
 }
 @media (max-width: 30em) {
   nav[am-layout] a:not(.am-floating-action) {
@@ -655,13 +658,13 @@ nav[am-layout][am-layout~="tab"][am-layout~="center-align"] nav a {
   flex: none;
 }
 nav[am-layout][am-layout~="tab"] nav:nth-of-type(1) {
-  background-color: #81d7fd;
+  background-color: #3dc1fd;
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
 }
 nav[am-layout][am-layout~="tab"] nav:nth-of-type(2) {
-  background-color: #60ccfd;
+  background-color: #1cb6fc;
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
@@ -873,7 +876,7 @@ body > div[am-wrapper] {
 body > div[am-wrapper] > header,
 body > div[am-wrapper] > footer {
   background-color: #37474f;
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > div[am-wrapper] > header h1,
 body > div[am-wrapper] > footer h1,
@@ -887,15 +890,15 @@ body > div[am-wrapper] > header h5,
 body > div[am-wrapper] > footer h5,
 body > div[am-wrapper] > header h6,
 body > div[am-wrapper] > footer h6 {
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > div[am-wrapper] > header a:hover,
 body > div[am-wrapper] > footer a:hover {
-  color: #c5ecfe;
+  color: #81d7fd;
 }
 *:not(body) > [am-wrapper] {
   max-height: 100%;
@@ -941,12 +944,12 @@ body > div[am-wrapper] > footer a:hover {
   min-height: 100%;
 }
 @media (orientation: portrait) {
-  [am-layout-P~="hidden"] {
+  [am-layout-portrait~="hidden"] {
     display: none;
   }
 }
 @media (orientation: landscape) {
-  [am-layout-L~="hidden"] {
+  [am-layout-landscape~="hidden"] {
     display: none;
   }
 }
@@ -1227,7 +1230,7 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > header h1,
 body > footer h1,
@@ -1241,15 +1244,15 @@ body > header h5,
 body > footer h5,
 body > header h6,
 body > footer h6 {
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > header a,
 body > footer a {
-  color: #60ccfd;
+  color: #1cb6fc;
 }
 body > header a:hover,
 body > footer a:hover {
-  color: #c5ecfe;
+  color: #81d7fd;
 }
 h1,
 h2,
@@ -1319,15 +1322,15 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: #0392d3;
+  color: #015276;
 }
 a:hover,
 a:active {
   color: #000000;
 }
 a:focus:not(.am-btn) {
-  background-color: #58cafd;
-  color: #013b55;
+  background-color: #03a9f4;
+  color: #000000;
 }
 small {
   font-size: 65%;
@@ -1369,7 +1372,7 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   tab-size: 4;
-  margin: 1em 0 0 0;
+  margin: .5em 0 0 0;
   padding: 1em 1em 1em 1em;
 }
 label {
@@ -1436,13 +1439,13 @@ img {
   justify-content: center;
 }
 .am-active {
-  background-color: #60ccfd;
+  background-color: #1cb6fc;
 }
 .am-primary {
-  background-color: #60ccfd;
+  background-color: #1cb6fc;
 }
 .am-secondary {
-  background-color: #81d7fd;
+  background-color: #3dc1fd;
 }
 .am-clr-1-text {
   color: #f44336;

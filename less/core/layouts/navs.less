@@ -3,25 +3,26 @@ nav[@{am-layout-var}] {
     a {
       flex: 1 @am-flex-width1;
     }
-    &[@{am-layout-var}~="justify-align"] {
-      justify-content: space-between;
+  }
+  // default to horizontal
+  &[@{am-layout-var}~="justify-align"] {
+    justify-content: space-between;
+  }
+  &[@{am-layout-var}~="left-align"] {
+    a {
+      align-self: flex-start;
     }
-    &[@{am-layout-var}~="left-align"] {
-      a {
-        align-self: flex-start;
-      }
+  }
+  &[@{am-layout-var}~="right-align"] {
+    justify-content: flex-end;
+    a {
+      align-self: flex-end;
     }
-    &[@{am-layout-var}~="right-align"] {
-      justify-content: flex-end;
-      a {
-        align-self: flex-end;
-      }
-    }
-    &[@{am-layout-var}~="center-align"] {
-      justify-content: center;
-      a {
-        align-self: center;
-      }
+  }
+  &[@{am-layout-var}~="center-align"] {
+    justify-content: center;
+    a {
+      align-self: center;
     }
   }
   &[@{am-layout-var}~="vertical"] {
@@ -50,6 +51,9 @@ nav[@{am-layout-var}] {
     padding: @am-nav-link-padding;
     display: inline-block;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
     @media (max-width: 30em){
       font-size: 90%;
     }
