@@ -460,6 +460,10 @@ article[am-layout~="vertical"] > section {
   flex-basis: auto;
   width: 100%;
 }
+form[am-layout~="vertical"] > fieldset {
+  flex-basis: auto;
+  width: 100%;
+}
 form fieldset[am-layout] {
   border: none;
   padding: 0;
