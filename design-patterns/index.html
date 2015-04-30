@@ -1668,7 +1668,25 @@
                     <code>&lt;fieldset am-layout="stacked"&gt;</code>
                 </p>
             </blockquote>
-            <form>
+            <form am-layout="vertical">
+                <fieldset am-layout="stacked">
+                    <div role="group">
+                        <legend>
+                            My form
+                        </legend>
+                        <label for="stacked-email" am-preicon="&#xf118;">Email</label>
+                        <input id="stacked-email" type="email" placeholder="Email">
+
+                        <label for="stacked-password" am-posticon="&#xf118;">Password</label>
+                        <input id="stacked-password" type="password" placeholder="Password">
+
+                        <label for="stacked-remember">
+                            <input id="stacked-remember" type="checkbox"> Remember me
+                        </label>
+
+                        <button type="submit" class="am-btn am-primary">Sign in</button>
+                    </div>
+                </fieldset>
                 <fieldset am-layout="stacked">
                     <div role="group">
                         <legend>

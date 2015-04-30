@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.7 - 2015-04-29
+ * ambient - v1.3.9 - 2015-04-30
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -937,6 +937,12 @@ article[am-layout~="vertical"] > section {
           flex-basis: auto;
   width: 100%;
 }
+form[am-layout~="vertical"] > fieldset {
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+  width: 100%;
+}
 form fieldset[am-layout] {
   border: none;
   padding: 0;
@@ -1367,6 +1373,20 @@ body > div[am-wrapper] > footer {
   background-color: #37474f;
   color: #1cb6fc;
 }
+body > div[am-wrapper] > header h1,
+body > div[am-wrapper] > footer h1,
+body > div[am-wrapper] > header h2,
+body > div[am-wrapper] > footer h2,
+body > div[am-wrapper] > header h3,
+body > div[am-wrapper] > footer h3,
+body > div[am-wrapper] > header h4,
+body > div[am-wrapper] > footer h4,
+body > div[am-wrapper] > header h5,
+body > div[am-wrapper] > footer h5,
+body > div[am-wrapper] > header h6,
+body > div[am-wrapper] > footer h6 {
+  color: #1cb6fc;
+}
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
   color: #1cb6fc;
@@ -1667,6 +1687,20 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
+  color: #1cb6fc;
+}
+body > header h1,
+body > footer h1,
+body > header h2,
+body > footer h2,
+body > header h3,
+body > footer h3,
+body > header h4,
+body > footer h4,
+body > header h5,
+body > footer h5,
+body > header h6,
+body > footer h6 {
   color: #1cb6fc;
 }
 body > header a,
