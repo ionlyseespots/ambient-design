@@ -61,7 +61,7 @@ footer {
 }
 @media (orientation: portrait) {
   article {
-    flex-direction: column;
+    flex-flow: column nowrap;
   }
   section,
   aside {
@@ -1092,7 +1092,6 @@ body > div[am-wrapper] > footer a:hover {
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
   transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
@@ -1149,6 +1148,24 @@ body > div[am-wrapper] > footer a:hover {
   .am-btn:not(.am-floating-action) {
     width: 100%;
   }
+}
+.am-btn-link {
+  -moz-user-select: none;
+  background-image: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #000000;
+  line-height: 36px;
+  outline: 0 none;
+  padding: 5px 2rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
 }
 html,
 body {
