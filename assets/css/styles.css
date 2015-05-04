@@ -9,6 +9,9 @@ small {
     font-size: 80%;
 }
 
+.am-btn {
+    margin: 2px;
+}
 /* Ambient color doc styles */
 span.name {
     display: block;
