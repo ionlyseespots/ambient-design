@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.7 - 2015-04-29
+ * ambient - v1.3.10 - 2015-05-04
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -514,11 +514,9 @@ footer {
 }
 @media (orientation: portrait) {
   article {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
   section,
   aside {
@@ -932,6 +930,12 @@ div[am-block][am-block~="gutter"] > [am-block][am-block="last"] {
   }
 }
 article[am-layout~="vertical"] > section {
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+  width: 100%;
+}
+form[am-layout~="vertical"] > fieldset {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
@@ -1367,6 +1371,20 @@ body > div[am-wrapper] > footer {
   background-color: #37474f;
   color: #1cb6fc;
 }
+body > div[am-wrapper] > header h1,
+body > div[am-wrapper] > footer h1,
+body > div[am-wrapper] > header h2,
+body > div[am-wrapper] > footer h2,
+body > div[am-wrapper] > header h3,
+body > div[am-wrapper] > footer h3,
+body > div[am-wrapper] > header h4,
+body > div[am-wrapper] > footer h4,
+body > div[am-wrapper] > header h5,
+body > div[am-wrapper] > footer h5,
+body > div[am-wrapper] > header h6,
+body > div[am-wrapper] > footer h6 {
+  color: #1cb6fc;
+}
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
   color: #1cb6fc;
@@ -1571,7 +1589,6 @@ body > div[am-wrapper] > footer a:hover {
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
   -webkit-transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
@@ -1630,6 +1647,24 @@ body > div[am-wrapper] > footer a:hover {
     width: 100%;
   }
 }
+.am-btn-link {
+  -moz-user-select: none;
+  background-image: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #000000;
+  line-height: 36px;
+  outline: 0 none;
+  padding: 5px 2rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
 html,
 body {
   cursor: default;
@@ -1667,6 +1702,20 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
+  color: #1cb6fc;
+}
+body > header h1,
+body > footer h1,
+body > header h2,
+body > footer h2,
+body > header h3,
+body > footer h3,
+body > header h4,
+body > footer h4,
+body > header h5,
+body > footer h5,
+body > header h6,
+body > footer h6 {
   color: #1cb6fc;
 }
 body > header a,

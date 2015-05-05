@@ -61,7 +61,7 @@ footer {
 }
 @media (orientation: portrait) {
   article {
-    flex-direction: column;
+    flex-flow: column nowrap;
   }
   section,
   aside {
@@ -460,6 +460,10 @@ article[am-layout~="vertical"] > section {
   flex-basis: auto;
   width: 100%;
 }
+form[am-layout~="vertical"] > fieldset {
+  flex-basis: auto;
+  width: 100%;
+}
 form fieldset[am-layout] {
   border: none;
   padding: 0;
@@ -831,6 +835,20 @@ body > div[am-wrapper] > footer {
   background-color: #37474f;
   color: #1cb6fc;
 }
+body > div[am-wrapper] > header h1,
+body > div[am-wrapper] > footer h1,
+body > div[am-wrapper] > header h2,
+body > div[am-wrapper] > footer h2,
+body > div[am-wrapper] > header h3,
+body > div[am-wrapper] > footer h3,
+body > div[am-wrapper] > header h4,
+body > div[am-wrapper] > footer h4,
+body > div[am-wrapper] > header h5,
+body > div[am-wrapper] > footer h5,
+body > div[am-wrapper] > header h6,
+body > div[am-wrapper] > footer h6 {
+  color: #1cb6fc;
+}
 body > div[am-wrapper] > header a,
 body > div[am-wrapper] > footer a {
   color: #1cb6fc;
@@ -1074,7 +1092,6 @@ body > div[am-wrapper] > footer a:hover {
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  margin: 2px;
   text-transform: uppercase;
   word-wrap: break-word;
   transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
@@ -1132,6 +1149,24 @@ body > div[am-wrapper] > footer a:hover {
     width: 100%;
   }
 }
+.am-btn-link {
+  -moz-user-select: none;
+  background-image: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #000000;
+  line-height: 36px;
+  outline: 0 none;
+  padding: 5px 2rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
 html,
 body {
   cursor: default;
@@ -1169,6 +1204,20 @@ body {
 body > header,
 body > footer {
   background-color: #37474f;
+  color: #1cb6fc;
+}
+body > header h1,
+body > footer h1,
+body > header h2,
+body > footer h2,
+body > header h3,
+body > footer h3,
+body > header h4,
+body > footer h4,
+body > header h5,
+body > footer h5,
+body > header h6,
+body > footer h6 {
   color: #1cb6fc;
 }
 body > header a,

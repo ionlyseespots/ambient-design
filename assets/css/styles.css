@@ -1,7 +1,7 @@
 /* Docs Theme */
 
 html {
-    font-size: .95em; /* Ambient default is 112.5%/1.65 : 18px with 1.65 line-height */
+    font-size: 80%;  /* Ambient default is 112.5%/1.65 : 18px with 1.65 line-height */
     line-height: 1.5;
 }
 
@@ -9,6 +9,9 @@ small {
     font-size: 80%;
 }
 
+.am-btn {
+    margin: 2px;
+}
 /* Ambient color doc styles */
 span.name {
     display: block;
