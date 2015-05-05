@@ -2,9 +2,9 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
-Ambient is a lightweight and modular HTML5 UI development methodology. Think of it as content aware CSS.<br />
+Ambient is a lightweight and modular HTML5 UI development methodology. Think of it as content aware CSS.
 
-Ambient is ready to adopt whatever your design or style is. Feel free to use HTML, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
+Ambient is ready to adopt whatever your design or style is. Feel free to use HTML5, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
@@ -25,13 +25,12 @@ Ambient source makes use of [Node] (https://nodejs.org/) and [Grunt] (http://gru
 
 ## Development
 
-This project is in early development.
+This project is in active development.
 
 * Website: http://ionlyseespots.github.io/ambient-design
 * Docs: http://ionlyseespots.github.io/ambient-design/docs
 * Semantic: http://ionlyseespots.github.io/ambient-design/layout
 * Layout: http://ionlyseespots.github.io/ambient-design/design-patterns
-* Colors: http://ionlyseespots.github.io/ambient-design/design-patterns/colors.html 
 
 ## Road map
 * Roadmap: http://ionlyseespots.github.io/ambient-design/roadmap
