@@ -1,16 +1,7 @@
 /* Docs Theme */
 
-html {
-    font-size: 90%;  /* Ambient default is 112.5%/1.65 : 18px with 1.65 line-height */
-    line-height: 1.5;
-}
-
 header, footer, section {
     padding: 1em;
-}
-
-small {
-    font-size: 80%;
 }
 
 /* Ambient color doc styles */
