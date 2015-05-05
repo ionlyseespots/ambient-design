@@ -58,6 +58,7 @@ aside {
 }
 footer {
   align-self: flex-end;
+  flex-shrink: 0;
 }
 @media (orientation: portrait) {
   article {

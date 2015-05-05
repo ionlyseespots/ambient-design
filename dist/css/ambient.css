@@ -511,6 +511,9 @@ footer {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 @media (orientation: portrait) {
   article {

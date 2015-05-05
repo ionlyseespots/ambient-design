@@ -20,7 +20,7 @@
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<header am-padding>
+<header>
     <h1>
         <a href="../index.html" title="index">Ambient</a>
     </h1>
@@ -32,7 +32,7 @@
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
-<header am-padding class="am-primary">
+<header class="am-primary">
     <p>
         Overview<br />
         Introduction | Namespaces | Define your layout
@@ -53,7 +53,7 @@
             Ambient makes use of CSS3 attributes on elements for page layout.
         </p>
     </header>
-    <section am-padding>
+    <section>
         <h3>
             We define our own namespaces
         </h3>
@@ -70,7 +70,7 @@
             </p>
         </blockquote>
     </section>
-    <section am-padding>
+    <section>
         <h3>
             Namespaces
         </h3>
@@ -111,7 +111,7 @@
             Global layout attributes are layout properties common to all HTML elements. These attributes can be used on any element.
         </p>
     </header>
-    <section am-padding>
+    <section>
         <h3>
             Margin
         </h3>
@@ -177,7 +177,7 @@
             </ul>
         </blockquote>
     </section>
-    <section am-padding>
+    <section>
         <h3>
             Layers
         </h3>
@@ -314,8 +314,8 @@
         you can add additional layout values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
     </p>
 </header>
-<section id="section" am-padding>
-    <header am-padding>
+<section id="section>
+    <header>
         <h1 class="am-text-uppercase">
             Linear layout
         </h1>
@@ -350,7 +350,7 @@
                 </section>
             </article>
         </div>
-        <div am-col am-padding>
+        <div am-col>
             <h3>
                 Code
             </h3>
@@ -395,7 +395,7 @@
                 </section>
             </article>
         </div>
-        <div am-col am-padding>
+        <div am-col>
             <h3>
                 Code
             </h3>
@@ -417,8 +417,8 @@
 </section>
 <hr />
 
-<section  am-padding>
-    <header am-padding>
+<section>
+    <header>
         <h1 class="am-text-uppercase">
             Grid layout
         </h1>
@@ -554,7 +554,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -673,7 +673,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -720,7 +720,7 @@
                 </ul>
             </blockquote>
             <article am-layout="outline">
-                <section am-padding>
+                <section>
                     <h3>
                         Margin for a single unsemantic row
                     </h3>
@@ -749,7 +749,7 @@
                         </div>
                     </div>
                 </section>
-                <section am-layout="gutter padding" am-padding>
+                <section am-layout="gutter padding">
                     <h3>
                         Padding for the root semantic element
                     </h3>
@@ -851,270 +851,8 @@
 </section>
 <hr />
 
-<!--<section  am-padding>-->
-    <!--<header am-padding>-->
-        <!--<h1 class="am-text-uppercase">-->
-            <!--Card layout-->
-        <!--</h1>-->
-        <!--<p>-->
-            <!--Card layout is used to structure content, and thus relies on the root semantic element for intent.-->
-            <!--The default orientation on portrait for card layout is 2 columns.-->
-        <!--</p>-->
-    <!--</header>-->
-    <!--<div am-row="portrait-100">-->
-        <!--<div am-col am-padding>-->
-            <!--<h2>-->
-                <!--Multiple cards-->
-            <!--</h2>-->
-            <!--<p>-->
-                <!--To create multiple cards add the attribute and value <code>am-layout="card"</code> to any semantic element and wrap card content in a child <code>div</code>.-->
-            <!--</p>-->
-            <!--<h3>-->
-                <!--Multiple-->
-            <!--</h3>-->
-            <!--<blockquote>-->
-                <!--<p>-->
-                    <!--<code>&lt;section am-layout="card"&gt;</code>-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--To add a card, wrap content within a child div.-->
-                <!--</p>-->
-            <!--</blockquote>-->
-            <!--<article>-->
-                <!--<section am-layout="card">-->
-                    <!--<div>-->
-                        <!--<h1>-->
-                            <!--Multiple card-->
-                        <!--</h1>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h2>-->
-                            <!--Multiple  card-->
-                        <!--</h2>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h3>-->
-                            <!--Multiple card-->
-                        <!--</h3>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h4>-->
-                            <!--Multiple card-->
-                        <!--</h4>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h5>-->
-                            <!--Multiple card-->
-                        <!--</h5>-->
-                        <!--<P>-->
-                            <!--Multiple cards have a consistent, flexible width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                <!--</section>-->
-            <!--</article>-->
-        <!--</div>-->
-        <!--<div am-col am-padding>-->
-            <!--<h3>-->
-                <!--Code-->
-            <!--</h3>-->
-                    <!--<pre>-->
-<!--&lt;section am-layout="card"&gt;-->
-    <!--&lt;div&gt;-->
-        <!--&lt;h1&gt;-->
-            <!--Multiple card-->
-        <!--&lt;/h1&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-    <!--&lt;/div&gt;-->
-    <!--&lt;div&gt;-->
-        <!--&lt;h2&gt;-->
-            <!--Multiple card-->
-        <!--&lt;/h2&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-    <!--&lt;/div&gt;-->
-    <!--&lt;div&gt;-->
-        <!--&lt;h3&gt;-->
-            <!--Multiple card-->
-        <!--&lt;/h3&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-    <!--&lt;/div&gt;-->
-    <!--&lt;div&gt;-->
-        <!--&lt;h4&gt;-->
-            <!--Multiple card-->
-        <!--&lt;/h4&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-       <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-    <!--&lt;/div&gt;-->
-    <!--&lt;div&gt;-->
-        <!--&lt;h5&gt;-->
-            <!--Multiple card-->
-        <!--&lt;/h5&gt;-->
-        <!--&lt;p&gt;-->
-            <!--Multiple cards have a consistent, flexible width and variable height.-->
-        <!--&lt;/p&gt;-->
-    <!--&lt;/div&gt;-->
-<!--&lt;/section&gt;-->
-                    <!--</pre>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
-<!--<hr />-->
-
-<!--<section  am-padding>-->
-    <!--<div am-row="portrait-100">-->
-        <!--<div am-col am-padding>-->
-            <!--<h2>-->
-                <!--Vertical cards-->
-            <!--</h2>-->
-            <!--<p>-->
-                <!--To create vertical cards add the attribute and value <code>am-layout="card vertical"</code> to any semantic element and wrap card content in a child <code>div</code>.-->
-            <!--</p>-->
-            <!--<h3>-->
-                <!--Vertical-->
-            <!--</h3>-->
-            <!--<blockquote>-->
-                <!--<p>-->
-                    <!--<code>&lt;section am-layout="card"&gt;</code>-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--To add a card, wrap content within a child div.-->
-                <!--</p>-->
-            <!--</blockquote>-->
-            <!--<article>-->
-                <!--<section am-layout="card vertical">-->
-                    <!--<div>-->
-                        <!--<h1>-->
-                            <!--Vertical card-->
-                        <!--</h1>-->
-                        <!--<P>-->
-                            <!--Vertical cards have a constant width and variable height.-->
-                        <!--</P>-->
-                        <!--<P>-->
-                            <!--Vertical cards have a constant width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h2>-->
-                            <!--Vertical card-->
-                        <!--</h2>-->
-                        <!--<P>-->
-                            <!--Vertical cards have a constant width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<h3>-->
-                            <!--Vertical card-->
-                        <!--</h3>-->
-                        <!--<P>-->
-                            <!--Vertical cards have a constant width and variable height.-->
-                        <!--</P>-->
-                    <!--</div>-->
-                <!--</section>-->
-            <!--</article>-->
-        <!--</div>-->
-        <!--<div am-col am-padding>-->
-            <!--<h3>-->
-                <!--Code-->
-            <!--</h3>-->
-                    <!--<pre>-->
-<!--&lt;section am-layout="card vertical"&gt;-->
-        <!--&lt;div&gt;-->
-            <!--&lt;h1&gt;-->
-                <!--Vertical card-->
-            <!--&lt;/h1&gt;-->
-            <!--&lt;p&gt;-->
-                <!--Vertical cards have a constant width and variable height.-->
-            <!--&lt;/p&gt;-->
-            <!--&lt;p&gt;-->
-                <!--Vertical cards have a constant width and variable height.-->
-            <!--&lt;/p&gt;-->
-        <!--&lt;/div&gt;-->
-        <!--&lt;div&gt;-->
-            <!--&lt;h2&gt;-->
-                <!--Vertical card-->
-            <!--&lt;/h2&gt;-->
-            <!--&lt;p&gt;-->
-                <!--Vertical cards have a constant width and variable height.-->
-            <!--&lt;/p&gt;-->
-        <!--&lt;/div&gt;-->
-        <!--&lt;div&gt;-->
-            <!--&lt;h3&gt;-->
-                <!--Vertical card-->
-            <!--&lt;/h3&gt;-->
-            <!--&lt;p&gt;-->
-                <!--Vertical cards have a constant width and variable height.-->
-            <!--&lt;/p&gt;-->
-        <!--&lt;/div&gt;-->
-<!--&lt;/section&gt;-->
-                    <!--</pre>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
-<!--</article>-->
-<!--<hr />-->
-
 <article>
-    <header am-padding>
+    <header>
         <h1 class="am-text-uppercase">
             Nav layout
         </h1>
@@ -1122,7 +860,7 @@
             Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
         </p>
     </header>
-    <section  am-padding>
+    <section>
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h2>
@@ -1144,7 +882,7 @@
                 </nav>
                 <hr />
             </div>
-            <div am-col am-padding>
+            <div am-col>
                 <h3>
                     Code
                 </h3>
@@ -1160,7 +898,7 @@
     </section>
     <hr />
 
-    <section  am-padding>
+    <section>
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h2>
@@ -1185,7 +923,7 @@
                 </nav>
                 <hr />
             </div>
-            <div am-col am-padding>
+            <div am-col>
                 <h3>
                     Code
                 </h3>
@@ -1201,7 +939,7 @@
     </section>
     <hr />
 
-    <section  am-padding>
+    <section >
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h2>
@@ -1243,7 +981,7 @@
 </article>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1285,7 +1023,7 @@
 </article>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1310,7 +1048,7 @@
             </nav>
             <hr />
         </div>
-        <div am-col am-padding>
+        <div am-col>
             <h3>
                 Code
             </h3>
@@ -1327,7 +1065,7 @@
 </article>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1369,7 +1107,7 @@
 </article>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1412,7 +1150,7 @@
 <hr />
 
 <article>
-    <header am-padding>
+    <header>
         <h1 class="am-text-uppercase">
             Button layout
         </h1>
@@ -1420,7 +1158,7 @@
             Button layout is used to structure floating buttons (and in some cases links that display as a button), and thus relies on the root semantic element for intent.
         </p>
     </header>
-    <section  am-padding>
+    <section>
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h2>
@@ -1448,7 +1186,7 @@
     </section>
     <hr />
 
-    <section  am-padding>
+    <section>
         <div am-row="portrait-100">
             <div am-col am-padding>
                 <h2>
@@ -1522,7 +1260,7 @@
 </article>
 
 <article>
-<header am-padding>
+<header>
     <h1 class="am-text-uppercase">
         Form layout
     </h1>
@@ -1530,7 +1268,7 @@
         Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
     </p>
 </header>
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1583,7 +1321,7 @@
 </section>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1654,7 +1392,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1745,7 +1483,7 @@
 </section>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1827,7 +1565,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -1943,7 +1681,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -2029,7 +1767,7 @@
 </section>
 <hr />
 
-<section am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -2087,7 +1825,7 @@
                 </fieldset>
             </form>
         </div>
-        <div am-col am-padding>
+        <div am-col asm-padding>
             <h3>
                 Code
             </h3>
@@ -2143,7 +1881,7 @@
 </section>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
         <div am-col am-padding>
             <h2>
@@ -2264,9 +2002,9 @@
 </section>
 <hr />
 
-<section  am-padding>
+<section>
     <div am-row="portrait-100">
-        <div am-col>
+        <div am-col am-padding>
             <h2>
                 Outline the layout
             </h2>
@@ -2344,7 +2082,7 @@
     </div>
 </section>
 </article>
-<article class="am-secondary" am-padding>
+<article class="am-secondary">
     <h1>
         Ambient is a lightweight and modular HTML5 UI development methodology.
     </h1>
