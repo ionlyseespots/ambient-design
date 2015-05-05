@@ -3,7 +3,7 @@
 // http://davidwalsh.name/html5-buttons
 // http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons
 
-.@{am-prefix}-btn {
+.am-root-button {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -16,19 +16,21 @@
   white-space: nowrap;
   background-clip: padding-box;
   color: @am-clr-btn-text;
-  background-color: @am-clr-btn-bg;
-  border: 1px solid @am-clr-btn-bdr;
-  border-radius: 2px;
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  text-transform: uppercase;
   word-wrap: break-word;
+}
+
+.@{am-prefix}-btn {
+  .am-root-button;
+  text-transform: uppercase;
   transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
-  &.@{am-prefix}-flat {   //TODO  .am-flat is going away in 1.4.0
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
+  background-color: @am-clr-btn-bg;
+  border: 1px solid @am-clr-btn-bdr;
+  border-radius: 2px;
+  & ~ a {
+    .am-root-button; // Content aware design: links following buttons will inherit button phrasing styles
   }
   &:hover {
     background-color: lighten(@am-clr-btn-bg, 8%);
@@ -80,20 +82,5 @@
 }
 
 .@{am-prefix}-btn-link  {
-  -moz-user-select: none;
-  background-image: none;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  color: @am-clr-btn-text;
-  line-height: 36px;
-  outline: 0 none;
-  padding: 5px 2rem;
-  text-transform: uppercase;
-  word-wrap: break-word;
+  .am-root-button;
 }
