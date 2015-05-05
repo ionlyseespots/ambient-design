@@ -1,12 +1,12 @@
 /* Docs Theme */
 
 html {
-    font-size: 90%;
+    font-size: 100%;
     line-height: 1.5;
 }
 
 header, footer, section {
-    padding: 1em;
+    padding: .5em;
 }
 
 /* Ambient color doc styles */
