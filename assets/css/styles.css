@@ -1,5 +1,10 @@
 /* Docs Theme */
 
+html {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
 header, footer, section {
     padding: 1em;
 }
