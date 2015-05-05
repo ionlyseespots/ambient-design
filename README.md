@@ -2,7 +2,7 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
-Back to basics. A lightweight and modular HTML5 UI development methodology. Ambient is a CSS framework that makes use of HTML5 elements & CSS3 attributes to layout the document outline.
+Ambient is a lightweight and modular HTML5 UI development methodology. Think of it as content aware CSS.<br />
 
 Ambient is ready to adopt whatever your design or style is. Feel free to use HTML, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 

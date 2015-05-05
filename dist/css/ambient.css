@@ -1054,6 +1054,9 @@ form label input {
 form select {
   padding: .35em 0;
 }
+nav[am-layout] h1 {
+  width: auto;
+}
 nav[am-layout][am-layout~="horizontal"] a {
   -webkit-box-flex: 1;
   -webkit-flex: 1 8.3333%;
