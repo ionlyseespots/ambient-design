@@ -11,7 +11,6 @@ form {
         width: auto;
         legend {
           width: 100%;
-          //          max-width: 100%;
           word-wrap: break-word;
         }
       }
@@ -66,43 +65,6 @@ form {
           }
         }
       }
-
-      //== Multi-column
-      &[@{am-layout-var}~="multicolumn"] {
-        display: flex;
-        flex-flow: row wrap;
-        & input:not([type="checkbox"]):not([type="radio"]),
-        & select,
-        & textarea,
-        & label {
-          width: 100%;
-        }
-        & > div {
-          flex: 1 auto;
-          width: @am-flex-width1;
-          @media (max-width: 30em) {
-            width: 100%;
-          }
-        }
-        & > div[role="group"] {
-          display: flex;
-          flex-flow: row wrap;
-          & input:not([type="checkbox"]):not([type="radio"]),
-          & select,
-          & textarea,
-          & label {
-            width: 100%;
-          }
-          & > div {
-            flex: 1 auto;
-            width: @am-flex-width1;
-            @media (max-width: 30em) {
-              width: 100%;
-            }
-          }
-        }
-      }
-
       @media (max-width: 30em) {
         input:not([type="checkbox"]):not([type="radio"]),
         select,

@@ -523,44 +523,6 @@ form fieldset[am-layout][am-layout~="aligned"] > div[role="group"] > span textar
     width: 100%;
   }
 }
-form fieldset[am-layout][am-layout~="multicolumn"] {
-  display: flex;
-  flex-flow: row wrap;
-}
-form fieldset[am-layout][am-layout~="multicolumn"] input:not([type="checkbox"]):not([type="radio"]),
-form fieldset[am-layout][am-layout~="multicolumn"] select,
-form fieldset[am-layout][am-layout~="multicolumn"] textarea,
-form fieldset[am-layout][am-layout~="multicolumn"] label {
-  width: 100%;
-}
-form fieldset[am-layout][am-layout~="multicolumn"] > div {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form fieldset[am-layout][am-layout~="multicolumn"] > div {
-    width: 100%;
-  }
-}
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] {
-  display: flex;
-  flex-flow: row wrap;
-}
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] input:not([type="checkbox"]):not([type="radio"]),
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] select,
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] textarea,
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] label {
-  width: 100%;
-}
-form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
-  flex: 1 auto;
-  width: 8.3333%;
-}
-@media (max-width: 30em) {
-  form fieldset[am-layout][am-layout~="multicolumn"] > div[role="group"] > div {
-    width: 100%;
-  }
-}
 @media (max-width: 30em) {
   form fieldset[am-layout] input:not([type="checkbox"]):not([type="radio"]),
   form fieldset[am-layout] select,
@@ -1073,6 +1035,24 @@ body > div[am-wrapper] > footer a:hover {
   -o-animation-delay: 13.88888889s;
   animation-delay: 13.88888889s;
 }
+.am-root-button {
+  -moz-user-select: none;
+  background-image: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-clip: padding-box;
+  color: #000000;
+  line-height: 36px;
+  outline: 0 none;
+  padding: 5px 2rem;
+  word-wrap: break-word;
+}
 .am-btn {
   -moz-user-select: none;
   background-image: none;
@@ -1086,20 +1066,33 @@ body > div[am-wrapper] > footer a:hover {
   white-space: nowrap;
   background-clip: padding-box;
   color: #000000;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  border-radius: 2px;
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  text-transform: uppercase;
   word-wrap: break-word;
+  text-transform: uppercase;
   transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
 }
-.am-btn.am-flat {
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
+.am-btn ~ a {
+  -moz-user-select: none;
+  background-image: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-clip: padding-box;
+  color: #000000;
+  line-height: 36px;
+  outline: 0 none;
+  padding: 5px 2rem;
+  word-wrap: break-word;
 }
 .am-btn:hover {
   background-color: #ffffff;
@@ -1160,11 +1153,11 @@ body > div[am-wrapper] > footer a:hover {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
+  background-clip: padding-box;
   color: #000000;
   line-height: 36px;
   outline: 0 none;
   padding: 5px 2rem;
-  text-transform: uppercase;
   word-wrap: break-word;
 }
 html,

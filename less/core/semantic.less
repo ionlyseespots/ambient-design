@@ -31,7 +31,6 @@ hr,
 p,
 div {
   width: 100%;
-//  max-width: 100%;
   word-wrap: break-word;
 }
 header,
@@ -46,14 +45,13 @@ footer {
   flex-flow: row wrap;
   align-content: flex-start;
   position: relative;
-//  max-width: 100%;
 }
 header {
   align-self: flex-start;
 }
 main,
 section,
-fieldset,
+fieldset, // Fieldset is a root sectioning element and can be styled as flexbox. Nested elements cannot, and require div role="group" container immediately below fieldset
 aside + article {
   flex: 1 @am-flex-width1;
   min-width: @am-flex-width1; // fixes firefox issue with flex widths
