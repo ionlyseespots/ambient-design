@@ -1163,7 +1163,7 @@ nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
   text-align: right;
 }
 nav[am-layout] a:not(.am-floating-action) {
-  padding: 1em;
+  padding: 1em 0.5em;
   display: inline-block;
   text-decoration: none;
   font-size: 14px;
