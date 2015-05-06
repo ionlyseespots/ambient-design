@@ -25,7 +25,7 @@ Ambient source makes use of [Node] (https://nodejs.org/) and [Grunt] (http://gru
 
 ## Development
 
-This project is in early development.
+This project is in active development. The website uses Ambient for the front-end HTML/CSS.
 
 * Website: http://ionlyseespots.github.io/ambient-design
 * Docs: http://ionlyseespots.github.io/ambient-design/docs
