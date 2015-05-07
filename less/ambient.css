@@ -608,10 +608,6 @@ nav[am-layout][am-layout~="menubar"] > a {
     width: 100%;
   }
 }
-nav[am-layout][am-layout~="menubar"] > h1 ~ a {
-  flex-basis: auto;
-  width: 100%;
-}
 nav[am-layout][am-layout~="menubar"] > nav {
   border-bottom: 1px solid #d6d6d6;
   margin: 5px 0;
@@ -633,6 +629,17 @@ nav[am-layout][am-layout~="menubar"] > nav nav {
 }
 nav[am-layout][am-layout~="menubar"] > nav nav a {
   margin-top: 1em;
+}
+nav[am-layout][am-layout~="menubar"] > a + nav {
+  border: 1px solid #d6d6d6;
+  padding: 0 1em;
+}
+nav[am-layout][am-layout~="menubar"] > a + nav a {
+  flex-basis: auto;
+  width: 100%;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 nav[am-layout] a {
   padding: 1em 0.5em;
