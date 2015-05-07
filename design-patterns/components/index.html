@@ -1045,16 +1045,17 @@ line breaks
     <h1>Contextual Menubar</h1>
     <h2><code>am-layout="menubar"</code></h2>
     <p>
-        Pure inks are content aware, meaning links automatically know when to layout for: simple horizontal & vertical links, tabs, nested tabs or flyouts.
+        Links are content aware, meaning links in a <code>nav</code> automatically know when to layout for: horizontal & vertical links, tabs, nested tabs or flyouts/dropdowns.
     </p>
     <nav am-layout="menubar">
+        <h1>Pure links</h1>
         <a class="am-active" href>link</a>
         <a href>link</a>
         <a href>link</a>
         <hr />
 
         <nav>
-            <h1>Basic Tab</h1>
+            <h1>Basic tab</h1>
             <a class="am-active" href>link</a>
             <a href>link</a>
             <a href>link</a>
@@ -1062,7 +1063,8 @@ line breaks
         <hr />
 
         <nav>
-            <h1>Complex Tab</h1>
+            <h1>Complex tab</h1>
+            <p>Infintitely nestable</p>
             <a class="am-active" href>link</a>
             <a href>link</a>
             <a href>link</a>
@@ -1070,16 +1072,13 @@ line breaks
                 <a class="am-active" href>link</a>
                 <a href>link</a>
                 <a href>link</a>
-                <nav>
-                    <a class="am-active" href>link</a>
-                    <a href>link</a>
-                    <a href>link</a>
-                </nav>
             </nav>
         </nav>
         <hr />
+
         <h2>Flyout / Dropdown</h2>
-        <a href>link</a>
+        <p>Infintitely nestable</p>
+        <a class="am-active" href>link</a>
         <nav>
             <a href>flyout link 1</a>
             <nav>
