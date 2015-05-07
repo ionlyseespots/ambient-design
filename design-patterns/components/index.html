@@ -177,18 +177,19 @@ line breaks
             <h2>
                 Ambient
             </h2>
-            <a class="am-btn-link" href="#">Link</a>
+            <a href="#">Link</a>
             <a class="am-btn" href="#">Anchor button</a>
             <button class="am-btn">Button element</button>
             <input class="am-btn" type="submit" value="submit input">
             <input class="am-btn" type="button" value="button input">
+            <a href="#">Link</a>
             <a class="am-btn-link" href="#">Link</a>
             <blockquote>
                 <p>
                     <code>class="am-btn"</code>
                 </p>
                 <p>
-                    Links can be aligned with buttons with  <code>class="am-btn-link"</code>
+                    A link immediately following a button will be aligned with button styles. To style additional links, add the skin class <code>class="am-btn-link"</code>
                 </p>
             </blockquote>
                 <h2>
@@ -1021,19 +1022,105 @@ line breaks
         </section>
     </article>
 
-<article>
-    <nav am-layout="horizontal">
-        <h1>title of nav</h1>
+<article am-padding>
+    <nav>
+        <h1>Default</h1>
+        <a class="am-active" href>link</a>
         <a href>link</a>
+        <a href>link</a>
+    </nav>
+    <nav am-layout="horizontal">
+        <h1>Horizontal</h1>
+        <a class="am-active" href>link</a>
         <a href>link</a>
         <a href>link</a>
     </nav>
     <nav am-layout="vertical">
-        <h1>title of nav</h1>
-        <a href>link</a>
+        <h1>Vertical</h1>
+        <a class="am-active" href>link</a>
         <a href>link</a>
         <a href>link</a>
     </nav>
+    <hr />
+    <h1>Contextual Menubar</h1>
+    <h2><code>am-layout="menubar"</code></h2>
+    <p>
+        Pure inks are content aware, meaning links automatically know when to layout for: simple horizontal & vertical links, tabs, nested tabs or flyouts.
+    </p>
+    <nav am-layout="menubar">
+        <a class="am-active" href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+        <nav>
+            <h1>Basic tab</h1>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+        </nav>
+        <nav>
+            <h1>Complex tab</h1>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+            <nav>
+                <a class="am-active" href>link</a>
+                <a href>link</a>
+                <a href>link</a>
+                <nav>
+                    <a class="am-active" href>link</a>
+                    <a href>link</a>
+                    <a href>link</a>
+                </nav>
+            </nav>
+        </nav>
+        <h1>Flyout h1</h1>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+                <h2>Flyout h2</h2>
+                    <a class="am-active" href>link</a>
+                    <a href>link</a>
+                    <a href>link</a>
+                        <h3>Flyout h3</h3>
+                            <a class="am-active" href>link</a>
+                            <a href>link</a>
+                            <a href>link</a>
+        <h2>Flyout h2</h2>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+        <h3>Flyout h3</h3>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+                <h4>Flyout h4</h4>
+                    <a class="am-active" href>link</a>
+                    <a href>link</a>
+                    <a href>link</a>
+                        <h5>Flyout h5</h5>
+                            <a class="am-active" href>link</a>
+                            <a href>link</a>
+                            <a href>link</a>
+                                <h6>Flyout h6</h6>
+                                    <a class="am-active" href>link</a>
+                                    <a href>link</a>
+                                    <a href>link</a>
+        <h4>Flyout h4</h4>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+        <h5>Flyout h5</h5>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+        <h6>Flyout h6</h6>
+            <a class="am-active" href>link</a>
+            <a href>link</a>
+            <a href>link</a>
+    </nav>
+    <hr />
 </article>
 </main>
 </body>

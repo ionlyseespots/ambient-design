@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.10 - 2015-05-05
+ * ambient - v1.3.10 - 2015-05-07
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -536,7 +536,7 @@ footer {
   padding: calc(0.5em);
 }
 [am-padding][am-padding="large"] {
-  padding: calc(3em);
+  padding: calc(1.5em);
 }
 [am-padding][am-padding~="top"] {
   padding: 1em 0 0 0;
@@ -545,7 +545,7 @@ footer {
   padding: calc(0.5em) 0 0 0;
 }
 [am-padding][am-padding~="top"][am-padding~="large"] {
-  padding: calc(3em) 0 0 0;
+  padding: calc(1.5em) 0 0 0;
 }
 [am-padding][am-padding~="right"] {
   padding: 0 1em 0 0;
@@ -554,7 +554,7 @@ footer {
   padding: 0 calc(0.5em) 0 0;
 }
 [am-padding][am-padding~="right"][am-padding~="large"] {
-  padding: 0 calc(3em) 0 0;
+  padding: 0 calc(1.5em) 0 0;
 }
 [am-padding][am-padding~="bottom"] {
   padding: 0 0 1em 0;
@@ -563,7 +563,7 @@ footer {
   padding: 0 0 calc(0.5em) 0;
 }
 [am-padding][am-padding~="bottom"][am-padding~="large"] {
-  padding: 0 0 calc(3em) 0;
+  padding: 0 0 calc(1.5em) 0;
 }
 [am-padding][am-padding~="left"] {
   padding: 0 0 0 1em;
@@ -572,7 +572,7 @@ footer {
   padding: 0 0 0 calc(0.5em) 0;
 }
 [am-padding][am-padding~="left"][am-padding~="large"] {
-  padding: 0 0 0 calc(3em) 0;
+  padding: 0 0 0 calc(1.5em) 0;
 }
 [am-margin] {
   margin: 1em;
@@ -581,13 +581,13 @@ footer {
   margin: calc(0.5em);
 }
 [am-margin][am-margin="large"] {
-  margin: calc(3em);
+  margin: calc(1.5em);
 }
 [am-margin][am-margin~="top"] {
   margin: 1em 0 0 0;
 }
 [am-margin][am-margin~="top"][am-margin~="large"] {
-  margin: calc(3em) 0 0 0;
+  margin: calc(1.5em) 0 0 0;
 }
 [am-margin][am-margin~="top"][am-margin~="small"] {
   margin: calc(0.5em) 0 0 0;
@@ -596,7 +596,7 @@ footer {
   margin: 0 1em 0 0;
 }
 [am-margin][am-margin~="right"][am-margin~="large"] {
-  margin: 0 calc(3em) 0 0;
+  margin: 0 calc(1.5em) 0 0;
 }
 [am-margin][am-margin~="right"][am-margin~="small"] {
   margin: 0 calc(0.5em) 0 0;
@@ -605,7 +605,7 @@ footer {
   margin: 0 0 1em 0;
 }
 [am-margin][am-margin~="bottom"][am-margin~="large"] {
-  margin: 0 0 calc(3em) 0;
+  margin: 0 0 calc(1.5em) 0;
 }
 [am-margin][am-margin~="bottom"][am-margin~="small"] {
   margin: 0 0 calc(0.5em) 0;
@@ -614,7 +614,7 @@ footer {
   margin: 0 0 0 1em;
 }
 [am-margin][am-margin~="left"][am-margin~="large"] {
-  margin: 0 0 0 calc(3em);
+  margin: 0 0 0 calc(1.5em);
 }
 [am-margin][am-margin~="left"][am-margin~="small"] {
   margin: 0 0 0 calc(0.5em);
@@ -1054,9 +1054,6 @@ form label input {
 form select {
   padding: .35em 0;
 }
-nav[am-layout] h1 {
-  width: auto;
-}
 nav[am-layout][am-layout~="horizontal"] a {
   -webkit-box-flex: 1;
   -webkit-flex: 1 8.3333%;
@@ -1064,6 +1061,12 @@ nav[am-layout][am-layout~="horizontal"] a {
           flex: 1 8.3333%;
 }
 nav[am-layout][am-layout~="justify-align"] {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+nav[am-layout][am-layout~="justify-align"] nav {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1080,12 +1083,24 @@ nav[am-layout][am-layout~="right-align"] {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+nav[am-layout][am-layout~="right-align"] nav {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 nav[am-layout][am-layout~="right-align"] a {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
 }
 nav[am-layout][am-layout~="center-align"] {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav[am-layout][am-layout~="center-align"] nav {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1114,8 +1129,52 @@ nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
 nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
   text-align: right;
 }
+nav[am-layout][am-layout~="menubar"] > a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 8.3333%;
+      -ms-flex: 1 8.3333%;
+          flex: 1 8.3333%;
+}
+@media (orientation: portrait) {
+  nav[am-layout][am-layout~="menubar"] > a {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    width: 100%;
+  }
+}
+nav[am-layout][am-layout~="menubar"] > h1 ~ a {
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+  width: 100%;
+}
+nav[am-layout][am-layout~="menubar"] > nav {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 5px 0;
+}
+nav[am-layout][am-layout~="menubar"] > nav a {
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+nav[am-layout][am-layout~="menubar"] > nav a.am-active {
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-bottom: none;
+  margin-bottom: -1px;
+  z-index: 1;
+}
+nav[am-layout][am-layout~="menubar"] > nav nav {
+  border: 1px solid #d6d6d6;
+  margin-bottom: -1px;
+  padding: 0 1em;
+}
+nav[am-layout][am-layout~="menubar"] > nav nav a {
+  margin-top: 1em;
+}
 nav[am-layout] a {
-  padding: 1em;
+  padding: 1em 0.5em;
   display: inline-block;
   text-decoration: none;
   font-size: 14px;
@@ -1558,7 +1617,7 @@ body > div[am-wrapper] > footer a:hover {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
 }
-.am-btn ~ a {
+.am-btn + a {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -1671,7 +1730,7 @@ html {
 }
 body {
   background-color: #ffffff;
-  color: #424242;
+  color: #595959;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;

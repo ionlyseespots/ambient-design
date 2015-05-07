@@ -1,7 +1,4 @@
 nav[@{am-layout-var}] {
-  h1 {
-    width: auto;
-  }
   &[@{am-layout-var}~="horizontal"] {
     a {
       flex: 1 @am-flex-width1;
@@ -10,6 +7,9 @@ nav[@{am-layout-var}] {
   // default to horizontal
   &[@{am-layout-var}~="justify-align"] {
     justify-content: space-between;
+    nav {
+      justify-content: space-between;
+    }
   }
   &[@{am-layout-var}~="left-align"] {
     a {
@@ -18,12 +18,18 @@ nav[@{am-layout-var}] {
   }
   &[@{am-layout-var}~="right-align"] {
     justify-content: flex-end;
+    nav {
+      justify-content: flex-end;
+    }
     a {
       align-self: flex-end;
     }
   }
   &[@{am-layout-var}~="center-align"] {
     justify-content: center;
+    nav {
+      justify-content: center;
+    }
     a {
       align-self: center;
     }
@@ -50,6 +56,47 @@ nav[@{am-layout-var}] {
       }
     }
   }
+  // content aware navigation: pure links know when to layout for simple horizontal & vertical links, tabs, nested tabs or flyouts
+  &[@{am-layout-var}~="menubar"] {
+    & > a { // pure horizontal & vertical links
+      flex: 1 @am-flex-width1;
+      @media (orientation:portrait){
+        flex-basis: auto;
+          width: 100%;
+      }
+    }
+    & > h1 {
+      & ~ a { // flyouts & dropdowns are controlled by implicit heading sections
+        flex-basis: auto;
+        width: 100%;
+      }
+    }
+
+
+    & > nav { // tabs are controlled by explicit nav sections
+      border-bottom: 1px solid #d6d6d6;
+      margin: 5px 0;
+      & a {
+        flex-basis: auto;
+        &.@{am-prefix}-active {
+          background-color: #fff;
+          border: 1px solid #d6d6d6;
+          border-bottom: none;
+          margin-bottom: -1px;
+          z-index: 1;
+        }
+      }
+      & nav {
+        border: 1px solid #d6d6d6;
+        margin-bottom: -1px;
+        padding: 0 1em;
+        & a {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+  // link styles
   & a {
     padding: @am-nav-link-padding;
     display: inline-block;
