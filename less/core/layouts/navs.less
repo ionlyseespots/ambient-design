@@ -89,7 +89,8 @@ nav[@{am-layout-var}] {
         }
       }
     }
-    & > a + nav { // flyouts and dropdowns are controlled by link + nav
+    & > button + nav,
+    & > a + nav { // flyouts and dropdowns are controlled by link + buttons
       border: 1px solid #d6d6d6;
       padding: 0 1em;
       & a {

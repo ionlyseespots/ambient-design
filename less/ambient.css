@@ -554,10 +554,12 @@ nav[am-layout][am-layout~="menubar"] > nav nav {
 nav[am-layout][am-layout~="menubar"] > nav nav a {
   margin-top: 1em;
 }
+nav[am-layout][am-layout~="menubar"] > button + nav,
 nav[am-layout][am-layout~="menubar"] > a + nav {
   border: 1px solid #d6d6d6;
   padding: 0 1em;
 }
+nav[am-layout][am-layout~="menubar"] > button + nav a,
 nav[am-layout][am-layout~="menubar"] > a + nav a {
   flex-basis: auto;
   width: 100%;
