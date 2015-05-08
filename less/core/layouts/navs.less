@@ -57,6 +57,7 @@ nav[@{am-layout-var}] {
     }
   }
   // content aware navigation: pure links know when to layout for simple horizontal & vertical links, tabs, nested tabs or flyouts
+  // nav explicit sections and implicit headings (h1-h6) create the navigation flow. Ambient makes use of these semantics to layout the structure.
   &[@{am-layout-var}~="menubar"] {
     & > a { // pure horizontal & vertical links are simply links in a nav
       flex: 1 @am-flex-width1;
