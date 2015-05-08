@@ -1,99 +1,101 @@
-[@{am-row-var}]{ //TODO am-row and am-col going away in 1.4.0
-  flex-basis: auto; // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
-  display: flex;
-  flex-flow: row wrap;
-  & div[@{am-col-var}] {
-    flex: 1 auto;
-    width: @am-flex-width1;
-    &[@{am-col-var}~="25"] {
-      width: @am-flex-width2;
-    }
-    &[@{am-col-var}~="33"] {
-      width: @am-flex-width3;
-    }
-    &[@{am-col-var}~="50"] {
-      width: @am-flex-width4;
-    }
-    &[@{am-col-var}~="66"] {
-      width: @am-flex-width5;
-    }
-    &[@{am-col-var}~="75"] {
-      width: @am-flex-width6;
-    }
-    &[@{am-col-var}~="100"] {
-      width: @am-flex-width7;
-    }
-  }
-  &[@{am-row-var}^="gutter margin"] {
-    & > div[@{am-col-var}] {
-      margin-left: @am-grid-gutter-margin;
-      flex-basis: 0;
-      &:first-of-type {
-        margin-left: -@am-grid-gutter-margin;
-        padding-left: @am-grid-gutter-margin;
-      }
-    }
-  }
-  &[@{am-row-var}^="gutter padding"] {
-    & > div[@{am-col-var}] {
-      padding-left: @am-grid-gutter-padding;
-      &:first-of-type {
-        padding-left: 0;
-      }
-    }
-  }
-  &[@{am-row-var}~="portrait-100"] {
-    @media (orientation:portrait){
-      &[@{am-row-var}^="gutter margin"] {
-        & > div[@{am-col-var}] {
-          margin-left: 0;
-          padding-left: 0;
-        }
-      }
-      & > div[@{am-col-var}] {
-        flex-basis: auto;
-        width: 100%;
-      }
-    }
-  }
-}
-[@{am-layout-var}^="gutter margin"] {
-  & > div[@{am-row-var}] {
-    & > div[@{am-col-var}] {
-      margin-left: @am-grid-gutter-margin;
-      &:first-of-type {
-        margin-left: -@am-grid-gutter-margin;;
-        padding-left: @am-grid-gutter-margin;;
-      }
-    }
-  }
-}
-[@{am-layout-var}^="gutter padding"] {
-  & > div[@{am-row-var}] {
-    & > div[@{am-col-var}] {
-      padding-left: @am-grid-gutter-padding;
-      &:first-of-type {
-        padding-left: 0;
-      }
-    }
-  }
-}
-[@{am-layout-var}~="portrait-100"] {
-  & div[@{am-row-var}] {
-    & div[@{am-col-var}] {
-      @media (orientation:portrait) {
-        margin-left: 0;
-        padding-left: 0;
-        flex-basis: auto;
-        width: 100%;
-        &:first-of-type {
-          margin-left: 0;
-          padding-left: 0;
-        }
-      }
-    }
-  }
-}
+//[@{am-row-var}]{ //TODO am-row and am-col going away in 1.4.0
+//  flex-basis: auto; // https://social.msdn.microsoft.com/Forums/ie/en-US/8145c1e8-6e51-4213-ace2-2cfa43b1c018/ie-11-flexbox-with-flexwrap-wrap-doesnt-seem-to-calculate-widths-correctly-boxsizing-ignored?forum=iewebdevelopment
+//  display: flex;
+//  flex-flow: row wrap;
+//  & div[@{am-col-var}] {
+//    flex: 1 auto;
+//    width: @am-flex-width1;
+//    &[@{am-col-var}~="25"] {
+//      width: @am-flex-width2;
+//    }
+//    &[@{am-col-var}~="33"] {
+//      width: @am-flex-width3;
+//    }
+//    &[@{am-col-var}~="50"] {
+//      width: @am-flex-width4;
+//    }
+//    &[@{am-col-var}~="66"] {
+//      width: @am-flex-width5;
+//    }
+//    &[@{am-col-var}~="75"] {
+//      width: @am-flex-width6;
+//    }
+//    &[@{am-col-var}~="100"] {
+//      width: @am-flex-width7;
+//    }
+//  }
+//  &[@{am-row-var}^="gutter margin"] {
+//    & > div[@{am-col-var}] {
+//      margin-left: @am-grid-gutter-margin;
+//      flex-basis: 0;
+//      &:first-of-type {
+//        margin-left: -@am-grid-gutter-margin;
+//        padding-left: @am-grid-gutter-margin;
+//      }
+//    }
+//  }
+//  &[@{am-row-var}^="gutter padding"] {
+//    & > div[@{am-col-var}] {
+//      padding-left: @am-grid-gutter-padding;
+//      &:first-of-type {
+//        padding-left: 0;
+//      }
+//    }
+//  }
+//  &[@{am-row-var}~="portrait-100"] {
+//    @media (orientation:portrait){
+//      &[@{am-row-var}^="gutter margin"] {
+//        & > div[@{am-col-var}] {
+//          margin-left: 0;
+//          padding-left: 0;
+//        }
+//      }
+//      & > div[@{am-col-var}] {
+//        flex-basis: auto;
+//        width: 100%;
+//      }
+//    }
+//  }
+//}
+//[@{am-layout-var}^="gutter margin"] {
+//  & > div[@{am-row-var}] {
+//    & > div[@{am-col-var}] {
+//      margin-left: @am-grid-gutter-margin;
+//      &:first-of-type {
+//        margin-left: -@am-grid-gutter-margin;;
+//        padding-left: @am-grid-gutter-margin;;
+//      }
+//    }
+//  }
+//}
+//[@{am-layout-var}^="gutter padding"] {
+//  & > div[@{am-row-var}] {
+//    & > div[@{am-col-var}] {
+//      padding-left: @am-grid-gutter-padding;
+//      &:first-of-type {
+//        padding-left: 0;
+//      }
+//    }
+//  }
+//}
+
+
+//[@{am-layout-var}~="portrait-100"] {
+//  & div[@{am-row-var}] {
+//    & div[@{am-col-var}] {
+//      @media (orientation:portrait) {
+//        margin-left: 0;
+//        padding-left: 0;
+//        flex-basis: auto;
+//        width: 100%;
+//        &:first-of-type {
+//          margin-left: 0;
+//          padding-left: 0;
+//        }
+//      }
+//    }
+//  }
+//}
 
 .generate-blocks(@n, @suffix:'', @i:1) when (@i < @n) {
   &[@{am-block-var}~="@{i}@{suffix}"] {
