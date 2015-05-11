@@ -1,5 +1,5 @@
 /* Docs Theme */
-/* most of these rule sets are customizable as variables within Ambient */
+/* Most of these styles are customizable as variables within Ambient. */
 
 html {
     font-size: 100%;
@@ -11,7 +11,10 @@ body {
     margin: 0 auto;
 }
 
-header, section, footer {
+section {
+    padding: 0 .5em;
+}
+header, footer {
     padding: 1em;
 }
 
@@ -19,7 +22,18 @@ header h1 a {
     text-decoration: none;
 }
 
-    /* Ambient color doc styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: .25em;
+}
+
+div[am-block] > div[am-block]  {
+    padding: 0 .25em;
+}
+
+.am-btn {
+    margin: 0 2px;
+}
+/* Ambient color doc styles */
 span.name {
     display: block;
     margin-bottom: 60px;

@@ -1719,7 +1719,7 @@ samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 blockquote {
-  border-left: 5px solid #e9e9e9;
+  border-left: 5px solid #03a9f4;
   background-color: #fafafa;
   margin: 1em 0;
   padding: .5em 1em;
@@ -1729,6 +1729,14 @@ blockquote {
 blockquote:before,
 blockquote:after {
   content: "";
+}
+blockquote > h1,
+blockquote > h2,
+blockquote > h3,
+blockquote > h4,
+blockquote > h5,
+blockquote > h6 {
+  color: #2196f3;
 }
 pre {
   width: 100%;
