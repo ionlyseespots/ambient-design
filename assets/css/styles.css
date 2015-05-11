@@ -1,15 +1,25 @@
 /* Docs Theme */
+/* most of these rule sets are customizable as variables within Ambient */
 
 html {
     font-size: 100%;
     line-height: 1.5;
 }
 
-header, footer, section {
-    padding: .5em;
+body {
+    max-width: 768px;
+    margin: 0 auto;
 }
 
-/* Ambient color doc styles */
+header, section, footer {
+    padding: 1em;
+}
+
+header h1 a {
+    text-decoration: none;
+}
+
+    /* Ambient color doc styles */
 span.name {
     display: block;
     margin-bottom: 60px;
