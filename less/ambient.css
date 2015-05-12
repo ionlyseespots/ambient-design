@@ -553,6 +553,21 @@ nav[am-layout] a {
 [role~="tab"] nav a {
   margin-top: .5em;
 }
+button + [role~="dropdown"] {
+  border: 1px solid #d6d6d6;
+  padding: .5em;
+}
+button + [role~="dropdown"] button + nav {
+  border: 1px solid #d6d6d6;
+  padding: .5em;
+}
+button + [role~="dropdown"] button + nav a {
+  flex-basis: auto;
+  width: 100%;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
   bottom: -25px;
