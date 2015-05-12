@@ -1053,6 +1053,8 @@ nav[am-layout] a {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
+  min-width: 44px;
+  text-align: center;
 }
 [role~="tab"] a.am-active {
   background-color: #fff;
@@ -1227,44 +1229,6 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-layout~="outline"] div:not([class]) {
   background: rgba(33, 150, 243, 0.15);
   border: 1px solid rgba(33, 150, 243, 0.2);
-}
-[am-event][am-event~="slide-caption"] {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-[am-event][am-event~="slide-caption"] figure {
-  margin: 0;
-}
-[am-event][am-event~="slide-caption"] figure figcaption {
-  left: 0;
-  bottom: -200%;
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  margin-top: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-[am-event][am-event~="slide-caption"] figure figcaption * {
-  color: rgba(255, 255, 255, 0.87);
-}
-[am-event][am-event~="slide-caption"]:hover figcaption {
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-[am-event~="elevate"]:hover,
-[am-event~="elevate"]:focus {
-  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-[am-event~="elevate"]:hover:hover,
-[am-event~="elevate"]:focus:hover,
-[am-event~="elevate"]:hover:focus,
-[am-event~="elevate"]:focus:focus {
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 body > div[am-wrapper] {
   min-width: 100%;

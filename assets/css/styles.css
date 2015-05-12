@@ -16,6 +16,12 @@ header, footer {
     padding: 1em;
 }
 
+main {
+    border: 1px solid #d6d6d6;
+    border-top: none;
+    padding: .5em;
+    margin-top: -5px;
+}
 header h1 a {
     text-decoration: none;
 }
