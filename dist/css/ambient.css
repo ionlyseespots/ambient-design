@@ -962,7 +962,8 @@ form label input {
 form select {
   padding: .35em 0;
 }
-nav[am-layout][am-layout~="horizontal"] a {
+nav[am-layout][am-layout~="horizontal"] a,
+nav[am-layout][am-layout~="horizontal"] button {
   -webkit-box-flex: 1;
   -webkit-flex: 1 8.3333%;
       -ms-flex: 1 8.3333%;
@@ -1207,8 +1208,8 @@ table[am-layout][am-layout~="zebra-stripe"] tr:hover td {
 [am-layout~="outline"] section,
 [am-layout~="outline"] aside,
 [am-layout~="outline"] div:not([class]) {
-  background: rgba(3, 169, 244, 0.15);
-  border: 1px solid rgba(3, 169, 244, 0.2);
+  background: rgba(33, 150, 243, 0.15);
+  border: 1px solid rgba(33, 150, 243, 0.2);
 }
 [am-event][am-event~="slide-caption"] {
   position: relative;
