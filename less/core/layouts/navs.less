@@ -3,6 +3,7 @@ nav[@{am-layout-var}] {
     a,
     button {
       flex: 1 @am-flex-width1;
+      text-align: center;
     }
   }
   // default to horizontal
@@ -66,7 +67,7 @@ nav[@{am-layout-var}] {
   }
 }
 
-[role~="tab"] {
+nav[role~="tab"] {
   border-bottom: 1px solid #d6d6d6;
   margin: 5px 0;
   & a {
@@ -105,4 +106,24 @@ button + [role~="dropdown"] {
       margin-top: 0;
     }
   }
+}
+figure[role~="example"] {
+    border-left: 5px solid @am-secondary;
+    background-color: #fafafa;
+    margin: .5em 0;
+    padding: 1em;
+    font-size: small;
+    width: 100%;
+    &:before,
+    &:after {
+      content: "";
+    }
+    & > h1,
+    & > h2 ,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6 {
+      color: @am-primary;
+    }
 }

@@ -118,6 +118,9 @@
         <h1>
             Whitespace
         </h1>
+        <p>
+            Ambient does not style margin & padding by default.
+        </p>
         <div am-block>
             <div am-block="6 12P">
                 <h2>
@@ -133,7 +136,7 @@
                 </p>
             </div>
             <div am-block="6 12P">
-                <blockquote>
+                <figure role="example">
                     <code>am-margin</code>
                     <p>
                         If needed, specific direction is available as:
@@ -152,7 +155,7 @@
                             <code>am-margin="left"</code>
                         </li>
                     </ul>
-                </blockquote>
+                </figure>
             </div>
         </div>
         <div am-block>
@@ -170,7 +173,7 @@
                 </p>
             </div>
             <div am-block="6 12P">
-                <blockquote>
+                <figure role="example">
                     <code>am-padding</code>
                     <p>
                         If needed, specific direction is available as:
@@ -189,7 +192,7 @@
                             <code>am-padding="left"</code>
                         </li>
                     </ul>
-                </blockquote>
+                </figure>
             </div>
         </div>
     </section>
@@ -205,7 +208,7 @@
         <p>
             <small>If needed, the additional skin classes for shadows <code>.am-shadow-VALUE</code> are available. *Shadows can be used on any element.</small>
         </p>
-        <blockquote>
+        <figure role="example">
             <p>
                 Layer depth values are available as
             </p>
@@ -226,76 +229,14 @@
                     <code>am-layer="z5"</code>
                 </li>
             </ul>
-        </blockquote>
-        <div am-block>
-            <div am-block="6 12P">
-                <h2>
-                    Default layer
-                </h2>
-                <div am-layer="z1">
-                    <p am-padding>
-                        z1
-                    </p>
-                </div>
-                <div am-layer="z2">
-                    <p am-padding>
-                        z2
-                    </p>
-                </div>
-                <div am-layer="z3">
-                    <p am-padding>
-                        z3
-                    </p>
-                </div>
-                <div am-layer="z4">
-                    <p am-padding>
-                        z4
-                    </p>
-                </div>
-                <div am-layer="z5">
-                    <p am-padding>
-                        z5
-                    </p>
-                </div>
-            </div>
-            <div am-block="6 12P">
-                <h2>
-                    Shadow layer
-                </h2>
-                <div am-layer="z1" class="am-shadow-z1">
-                    <p am-padding>
-                        z1
-                    </p>
-                </div>
-                <div am-layer="z2" class="am-shadow-z2">
-                    <p am-padding>
-                        z2
-                    </p>
-                </div>
-                <div am-layer="z3" class="am-shadow-z3">
-                    <p am-padding>
-                        z3
-                    </p>
-                </div>
-                <div am-layer="z4" class="am-shadow-z4">
-                    <p am-padding>
-                        z4
-                    </p>
-                </div>
-                <div am-layer="z5" class="am-shadow-z5">
-                    <p am-padding>
-                        z5
-                    </p>
-                </div>
-            </div>
-        </div>
+        </figure>
     </section>
 </article>
 <hr />
 
 <article>
 <header id="layouts" am-padding="large" class="am-secondary am-text-c" >
-    <h1 class="am-text-uppercase text-center">
+    <h1>
         Define your layout
     </h1>
     <p>
@@ -315,7 +256,7 @@
         <p>
             The default direction for layout is horizontal. You're good to go.
         </p>
-        <blockquote>
+        <figure role="example">
             <article am-layout="outline">
                 <section>
                     1
@@ -327,7 +268,7 @@
                     3
                 </section>
             </article>
-        </blockquote>
+        </figure>
         <h3>
             Code
         </h3>
@@ -348,7 +289,7 @@
         <p>
             <code>&lt;article am-layout="vertical"&gt;</code>
         </p>
-        <blockquote>
+        <figure role="example">
             <article am-layout="outline vertical">
                 <section>
                     1
@@ -360,7 +301,7 @@
                     3
                 </section>
             </article>
-        </blockquote>
+        </figure>
         <h3>
             Code
         </h3>
@@ -385,8 +326,6 @@
         <p>
             Grid layout makes use of "blocks" to position content, and thus relies on the root semantic element for intent.
         </p>
-        <div am-block>
-            <div am-block am-padding>
                 <h2>
                     Blocks
                 </h2>
@@ -402,7 +341,7 @@
                 <p>
                     <small>Feel free to mix & match orientations and width values.</small>
                 </p>
-                <blockquote>
+                <figure role="example">
                     <article am-layout="outline">
                         <section>
                             <div am-block>
@@ -443,9 +382,7 @@
                             </div>
                         </section>
                     </article>
-                </blockquote>
-            </div>
-            <div am-block am-padding>
+                </figure>
                 <h3>
                     Code
                 </h3>
@@ -487,14 +424,10 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-        </div>
-    </div>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Off-set blocks
             </h2>
-            <blockquote>
+    <figure role="example">
                 <article am-layout="outline">
                     <section>
                         <div am-block>
@@ -531,9 +464,7 @@
                         </div>
                     </section>
                 </article>
-            </blockquote>
-        </div>
-        <div am-block am-padding>
+            </figure>
             <h3>
                 Code
             </h3>
@@ -571,14 +502,12 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-        </div>
-    </div>
 </section>
 </article>
 <hr />
 
 
-<article>
+<article am-layout="vertical">
     <header id="components" class="am-secondary am-text-c" am-padding="large">
         <h1>
             Components
@@ -594,69 +523,22 @@
         <p>
             Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
         </p>
-        <div am-block>
-            <div am-block am-padding>
-                <h2>
-                    Default nav
-                </h2>
-                <h3>
-                    Default
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-block>
-                <h3>
-                    Code
-                </h3>
-                    <pre><code>
-                        &lt;nav&gt;
-                        &lt;a href="#"&gt;Link Text&lt;/al&gt;
-                        &lt;a href="#"&gt;Link Text&lt;/al&gt;
-                        &lt;a href="#"&gt;Link Text&lt;/al&gt;
-                        &lt;/nav&gt;
-                    </code></pre>
-            </div>
-        </div>
-    </section>
-    <hr />
 
-    <section>
-        <div am-block>
-            <div am-block am-padding>
                 <h2>
                     Horizontal nav
                 </h2>
-                <p>
-                    To create a horizontal nav add the attribute and value <code>am-layout="horizontal"</code> to any <code>nav</code>.
-                </p>
-                <h3>
-                    Horizontal
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="horizontal"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="horizontal">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-block>
+
+        <p>
+            <code>&lt;nav am-layout="horizontal"&gt;</code>
+        </p>
+                <figure role="example">
+                    <nav am-layout="horizontal">
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                    </nav>
+                </figure>
+
                 <h3>
                     Code
                 </h3>
@@ -667,37 +549,23 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-            </div>
-        </div>
-    </section>
-    <hr />
 
-    <section >
-        <div am-block>
-            <div am-block am-padding>
+
                 <h2>
                     Vertical nav
                 </h2>
-                <p>
-                    To create a vertical nav add the attribute and value <code>am-layout="vertical"</code> to any <code>nav</code>.
-                </p>
-                <h3>
-                    Vertical
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;nav am-layout="vertical"&gt;</code>
-                    </p>
-                </blockquote>
-                <hr />
-                <nav am-layout="vertical">
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                    <a href="#">Link Text</a>
-                </nav>
-                <hr />
-            </div>
-            <div am-block am-padding>
+        <p>
+            <code>&lt;nav am-layout="vertical"&gt;</code>
+        </p>
+                <figure role="example">
+                    <nav am-layout="vertical">
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                        <a href="#">Link Text</a>
+                    </nav>
+                </figure>
+
+
                 <h3>
                     Code
                 </h3>
@@ -708,38 +576,25 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-            </div>
-        </div>
-    </section>
-</article>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
+
+
             <h2>
                 Left align nav
             </h2>
-            <p>
-                To create a left align nav add the attribute and value <code>am-layout="left-align"</code> to any <code>nav</code>.
-            </p>
-            <h3>
-                Left
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;nav am-layout="left-align"&gt;</code>
-                </p>
-            </blockquote>
-            <hr />
+        <p>
+            <code>&lt;nav am-layout="left-align"&gt;</code>
+        </p>
+
+        <figure role="example">
             <nav am-layout="left-align">
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
             </nav>
-            <hr />
-        </div>
-        <div am-block am-padding>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -750,38 +605,25 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-</article>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
+
+
             <h2>
                 Right align nav
             </h2>
-            <p>
-                To create a right align nav add the attribute and value <code>am-layout="right-align"</code> to any <code>nav</code>.
-            </p>
-            <h3>
-                Right
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;nav am-layout="right-align"&gt;</code>
-                </p>
-            </blockquote>
-            <hr />
+        <p>
+            <code>&lt;nav am-layout="right-align"&gt;</code>
+        </p>
+
+        <figure role="example">
             <nav am-layout="right-align">
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
                 <a href="#">Link Text</a>
             </nav>
-            <hr />
-        </div>
-        <div am-block>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -792,38 +634,24 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-</article>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
+
+
             <h2>
                 Center nav
             </h2>
-            <p>
-                To create a center nav add the attribute and value <code>am-layout="center-align"</code> to any <code>nav</code>.
-            </p>
-            <h3>
-                Center
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;nav am-layout="center-align"&gt;</code>
-                </p>
-            </blockquote>
-            <hr />
-            <nav am-layout="center-align">
-                <a href="#">Link Text</a>
-                <a href="#">Link Text</a>
-                <a href="#">Link Text</a>
-            </nav>
-            <hr />
-        </div>
-        <div am-block am-padding>
+        <p>
+            <code>&lt;nav am-layout="center-align"&gt;</code>
+        </p>
+            <figure role="example">
+                <nav am-layout="center-align">
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                </nav>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -834,38 +662,24 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-</article>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
+
+
             <h2>
                 Justified nav
             </h2>
-            <p>
-                To create a justified nav add the attribute and value <code>am-layout="justify-align"</code> to any <code>nav</code>.
-            </p>
-            <h3>
-                Justify
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;nav am-layout="justify-align"&gt;</code>
-                </p>
-            </blockquote>
-            <hr />
-            <nav am-layout="justify-align">
-                <a href="#">Link Text</a>
-                <a href="#">Link Text</a>
-                <a href="#">Link Text</a>
-            </nav>
-            <hr />
-        </div>
-        <div am-block am-padding>
+        <p>
+            <code>&lt;nav am-layout="justify-align"&gt;</code>
+        </p>
+            <figure role="example">
+                <nav am-layout="justify-align">
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                    <a href="#">Link Text</a>
+                </nav>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -876,224 +690,71 @@
                         &lt;a href="#"&gt;Link Text&lt;/al&gt;
                         &lt;/nav&gt;
                     </code></pre>
-        </div>
-    </div>
 </section>
-</article>
-<hr />
+<section>
 
-<article>
-    <header>
+
         <h1>
-            Button layout
+            Buttons
         </h1>
         <p>
-            Button layout is used to structure floating buttons (and in some cases links that display as a button), and thus relies on the root semantic element for intent.
+            To create a button style add the class <code>am-btn</code> to any <code>a</code> or <code>button</code> element.
         </p>
-    </header>
-    <section>
-        <div am-block>
-            <div am-block am-padding>
-                <h2>
-                    Default button
-                </h2>
-                <h3>
-                    Default
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;button&gt;</code>
-                    </p>
-                </blockquote>
-                <button>Button element</button>
-            </div>
-            <div am-block am-padding>
-                <h3>
-                    Code
-                </h3>
-                    <pre><code>
-                        &lt;button&gt;button element&lt;/button&gt;
-                    </code></pre>
-            </div>
-        </div>
-    </section>
-    <hr />
 
-    <section>
-        <div am-block>
-            <div am-block am-padding>
-                <h2>
-                    Button skins
-                </h2>
-                <p>
-                    To create a button add the class <code>am-btn</code> to any <code>a</code> or <code>button</code> element.
-                    Ambient does not style buttons by default.
-                    <a href="../design-patterns/components/index.html">View all components</a>
-                </p>
                 <a class="am-btn" href="#">Anchor button</a>
                 <button class="am-btn">Button element</button>
                 <input class="am-btn am-primary" type="submit" value="submit input">
                 <input class="am-btn am-secondary" type="button" value="button input">
-                <h3 am-margin="top">
+                <h2 am-margin="top">
                     Floating action
-                </h3>
+                </h2>
                 <p>
-                    To add a floating action button add the class <code>am-btn am-floating-action</code> to any <code>a</code> or <code>button</code> element.
+                    To add a floating action button add the additional class <code>am-floating-action</code>.
                 </p>
                 <button class="am-btn am-floating-action"><i class="fa fa-plus"></i></button>
-                <h3 am-margin="top">
-                    Split top
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;button am-layout="split-top" class="am-btn am-floating-action"&gt;</code>
-                    </p>
-                </blockquote>
-                <div am-margin="bottom " style="height: 50px; border: 1px solid #000; background-color:#fff; position: relative">
-                    <button am-layout="split-top" class="am-btn am-floating-action"><i class="fa fa-plus"></i></button>
-                </div>
-                <h3>
-                    Split bottom
-                </h3>
-                <blockquote>
-                    <p>
-                        <code>&lt;button am-layout="split-bottom" class="am-btn am-floating-action"&gt;</code>
-                    </p>
-                </blockquote>
-                <div style="height: 50px; border: 1px solid #000; background-color:#fff; position: relative;">
-                    <button am-layout="split-bottom" class="am-btn am-floating-action"><i class="fa fa-plus"></i></button>
-                </div>
-            </div>
-            <div am-block am-padding>
-                <h3>
-                    Code
-                </h3>
-                <h4>
-                    Floating action
-                </h4>
-                    <pre><code>
-                        &lt;button class="am-btn-floating"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
-                    </code></pre>
-                <h4 am-margin="top">
-                    Split top
-                </h4>
-                    <pre><code>
-                        &lt;button am-layout="split-top" class="am-btn am-floating-action"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
-                    </code></pre>
-                <h4 am-margin="top">
-                    Split bottom
-                </h4>
-                    <pre><code>
-                        &lt;button am-layout="split-bottom" class="am-btn am-floating-action"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
-                    </code></pre>
-            </div>
-        </div>
     </section>
-    <hr />
-</article>
 
-<article>
-<header>
-    <h1 class="am-text-uppercase">
-        Form layout
+
+<section>
+
+    <h1>
+        Forms
     </h1>
     <p>
-        Form layout is used to structure forms, and thus relies on the root semantic <code>form</code> element for intent.
+        Form layout is used to structure forms, and thus relies on the root semantic <code>fieldset</code> element for intent.
     </p>
-</header>
-<section>
-    <div am-block>
-        <div am-block am-padding>
-            <h2>
-                Default form
-            </h2>
-            <h3>
-                Default
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;form&gt;</code>
-                </p>
-            </blockquote>
-            <form>
-                <label for="example-email">Email</label>
-                <input id="example-email" type="email" placeholder="Email">
 
-                <label for="example-password">Password</label>
-                <input id="example-password" type="password" placeholder="Password">
-
-                <label for="example-remember">
-                    <input id="example-remember" type="checkbox"> Remember me
-                </label>
-
-                <button type="submit">Sign in</button>
-                <a href=#">Forgot your password?</a>
-            </form>
-        </div>
-        <div am-block am-padding>
-            <h3>
-                Code
-            </h3>
-                    <pre><code>
-                        &lt;form&gt;
-                        &lt;label for="example-email"&gt;Email&lt;/label&gt;
-                        &lt;input id="example-email" type="email" placeholder="Email"&gt;
-
-                        &lt;label for="example-password"&gt;Password&lt;/label&gt;
-                        &lt;input id="example-password" type="password" placeholder="Password"&gt;
-
-                        &lt;label for="example-remember"&gt;
-                        &lt;input id="example-remember" type="checkbox"&gt; Remember me
-                        &lt;/label&gt;
-
-                        &lt;button type="submit"&gt;Sign in&lt;/button&gt;
-                        &lt;/form&gt;
-                    </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
-
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Inline form
             </h2>
-            <p>
-                To create an inline form add the attribute and value  <code>am-layout="inline"</code> to any form.
-            </p>
-            <h3>
-                Inline
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;fieldset am-layout="inline"&gt;</code>
-                </p>
-            </blockquote>
-            <form>
-                <fieldset am-layout="inline">
-                    <div role="group">
-                        <legend>
-                            My form
-                        </legend>
-                        <label for="inline-email">Email</label>
-                        <input id="inline-email" type="email" placeholder="Email">
+    <p>
+        <code>&lt;fieldset am-layout="inline"&gt;</code>
+    </p>
 
-                        <label for="inline-password">Password</label>
-                        <input id="inline-password" type="password" placeholder="Password">
+            <figure role="example">
+                <form>
+                    <fieldset am-layout="inline">
+                        <div role="group">
+                            <legend>
+                                My form
+                            </legend>
+                            <label for="inline-email">Email</label>
+                            <input id="inline-email" type="email" placeholder="Email">
 
-                        <label for="inline-remember">
-                            <input id="inline-remember" type="checkbox"> Remember me
-                        </label>
+                            <label for="inline-password">Password</label>
+                            <input id="inline-password" type="password" placeholder="Password">
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        <div am-block am-padding>
+                            <label for="inline-remember">
+                                <input id="inline-remember" type="checkbox"> Remember me
+                            </label>
+
+                            <button type="submit" class="am-btn am-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -1120,70 +781,56 @@
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Stacked form
             </h2>
-            <p>
-                To create a stacked form, add the attribute and value <code>am-layout="stacked"</code> to any form.
-            </p>
-            <h3>
-                Stacked
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;fieldset am-layout="stacked"&gt;</code>
-                </p>
-            </blockquote>
-            <form am-layout="vertical">
-                <fieldset am-layout="stacked">
-                    <div role="group">
-                        <legend>
-                            My form
-                        </legend>
-                        <label for="stacked-email" am-preicon="&#xf118;">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+    <p>
+        <code>&lt;fieldset am-layout="stacked"&gt;</code>
+    </p>
 
-                        <label for="stacked-password" am-posticon="&#xf118;">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
+            <figure role="example">
+                <form am-layout="vertical">
+                    <fieldset am-layout="stacked">
+                        <div role="group">
+                            <legend>
+                                My form
+                            </legend>
+                            <label for="stacked-email" am-preicon="&#xf118;">Email</label>
+                            <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-remember">
-                            <input id="stacked-remember" type="checkbox"> Remember me
-                        </label>
+                            <label for="stacked-password" am-posticon="&#xf118;">Password</label>
+                            <input id="stacked-password" type="password" placeholder="Password">
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
-                    </div>
-                </fieldset>
-                <fieldset am-layout="stacked">
-                    <div role="group">
-                        <legend>
-                            My form
-                        </legend>
-                        <label for="stacked-email" am-preicon="&#xf118;">Email</label>
-                        <input id="stacked-email" type="email" placeholder="Email">
+                            <label for="stacked-remember">
+                                <input id="stacked-remember" type="checkbox"> Remember me
+                            </label>
 
-                        <label for="stacked-password" am-posticon="&#xf118;">Password</label>
-                        <input id="stacked-password" type="password" placeholder="Password">
+                            <button type="submit" class="am-btn am-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                    <fieldset am-layout="stacked">
+                        <div role="group">
+                            <legend>
+                                My form
+                            </legend>
+                            <label for="stacked-email" am-preicon="&#xf118;">Email</label>
+                            <input id="stacked-email" type="email" placeholder="Email">
 
-                        <label for="stacked-remember">
-                            <input id="stacked-remember" type="checkbox"> Remember me
-                        </label>
+                            <label for="stacked-password" am-posticon="&#xf118;">Password</label>
+                            <input id="stacked-password" type="password" placeholder="Password">
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        <div am-block am-padding>
+                            <label for="stacked-remember">
+                                <input id="stacked-remember" type="checkbox"> Remember me
+                            </label>
+
+                            <button type="submit" class="am-btn am-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </figure>
+
+
             <h3>
                 Code
             </h3>
@@ -1205,20 +852,12 @@
                         &lt;/label&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
 
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Aligned form
             </h2>
@@ -1255,12 +894,10 @@
                         </span>
 
                         <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
                     </div>
                 </fieldset>
             </form>
-        </div>
-        <div am-block am-padding>
+
             <h3>
                 Code
             </h3>
@@ -1288,19 +925,11 @@
                         &lt;/span&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Multi-column form
             </h2>
@@ -1359,12 +988,10 @@
                         </label>
 
                         <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
                     </div>
                 </fieldset>
             </form>
-        </div>
-        <div am-block am-padding>
+
             <h3>
                 Code
             </h3>
@@ -1404,19 +1031,11 @@
                         &lt;/label&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Stacked + Aligned form
             </h2>
@@ -1453,12 +1072,10 @@
                         </label>
 
                         <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
                     </div>
                 </fieldset>
             </form>
-        </div>
-        <div am-block am-padding>
+
             <h3>
                 Code
             </h3>
@@ -1490,19 +1107,11 @@
                         &lt;/label&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Multi-column + Stacked form
             </h2>
@@ -1553,12 +1162,10 @@
                         </label>
 
                         <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
                     </div>
                 </fieldset>
             </form>
-        </div>
-        <div am-block asm-padding>
+
             <h3>
                 Code
             </h3>
@@ -1604,19 +1211,11 @@
                         &lt;/label&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
-</section>
-<hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
             <h2>
                 Multi-column + Aligned form
             </h2>
@@ -1670,12 +1269,10 @@
                         </label>
 
                         <button type="submit" class="am-btn am-primary">Sign in</button>
-                        <a href=#">Forgot your password?</a>
                     </div>
                 </fieldset>
             </form>
-        </div>
-        <div am-block am-padding>
+
             <h3>
                 Code
             </h3>
@@ -1725,15 +1322,13 @@
                         &lt;/label&gt;
 
                         &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-                        &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
                         &lt;div&gt;
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-        </div>
-    </div>
+
 </section>
-<hr />
+
 
 <section>
     <div am-block>

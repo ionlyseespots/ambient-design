@@ -480,6 +480,7 @@ form select {
 nav[am-layout][am-layout~="horizontal"] a,
 nav[am-layout][am-layout~="horizontal"] button {
   flex: 1 8.3333%;
+  text-align: center;
 }
 nav[am-layout][am-layout~="justify-align"] {
   justify-content: space-between;
@@ -531,28 +532,28 @@ nav[am-layout] a {
   font-size: 14px;
   font-weight: 400;
 }
-[role~="tab"] {
+nav[role~="tab"] {
   border-bottom: 1px solid #d6d6d6;
   margin: 5px 0;
 }
-[role~="tab"] a {
+nav[role~="tab"] a {
   flex-basis: auto;
   min-width: 44px;
   text-align: center;
 }
-[role~="tab"] a.am-active {
+nav[role~="tab"] a.am-active {
   background-color: #fff;
   border: 1px solid #d6d6d6;
   border-bottom: none;
   margin-bottom: -1px;
   z-index: 1;
 }
-[role~="tab"] nav {
+nav[role~="tab"] nav {
   border: 1px solid #d6d6d6;
   margin-bottom: -1px;
   padding: 0 .5em;
 }
-[role~="tab"] nav a {
+nav[role~="tab"] nav a {
   margin-top: .5em;
 }
 button + [role~="dropdown"] {
@@ -569,6 +570,26 @@ button + [role~="dropdown"] button + nav a {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
+}
+figure[role~="example"] {
+  border-left: 5px solid #03a9f4;
+  background-color: #fafafa;
+  margin: .5em 0;
+  padding: 1em;
+  font-size: small;
+  width: 100%;
+}
+figure[role~="example"]:before,
+figure[role~="example"]:after {
+  content: "";
+}
+figure[role~="example"] > h1,
+figure[role~="example"] > h2,
+figure[role~="example"] > h3,
+figure[role~="example"] > h4,
+figure[role~="example"] > h5,
+figure[role~="example"] > h6 {
+  color: #2196f3;
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
@@ -1121,6 +1142,9 @@ var {
 img {
   display: block;
   height: auto;
+}
+figure {
+  margin: 0;
 }
 @media (orientation: portrait) {
   html {
