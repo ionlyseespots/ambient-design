@@ -29,12 +29,6 @@
   background-color: @am-clr-btn-bg;
   border: 1px solid @am-clr-btn-bdr;
   border-radius: 2px;
-  & + a {
-    .am-root-button; // Content aware design: links following buttons will inherit button phrasing styles
-    &:hover {
-      text-decoration: underline;
-    }
-  }
   &:hover {
     background-color: lighten(@am-clr-btn-bg, 8%);
   }
