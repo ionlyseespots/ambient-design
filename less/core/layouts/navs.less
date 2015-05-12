@@ -57,55 +57,34 @@ nav[@{am-layout-var}] {
       }
     }
   }
-//  &[@{am-layout-var}~="menubar"] {
-//    & > a { // pure horizontal & vertical links are simply links in a nav
-//      flex: 1 @am-flex-width1;
-//      @media (orientation:portrait){
-//        flex-basis: auto;
-//          width: 100%;
-//      }
-//    }
-    &[role~="tab"] {
-//    & > nav { // tabs are controlled by the explicit nav sections
-      border-bottom: 1px solid #d6d6d6;
-      margin: 5px 0;
-      & a {
-        flex-basis: auto;
-        &.@{am-prefix}-active {
-          background-color: #fff;
-          border: 1px solid #d6d6d6;
-          border-bottom: none;
-          margin-bottom: -1px;
-          z-index: 1;
-        }
-      }
-      & nav {
-        border: 1px solid #d6d6d6;
-        margin-bottom: -1px;
-        padding: 0 .5em;
-        & a {
-          margin-top: .5em;
-        }
-      }
-//    }
-//    & > button + nav { // flyouts and dropdowns are controlled by link + buttons
-//      border: 1px solid #d6d6d6;
-//      padding: 0 1em;
-//      & a {
-//        flex-basis: auto;
-//        width: 100%;
-//        border: none;
-//        margin-bottom: 0;
-//        margin-top: 0;
-//      }
-//    }
-
-  }
   & a {
     padding: @am-nav-link-padding;
     display: inline-block;
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
+  }
+}
+
+[role~="tab"] {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 5px 0;
+  & a {
+    flex-basis: auto;
+    &.@{am-prefix}-active {
+      background-color: #fff;
+      border: 1px solid #d6d6d6;
+      border-bottom: none;
+      margin-bottom: -1px;
+      z-index: 1;
+    }
+  }
+  & nav {
+    border: 1px solid #d6d6d6;
+    margin-bottom: -1px;
+    padding: 0 .5em;
+    & a {
+      margin-top: .5em;
+    }
   }
 }

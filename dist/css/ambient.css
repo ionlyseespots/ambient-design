@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.10 - 2015-05-11
+ * ambient - v1.3.10 - 2015-05-12
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -1038,36 +1038,36 @@ nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
 nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
   text-align: right;
 }
-nav[am-layout][role~="tab"] {
-  border-bottom: 1px solid #d6d6d6;
-  margin: 5px 0;
-}
-nav[am-layout][role~="tab"] a {
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-}
-nav[am-layout][role~="tab"] a.am-active {
-  background-color: #fff;
-  border: 1px solid #d6d6d6;
-  border-bottom: none;
-  margin-bottom: -1px;
-  z-index: 1;
-}
-nav[am-layout][role~="tab"] nav {
-  border: 1px solid #d6d6d6;
-  margin-bottom: -1px;
-  padding: 0 .5em;
-}
-nav[am-layout][role~="tab"] nav a {
-  margin-top: .5em;
-}
 nav[am-layout] a {
   padding: 1em 0.5em;
   display: inline-block;
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
+}
+[role~="tab"] {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 5px 0;
+}
+[role~="tab"] a {
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+[role~="tab"] a.am-active {
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-bottom: none;
+  margin-bottom: -1px;
+  z-index: 1;
+}
+[role~="tab"] nav {
+  border: 1px solid #d6d6d6;
+  margin-bottom: -1px;
+  padding: 0 .5em;
+}
+[role~="tab"] nav a {
+  margin-top: .5em;
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
@@ -1378,69 +1378,6 @@ body > div[am-wrapper] > footer {
 [am-layer][am-event~="elevate"]:focus:focus {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-@-webkit-keyframes fadeinout {
-  0% {
-    opacity: 0;
-  }
-  11.11111111% {
-    opacity: 1;
-  }
-  33.33333333% {
-    opacity: 1;
-  }
-  44.44444444% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeinout {
-  0% {
-    opacity: 0;
-  }
-  11.11111111% {
-    opacity: 1;
-  }
-  33.33333333% {
-    opacity: 1;
-  }
-  44.44444444% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-[am-image-slider] {
-  height: 150px;
-  position: relative;
-}
-[am-image-slider] figure {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0;
-  -webkit-animation: fadeinout 25s infinite;
-  animation: fadeinout 25s infinite;
-}
-[am-image-slider] figure img {
-  height: 100%;
-  margin: 0 auto;
-}
-[am-image-slider] figure:nth-child(1) {
-  -webkit-animation-delay: -2.77777778s;
-  animation-delay: -2.77777778s;
-}
-[am-image-slider] figure:nth-child(2) {
-  -webkit-animation-delay: 5.55555556s;
-  animation-delay: 5.55555556s;
-}
-[am-image-slider] figure:nth-child(3) {
-  -webkit-animation-delay: 13.88888889s;
-  animation-delay: 13.88888889s;
-}
 .am-root-button {
   -moz-user-select: none;
   background-image: none;
@@ -1501,6 +1438,9 @@ body > div[am-wrapper] > footer {
   padding: 5px 2rem;
   word-wrap: break-word;
 }
+.am-btn + a:hover {
+  text-decoration: underline;
+}
 .am-btn:hover {
   background-color: #ffffff;
 }
@@ -1549,7 +1489,7 @@ body > div[am-wrapper] > footer {
     width: 100%;
   }
 }
-.am-btn-link {
+a.am-btn-link {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -1566,6 +1506,9 @@ body > div[am-wrapper] > footer {
   outline: 0 none;
   padding: 5px 2rem;
   word-wrap: break-word;
+}
+a.am-btn-link:hover {
+  text-decoration: underline;
 }
 html,
 body {
