@@ -25,19 +25,17 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="menubar" role="navigation">
-    <nav>
-        <a href="../docs/index.html" class="am-active">Get Started</a>
-        <a href="../layout/index.html">Semantic</a>
-        <a href="../design-patterns/index.html">Layout</a>
-        <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
-    </nav>
+<nav am-layout role="navigation tab">
+    <a class="am-active" href="../docs/index.html">Get Started</a>
+    <a href="../layout/index.html">Features</a>
+    <a href="../design-patterns/index.html">Docs</a>
+    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
     <header class="am-primary">
         <p>
             Overview<br />
-            Introduction | Download | Examples
+            Introduction | Install | Examples
         </p>
         <h1>
             Get started
@@ -48,103 +46,98 @@
             <p>
                 Introduction
             </p>
-            <h2>
-                <i class="fa fa-html5"></i>  <i class="fa fa-css3"></i> Ambient is semantic layout
-            </h2>
-            <p>
-                Ambient is a lightweight and modular HTML5 UI development methodology. Think of it as content aware CSS.
-            </p>
-            <p>
-                Boba Fett release v1.3.10
-            </p>
+            <h1>
+               Semantic Layout
+            </h1>
         </header>
-        <section>
-            <h3>
-                Bower
-            </h3>
-            <pre><code>
-$ bower install ambient
-            </code></pre>
-            <p>
-                Install Ambient package.
-            </p>
-            <pre><code>
-ambient/
+        <p>
+            Ambient is a lightweight & modular HTML5 layout methodology. Think of it as content aware CSS.
+        </p>
+        <p>
+            Boba Fett release v1.3.10<br />
+            <small>If there are any mistakes, please let me know.</small>
+        </p>
+    </article>
+    <article>
+        <h1>
+            Install
+        </h1>
+        <div am-block>
+            <div am-block="12">
+                <section>
+                    <h1>
+                        Bower
+                    </h1>
+<pre><code>$ bower install ambient</code></pre>
+                    <p>
+                        Install Ambient package.
+                    </p>
+            <pre><code>ambient/
 ├── dist/
 │    └── css/
 │        ├── ambient.css
 │        └── ambient.min.css
 └── less/
-      ├── core/
-      ├── mixins/
-      └── ambient.less
-
-            </code></pre>
-            <p>
-                The Ambient package includes both the <code>dist/</code> and <code>less/</code> files.
-            </p>
-            <h4>
-                Optional
-            </h4>
-            <pre><code>
-$ bower install ambient#dist --save
-            </code></pre>
-            <p>
-                Install only the latest version <code>dist/</code> CSS files and save Ambient as a dependency in your project.
-            </p>
-        </section>
+├── core/
+├── mixins/
+└── ambient.less</code></pre>
+                    <p>
+                        The Ambient package includes both the <code>dist/</code> and <code>less/</code> files.
+                    </p>
+                    <h2>
+                        Optional Bower
+                    </h2>
+<pre><code>$ bower install ambient#dist --save</code></pre>
+                    <p>
+                        Install only the latest version <code>dist/</code> CSS files and save Ambient as a dependency in your project.
+                    </p>
+                </section>
+            </div>
+        </div>
         <section>
-            <h3>
-                <i class="fa fa-download"></i> Download
-            </h3>
-            <h4>
+            <h1>
                 CSS
-            </h4>
+            </h1>
             <p>
-                <a href="https://github.com/ionlyseespots/ambient-design/raw/gh-pages/dist/css/ambient.min.css" class="am-btn"><i class="fa fa-download"></i> CSS</a><br />
                 ambient.min.css 31kb
             </p>
-            <h4>
-                Prerelease
-            </h4>
-            <p>
-                <a href="https://github.com/ionlyseespots/ambient-design/zipball/prerelease/" class="am-btn"><i class="fa fa-download"></i> chewbacca</a><br />
-                The prerelease source branch. Release schedule: <a href="../roadmap/index.html">Roadmap</a>.
-            </p>
+            <a href="https://github.com/ionlyseespots/ambient-design/raw/gh-pages/dist/css/ambient.min.css" class="am-btn"><i class="fa fa-download"></i> CSS</a>
         </section>
         <section>
-            <h3>
-                <i class="fa fa-github"></i> Github
-            </h3>
+            <h2>
+                Prerelease
+            </h2>
+            <p>
+                Don't blink.
+            </p>
+            <a href="https://github.com/ionlyseespots/ambient-design/zipball/prerelease/" class="am-btn"><i class="fa fa-download"></i> chewbacca</a>
+        </section>
+        <section>
+            <h1>
+                Github
+            </h1>
             <p>
                 All are welcome to contribute.
-                Bring your ideas on how we can help design the code.   <a href="https://github.com/ionlyseespots/ambient-design">Clone or fork the repo</a>
             </p>
+            <a href="https://github.com/ionlyseespots/ambient-design">Clone or fork the repo</a>
         </section>
     </article>
 
     <article>
         <header am-padding="large" class="am-secondary am-text-c">
-            <h2>
-                Back to basics
-            </h2>
+            <h1>
+                Semantic
+            </h1>
             <p>
-                Feel free to use HTML, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
+                Ambient makes it easy for you to layout HTML.
             </p>
         </header>
         <section>
-            <nav am-layout="horizontal" class="am-text-c">
-                <a href="../layout/index.html">HTML5 semantics</a>
-                <a href="../design-patterns/index.html">CSS3 layouts</a>
-                <a href="../design-patterns/components/index.html">View all components</a>
-            </nav>
-
-
             <div am-row="portrait-100">
                 <div am-col am-padding>
-                    <h3>
+                    <h1>
                         Basic HTML5 example
-                    </h3>
+                    </h1>
                     <p>
                         Build the intent of your content.
                         You can add additional <code>am-layout</code> values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.

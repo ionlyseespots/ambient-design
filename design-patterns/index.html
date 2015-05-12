@@ -25,13 +25,11 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="menubar" role="navigation">
-    <nav>
+<nav am-layout role="navigation tab">
     <a href="../docs/index.html">Get Started</a>
     <a href="../layout/index.html">Features</a>
     <a href="../design-patterns/index.html" class="am-active">Docs</a>
     <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a></nav>
-
 </nav>
 <main role="main">
 <header class="am-primary">
@@ -40,7 +38,7 @@
         Introduction | Namespaces | Define your layout
     </p>
     <h1>
-        Layout attributes
+        Documentation
     </h1>
 </header>
 <article>
@@ -48,35 +46,40 @@
         <p>
             Introduction
         </p>
-        <h2>
-            <i class="fa fa-css3"></i> Ambient is layout
-        </h2>
+        <h1>
+            <i class="fa fa-css3"></i> Layout
+        </h1>
         <p>
-            Ambient makes use of CSS3 attributes on elements.
+            Avoids presentational CSS classes in the markup.
         </p>
     </header>
     <section>
-        <h3>
-            We define our own namespaces
-        </h3>
+        <h1>
+            Design
+        </h1>
         <p>
-            Because we define our own custom attributes, we can define extendable properties common to all HTML elements as well as semantic elements.
+            Simple is beautiful. Design is pure, minimal and transparent.
         </p>
+        <h2>
+            Layout
+        </h2>
         <p>
-            Ambient does not style components by default. <a href="../design-patterns/components/index.html">View all components</a>
+            Ambient avoids presentational CSS classes in the HTML markup.
         </p>
         <blockquote>
             <p>
-                Do use CSS3 attributes to layout defined content.<br />
-                Do <strong>NOT</strong> use CSS3 attributes as a replacement for styling content better suited to a class name.
+                Do use namespaces to define your layout.
+            </p>
+            <p>
+                Do <strong>NOT</strong> use namespaces as a replacement for styling content better suited to a class name.
             </p>
         </blockquote>
     </section>
     <section>
-        <h3>
+        <h1>
             Namespaces
-        </h3>
-        <blockquote>
+        </h1>
+
             <h4>
                 Global
             </h4>
@@ -88,8 +91,8 @@
                 <code>am-padding</code><br />
                 <code>am-layer</code><br />
             </p>
-        </blockquote>
-        <blockquote>
+
+
             <h4>
                 Define your layout
             </h4>
@@ -99,7 +102,7 @@
             <p>
                 <code>am-layout</code><br />
             </p>
-        </blockquote>
+
     </section>
 </article>
 <article am-layout="vertical">
@@ -315,18 +318,20 @@
             <p>
                 The default direction for layout is horizontal. You're good to go.
             </p>
+<blockquote>
+    <article am-layout="outline">
+        <section>
+            1
+        </section>
+        <section>
+            2
+        </section>
+        <section>
+            3
+        </section>
+    </article>
+</blockquote>
 
-        <article am-layout="outline">
-            <section>
-                1
-            </section>
-            <section>
-                2
-            </section>
-            <section>
-                3
-            </section>
-        </article>
 
 
 

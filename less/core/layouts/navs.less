@@ -56,18 +56,16 @@ nav[@{am-layout-var}] {
       }
     }
   }
-  // content aware navigation: pure links know when to layout for simple horizontal & vertical links, tabs, nested tabs or flyouts
-  // nav explicit sections and implicit headings (h1-h6) create the navigation flow. Ambient makes use of these semantics to layout the structure.
-  &[@{am-layout-var}~="menubar"] {
-    & > a { // pure horizontal & vertical links are simply links in a nav
-      flex: 1 @am-flex-width1;
-      @media (orientation:portrait){
-        flex-basis: auto;
-          width: 100%;
-      }
-    }
-
-    & > nav { // tabs are controlled by the explicit nav sections
+//  &[@{am-layout-var}~="menubar"] {
+//    & > a { // pure horizontal & vertical links are simply links in a nav
+//      flex: 1 @am-flex-width1;
+//      @media (orientation:portrait){
+//        flex-basis: auto;
+//          width: 100%;
+//      }
+//    }
+    &[role~="tab"] {
+//    & > nav { // tabs are controlled by the explicit nav sections
       border-bottom: 1px solid #d6d6d6;
       margin: 5px 0;
       & a {
@@ -83,23 +81,23 @@ nav[@{am-layout-var}] {
       & nav {
         border: 1px solid #d6d6d6;
         margin-bottom: -1px;
-        padding: 0 1em;
+        padding: 0 .5em;
         & a {
-          margin-top: 1em;
+          margin-top: .5em;
         }
       }
-    }
-    & > button + nav { // flyouts and dropdowns are controlled by link + buttons
-      border: 1px solid #d6d6d6;
-      padding: 0 1em;
-      & a {
-        flex-basis: auto;
-        width: 100%;
-        border: none;
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-    }
+//    }
+//    & > button + nav { // flyouts and dropdowns are controlled by link + buttons
+//      border: 1px solid #d6d6d6;
+//      padding: 0 1em;
+//      & a {
+//        flex-basis: auto;
+//        width: 100%;
+//        border: none;
+//        margin-bottom: 0;
+//        margin-top: 0;
+//      }
+//    }
 
   }
   & a {

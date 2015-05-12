@@ -25,13 +25,11 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav role="navigation" am-layout="menubar">
-    <nav>
-        <a href="../docs/index.html">Get Started</a>
-        <a href="../layout/index.html" class="am-active">Semantic</a>
-        <a href="../design-patterns/index.html">Layout</a>
-        <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
-    </nav>
+<nav am-layout role="navigation tab">
+    <a href="../docs/index.html">Get Started</a>
+    <a class="am-active" href="../layout/index.html">Features</a>
+    <a href="../design-patterns/index.html">Docs</a>
+    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
 </nav>
 <main role="main">
     <header class="am-primary">
@@ -40,37 +38,39 @@
             Introduction | Scaffolding | Build the intent of your content
         </p>
         <h1>
-            Semantic scaffolding
+            Features
         </h1>
     </header>
-    <article>
+    <article am-layout="vertical" am-margin="bottom">
         <header am-padding="large" class="am-secondary">
             <p>
                 Introduction
             </p>
             <h2>
-                <i class="fa fa-html5"></i> Ambient is semantic
+                <i class="fa fa-html5"></i> Semantic
             </h2>
             <p>
-                Ambient makes use of HTML5 sections & outlines.
+                Ambient makes it easy for you to layout HTML5.
             </p>
         </header>
         <section>
-            <h3>
+            <h1>
                 Scaffolding
-            </h3>
+            </h1>
             <p>
-                On orientation portrait, explicit sections will automatically stack.
-            </p>
-            <p>
-                Ambient does not style components by default. <a href="../design-patterns/components/index.html">View all components</a>
+                Built as a lightweight and modular HTML5 layout methodology.
             </p>
             <blockquote>
                 <p>
-                    Do use HTML5 sectioning elements to build the intent of content in the document outline.<br />
+                    Do use HTML5 sectioning elements to build the intent of content in the document outline.
+                </p>
+                <p>
                     Do <strong>NOT</strong> use HTML5 sectioning elements as a replacement for content better suited to a <code>div</code>.
                 </p>
             </blockquote>
+            <h2>
+                Example
+            </h2>
             <p data-height="545" data-theme-id="11491" data-slug-hash="gbmJRP" data-default-tab="result" data-user="ionlyseespots" class='codepen'>See the Pen <a href='http://codepen.io/ionlyseespots/pen/gbmJRP/'>Idea for flexbox HTML5 scaffolding & layout attributes</a> by I only see spots (<a href='http://codepen.io/ionlyseespots'>@ionlyseespots</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
             <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
         </section>
@@ -79,10 +79,7 @@
                 Build the intent of your content
             </h3>
             <p>
-                Back to basics. Feel free to use HTML5 semantic elements to build your content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
-            </p>
-            <p>
-                You can add additional <code>am-layout</code> values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
+                Ambient makes it easy for you to layout HTML5. Feel free to use semantic elements to build your content in the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">document outline</a>.
             </p>
             <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">
                 <h3>

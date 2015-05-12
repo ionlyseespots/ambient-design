@@ -1037,56 +1037,29 @@ nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
 nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
   text-align: right;
 }
-nav[am-layout][am-layout~="menubar"] > a {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 8.3333%;
-      -ms-flex: 1 8.3333%;
-          flex: 1 8.3333%;
-}
-@media (orientation: portrait) {
-  nav[am-layout][am-layout~="menubar"] > a {
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
-    width: 100%;
-  }
-}
-nav[am-layout][am-layout~="menubar"] > nav {
+nav[am-layout][role~="tab"] {
   border-bottom: 1px solid #d6d6d6;
   margin: 5px 0;
 }
-nav[am-layout][am-layout~="menubar"] > nav a {
+nav[am-layout][role~="tab"] a {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
 }
-nav[am-layout][am-layout~="menubar"] > nav a.am-active {
+nav[am-layout][role~="tab"] a.am-active {
   background-color: #fff;
   border: 1px solid #d6d6d6;
   border-bottom: none;
   margin-bottom: -1px;
   z-index: 1;
 }
-nav[am-layout][am-layout~="menubar"] > nav nav {
+nav[am-layout][role~="tab"] nav {
   border: 1px solid #d6d6d6;
   margin-bottom: -1px;
-  padding: 0 1em;
+  padding: 0 .5em;
 }
-nav[am-layout][am-layout~="menubar"] > nav nav a {
-  margin-top: 1em;
-}
-nav[am-layout][am-layout~="menubar"] > button + nav {
-  border: 1px solid #d6d6d6;
-  padding: 0 1em;
-}
-nav[am-layout][am-layout~="menubar"] > button + nav a {
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-  width: 100%;
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
+nav[am-layout][role~="tab"] nav a {
+  margin-top: .5em;
 }
 nav[am-layout] a {
   padding: 1em 0.5em;
