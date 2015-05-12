@@ -31,10 +31,9 @@
     <a href="../layout/index.html">Features</a>
     <a href="../design-patterns/index.html" class="am-active">Docs</a>
     <nav>
-        <a href="#" class="am-active">Intro</a>
-        <a href="#">Grids</a>
-        <a href="#">Components</a>
-        <a href="#">Patterns</a>
+        <a href="#layouts">Layouts</a>
+        <a href="#components">Components</a>
+        <a href="#patterns">Patterns</a>
     </nav>
 </nav>
 <main role="main">
@@ -125,7 +124,7 @@
                     Margin
                 </h2>
                 <p>
-                    To add space outside an element, add the attribute <code>am-margin</code> to any element.
+                    Add the attribute <code>am-margin</code> to any element to add space outside an element.
                 </p>
                 <p>
                     <small>
@@ -154,57 +153,54 @@
                         </li>
                     </ul>
                 </blockquote>
+            </div>
         </div>
-
+        <div am-block>
+            <div am-block="6 12P">
+                <h2>
+                    Padding
+                </h2>
+                <p>
+                    Add the attribute <code>am-padding</code> to any element to add space inside an element.
+                </p>
+                <p>
+                    <small>
+                        If needed, additional size values <code>large</code> & <code>small</code> are available.
+                    </small>
+                </p>
+            </div>
+            <div am-block="6 12P">
+                <blockquote>
+                    <code>am-padding</code>
+                    <p>
+                        If needed, specific direction is available as:
+                    <p>
+                    <ul>
+                        <li>
+                            <code>am-padding="top"</code>
+                        </li>
+                        <li>
+                            <code>am-padding="right"</code>
+                        </li>
+                        <li>
+                            <code>am-padding="bottom"</code>
+                        </li>
+                        <li>
+                            <code>am-padding="left"</code>
+                        </li>
+                    </ul>
+                </blockquote>
+            </div>
         </div>
-<div am-block>
-    <div am-block="6 12P">
-        <h2>
-            Padding
-        </h2>
-        <p>
-            To add space inside an element, add the attribute <code>am-padding</code> to any element.
-        </p>
-        <p>
-            <small>
-                If needed, additional size values <code>large</code> & <code>small</code> are available.
-            </small>
-        </p>
-    </div>
-    <div am-block="6 12P">
-
-
-        <blockquote>
-            <code>am-padding</code>
-            <p>
-                If needed, specific direction is available as:
-            <p>
-            <ul>
-                <li>
-                    <code>am-padding="top"</code>
-                </li>
-                <li>
-                    <code>am-padding="right"</code>
-                </li>
-                <li>
-                    <code>am-padding="bottom"</code>
-                </li>
-                <li>
-                    <code>am-padding="left"</code>
-                </li>
-            </ul>
-        </blockquote>
-    </div>
-</div>
-
     </section>
     <hr />
+
     <section>
         <h1>
             Layers
         </h1>
         <p>
-            To add a layer depth value (z-index), add the attribute <code>am-layer="VALUE"</code> to any element.
+            Add the attribute <code>am-layer="VALUE"</code> to any element to add a layer depth value (z-index).
         </p>
         <p>
             <small>If needed, the additional skin classes for shadows <code>.am-shadow-VALUE</code> are available. *Shadows can be used on any element.</small>
@@ -295,8 +291,10 @@
         </div>
     </section>
 </article>
+<hr />
+
 <article>
-<header am-padding="large" class="am-secondary am-text-c" >
+<header id="layouts" am-padding="large" class="am-secondary am-text-c" >
     <h1 class="am-text-uppercase text-center">
         Define your layout
     </h1>
@@ -305,37 +303,31 @@
      </p>
 </header>
 <section id="section">
-            <h1>Linear layout
+        <h1>
+            Linear layout
         </h1>
-    <p>
-        <small>Default</small>
-    </p>
-
-
+        <p>
+            <small>Default</small>
+        </p>
         <h2>
             Horizontal
         </h2>
-
-            <p>
-                The default direction for layout is horizontal. You're good to go.
-            </p>
-<blockquote>
-    <article am-layout="outline">
-        <section>
-            1
-        </section>
-        <section>
-            2
-        </section>
-        <section>
-            3
-        </section>
-    </article>
-</blockquote>
-
-
-
-
+        <p>
+            The default direction for layout is horizontal. You're good to go.
+        </p>
+        <blockquote>
+            <article am-layout="outline">
+                <section>
+                    1
+                </section>
+                <section>
+                    2
+                </section>
+                <section>
+                    3
+                </section>
+            </article>
+        </blockquote>
         <h3>
             Code
         </h3>
@@ -350,32 +342,25 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;</code></pre>
-    </div>
-</div>
-
         <h2>
             Vertical
         </h2>
+        <p>
+            <code>&lt;article am-layout="vertical"&gt;</code>
+        </p>
         <blockquote>
-            <p>
-                <code>&lt;article am-layout="vertical"&gt;</code>
-            </p>
-            <p>
-                You can specify a vertical layout direction by adding the attribute and value <code>am-layout="vertical"</code> to any root semantic element.
-            </p>
+            <article am-layout="outline vertical">
+                <section>
+                    1
+                </section>
+                <section>
+                    2
+                </section>
+                <section>
+                    3
+                </section>
+            </article>
         </blockquote>
-        <article am-layout="outline vertical">
-            <section>
-                1
-            </section>
-            <section>
-                2
-            </section>
-            <section>
-                3
-            </section>
-        </article>
-
         <h3>
             Code
         </h3>
@@ -394,194 +379,159 @@
 <hr />
 
 <section>
-    <header>
-        <h1 class="am-text-uppercase">
+        <h1>
             Grid layout
         </h1>
-        <blockquote>
-            <h1>
-                Please note:
-            </h1>
-            <p>
-                Grid layout is going away in 1.4.0 and is is being replaced with <code>am-block</code> <a href="http://codepen.io/ionlyseespots/pen/LEqped">View CodePen example</a>
-            </p>
-        </blockquote>
-
         <p>
-            Grid layout is used to position content within your scaffolding, and thus relies on the root semantic element for intent.
+            Grid layout makes use of "blocks" to position content, and thus relies on the root semantic element for intent.
         </p>
-        <p>
-            The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-        </p>
-    </header>
-    <div am-block>
-        <div am-block am-padding>
-            <h2>
-                Grid layout with equal widths
-            </h2>
-            <p>
-                To create a grid layout for rows and columns with equal widths, add the layout attributes <code>am-block</code> & <code>am-block</code> to unsemantic <code>div</code> elements.
-            </p>
-            <p>
-                Alternatively, if you do not need <i>rows</i> and simply want <i>columns</i> add the layout attribute <code>am-block</code> to the root semantic element. i.e., <codE>&lt;section am-block&gt;</code>
-            </p>
-            <p>
-                <small>Grid layout is used to position content within your scaffolding, and thus relies on the root semantic element for intent.
-                    The default orientation on portrait for grid layout does not automatically stack.
-                </small>
-            </p>
-            <blockquote>
+        <div am-block>
+            <div am-block am-padding>
+                <h2>
+                    Blocks
+                </h2>
                 <p>
-                    To add block, add the child attribute <code>am-block</code> to a div.<br />
-                    To add a column, add the child attribute <code>am-block</code> and define the offset width as <code>am-block="VALUE"</code> to a div. The default value (customizable as a less variable) for columns 12.
+                    Add the layout attribute <code>am-block</code> to a <code>div</code> element to create a grid layout. Blocks are infinitely nestable.
                 </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section>
-                    <div am-block>
-                            1
-                    </div>
-                    <div am-block>
-                        <div am-block="6">
-                            1/2
-                        </div>
-                        <div am-block="6">
-                            1/2
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block="4">
-                            1/3
-                        </div>
-                        <div am-block="4">
-                            1/3
-                        </div>
-                        <div am-block="4">
-                            1/3
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </div>
-        <div am-block am-padding>
-            <h3>
-                Code
-            </h3>
+                <p>
+                    Add the width value <code>am-block="VALUE"</code> to create widths and off-set widths.
+                </p>
+                <p>
+                    Add the letter <code>P</code> and/or <code>L</code> to the width value to create unique Portrait and/or Landscape widths and off-set widths.
+                </p>
+                <p>
+                    <small>Feel free to mix & match orientations and width values.</small>
+                </p>
+                <blockquote>
+                    <article am-layout="outline">
+                        <section>
+                            <div am-block>
+                                1
+                            </div>
+                            <div am-block>
+                                <div am-block="6">
+                                    1/2
+                                </div>
+                                <div am-block="6">
+                                    1/2
+                                </div>
+                            </div>
+                            <div am-block>
+                                <div am-block="4">
+                                    1/3
+                                </div>
+                                <div am-block="4">
+                                    1/3
+                                </div>
+                                <div am-block="4">
+                                    1/3
+                                </div>
+                            </div>
+                            <div am-block>
+                                <div am-block="3">
+                                    1/4
+                                </div>
+                                <div am-block="3">
+                                    1/4
+                                </div>
+                                <div am-block="3">
+                                    1/4
+                                </div>
+                                <div am-block="3">
+                                    1/4
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </blockquote>
+            </div>
+            <div am-block am-padding>
+                <h3>
+                    Code
+                </h3>
 <pre><code>&lt;section&gt;
     &lt;div am-block&gt;
-        &lt;div am-block&gt;
             1
-        &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="6"&gt;
             1/2
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="6"&gt;
             2/2
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="4"&gt;
             1/3
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="4"&gt;
             1/3
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="4"&gt;
             1/3
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="3"&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="3"&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="3"&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-block&gt;
+        &lt;div am-block="3"&gt;
             1/4
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
         </div>
     </div>
-</section>
-<hr />
-
-<section>
     <div am-block>
         <div am-block am-padding>
             <h2>
-                Grid layout with offset widths
+                Off-set blocks
             </h2>
-            <p>
-                To create a grid layout with off-set widths, define the off-set width value for the <code>am-block</code>.
-            </p>
-            <p>
-                <small>Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                    The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-                </small>
-            </p>
             <blockquote>
-                <p>
-                    To add a row, add the child attribute <code>am-block</code> to a div.<br />
-                    To add an offset width column, add the child attribute <code>am-block</code> and define the offset width as <code>am-block="VALUE"</code> to a div.
-                </p>
+                <article am-layout="outline">
+                    <section>
+                        <div am-block>
+                            <div am-block="8">
+                                2/3
+                            </div>
+                            <div am-block="4">
+                                1/3
+                            </div>
+                        </div>
+                        <div am-block>
+                            <div am-block="4">
+                                1/3
+                            </div>
+                            <div am-block="8" >
+                                2/3
+                            </div>
+                        </div>
+                        <div am-block>
+                            <div am-block="9">
+                                3/4
+                            </div>
+                            <div am-block="3">
+                                1/4
+                            </div>
+                        </div>
+                        <div am-block>
+                            <div am-block="3 9P">
+                                1/4 <small>(3/4 portrait)</small>
+                            </div>
+                            <div am-block="9L 3">
+                                3/4 <small>(1/4 portrait)</small>
+                            </div>
+                        </div>
+                    </section>
+                </article>
             </blockquote>
-            <article am-layout="outline">
-                <section>
-                    <div am-block>
-                        <div am-block="8">
-                            2/3
-                        </div>
-                        <div am-block="4">
-                            1/3
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block="4">
-                            1/3
-                        </div>
-                        <div am-block="8" >
-                            2/3
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block="9">
-                            3/4
-                        </div>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block="3">
-                            1/4
-                        </div>
-                        <div am-block="9">
-                            3/4
-                        </div>
-                    </div>
-                </section>
-            </article>
         </div>
         <div am-block am-padding>
             <h3>
@@ -589,34 +539,34 @@
             </h3>
 <pre><code>&lt;section&gt;
     &lt;div am-block&gt;
-        &lt;div am-block="66"&gt;
+        &lt;div am-block="8"&gt;
             2/3
         &lt;/div&gt;
-        &lt;div am-block="33"&gt;
+        &lt;div am-block="4"&gt;
             1/3
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block="33"&gt;
+        &lt;div am-block="4"&gt;
             1/3
         &lt;/div&gt;
-        &lt;div am-block="66"&gt;
+        &lt;div am-block="8"&gt;
             2/3
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block="75"&gt;
+        &lt;div am-block="9"&gt;
             3/4
         &lt;/div&gt;
-        &lt;div am-block="25"&gt;
+        &lt;div am-block="3"&gt;
             1/4
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
-        &lt;div am-block="25"&gt;
+        &lt;div am-block="3 9P"&gt;
             1/4
         &lt;/div&gt;
-        &lt;div am-block="75"&gt;
+        &lt;div am-block="9L 3"&gt;
             3/4
         &lt;/div&gt;
     &lt;/div&gt;
@@ -624,196 +574,26 @@
         </div>
     </div>
 </section>
+</article>
 <hr />
 
-<section>
-    <div am-block>
-        <div am-block am-padding>
-            <h2>
-                Grid layout with gutter
-            </h2>
-            <p>
-                To create a grid layout with gutter, define the gutter & type by adding the values <code>gutter</code> and gutter <code>TYPE</code> as <code>am-block="gutter TYPE"</code>.
-            </p>
-
-            <p>
-                <small>
-                    Grid layout is used to structure content, and thus relies on the root semantic element for intent.
-                    The default orientation on portrait for grid layout does not automatically stack. The value <code>portrait-100</code> can be added for defining a linear vertical layout for grid columns on portrait.
-                </small>
-            </p>
-            <blockquote>
-                <h3>
-                    Mix & match column gutters
-                </h3>
-                <h4>
-                    You can define any combination of layouts which enable you to have multiple types of grids
-                </h4>
-                <p>
-                    All columns in unsemantic div rows
-                </p>
-                <ul>
-                    <li>
-                        <code>am-block="gutter margin"</code>
-                    </li>
-                    <li>
-                        <code>am-block="gutter padding"</code>
-                    </li>
-                </ul>
-                <p>
-                    All columns in semantic element rows:
-                </p>
-                <ul>
-                    <li>
-                        <code>am-layout="gutter margin"</code>
-                    </li>
-                    <li>
-                        <code>am-layout="gutter padding"</code>
-                    </li>
-                </ul>
-            </blockquote>
-            <article am-layout="outline">
-                <section>
-                    <h3>
-                        Margin for a single unsemantic row
-                    </h3>
-                    <div am-block>
-                        <div am-block>
-                            1
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block>
-                            1
-                        </div>
-                        <div am-block>
-                            2
-                        </div>
-                    </div>
-                    <div am-block="gutter margin">
-                        <div am-block>
-                            1
-                        </div>
-                        <div am-block>
-                            2
-                        </div>
-                        <div am-block>
-                            3
-                        </div>
-                    </div>
-                </section>
-                <section am-layout="gutter padding">
-                    <h3>
-                        Padding for the root semantic element
-                    </h3>
-                    <div am-block>
-                        <div am-block>
-                            1
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block>
-                            1
-                        </div>
-                        <div am-block>
-                            2
-                        </div>
-                    </div>
-                    <div am-block>
-                        <div am-block>
-                            1
-                        </div>
-                        <div am-block>
-                            2
-                        </div>
-                        <div am-block>
-                            3
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </div>
-        <div am-block am-padding>
-            <h3>
-                Code
-            </h3>
-            <p>
-                Margin for a single unsemantic row
-            </p>
-                    <pre>
-&lt;section&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block"&gt;
-            1
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-block&gt;
-            2
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block="gutter margin"&gt;
-        &lt;div am-block&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-block&gt;
-            2
-        &lt;/div&gt;
-        &lt;div am-block"&gt;
-            3
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-                    </pre>
-            <p>
-                Padding for the root semantic element
-            </p>
-                    <pre>
-&lt;section am-layout="gutter padding"&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block"&gt;
-            1
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-block&gt;
-            2
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block&gt;
-            1
-        &lt;/div&gt;
-        &lt;div am-block&gt;
-            2
-        &lt;/div&gt;
-        &lt;div am-block"&gt;
-            3
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-                    </pre>
-        </div>
-    </div>
-</section>
-<hr />
 
 <article>
-    <header>
-        <h1 class="am-text-uppercase">
-            Nav layout
+    <header id="components" class="am-secondary am-text-c" am-padding="large">
+        <h1>
+            Components
+        </h1>
+        <p>
+            <code>Navs</code> <code>Forms</code> <code>Buttons</code> <code>Tables</code>
+        </p>
+    </header>
+    <section>
+        <h1>
+            Navs
         </h1>
         <p>
             Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
         </p>
-    </header>
-    <section>
         <div am-block>
             <div am-block am-padding>
                 <h2>
@@ -1104,7 +884,7 @@
 
 <article>
     <header>
-        <h1 class="am-text-uppercase">
+        <h1>
             Button layout
         </h1>
         <p>
