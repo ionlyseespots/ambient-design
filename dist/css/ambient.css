@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.10 - 2015-05-12
+ * ambient - v1.3.10 - 2015-05-13
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -1694,7 +1694,7 @@ img {
   height: auto;
 }
 figure {
-  margin: 0;
+  margin: .5em 0;
 }
 @media (orientation: portrait) {
   html {
