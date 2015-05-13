@@ -5,24 +5,20 @@ html {
     font-size: 100%;
     line-height: 1.5;
 }
-
 body {
     max-width: 768px;
     margin: 0 auto;
     padding: 0 .5em;
 }
-
 header, footer {
     padding: 1em;
 }
-
 main {
     border: 1px solid #d6d6d6;
     border-top: none;
     padding: .5em;
     margin-top: -5px;
 }
-
 section {
     padding: 0 .5em;
 }
@@ -32,13 +28,11 @@ figure section {
 header h1 a {
     text-decoration: none;
 }
-
 h1, h2, h3, h4, h5, h6 {
     margin-top: .25em;
 }
-/* little bit of heading theme styles for type, consider owning the default styling */
 section h1 {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
 }
 h2 {
     font-size: 1.5rem;
@@ -56,10 +50,11 @@ h6 {
     font-size: .5em;
 }
 
-
+/* skins */
 .am-btn {
     margin: 0 2px;
 }
+
 /* Ambient color doc styles */
 span.name {
     display: block;
@@ -75,7 +70,7 @@ span.name {
     list-style-type: none;
     padding: 15px 5px;
 }
-.backgrounds [am-col] p, .borders-and-text [am-col] p {
+.backgrounds [am-block] p, .borders-and-text [am-block] p {
     padding: 1vw;
 }
 
