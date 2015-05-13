@@ -7,9 +7,6 @@
 @am-padding-var: ~'@{am-prefix}-padding';
 @am-margin-var: ~'@{am-prefix}-margin';
 @am-layer-var: ~'@{am-prefix}-layer';
-//@am-event-var: ~'@{am-prefix}-event';
-//@am-row-var: ~'@{am-prefix}-row';
-//@am-col-var: ~'@{am-prefix}-col';
 @am-block-var: ~'@{am-prefix}-block';
 @am-scrollable-var: ~'@{am-prefix}-scrollable';
 
@@ -27,8 +24,8 @@
 @am-root-border-style: solid;
 
 @am-primary: #2196f3;
-@am-secondary: #03a9f4;
-@am-closure: #EBECEE; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
+@am-secondary:#03a9f4;
+@am-default: #f5f5f5;
 
 // Nav
 @am-nav-link-padding: 1em .5em;
@@ -58,24 +55,36 @@
 @am-btn-split-right: 25px;
 @am-btn-split-bottom: 25px;
 @am-btn-split-left: 25px;
-
+@am-btn-padding: 11px 15px;
+@am-btn-margin: 10px 1px;
 // Color
+@am-clr-body: hsl(0, 0%, 35%);
 @am-clr-body-bg: @am-clr-white;
-@am-clr-body-text: hsl(0, 0%, 35%);
-@am-clr-primary-bg: #f1f1f1;
-@am-clr-secondary-bg: #f7f7f7;
-@am-clr-link-text: @am-primary;
-@am-clr-link-focus-bg:  lighten(@am-clr-link-text, 25%);
-@am-clr-link-focus-text:  darken(@am-clr-link-text, 25%);
-@am-clr-heading-text: #424242;
-@am-clr-hr: rgba(0, 0, 0, 0.12);
-@am-clr-btn-bg: #f5f5f5;
-@am-clr-btn-text: @am-clr-black;
-@am-clr-btn-bdr:  #e0e0e0;
-@am-clr-btn-primary-text: @am-clr-white;
-@am-clr-btn-secondary-text: @am-clr-white;
 
-@am-clr-table-border: #D4D4D4;;
+@am-clr-primary: @am-primary;
+@am-clr-primary-bg: @am-clr-primary;
+
+@am-clr-secondary: @am-secondary;
+@am-clr-secondary-bg: @am-clr-secondary;
+
+@am-clr-link: @am-clr-primary;
+@am-clr-link-focus:  darken(@am-clr-link, 25%);
+@am-clr-link-focus-bg:  lighten(@am-clr-link, 25%);
+
+@am-clr-heading: #424242;
+@am-clr-hr: rgba(0, 0, 0, 0.12);
+
+@am-clr-btn: @am-clr-black;
+@am-clr-btn-bg: @am-default;
+@am-clr-btn-bdr: darken(@am-clr-btn-bg, 5%);
+@am-clr-btn-primary: @am-clr-white;
+@am-clr-btn-primary-bg: @am-clr-primary;
+@am-clr-btn-primary-bdr: darken(@am-clr-btn-primary-bg, 5%);
+@am-clr-btn-secondary: @am-clr-white;
+@am-clr-btn-secondary-bg: @am-clr-secondary;
+@am-clr-btn-secondary-bdr: darken(@am-clr-btn-secondary-bg, 5%);
+
+@am-clr-table-border: #D4D4D4;
 @am-clr-table-border-cell: #E0E0E0;
 @am-clr-table-zebra-stripe-bg:  #F7F7F7;
 @am-clr-table-th-row-bg: #EBECEE;
@@ -86,6 +95,8 @@
 @am-clr-table-row-hover: #EBECEE;
 
 @am-clr-frame-border: #D4D4D4;
+
+@am-clr-closure-bg: #EBECEE; // Gestalt Principles http://www.smashingmagazine.com/2014/03/28/design-principles-visual-perception-and-the-principles-of-gestalt/
 
 // Palette
 @am-palette-1: #f44336;

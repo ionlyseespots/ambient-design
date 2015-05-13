@@ -37,15 +37,11 @@
     </nav>
 </nav>
 <main role="main">
-<header class="am-primary">
-    <p>
-        <small>Overview</small><br />
-        Intro | Namespaces | Define your layout
-    </p>
-    <h1>
-        Documentation
-    </h1>
-</header>
+    <header class="am-primary">
+        <h1>
+            Documentation
+        </h1>
+    </header>
 <article>
     <header am-padding="large" class="am-secondary">
         <h1>
@@ -88,21 +84,16 @@
             Global
         </h2>
         <p>
-            Global attributes are layout properties common to all HTML elements.
-        </p>
-        <p>
             <code>am-margin</code><br />
             <code>am-padding</code><br />
             <code>am-layer</code><br />
         </p>
-
-
         <h2>
             Root
         </h2>
         <p>
-            The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
-      </p>
+            <code>am-layout</code>
+        </p>
     </section>
 </article>
 <article am-layout="vertical">
@@ -119,99 +110,69 @@
             Whitespace
         </h1>
         <p>
-            Ambient does not style margin & padding by default.
+            Ambient does not style content margin or padding by default.
         </p>
-        <div am-block>
-            <div am-block="6 12P">
-                <h2>
-                    Margin
-                </h2>
-                <p>
-                    Add the attribute <code>am-margin</code> to any element to add space outside an element.
-                </p>
-                <p>
-                    <small>
-                        If needed, additional size values <code>large</code> & <code>small</code> are available.
-                    </small>
-                </p>
-            </div>
-            <div am-block="6 12P">
-                <figure role="example">
-                    <code>am-margin</code>
-                    <p>
-                        If needed, specific direction is available as:
-                    <p>
-                    <ul>
-                        <li>
-                            <code>am-margin="top"</code>
-                        </li>
-                        <li>
-                            <code>am-margin="right"</code>
-                        </li>
-                        <li>
-                            <code>am-margin="bottom"</code>
-                        </li>
-                        <li>
-                            <code>am-margin="left"</code>
-                        </li>
-                    </ul>
-                </figure>
-            </div>
-        </div>
-        <div am-block>
-            <div am-block="6 12P">
-                <h2>
-                    Padding
-                </h2>
-                <p>
-                    Add the attribute <code>am-padding</code> to any element to add space inside an element.
-                </p>
-                <p>
-                    <small>
-                        If needed, additional size values <code>large</code> & <code>small</code> are available.
-                    </small>
-                </p>
-            </div>
-            <div am-block="6 12P">
-                <figure role="example">
-                    <code>am-padding</code>
-                    <p>
-                        If needed, specific direction is available as:
-                    <p>
-                    <ul>
-                        <li>
-                            <code>am-padding="top"</code>
-                        </li>
-                        <li>
-                            <code>am-padding="right"</code>
-                        </li>
-                        <li>
-                            <code>am-padding="bottom"</code>
-                        </li>
-                        <li>
-                            <code>am-padding="left"</code>
-                        </li>
-                    </ul>
-                </figure>
-            </div>
-        </div>
+        <h2>
+            Margin    <code class="am-float-r">am-margin</code>
+        </h2>
+        <p>
+            Additional size values <code>large</code> & <code>small</code> are available as well as the following directions.
+        </p>
+        <figure role="example">
+            <ul>
+                <li>
+                    <code>am-margin="top"</code>
+                </li>
+                <li>
+                    <code>am-margin="right"</code>
+                </li>
+                <li>
+                    <code>am-margin="bottom"</code>
+                </li>
+                <li>
+                    <code>am-margin="left"</code>
+                </li>
+            </ul>
+            </figure>
+        <h2>
+            Padding  <code class="am-float-r">am-padding</code>
+        </h2>
+        <p>
+            Additional size values <code>large</code> & <code>small</code> are available as well as the following directions.
+        </p>
+        <figure role="example">
+            <ul>
+                <li>
+                    <code>am-padding="top"</code>
+                </li>
+                <li>
+                    <code>am-padding="right"</code>
+                </li>
+                <li>
+                    <code>am-padding="bottom"</code>
+                </li>
+                <li>
+                    <code>am-padding="left"</code>
+                </li>
+            </ul>
+        </figure>
     </section>
     <hr />
 
     <section>
         <h1>
-            Layers
+            z-axis
         </h1>
         <p>
-            Add the attribute <code>am-layer="VALUE"</code> to any element to add a layer depth value (z-index).
+            Change the stacking context of elements.
         </p>
+        <h2>
+            Layers <code class="am-float-r">am-layer</code>
+        </h2>
         <p>
-            <small>If needed, the additional skin classes for shadows <code>.am-shadow-VALUE</code> are available. *Shadows can be used on any element.</small>
+            Layer depths are available as the following values.
         </p>
         <figure role="example">
-            <p>
-                Layer depth values are available as
-            </p>
             <ul>
                 <li>
                     <code>am-layer="z1"</code>
@@ -234,16 +195,16 @@
 </article>
 <hr />
 
-<article>
-<header id="layouts" am-padding="large" class="am-secondary am-text-c" >
-    <h1>
-        Layouts
-    </h1>
-    <p>
-        The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
-     </p>
-</header>
-<section id="section">
+    <article>
+    <header id="layouts" am-padding="large" class="am-secondary am-text-c" >
+        <h1>
+            Layouts
+        </h1>
+        <p>
+            The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
+         </p>
+    </header>
+    <section id="section">
         <h1>
             Linear layout
         </h1>
@@ -251,7 +212,7 @@
             <small>Default</small>
         </p>
         <h2>
-            Horizontal
+            Horizontal <code class="am-float-r">am-layout="horizontal"</code>
         </h2>
         <p>
             The default direction for layout is horizontal. You're good to go.
@@ -284,11 +245,8 @@
     &lt;/section&gt;
 &lt;/article&gt;</code></pre>
         <h2>
-            Vertical
+            Vertical <code class="am-float-r">am-layout="vertical"</code>
         </h2>
-        <p>
-            <code>&lt;article am-layout="vertical"&gt;</code>
-        </p>
         <figure role="example">
             <article am-layout="outline vertical">
                 <section>
@@ -316,10 +274,10 @@
         3
     &lt;/section&gt;
 &lt;/article&gt;</code></pre>
-</section>
-<hr />
+    </section>
+    <hr />
 
-<section am-margin="top">
+    <section am-margin="top">
         <h1>
             Grid layout
         </h1>
@@ -327,7 +285,7 @@
             Grid layout makes use of "blocks" to position content, and thus relies on the root semantic element for intent.
         </p>
                 <h2>
-                    Blocks
+                    Blocks  <code class="am-float-r">am-block</code>
                 </h2>
                 <p>
                    Blocks are infinitely nestable.
@@ -336,13 +294,10 @@
                     The Ambient grid defaults to 12 columns. Customize the columns and gutters by overriding these 2 variables: <code>@am-block-columns</code> <code>@am-block-gutter</code>
                 </p>
                 <p>
-                    Add the layout attribute <code>am-block</code> to a <code>div</code> element.
-
-                </p>
-
-                <p>
                     To create widths and off-set widths, add the width value <code>am-block="VALUE"</code>
-                    Add the letter <code>P</code> and/or <code>L</code> to the width value to create unique Portrait and/or Landscape widths.
+                </p>
+                <p>
+                    Add the letter <code>P</code> and/or <code>L</code> to the width value (feel free to mix & match) to create unique portrait and landscape widths.
                 </p>
                 <figure role="example">
                     <article am-layout="outline">
@@ -383,6 +338,14 @@
                                 </div>
                                 <div am-block="3">
                                     3
+                                </div>
+                            </div>
+                            <div am-block>
+                                <div am-block="3 9P">
+                                    3 9P
+                                </div>
+                                <div am-block="9L 3">
+                                    9L 3
                                 </div>
                             </div>
                         </section>
@@ -428,79 +391,6 @@
             3
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/section&gt;</code></pre>
-            <h2>
-                Off-set blocks
-            </h2>
-    <p>
-        Off-set blocks with unique widths for portrait & landscape on some blocks.
-    </p>
-    <figure role="example">
-                <article am-layout="outline">
-                    <section>
-                        <div am-block>
-                            <div am-block="8">
-                                8
-                            </div>
-                            <div am-block="4">
-                                4
-                            </div>
-                        </div>
-                        <div am-block>
-                            <div am-block="4">
-                                4
-                            </div>
-                            <div am-block="8" >
-                                8
-                            </div>
-                        </div>
-                        <div am-block>
-                            <div am-block="9">
-                                9
-                            </div>
-                            <div am-block="3">
-                                3
-                            </div>
-                        </div>
-                        <div am-block>
-                            <div am-block="3 9P">
-                                3 9P
-                            </div>
-                            <div am-block="9L 3">
-                                9L 3
-                            </div>
-                        </div>
-                    </section>
-                </article>
-            </figure>
-            <h3>
-                Code
-            </h3>
-<pre><code>&lt;section&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block="8"&gt;
-            8
-        &lt;/div&gt;
-        &lt;div am-block="4"&gt;
-            4
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block="4"&gt;
-            4
-        &lt;/div&gt;
-        &lt;div am-block="8"&gt;
-            8
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div am-block&gt;
-        &lt;div am-block="9"&gt;
-            9
-        &lt;/div&gt;
-        &lt;div am-block="3"&gt;
-            3
-        &lt;/div&gt;
-    &lt;/div&gt;
     &lt;div am-block&gt;
         &lt;div am-block="3 9P"&gt;
             3 9P
@@ -532,11 +422,8 @@
             Nav layout is used to structure navigation, and thus relies on the root semantic <code>nav</code> element for intent.
         </p>
         <h2>
-            Horizontal nav
+            Horizontal nav <code class="am-float-r">am-layout="horizontal"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="horizontal"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="horizontal">
                 <a href="#">Link Text</a>
@@ -553,11 +440,8 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;</code></pre>
         <h2>
-            Vertical nav
+            Vertical nav  <code class="am-float-r">am-layout="vertical"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="vertical"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="vertical">
                 <a href="#">Link Text</a>
@@ -574,11 +458,8 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;</code></pre>
         <h2>
-            Left align nav
+            Left align nav <code class="am-float-r">am-layout="left-align"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="left-align"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="left-align">
                 <a href="#">Link Text</a>
@@ -595,11 +476,8 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;</code></pre>
         <h2>
-            Right align nav
+            Right align nav <code class="am-float-r">am-layout="right-align"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="right-align"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="right-align">
                 <a href="#">Link Text</a>
@@ -616,11 +494,8 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;</code></pre>
         <h2>
-            Center nav
+            Center nav <code class="am-float-r">am-layout="center-align"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="center-align"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="center-align">
                 <a href="#">Link Text</a>
@@ -637,11 +512,8 @@
     &lt;a href="#"&gt;Link Text&lt;/al&gt;
 &lt;/nav&gt;</code></pre>
         <h2>
-            Justified nav
+            Justified nav <code class="am-float-r">am-layout="justify-align"</code>
         </h2>
-        <p>
-            <code>&lt;nav am-layout="justify-align"&gt;</code>
-        </p>
         <figure role="example">
             <nav am-layout="justify-align">
                 <a href="#">Link Text</a>
@@ -665,54 +537,33 @@
             Buttons
         </h1>
         <h2>
-            Default
+            Default <code class="am-float-r">class="am-btn"</code>
         </h2>
-        <p>
-            <code>class="am-btn"</code>
-        </p>
         <a class="am-btn" href="#">Anchor button</a>
         <button class="am-btn">Button element</button>
         <input class="am-btn" type="submit" value="submit input">
         <input class="am-btn" type="button" value="button input">
         <h2 am-margin="top">
-            Floating action
+            Floating action  <code class="am-float-r">class="am-btn am-floating-action"</code>
         </h2>
-        <div am-block>
-            <div am-block="10">
-                <p>
-                    To add a floating action button add the additional class <code>am-floating-action</code>.
-                </p>
-            </div>
-            <div am-block="2">
-                <button class="am-btn am-floating-action"><i class="fa fa-plus"></i></button>
-            </div>
-        </div>
+        <button class="am-btn am-floating-action"><i class="fa fa-plus"></i></button>
         <h2>
-            Primary
+            Primary   <code class="am-float-r">class="am-btn am-primary"</code>
         </h2>
-        <p>
-            <code>class="am-btn am-primary"</code>
-        </p>
         <a class="am-btn am-primary" href="#">Anchor button</a>
         <button class="am-btn am-primary">Button element</button>
         <input class="am-btn am-primary" type="submit" value="submit input">
         <input class="am-btn am-primary" type="button" value="button input">
         <h2>
-            Secondary
+            Secondary <code class="am-float-r">class="am-btn am-secondary"</code>
         </h2>
-        <p>
-            <code>class="am-btn am-secondary"</code>
-        </p>
         <a class="am-btn am-secondary" href="#">Anchor button</a>
         <button class="am-btn am-secondary">Button element</button>
         <input class="am-btn am-secondary" type="submit" value="submit input">
         <input class="am-btn am-secondary" type="button" value="button input">
         <h2>
-            Disabled
+            Disabled <code class="am-float-r">class="am-btn am-disabled"</code>
         </h2>
-        <p>
-            <code>class="am-btn am-disabled"</code><br />
-        </p>
         <a class="am-btn am-disabled" href="#">Anchor button</a>
         <button class="am-btn" disabled>Button element</button>
         <input class="am-btn" type="submit" value="submit input" disabled>
@@ -728,10 +579,10 @@
         Form layout is used to structure forms, and thus relies on the root section element <code>fieldset</code> element for intent.
     </p>
     <h2>
-        Inline form
+        Inline form  <code class="am-float-r">am-layout="inline"</code>
     </h2>
     <p>
-        <code>&lt;fieldset am-layout="inline"&gt;</code>
+
     </p>
     <figure role="example">
         <form>
@@ -775,39 +626,16 @@
     &lt;/label&gt;
 
     &lt;button type="submit" class="am-btn am-primary"&gt;Sign in&lt;/button&gt;
-    &lt;a href="#"&gt;Forgot your password?&lt;/a&gt;
     &lt;div&gt;
     &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
 
             <h2>
-                Stacked form
+                Stacked form  <code class="am-float-r">am-layout="stack"</code>
             </h2>
-    <p>
-        <code>&lt;fieldset am-layout="stacked"&gt;</code>
-    </p>
-
             <figure role="example">
-                <form am-layout="vertical">
-                    <fieldset am-layout="stacked">
-                        <div role="group">
-                            <legend>
-                                My form
-                            </legend>
-                            <label for="stacked-email" am-preicon="&#xf118;">Email</label>
-                            <input id="stacked-email" type="email" placeholder="Email">
-
-                            <label for="stacked-password" am-posticon="&#xf118;">Password</label>
-                            <input id="stacked-password" type="password" placeholder="Password">
-
-                            <label for="stacked-remember">
-                                <input id="stacked-remember" type="checkbox"> Remember me
-                            </label>
-
-                            <button type="submit" class="am-btn am-primary">Sign in</button>
-                        </div>
-                    </fieldset>
-                    <fieldset am-layout="stacked">
+                <form>
+                    <fieldset am-layout="stack">
                         <div role="group">
                             <legend>
                                 My form
@@ -827,14 +655,12 @@
                     </fieldset>
                 </form>
             </figure>
-
-
             <h3>
                 Code
             </h3>
                     <pre><code>
                         &lt;form&gt;
-                        &lt;fieldset am-layout="stacked"&gt;
+                        &lt;fieldset am-layout="stack"&gt;
                         &lt;div role="group"&gt;
                         &lt;legend&gt;
                         My form
@@ -857,26 +683,15 @@
                     </code></pre>
 
             <h2>
-                Aligned form
+                Aligned form <code class="am-float-r">am-layout="align"</code>
             </h2>
-            <p>
-                To create an aligned form add the attribute and value <code>am-layout="aligned"</code> to any form.
-                Wrap a <code>&lt;span&gt;</code> around the <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> elements you want to align.
-            </p>
-            <h3>
-                Aligned
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;fieldset am-layout="aligned"&gt;</code>
-                </p>
-            </blockquote>
-            <form>
-                <fieldset am-layout="aligned">
-                    <div role="group">
-                        <legend>
-                            My form
-                        </legend>
+            <figure role="example">
+                <form>
+                    <fieldset am-layout="align">
+                        <div role="group">
+                            <legend>
+                                My form
+                            </legend>
                         <span>
                             <label for="aligned-email">Email</label>
                             <input id="aligned-email" type="email" placeholder="Email">
@@ -891,17 +706,17 @@
                             </label>
                         </span>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </div>
-                </fieldset>
-            </form>
-
+                            <button type="submit" class="am-btn am-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </figure>
             <h3>
                 Code
             </h3>
                     <pre><code>
                         &lt;form&gt;
-                        &lt;fieldset am-layout="aligned"&gt;
+                        &lt;fieldset am-layout="align"&gt;
                         &lt;div role="group"&gt;
                         &lt;legend&gt;
                         My form
@@ -927,7 +742,6 @@
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-
             <h2>
                 Multi-column form
             </h2>
@@ -1035,27 +849,20 @@
                     </code></pre>
 
             <h2>
-                Stacked + Aligned form
+                Stacked + Aligned form <code class="am-float-r">am-layout="stacked aligned"</code>
             </h2>
-            <h3>
-                Stacked + Aligned
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;fieldset am-layout="stacked aligned"&gt;</code>
-                </p>
-            </blockquote>
-            <form>
-                <fieldset am-layout="stacked aligned">
-                    <div role="group">
-                        <legend>
-                            My form
-                        </legend>
-                        <label for="stacked-aligned-email">Email</label>
-                        <input id="stacked-aligned-email" type="email" placeholder="Email">
+            <figure role="example">
+                <form>
+                    <fieldset am-layout="stack align">
+                        <div role="group">
+                            <legend>
+                                My form
+                            </legend>
+                            <label for="stacked-aligned-email">Email</label>
+                            <input id="stacked-aligned-email" type="email" placeholder="Email">
 
-                        <label for="stacked-aligned-password">Password</label>
-                        <input id="stacked-aligned-password" type="password" placeholder="Password">
+                            <label for="stacked-aligned-password">Password</label>
+                            <input id="stacked-aligned-password" type="password" placeholder="Password">
 
                                  <span>
                                     <label for="stacked-aligned-email">Email</label>
@@ -1065,21 +872,23 @@
                                     <label for="stacked-aligned-password">Password</label>
                                     <input id="stacked-aligned-password" type="password" placeholder="Password">
                                 </span>
-                        <label for="stacked-aligned-remember">
-                            <input id="stacked-aligned-remember" type="checkbox"> Remember me
-                        </label>
+                            <label for="stacked-aligned-remember">
+                                <input id="stacked-aligned-remember" type="checkbox"> Remember me
+                            </label>
 
-                        <button type="submit" class="am-btn am-primary">Sign in</button>
-                    </div>
-                </fieldset>
-            </form>
+                            <button type="submit" class="am-btn am-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </figure>
+
 
             <h3>
                 Code
             </h3>
                     <pre><code>
                         &lt;form&gt;
-                        &lt;fieldset am-layout="stacked aligned"&gt;
+                        &lt;fieldset am-layout="stack align"&gt;
                         &lt;div role="group"&gt;
                         &lt;legend&gt;
                         My form
@@ -1118,11 +927,11 @@
             </h3>
             <blockquote>
                 <p>
-                    <code>&lt;fieldset am-layout="multicolumn stacked "&gt;</code>
+                    <code>am-layout="multicolumn stacked"</code>
                 </p>
             </blockquote>
             <form>
-                <fieldset  am-layout="multicolumn stacked">
+                <fieldset  am-layout="multicolumn stack">
                     <div role="group">
                         <legend>
                             My form
@@ -1169,7 +978,7 @@
             </h3>
                     <pre><code>
                         &lt;form&gt;
-                        &lt;fieldset am-layout="multicolumn stacked"&gt;
+                        &lt;fieldset am-layout="multicolumn stack"&gt;
                         &lt;div role="group"&gt;
                         &lt;legend&gt;
                         My form
@@ -1222,11 +1031,11 @@
             </h3>
             <blockquote>
                 <p>
-                    <code>&lt;fieldset am-layout="multicolumn aligned"&gt;</code>
+                    <code>am-layout="multicolumn align"</code>
                 </p>
             </blockquote>
             <form>
-                <fieldset am-layout="multicolumn aligned">
+                <fieldset am-layout="multicolumn align">
                     <div role="group">
                         <legend>
                             My form
@@ -1276,7 +1085,7 @@
             </h3>
                     <pre><code>
                         &lt;form&gt;
-                        &lt;fieldset am-layout="multicolumn aligned"&gt;
+                        &lt;fieldset am-layout="multicolumn align"&gt;
                         &lt;div role="group"&gt;
                         &lt;legend&gt;
                         My form
@@ -1329,54 +1138,47 @@
 
 
 <section>
-    <div am-block>
-        <div am-block am-padding>
-            <h2>
+
+            <h1>
                 Outline the layout
-            </h2>
+            </h1>
             <p>
-                If needed, to outline your layout add the attribute and value <code>am-layout="outline"</code> to any semantic element.
+                <code>am-layout="outline"</code>
             </p>
-            <h3>
-                Outline
-            </h3>
-            <blockquote>
-                <p>
-                    <code>&lt;article am-layout="outline"&gt;</code>
-                </p>
-            </blockquote>
-            <article am-layout="outline">
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-                <section>
-                    <h1>
-                        Heading
-                    </h1>
-                    <P>
-                        Paragraph
-                    </P>
-                </section>
-            </article>
-        </div>
-        <div am-block am-padding>
-            <h3>
+            <figure role="example">
+                <article am-layout="outline">
+                    <section>
+                        <h1>
+                            Heading
+                        </h1>
+                        <P>
+                            Paragraph
+                        </P>
+                    </section>
+                    <section>
+                        <h1>
+                            Heading
+                        </h1>
+                        <P>
+                            Paragraph
+                        </P>
+                    </section>
+                    <section>
+                        <h1>
+                            Heading
+                        </h1>
+                        <P>
+                            Paragraph
+                        </P>
+                    </section>
+                </article>
+            </figure>
+
+
+            <h2>
                 Code
-            </h3>
-                    <pre>
+            </h2>
+                    <pre><code>
 &lt;article am-layout="outline"&gt;
     &lt;section&gt;
         &lt;h1&gt;
@@ -1402,9 +1204,8 @@
             Paragraph
         &lt;/p&gt;
     &lt;/section&gt;
-&lt;/article&gt;</pre>
-        </div>
-    </div>
+&lt;/article&gt;</code></pre>
+
 </section>
 </article>
 </main>
