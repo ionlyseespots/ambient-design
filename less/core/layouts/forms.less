@@ -73,40 +73,39 @@ form {
           width: 100%;
         }
       }
+      & textarea {
+        resize: vertical;
+        width: 100%;
+      }
+      & input {
+        &[type="checkbox"] {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        &[type="radio"] {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      &  label {
+        display: inline-block;
+        & input {
+          width: auto;
+        }
+      }
+      & select {
+        padding: .35em 0;
+      }
+      & input:not([type="checkbox"]):not([type="radio"]),
+      & select {
+        font-size: 14px;
+        padding: 11px 5px;
+        margin: 1px;
+      }
+      & label {
+        font-size: 14px;
+        padding: 11px 0;
+      }
     }
   }
-  & textarea {
-    resize: vertical;
-    width: 100%;
-  }
-  & input {
-    &[type="checkbox"] {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    &[type="radio"] {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-  &  label {
-    display: inline-block;
-    & input {
-      width: auto;
-    }
-  }
-  & select {
-    padding: .35em 0;
-  }
-  & input:not([type="checkbox"]):not([type="radio"]),
-  & select {
-    font-size: 14px;
-    padding: 11px 5px;
-    margin: 1px;
-  }
-  & label {
-    font-size: 14px;
-    padding: 11px 0;
-  }
-
 }

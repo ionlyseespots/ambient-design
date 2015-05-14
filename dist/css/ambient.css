@@ -1,5 +1,5 @@
 /**
- * ambient - v1.3.10 - 2015-05-13
+ * ambient - v1.3.10 - 2015-05-14
  * http://ionlyseespots.github.io/ambient-design/index.html
  *
  * Copyright (c) 2015 Ken Buras
@@ -808,13 +808,9 @@ div[am-block][am-block~="gutter"] > [am-block][am-block="last"] {
     padding-right: 0;
   }
 }
-article[am-layout~="vertical"] > section {
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-  width: 100%;
-}
-form[am-layout~="vertical"] > fieldset {
+[am-layout~="vertical"] > section,
+[am-layout~="vertical"] > fieldset,
+[am-layout~="vertical"] aside {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
@@ -909,34 +905,34 @@ form fieldset[am-layout][am-layout~="align"] > div[role="group"] > span textarea
     width: 100%;
   }
 }
-form textarea {
+form fieldset[am-layout] textarea {
   resize: vertical;
   width: 100%;
 }
-form input[type="checkbox"] {
+form fieldset[am-layout] input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
 }
-form input[type="radio"] {
+form fieldset[am-layout] input[type="radio"] {
   display: inline-block;
   vertical-align: middle;
 }
-form label {
+form fieldset[am-layout] label {
   display: inline-block;
 }
-form label input {
+form fieldset[am-layout] label input {
   width: auto;
 }
-form select {
+form fieldset[am-layout] select {
   padding: .35em 0;
 }
-form input:not([type="checkbox"]):not([type="radio"]),
-form select {
+form fieldset[am-layout] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout] select {
   font-size: 14px;
   padding: 11px 5px;
   margin: 1px;
 }
-form label {
+form fieldset[am-layout] label {
   font-size: 14px;
   padding: 11px 0;
 }
