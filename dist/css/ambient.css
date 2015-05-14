@@ -936,13 +936,23 @@ form fieldset[am-layout] label {
   font-size: 14px;
   padding: 11px 0;
 }
+nav[am-layout] a,
+nav[am-layout] form,
+nav[am-layout] button,
+nav[am-layout] div[role="dropdown"] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 8.3333%;
+      -ms-flex: 0 1 8.3333%;
+          flex: 0 1 8.3333%;
+}
 nav[am-layout][am-layout~="horizontal"] a,
-nav[am-layout][am-layout~="horizontal"] button {
+nav[am-layout][am-layout~="horizontal"] form,
+nav[am-layout][am-layout~="horizontal"] button,
+nav[am-layout][am-layout~="horizontal"] div[role="dropdown"] {
   -webkit-box-flex: 1;
   -webkit-flex: 1 8.3333%;
       -ms-flex: 1 8.3333%;
           flex: 1 8.3333%;
-  text-align: center;
 }
 nav[am-layout][am-layout~="justify-align"] {
   -webkit-box-pack: justify;
@@ -956,11 +966,6 @@ nav[am-layout][am-layout~="justify-align"] nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-nav[am-layout][am-layout~="left-align"] a {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-}
 nav[am-layout][am-layout~="right-align"] {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -973,16 +978,15 @@ nav[am-layout][am-layout~="right-align"] nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-nav[am-layout][am-layout~="right-align"] a {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-}
 nav[am-layout][am-layout~="center-align"] {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /*    a,
+        button{
+          align-self: center;
+        }*/
 }
 nav[am-layout][am-layout~="center-align"] nav {
   -webkit-box-pack: center;
@@ -990,27 +994,34 @@ nav[am-layout][am-layout~="center-align"] nav {
       -ms-flex-pack: center;
           justify-content: center;
 }
-nav[am-layout][am-layout~="center-align"] a {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-}
 nav[am-layout][am-layout~="vertical"] {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   display: inline-block;
 }
-nav[am-layout][am-layout~="vertical"] a {
+nav[am-layout][am-layout~="vertical"] a,
+nav[am-layout][am-layout~="vertical"] form,
+nav[am-layout][am-layout~="vertical"] button,
+nav[am-layout][am-layout~="vertical"] div[role="dropdown"] {
   width: 100%;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] div[role="dropdown"] {
   text-align: left;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] div[role="dropdown"] {
   text-align: center;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] div[role="dropdown"] {
   text-align: right;
 }
 nav[am-layout] a {
@@ -1019,6 +1030,36 @@ nav[am-layout] a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+nav[am-layout] form {
+  padding: 0 0.5em;
+}
+nav[am-layout] form > fieldset {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+nav[am-layout] button {
+  padding: 1em 0.5em;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+}
+nav[am-layout] div[role="dropdown"]:last-child button + nav {
+  left: auto;
+  right: 0;
+}
+nav[am-layout] div[role="dropdown"] > button {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
@@ -1190,14 +1231,24 @@ div[role~="tab"] nav a {
   margin-top: .5em;
 }
 div[role~="dropdown"] {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  width: auto;
+  position: relative;
 }
 div[role~="dropdown"] button + nav {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: auto;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  z-index: 4;
+  min-width: 320px;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
 }
 div[role~="dropdown"] button + nav a {
+  text-align: left;
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
@@ -1437,7 +1488,7 @@ body > div[am-wrapper] > footer {
     width: 100%;
   }
 }
-a.am-btn-link {
+.am-btn-link {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -1451,12 +1502,11 @@ a.am-btn-link {
   background-clip: padding-box;
   line-height: 1.5;
   outline: 0 none;
-  padding: 8px 30px;
-  margin: 10px 1px;
+  padding: 11px 15px;
+  margin: 10px 0;
   word-wrap: break-word;
-}
-a.am-btn-link:hover {
-  text-decoration: underline;
+  background-color: transparent;
+  border: none;
 }
 html,
 body {
@@ -1622,7 +1672,6 @@ pre {
 label {
   font-size: 80%;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 input,
 select,

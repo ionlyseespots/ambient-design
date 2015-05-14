@@ -74,7 +74,7 @@
   }
 }
 
-a.@{am-prefix}-btn-link  {
+.@{am-prefix}-btn-link  {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -88,10 +88,9 @@ a.@{am-prefix}-btn-link  {
   background-clip: padding-box;
   line-height: 1.5;
   outline: 0 none;
-  padding: 8px 30px;
-  margin: 10px 1px;
+  padding: @am-btn-padding;
+  margin: @am-btn-margin;
   word-wrap: break-word;
-  &:hover {
-    text-decoration: underline;
-  }
+  background-color:transparent;
+  border:none;
 }

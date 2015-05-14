@@ -25,12 +25,20 @@ div[role~="tab"] {
 }
 
 div[role~="dropdown"] {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  width:auto;
+  position:relative;
   & button + nav {
-    border: 1px solid #d6d6d6;
-    padding: .5em;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:auto;
+    flex-flow: column nowrap;
+    z-index: 4;
+    min-width:320px;
+    max-height:~'calc(100vh - 300px)';
+    overflow-y:auto;
     & a {
+      text-align:left;
       flex-basis: auto;
       width: 100%;
       border: none;
