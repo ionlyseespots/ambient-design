@@ -1047,6 +1047,7 @@ line breaks
         <a class="am-active" href>link</a>
         <a href>link</a>
         <a href>link</a>
+        <button>button</button>
     </nav>
     <nav am-layout="vertical">
         <h1>Vertical</h1>
@@ -1060,20 +1061,20 @@ line breaks
         Tab
     </h2>
         <p><code>role="tab"</code></p>
-        <nav am-layout role="tab">
-            <h1>Basic tab</h1>
-            <a class="am-active" href>link</a>
-            <a href>link</a>
-            <a href>link</a>
-        </nav>
+        <div role="tab">
+            <nav am-layout>
+                <h1>Basic tab</h1>
+                <a class="am-active" href>link</a>
+                <a href>link</a>
+                <a href>link</a>
+            </nav>
+        </div>
 
-        <nav am-layout role="tab">
-            <h1>Complex tab</h1>
-            <p>Infinitely nestable</p>
-            <a class="am-active" href>link</a>
-            <a href>link</a>
-            <a href>link</a>
-            <nav>
+
+        <div role="tab">
+            <nav am-layout>
+                <h1>Complex tab</h1>
+                <p>Infinitely nestable</p>
                 <a class="am-active" href>link</a>
                 <a href>link</a>
                 <a href>link</a>
@@ -1081,31 +1082,41 @@ line breaks
                     <a class="am-active" href>link</a>
                     <a href>link</a>
                     <a href>link</a>
+                    <nav>
+                        <a class="am-active" href>link</a>
+                        <a href>link</a>
+                        <a href>link</a>
+                    </nav>
                 </nav>
             </nav>
-        </nav>
+        </div>
+
     <hr />
 <h2>
     Dropdown
 </h2>
     <p><code>role="dropdown"</code></p>
-
-        <button class="am-btn am-active">trigger</button>
-        <nav am-layout role="dropdown">
-            <h1>Flyout / Dropdown</h1>
-            <p>Infinitely nestable. Works with buttons as triggers</p>
+<div role="dropdown">
+    <button class="am-btn am-active">trigger</button>
+    <nav am-layout>
+        <h1>Flyout / Dropdown</h1>
+        <p>Infinitely nestable. Works with buttons as triggers</p>
+        <button class="am-btn">trigger</button>
+        <nav>
+            <a href>flyout link 1-1</a>
+            <a href>flyout link 1-2</a>
             <button class="am-btn">trigger</button>
             <nav>
-                <a href>flyout link 1-1</a>
-                <a href>flyout link 1-2</a>
-                <button class="am-btn">trigger</button>
-                <nav>
-                    <a href>flyout link 1-3-1</a>
-                    <a href>flyout link 1-3-2</a>
-                    <a href>flyout link 1-3-3</a>
-                </nav>
+                <a href>flyout link 1-3-1</a>
+                <a href>flyout link 1-3-2</a>
+                <a href>flyout link 1-3-3</a>
             </nav>
         </nav>
+    </nav>
+</div>
+
+
+
 
     <hr />
 </article>

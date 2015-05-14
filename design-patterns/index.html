@@ -25,17 +25,21 @@
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout role="tab">
-    <a href="../index.html"><i class="fa fa-home"></i></a>
-    <a href="../docs/index.html">Get Started</a>
-    <a href="../layout/index.html">Features</a>
-    <a href="../design-patterns/index.html" class="am-active">Docs</a>
-    <nav>
-        <a href="#layouts">Layouts</a>
-        <a href="#components">Components</a>
-        <a href="#patterns">Patterns</a>
+<div role="tab">
+    <nav am-layout role="navigation">
+        <a href="../index.html"><i class="fa fa-home"></i></a>
+        <a href="../docs/index.html">Get Started</a>
+        <a href="../layout/index.html">Features</a>
+        <a href="../design-patterns/index.html" class="am-active">Docs</a>
+        <nav>
+            <a class="am-active" href="#layouts"><i class="fa fa-file"></i></a>
+            <a href="#layouts">Layout</a>
+            <a href="#components">Components</a>
+            <a href="#patterns">Patterns</a>
+        </nav>
     </nav>
-</nav>
+</div>
+
 <main role="main">
     <header class="am-primary">
         <h1>
@@ -192,13 +196,13 @@
     <article>
     <header id="layouts" am-padding="large" class="am-secondary am-text-c" >
         <h1>
-            Layouts
+            Layout
         </h1>
         <p>
             The <code>am-layout</code> attribute must be used on a root semantic element, though the attribute may have no effect on some elements.
          </p>
     </header>
-    <section id="section">
+    <section>
         <h1>
             Linear layout
         </h1>
@@ -399,7 +403,7 @@
 <hr />
 
 
-<article am-layout="vertical">
+<article>
     <header id="components" class="am-secondary am-text-c" am-padding="large">
         <h1>
             Components
@@ -812,7 +816,8 @@
                         &lt;/fieldset&gt;
                         &lt;/form&gt;
                     </code></pre>
-</section>
+    </section>
+    <hr />
 
     <section am-margin="top">
         <h1>
@@ -1040,78 +1045,96 @@
             </table>
         </figure>
 </section>
+    <hr />
 
-<section>
-
-            <h1>
-                Outline the layout
-            </h1>
-            <p>
-                <code>am-layout="outline"</code>
-            </p>
-            <figure role="example">
-                <article am-layout="outline">
-                    <section>
-                        <h1>
-                            Heading
-                        </h1>
-                        <P>
-                            Paragraph
-                        </P>
-                    </section>
-                    <section>
-                        <h1>
-                            Heading
-                        </h1>
-                        <P>
-                            Paragraph
-                        </P>
-                    </section>
-                    <section>
-                        <h1>
-                            Heading
-                        </h1>
-                        <P>
-                            Paragraph
-                        </P>
-                    </section>
-                </article>
-            </figure>
+    <section am-margin="top">
+        <h1>
+            Outline the layout
+        </h1>
+        <p>
+            Display infinitely nestable colors and borders for content.
+        </p>
 
 
-            <h2>
-                Code
-            </h2>
+        <h2>
+            Outline  <code class="am-float-r">am-layout="outline"</code>
+        </h2>
+        <figure role="example">
+            <article am-layout="outline">
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+                <section>
+                    <h1>
+                        Heading
+                    </h1>
+                    <P>
+                        Paragraph
+                    </P>
+                </section>
+            </article>
+        </figure>
+
+
+        <h2>
+            Code
+        </h2>
                     <pre><code>
-&lt;article am-layout="outline"&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            Heading
-        &lt;/h1&gt;
-        &lt;p&gt;
-            Paragraph
-        &lt;/p&gt;
-    &lt;/section&gt;
-&lt;/article&gt;</code></pre>
+                        &lt;article am-layout="outline"&gt;
+                        &lt;section&gt;
+                        &lt;h1&gt;
+                        Heading
+                        &lt;/h1&gt;
+                        &lt;p&gt;
+                        Paragraph
+                        &lt;/p&gt;
+                        &lt;/section&gt;
+                        &lt;section&gt;
+                        &lt;h1&gt;
+                        Heading
+                        &lt;/h1&gt;
+                        &lt;p&gt;
+                        Paragraph
+                        &lt;/p&gt;
+                        &lt;/section&gt;
+                        &lt;section&gt;
+                        &lt;h1&gt;
+                        Heading
+                        &lt;/h1&gt;
+                        &lt;p&gt;
+                        Paragraph
+                        &lt;/p&gt;
+                        &lt;/section&gt;
+                        &lt;/article&gt;</code></pre>
 
-</section>
+    </section>
+ </article>
+<hr />
+
+<article>
+    <header id="patterns" am-padding="large" class="am-secondary am-text-c" >
+        <h1>
+            Patterns
+        </h1>
+        <p>
+            Reusable design patterns make use of the <code>role</code> attribute as well as the <code>am-SOMETHING</code> namespace.
+        </p>
+    </header>
 </article>
+
 </main>
 <footer am-padding="large" am-margin="top" class="am-text-c">
     <p>
