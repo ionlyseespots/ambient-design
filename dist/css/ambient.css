@@ -1181,9 +1181,6 @@ div[role~="tab"] a.am-active {
   margin-bottom: -1px;
   z-index: 1;
 }
-div[role~="tab"] > nav {
-  border-bottom: none;
-}
 div[role~="tab"] nav {
   border: 1px solid #d6d6d6;
   margin-bottom: -1px;
