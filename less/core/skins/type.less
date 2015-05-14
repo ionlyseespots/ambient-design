@@ -38,29 +38,13 @@ html {
 }
 body {
   background-color: @am-clr-body-bg;
-  color: @am-clr-body-text;
+  color: @am-clr-body;
   word-wrap: break-word;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   & > header,
   & > footer {
-    background-color: @am-closure;
-    color: @am-clr-primary-bg;
-    &
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: @am-clr-primary-bg;
-    }
-    & a {
-      color: @am-clr-primary-bg;
-      &:hover {
-        color: lighten(@am-clr-primary-bg, 20%);
-      }
-    }
+    background-color: @am-clr-closure-bg;
   }
 }
 // Agree::: Do NOT use heading as sub titles
@@ -76,7 +60,7 @@ h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: @am-clr-heading-text;
+  color: @am-clr-heading;
   font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
@@ -120,15 +104,15 @@ p {
   margin: 0 0 1.5em;
 }
 a {
-  color: @am-clr-link-text;
+  color: @am-clr-link;
   &:hover,
   &:active,  {
-    color:darken(@am-clr-link-text, 50%);
+    color:darken(@am-clr-link, 50%);
   }
   // agree: http://outlinenone.com/
   &:focus:not(.@{am-prefix}-btn) {
     background-color: @am-clr-link-focus-bg;
-    color: @am-clr-link-focus-text;
+    color: @am-clr-link-focus;
   }
 }
 
@@ -150,7 +134,7 @@ samp {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 blockquote {
-  border-left: 5px solid #e9e9e9;
+  border-left: 5px solid @am-clr-primary;
   background-color: #fafafa;
   margin: 1em 0;
   padding: .5em 1em;
@@ -159,6 +143,14 @@ blockquote {
   &:before,
   &:after {
     content: "";
+  }
+  & > h1,
+  & > h2 ,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    color: @am-clr-primary;
   }
 }
 pre {
@@ -219,6 +211,10 @@ img {
 }
 // consider this for fieldset reset/design:
 // http://thatemil.com/blog/2015/01/03/reset-your-fieldset/
+
+figure {
+  margin: .5em 0;
+}
 
 @media (orientation:portrait){
   html {

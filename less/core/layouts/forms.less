@@ -11,7 +11,6 @@ form {
         width: auto;
         legend {
           width: 100%;
-          //          max-width: 100%;
           word-wrap: break-word;
         }
       }
@@ -21,7 +20,7 @@ form {
       }
 
       //== Stacked
-      &[@{am-layout-var}~="stacked"] {
+      &[@{am-layout-var}~="stack"] {
         & input:not([type="checkbox"]):not([type="radio"]),
         & select,
         & label {
@@ -30,7 +29,7 @@ form {
       }
 
       //== Aligned
-      &[@{am-layout-var}~="aligned"] {
+      &[@{am-layout-var}~="align"] {
         & > span {
           display: flex;
           flex-flow: row wrap;
@@ -66,43 +65,6 @@ form {
           }
         }
       }
-
-      //== Multi-column
-      &[@{am-layout-var}~="multicolumn"] {
-        display: flex;
-        flex-flow: row wrap;
-        & input:not([type="checkbox"]):not([type="radio"]),
-        & select,
-        & textarea,
-        & label {
-          width: 100%;
-        }
-        & > div {
-          flex: 1 auto;
-          width: @am-flex-width1;
-          @media (max-width: 30em) {
-            width: 100%;
-          }
-        }
-        & > div[role="group"] {
-          display: flex;
-          flex-flow: row wrap;
-          & input:not([type="checkbox"]):not([type="radio"]),
-          & select,
-          & textarea,
-          & label {
-            width: 100%;
-          }
-          & > div {
-            flex: 1 auto;
-            width: @am-flex-width1;
-            @media (max-width: 30em) {
-              width: 100%;
-            }
-          }
-        }
-      }
-
       @media (max-width: 30em) {
         input:not([type="checkbox"]):not([type="radio"]),
         select,
@@ -111,29 +73,39 @@ form {
           width: 100%;
         }
       }
+      & textarea {
+        resize: vertical;
+        width: 100%;
+      }
+      & input {
+        &[type="checkbox"] {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        &[type="radio"] {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      &  label {
+        display: inline-block;
+        & input {
+          width: auto;
+        }
+      }
+      & select {
+        padding: .35em 0;
+      }
+      & input:not([type="checkbox"]):not([type="radio"]),
+      & select {
+        font-size: 14px;
+        padding: 11px 5px;
+        margin: 1px 0;
+      }
+      & label {
+        font-size: 14px;
+        padding: 11px 0;
+      }
     }
-  }
-  & textarea {
-    resize: vertical;
-    width: 100%;
-  }
-  & input {
-    &[type="checkbox"] {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    &[type="radio"] {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-  &  label {
-    display: inline-block;
-    & input {
-      width: auto;
-    }
-  }
-  & select {
-    padding: .35em 0;
   }
 }

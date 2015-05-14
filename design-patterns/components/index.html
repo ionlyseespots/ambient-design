@@ -165,30 +165,23 @@ line breaks
             <h2>
                 Default
             </h2>
-            <a href="#">Link</a>
             <button>Button element</button>
             <input type="submit" value="submit input">
             <input type="button" value="button input">
             <input type="submit" value="submit input disabled" disabled>
             <input type="button" value="button input disabled" disabled>
-            <a href="#">Link</a>
         </section>
         <section am-padding>
             <h2>
                 Ambient
             </h2>
-            <a class="am-btn-link" href="#">Link</a>
             <a class="am-btn" href="#">Anchor button</a>
             <button class="am-btn">Button element</button>
             <input class="am-btn" type="submit" value="submit input">
             <input class="am-btn" type="button" value="button input">
-            <a class="am-btn-link" href="#">Link</a>
             <blockquote>
                 <p>
                     <code>class="am-btn"</code>
-                </p>
-                <p>
-                    Links can be aligned with buttons with  <code>class="am-btn-link"</code>
                 </p>
             </blockquote>
                 <h2>
@@ -747,162 +740,183 @@ line breaks
     </article>
     <hr />
 
-    <article am-layout="gutter padding portrait-100" am-padding>
+    <article am-padding>
         <h1>
             Colors
         </h1>
         <p>
-            Ambient base (500) color palette is inspired by the Material palette.
+            Ambient color palette variables are inspired by the Material palette (500).
         </p>
-        <section am-layout="gutter padding portrait-100" am-padding class="backgrounds">
+        <section am-padding class="backgrounds">
             <h1>
                 Backgrounds
             </h1>
             <blockquote>
                 <code>.am-clr-NUMBER-bg</code>
             </blockquote>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-1-bg am-clr-21-text">
                         <span class="name">Red</span>
                         .am-clr-1-bg
+                        @am-palette-1
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-2-bg am-clr-21-text">
                         <span class="name">Pink</span>
                         .am-clr-2-bg
+                        @am-palette-2
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-3-bg am-clr-21-text">
                         <span class="name">Purple</span>
                         .am-clr-3-bg
+                        @am-palette-3
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-4-bg am-clr-21-text">
                         <span class="name">Deep Purple</span>
                         .am-clr-4-bg
+                        @am-palette-4
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-5-bg am-clr-21-text">
                         <span class="name">Indigo</span>
                         .am-clr-5-bg
+                        @am-palette-5
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-6-bg am-clr-21-text">
                         <span class="name">Blue</span>
                         .am-clr-6-bg
+                        @am-palette-6
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-7-bg am-clr-21-text">
                         <span class="name">Light blue</span>
                         .am-clr-7-bg
+                        @am-palette-7
+
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-8-bg am-clr-21-text">
                         <span class="name">cyan</span>
                         .am-clr-8-bg
+                        @am-palette-8
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-9-bg am-clr-21-text">
                         <span class="name">Teal</span>
                         .am-clr-9-bg
+                        @am-palette-9
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-10-bg am-clr-21-text">
                         <span class="name">Green</span>
                         .am-clr-10-bg
+                        @am-palette-10
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-11-bg am-clr-21-text">
                         <span class="name">Light green</span>
                         .am-clr-11-bg
+                        @am-palette-11
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-12-bg">
                         <span class="name">Lime</span>
                         .am-clr-12-bg
+                        @am-palette-12
+
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-13-bg">
                         <span class="name">Yellow</span>
                         .am-clr-13-bg
+                        @am-palette-13
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-14-bg">
                         <span class="name">Amber</span>
                         .am-clr-14-bg
+                        @am-palette-14
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-15-bg am-clr-21-text">
                         <span class="name">Orange</span>
                         .am-clr-15-bg
+                        @am-palette-15
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-16-bg am-clr-21-text">
                         <span class="name">Deep orange</span>
                         .am-clr-16-bg
+                        @am-palette-16
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-17-bg am-clr-21-text">
                         <span class="name">Brown</span>
                         .am-clr-17-bg
+                        @am-palette-17
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-18-bg am-clr-21-text">
                         <span class="name">Grey</span>
                         .am-clr-18-bg
+                        @am-palette-18
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-19-bg am-clr-21-text">
                         <span class="name">Blue grey</span>
                         .am-clr-19-bg
+                        @am-palette-19
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-20-bg am-clr-21-text">
                         <span class="name">Black</span>
                         .am-clr-20-bg
+                        @am-palette-20
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <h1>
-                    SVG fills and strokes
-                </h1>
-                <p>
-                    Includes a set of classes to set fills and or strokes.
-                </p>
-                <blockquote>
-                    <code>.am-clr-NUMBER-fill</code><br />
-                    <code>.am-clr-NUMBER-stroke</code>
-                </blockquote>
-            </div>
+            <h1>
+                SVG fills and strokes
+            </h1>
+            <p>
+                Includes a set of classes to set fills and or strokes.
+            </p>
+            <blockquote>
+                <code>.am-clr-NUMBER-fill</code><br />
+                <code>.am-clr-NUMBER-stroke</code>
+            </blockquote>
         </section>
-        <section am-layout="gutter padding portrait-100" am-padding class="borders-and-text">
+
+        <section am-padding class="borders-and-text">
             <h1>
                 Borders & Text
             </h1>
@@ -910,109 +924,109 @@ line breaks
                 <code>.am-clr-NUMBER-text</code><br />
                 <code>.am-clr-NUMBER-border</code>
             </blockquote>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-1-border am-clr-1-text">
                         Red
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-2-border am-clr-2-text">
                         Pink
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-3-border am-clr-3-text">
                         Purple
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-4-border am-clr-4-text">
                         Deep purple
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-5-border am-clr-5-text">
                         Indigo
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-6-border am-clr-6-text">
                         Blue
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-7-border am-clr-7-text">
                         Light blue
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-8-border am-clr-8-text">
                         cyan
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-9-border am-clr-9-text">
                         Teal
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-10-border am-clr-10-text">
                         Green
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-11-border am-clr-11n-text">
                         Light green
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-12-border am-clr-12-text">
                         Lime
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-13-border am-clr-13-text">
                         Yellow
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-14-border am-clr-14-text">
                         Amber
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-15-border am-clr-15-text">
                         Orange
                     </p>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="3">
                     <p class="am-clr-16-border am-clr-16-text">
                         Deep orange
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-17-border am-clr-17-text">
                         Brown
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-18-border am-clr-18-text">
                         Grey
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="2">
                     <p class="am-clr-19-border am-clr-19-text">
                         Blue grey
                     </p>
                 </div>
-                <div am-col>
+                <div am-block="3">
                     <p class="am-clr-20-border am-clr-20-text">
                         Black
                     </p>
@@ -1020,6 +1034,105 @@ line breaks
             </div>
         </section>
     </article>
+
+<article am-padding>
+    <nav>
+        <h1>Default</h1>
+        <a class="am-active" href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+    </nav>
+    <nav am-layout="horizontal">
+        <h1>Horizontal</h1>
+        <a class="am-active" href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+        <button>button</button>
+    </nav>
+    <nav am-layout="vertical">
+        <h1>Vertical</h1>
+        <a class="am-active" href>link</a>
+        <a href>link</a>
+        <a href>link</a>
+    </nav>
+    <hr />
+    <h1>Nav roles</h1>
+    <h2>
+        Tab
+    </h2>
+        <p><code>role="tab"</code></p>
+        <div role="tab">
+            <nav am-layout>
+                <h1>Basic tab</h1>
+                <a class="am-active" href>link</a>
+                <a href>link</a>
+                <a href>link</a>
+            </nav>
+        </div>
+
+
+        <div role="tab">
+            <nav am-layout>
+                <h1>Complex tab</h1>
+                <p>Infinitely nestable</p>
+                <a class="am-active" href>link</a>
+                <a href>link</a>
+                <a href>link</a>
+                <nav>
+                    <a class="am-active" href>link</a>
+                    <a href>link</a>
+                    <a href>link</a>
+                    <nav>
+                        <a class="am-active" href>link</a>
+                        <a href>link</a>
+                        <a href>link</a>
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+
+    <hr />
+<h2>
+    Dropdown
+</h2>
+    <p><code>role="dropdown"</code></p>
+<div role="dropdown">
+    <button class="am-btn am-active">trigger</button>
+    <nav am-layout>
+        <h1>Flyout / Dropdown</h1>
+        <p>Infinitely nestable. Works with buttons as triggers</p>
+        <button class="am-btn">trigger</button>
+        <nav>
+            <a href>flyout link 1-1</a>
+            <a href>flyout link 1-2</a>
+            <button class="am-btn">trigger</button>
+            <nav>
+                <a href>flyout link 1-3-1</a>
+                <a href>flyout link 1-3-2</a>
+                <a href>flyout link 1-3-3</a>
+            </nav>
+        </nav>
+    </nav>
+</div>
+
+
+
+
+    <hr />
+</article>
 </main>
+<footer am-padding="large" am-margin="top" class="am-text-c">
+    <p>
+        Ambient is an advanced CSS framework built as a lightweight & modular HTML5 layout methodology.<br />
+        <a href="../roadmap/index.html">Roadmap</a>
+    </p>
+    <p>
+        All are welcome to contribute. <br />
+        Bring your ideas on how we can help design the code.
+    </p>
+    <p>
+        Ambient is a project by <a href="https://twitter.com/ionlyseespots">@ionlyseespots</a>.
+    </p>
+</footer>
 </body>
 </html>

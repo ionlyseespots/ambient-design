@@ -20,374 +20,190 @@
 <!--[if lt IE 10]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header am-padding>
+<header>
     <h1>
         <a href="../index.html" title="index">Ambient</a>
     </h1>
 </header>
-<nav am-layout="horizontal" class="am-text-c" role="navigation">
-    <a href="../docs/index.html" class="am-active">Get Started</a>
-    <a href="../layout/index.html">Semantic</a>
-    <a href="../design-patterns/index.html">Layout</a>
-    <a href="https://github.com/ionlyseespots/ambient-design">GitHub</a>
-</nav>
+<div role="tab">
+    <nav am-layout role="navigation">
+        <a href="../index.html"><i class="fa fa-home"></i></a>
+        <a class="am-active" href="../docs/index.html">Get Started</a>
+        <a href="../layout/index.html">Features</a>
+        <a href="../design-patterns/index.html">Docs</a>
+    </nav>
+</div>
 <main role="main">
-    <header class="am-primary" am-padding>
-        <p>
-            Overview<br />
-            Introduction | Download | Examples
-        </p>
+    <header class="am-primary">
         <h1>
             Get started
         </h1>
     </header>
     <article>
         <header am-padding="large" class="am-secondary">
+            <h1>
+                What is Ambient?
+            </h1>
             <p>
-                Introduction
+                Ambient is an intuitive front-end framework for fast, app website development.
             </p>
-            <h2>
-                Ambient is a CSS framework to layout the document outline
-            </h2>
-            <p>
-                A lightweight and modular HTML5 UI development methodology
-            </p>
-            <h3>
-                Boba Fett release v1.3.10
-            </h3>
         </header>
-        <section am-padding>
-            <h3>
-                Bower
-            </h3>
-            <pre><code>
-$ bower install ambient
-            </code></pre>
+        <p>
+            <small>Chewbacca release v1.4.0</small>
+        </p>
+    </article>
+    <article>
+        <h1>
+            Install
+        </h1>
+        <section>
+            <h1>
+                Bower Package
+            </h1>
+<pre><code>$ bower install ambient</code></pre>
             <p>
                 Install Ambient package.
             </p>
-            <pre><code>
-ambient/
+            <pre><code>ambient/
 ├── dist/
 │    └── css/
 │        ├── ambient.css
 │        └── ambient.min.css
 └── less/
-      ├── core/
-      ├── mixins/
-      └── ambient.less
+│    └── core/
+│        ├── layouts/
+│        ├── skins/
+└── ambient.less</code></pre>
+            <p>
+                Ambient package includes both the <code>CSS</code> files as well as the <code>less/</code> code files.
+            </p>
+            <h2>
+                Optional Bower
+            </h2>
+<pre><code>$ bower install ambient#dist --save</code></pre>
+            <p>
+                Optional Bower includes only the CSS files (--save as a dependency) in your project.
+            </p>
+        </section>
+        <hr />
 
-            </code></pre>
+        <section>
+            <h1>
+                Download
+            </h1>
             <p>
-                The Ambient package includes both the <code>dist/</code> and <code>less/</code> files.
+                ambient.min.css (31kb)
             </p>
-            <h4>
-                Optional
-            </h4>
-            <pre><code>
-$ bower install ambient#dist --save
-            </code></pre>
-            <p>
-                Install only the latest version <code>dist/</code> CSS files and save Ambient as a dependency in your project.
-            </p>
+            <button href="https://github.com/ionlyseespots/ambient-design/raw/gh-pages/dist/css/ambient.min.css" class="am-btn"><i class="fa fa-download"></i> Download</button>
         </section>
-        <section am-padding>
-            <h3>
-                <i class="fa fa-download"></i> Download
-            </h3>
-            <h4>
-                CSS
-            </h4>
+        <section>
+            <h1>
+                Github
+            </h1>
             <p>
-                <a href="https://github.com/ionlyseespots/ambient-design/raw/gh-pages/dist/css/ambient.min.css" class="am-btn"><i class="fa fa-download"></i> CSS</a><br />
-                ambient.min.css 31kb
+                All are welcome to contribute. Bring your ideas on how we can help design the code.
             </p>
-            <h4>
-                Prerelease
-            </h4>
-            <p>
-                <a href="https://github.com/ionlyseespots/ambient-design/zipball/prerelease/" class="am-btn"><i class="fa fa-download"></i> chewbacca</a><br />
-                The prerelease source branch. Release schedule: <a href="../roadmap/index.html">Roadmap</a>.
-            </p>
-        </section>
-        <section am-padding>
-            <h3>
-                <i class="fa fa-github"></i> Github
-            </h3>
-            <p>
-                All are welcome to contribute.
-                Bring your ideas on how we can help design the code.   <a href="https://github.com/ionlyseespots/ambient-design">Clone or fork the repo</a>
-            </p>
+            <a href="https://github.com/ionlyseespots/ambient-design">Clone or fork the repo</a>
         </section>
     </article>
+    <hr />
 
     <article>
         <header am-padding="large" class="am-secondary am-text-c">
-            <h2>
-                Back to basics
-            </h2>
-            <p>
-                Feel free to use HTML, whenever and wherever you like. Ambient is ready to adopt whatever your design or style is.
-            </p>
-        </header>
-        <section>
-            <nav am-layout="horizontal" class="am-text-c">
-                <a href="../layout/index.html">HTML5 semantics</a>
-                <a href="../design-patterns/index.html">CSS3 layouts</a>
-                <a href="../design-patterns/components/index.html">View all components</a>
-            </nav>
-
-
-            <div am-row="portrait-100" am-padding>
-                <div am-col am-padding>
-                    <h3>
-                        Basic HTML5 example
-                    </h3>
-                    <p>
-                        Build the intent of your content.
-                        You can add additional <code>am-layout</code> values as well as extend child attributes <code>am-SOMETHING</code> to your scaffolding to gradually build a hierarchy that defines your layout.
-                    </p>
-                    <p data-height="545" data-theme-id="11491" data-slug-hash="gbmJRP" data-default-tab="result" data-user="ionlyseespots" class='codepen'>See the Pen <a href='http://codepen.io/ionlyseespots/pen/gbmJRP/'>Idea for flexbox HTML5 scaffolding & layout attributes</a> by I only see spots (<a href='http://codepen.io/ionlyseespots'>@ionlyseespots</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-                    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-                </div>
-                <div am-col am-padding>
-                    <h4>
-                        Code
-                    </h4>
-                    <p>
-                        Start with this basic HTML5 example.
-                    </p>
-                    <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-&lt;title&gt;Ambient starting HTML5 example&lt;/title&gt;
-&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;apple-touch-icon.png&quot; &gt;
-&lt;!-- Place favicon.ico in the root directory --&gt;
-&lt;!-- Ambient --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;ambient/css/ambient.min.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;header role="banner"&gt;
-   &lt;h1&gt;
-        header
-   &lt;/h1&gt;
-&lt;/header&gt;
-&lt;aside&gt;
-    &lt;h1&gt;
-        aside
-    &lt;/h1&gt;
-&lt;/aside&gt;
-&lt;main role="main"&gt;
-    &lt;h1&gt;
-        Hello, world!
-    &lt;/h1&gt;
-&lt;/main&gt;
-&lt;aside&gt;
-    &lt;h1&gt;
-        aside
-    &lt;/h1&gt;
-&lt;/aside&gt;
-&lt;footer role="contentinfo"&gt;
-    &lt;h1&gt;
-       footer
-    &lt;/h1&gt;
-&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                    </code></pre>
-                </div>
-            </div>
-        </section>
-    </article>
-    <hr />
-
-    <article am-padding>
-        <h3>
-            HTML5 examples within Ambient framework
-        </h3>
-        <section>
-            <h4>
-                Basic
-            </h4>
-            <p>
-                <a href="../examples/starter-template/index.html">View example</a>
-            </p>
-        </section>
-        <section>
-            <h4>
-                Portrait
-            </h4>
-            <p>
-                <a href="../examples/app/index.html">View example</a>
-            </p>
-        </section>
-        <section>
-            <h4>
-                Landscape
-            </h4>
-            <p>
-                <a href="../examples/template-2/index.html">View example</a>
-            </p>
-        </section>
-        <hr am-margin="bottom" />
-
-        <section>
-            <h4>
-                Centered
-            </h4>
-            <p>
-                <a href="../examples/centered/index.html">View example</a>
-            </p>
-        </section>
-        <section>
-            <h4>
-                Email UI
-            </h4>
-            <p>
-                <a href="../examples/email/index.html">View example</a>
-            </p>
-        </section>
-        <section>
-            <h4>
-                Components
-            </h4>
-            <p>
-                <a href="../design-patterns/components/index.html">View example</a>
-            </p>
-        </section>
-        <!--<section>-->
-            <!--<h4>-->
-                <!--Image slider-->
-            <!--</h4>-->
-            <!--<p>-->
-                <!--<a href="../examples/image-slider/index.html">View example</a>-->
-            <!--</p>-->
-        <!--</section>-->
-        <hr am-margin="bottom">
-
-        <section>
-            <h4>
-                HTML5 matrix
-            </h4>
-            <p>
-                <a href="../layout/debugAmbientView.html">View example</a>
-            </p>
-        </section>
-    </article>
-    <hr />
-
-    <article>
-        <section am-padding>
-            <h3>
-                Move the web forward
-            </h3>
-            <p>
-                Ambient is a project by <a href="https://twitter.com/av8boogie">Ken Buras</a>. I am excited to contribute to the the advancement (and understanding) of HTML5.
-            </p>
-            <h4>
-                Ambient Projects
-            </h4>
-            <ul>
-                <li>
-                    <a href="http://codepen.io/collection/AExYOM/">CodePen gallery</a> <small>Live examples of Ambient</small>
-                </li>
-                <li>
-                    <a href="http://ionlyseespots.github.io/ambient-IDE/">Ambient IDE</a> <small>HTML5 document outliner / visual editor</small>
-                </li>
-                <li>
-                    <a href="../layout/debugAmbientView.html">HTML5 Matrix</a> <small> If my calculations are correct, when this baby hits eighty-eight miles per hour</small>
-                </li>
-                <li>
-                    <a href="http://ionlyseespots.github.io/ambient-angular/">Ambient + Angular forms</a>
-                </li>
-            </ul>
-            <h5>
-                Resources
-            </h5>
-            <p>
-                Here is a list of resources I have found to be the most helpful when working with HTML5 & CSS3.
-            </p>
-            <h6>
-                Articles
-            </h6>
-            <ul>
-                <li>
-                    <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/">HTML5 And The Document Outlining Algorithm</a> <small>Smashing Magazine</small>
-                </li>
-                <li>
-                    <a href="http://html5doctor.com/outlines/">Document outlines</a> <small>HTML5 Doctor</small>
-                </li>
-                <li>
-                    <a href="http://alistapart.com/article/semanticsinhtml5">Semantics in HTML 5</a> <small>A List Apart</small>
-                </li>
-                <li>
-                    <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a> <small>CSS-Tricks</small>
-                </li>
-            </ul>
-            <h6>
-                Projects
-            </h6>
-            <ul>
-                <li>
-                    <a href="https://github.com/philipwalton/flexbugs">Flexbugs: a community-curated list of flexbox issues</a>
-                </li>
-                <li>
-                    <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html">HTML5 Working Draft Specification</a>
-                </li>
-                <li>
-                    <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
-                </li>
-                <li>
-                    <a href="http://html5doctor.com/">HTML5 Doctor</a>
-                </li>
-                <li>
-                    <a href="http://prefixr.com/">Prefixr</a>
-                </li>
-                <li>
-                    <a href="http://caniuse.com/">Can I use</a>
-                </li>
-                <li>
-                    <a href="http://modernizr.com/">Modernizr</a>
-                </li>
-            </ul>
-            <h6>
-                Tools
-            </h6>
-            <ul>
-                <li>
-                    <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a>
-                </li>
-            </ul>
-        </section>
-        <section am-padding>
             <h1>
                 Ambient
             </h1>
-            <blockquote cite="http://dictionary.reference.com/browse/ambient">
-                <p>
-                    am·bi·ent /'ambēənt/ <i>adjective</i>
-                </p>
-                <ol>
-                    <li>of the surrounding area or environment</li>
-                    <li>completely surrounding; encompassing</li>
-                    <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
-                    <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
-                    <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
-                </ol>
-            </blockquote>
-            <h3>
-                Keeping It Simple
-            </h3>
             <p>
-                <i class="fa fa-html5"></i><i class="fa fa-css3"></i> Ambient is built with:
+                Ambient makes it easy for you to scaffold HTML.
             </p>
+        </header>
+        <h2>
+            Examples
+        </h2>
+        <div am-block>
+            <div am-block="4">
+                <h3>
+                    Basic
+                </h3>
+                <p>
+                    <a href="../examples/starter-template/index.html">View example</a>
+                </p>
+        </div>
+            <div am-block="4">
+                <h3>
+                    Portrait
+                </h3>
+                <p>
+                    <a href="../examples/app/index.html">View example</a>
+                </p>
+            </div>
+            <div am-block="4">
+                <h3>
+                    Landscape
+                </h3>
+                <p>
+                    <a href="../examples/template-2/index.html">View example</a>
+                </p>
+            </div>
+        </div>
+        <div am-block>
+            <div am-block="4">
+                <h3>
+                    Centered
+                </h3>
+                <p>
+                    <a href="../examples/centered/index.html">View example</a>
+                </p>
+            </div>
+            <div am-block="4">
+                <h3>
+                    Email
+                </h3>
+                <p>
+                    <a href="../examples/email/index.html">View example</a>
+                </p>
+            </div>
+            <div am-block="4">
+                <h3>
+                    null
+                </h3>
+                <p>
+                    This space intentionally left blank.
+                </p>
+            </div>
+        </div>
+        <blockquote cite="http://dictionary.reference.com/browse/ambient">
+            <h1>
+                Ambient
+            </h1>
+            <p>
+                am·bi·ent /'ambēənt/ <i>adjective</i>
+            </p>
+            <ol>
+                <li>of the surrounding area or environment</li>
+                <li>completely surrounding; encompassing</li>
+                <li>creating a certain reaction or mood, often a subconscious one, by being wherever people tend to be</li>
+                <li>pertaining to or noting sounds that create a peaceful and relaxed atmosphere</li>
+                <li>pertaining to or noting close and constant social contact and communication fostered by the Internet or the use of digital devices</li>
+            </ol>
+        </blockquote>
+        </article>
+    <hr />
+
+    <article am-layout="vertical">
+        <h1>
+            Move the web forward
+        </h1>
+        <section>
+            <h1>
+                HTML5 layout
+            </h1>
+            <p>
+                Ambient is a project by <a href="https://twitter.com/ionlyseespots">Ken Buras</a>. I am excited to contribute to the the advancement (and understanding) of HTML5 layout.
+            </p>
+            <h2>
+                Ambient is built with the following.
+            </h2>
             <table am-layout>
                 <thead>
                 <tr>
@@ -447,28 +263,96 @@ $ bower install ambient#dist --save
                 </tr>
                 </tbody>
             </table>
+            <hr />
+
+            <h3>
+                Ambient projects
+            </h3>
+            <ul>
+                <li>
+                    <a href="http://codepen.io/collection/AExYOM/">CodePen gallery</a> <small>Live examples of Ambient</small>
+                </li>
+                <li>
+                    <a href="http://ionlyseespots.github.io/ambient-IDE/">Ambient IDE</a> <small>HTML5 document outliner / visual editor</small>
+                </li>
+                <li>
+                    <a href="../layout/debugAmbientView.html">HTML5 Matrix</a> <small> If my calculations are correct, when this baby hits eighty-eight miles per hour</small>
+                </li>
+            </ul>
+        </section>
+        <section>
+
+            <h1>
+                Resources
+            </h1>
+            <p>
+                Here is a list of resources I have found to be the most helpful when working with HTML5 & CSS3.
+            </p>
+            <h2>
+                Articles
+            </h2>
+            <ul>
+                <li>
+                    <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/">HTML5 And The Document Outlining Algorithm</a> <small>Smashing Magazine</small>
+                </li>
+                <li>
+                    <a href="http://html5doctor.com/outlines/">Document outlines</a> <small>HTML5 Doctor</small>
+                </li>
+                <li>
+                    <a href="http://alistapart.com/article/semanticsinhtml5">Semantics in HTML 5</a> <small>A List Apart</small>
+                </li>
+                <li>
+                    <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a> <small>CSS-Tricks</small>
+                </li>
+            </ul>
+            <h2>
+                Projects
+            </h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/philipwalton/flexbugs">Flexbugs: a community-curated list of flexbox issues</a>
+                </li>
+                <li>
+                    <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html">HTML5 Working Draft Specification</a>
+                </li>
+                <li>
+                    <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
+                </li>
+                <li>
+                    <a href="http://html5doctor.com/">HTML5 Doctor</a>
+                </li>
+                <li>
+                    <a href="http://prefixr.com/">Prefixr</a>
+                </li>
+                <li>
+                    <a href="http://caniuse.com/">Can I use</a>
+                </li>
+                <li>
+                    <a href="http://modernizr.com/">Modernizr</a>
+                </li>
+                <li>
+                    <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>
+                </li>
+
+            </ul>
+            <h2>
+                Tools
+            </h2>
+            <ul>
+                <li>
+                    <a href="https://gsnedders.html5.org/outliner/">Document Outliner</a>
+                </li>
+            </ul>
         </section>
     </article>
-    <article class="am-secondary" am-padding>
-        <h1>
-            Ambient is a lightweight and modular HTML5 UI development methodology.
-        </h1>
-        <p>
-            This system evolved out of the need to fully decouple markup (HTML) from presentation (CSS).
-        </p>
-    </article>
 </main>
-<footer am-padding="large" class="am-text-c">
+<footer am-padding="large" am-margin="top" class="am-text-c">
     <p>
-        Ambient makes use of HTML5 elements & CSS3 attributes to layout the document outline.<br />
-        <a href="../roadmap/index.html">Roadmap</a>
+        Ambient is an advanced CSS framework built as a lightweight & modular HTML5 layout methodology.
     </p>
     <p>
-        All are welcome to contribute. <br />
-        Bring your ideas on how we can help design the code.
-    </p>
-    <p>
-        Ambient is a project by <a href="https://twitter.com/av8boogie">@av8boogie</a>.
+        Ambient is a project by <i class="fa fa-github"></i>
+        <a href="https://github.com/ionlyseespots/ambient-design">I only see spots</a>.
     </p>
 </footer>
 </body>

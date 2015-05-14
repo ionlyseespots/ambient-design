@@ -1,12 +1,17 @@
 nav[@{am-layout-var}] {
   &[@{am-layout-var}~="horizontal"] {
-    a {
+    a,
+    button {
       flex: 1 @am-flex-width1;
+      text-align: center;
     }
   }
   // default to horizontal
   &[@{am-layout-var}~="justify-align"] {
     justify-content: space-between;
+    nav {
+      justify-content: space-between;
+    }
   }
   &[@{am-layout-var}~="left-align"] {
     a {
@@ -15,12 +20,18 @@ nav[@{am-layout-var}] {
   }
   &[@{am-layout-var}~="right-align"] {
     justify-content: flex-end;
+    nav {
+      justify-content: flex-end;
+    }
     a {
       align-self: flex-end;
     }
   }
   &[@{am-layout-var}~="center-align"] {
     justify-content: center;
+    nav {
+      justify-content: center;
+    }
     a {
       align-self: center;
     }
@@ -47,15 +58,11 @@ nav[@{am-layout-var}] {
       }
     }
   }
-  & a:not(.am-floating-action) {
+  & a {
     padding: @am-nav-link-padding;
     display: inline-block;
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    line-height: 36px;
-    @media (max-width: 30em){
-      font-size: 90%;
-    }
   }
 }
