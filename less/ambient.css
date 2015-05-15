@@ -753,7 +753,7 @@ div[role~="dropdown"] button + nav a {
   margin-bottom: 0;
   margin-top: 0;
 }
-figure[role~="example"] {
+div[role~="example"] {
   border-left: 5px solid #607d8b;
   background-color: #fafafa;
   margin: .5em 0;
@@ -761,16 +761,16 @@ figure[role~="example"] {
   font-size: small;
   width: 100%;
 }
-figure[role~="example"]:before,
-figure[role~="example"]:after {
+div[role~="example"]:before,
+div[role~="example"]:after {
   content: "";
 }
-figure[role~="example"] > h1,
-figure[role~="example"] > h2,
-figure[role~="example"] > h3,
-figure[role~="example"] > h4,
-figure[role~="example"] > h5,
-figure[role~="example"] > h6 {
+div[role~="example"] > h1,
+div[role~="example"] > h2,
+div[role~="example"] > h3,
+div[role~="example"] > h4,
+div[role~="example"] > h5,
+div[role~="example"] > h6 {
   color: #2196f3;
 }
 div[role~="scroll"] {
