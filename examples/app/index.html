@@ -18,41 +18,25 @@
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<style>
-    nav a i {
-        -webkit-transition: all 200ms ease 0s;
-        -moz-transition: all 200ms ease 0s;
-        -ms-transition: all 200ms ease 0s;
-        -o-transition: all 200ms ease 0s;
-        transition: all 200ms ease 0s;
-    }
-    nav a:hover i {
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-</style>
 <main>
     <div class="am-shadow-z1" style="margin: 20px auto;max-width: 420px;"><!-- style a template container -->
         <div class="am-clr-5-bg" style="height: 25px;"></div><!-- style a status bar -->
-        <nav am-layout="justify-align" class="am-clr-6-bg">
-            <a href="#"><i class="fa fa-gear am-clr-21-text"></i></a>
-            <a href="#"><i class="fa fa-bars am-clr-21-text"></i></a>
+        <nav am-layout="justify-align">
+            <a href="#"><i class="fa fa-gear"></i></a>
+            <a href="#"><i class="fa fa-bars"></i></a>
         </nav>
-        <header am-padding="large" class="am-clr-6-bg">
-            <h1 class="am-clr-21-text">
+        <header class="am-primary" am-padding="large" >
+            <h1>
                 Ambient
             </h1>
-            <p class="am-clr-21-text">HTML5 App Template</p>
-            <a href="#" am-layout="split-bottom" class="am-btn am-floating-action am-clr-3-bg"><i class="fa fa-star am-clr-21-text"></i></a>
+            <p>HTML5 App Template</p>
+            <a href="#" am-layout="split-bottom" class="am-btn am-floating-action">+</a>
         </header>
         <article am-layout="vertical">
-            <h1 class="indigo-text">Template 1</h1>
+            <h1 class="am-secondary">Template 1</h1>
             <section>
-                <div am-row>
-                    <div am-col="33" am-event="slide-caption">
+                <div am-block>
+                    <div am-block="3">
                         <figure>
                             <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png" alt="" />
                             <figcaption>
@@ -61,15 +45,15 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div am-col="66">
-                        <h1 class="am-clr-10-text">Heading</h1>
-                        <p class="am-clr-18-text"><em>Paragraph Text</em></p>
+                    <div am-block="9">
+                        <h1>Heading</h1>
+                        <p><em>Paragraph Text</em></p>
                     </div>
                 </div>
             </section>
             <section>
-                <div am-row>
-                    <div am-col="33" am-event="slide-caption">
+                <div am-block>
+                    <div am-block="3">
                         <figure>
                             <img src="https://raw.github.com/ionlyseespots/ambient-design/master/assets/css/img/ambientLogo.png" alt="" />
                             <figcaption>
@@ -78,9 +62,9 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div am-col="66">
-                        <h1 class="am-clr-15-text">Heading</h1>
-                        <p class="am-clr-18-text"><em>Paragraph Text</em></p>
+                    <div am-block="9">
+                        <h1>Heading</h1>
+                        <p><em>Paragraph Text</em></p>
                     </div>
                 </div>
             </section>

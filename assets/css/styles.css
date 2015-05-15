@@ -1,32 +1,29 @@
-/* Docs Theme */
+/* style up a Ambient website theme with ambient.min.css */
+
+/* Most of these properties are customizable as variables within Ambient. */
 
 html {
-    font-size: 80%;  /* Ambient default is 112.5%/1.65 : 18px with 1.65 line-height */
-    line-height: 1.5;
+    font-size: .95em; }
+body {
+    max-width: 768px; margin: 0 auto; padding: 0 .5em; }
+body > header {
+    background-color: #fff; padding: 0; }
+header, footer {
+    padding: 1em; }
+main {
+    border: 1px solid #d6d6d6; border-top: none; padding: .5em; margin-top: -5px; }
+section + section {
+    padding: 0 .5em; }
+section h2 {
+    padding-top: .5em; border-top: 1px solid #E0E0E0; }
+section h2 code {
+    font-size: 1rem; }
+figure section {
+    padding: 0; }
+h1, h2, h3, h4, h5, h6 {
+    margin-top: .25em;
 }
-
-small {
-    font-size: 80%;
-}
-
-.am-btn {
-    margin: 2px;
-}
-/* Ambient color doc styles */
-span.name {
-    display: block;
-    margin-bottom: 60px;
-}
-.color-palette ul {
-    color: hsla(0, 0%, 100%, 0.87);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-.color-palette li {
-    list-style-type: none;
-    padding: 15px 5px;
-}
-.backgrounds [am-col] p, .borders-and-text [am-col] p {
-    padding: 1vw;
-}
+.am-primary {
+    background-color: #f1f1f1; }
+.am-secondary {
+    background-color: #f7f7f7; }

@@ -15,21 +15,16 @@
   vertical-align: middle;
   white-space: nowrap;
   background-clip: padding-box;
-  color: @am-clr-btn-text;
+  outline: 0 none;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
+  color: @am-clr-btn;
   background-color: @am-clr-btn-bg;
   border: 1px solid @am-clr-btn-bdr;
+  padding: @am-btn-padding;
+  margin: @am-btn-margin;
   border-radius: 2px;
-  line-height: 36px;
-  outline: 0 none;
-  padding: 5px 2rem;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
-  &.@{am-prefix}-flat {   //TODO  .am-flat is going away in 1.4.0
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
   &:hover {
     background-color: lighten(@am-clr-btn-bg, 8%);
   }
@@ -43,7 +38,6 @@
   }
   &.@{am-prefix}-floating-action {
     background-clip: padding-box;
-    font-size: 26px;
     z-index: 1;
     border-radius: 50%;
     width: 55.5px;
@@ -57,19 +51,19 @@
     }
   }
   &.@{am-prefix}-primary {
-    background-color: @am-primary;
-    color: @am-clr-btn-primary-text;
-    border-color: @am-primary;
+    color: @am-clr-btn-primary;
+    background-color: @am-clr-btn-primary-bg;
+    border-color: @am-clr-btn-primary-bdr;
     &:hover {
-      background-color: lighten(@am-primary, 8%);
+      background-color: lighten(@am-clr-btn-primary-bg, 8%);
     }
   }
   &.@{am-prefix}-secondary {
-    background-color: @am-secondary;
-    color: @am-clr-btn-secondary-text;
-    border-color: @am-secondary;
+    color: @am-clr-btn-secondary;
+    background-color: @am-clr-btn-secondary-bg;
+    border-color: @am-clr-btn-secondary-bdr;
     &:hover {
-      background-color: lighten(@am-secondary, 8%);
+      background-color: lighten(@am-clr-btn-secondary-bg, 8%);
     }
   }
   @media (max-width: 30em){
@@ -90,10 +84,12 @@
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  color: @am-clr-btn-text;
-  line-height: 36px;
+  background-clip: padding-box;
+  line-height: 1.5;
   outline: 0 none;
-  padding: 5px 2rem;
-  text-transform: uppercase;
+  padding: @am-btn-padding;
+  margin: @am-btn-margin;
   word-wrap: break-word;
+  background-color:transparent;
+  border:none;
 }

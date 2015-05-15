@@ -2,11 +2,9 @@
 
 [Ambient] (http://ionlyseespots.github.io/ambient-design) is a CSS framework.
 
-A lightweight and modular HTML5 layout methodology.
+Ambient is a lightweight and modular HTML5 UI development methodology. Think of it as content aware CSS.
 
-> No JavaScript. No Classes. Just pure *HTML5*.
-
-Ambient is ready to adopt whatever your design or style is. Feel free to use HTML5, whenever and wherever you like. Build the intent of your content. You can add optional layout attributes and skin classes to your scaffolding to gradually build a hierarchy that defines your layout.
+Ambient is ready to adopt whatever your design or style is. Feel free to use HTML5, whenever and wherever you like. Build the intent of your content. You can add additional layout values as well as extend child attributes to your scaffolding to gradually build a hierarchy that defines your layout.
 
 > Please note that Ambient requires the use of [Flexible Box Layout Module] (http://caniuse.com/#feat=flexbox)
 
@@ -27,7 +25,7 @@ Ambient source makes use of [Node] (https://nodejs.org/) and [Grunt] (http://gru
 
 ## Development
 
-This project is in active development. The project website uses Ambient for the front-end.
+This project is in early development.
 
 * Website: http://ionlyseespots.github.io/ambient-design
 * Docs: http://ionlyseespots.github.io/ambient-design/docs
@@ -43,7 +41,7 @@ This project is in active development. The project website uses Ambient for the 
 
 ## Usage
 
-Feel free to link to the Ambient CSS file and use HTML5, whenever and wherever you like. We have created a [starting HTML5 example](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) for you to start building the intent of your content.
+Feel free to link to the Ambient CSS file and use HTML, whenever and wherever you like. We have created a [starting HTML5 example](http://ionlyseespots.github.io/ambient-design/examples/starter-template/index.html) for you to start building the intent of your content.
 
 ## Inspiration
 

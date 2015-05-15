@@ -28,41 +28,66 @@ input[disabled] {
   cursor: default;
 }
 
-// Typography via Typeplate
+/**
+ *
+ * =======================================================================
+  Typography inspired by Typeplate
+  URL ........... http://typeplate.com
+  VERSION ....... 2.1.0
+
+ * =======================================================================
+ *
+
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
 // https://github.com/typeplate/typeplate.github.io
-// TODO bring in typeplate as less
+
+/**
+ *
+ * =======================================================================
+   Base Type
+ * =======================================================================
+ *
+ */
+
 html {
-  font-size: @am-root-font-size; //* Typeplate base font size (112%) 18px with 1.65 line-height */
-  line-height: @am-root-line-height; // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  font: normal @am-root-font-size/@am-root-line-height serif; // Typeplate base font size (112%) 18px with 1.65 line-height
+  // noted: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
 }
 body {
-  background-color: @am-clr-body-bg;
-  color: @am-clr-body-text;
+//  -webkit-hyphens: auto;
+//  -moz-hyphens: auto;
+//  -ms-hyphens: auto;
+//  hyphens: auto;
   word-wrap: break-word;
+  color: @am-clr-body;
+  // The following is Ambient additional proeprties
+  background-color: @am-clr-body-bg;
   font-weight: 400;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   & > header,
   & > footer {
-    background-color: @am-closure;
-    color: @am-clr-primary-bg;
-    &
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: @am-clr-primary-bg;
-    }
-    & a {
-      color: @am-clr-primary-bg;
-      &:hover {
-        color: lighten(@am-clr-primary-bg, 20%);
-      }
-    }
+    background-color: @am-clr-closure-bg;
   }
 }
+
+/**
+ *
+ * =======================================================================
+   Fine Print
+ * =======================================================================
+ */
+
+small {
+  font-size: 65%;
+}
+
+/**
+ *
+ * =======================================================================
+   Headings
+ * =======================================================================
+ */
+
 // Agree::: Do NOT use heading as sub titles
 // http://stackoverflow.com/questions/3910419/semantic-structure-in-html-subtitles-pre-html5
 // http://stackoverflow.com/questions/22444118/correct-markup-for-headers/22451639#22451639
@@ -74,10 +99,10 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   margin-top: 0;
-  color: @am-clr-heading-text;
-  font-weight: 300;
+  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  color: @am-clr-heading;
+  font-weight: 300; // Ambient additional property
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
@@ -116,87 +141,30 @@ h6 {
   margin-bottom: 29.7px;
   margin-bottom: 1.65rem;
 }
+
+/**
+ *
+ * =======================================================================
+   Paragraphs and Indentation
+ * =======================================================================
+ */
+
 p {
-  margin: 0 0 1.5em;
-}
-a {
-  color: @am-clr-link-text;
-  &:hover,
-  &:active,  {
-    color:darken(@am-clr-link-text, 50%);
-  }
-  // agree: http://outlinenone.com/
-  &:focus:not(.@{am-prefix}-btn) {
-    background-color: @am-clr-link-focus-bg;
-    color: @am-clr-link-focus-text;
-  }
+  margin: auto auto 1.5em; /* bottom margin for paragraphs */
 }
 
-small {
-  font-size: 65%;
-}
-code {
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  color: #c7254e;
-  font-weight: normal;
-  font-size: 90%;
-  padding: 2px 4px;
-}
-kbd,
-pre,
-samp {
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-}
-blockquote {
-  border-left: 5px solid #e9e9e9;
-  background-color: #fafafa;
-  margin: 1em 0;
-  padding: .5em 1em;
-  font-size: small;
-  width: 100%;
-  &:before,
-  &:after {
-    content: "";
-  }
-}
-pre {
-  width: 100%;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  color: #333;
-  display: block;
-  font-size: 13px;
-  line-height: 1.42857;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  tab-size: 4;
-  margin: .5em 0 0 0;
-  padding: 1em 1em 1em 1em;
-}
-label {
-  font-size: 80%;
-  font-weight: 700;
-  margin-bottom: 5px; }
-input,
-select,
-textarea {
-  font-size: inherit;
-  line-height: inherit;
-}
-hr {
-  border-color: @am-clr-hr;
-  border-width: 1px 0 0;
-}
-abbr {
-  -webkit-font-variant: small-caps;
-  -moz-font-variant: small-caps;
-  -ms-font-variant: small-caps;
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-}
+//p + p {
+//  text-indent: 1.5em; /* indent subsequent paragraphs */
+//  margin-top: -1.5em; /* no top margin on subsequent paragraphs */
+//}
+
+/**
+ *
+ * =======================================================================
+   Hyphens
+ * =======================================================================
+ */
+
 input,
 abbr,
 acronym,
@@ -212,13 +180,189 @@ var {
   -ms-hyphens: none;
   hyphens: none;
 }
+
+/**
+ *
+ * =======================================================================
+   Code Blocks
+ * =======================================================================
+ */
+
+pre code {
+  word-wrap: normal;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+pre {
+  white-space: pre;
+}
+
+code {
+//  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ *
+ * =======================================================================
+ * Abbreviations Markup
+ * Extend this object into your markup
+  <abbr title="hyper text markup language">HMTL</abbr>
+ * Extend this object into your markup.
+ * =======================================================================
+ */
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+
+abbr[title]:hover {
+  cursor: help; /* cursor changed to a question mark when it has a title */
+}
+
+/**
+ *
+ * =======================================================================
+   Definition Lists
+ * =======================================================================
+ */
+
+dt,
+dd {
+  display: inline;
+  margin: 0;
+}
+dt + dt:before,
+dd + dt:before {
+  content: "\A"; // line break
+  white-space: pre;
+}
+dd + dd:before {
+  content: ", ";
+}
+dd:before {
+  content: ": ";
+  margin-left: -0.2em;
+}
+
+/**
+ *
+ * =======================================================================
+   Blockquotes
+ * =======================================================================
+ */
+
+blockquote + figcaption {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
+
+blockquote + figcaption:before {
+  content: "-"; /* "-" is your citation flourish */
+}
+
+// --
+// *
+// The following styles are Ambient additions to Typeplate styles
+// *
+// --
+
+a {
+  color: @am-clr-link;
+  &:hover,
+  &:active,  {
+    color:darken(@am-clr-link, 50%);
+  }
+  // agree: http://outlinenone.com/
+  &:focus:not(.@{am-prefix}-btn) {
+    background-color: @am-clr-link-focus-bg;
+    color: @am-clr-link-focus;
+  }
+}
+
+blockquote {
+  border-left: 5px solid @am-clr-primary;
+  background-color: #fafafa;
+  margin: 1em 0;
+  padding: .5em 1em;
+  font-size: small;
+  width: 100%;
+  &:before,
+  &:after {
+    content: "";
+  }
+  & > h1,
+  & > h2 ,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    color: @am-clr-primary;
+  }
+}
+
+pre {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #333;
+  display: block;
+  font-size: 13px;
+  line-height: 1.42857;
+  word-wrap: break-word;
+  tab-size: 4;
+  margin: .5em 0 0 0;
+  padding: 1em 1em 1em 1em;
+}
+
+code {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #c7254e;
+  font-weight: normal;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+
+label {
+  font-size: 80%;
+  font-weight: 700;
+}
+input,
+select,
+textarea {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+hr {
+  border-color: @am-clr-hr;
+  border-width: 1px 0 0;
+}
+
 img {
   display: block;
-  //  max-width: 100%;
   height: auto;
 }
-// consider this for fieldset reset/design:
-// http://thatemil.com/blog/2015/01/03/reset-your-fieldset/
+
+kbd,
+pre,
+samp {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+
+figure {
+  margin: .5em 0;
+}
 
 @media (orientation:portrait){
   html {
