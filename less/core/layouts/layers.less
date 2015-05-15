@@ -16,14 +16,4 @@
   &[@{am-layer-var}~="z5"] {
     z-index: 5;
   }
-  &[@{am-event-var}~="elevate"] {
-    &,
-    &:hover,
-    &:focus {
-      .z-depth-animation(5);
-      -webkit-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-      -o-transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-      transition:box-shadow @z-depth-animation-time @z-depth-animation-function;
-    }
-  }
 }

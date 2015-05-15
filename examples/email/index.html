@@ -18,22 +18,18 @@
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<header am-row>
-    <div am-col="25">
-        <h1>
-            <a href="#">Simpl<strong>est</strong></a>
-        </h1>
-    </div>
-    <div am-col="75">
-        <nav am-layout="right-align">
-            <form>
-                <input type="search" name="s" placeholder="Search on simplest" />
-            </form>
-            <a href="#">Gregoire Vella</a>
-            <a href="#"><i class="fa fa-gear"></i></a>
-        </nav>
-    </div>
+<header am-block>
+    <h1>
+        <a href="#">Simpl<strong>est</strong></a>
+    </h1>
 </header>
+<nav am-layout="right-align">
+    <form>
+        <input type="search" name="s" placeholder="Search on simplest" />
+    </form>
+    <a href="#">Gregoire Vella</a>
+    <a href="#"><i class="fa fa-gear"></i></a>
+</nav>
 <main>
     <aside>
         <nav am-layout="vertical" am-padding>
@@ -41,11 +37,11 @@
             <a href="#"><i class="fa fa-envelope-o"></i>  Email</a>
             <a href="#" class="am-btn am-primary" am-margin="bottom">Compose new</a>
 
-            <div am-row class="am-active">
-                <div am-col>
+            <div am-block>
+                <div am-block="6">
                     <a href="#">Inbox</a>
                 </div>
-                <div am-col am-padding class="am-text-r">
+                <div am-block="6" am-padding class="am-text-r">
                     <span am-padding class="am-clr-6-bg am-clr-21-text">25</span>
                 </div>
             </div>
@@ -56,35 +52,35 @@
             <a href="#">Junk Mail</a>
             <hr />
 
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="6">
                     <a href="#">Clients </a>
                 </div>
-                <div am-col am-padding class="am-text-r">
+                <div am-block="6" class="am-text-r">
                     <i class="fa fa-square"></i>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="6">
                     <a href="#">Friends</a>
                 </div>
-                <div am-col am-padding class="am-text-r">
+                <div am-block="6" class="am-text-r">
                     <i class="fa fa-square"></i>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="6">
                     <a href="#">Family</a>
                 </div>
-                <div am-col am-padding class="am-text-r">
+                <div am-block="6" class="am-text-r">
                     <i class="fa fa-square"></i>
                 </div>
             </div>
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block="6">
                     <a href="#">Dribbble</a>
                 </div>
-                <div am-col am-padding class="am-text-r">
+                <div am-block="6" class="am-text-r">
                     <i class="fa fa-square"></i>
                 </div>
             </div>
@@ -93,7 +89,7 @@
         </nav>
     </aside>
     <article>
-        <h1 am-padding>
+        <h1>
             Inbox
             <span class="fa-stack">
                    <i class="fa fa-angle-down fa-stack-1x"></i>
@@ -102,8 +98,7 @@
         </h1>
         <hr />
 
-        <aside am-padding>
-            <div am-layout="frame overflow-y">
+        <aside>
                 <header>
                     <h2>
                         Message list
@@ -112,17 +107,17 @@
                         <input type="search" class="search" placeholder="Search Inbox" />
                     </form>
                 </header>
-                <div am-scrollable>
+                <div>
                     <ul style="list-style-type: none;margin: 0;padding: 0;">
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Sarach Connor
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 15</small>
                                 </div>
@@ -134,13 +129,13 @@
                         </li>
                         <li class="am-active">
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Jeremy Clarkson
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 15</small>
                                 </div>
@@ -152,13 +147,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Eureka.com
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 14</small>
                                 </div>
@@ -170,13 +165,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Jeremy Legrand
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 13</small>
                                 </div>
@@ -188,13 +183,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Noe Vella
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 13</small>
                                 </div>
@@ -206,13 +201,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Dribbble
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 12</small>
                                 </div>
@@ -224,13 +219,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Dribbble
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 12</small>
                                 </div>
@@ -242,13 +237,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Behance
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 12</small>
                                 </div>
@@ -260,13 +255,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Behance
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 12</small>
                                 </div>
@@ -278,13 +273,13 @@
                         </li>
                         <li>
                             <input type="checkbox" />
-                            <div am-row>
-                                <div am-col="75">
+                            <div am-block>
+                                <div am-block="9">
                                     <h3>
                                         Dribbble
                                     </h3>
                                 </div>
-                                <div am-col="25" class="am-text-r">
+                                <div am-block="3" class="am-text-r">
                                     <i class="fa fa-paperclip"></i>
                                     <small>Jul 11</small>
                                 </div>
@@ -301,17 +296,16 @@
                         Message list footer
                     </p>
                 </footer>
-                </div>
         </aside>
         <section am-padding>
-            <div am-row>
-                <div am-col="75">
+            <div am-block>
+                <div am-block="9">
                     <h1>
                         <i class="fa fa-star-o"></i>
                         The brand new season of Top Gear
                     </h1>
                 </div>
-                <div am-col="25" class="am-text-r">
+                <div am-block="3" class="am-text-r">
                     <span class="fa-stack">
                         <i class="fa fa-reply fa-stack-1x"></i>
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -324,14 +318,14 @@
             </div>
             <hr />
 
-            <div am-row>
-                <div am-col>
+            <div am-block>
+                <div am-block>
                     <p>
                         <i class="fa fa-user"></i>
                         Jeremy Clarkson to <span class="user">me</span>
                     </p>
                 </div>
-                <div am-col class="am-text-r">
+                <div am-block class="am-text-r">
                     <i class="fa fa-paperclip"></i>
                     <span class="date">July 15, 2013</span>
                 </div>
@@ -356,26 +350,19 @@
                 Files enclosed
             </p>
             <hr />
-            <div am-padding>
-                <div am-margin="bottom">
-                    <a href="#" class="active">Answering</a>
-                    <a href="#">Forward</a>
-                </div>
+
+          <p>
+              <a href="#" class="active">Answering</a>
+              <a href="#">Forward</a>
+          </p>
                 <textarea name="r">Hello Jeremy,
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui impedit magni fuga velit nobis quas fugit odio voluptas voluptates odit animi quos nam dolorem harum molestiae culpa sint rem ad esse laboriosam vero quod molestias porro ea dolores eligendi!
                 </textarea>
-                <div am-row am-padding>
-                    <div am-col>
                         <p>
                             My file enclosed.pdf
                             <progress value="65" max="100"></progress>
                         </p>
-                    </div>
-                    <div am-col class="am-text-r">
                         <i class="fa fa-times"></i>
-                    </div>
-                </div>
-            </div>
             <footer class="am-text-r">
                 <i am-margin="right" class="fa fa-caret-down"></i>
                 <i am-padding class="fa fa-paper-plane am-primary"></i>
