@@ -3,7 +3,7 @@
 /* Most of these properties are customizable as variables within Ambient. */
 
 html {
-    font-size: .95em; }
+    font-size: .85em; }
 body {
     max-width: 768px; margin: 0 auto; padding: 0 .5em; }
 body > header {
