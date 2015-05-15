@@ -1,12 +1,22 @@
 nav[@{am-layout-var}] {
+  a,
+  form,
+  button,
+  div[role="dropdown"] {
+    flex: 0 1 @am-flex-width1;
+  }
+  form {
+    width: auto;
+  }
   &[@{am-layout-var}~="horizontal"] {
     a,
-    button {
-      flex: 1 @am-flex-width1;
-      text-align: center;
+    form,
+    button,
+    div[role="dropdown"] {
+      flex: 1 0 @am-flex-width1;
     }
   }
-  // default to horizontal
+  // -default to horizontal
   &[@{am-layout-var}~="justify-align"] {
     justify-content: space-between;
     nav {
@@ -14,17 +24,12 @@ nav[@{am-layout-var}] {
     }
   }
   &[@{am-layout-var}~="left-align"] {
-    a {
-      align-self: flex-start;
-    }
+    //This is default layout
   }
   &[@{am-layout-var}~="right-align"] {
     justify-content: flex-end;
     nav {
       justify-content: flex-end;
-    }
-    a {
-      align-self: flex-end;
     }
   }
   &[@{am-layout-var}~="center-align"] {
@@ -32,29 +37,53 @@ nav[@{am-layout-var}] {
     nav {
       justify-content: center;
     }
-    a {
-      align-self: center;
-    }
+    /*    a,
+        button{
+          align-self: center;
+        }*/
   }
   &[@{am-layout-var}~="vertical"] {
     flex-flow: column nowrap;
     display: inline-block; // disable margin-collapse http://stackoverflow.com/questions/19718634/how-to-disable-margin-collapsing
-    a {
+    a,
+    form,
+    button,
+    div[role="dropdown"] {
       width: 100%;
     }
     &[@{am-layout-var}~="left-align"] {
-      a {
+      a,
+      form,
+      button,
+      div[role="dropdown"] {
         text-align: left;
       }
     }
     &[@{am-layout-var}~="center-align"] {
-         a {
-           text-align: center;
-         }
-       }
+      a,
+      form,
+      button,
+      div[role="dropdown"] {
+        text-align: center;
+      }
+    }
     &[@{am-layout-var}~="right-align"] {
-      a {
+      a,
+      form,
+      button,
+      div[role="dropdown"] {
         text-align: right;
+      }
+    }
+    div[role="dropdown"] {
+      flex-flow: column nowrap;
+      & > button {
+        position: static;
+        text-align: left;
+        + nav {
+          position:static;
+          min-width: 0;
+        }
       }
     }
   }
@@ -64,5 +93,32 @@ nav[@{am-layout-var}] {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
+    align-self: center;
+  }
+  & form {
+    padding:@am-nav-link-padding;
+    & > fieldset {
+      align-self: center;
+    }
+  }
+  & > button,
+  & > div[role="dropdown"] > button{
+    padding: @am-nav-link-padding;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+  }
+  & div[role="dropdown"] {
+    display:flex;
+    &:last-child {
+      button + nav {
+        left: auto;
+        right: 0;
+      }
+    }
+    & > button {
+      flex: 1;
+    }
   }
 }

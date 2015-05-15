@@ -453,10 +453,20 @@ form fieldset[am-layout] label {
   font-size: 14px;
   padding: 11px 0;
 }
+nav[am-layout] a,
+nav[am-layout] form,
+nav[am-layout] button,
+nav[am-layout] div[role="dropdown"] {
+  flex: 0 1 8.3333%;
+}
+nav[am-layout] form {
+  width: auto;
+}
 nav[am-layout][am-layout~="horizontal"] a,
-nav[am-layout][am-layout~="horizontal"] button {
-  flex: 1 8.3333%;
-  text-align: center;
+nav[am-layout][am-layout~="horizontal"] form,
+nav[am-layout][am-layout~="horizontal"] button,
+nav[am-layout][am-layout~="horizontal"] div[role="dropdown"] {
+  flex: 1 0 8.3333%;
 }
 nav[am-layout][am-layout~="justify-align"] {
   justify-content: space-between;
@@ -464,42 +474,60 @@ nav[am-layout][am-layout~="justify-align"] {
 nav[am-layout][am-layout~="justify-align"] nav {
   justify-content: space-between;
 }
-nav[am-layout][am-layout~="left-align"] a {
-  align-self: flex-start;
-}
 nav[am-layout][am-layout~="right-align"] {
   justify-content: flex-end;
 }
 nav[am-layout][am-layout~="right-align"] nav {
   justify-content: flex-end;
 }
-nav[am-layout][am-layout~="right-align"] a {
-  align-self: flex-end;
-}
 nav[am-layout][am-layout~="center-align"] {
   justify-content: center;
+  /*    a,
+        button{
+          align-self: center;
+        }*/
 }
 nav[am-layout][am-layout~="center-align"] nav {
   justify-content: center;
-}
-nav[am-layout][am-layout~="center-align"] a {
-  align-self: center;
 }
 nav[am-layout][am-layout~="vertical"] {
   flex-flow: column nowrap;
   display: inline-block;
 }
-nav[am-layout][am-layout~="vertical"] a {
+nav[am-layout][am-layout~="vertical"] a,
+nav[am-layout][am-layout~="vertical"] form,
+nav[am-layout][am-layout~="vertical"] button,
+nav[am-layout][am-layout~="vertical"] div[role="dropdown"] {
   width: 100%;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="left-align"] div[role="dropdown"] {
   text-align: left;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="center-align"] div[role="dropdown"] {
   text-align: center;
 }
-nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a {
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] a,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] form,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] button,
+nav[am-layout][am-layout~="vertical"][am-layout~="right-align"] div[role="dropdown"] {
   text-align: right;
+}
+nav[am-layout][am-layout~="vertical"] div[role="dropdown"] {
+  flex-flow: column nowrap;
+}
+nav[am-layout][am-layout~="vertical"] div[role="dropdown"] > button {
+  position: static;
+  text-align: left;
+}
+nav[am-layout][am-layout~="vertical"] div[role="dropdown"] > button + nav {
+  position: static;
+  min-width: 0;
 }
 nav[am-layout] a {
   padding: 1em 0.5em;
@@ -507,6 +535,31 @@ nav[am-layout] a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
+  align-self: center;
+}
+nav[am-layout] form {
+  padding: 1em 0.5em;
+}
+nav[am-layout] form > fieldset {
+  align-self: center;
+}
+nav[am-layout] > button,
+nav[am-layout] > div[role="dropdown"] > button {
+  padding: 1em 0.5em;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+}
+nav[am-layout] div[role="dropdown"] {
+  display: flex;
+}
+nav[am-layout] div[role="dropdown"]:last-child button + nav {
+  left: auto;
+  right: 0;
+}
+nav[am-layout] div[role="dropdown"] > button {
+  flex: 1;
 }
 a[am-layout~="split-bottom"],
 button[am-layout~="split-bottom"] {
@@ -676,17 +729,27 @@ div[role~="tab"] nav a {
   margin-top: .5em;
 }
 div[role~="dropdown"] {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  width: auto;
+  position: relative;
 }
 div[role~="dropdown"] button + nav {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: auto;
+  flex-flow: column nowrap;
+  z-index: 4;
+  min-width: 320px;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  background-color: #ffffff;
 }
 div[role~="dropdown"] button + nav a {
+  text-align: left;
   flex-basis: auto;
   width: 100%;
   border: none;
+  align-self: flex-start;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -728,6 +791,36 @@ div[role~="scroll"][role~="y"] {
 div[role~="scroll"][role~="x"] {
   overflow-x: auto;
   overflow-y: hidden;
+}
+div[role~="toolbar"],
+form fieldset[am-layout] > div[role~="toolbar"] {
+  display: flex;
+  flex-flow: row nowrap;
+}
+div[role~="toolbar"] button,
+form fieldset[am-layout] > div[role~="toolbar"] button {
+  margin: 0;
+  flex: 0 1 auto;
+}
+div[role~="toolbar"] input:not([type="checkbox"]):not([type="radio"]),
+form fieldset[am-layout] > div[role~="toolbar"] input:not([type="checkbox"]):not([type="radio"]) {
+  margin: 0;
+  flex: 1 0 8.3333%;
+}
+div[role~="toolbar"] button:not(:first-child),
+form fieldset[am-layout] > div[role~="toolbar"] button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+div[role~="toolbar"] button:not(:last-child),
+form fieldset[am-layout] > div[role~="toolbar"] button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+div[role~="toolbar"] input + button,
+form fieldset[am-layout] > div[role~="toolbar"] input + button {
+  border-left-width: 0;
 }
 body > div[am-wrapper] {
   min-width: 100%;
@@ -851,7 +944,6 @@ body > div[am-wrapper] > footer {
 }
 .am-btn.am-floating-action {
   background-clip: padding-box;
-  font-size: 26px;
   z-index: 1;
   border-radius: 50%;
   width: 55.5px;
@@ -885,7 +977,7 @@ body > div[am-wrapper] > footer {
     width: 100%;
   }
 }
-a.am-btn-link {
+.am-btn-link {
   -moz-user-select: none;
   background-image: none;
   text-decoration: none;
@@ -899,12 +991,11 @@ a.am-btn-link {
   background-clip: padding-box;
   line-height: 1.5;
   outline: 0 none;
-  padding: 8px 30px;
-  margin: 10px 1px;
+  padding: 11px 15px;
+  margin: 10px 0;
   word-wrap: break-word;
-}
-a.am-btn-link:hover {
-  text-decoration: underline;
+  background-color: transparent;
+  border: none;
 }
 html,
 body {
@@ -929,14 +1020,33 @@ button[disabled],
 input[disabled] {
   cursor: default;
 }
+/**
+ *
+ * =======================================================================
+  Typography inspired by Typeplate
+  URL ........... http://typeplate.com
+  VERSION ....... 2.1.0
+
+ * =======================================================================
+ *
+
+// Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
+// https://github.com/typeplate/typeplate.github.io
+
+/**
+ *
+ * =======================================================================
+   Base Type
+ * =======================================================================
+ *
+ */
 html {
-  font-size: 112.5%;
-  line-height: 1.65;
+  font: normal 112.5%/1.65 serif;
 }
 body {
-  background-color: #ffffff;
-  color: #595959;
   word-wrap: break-word;
+  color: #595959;
+  background-color: #ffffff;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -944,6 +1054,21 @@ body > header,
 body > footer {
   background-color: #ebecee;
 }
+/**
+ *
+ * =======================================================================
+   Fine Print
+ * =======================================================================
+ */
+small {
+  font-size: 65%;
+}
+/**
+ *
+ * =======================================================================
+   Headings
+ * =======================================================================
+ */
 h1,
 h2,
 h3,
@@ -951,9 +1076,9 @@ h4,
 h5,
 h6 {
   line-height: 1;
+  margin-top: 0;
   text-rendering: optimizeLegibility;
   /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-  margin-top: 0;
   color: #424242;
   font-weight: 300;
 }
@@ -1000,8 +1125,112 @@ h6 {
   margin-bottom: 29.7px;
   margin-bottom: 1.65rem;
 }
+/**
+ *
+ * =======================================================================
+   Paragraphs and Indentation
+ * =======================================================================
+ */
 p {
-  margin: 0 0 1.5em;
+  margin: auto auto 1.5em;
+  /* bottom margin for paragraphs */
+}
+/**
+ *
+ * =======================================================================
+   Hyphens
+ * =======================================================================
+ */
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+/**
+ *
+ * =======================================================================
+   Code Blocks
+ * =======================================================================
+ */
+pre code {
+  word-wrap: normal;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+pre {
+  white-space: pre;
+}
+code {
+  font-family: monospace;
+}
+/**
+ *
+ * =======================================================================
+ * Abbreviations Markup
+ * Extend this object into your markup
+  <abbr title="hyper text markup language">HMTL</abbr>
+ * Extend this object into your markup.
+ * =======================================================================
+ */
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+abbr[title]:hover {
+  cursor: help;
+  /* cursor changed to a question mark when it has a title */
+}
+/**
+ *
+ * =======================================================================
+   Definition Lists
+ * =======================================================================
+ */
+dt,
+dd {
+  display: inline;
+  margin: 0;
+}
+dt + dt:before,
+dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+dd + dd:before {
+  content: ", ";
+}
+dd:before {
+  content: ": ";
+  margin-left: -0.2em;
+}
+/**
+ *
+ * =======================================================================
+   Blockquotes
+ * =======================================================================
+ */
+blockquote + figcaption {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
+blockquote + figcaption:before {
+  content: "-";
+  /* "-" is your citation flourish */
 }
 a {
   color: #2196f3;
@@ -1013,23 +1242,6 @@ a:active {
 a:focus:not(.am-btn) {
   background-color: #9acffa;
   color: #08528d;
-}
-small {
-  font-size: 65%;
-}
-code {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  color: #c7254e;
-  font-weight: normal;
-  font-size: 90%;
-  padding: 2px 4px;
-}
-kbd,
-pre,
-samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 blockquote {
   border-left: 5px solid #2196f3;
@@ -1059,16 +1271,22 @@ pre {
   display: block;
   font-size: 13px;
   line-height: 1.42857;
-  white-space: pre-wrap;
   word-wrap: break-word;
   tab-size: 4;
   margin: .5em 0 0 0;
   padding: 1em 1em 1em 1em;
 }
+code {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #c7254e;
+  font-weight: normal;
+  font-size: 90%;
+  padding: 2px 4px;
+}
 label {
   font-size: 80%;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 input,
 select,
@@ -1080,31 +1298,14 @@ hr {
   border-color: rgba(0, 0, 0, 0.12);
   border-width: 1px 0 0;
 }
-abbr {
-  -webkit-font-variant: small-caps;
-  -moz-font-variant: small-caps;
-  -ms-font-variant: small-caps;
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-}
-input,
-abbr,
-acronym,
-blockquote,
-code,
-kbd,
-q,
-samp,
-var {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
 img {
   display: block;
   height: auto;
+}
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 figure {
   margin: .5em 0;

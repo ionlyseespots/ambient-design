@@ -25,15 +25,25 @@ div[role~="tab"] {
 }
 
 div[role~="dropdown"] {
-  border: 1px solid #d6d6d6;
-  padding: .5em;
+  width: auto;
+  position: relative;
   & button + nav {
-    border: 1px solid #d6d6d6;
-    padding: .5em;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right:auto;
+    flex-flow: column nowrap;
+    z-index: 4;
+    min-width: 320px;
+    max-height:~'calc(100vh - 300px)';
+    overflow-y: auto;
+    background-color: @am-clr-body-bg;
     & a {
+      text-align: left;
       flex-basis: auto;
       width: 100%;
       border: none;
+      align-self: flex-start;
       margin-bottom: 0;
       margin-top: 0;
     }
@@ -80,3 +90,30 @@ div[role~="scroll"] {
     overflow-y: hidden;
   }
 }
+
+div[role~="toolbar"],
+form fieldset[@{am-layout-var}] > div[role~="toolbar"] {
+  display:flex;
+  flex-flow:row nowrap;
+  button {
+    margin:0;
+    flex:0 1 auto;
+  }
+  input:not([type="checkbox"]):not([type="radio"]) {
+    margin:0;
+    flex:1 0 @am-flex-width1;
+  }
+  button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width:0;
+  }
+  input + button {
+    border-left-width:0;
+  }
+}
+
