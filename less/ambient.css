@@ -1033,6 +1033,8 @@ input[disabled] {
 // Typeplate is a “typographic starter kit”. We don’t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass or CSS library of your choosing primarily concerned with the appropriate technical implementation of design patterns—not how they look.
 // https://github.com/typeplate/typeplate.github.io
 
+// Make use of Typeplate alongside ambient variables
+
 /**
  *
  * =======================================================================
@@ -1046,13 +1048,6 @@ html {
 body {
   word-wrap: break-word;
   color: #595959;
-  background-color: #ffffff;
-  font-weight: 400;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-body > header,
-body > footer {
-  background-color: #ebecee;
 }
 /**
  *
@@ -1080,7 +1075,6 @@ h6 {
   text-rendering: optimizeLegibility;
   /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
   color: #424242;
-  font-weight: 300;
 }
 /*  base font-size * base line-height = current font-size */
 h1 {
@@ -1231,6 +1225,23 @@ blockquote + figcaption {
 blockquote + figcaption:before {
   content: "-";
   /* "-" is your citation flourish */
+}
+body {
+  background-color: #ffffff;
+  font-weight: 400;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body > header,
+body > footer {
+  background-color: #ebecee;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }
 a {
   color: #2196f3;

@@ -253,6 +253,9 @@
         <h2>
             Vertical <code class="am-float-r">am-layout="vertical"</code>
         </h2>
+        <p>
+            The vertical direction for layout can be applied to any root semantic element.
+        </p>
         <div role="example">
             <figure>
                 <article am-layout="outline vertical">
@@ -299,7 +302,7 @@
                    Blocks are infinitely nestable.
                 </p>
                 <p>
-                    The Ambient grid defaults to 12 columns. Customize the columns and gutters by overriding these 2 variables: <code>@am-block-columns</code> <code>@am-block-gutter</code>
+                    The Ambient grid defaults to 12 columns. Customize the columns and gutters (optional) by overriding these 2 variables: <code>@am-block-columns</code> <code>@am-block-gutter</code>
                 </p>
                 <p>
                     To create widths and off-set widths, add the width value <code>am-block="VALUE"</code>
@@ -1071,10 +1074,8 @@
             Outline the layout
         </h1>
         <p>
-            If needed, outline the layout with colors and borders.
+            If needed, display grid lines for the document outline.
         </p>
-
-
         <h2>
             Outline  <code class="am-float-r">am-layout="outline"</code>
         </h2>
@@ -1159,6 +1160,15 @@
         <p>
             Roles in Ambient are used to identify the design pattern of an element (and its children).
         </p>
+        <blockquote cite="https://html.spec.whatwg.org/multipage/dom.html#wai-aria">
+            <p>
+                Authors must not set the ARIA
+                <code title="attr-aria-role">role</code>
+                and
+                <code title="attr-aria-*">aria-*</code>
+                attributes to values that match the default implicit ARIA semantics.
+            </p>
+        </blockquote>
         <h2>
             Tab <code class="am-float-r">role="tab"</code>
         </h2>
@@ -1172,28 +1182,6 @@
 <pre><code></code></pre>
         <h2>
             Dropdown <code class="am-float-r">role="dropdown"</code>
-        </h2>
-        <div role="example">
-            <figure>
-            </figure>
-        </div>
-        <h3>
-            Code
-        </h3>
-<pre><code></code></pre>
-        <h2>
-            Scroll <code class="am-float-r">role="scroll"</code>
-        </h2>
-        <div role="example">
-            <figure>
-            </figure>
-        </div>
-        <h3>
-            Code
-        </h3>
-<pre><code></code></pre>
-        <h2>
-            Toolbar <code class="am-float-r">role="toolbar"</code>
         </h2>
         <div role="example">
             <figure>
