@@ -305,10 +305,10 @@
                     The Ambient grid defaults to 12 columns. Customize the columns and gutters (optional) by overriding these 2 variables: <code>@am-block-columns</code> <code>@am-block-gutter</code>
                 </p>
                 <p>
-                    To create widths and off-set widths, add the width value <code>am-block="VALUE"</code>
+                    To create widths and off-set widths add "width" as a value <code>am-block="VALUE"</code>. To create gutters add "gutter" as a value: <code>am-block="gutter"</code>.
                 </p>
                 <p>
-                    Add the letter <code>P</code> and/or <code>L</code> to the width value (feel free to mix & match) to create unique portrait and landscape widths.
+                    Add the letter <code>P</code> and/or <code>L</code> to the width value to create unique portrait and landscape widths.
                 </p>
                 <div role="example">
                     <figure>
@@ -369,7 +369,9 @@
                 </h3>
 <pre><code>&lt;section&gt;
     &lt;div am-block&gt;
+        &lt;div am-block="12"&gt;
             12
+        &lt;div am-block&gt;
     &lt;/div&gt;
     &lt;div am-block&gt;
         &lt;div am-block="6"&gt;
