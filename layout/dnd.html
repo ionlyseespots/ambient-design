@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'><meta name="robots" content="noindex">
+    <!-- Ambient -->
+    <link rel="stylesheet" href="../dist/css/ambient.min.css">
+
+    <style class="cp-pen-styles">[draggable] {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .drag-list {
+        overflow: hidden;
+        margin: 10px auto;
+        width: 500px;
+        border: 1px solid #ccc;
+    }
+    .drag-item {
+        float: left;
+        padding: 50px 20px;
+        width: 25%;
+        text-align: center;
+        color: #555;
+        background: #ddd;
+        border: 1px solid #ccc;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: 0.25s;
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -ms-transition: 0.25s;
+        transition: 0.25s;
+    }
+    .drag-start {
+        opacity: 0.8;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        filter: alpha(opacity=80);
+    }
+    .drag-enter {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    </style>
+
+
+
+
+
+<style class="cp-pen-styles">/* =============================================================================
+  DEMO
+============================================================================= */
+/**
+ * Sections
+ *
+ * Some sections to define card content areas.
+ */
+.section {
+    margin-bottom: 40px;
+}
+
+.section__title {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+}
+
+.section__content {
+    padding-left: 3px;
+}
+
+/**
+ * The cards
+ *
+ * Each card plays home to a front and back. I've set them up as squares here
+ * by using the padding technique, but you may set them up in any dimensions
+ * you like based on your site design.
+ */
+.card {
+    position: relative;
+    float: left;
+    padding-bottom: 25%;
+    width: 15%;
+    text-align: center;
+    margin-right: 1px;
+}
+
+.card:nth-child(1) {
+    margin-left: -3px;
+    margin-right: 1px;
+}
+
+.card:nth-child(2),
+.card:nth-child(3) {
+    margin-right: 1px;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card__front,
+.card__back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.card__front {
+    background-color: #ff5078;
+}
+
+.card__back {
+    background-color: #1e1e1e;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+/* card text */
+.card__text {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 20px;
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    line-height: 20px;
+}
+
+/* hover effect */
+.card.effect__hover:hover .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+/* random effect */
+.card.effect__random.flipped .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card.effect__random.flipped .card__back {
+    -webkit-transform: rotateY(0);HTML
+    transform: rotateY(0);
+}
+/* =============================================================================
+  RESET
+============================================================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =============================================================================
+  BOX SIZING & CLEARFIX
+============================================================================= */
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =============================================================================
+  BASE
+============================================================================= */
+/* body */
+body {
+    background-color: #fff;
+    color: #787878;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* text level semantics */
+a {
+    text-decoration: none;
+    color: #28aadc;
+}
+
+a:hover {
+    color: #166888;
+}
+
+/* =============================================================================
+  LAYOUT
+============================================================================= */
+/* main layout */
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* primary header */
+.header__primary {
+    padding: 10px 10px 10px 30px;
+}
+
+.header__primary--logo {
+    float: left;
+    margin-left: -20px;
+    width: 20px;
+    height: 20px;
+}
+.header__primary--logo img {
+    display: block;
+    margin: 0;
+}
+
+/* primary nav */
+.nav__primary {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.nav__primary--link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/common/icons-nav.png");
+    background-image: url("../img/common/icons-nav.svg"), none;
+}
+
+.nav__primary--link.tut {
+    background-position: 0 0;
+}
+.nav__primary--link.prev {
+    background-position: -20px 0;
+}
+.nav__primary--link.next {
+    background-position: -40px 0;
+}
+.nav__primary--link.download {
+    background-position: -60px 0;
+}
+.nav__primary--link.archive {
+    background-position: -80px 0;
+}
+
+.nav__primary--link:hover:after {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 20px;
+    content: attr(data-title);
+    padding: 2px 5px;
+    background-color: #28aadc;
+    color: #fff;
+    font-size: 10px;
+    white-space: nowrap;
+    border-radius: 3px;
+}
+
+/* =============================================================================
+  FUSION ADS
+============================================================================= */
+#fusionads {
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    z-index: 20;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    line-height: 1.2;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#fusionads .fusion-wrap {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 130px;
+}
+
+#fusionads a.fusion-text {
+    display: block;
+    color: #787878;
+}
+
+#fusionads a.fusion-img {
+    display: block;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 100px;
+    background-color: #fff;
+}
+
+#fusionads a.fusion-img img {
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+#fusionads a.fusion-poweredby {
+    color: #28aadc;z
+}
+#fusionads a.fusion-poweredby:hover {
+    color: #166888;
+}
+
+</style></head>
+
+
+
+
+
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootswatch/3.0.0/readable/bootstrap.min.css'><link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+<style class="cp-pen-styles">body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.0em 0 1.5em;
+}
+
+#flyer {
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+#flyer > footer {
+    background-color: #eff1f7;
+    background-image: -webkit-linear-gradient(top, rgba(222, 222, 222, 1.00) 0px, rgba(222, 222, 222, 0.00) 5px, transparent);
+    border-top: 1px solid #dfdee1;
+    margin: 0 -15px;
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+.edit {
+    padding: 1.0em;
+}
+
+.edit form {
+    border-radius: 5px;
+    border: 1px solid #d4d3d2;
+    padding: 1.0em 1.0em 0;
+}
+
+.edit form footer.form-group {
+    background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #f1eff1;
+    margin: 0 -1.0em;
+    padding: 0.5em;
+}
+
+.edit form footer.form-group button.btn-link {
+    color: #b94a48;
+}
+
+.edit form footer.form-group button.btn-link:hover,
+.edit form footer.form-group button.btn-link:focus {
+    text-decoration: none;
+}
+
+.preview {
+    cursor: pointer;
+    padding: 1.0em 0;
+    position: relative;
+}
+
+.preview:hover > button.close {
+    display: inline-block;
+}
+
+.preview > button.close {
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    display: none;
+    font-size: 21px;
+    padding: 3px 9px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 100;
+}
+
+#sortable .dashed {
+    cursor: move;
+}
+
+.dashed {
+    background-image: linear-gradient(transparent, transparent 4px, rgba(255, 255, 255, 0.25) 5px);
+    background-size: 5px 5px;
+    border: 3px dashed rgba(0, 0, 0, 0.10);
+    padding: 25px;
+}
+
+.dashed:hover {
+    background-color: rgba(255, 255, 0, 0.10);
+}
+
+.widget {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #e3e3e3;
+    cursor: pointer;
+    margin: 0 -5px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.widget:hover {
+    background-color: #f4fbfb;
+    border-color: #8ea0a8;
+}
+
+.widget.disabled {
+    cursor: auto;
+    opacity: 0.4;
+}
+
+.widget small {
+    color: #7e8081;
+    font-weight: bold;
+}
+
+#header .preview {
+    background: #59cff8;
+    margin: 0 -15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#header .preview h1,
+#header .preview h3 {
+    color: rgba(255, 255, 255, 1.00);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.30);
+    text-transform: uppercase;
+}
+
+#header .preview h3 {
+    color: rgba(255, 255, 255, 0.90);
+}
+
+section .contacts {
+    background-color: #fff;
+    border: 1px solid #dbd9d7;
+    margin-top: 1em;
+    padding: 10px;
+    font-size: 0.85em;
+}
+
+section .contacts > div {
+    display: inline-block;
+    width: 48%;
+}</style>
+<body>
+
+<h1>Frankenstein</h1>
+<main>
+    <article>
+<section>
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<div id="flyer" class="clearfix">
+<section id="header">
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" data-selector=".preview > h1">
+            </div>
+            <div class="form-group">
+                <label>Subtitle</label>
+                <input type="text" class="form-control input-sm" data-selector=".preview > h3">
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview">
+        <h1>Heading</h1>
+        <h3 class="dashed" style="margin: 0; padding: 5px;">Add Subtitle</h3>
+    </div>
+</section>
+
+<div id="sortable">
+<section>
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(1) > h5">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(1) > .editable"></textarea>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(2) > h5">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(2) > .editable"></textarea>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(3) > h5">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(3) > .editable"></textarea>
+                    </div>
+                </div>
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview dashed">
+        <button type="button" class="close" data-action="dismiss">&times;</button>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                <div class="editable" style="color: #bdbcbe;">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                <div class="editable" style="color: #bdbcbe;">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                <div class="editable" style="color: #bdbcbe;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" data-selector=".preview > h3">
+            </div>
+            <div class="form-group">
+                <label>Text</label>
+                <textarea class="form-control" rows="4" data-selector=".preview > .editable"></textarea>
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview dashed">
+        <button type="button" class="close" data-action="dismiss">&times;</button>
+        <h3 style="color: #bdbcbe; text-transform: uppercase; margin-top: 0;">Sample Paragraph</h3>
+        <div class="editable" style="color: #bdbcbe;">
+            Click on this text to edit it. You can add content easily by clicking on the "Add Content" bar at the bottom of the page. Drag this and other boxes around to re-order them. When you are finished, you can play with different designs by using the theme picker on the right.
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" data-selector=".preview > h2">
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview dashed">
+        <button type="button" class="close" data-action="dismiss">&times;</button>
+        <h2 style="color: #bdbcbe; text-align: center; text-transform: uppercase; margin: 0;">Sample Title</h2>
+    </div>
+</section>
+
+<section>
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" data-selector=".preview > h3">
+            </div>
+            <div class="form-group">
+                <label>Text</label>
+                <textarea class="form-control" rows="4" data-selector=".preview > .editable"></textarea>
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview dashed">
+        <button type="button" class="close" data-action="dismiss">&times;</button>
+        <h3 style="color: #bdbcbe; text-transform: uppercase; margin-top: 0;">Another Sample Paragraph</h3>
+        <div class="editable" style="color: #bdbcbe;">
+            Click on this text to edit it. You can add content easily by clicking on the "Add Content" bar at the bottom of the page. Drag this and other boxes around to re-order them. When you are finished, you can play with different designs by using the theme picker on the right.
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="edit" style="display: none;">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" data-selector=".preview h3">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" rows="3" data-selector=".preview .editable"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Address</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-map-marker"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .address > small">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-phone"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .phone > small">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Website</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-globe"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .website > small">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-envelope"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .email > small">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Facebook</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-facebook"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .facebook > small">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Twitter</label>
+                        <div class="input-group input-group-sm">
+														<span class="input-group-addon">
+															<i class="icon-fixed-width icon-twitter"></i>
+														</span>
+                            <input type="text" class="form-control input-sm" data-selector=".preview .contacts .twitter > small">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="form-group">
+                <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+            </footer>
+        </form>
+    </div>
+    <div class="preview dashed">
+        <button type="button" class="close" data-action="dismiss">&times;</button>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="http://placehold.it/240x180" class="img-responsive img-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h3 style="color: #bdbcbe; text-transform: uppercase; margin-top: 0;">About Us</h3>
+                <div class="editable" style="color: #bdbcbe;">
+                    I am the one who knocks. Go science!
+                </div>
+                <div class="contacts">
+                    <div class="address">
+                        <i class="icon-fixed-width icon-map-marker"></i>
+                        <small class="text-muted">123 Main St.</small>
+                    </div>
+                    <div class="email">
+                        <i class="icon-fixed-width icon-envelope"></i>
+                        <small class="text-muted">contact@yourwebsite.com</small>
+                    </div>
+                    <div class="phone">
+                        <i class="icon-fixed-width icon-phone"></i>
+                        <small class="text-muted">(206) 555-1234</small>
+                    </div>
+                    <div class="facebook">
+                        <i class="icon-fixed-width icon-facebook"></i>
+                        <small class="text-muted">facebook.com/example</small>
+                    </div>
+                    <div class="website">
+                        <i class="icon-fixed-width icon-globe"></i>
+                        <small class="text-muted">yourwebsite.com</small>
+                    </div>
+                    <div class="twitter">
+                        <i class="icon-fixed-width icon-twitter"></i>
+                        <small class="text-muted">@twitter_handle</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<footer>
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-2">
+            <div class="widget" data-template="text">
+										<span class="icon-stack icon-2x" style="color: #639ac2;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-file-text icon-light"></i>
+										</span>
+                <br><small>Text</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="picture">
+										<span class="icon-stack icon-2x" style="color: #63a064;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-picture icon-light"></i>
+										</span>
+                <br><small>Picture</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="event">
+										<span class="icon-stack icon-2x" style="color: #dd9329;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-calendar icon-light"></i>
+										</span>
+                <br><small>Event</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="audio">
+										<span class="icon-stack icon-2x" style="color: #cb4c58;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-play-sign icon-light"></i>
+										</span>
+                <br><small>Audio</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="link">
+										<span class="icon-stack icon-2x" style="color: #878787;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-link icon-light"></i>
+										</span>
+                <br><small>Embed Link</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="form">
+										<span class="icon-stack icon-2x" style="color: #c94990;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-list-alt icon-light"></i>
+										</span>
+                <br><small>Form</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="widget" data-template="title">
+										<span class="icon-stack icon-2x" style="color: #639ac2;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-font icon-light"></i>
+										</span>
+                <br><small>Title</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget" data-template="gallery">
+										<span class="icon-stack icon-2x" style="color: #63a064;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-th icon-light"></i>
+										</span>
+                <br><small>Gallery</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget" data-template="about">
+										<span class="icon-stack icon-2x" style="color: #dd9329;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-user icon-light"></i>
+										</span>
+                <br><small>About Us</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="video">
+										<span class="icon-stack icon-2x" style="color: #cb4c58;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-youtube-play icon-light"></i>
+										</span>
+                <br><small>Video</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="button">
+										<span class="icon-stack icon-2x" style="color: #878787;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-check-sign icon-light"></i>
+										</span>
+                <br><small>Button</small>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="widget disabled" data-template="payment">
+										<span class="icon-stack icon-2x" style="color: #c94990;">
+											<i class="icon-circle icon-stack-base"></i>
+											<i class="icon-credit-card icon-light"></i>
+										</span>
+                <br><small>Payment</small>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<!--
+<script src="./scripts/popline/build/jquery.popline.min.js"></script>
+-->
+<script>
+    $(function () {
+        $('#flyer').on('click', '.preview', function () {
+            var section = $(this).closest('section');
+
+            if (section.length > 0) {
+                $('[data-selector]', section).each(function (i) {
+                    var target = section.find($(this).data('selector'));
+
+                    if ($(this).is('input') === true) {
+                        $(this).val(target.text());
+                    }
+
+                    else if ($(this).is('textarea') === true) {
+                        $(this).val($.trim(target.html()));
+                    }
+                });
+
+                $(this).hide(); section.find('.edit').show().addClass('animated bounceIn');
+            }
+        });
+
+        $('#flyer').on('click', '.preview button[data-action="dismiss"]', function (event) {
+            var section = $(this).closest('section');
+
+            if (section.length > 0) {
+                section.slideUp(250, function () {
+                    section.remove();
+                });
+            }
+
+            event.stopImmediatePropagation();
+        });
+
+        $('#flyer').on('submit', '.edit form', function (event) {
+            var section = $(this).closest('section');
+
+            if (section.length > 0) {
+                $('[data-selector]', section).each(function (i) {
+                    section.find($(this).data('selector')).html($(this).val());
+                });
+
+                $(this).closest('.edit').hide(); section.find('.preview').show().addClass('animated bounceIn');
+            }
+
+            event.preventDefault();
+        });
+
+        $('#flyer').on('click', '.edit form button[data-action="cancel"]', function () {
+            var section = $(this).closest('section');
+
+            if (section.length > 0) {
+                $(this).closest('.edit').hide(); section.find('.preview').show().addClass('animated bounceIn');
+            }
+        });
+
+        $('#sortable').sortable({
+            distance: 25,
+            placeholder: 'dashed'
+        });
+
+        $('#sortable').disableSelection();
+
+        $('.widget').click(function () {
+            var template = $('script[data-template="' + $(this).data('template') + '"]');
+
+            if (template.length > 0) {
+                $('#sortable').append(template.html());
+                $('#sortable > section').last().show().addClass('animated bounceIn');
+            }
+
+//            $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+        });
+
+        /*
+         $('.editable').popline({
+         position: 'fixed',
+         enable: ["bold", "italic", "underline", "link", "orderedList", "unOrderedList"]
+         });
+         */
+    });
+</script>
+<script data-template="title" type="text/template">
+    <section style="display: none;">
+        <div class="edit" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" data-selector=".preview > h2">
+                </div>
+                <footer class="form-group">
+                    <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+                </footer>
+            </form>
+        </div>
+        <div class="preview dashed">
+            <button type="button" class="close" data-action="dismiss">&times;</button>
+            <h2 style="color: #bdbcbe; text-align: center; text-transform: uppercase; margin: 0;">Sample Title</h2>
+        </div>
+    </section>
+</script>
+<script data-template="text" type="text/template">
+    <section style="display: none;">
+        <div class="edit" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" data-selector=".preview > h3">
+                </div>
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea class="form-control" rows="4" data-selector=".preview > .editable"></textarea>
+                </div>
+                <footer class="form-group">
+                    <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+                </footer>
+            </form>
+        </div>
+        <div class="preview dashed">
+            <button type="button" class="close" data-action="dismiss">&times;</button>
+            <h3 style="color: #bdbcbe; text-transform: uppercase; margin-top: 0;">Sample Paragraph</h3>
+            <div class="editable" style="color: #bdbcbe;">
+                Click on this text to edit it. You can add content easily by clicking on the "Add Content" bar at the bottom of the page. Drag this and other boxes around to re-order them. When you are finished, you can play with different designs by using the theme picker on the right.
+            </div>
+        </div>
+    </section>
+</script>
+<script data-template="gallery" type="text/template">
+    <section>
+        <div class="edit" style="display: none;">
+            <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(1) > h5">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(1) > .editable"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(2) > h5">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(2) > .editable"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" data-selector=".preview .col-md-4:nth-child(3) > h5">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control input-sm" rows="2" data-selector=".preview .col-md-4:nth-child(3) > .editable"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <footer class="form-group">
+                    <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+                </footer>
+            </form>
+        </div>
+        <div class="preview dashed">
+            <button type="button" class="close" data-action="dismiss">&times;</button>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                    <div class="editable" style="color: #bdbcbe;">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                    <div class="editable" style="color: #bdbcbe;">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x160" class="img-responsive img-thumbnail">
+                    <h5 style="color: #bdbcbe; text-transform: uppercase;">Add a Title</h5>
+                    <div class="editable" style="color: #bdbcbe;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</script>
+<script data-template="about" type="text/template">
+    <section>
+        <div class="edit" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" data-selector=".preview h3">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="3" data-selector=".preview .editable"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Address</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-map-marker"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .address > small">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-phone"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .phone > small">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Website</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-globe"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .website > small">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-envelope"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .email > small">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Facebook</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-facebook"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .facebook > small">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Twitter</label>
+                            <div class="input-group input-group-sm">
+										<span class="input-group-addon">
+											<i class="icon-fixed-width icon-twitter"></i>
+										</span>
+                                <input type="text" class="form-control input-sm" data-selector=".preview .contacts .twitter > small">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="form-group">
+                    <button type="button" class="btn btn-link btn-sm" data-action="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-default btn-sm pull-right">Done</button>
+                </footer>
+            </form>
+        </div>
+        <div class="preview dashed">
+            <button type="button" class="close" data-action="dismiss">&times;</button>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="http://placehold.it/240x180" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-8">
+                    <h3 style="color: #bdbcbe; text-transform: uppercase; margin-top: 0;">About Us</h3>
+                    <div class="editable" style="color: #bdbcbe;">
+                        I am the one who knocks. Go science!
+                    </div>
+                    <div class="contacts">
+                        <div class="address">
+                            <i class="icon-fixed-width icon-map-marker"></i>
+                            <small class="text-muted">123 Main St.</small>
+                        </div>
+                        <div class="email">
+                            <i class="icon-fixed-width icon-envelope"></i>
+                            <small class="text-muted">contact@yourwebsite.com</small>
+                        </div>
+                        <div class="phone">
+                            <i class="icon-fixed-width icon-phone"></i>
+                            <small class="text-muted">(206) 555-1234</small>
+                        </div>
+                        <div class="facebook">
+                            <i class="icon-fixed-width icon-facebook"></i>
+                            <small class="text-muted">facebook.com/example</small>
+                        </div>
+                        <div class="website">
+                            <i class="icon-fixed-width icon-globe"></i>
+                            <small class="text-muted">yourwebsite.com</small>
+                        </div>
+                        <div class="twitter">
+                            <i class="icon-fixed-width icon-twitter"></i>
+                            <small class="text-muted">@twitter_handle</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</script>
+
+
+
+        <!--<div class="section">-->
+        <!--<h2 class="section__title">On Hover</h2>-->
+        <!--<div class="section__content clearfix">-->
+        <!--<div class="card effect__hover">-->
+        <!--<div class="card__front">-->
+        <!--<span class="card__text">front</span>-->
+        <!--</div>-->
+        <!--<div class="card__back">-->
+        <!--<span class="card__text">back</span>-->
+        <!--</div>-->
+        <!--</div>&lt;!&ndash; /card &ndash;&gt;-->
+        <!--<div class="card effect__hover">-->
+        <!--<div class="card__front">-->
+        <!--<span class="card__text">front</span>-->
+        <!--</div>-->
+        <!--<div class="card__back">-->
+        <!--<span class="card__text">back</span>-->
+        <!--</div>-->
+        <!--</div>&lt;!&ndash; /card &ndash;&gt;-->
+        <!--<div class="card effect__hover">-->
+        <!--<div class="card__front">-->
+        <!--<span class="card__text">front</span>-->
+        <!--</div>-->
+        <!--<div class="card__back">-->
+        <!--<span class="card__text">back</span>-->
+        <!--</div>-->
+        <!--</div>&lt;!&ndash; /card &ndash;&gt;-->
+        <!--<div class="card effect__hover">-->
+        <!--<div class="card__front">-->
+        <!--<span class="card__text">front</span>-->
+        <!--</div>-->
+        <!--<div class="card__back">-->
+        <!--<span class="card__text">back</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>&lt;!&ndash; /card &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /section &ndash;&gt;-->
+</section>
+
+<section>
+    <div class="section">
+        <div class="section__content clearfix">
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Nav</span>
+                </div>
+                <div class="card__back">
+                    <span class="card__text">back</span>
+                </div>
+            </div>
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Header</span>
+                </div>
+                <div class="card__back" style="margin: 0; padding: 0;">
+                            <span style="margin: 0; padding: .5em;background-color: transparent; text-align: left;" class="card__text">
+<pre><code>&lt;header&gt;
+    &lt;h1&gt;
+    Heading
+    &lt;/h1&gt;
+    &lt;p&gt;
+    Paragraph
+    &lt;/p&gt;
+    &lt;/header&gt;</code></pre>
+                            </span>
+                </div>
+            </div><!-- /card -->
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Footer</span>
+                </div>
+                <div class="card__back">
+                    <span class="card__text">back</span>
+                </div>
+            </div><!-- /card -->
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Article</span>
+                </div>
+                <div class="card__back">
+                    <span class="card__text">back</span>
+                </div>
+            </div><!-- /card -->
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Section</span>
+                </div>
+                <div class="card__back">
+                    <span class="card__text">back</span>
+                </div>
+            </div><!-- /card -->
+            <div class="card effect__click">
+                <div class="card__front">
+                    <span class="card__text">Aside</span>
+                </div>
+                <div class="card__back">
+                    <span class="card__text">back</span>
+                </div>
+            </div>
+
+
+        </div><!-- /section -->
+
+
+        <script>
+            (function () {
+                var cards = document.querySelectorAll('.card.effect__click');
+                for (var i = 0, len = cards.length; i < len; i++) {
+                    var card = cards[i];
+                    clickListener(card);
+                }
+                function clickListener(card) {
+                    card.addEventListener('click', function () {
+                        var c = this.classList;
+                        c.contains('flipped') === true ? c.remove('flipped') : c.add('flipped');
+                    });
+                }
+            }());
+        </script>
+
+        <!--http://codepen.io/social_quotient/pen/trbsj-->
+
+</section>
+
+
+    </article>
+</main>
+
+
+
+<h1>am-block</h1>
+<p>Positioning content in the weeds for mobile and desktop</p>
+<div class="drag-list">
+    <div draggable="true" class="drag-item">A</div>
+    <div draggable="false" class="drag-item">B</div>
+    <div draggable="true" class="drag-item">C</div>
+    <div draggable="true" class="drag-item">D</div>
+    <div draggable="true" class="drag-item">E</div>
+    <div draggable="true" class="drag-item">F</div>
+    <div draggable="true" class="drag-item">G</div>
+    <div draggable="true" class="drag-item">H</div>
+    <div draggable="true" class="drag-item">I</div>
+    <div draggable="true" class="drag-item">J</div>
+    <div draggable="true" class="drag-item">K</div>
+    <div draggable="true" class="drag-item">L</div>
+</div>
+
+<script>
+    function DragNSort(config) {
+        this.$activeItem = null;
+        this.$container = config.container;
+        this.$items = this.$container.querySelectorAll('.' + config.itemClass);
+        this.dragStartClass = config.dragStartClass;
+        this.dragEnterClass = config.dragEnterClass;
+    }
+    DragNSort.prototype.removeClasses = function () {
+        [].forEach.call(this.$items, function ($item) {
+            $item.classList.remove(this.dragStartClass, this.dragEnterClass);
+        }.bind(this));
+    };
+    DragNSort.prototype.on = function (elements, eventType, handler) {
+        [].forEach.call(elements, function (element) {
+            element.addEventListener(eventType, handler.bind(element, this), false);
+        }.bind(this));
+    };
+    DragNSort.prototype.onDragStart = function (_this, event) {
+        _this.$activeItem = this;
+        this.classList.add(_this.dragStartClass);
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/html', this.innerHTML);
+    };
+    DragNSort.prototype.onDragEnd = function (_this) {
+        this.classList.remove(_this.dragStartClass);
+    };
+    DragNSort.prototype.onDragEnter = function (_this) {
+        this.classList.add(_this.dragEnterClass);
+    };
+    DragNSort.prototype.onDragLeave = function (_this) {
+        this.classList.remove(_this.dragEnterClass);
+    };
+    DragNSort.prototype.onDragOver = function (_this, event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        }
+        event.dataTransfer.dropEffect = 'move';
+        return false;
+    };
+    DragNSort.prototype.onDrop = function (_this, event) {
+        if (event.stopPropagation) {
+            event.stopPropagation();
+        }
+        if (_this.$activeItem !== this) {
+            _this.$activeItem.innerHTML = this.innerHTML;
+            this.innerHTML = event.dataTransfer.getData('text/html');
+        }
+        _this.removeClasses();
+        return false;
+    };
+    DragNSort.prototype.bind = function () {
+        this.on(this.$items, 'dragstart', this.onDragStart);
+        this.on(this.$items, 'dragend', this.onDragEnd);
+        this.on(this.$items, 'dragover', this.onDragOver);
+        this.on(this.$items, 'dragenter', this.onDragEnter);
+        this.on(this.$items, 'dragleave', this.onDragLeave);
+        this.on(this.$items, 'drop', this.onDrop);
+    };
+    DragNSort.prototype.init = function () {
+        this.bind();
+    };
+    var draggable = new DragNSort({
+        container: document.querySelector('.drag-list'),
+        itemClass: 'drag-item',
+        dragStartClass: 'drag-start',
+        dragEnterClass: 'drag-enter'
+    });
+    draggable.init();
+
+
+
+
+</script>
+
+</body></html>
